@@ -1,13 +1,19 @@
 export default function NewsletterForm() {
   return (
-    <div className="max-w-lg mx-auto rounded-xl overflow-hidden border border-gray-200 shadow-sm" style={{position:"relative", width:"100%", height:0, paddingBottom:"75%"}}>
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLScEljvnpvYdni_A9QZbFB6C7WiPn6XSlzWL99cGQcAzSVQemQ/viewform?embedded=true"
-        style={{position:"absolute", top:0, left:0, width:"100%", height:"100%", border:0}}
-        title="SMF AI Weekly Newsletter Signup"
+    <div className="flex flex-col items-center gap-4">
+      <a
+        href="mailto:mikesmoltbot@gmail.com?subject=Subscribe me to SMF AI Weekly"
+        className="bg-[#C87941] text-white px-8 py-3 rounded font-semibold hover:bg-[#b56b35] transition-colors"
       >
-        Loading…
-      </iframe>
+        📬 Subscribe via Email
+      </a>
+      <p className="text-xs text-gray-400">
+        Sends an email to sign you up — or write directly to{" "}
+        <a href="mailto:mikesmoltbot@gmail.com" className="text-[#C87941] hover:underline">
+          mikesmoltbot@gmail.com
+        </a>{" "}
+        with subject: <em>Subscribe me to SMF AI Weekly</em>
+      </p>
     </div>
   );
 }
