@@ -1,40 +1,6 @@
-"use client";
-import { useState } from "react";
 import Link from "next/link";
 
-const SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbwkh4M7V-zv2oybLrS2oiBhoC2_TuXJYa-Nd7ubntVcFPRr8MRAcX6cikbaFlyp8CUE/exec";
-
 export default function ContactPage() {
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("sending");
-
-    const form = e.currentTarget;
-    const data = {
-      name: (form.elements.namedItem("name") as HTMLInputElement).value,
-      email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      business: (form.elements.namedItem("business") as HTMLInputElement).value,
-      interest: (form.elements.namedItem("interest") as HTMLSelectElement).value,
-      request_call: (form.elements.namedItem("request_call") as HTMLInputElement)?.checked ? "Yes" : "No",
-      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
-    };
-
-    try {
-      const params = new URLSearchParams(data);
-      await fetch(SCRIPT_URL + "?" + params.toString(), {
-        method: "GET",
-        mode: "no-cors",
-      });
-      setStatus("success");
-      form.reset();
-    } catch {
-      setStatus("error");
-    }
-  }
-
   return (
     <>
       {/* HEADER */}
@@ -58,128 +24,19 @@ export default function ContactPage() {
           {/* FORM */}
           <div>
             <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
-
-            {status === "success" ? (
-              <div className="bg-white border border-green-200 rounded-xl p-8 text-center">
-                <div className="text-5xl mb-4">✅</div>
-                <h3 className="text-xl font-bold mb-2">Message Received</h3>
-                <p className="text-gray-600 mb-6">
-                  Thanks for reaching out. I respond personally within 24 hours.
-                </p>
-                <button
-                  onClick={() => setStatus("idle")}
-                  className="text-[#C87941] font-semibold hover:underline"
-                >
-                  Send another message →
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    className="w-full px-4 py-3 rounded border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#C87941]"
-                    placeholder="Jane Smith"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 rounded border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#C87941]"
-                    placeholder="jane@yourbusiness.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="business" className="block text-sm font-medium text-gray-700 mb-1">
-                    Business Name
-                  </label>
-                  <input
-                    type="text"
-                    id="business"
-                    name="business"
-                    className="w-full px-4 py-3 rounded border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#C87941]"
-                    placeholder="Your Business"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="interest" className="block text-sm font-medium text-gray-700 mb-1">
-                    I&apos;m interested in...
-                  </label>
-                  <select
-                    id="interest"
-                    name="interest"
-                    className="w-full px-4 py-3 rounded border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#C87941]"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="AI Content Production">AI Content Production</option>
-                    <option value="AI Workflow Consulting">AI Workflow Consulting</option>
-                    <option value="Both">Both — I need to learn more</option>
-                    <option value="Newsletter Only">Just the SMF AI Weekly newsletter</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Tell me about your business *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 rounded border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#C87941] resize-none"
-                    placeholder="What do you do, what challenges are you facing, what are you hoping AI can help with?"
-                  />
-                </div>
-
-                <div>
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      name="request_call"
-                      className="w-4 h-4 accent-[#C87941]"
-                    />
-                    <span className="text-sm text-gray-700">I&apos;d like to request a call</span>
-                  </label>
-                </div>
-
-                {status === "error" && (
-                  <p className="text-red-500 text-sm">
-                    Something went wrong. Please email us directly at{" "}
-                    <a href="mailto:hello@smfworks.com" className="underline">
-                      hello@smfworks.com
-                    </a>
-                  </p>
-                )}
-
-                <button
-                  type="submit"
-                  disabled={status === "sending"}
-                  className="w-full bg-[#C87941] text-white py-3 rounded font-semibold hover:bg-[#b56b35] transition-colors disabled:opacity-60"
-                >
-                  {status === "sending" ? "Sending..." : "Send Message"}
-                </button>
-
-                <p className="text-xs text-gray-400 text-center">
-                  I respond to every message personally, usually within 24 hours.
-                </p>
-              </form>
-            )}
+            <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLScEljvnpvYdni_A9QZbFB6C7WiPn6XSlzWL99cGQcAzSVQemQ/viewform?embedded=true"
+                width="100%"
+                height="820"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                title="SMF Works Contact Form"
+              >
+                Loading…
+              </iframe>
+            </div>
           </div>
 
           {/* INFO */}
