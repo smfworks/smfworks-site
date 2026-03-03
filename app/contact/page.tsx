@@ -26,7 +26,7 @@ export default function ContactPage() {
             <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
             <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
               <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLScEljvnpvYdni_A9QZbFB6C7WiPn6XSlzWL99cGQcAzSVQemQ/viewform?embedded=true"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSesttQn_vRl9Q25-uz6kzy66E6X9vMPGisOzi62-ycNF-h15g/viewform?embedded=true"
                 width="100%"
                 height="820"
                 frameBorder="0"
