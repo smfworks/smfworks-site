@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
 
 // Once smfworks.com is verified in Resend dashboard, change RESEND_FROM to:
 // "SMF Works <noreply@smfworks.com>"
@@ -7,6 +6,8 @@ const TO_ADDRESS = "michael@smfworks.com";
 
 export async function POST(req: NextRequest) {
   try {
+    // Dynamic import keeps Resend out of the build-time module graph
+    const { Resend } = await import("resend");
     const resend = new Resend(process.env.RESEND_API_KEY);
     const FROM_ADDRESS = process.env.RESEND_FROM || "SMF Works <onboarding@resend.dev>";
     const { name, email, business, message } = await req.json();
