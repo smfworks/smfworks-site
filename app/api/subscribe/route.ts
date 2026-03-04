@@ -1,19 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
-import { google } from "googleapis";
+import { sheetsGet, sheetsAppend } from "@/lib/google-sheets";
 
-const SPREADSHEET_ID = process.env.GOOGLE_SHEET_ID || "1SEyilU8t9iWmR1kCuT6RTccql3jQGRPYorP9MRQuLbs";
+const SPREADSHEET_ID =
+  process.env.GOOGLE_SHEET_ID || "1SEyilU8t9iWmR1kCuT6RTccql3jQGRPYorP9MRQuLbs";
 const SHEET_RANGE = "Sheet1!A:B";
 
-function getGoogleAuth() {
+function getCredentials() {
   const keyJson = process.env.GOOGLE_SERVICE_ACCOUNT_KEY;
   if (!keyJson) {
-    throw new Error("GOOGLE_SERVICE_ACCOUNT_KEY environment variable is not set");
+    throw new Error("GOOGLE_SERVICE_ACCOUNT_KEY is not set");
   }
-  const credentials = JSON.parse(keyJson);
-  return new google.auth.GoogleAuth({
-    credentials,
-    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-  });
+  const creds = JSON.parse(keyJson);
+  return {
+    client_email: creds.client_email as string,
+    private_key: creds.private_key as string,
+  };
 }
 
 export async function POST(req: NextRequest) {
@@ -24,16 +25,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Valid email required" }, { status: 400 });
     }
 
-    const auth = getGoogleAuth();
-    const sheets = google.sheets({ version: "v4", auth });
+    const credentials = getCredentials();
 
     // Check for duplicates
-    const existing = await sheets.spreadsheets.values.get({
-      spreadsheetId: SPREADSHEET_ID,
-      range: SHEET_RANGE,
-    });
-
-    const rows = existing.data.values || [];
+    const rows = await sheetsGet(credentials, SPREADSHEET_ID, SHEET_RANGE);
     const alreadySubscribed = rows.some(
       (row) => row[0]?.toLowerCase() === email.toLowerCase()
     );
@@ -47,14 +42,9 @@ export async function POST(req: NextRequest) {
 
     // Append new subscriber
     const timestamp = new Date().toISOString();
-    await sheets.spreadsheets.values.append({
-      spreadsheetId: SPREADSHEET_ID,
-      range: SHEET_RANGE,
-      valueInputOption: "USER_ENTERED",
-      requestBody: {
-        values: [[email, timestamp]],
-      },
-    });
+    await sheetsAppend(credentials, SPREADSHEET_ID, SHEET_RANGE, [
+      [email, timestamp],
+    ]);
 
     return NextResponse.json({ message: "Subscribed!" }, { status: 200 });
   } catch (error) {
