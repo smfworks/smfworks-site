@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Call Resend REST API directly — no SDK, no module-level init
-    const from = process.env.RESEND_FROM || "SMF Works <onboarding@resend.dev>";
+    const from = process.env.RESEND_FROM || "SMF Works <noreply@smfworks.com>";
     const subject = `New Inquiry from ${name}${business ? ` — ${business}` : ""}`;
 
     const res = await fetch("https://api.resend.com/emails", {
