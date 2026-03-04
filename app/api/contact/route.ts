@@ -80,8 +80,9 @@ export async function POST(req: NextRequest) {
     if (!res.ok) {
       const err = await res.text();
       console.error("Resend API error:", err);
+      // TODO: remove resendError before going to production
       return NextResponse.json(
-        { error: "Failed to send message. Please try again or email michael@smfworks.com directly." },
+        { error: "Failed to send message.", resendError: err },
         { status: 500 }
       );
     }
