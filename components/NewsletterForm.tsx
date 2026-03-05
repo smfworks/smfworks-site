@@ -38,8 +38,8 @@ export default function NewsletterForm() {
     return (
       <div className="text-center">
         <div className="text-4xl mb-3">🎉</div>
-        <p className="text-[#C87941] font-semibold text-lg mb-1">You&apos;re subscribed!</p>
-        <p className="text-gray-300 text-sm">{message}</p>
+        <p className="text-[#00D4FF] font-semibold text-lg mb-1">You&apos;re subscribed!</p>
+        <p className="text-[#94A3B8] text-sm">{message}</p>
       </div>
     );
   }
@@ -53,12 +53,12 @@ export default function NewsletterForm() {
         placeholder="your@email.com"
         required
         disabled={status === "loading"}
-        className="flex-1 px-4 py-3 rounded bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-[#C87941] transition-colors disabled:opacity-50"
+        className="flex-1 px-4 py-3 rounded-lg bg-[#131B2E] border border-[#1e2a45] text-[#E2E8F0] placeholder-[#94A3B8]/50 focus:outline-none focus:border-[#00D4FF] transition-colors disabled:opacity-50"
       />
       <button
         type="submit"
         disabled={status === "loading" || !email}
-        className="bg-[#C87941] text-white px-6 py-3 rounded font-semibold hover:bg-[#b56b35] transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+        className="bg-[#FF6B00] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#e55f00] transition-colors shadow-sm shadow-[#FF6B00]/20 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
       >
         {status === "loading" ? "Subscribing…" : "Subscribe Free"}
       </button>

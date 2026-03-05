@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 @import "tailwindcss";
 
 @theme {
-  --color-charcoal: #1E1E1E;
-  --color-amber: #C87941;
-  --color-warmwhite: #F8F5F0;
-  --color-slate: #3D5A80;
+  --color-navy: #0A0F1F;
+  --color-navy-deep: #001F3F;
+  --color-card: #131B2E;
+  --color-cyan: #00D4FF;
+  --color-blue: #007BFF;
+  --color-orange: #FF6B00;
+  --color-purple: #9C27B0;
+  --color-text: #E2E8F0;
+  --color-muted: #94A3B8;
 }
 
 html {
@@ -14,7 +19,7 @@ html {
 }
 
 body {
-  background-color: #F8F5F0;
-  color: #1E1E1E;
-  font-family: 'Inter', 'DM Sans', sans-serif;
+  background-color: #0A0F1F;
+  color: #E2E8F0;
+  font-family: 'Inter', 'Space Grotesk', sans-serif;
 }
