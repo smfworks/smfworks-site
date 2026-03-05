@@ -15,18 +15,14 @@ export default function Home() {
         <div className="max-w-4xl mx-auto relative z-10 text-center">
           {/* PROMINENT LOGO */}
           <div className="mb-8 flex justify-center">
-            <div className="relative">
-              {/* Glow behind logo */}
-              <div className="absolute inset-0 bg-[#00D4FF] opacity-[0.15] blur-[40px] rounded-full scale-110" />
-              <Image
-                src="/smf-logo.png"
-                alt="SMF Works"
-                width={320}
-                height={238}
-                className="relative z-10 w-[280px] md:w-[320px] h-auto drop-shadow-[0_0_30px_rgba(0,212,255,0.3)]"
-                priority
-              />
-            </div>
+            <Image
+              src="/smf-logo.png"
+              alt="SMF Works"
+              width={320}
+              height={238}
+              className="w-[280px] md:w-[320px] h-auto"
+              priority
+            />
           </div>
 
           <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-[0.2em] mb-5">
