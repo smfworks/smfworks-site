@@ -10,11 +10,12 @@ export default function ServicesPage() {
   return (
     <>
       {/* HEADER */}
-      <section className="bg-[#1E1E1E] text-[#F8F5F0] py-20 px-6">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-[#C87941] text-sm font-semibold uppercase tracking-widest mb-3">What We Offer</p>
+      <section className="bg-[#001F3F] text-[#E2E8F0] py-20 px-6 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-[500px] h-[300px] bg-[#007BFF] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
+        <div className="max-w-4xl mx-auto relative z-10">
+          <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-widest mb-3">What We Offer</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-5">Services Built for Small Business</h1>
-          <p className="text-gray-300 text-lg max-w-2xl leading-relaxed">
+          <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
             No enterprise pricing. No generic outputs. Just precise, practical AI work —
             delivered by someone who&apos;s actually done it at scale.
           </p>
@@ -22,23 +23,25 @@ export default function ServicesPage() {
       </section>
 
       {/* SERVICE 1: CONTENT */}
-      <section id="content" className="py-20 px-6 bg-[#F8F5F0]">
+      <section id="content" className="py-20 px-6 bg-[#0A0F1F]">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="text-5xl mb-5">✍️</div>
-              <h2 className="text-3xl font-bold mb-4">AI Content Production</h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <div className="w-14 h-14 rounded-lg bg-[#00D4FF]/10 flex items-center justify-center mb-5">
+                <span className="text-3xl">✍️</span>
+              </div>
+              <h2 className="text-3xl font-bold mb-4 text-[#E2E8F0]">AI Content Production</h2>
+              <p className="text-[#94A3B8] leading-relaxed mb-6">
                 Your business has a story worth telling. We use AI to tell it — consistently,
                 professionally, and at a fraction of what a traditional agency would charge.
                 Every piece is shaped to your voice, your audience, and your goals.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-8">
+              <p className="text-[#94A3B8] leading-relaxed mb-8">
                 Whether you need a steady drumbeat of blog content to drive SEO,
                 email sequences that actually convert, or thought leadership pieces that
                 establish you as the authority in your market — we&apos;ve got you covered.
               </p>
-              <Link href="/contact" className="bg-[#C87941] text-white px-8 py-3 rounded font-semibold hover:bg-[#b56b35] transition-colors inline-block">
+              <Link href="/contact" className="bg-[#FF6B00] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e55f00] transition-colors inline-block shadow-lg shadow-[#FF6B00]/20">
                 Get a Quote
               </Link>
             </div>
@@ -51,9 +54,9 @@ export default function ServicesPage() {
                 { title: "Thought Leadership", desc: "LinkedIn ghostwriting, op-eds, founder stories." },
                 { title: "Website Copy", desc: "Landing pages, service pages, about pages that convert." },
               ].map((item) => (
-                <div key={item.title} className="bg-white rounded-lg p-5 border border-gray-100 shadow-sm">
-                  <h3 className="font-semibold mb-1">{item.title}</h3>
-                  <p className="text-sm text-gray-500">{item.desc}</p>
+                <div key={item.title} className="bg-[#131B2E] rounded-lg p-5 border border-[#1e2a45] hover:border-[#00D4FF]/30 transition-colors">
+                  <h3 className="font-semibold mb-1 text-[#E2E8F0]">{item.title}</h3>
+                  <p className="text-sm text-[#94A3B8]">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -62,10 +65,10 @@ export default function ServicesPage() {
       </section>
 
       {/* DIVIDER */}
-      <div className="bg-[#C87941] h-1 w-full" />
+      <div className="bg-gradient-to-r from-[#00D4FF] to-[#FF6B00] h-px w-full opacity-30" />
 
       {/* SERVICE 2: WORKFLOW */}
-      <section id="workflow" className="py-20 px-6 bg-white">
+      <section id="workflow" className="py-20 px-6 bg-[#131B2E]">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 space-y-4">
@@ -77,26 +80,28 @@ export default function ServicesPage() {
                 { title: "ROI Analysis", desc: "We show you the math before you spend a dime." },
                 { title: "Ongoing Optimization", desc: "AI moves fast. We keep your systems current." },
               ].map((item) => (
-                <div key={item.title} className="bg-[#F8F5F0] rounded-lg p-5 border border-gray-100 shadow-sm">
-                  <h3 className="font-semibold mb-1">{item.title}</h3>
-                  <p className="text-sm text-gray-500">{item.desc}</p>
+                <div key={item.title} className="bg-[#0A0F1F] rounded-lg p-5 border border-[#1e2a45] hover:border-[#FF6B00]/30 transition-colors">
+                  <h3 className="font-semibold mb-1 text-[#E2E8F0]">{item.title}</h3>
+                  <p className="text-sm text-[#94A3B8]">{item.desc}</p>
                 </div>
               ))}
             </div>
             <div className="order-1 md:order-2">
-              <div className="text-5xl mb-5">⚙️</div>
-              <h2 className="text-3xl font-bold mb-4">AI Workflow Consulting</h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <div className="w-14 h-14 rounded-lg bg-[#FF6B00]/10 flex items-center justify-center mb-5">
+                <span className="text-3xl">⚙️</span>
+              </div>
+              <h2 className="text-3xl font-bold mb-4 text-[#E2E8F0]">AI Workflow Consulting</h2>
+              <p className="text-[#94A3B8] leading-relaxed mb-6">
                 Most small businesses are leaving serious time and money on the table
                 because they don&apos;t know which AI tools are worth using — or how to make
                 them actually work together.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-8">
+              <p className="text-[#94A3B8] leading-relaxed mb-8">
                 We map your operations, find the friction points, and build AI workflows
                 that run quietly in the background while you focus on what you do best.
                 Trades businesses, service firms, retail — we&apos;ve seen it all.
               </p>
-              <Link href="/contact" className="bg-[#C87941] text-white px-8 py-3 rounded font-semibold hover:bg-[#b56b35] transition-colors inline-block">
+              <Link href="/contact" className="bg-[#FF6B00] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e55f00] transition-colors inline-block shadow-lg shadow-[#FF6B00]/20">
                 Start a Conversation
               </Link>
             </div>
@@ -105,15 +110,15 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#3D5A80] text-white py-16 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-4">Not sure which service fits?</h2>
-        <p className="text-blue-200 mb-8 max-w-xl mx-auto">
+      <section className="bg-gradient-to-r from-[#001F3F] to-[#131B2E] text-white py-16 px-6 text-center border-t border-[#1e2a45]">
+        <h2 className="text-3xl font-bold mb-4 text-[#E2E8F0]">Not sure which service fits?</h2>
+        <p className="text-[#94A3B8] mb-8 max-w-xl mx-auto">
           Let&apos;s talk for 20 minutes. No pitch, no pressure — just a real conversation
           about where AI can help your business.
         </p>
         <Link
           href="/contact"
-          className="bg-[#C87941] text-white px-10 py-3 rounded font-semibold hover:bg-[#b56b35] transition-colors"
+          className="bg-[#FF6B00] text-white px-10 py-3 rounded-lg font-semibold hover:bg-[#e55f00] transition-colors shadow-lg shadow-[#FF6B00]/20"
         >
           Request a Call
         </Link>

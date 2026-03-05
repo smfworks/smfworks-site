@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -8,9 +9,8 @@ export default function Nav() {
   return (
     <header className="bg-[#001F3F]/95 backdrop-blur-md text-[#E2E8F0] sticky top-0 z-50 border-b border-[#1e2a45]">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold tracking-tight">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#007BFF]">SMF</span>{" "}
-          <span className="text-[#FF6B00]">Works</span>
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/smf-logo.jpg" alt="SMF Works" width={140} height={40} className="h-10 w-auto" priority />
         </Link>
 
         {/* Desktop nav */}

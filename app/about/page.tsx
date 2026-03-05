@@ -10,11 +10,12 @@ export default function AboutPage() {
   return (
     <>
       {/* HEADER */}
-      <section className="bg-[#1E1E1E] text-[#F8F5F0] py-20 px-6">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-[#C87941] text-sm font-semibold uppercase tracking-widest mb-3">The Story</p>
+      <section className="bg-[#001F3F] text-[#E2E8F0] py-20 px-6 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#00D4FF] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
+        <div className="max-w-4xl mx-auto relative z-10">
+          <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-widest mb-3">The Story</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-5">Three Dimensions.<br />One Purpose.</h1>
-          <p className="text-gray-300 text-lg max-w-2xl leading-relaxed">
+          <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
             SMF Works didn&apos;t come out of a startup incubator. It came out of three
             decades of doing the actual work — at enterprise scale, at the forge,
             and in the recording booth.
@@ -23,29 +24,29 @@ export default function AboutPage() {
       </section>
 
       {/* FOUNDER STORY */}
-      <section className="py-20 px-6 bg-[#F8F5F0]">
-        <div className="max-w-3xl mx-auto prose prose-lg">
-          <p className="text-gray-700 leading-relaxed text-lg mb-6">
+      <section className="py-20 px-6 bg-[#0A0F1F]">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
             Michael Gannotti has spent 30 years in technology — from instructional web
             design to Corporate Systems Architect, through 25+ years in Modern Work and
             Business Productivity, to his current role as a Principal AI Solutions Engineer
             deploying generative AI for some of the largest organizations in the country.
           </p>
-          <p className="text-gray-700 leading-relaxed text-lg mb-6">
+          <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
             For the last three-plus years, he&apos;s been at the leading edge of enterprise AI —
             building and deploying the kind of systems that Fortune 500 companies spend
             millions on. He knows what works. He knows what doesn&apos;t. And he knows that
             small businesses deserve access to that same expertise.
           </p>
-          <p className="text-gray-700 leading-relaxed text-lg mb-6">
+          <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
             When he&apos;s not doing that, Michael is running{" "}
-            <a href="https://saintmichaelsforge.com" target="_blank" rel="noopener noreferrer" className="text-[#C87941] hover:underline">
+            <a href="https://saintmichaelsforge.com" target="_blank" rel="noopener noreferrer" className="text-[#00D4FF] hover:underline">
               Saint Michael&apos;s Forge
             </a>{" "}
             — shaping metal with fire and hammer, crafting custom knives and metalwork by hand.
             That&apos;s not a metaphor. He literally forges steel.
           </p>
-          <p className="text-gray-700 leading-relaxed text-lg mb-10">
+          <p className="text-[#94A3B8] leading-relaxed text-lg mb-10">
             SMF Works is where those worlds meet: three decades of knowing how businesses
             actually operate, deep enterprise AI expertise, and the discipline of a craftsman —
             brought directly to small businesses that deserve more than they&apos;ve been getting.
@@ -54,32 +55,32 @@ export default function AboutPage() {
       </section>
 
       {/* THREE DIMENSIONS */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-[#131B2E]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">The Three Dimensions</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#E2E8F0]">The Three Dimensions</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-[#F8F5F0] rounded-xl">
+            <div className="text-center p-8 bg-[#0A0F1F] rounded-xl border border-[#1e2a45] hover:border-[#00D4FF]/30 transition-colors">
               <div className="text-5xl mb-4">💻</div>
-              <h3 className="text-xl font-bold mb-3">The Engineer</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">The Engineer</h3>
+              <p className="text-[#94A3B8] text-sm leading-relaxed">
                 30 years in enterprise technology. Principal AI Solutions Engineer.
                 3+ years deploying generative AI at scale. He knows the systems
                 that run the world&apos;s largest organizations.
               </p>
             </div>
-            <div className="text-center p-8 bg-[#F8F5F0] rounded-xl">
+            <div className="text-center p-8 bg-[#0A0F1F] rounded-xl border border-[#1e2a45] hover:border-[#FF6B00]/30 transition-colors">
               <div className="text-5xl mb-4">🔨</div>
-              <h3 className="text-xl font-bold mb-3">The Forger</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">The Forger</h3>
+              <p className="text-[#94A3B8] text-sm leading-relaxed">
                 Bladesmith and blacksmith. Founder of Saint Michael&apos;s Forge.
                 The forge teaches patience, precision, and respect for the work.
                 Those principles carry directly into everything SMF Works delivers.
               </p>
             </div>
-            <div className="text-center p-8 bg-[#F8F5F0] rounded-xl">
+            <div className="text-center p-8 bg-[#0A0F1F] rounded-xl border border-[#1e2a45] hover:border-[#9C27B0]/30 transition-colors">
               <div className="text-5xl mb-4">🎵</div>
-              <h3 className="text-xl font-bold mb-3">The Creator</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">The Creator</h3>
+              <p className="text-[#94A3B8] text-sm leading-relaxed">
                 Five AI-generated music albums on Spotify. A published author.
                 Creativity isn&apos;t an afterthought — it&apos;s the engine. SMF Works
                 brings genuine creative thinking to every engagement.
@@ -90,14 +91,14 @@ export default function AboutPage() {
       </section>
 
       {/* QUOTE */}
-      <section className="bg-[#1E1E1E] text-[#F8F5F0] py-16 px-6 text-center">
+      <section className="bg-[#001F3F] text-[#E2E8F0] py-16 px-6 text-center">
         <div className="max-w-2xl mx-auto">
           <div className="text-5xl mb-6">🔥</div>
           <blockquote className="text-2xl font-light italic leading-relaxed mb-4">
             &ldquo;Do Not Wait to Strike till the Iron Is Hot; But Make It Hot by Striking.&rdquo;
           </blockquote>
-          <cite className="text-[#C87941] text-sm">— W.B. Yeats</cite>
-          <p className="text-gray-400 text-sm mt-6 max-w-xl mx-auto">
+          <cite className="text-[#FF6B00] text-sm">— W.B. Yeats</cite>
+          <p className="text-[#94A3B8] text-sm mt-6 max-w-xl mx-auto">
             This is the philosophy behind SMF Works. Don&apos;t wait for the perfect moment.
             Build momentum. Forge it yourself.
           </p>
@@ -105,15 +106,15 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-6 bg-[#F8F5F0] text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to work with someone who gets it?</h2>
-        <p className="text-gray-600 mb-8 max-w-xl mx-auto">
+      <section className="py-16 px-6 bg-[#0A0F1F] text-center">
+        <h2 className="text-3xl font-bold mb-4 text-[#E2E8F0]">Ready to work with someone who gets it?</h2>
+        <p className="text-[#94A3B8] mb-8 max-w-xl mx-auto">
           No junior associates. No offshore teams. Just direct expertise applied
           to your business.
         </p>
         <Link
           href="/contact"
-          className="bg-[#C87941] text-white px-10 py-3 rounded font-semibold hover:bg-[#b56b35] transition-colors"
+          className="bg-[#FF6B00] text-white px-10 py-3 rounded-lg font-semibold hover:bg-[#e55f00] transition-colors shadow-lg shadow-[#FF6B00]/20"
         >
           Let&apos;s Talk
         </Link>
