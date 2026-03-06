@@ -40,7 +40,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg md:text-xl text-[#94A3B8] max-w-2xl mx-auto mb-10 leading-relaxed">
-            SMF Works delivers AI-powered content and workflow solutions to small businesses
+            SMF Works delivers HighTech-powered content and workflow solutions to small businesses
             that have been priced out of the game. Serious expertise. Genuine craftsmanship.
             No corporate fluff.
           </p>
