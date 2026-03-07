@@ -82,7 +82,7 @@ export default function ServicesPage() {
             <div className="order-2 md:order-1 space-y-4">
               {[
                 { title: "Process Automation", desc: "Identify and automate repetitive tasks that eat your hours.", href: "/services/process-automation" },
-                { title: "AI Tool Selection", desc: "Cut through the noise — we find what actually fits your needs." },
+                { title: "AI Tool Selection", desc: "Cut through the noise — we find what actually fits your needs.", href: "/services/ai-tool-selection" },
                 { title: "Custom AI Workflows", desc: "Build flows that connect your tools, your team, your data." },
                 { title: "Staff Enablement", desc: "Train your people to work with AI, not around it." },
                 { title: "ROI Analysis", desc: "We show you the math before you spend a dime." },
