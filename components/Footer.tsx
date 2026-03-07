@@ -99,6 +99,7 @@ export default function Footer() {
 
       <div className="max-w-6xl mx-auto px-6 mt-10 pt-6 border-t border-[#1e2a45] text-center text-xs text-[#94A3B8]/40">
         © {new Date().getFullYear()} SMF Works. All rights reserved.
+        <div className="mt-1">Saint Michael&apos;s Forge LLC</div>
       </div>
     </footer>
   );
