@@ -48,7 +48,7 @@ export default function ServicesPage() {
             <div className="space-y-4">
               {[
                 { title: "Company Websites", desc: "Professional websites that convey your brand with clarity and credibility.", href: "/services/company-websites" },
-                { title: "Blog Posts & Articles", desc: "SEO-optimized, brand-voice-matched, ready to publish." },
+                { title: "Blog Posts & Articles", desc: "SEO-optimized, brand-voice-matched, ready to publish.", href: "/services/blog-posts-articles" },
                 { title: "Email Sequences", desc: "Welcome series, nurture campaigns, promotional blasts." },
                 { title: "Social Media Content", desc: "Consistent, platform-native content calendars." },
                 { title: "White Papers & Reports", desc: "Establish authority with data-driven long-form content." },
