@@ -88,10 +88,17 @@ export default function ServicesPage() {
                 { title: "ROI Analysis", desc: "We show you the math before you spend a dime." },
                 { title: "Ongoing Optimization", desc: "AI moves fast. We keep your systems current." },
               ].map((item) => (
-                <div key={item.title} className="bg-[#0A0F1F] rounded-lg p-5 border border-[#1e2a45] hover:border-[#FF6B00]/30 transition-colors">
-                  <h3 className="font-semibold mb-1 text-[#E2E8F0]">{item.title}</h3>
-                  <p className="text-sm text-[#94A3B8]">{item.desc}</p>
-                </div>
+                item.href ? (
+                  <Link key={item.title} href={item.href} className="bg-[#0A0F1F] rounded-lg p-5 border border-[#1e2a45] hover:border-[#FF6B00]/30 transition-colors block group">
+                    <h3 className="font-semibold mb-1 text-[#E2E8F0] group-hover:text-[#FF6B00] transition-colors">{item.title} <span className="text-[#FF6B00] text-xs">→</span></h3>
+                    <p className="text-sm text-[#94A3B8]">{item.desc}</p>
+                  </Link>
+                ) : (
+                  <div key={item.title} className="bg-[#0A0F1F] rounded-lg p-5 border border-[#1e2a45] hover:border-[#FF6B00]/30 transition-colors">
+                    <h3 className="font-semibold mb-1 text-[#E2E8F0]">{item.title}</h3>
+                    <p className="text-sm text-[#94A3B8]">{item.desc}</p>
+                  </div>
+                )
               ))}
             </div>
             <div className="order-1 md:order-2">
