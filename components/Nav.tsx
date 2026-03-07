@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import SiteSearch from "./SiteSearch";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -20,6 +21,7 @@ export default function Nav() {
           <Link href="/blog" className="hover:text-[#00D4FF] transition-colors">Blog</Link>
           <Link href="/about" className="hover:text-[#00D4FF] transition-colors">About</Link>
           <Link href="/contact" className="hover:text-[#00D4FF] transition-colors">Contact</Link>
+          <SiteSearch />
           <Link
             href="/newsletter"
             className="bg-[#FF6B00] text-white px-4 py-2 rounded-lg hover:bg-[#e55f00] transition-colors shadow-sm shadow-[#FF6B00]/20"
