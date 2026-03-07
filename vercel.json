@@ -1,6 +1,24 @@
 {
-  "framework": "nextjs",
   "buildCommand": "next build",
-  "devCommand": "next dev",
-  "installCommand": "npm install"
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "functions": {
+    "app/api/**": {
+      "maxDuration": 10
+    }
+  },
+  "headers": [
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/(smfworks2026indexnow.txt|robots.txt)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    }
+  ]
 }
