@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website Copy | SMF Works",
+  title: "Website Copy",
   description: "Converting website copy for landing pages, service pages, and about sections. SEO-optimized, brand-aligned, and built to drive bookings and inquiries. Starting at $150 per page.",
 };
 

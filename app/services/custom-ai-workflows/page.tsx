@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Custom AI Workflows | SMF Works",
+  title: "Custom AI Workflows",
   description: "Bespoke AI workflows that connect your tools, team, and data. CRM integrations, predictive analytics, and complex automations. From $10,000 with annual maintenance at 20-30% of build cost.",
 };
 

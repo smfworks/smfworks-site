@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Process Automation | SMF Works",
+  title: "Process Automation",
   description: "AI-powered process automation for trades and service businesses. Identify, map, and automate repetitive tasks to save hours and scale without adding staff. From $4,000 or $175/hr.",
 };
 

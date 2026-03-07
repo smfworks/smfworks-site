@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Social Media Content | SMF Works",
+  title: "Social Media Content",
   description: "Full social media content generation and management across up to 5 platforms. Strategy, creation, scheduling, and engagement monitoring starting at $500.",
 };
 

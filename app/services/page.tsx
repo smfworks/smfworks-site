@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services | SMF Works",
+  title: "Services",
   description: "AI content production and AI workflow consulting for small businesses. Practical, precise, and priced for SMBs.",
 };
 

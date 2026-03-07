@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ROI Analysis | SMF Works",
+  title: "ROI Analysis",
   description: "Data-driven ROI analysis for AI investments. Time savings, cost reductions, break-even points, and risk assessments before you commit. From $2,000 per project or $75–$300/hr.",
 };
 

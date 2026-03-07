@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Thought Leadership | SMF Works",
+  title: "Thought Leadership",
   description: "LinkedIn ghostwriting, op-eds, founder stories, and full book ghostwriting and publication. Pieces from $150, monthly plans from $100/month, books from $3,500.",
 };
 

@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { getAllPosts, getAllCategories } from "./posts";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Practical AI insights for small business owners — tips, strategies, and real-world use cases from SMF Works. No hype, just what works.",
+  alternates: { canonical: "https://smfworks.com/blog" },
+};
 
 export default function BlogPage({
   searchParams,

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Email Sequences | SMF Works",
+  title: "Email Sequences",
   description: "AI-powered email sequences, nurture campaigns, and full-service email marketing for small businesses. Sequence creation from $500, management from $50/month.",
 };
 

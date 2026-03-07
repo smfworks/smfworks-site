@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllIssues, getCurrentIssue } from "./issues";
 import NewsletterForm from "@/components/NewsletterForm";
+
+export const metadata: Metadata = {
+  title: "SMF AI Weekly",
+  description: "Subscribe to SMF AI Weekly — a free newsletter delivering practical AI news and small business strategies every Monday, straight from an enterprise AI engineer.",
+  alternates: { canonical: "https://smfworks.com/newsletter" },
+};
 
 export default function NewsletterArchivePage() {
   const issues = getAllIssues();

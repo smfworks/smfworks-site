@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Tool Selection | SMF Works",
+  title: "AI Tool Selection",
   description: "Cut through the AI hype with expert tool evaluation, demos, cost-benefit analysis, and pilot testing. Starting at $2,000 per engagement or $200/hr.",
 };
 

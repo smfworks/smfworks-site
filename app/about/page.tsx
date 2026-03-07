@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | SMF Works",
-  description: "The story behind SMF Works — 30 years of enterprise technology, a blacksmith's discipline, and a commitment to small businesses.",
+  title: "About",
+  description: "The story behind SMF Works — 30 years of enterprise technology, a blacksmith's discipline, and a commitment to small businesses that deserve better than agency pricing.",
+  alternates: { canonical: "https://smfworks.com/about" },
 };
 
 export default function AboutPage() {

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Company Websites | SMF Works",
+  title: "Company Websites",
   description: "Professional, AI-driven company websites for small businesses. SEO-optimized, responsive, and built to convert. New sites from $750, redesigns from $500.",
 };
 

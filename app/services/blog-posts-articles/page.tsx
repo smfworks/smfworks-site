@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Posts & Articles | SMF Works",
+  title: "Blog Posts & Articles",
   description: "SEO-optimized, brand-aligned blog posts and articles for small businesses. Ready to publish, starting at $50/month.",
 };
 

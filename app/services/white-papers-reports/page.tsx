@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "White Papers & Reports | SMF Works",
+  title: "White Papers & Reports",
   description: "Data-driven white papers, industry reports, and competitive analysis that establish your authority and generate leads. Starting at $1,500 per document.",
 };
 

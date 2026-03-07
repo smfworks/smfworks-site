@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ongoing Optimization | SMF Works",
+  title: "Ongoing Optimization",
   description: "Continuous monitoring, optimization, and AI advance briefings for your workflows. Monthly plans from $500, retainers from $2,000, hourly from $250.",
 };
 

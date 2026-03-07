@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Staff Enablement | SMF Works",
+  title: "Staff Enablement",
   description: "AI training programs for small business teams. Virtual or in-person workshops, customized resources, and ongoing support. Programs from $500, per-employee from $300.",
 };
 
