@@ -85,6 +85,7 @@ export default function Footer() {
             <li><Link href="/about" className="hover:text-[#E2E8F0] transition-colors">About</Link></li>
             <li><Link href="/contact" className="hover:text-[#E2E8F0] transition-colors">Contact</Link></li>
             <li><Link href="/newsletter" className="hover:text-[#E2E8F0] transition-colors">SMF AI Weekly</Link></li>
+            <li><Link href="/pay" className="hover:text-[#E2E8F0] transition-colors">Pay Invoice</Link></li>
           </ul>
         </div>
 
