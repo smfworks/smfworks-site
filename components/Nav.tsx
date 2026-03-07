@@ -10,7 +10,7 @@ export default function Nav() {
     <header className="bg-[#001F3F]/95 backdrop-blur-md text-[#E2E8F0] sticky top-0 z-50 border-b border-[#1e2a45]">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/smf-logo.png" alt="SMF Works" width={180} height={50} className="h-14 w-auto" priority />
+          <Image src="/smf-logo.png" alt="SMF Works — AI Solutions for Small Business" width={180} height={50} className="h-14 w-auto" priority />
         </Link>
 
         {/* Desktop nav */}

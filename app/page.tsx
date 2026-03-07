@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import NewsletterForm from "@/components/NewsletterForm";
+
+export const metadata: Metadata = {
+  title: "SMF Works | AI Solutions for Small Business — Content & Workflow Automation",
+  description:
+    "SMF Works delivers AI-powered content production and workflow automation for small businesses. Practical, precise, and priced for SMBs. Founded by a Principal AI Solutions Engineer with 30 years of enterprise experience. Serving Pittsboro, NC and beyond.",
+  alternates: {
+    canonical: "https://smfworks.com",
+  },
+};
 
 export default function Home() {
   return (
@@ -17,7 +27,7 @@ export default function Home() {
           <div className="mb-8 flex justify-center">
             <Image
               src="/smf-logo.png"
-              alt="SMF Works"
+              alt="SMF Works — AI Solutions for Small Business"
               width={320}
               height={238}
               className="w-[280px] md:w-[320px] h-auto"
