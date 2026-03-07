@@ -28,7 +28,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="w-14 h-14 rounded-lg bg-[#00D4FF]/10 flex items-center justify-center mb-5">
-                <span className="text-3xl">✍️</span>
+                <span className="text-3xl" aria-hidden="true">✍️</span>
               </div>
               <h2 className="text-3xl font-bold mb-4 text-[#E2E8F0]">Marketing & SEO Content Production</h2>
               <p className="text-[#94A3B8] leading-relaxed mb-6">
@@ -103,7 +103,7 @@ export default function ServicesPage() {
             </div>
             <div className="order-1 md:order-2">
               <div className="w-14 h-14 rounded-lg bg-[#FF6B00]/10 flex items-center justify-center mb-5">
-                <span className="text-3xl">⚙️</span>
+                <span className="text-3xl" aria-hidden="true">⚙️</span>
               </div>
               <h2 className="text-3xl font-bold mb-4 text-[#E2E8F0]">AI Workflow Consulting</h2>
               <p className="text-[#94A3B8] leading-relaxed mb-6">

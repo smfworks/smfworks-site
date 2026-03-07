@@ -59,7 +59,7 @@ export default function WhitePapersReportsPage() {
               { icon: "📡", title: "Distribution Strategy", desc: "Recommendations on where and how to distribute your white paper for maximum visibility and lead capture." },
             ].map((item) => (
               <div key={item.title} className="bg-[#0A0F1F] rounded-lg p-6 border border-[#1e2a45] hover:border-[#00D4FF]/30 transition-colors">
-                <div className="text-3xl mb-3">{item.icon}</div>
+                <div className="text-3xl mb-3" aria-hidden="true">{item.icon}</div>
                 <h3 className="font-semibold mb-2 text-[#E2E8F0]">{item.title}</h3>
                 <p className="text-sm text-[#94A3B8] leading-relaxed">{item.desc}</p>
               </div>
@@ -91,7 +91,7 @@ export default function WhitePapersReportsPage() {
               },
             ].map((item) => (
               <div key={item.title} className="bg-[#131B2E] rounded-xl p-8 border border-[#1e2a45] hover:border-[#00D4FF]/30 transition-colors text-center">
-                <div className="text-4xl mb-4">{item.icon}</div>
+                <div className="text-4xl mb-4" aria-hidden="true">{item.icon}</div>
                 <h3 className="text-lg font-bold text-[#E2E8F0] mb-3">{item.title}</h3>
                 <p className="text-sm text-[#94A3B8] leading-relaxed">{item.desc}</p>
               </div>

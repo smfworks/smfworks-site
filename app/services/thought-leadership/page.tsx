@@ -62,7 +62,7 @@ export default function ThoughtLeadershipPage() {
               { icon: "🏅", title: "Authority Positioning", desc: "Every piece is designed to reinforce one message: you are the expert your audience should trust and hire." },
             ].map((item) => (
               <div key={item.title} className="bg-[#0A0F1F] rounded-lg p-6 border border-[#1e2a45] hover:border-[#00D4FF]/30 transition-colors">
-                <div className="text-3xl mb-3">{item.icon}</div>
+                <div className="text-3xl mb-3" aria-hidden="true">{item.icon}</div>
                 <h3 className="font-semibold mb-2 text-[#E2E8F0]">{item.title}</h3>
                 <p className="text-sm text-[#94A3B8] leading-relaxed">{item.desc}</p>
               </div>

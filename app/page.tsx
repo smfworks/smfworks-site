@@ -107,7 +107,7 @@ export default function Home() {
               {/* Service 1 */}
               <div className="bg-[#0A0F1F]/80 backdrop-blur-sm rounded-xl p-8 border border-[#1e2a45] hover:border-[#00D4FF]/40 transition-all group hover:shadow-lg hover:shadow-[#00D4FF]/5">
                 <div className="w-12 h-12 rounded-lg bg-[#00D4FF]/10 flex items-center justify-center mb-4 group-hover:bg-[#00D4FF]/20 transition-colors group-hover:shadow-lg group-hover:shadow-[#00D4FF]/20">
-                  <span className="text-2xl">✍️</span>
+                  <span className="text-2xl" aria-hidden="true">✍️</span>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">Marketing & SEO Content Production</h3>
                 <p className="text-[#94A3B8] leading-relaxed mb-6">
@@ -122,7 +122,7 @@ export default function Home() {
               {/* Service 2 */}
               <div className="bg-[#0A0F1F]/80 backdrop-blur-sm rounded-xl p-8 border border-[#1e2a45] hover:border-[#FF6B00]/40 transition-all group hover:shadow-lg hover:shadow-[#FF6B00]/5">
                 <div className="w-12 h-12 rounded-lg bg-[#FF6B00]/10 flex items-center justify-center mb-4 group-hover:bg-[#FF6B00]/20 transition-colors group-hover:shadow-lg group-hover:shadow-[#FF6B00]/20">
-                  <span className="text-2xl">⚙️</span>
+                  <span className="text-2xl" aria-hidden="true">⚙️</span>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">AI Workflow Consulting</h3>
                 <p className="text-[#94A3B8] leading-relaxed mb-6">
