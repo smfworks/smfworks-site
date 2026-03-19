@@ -48,7 +48,7 @@ SMF Works helps small businesses automate their operations using AI. We build cu
 
 ```bash
 # Clone the repository
-git clone https://github.com/mikesmoltbot-hub/smfworks-site.git
+git clone https://github.com/smfworks/smfworks-site.git
 cd smfworks-site
 
 # Install dependencies
@@ -148,9 +148,9 @@ MIT License - See [LICENSE](./LICENSE) for details.
 ## Connect
 
 - **Website:** [smfworks.com](https://smfworks.com)
-- **GitHub:** [@mikesmoltbot-hub](https://github.com/mikesmoltbot-hub)
+- **GitHub:** [@smfworks](https://github.com/smfworks)
 - **Location:** Pittsboro, NC
 
 ---
 
-*Built with Next.js, Tailwind CSS, and ☕ by SMF Works*
+*Built with Next.js, Tailwind CSS, and ☕ by SMF Works*F Works*

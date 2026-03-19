@@ -3,6 +3,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import SMFLeadCaptureWidget from "@/components/SMFLeadCaptureWidget";
 
 export const metadata: Metadata = {
   title: {
@@ -130,6 +131,7 @@ export default function RootLayout({
         <Nav />
         <main>{children}</main>
         <Footer />
+        <SMFLeadCaptureWidget />
       </body>
     </html>
   );
