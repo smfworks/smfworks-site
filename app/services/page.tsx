@@ -91,7 +91,7 @@ export default function ServicesPage() {
             No enterprise pricing. No generic outputs. Just precise, practical AI work —
             delivered by someone who&apos;s actually done it at scale.
           </p>
-          <!-- SEO/GEO Definition Box -->
+          {/* SEO/GEO Definition Box */}
           <div className="mt-8 bg-[#131B2E]/80 backdrop-blur-sm rounded-xl border border-[#1e2a45] p-6 md:p-8">
             <h2 className="text-lg font-bold text-[#E2E8F0] mb-4 flex items-center gap-2">
               <span className="text-[#00D4FF]">🔍</span>
