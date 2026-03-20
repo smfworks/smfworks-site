@@ -4,8 +4,9 @@ import Image from "next/image";
 import { getAllPosts, getAllCategories } from "./posts";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Practical AI insights for small business owners — tips, strategies, and real-world use cases from SMF Works. No hype, just what works.",
+  title: "Blog | AI & Automation Advice for Small Business Owners 2026",
+  description:
+    "Practical AI and automation advice for small business owners in 2026. Weekly posts on AI adoption, agentic AI, SEO content strategies, productivity, and real-world implementation for trades and service companies. No fluff.",
   alternates: { canonical: "https://smfworks.com/blog" },
 };
 

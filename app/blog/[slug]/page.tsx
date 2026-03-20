@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { getPostBySlug, getAllPosts } from "../posts";
 
 export function generateStaticParams() {
@@ -16,21 +17,26 @@ export async function generateMetadata({
   const post = getPostBySlug(slug);
   if (!post) return {};
 
+  // Create full meta description from excerpt
+  const description = post.excerpt.length > 160 ? post.excerpt.slice(0, 157) + "..." : post.excerpt;
+
   return {
-    title: post.title,
-    description: post.excerpt.slice(0, 160),
-    keywords: post.categories.join(", ") + ", SMF Works, small business",
+    title: `${post.title} | SMF Works`,
+    description: description,
+    keywords: post.categories.join(", ") + ", SMF Works, small business, AI, automation",
     openGraph: {
       title: post.title,
-      description: post.excerpt.slice(0, 160),
+      description: description,
       url: `https://smfworks.com/blog/${post.slug}`,
       type: "article",
       images: [{ url: "https://smfworks.com/og-image.jpg", width: 1200, height: 630 }],
+      publishedTime: post.date,
+      authors: ["https://smfworks.com/about"],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.excerpt.slice(0, 160),
+      description: description,
       images: ["https://smfworks.com/og-image.jpg"],
     },
     alternates: { canonical: `https://smfworks.com/blog/${post.slug}` },
@@ -48,6 +54,36 @@ export default async function BlogPostPage({
   if (!post) {
     notFound();
   }
+
+  // Generate Article schema
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.image || "https://smfworks.com/og-image.jpg",
+    author: {
+      "@type": "Person",
+      name: "Michael",
+      url: "https://smfworks.com/about",
+      jobTitle: "Principal AI Solutions Engineer & Founder",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "SMF Works",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://smfworks.com/smf-logo.png",
+      },
+    },
+    datePublished: post.date,
+    dateModified: post.date,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://smfworks.com/blog/${post.slug}`,
+    },
+    articleSection: post.categories[0] || "AI",
+  };
 
   // Convert markdown-like content to HTML-safe paragraphs
   const contentBlocks = post.content.split("\n\n").map((block, i) => {
@@ -127,6 +163,12 @@ export default async function BlogPostPage({
 
   return (
     <>
+      {/* Article Schema Markup */}
+      <Script
+        id="article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       {/* POST HEADER */}
       <section className="bg-[#001F3F] text-[#E2E8F0] py-16 px-6 relative overflow-hidden">
         <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#00D4FF] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
@@ -161,6 +203,26 @@ export default async function BlogPostPage({
       {/* POST CONTENT */}
       <section className="py-16 px-6 bg-[#0A0F1F]">
         <article className="max-w-3xl mx-auto">{contentBlocks}</article>
+
+        {/* AUTHOR BYLINE */}
+        <div className="max-w-3xl mx-auto mt-12 pt-8 border-t border-[#1e2a45]">
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-full bg-[#00D4FF]/10 flex items-center justify-center flex-shrink-0">
+              <span className="text-xl">🔨</span>
+            </div>
+            <div>
+              <p className="text-[#E2E8F0] font-semibold mb-1">Written by Michael</p>
+              <p className="text-[#94A3B8] text-sm leading-relaxed">
+                Principal AI Solutions Engineer with 30+ years enterprise tech experience and 
+                founder of SMF Works. When not building AI solutions, he&apos;s at the forge 
+                crafting metal by hand.{" "}
+                <Link href="/about" className="text-[#00D4FF] hover:underline">
+                  Read the full story →
+                </Link>
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* CTA */}
         <div className="max-w-3xl mx-auto mt-16 bg-[#131B2E]/60 backdrop-blur-sm rounded-xl border border-[#1e2a45] p-8 text-center">

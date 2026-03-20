@@ -1,14 +1,86 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Services",
-  description: "AI content production and AI workflow consulting for small businesses. Practical, precise, and priced for SMBs.",
+  title: "Services | AI Marketing Content & Workflow Automation",
+  description:
+    "Get AI marketing content and workflow automation tailored to your small business. SEO-optimized blogs, email campaigns, websites plus practical automations that actually save time and money. Get a quote.",
+  alternates: { canonical: "https://smfworks.com/services" },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "AI Content Production",
+  provider: {
+    "@type": "Organization",
+    name: "SMF Works",
+    url: "https://smfworks.com",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "United States",
+  },
+  offers: [
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "SEO-Optimized Blog Posts",
+        description: "AI-enhanced blog content with SEO best practices",
+      },
+      price: "50.00",
+      priceCurrency: "USD",
+      priceValidUntil: "2026-12-31",
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Email Campaign Content",
+        description: "Automated email sequences and newsletter content",
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Social Media Content",
+        description: "Platform-optimized posts for LinkedIn, Twitter, Facebook, Instagram",
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Website Copy",
+        description: "Landing pages, service pages, and full website content",
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "White Papers & Thought Leadership",
+        description: "Long-form authoritative content for B2B positioning",
+      },
+    },
+  ],
+  description:
+    "Professional AI-powered content creation for small businesses. SEO-optimized blogs, emails, social media, websites and custom content systems.",
+  url: "https://smfworks.com/services",
 };
 
 export default function ServicesPage() {
   return (
     <>
+      {/* Service Schema Markup */}
+      <Script
+        id="service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       {/* HEADER */}
       <section className="bg-[#001F3F] text-[#E2E8F0] py-20 px-6 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-[500px] h-[300px] bg-[#007BFF] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
