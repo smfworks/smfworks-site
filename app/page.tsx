@@ -109,10 +109,11 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-lg bg-[#00D4FF]/10 flex items-center justify-center mb-4 group-hover:bg-[#00D4FF]/20 transition-colors group-hover:shadow-lg group-hover:shadow-[#00D4FF]/20">
                   <span className="text-2xl" aria-hidden="true">✍️</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">Marketing & SEO Content Production</h3>
+                <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">Marketing & SEO/GEO Content Production</h3>
                 <p className="text-[#94A3B8] leading-relaxed mb-6">
                   Blog posts, email sequences, social media, white papers, thought leadership,
                   and ghostwriting — all HighTech-powered, all precisely crafted to your brand voice.
+                  Optimized for both traditional search (Google/Bing) and AI engines (ChatGPT, Perplexity).
                 </p>
                 <Link href="/services#content" className="text-[#00D4FF] font-semibold hover:underline inline-flex items-center gap-1">
                   Learn more <span className="transition-transform group-hover:translate-x-1">→</span>

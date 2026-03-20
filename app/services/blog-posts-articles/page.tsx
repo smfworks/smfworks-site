@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog Posts & Articles",
-  description: "SEO-optimized, brand-aligned blog posts and articles for small businesses. Ready to publish, starting at $50/month.",
+  description: "SEO/GEO-optimized, brand-aligned blog posts and articles for small businesses. Ready to publish, starting at $50/month.",
 };
 
 export default function BlogPostsArticlesPage() {
@@ -18,7 +18,7 @@ export default function BlogPostsArticlesPage() {
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-5">Blog Posts & Articles</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
-            SEO-optimized, brand-aligned content that builds your authority, drives traffic,
+            SEO/GEO-optimized, brand-aligned content that builds your authority, drives traffic,
             and converts readers — ready to publish, starting at $50/month.
           </p>
         </div>

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Company Websites",
-  description: "Professional, AI-driven company websites for small businesses. SEO-optimized, responsive, and built to convert. New sites from $750, redesigns from $500.",
+  description: "Professional, AI-driven company websites for small businesses. SEO/GEO-optimized, responsive, and built to convert. New sites from $750, redesigns from $500.",
 };
 
 export default function CompanyWebsitesPage() {
@@ -30,7 +30,7 @@ export default function CompanyWebsitesPage() {
           <p className="text-[#94A3B8] text-lg leading-relaxed mb-6">
             SMF Works specializes in creating professional company websites that effectively showcase
             your small business&apos;s brand with clarity, credibility, and a focus on user experience.
-            Leveraging AI-driven tools, we design responsive, SEO-optimized sites that integrate
+            Leveraging AI-driven tools, we design responsive, SEO/GEO-optimized sites that integrate
             seamlessly with your operations — including custom features like contact forms, service
             showcases, and e-commerce elements if needed.
           </p>

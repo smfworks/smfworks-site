@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | SMF Works",
   },
   description:
-    "AI-powered content creation and workflow automation built for small businesses. Professional SEO blogs, emails, social media, websites and custom AI systems for trades, services & retail owners. Start saving time today.",
+    "AI-powered content creation and workflow automation built for small businesses. Professional SEO/GEO blogs, emails, social media, websites and custom AI systems for trades, services & retail owners. Start saving time today.",
   keywords: [
     "AI solutions for small business",
     "AI workflow consulting",
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     "small business automation",
     "AI for trades businesses",
     "SEO content for small business",
+    "GEO content for small business",
     "generative AI consulting",
     "marketing automation for SMBs",
     "small business website design",

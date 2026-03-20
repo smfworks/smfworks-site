@@ -5,7 +5,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Services | AI Marketing Content & Workflow Automation",
   description:
-    "Get AI marketing content and workflow automation tailored to your small business. SEO-optimized blogs, email campaigns, websites plus practical automations that actually save time and money. Get a quote.",
+    "Get AI marketing content and workflow automation tailored to your small business. SEO/GEO-optimized blogs, email campaigns, websites plus practical automations that actually save time and money. Get a quote.",
   alternates: { canonical: "https://smfworks.com/services" },
 };
 
@@ -27,8 +27,8 @@ const serviceSchema = {
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
-        name: "SEO-Optimized Blog Posts",
-        description: "AI-enhanced blog content with SEO best practices",
+        name: "SEO/GEO-Optimized Blog Posts",
+        description: "AI-enhanced blog content optimized for traditional search engines (Google/Bing) and generative AI engines (ChatGPT, Perplexity, AI Overviews)",
       },
       price: "50.00",
       priceCurrency: "USD",
@@ -68,7 +68,7 @@ const serviceSchema = {
     },
   ],
   description:
-    "Professional AI-powered content creation for small businesses. SEO-optimized blogs, emails, social media, websites and custom content systems.",
+    "Professional AI-powered content creation for small businesses. SEO/GEO-optimized blogs, emails, social media, websites and custom content systems.",
   url: "https://smfworks.com/services",
 };
 
@@ -91,6 +91,35 @@ export default function ServicesPage() {
             No enterprise pricing. No generic outputs. Just precise, practical AI work —
             delivered by someone who&apos;s actually done it at scale.
           </p>
+          <!-- SEO/GEO Definition Box -->
+          <div className="mt-8 bg-[#131B2E]/80 backdrop-blur-sm rounded-xl border border-[#1e2a45] p-6 md:p-8">
+            <h2 className="text-lg font-bold text-[#E2E8F0] mb-4 flex items-center gap-2">
+              <span className="text-[#00D4FF]">🔍</span>
+              We Optimize for SEO & GEO
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-semibold text-[#00D4FF] mb-2">SEO (Search Engine Optimization)</h3>
+                <p className="text-sm text-[#94A3B8] leading-relaxed">
+                  The practice of improving your visibility on traditional search engines 
+                  like Google and Bing. We structure content, meta tags, and site architecture 
+                  so you rank higher in search results.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-[#FF6B00] mb-2">GEO (Generative Engine Optimization)</h3>
+                <p className="text-sm text-[#94A3B8] leading-relaxed">
+                  The emerging practice of optimizing content for AI-powered search 
+                  engines like ChatGPT Search, Perplexity, and Google AI Overviews. 
+                  We structure content so AI systems can easily understand and cite your business.
+                </p>
+              </div>
+            </div>
+            <p className="mt-4 text-xs text-[#94A3B8]/80 italic">
+              Every piece of content we deliver is optimized for both — because the future of 
+              search isn&apos;t just rankings, it&apos;s being the answer AI engines recommend.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -102,7 +131,7 @@ export default function ServicesPage() {
               <div className="w-14 h-14 rounded-lg bg-[#00D4FF]/10 flex items-center justify-center mb-5">
                 <span className="text-3xl" aria-hidden="true">✍️</span>
               </div>
-              <h2 className="text-3xl font-bold mb-4 text-[#E2E8F0]">Marketing & SEO Content Production</h2>
+              <h2 className="text-3xl font-bold mb-4 text-[#E2E8F0]">Marketing & SEO/GEO Content Production</h2>
               <p className="text-[#94A3B8] leading-relaxed mb-6">
                 Your business has a story worth telling. We use the latest in technology to tell it — consistently,
                 professionally, and at a fraction of what a traditional agency would charge.
