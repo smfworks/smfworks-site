@@ -289,6 +289,28 @@ export const proSkills: Skill[] = [
     ]
   },
   {
+    slug: "morning-commute",
+    name: "Morning Commute",
+    shortDesc: "Your daily commute briefing with traffic, transit, and weather",
+    fullDesc: "Plan your commute with real-time traffic estimates, current weather at your location, and departure time alerts. Uses free OSRM routing with optional Google Maps API for accurate traffic. Configure your home and work addresses for personalized route planning.",
+    tier: "pro",
+    num: 14,
+    features: [
+      "Route calculation with traffic estimates",
+      "OpenStreetMap geocoding (free)",
+      "OSRM routing (free)",
+      "Optional: OpenWeatherMap for weather",
+      "Optional: Google Maps for accurate traffic",
+      "Departure time alerts"
+    ],
+    useCases: [
+      "Daily commute planning",
+      "Traffic delay warnings",
+      "Weather-aware departure times",
+      "Weekday morning routine"
+    ]
+  },
+  {
     slug: "database-backup",
     name: "Database Backup",
     shortDesc: "Backup SQLite, PostgreSQL, MySQL with compression",
