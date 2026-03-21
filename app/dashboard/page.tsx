@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import SubscribeButton from "@/components/SubscribeButton";
 
 export const metadata: Metadata = {
   title: "Dashboard | SMF Works Subscription",
@@ -58,12 +59,7 @@ export default function DashboardPage() {
             </div>
           </div>
           
-          <Link
-            href="https://buy.stripe.com/example"
-            className="block w-full text-center bg-[#00D4FF] hover:bg-[#00B8DB] text-[#001F3F] px-8 py-4 rounded-lg font-bold transition-colors"
-          >
-            Subscribe Now
-          </Link>
+          <SubscribeButton />
         </div>
 
         {/* Token Section */}
