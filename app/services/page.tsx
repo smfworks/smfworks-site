@@ -182,6 +182,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 space-y-4">
               {[
+                { title: "Concierge OpenClaw Installation & Configuration", desc: "Full-service OpenClaw installation and custom configuration with lifetime Pro skills access.", href: "/services/concierge-openclaw-installation" },
                 { title: "Process Automation", desc: "Identify and automate repetitive tasks that eat your hours.", href: "/services/process-automation" },
                 { title: "AI Tool Selection", desc: "Cut through the noise — we find what actually fits your needs.", href: "/services/ai-tool-selection" },
                 { title: "Custom AI Workflows", desc: "Build flows that connect your tools, your team, your data.", href: "/services/custom-ai-workflows" },
