@@ -12,7 +12,9 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const stripe = new Stripe(stripeSecretKey);
+    const stripe = new Stripe(stripeSecretKey, {
+      apiVersion: '2024-12-18.acacia',
+    });
     const baseUrl = request.headers.get('origin') || 'https://smfworks.com';
 
     const session = await stripe.checkout.sessions.create({

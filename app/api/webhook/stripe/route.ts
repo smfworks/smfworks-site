@@ -5,7 +5,9 @@ const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 let stripe: Stripe | null = null;
 
 if (stripeSecretKey) {
-  stripe = new Stripe(stripeSecretKey);
+  stripe = new Stripe(stripeSecretKey, {
+    apiVersion: '2024-12-18.acacia',
+  });
 }
 
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
