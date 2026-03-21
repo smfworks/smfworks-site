@@ -22,6 +22,9 @@ export default function Nav() {
           <Link href="/blog" className="hover:text-[#00D4FF] transition-colors">Blog</Link>
           <Link href="/about" className="hover:text-[#00D4FF] transition-colors">About</Link>
           <Link href="/contact" className="hover:text-[#00D4FF] transition-colors">Contact</Link>
+          <Link href="/dashboard" className="hover:text-[#00D4FF] transition-colors">
+            Subscribe
+          </Link>
           <SiteSearch />
           <Link href="/pay" className="hover:text-[#00D4FF] transition-colors">
             Pay Invoice
@@ -55,6 +58,7 @@ export default function Nav() {
           <Link href="/blog" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Blog</Link>
           <Link href="/about" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">About</Link>
           <Link href="/contact" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Contact</Link>
+          <Link href="/dashboard" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Subscribe</Link>
           <Link href="/pay" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Pay Invoice</Link>
           <Link
             href="/newsletter"
