@@ -1,10 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '');
-
 export async function POST(request: NextRequest) {
+  const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
+  
+  if (!stripeSecretKey) {
+    return NextResponse.json(
+      { error: 'Stripe not configured' },
+      { status: 503 }
+    );
+  }
+
   try {
+    const stripe = new Stripe(stripeSecretKey);
     const baseUrl = request.headers.get('origin') || 'https://smfworks.com';
 
     const session = await stripe.checkout.sessions.create({
