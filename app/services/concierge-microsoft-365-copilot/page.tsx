@@ -226,7 +226,7 @@ export default function ConciergeMicrosoft365CopilotPage() {
                 <h3 className="text-xl font-semibold text-[#E2E8F0]">Up to 3 Custom Copilot Agents</h3>
               </div>
               <p className="text-[#94A3B8] mb-4">
-                Custom-built Copilot agents tailored to your specific business needs using Microsoft Copilot Studio:
+                Custom-built Copilot agents tailored to your specific business needs using Microsoft Copilot Agent Builder:
               </p>
               <ul className="space-y-2 text-[#94A3B8] ml-13">
                 <li>• Customer service agents for handling common inquiries</li>
