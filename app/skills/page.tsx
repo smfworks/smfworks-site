@@ -19,8 +19,8 @@ export default function SkillsPage() {
           <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-widest mb-3">OpenClaw Skills</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-5">20 Skills for Productivity</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl mx-auto leading-relaxed mb-6">
-            A curated collection of skills for OpenClaw — from everyday utilities to business automation tools.
-            Free skills forever. Pro skills for serious automation.
+            A curated collection of skills and applications for OpenClaw — from everyday utilities to business automation tools.
+            Free skills forever. Pro skills and applications for serious automation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <span className="inline-flex items-center gap-2 bg-[#00D4FF]/10 text-[#00D4FF] px-4 py-2 rounded-full text-sm font-medium">
