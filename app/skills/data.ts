@@ -359,7 +359,7 @@ export const proSkills: Skill[] = [
     shortDesc: "Create business reports from CSV/JSON data",
     fullDesc: "Transform raw data into professional business reports. Import data from CSV or JSON files, apply filters and aggregations, generate charts and visualizations, and export polished PDF or HTML reports ready for stakeholders.",
     tier: "pro",
-    num: 16,
+    num: 17,
     features: [
       "Import CSV and JSON data sources",
       "Custom report templates",
@@ -380,7 +380,7 @@ export const proSkills: Skill[] = [
     shortDesc: "Create and send email campaigns with tracking",
     fullDesc: "Full-featured email marketing automation. Design email templates with personalization fields, manage subscriber lists and segments, schedule campaign sends, and track open rates, click rates, and conversions to optimize performance.",
     tier: "pro",
-    num: 17,
+    num: 18,
     features: [
       "Template-based email creation",
       "List management and segmentation",
@@ -401,7 +401,7 @@ export const proSkills: Skill[] = [
     shortDesc: "Kanban project management with deadlines",
     fullDesc: "Visual project management using Kanban methodology. Organize tasks into customizable boards and columns, set deadlines and priorities, assign team members, track progress through workflows, and generate reports on completion rates.",
     tier: "pro",
-    num: 18,
+    num: 19,
     features: [
       "Kanban boards with customizable columns",
       "Task assignments and deadlines",
@@ -422,7 +422,7 @@ export const proSkills: Skill[] = [
     shortDesc: "Log errors and learnings for continuous improvement",
     fullDesc: "Build a personal knowledge base of mistakes and lessons learned. Log errors with context and root causes, document solutions for future reference, track patterns in recurring issues, and generate insights for process improvement.",
     tier: "pro",
-    num: 19,
+    num: 20,
     features: [
       "Error logging with context capture",
       "Solution documentation",
@@ -443,7 +443,7 @@ export const proSkills: Skill[] = [
     shortDesc: "Create professional invoices, track payments",
     fullDesc: "Streamlined invoicing for freelancers and small businesses. Generate professional PDF invoices with custom branding, track payment status, send automated reminders for overdue invoices, and export data for accounting software.",
     tier: "pro",
-    num: 20,
+    num: 21,
     features: [
       "Professional PDF invoice generation",
       "Custom branding and templates",
@@ -464,7 +464,7 @@ export const proSkills: Skill[] = [
     shortDesc: "Create forms, collect responses, export data",
     fullDesc: "Build custom forms for any data collection need. Design forms with various field types, embed them on websites or share via links, collect responses securely, and export data to CSV or integrate with other tools via webhooks.",
     tier: "pro",
-    num: 21,
+    num: 22,
     features: [
       "Drag-and-drop form builder",
       "Multiple field types and validation",
@@ -485,7 +485,7 @@ export const proSkills: Skill[] = [
     shortDesc: "Appointment scheduling with availability management",
     fullDesc: "Complete appointment scheduling system. Define availability windows, allow clients to book appointments online, send automatic confirmations and reminders, sync with calendar applications, and manage cancellations and rescheduling.",
     tier: "pro",
-    num: 22,
+    num: 23,
     features: [
       "Customizable availability calendars",
       "Online booking with time slot selection",
