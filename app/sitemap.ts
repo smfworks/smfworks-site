@@ -32,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "image-resizer",
     "password-generator",
     "markdown-converter",
+    "daily-news-digest",
   ];
 
   // Pro skills
