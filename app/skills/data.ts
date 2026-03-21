@@ -268,12 +268,33 @@ export const proSkills: Skill[] = [
     ]
   },
   {
+    slug: "coffee-briefing",
+    name: "Coffee Briefing",
+    shortDesc: "Your personal morning briefing with weather and priorities",
+    fullDesc: "Start your day informed with a personalized morning briefing. Get current weather conditions from OpenWeatherMap, your top 3 priorities from file or auto-generated, and optional calendar integration. Perfect for your 7 AM routine.",
+    tier: "pro",
+    num: 13,
+    features: [
+      "Current weather and conditions",
+      "OpenWeatherMap integration",
+      "Top 3 priorities (file or auto)",
+      "Beautiful formatted output",
+      "Schedule daily at 7am"
+    ],
+    useCases: [
+      "Morning briefing before starting work",
+      "Daily weather and priority overview",
+      "Quick planning for the day ahead",
+      "Personal daily digest"
+    ]
+  },
+  {
     slug: "database-backup",
     name: "Database Backup",
     shortDesc: "Backup SQLite, PostgreSQL, MySQL with compression",
     fullDesc: "Automated database backup solution supporting multiple database types. Schedule regular backups of SQLite, PostgreSQL, and MySQL databases, compress backups to save storage space, encrypt sensitive data, and restore from backup points when needed.",
     tier: "pro",
-    num: 13,
+    num: 14,
     features: [
       "Support for SQLite, PostgreSQL, MySQL",
       "Scheduled automated backups",
@@ -294,7 +315,7 @@ export const proSkills: Skill[] = [
     shortDesc: "Create business reports from CSV/JSON data",
     fullDesc: "Transform raw data into professional business reports. Import data from CSV or JSON files, apply filters and aggregations, generate charts and visualizations, and export polished PDF or HTML reports ready for stakeholders.",
     tier: "pro",
-    num: 14,
+    num: 15,
     features: [
       "Import CSV and JSON data sources",
       "Custom report templates",
@@ -315,7 +336,7 @@ export const proSkills: Skill[] = [
     shortDesc: "Create and send email campaigns with tracking",
     fullDesc: "Full-featured email marketing automation. Design email templates with personalization fields, manage subscriber lists and segments, schedule campaign sends, and track open rates, click rates, and conversions to optimize performance.",
     tier: "pro",
-    num: 15,
+    num: 16,
     features: [
       "Template-based email creation",
       "List management and segmentation",
@@ -336,7 +357,7 @@ export const proSkills: Skill[] = [
     shortDesc: "Kanban project management with deadlines",
     fullDesc: "Visual project management using Kanban methodology. Organize tasks into customizable boards and columns, set deadlines and priorities, assign team members, track progress through workflows, and generate reports on completion rates.",
     tier: "pro",
-    num: 16,
+    num: 17,
     features: [
       "Kanban boards with customizable columns",
       "Task assignments and deadlines",
