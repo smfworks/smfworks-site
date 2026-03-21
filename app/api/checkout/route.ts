@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const stripe = new Stripe(stripeSecretKey, {
-      apiVersion: '2024-12-18.acacia',
+      apiVersion: '2026-02-25.clover',
     });
     const baseUrl = request.headers.get('origin') || 'https://smfworks.com';
 

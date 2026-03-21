@@ -6,7 +6,7 @@ let stripe: Stripe | null = null;
 
 if (stripeSecretKey) {
   stripe = new Stripe(stripeSecretKey, {
-    apiVersion: '2024-12-18.acacia',
+    apiVersion: '2026-02-25.clover',
   });
 }
 
