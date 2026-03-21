@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { freeSkills, proSkills } from "./data";
 
 export const metadata: Metadata = {
   title: "SMF Skills | 20 Free + Pro OpenClaw Skills",
@@ -9,32 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function SkillsPage() {
-  const freeSkills = [
-    { num: 1, name: "File Organizer", desc: "Organize files by date, type, find duplicates", cmd: "file-organizer" },
-    { num: 2, name: "PDF Toolkit", desc: "Merge, split, extract, compress, rotate PDFs", cmd: "pdf-toolkit" },
-    { num: 3, name: "Text Formatter", desc: "Case conversion, word count, clean whitespace", cmd: "text-formatter" },
-    { num: 4, name: "QR Generator", desc: "Generate QR codes for URLs, WiFi, vCard, email", cmd: "qr-generator" },
-    { num: 5, name: "System Monitor", desc: "Monitor disk, memory, CPU, find large files", cmd: "system-monitor" },
-    { num: 6, name: "Website Checker", desc: "Check site status, SSL certificates, response time", cmd: "website-checker" },
-    { num: 7, name: "CSV Converter", desc: "Convert between CSV, JSON, Excel formats", cmd: "csv-converter" },
-    { num: 8, name: "Image Resizer", desc: "Resize, compress, convert, batch process images", cmd: "image-resizer" },
-    { num: 9, name: "Password Generator", desc: "Strong passwords, passphrases, strength check", cmd: "password-generator" },
-    { num: 10, name: "Markdown Converter", desc: "Convert Markdown to HTML, text, extract TOC", cmd: "markdown-converter" },
-  ];
-
-  const proSkills = [
-    { num: 11, name: "Lead Capture", desc: "Capture, qualify, and manage sales leads", cmd: "lead-capture" },
-    { num: 12, name: "Database Backup", desc: "Backup SQLite, PostgreSQL, MySQL with compression", cmd: "database-backup" },
-    { num: 13, name: "Report Generator", desc: "Create business reports from CSV/JSON data", cmd: "report-generator" },
-    { num: 14, name: "Email Campaign", desc: "Create and send email campaigns with tracking", cmd: "email-campaign" },
-    { num: 15, name: "Task Manager", desc: "Kanban project management with deadlines", cmd: "task-manager" },
-    { num: 16, name: "Self-Improvement", desc: "Log errors and learnings for continuous improvement", cmd: "self-improvement" },
-    { num: 17, name: "Invoice Generator", desc: "Create professional invoices, track payments", cmd: "invoice-generator" },
-    { num: 18, name: "Form Builder", desc: "Create forms, collect responses, export data", cmd: "form-builder" },
-    { num: 19, name: "Booking Engine", desc: "Appointment scheduling with availability management", cmd: "booking-engine" },
-    { num: 20, name: "OpenClaw Optimizer", desc: "Audit workspace for cost and performance optimization", cmd: "openclaw-optimizer" },
-  ];
-
   return (
     <>
       {/* HEADER */}
@@ -105,13 +80,24 @@ export default function SkillsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {freeSkills.map((skill) => (
-              <div key={skill.num} className="bg-[#131B2E] border border-[#1e2a45] rounded-xl p-6 hover:border-[#00D4FF]/50 transition-colors">
+              <div key={skill.slug} className="bg-[#131B2E] border border-[#1e2a45] rounded-xl p-6 hover:border-[#00D4FF]/50 transition-colors flex flex-col">
                 <div className="flex items-start justify-between mb-3">
                   <span className="text-[#00D4FF] font-mono text-sm">#{skill.num.toString().padStart(2, '0')}</span>
-                  <code className="text-[#64748B] text-xs">{skill.cmd}</code>
+                  <code className="text-[#64748B] text-xs">{skill.slug}</code>
                 </div>
                 <h3 className="text-lg font-semibold text-[#E2E8F0] mb-2">{skill.name}</h3>
-                <p className="text-[#94A3B8] text-sm leading-relaxed">{skill.desc}</p>
+                <p className="text-[#94A3B8] text-sm leading-relaxed flex-grow">{skill.shortDesc}</p>
+                <div className="mt-4 pt-4 border-t border-[#1e2a45]">
+                  <Link 
+                    href={`/skills/${skill.slug}`}
+                    className="inline-flex items-center text-[#00D4FF] text-sm font-medium hover:underline"
+                  >
+                    See more
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
@@ -128,19 +114,30 @@ export default function SkillsPage() {
           
           <div className="bg-[#007BFF]/10 border border-[#007BFF]/30 rounded-xl p-6 mb-10">
             <p className="text-[#E2E8F0] leading-relaxed">
-              Premium skills for business automation. Requires SMF Works subscription ($19.99/mo, price locked at signup).
+              Premium skills and applications for business automation. Requires SMF Works subscription ($19.99/mo, price locked at signup). This is a growing collection — new skills and applications added weekly.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {proSkills.map((skill) => (
-              <div key={skill.num} className="bg-[#131B2E] border border-[#1e2a45] rounded-xl p-6 hover:border-[#007BFF]/50 transition-colors">
+              <div key={skill.slug} className="bg-[#131B2E] border border-[#1e2a45] rounded-xl p-6 hover:border-[#007BFF]/50 transition-colors flex flex-col">
                 <div className="flex items-start justify-between mb-3">
                   <span className="text-[#007BFF] font-mono text-sm">#{skill.num}</span>
-                  <code className="text-[#64748B] text-xs">{skill.cmd}</code>
+                  <code className="text-[#64748B] text-xs">{skill.slug}</code>
                 </div>
                 <h3 className="text-lg font-semibold text-[#E2E8F0] mb-2">{skill.name}</h3>
-                <p className="text-[#94A3B8] text-sm leading-relaxed">{skill.desc}</p>
+                <p className="text-[#94A3B8] text-sm leading-relaxed flex-grow">{skill.shortDesc}</p>
+                <div className="mt-4 pt-4 border-t border-[#1e2a45]">
+                  <Link 
+                    href={`/skills/${skill.slug}`}
+                    className="inline-flex items-center text-[#007BFF] text-sm font-medium hover:underline"
+                  >
+                    See more
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
