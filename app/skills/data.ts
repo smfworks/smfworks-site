@@ -311,12 +311,34 @@ export const proSkills: Skill[] = [
     ]
   },
   {
+    slug: "openclaw-backup",
+    name: "OpenClaw Backup",
+    shortDesc: "Daily backup of your OpenClaw agent with 2-day rolling retention",
+    fullDesc: "Automatically backup your OpenClaw workspace, memory, and configuration daily. Maintains a rolling 2-day history with simple one-command restore. Fully local operation - no external APIs required.",
+    tier: "pro",
+    num: 15,
+    features: [
+      "Daily automated backups",
+      "2-day rolling retention",
+      "Compressed tar.gz archives",
+      "One-command restore",
+      "No external APIs - fully local",
+      "Configurable paths and exclusions"
+    ],
+    useCases: [
+      "Protect OpenClaw configuration",
+      "Recover from data loss",
+      "Migrate to new machine",
+      "Maintain backup history"
+    ]
+  },
+  {
     slug: "database-backup",
     name: "Database Backup",
     shortDesc: "Backup SQLite, PostgreSQL, MySQL with compression",
     fullDesc: "Automated database backup solution supporting multiple database types. Schedule regular backups of SQLite, PostgreSQL, and MySQL databases, compress backups to save storage space, encrypt sensitive data, and restore from backup points when needed.",
     tier: "pro",
-    num: 15,
+    num: 16,
     features: [
       "Support for SQLite, PostgreSQL, MySQL",
       "Scheduled automated backups",

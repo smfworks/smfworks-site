@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { freeSkills, proSkills } from "./data";
 
 export const metadata: Metadata = {
-  title: "SMF Skills | 23 Free + Pro OpenClaw Skills",
+  title: "SMF Skills | 24 Free + Pro OpenClaw Skills",
   description:
-    "23 productivity skills for OpenClaw: 11 free forever + 12 Pro with subscription. File organizers, PDF tools, lead capture, invoicing, booking, and more.",
+    "24 productivity skills for OpenClaw: 11 free forever + 13 Pro with subscription. File organizers, PDF tools, lead capture, invoicing, booking, and more.",
   alternates: { canonical: "https://smfworks.com/skills" },
 };
 
@@ -17,7 +17,7 @@ export default function SkillsPage() {
         <div className="absolute top-0 left-0 w-[500px] h-[300px] bg-[#007BFF] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10 text-center">
           <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-widest mb-3">OpenClaw Skills</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-5">23 Skills for Productivity</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-5">24 Skills for Productivity</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl mx-auto leading-relaxed mb-6">
             A curated collection of skills and applications for OpenClaw — from everyday utilities to business automation tools.
             Free skills forever. Pro skills and applications for serious automation.
@@ -40,7 +40,7 @@ export default function SkillsPage() {
             </span>
             <span className="inline-flex items-center gap-2 bg-[#007BFF]/10 text-[#007BFF] px-4 py-2 rounded-full text-sm font-medium">
               <span className="w-2 h-2 bg-[#007BFF] rounded-full"></span>
-              12 Pro ($19.99/mo)
+              13 Pro ($19.99/mo)
             </span>
           </div>
         </div>
