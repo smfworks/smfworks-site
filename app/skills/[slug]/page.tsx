@@ -213,11 +213,17 @@ export default async function SkillDetailPage({
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-[#E2E8F0] mb-6">Installation</h2>
           <div className="bg-[#131B2E] border border-[#1e2a45] rounded-xl p-6 font-mono text-sm overflow-x-auto">
-            <p className="text-[#64748B] mb-2"># Install the skill</p>
+            <p className="text-[#64748B] mb-2"># Install the skill (via TUI or CLI)</p>
             <p className="text-[#00D4FF] mb-4">smfw install {skill.slug}</p>
 
             <p className="text-[#64748B] mb-2"># Get help</p>
             <p className="text-[#00D4FF]">smfw run {skill.slug} --help</p>
+          </div>
+
+          <div className="mt-4 p-4 bg-[#00D4FF]/10 border border-[#00D4FF]/20 rounded-lg">
+            <p className="text-[#00D4FF] text-sm">
+              <strong>💡 Tip:</strong> Install via the OpenClaw TUI skill manager for an interactive experience, or use the CLI command above.
+            </p>
           </div>
           
           {skill.tier === "pro" && (
