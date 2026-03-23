@@ -634,7 +634,7 @@ A: Treat them as marketing. They use best-case scenarios. Run your own numbers w
 ---
 
 *Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*`,
-    date: "2026-03-24",
+    date: "2026-03-16",
     categories: ["AI", "Small Business", "ROI"],
     image: "/images/blog/post3-roi-calculator.png",
     readTime: 10,
@@ -830,7 +830,7 @@ A: Yes — when it is properly edited, optimized, and enhanced with human expert
 ---
 
 *Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he is at the forge crafting metal by hand. [Read the full story →](/about)*`,
-    date: "2026-03-25",
+    date: "2026-03-17",
     categories: ["AI", "SEO", "Content Marketing"],
     image: "/images/blog/post4-content-ranking.png",
     readTime: 12,
@@ -1145,7 +1145,7 @@ A: No — they free your team from repetitive tasks so they can focus on higher-
 ---
 
 *Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he is at the forge crafting metal by hand. [Read the full story →](/about)*`,
-    date: "2026-03-26",
+    date: "2026-03-18",
     categories: ["AI", "Tools", "Small Business"],
     image: "/images/blog/post5-tools-toolbox.png",
     readTime: 10,
@@ -2511,7 +2511,7 @@ A: Yes — most platforms offer multiple voice options, accents, and tones. Some
 ---
 
 *Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*`,
-    date: "2026-03-27",
+    date: "2026-03-19",
     categories: ["AI", "Voice", "Automation"],
     image: "/images/blog/post6-voice-hero.png",
     readTime: 10,
@@ -2868,7 +2868,7 @@ A: Start with 3–5 core workflows. Expand as you see results. Most effective bu
 ---
 
 *Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*`,
-    date: "2026-03-28",
+    date: "2026-03-20",
     categories: ["AI", "Automation", "Workflow"],
     image: "/images/blog/post7-workflow-hero.png",
     readTime: 11,
@@ -3240,7 +3240,7 @@ A: Long enough to fully answer the question. Check what ranks #1 and aim to be m
 ---
 
 *Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*`,
-    date: "2026-03-29",
+    date: "2026-03-21",
     categories: ["AI", "Content Marketing", "SEO"],
     image: "/images/blog/post8-content-hero.png",
     readTime: 12,
@@ -3612,7 +3612,7 @@ A: Upload FAQs, past conversations, product docs. Review and correct AI response
 ---
 
 *Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*`,
-    date: "2026-03-30",
+    date: "2026-03-22",
     categories: ["AI", "Customer Service", "Support"],
     image: "/images/blog/post9-service-hero.png",
     readTime: 10,
@@ -4071,7 +4071,7 @@ A: Review your metrics. Most see time savings in week 1. If not, you may have ch
 ---
 
 *Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*`,
-    date: "2026-03-31",
+    date: "2026-03-23",
     categories: ["AI", "Strategy", "Implementation"],
     image: "/images/blog/post10-roadmap-hero.png",
     readTime: 13,
@@ -4079,15 +4079,22 @@ A: Review your metrics. Most see time savings in week 1. If not, you may have ch
 ];
 
 export function getAllPosts(): BlogPost[] {
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const now = new Date();
+  return posts
+    .filter(p => new Date(p.date) <= now)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
-  return posts.find(p => p.slug === slug);
+  const now = new Date();
+  return posts.find(p => p.slug === slug && new Date(p.date) <= now);
 }
 
 export function getAllCategories(): string[] {
+  const now = new Date();
   const cats = new Set<string>();
-  posts.forEach(p => p.categories.forEach(c => cats.add(c)));
+  posts
+    .filter(p => new Date(p.date) <= now)
+    .forEach(p => p.categories.forEach(c => cats.add(c)));
   return Array.from(cats).sort();
 }
