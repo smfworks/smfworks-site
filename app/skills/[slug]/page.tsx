@@ -2,7 +2,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Script from "next/script";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { getSkillBySlug, getAllSkillSlugs, allSkills, type Skill } from "../data";
+import { fetchSkillDoc } from "@/lib/skillDocs";
 
 export function generateStaticParams() {
   return getAllSkillSlugs().map((slug) => ({ slug }));
@@ -64,6 +67,11 @@ export default async function SkillDetailPage({
   if (!skill) {
     notFound();
   }
+
+  const [setupDoc, howtoDoc] = await Promise.all([
+    fetchSkillDoc(slug, "SETUP.md"),
+    fetchSkillDoc(slug, "HOWTO.md"),
+  ]);
 
   // Generate SoftwareApplication schema
   const skillSchema = {
@@ -238,6 +246,45 @@ export default async function SkillDetailPage({
           )}
         </div>
       </section>
+
+      {/* SETUP GUIDE */}
+      {setupDoc && (
+        <section className="bg-[#131B2E] py-16 px-6 border-t border-[#1e2a45]">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-10 h-10 bg-[#00D4FF]/10 rounded-lg flex items-center justify-center">
+                <svg className="w-5 h-5 text-[#00D4FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h2 className="text-2xl font-bold text-[#E2E8F0]">Setup Guide</h2>
+            </div>
+            <div className="[&_h2]:text-[#E2E8F0] [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-8 [&_h2]:mb-4 [&_h3]:text-[#E2E8F0] [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-3 [&_p]:text-[#94A3B8] [&_p]:leading-relaxed [&_p]:mb-4 [&_ul]:space-y-2 [&_ul]:mb-4 [&_ul]:pl-4 [&_ol]:space-y-2 [&_ol]:mb-4 [&_ol]:pl-4 [&_li]:text-[#94A3B8] [&_code]:text-[#00D4FF] [&_code]:bg-[#0A1628] [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:text-sm [&_code]:font-mono [&_pre]:bg-[#0A1628] [&_pre]:border [&_pre]:border-[#1e2a45] [&_pre]:rounded-xl [&_pre]:p-4 [&_pre]:overflow-x-auto [&_pre]:mb-4 [&_pre_code]:bg-transparent [&_pre_code]:p-0 [&_table]:w-full [&_table]:border-collapse [&_table]:mb-4 [&_th]:text-[#E2E8F0] [&_th]:bg-[#0A1628] [&_th]:border [&_th]:border-[#1e2a45] [&_th]:p-3 [&_th]:text-left [&_td]:text-[#94A3B8] [&_td]:border [&_td]:border-[#1e2a45] [&_td]:p-3 [&_blockquote]:border-l-4 [&_blockquote]:border-[#00D4FF] [&_blockquote]:pl-4 [&_blockquote]:text-[#94A3B8] [&_blockquote]:italic [&_blockquote]:my-4 [&_strong]:text-[#E2E8F0] [&_strong]:font-semibold [&_a]:text-[#00D4FF] [&_a]:underline [&_hr]:border-[#1e2a45] [&_hr]:my-8">
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>{setupDoc}</ReactMarkdown>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* HOW-TO GUIDE */}
+      {howtoDoc && (
+        <section className="bg-[#0A1628] py-16 px-6 border-t border-[#1e2a45]">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-10 h-10 bg-[#007BFF]/10 rounded-lg flex items-center justify-center">
+                <svg className="w-5 h-5 text-[#007BFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                </svg>
+              </div>
+              <h2 className="text-2xl font-bold text-[#E2E8F0]">How-To Guide</h2>
+            </div>
+            <div className="[&_h2]:text-[#E2E8F0] [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-8 [&_h2]:mb-4 [&_h3]:text-[#E2E8F0] [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-3 [&_p]:text-[#94A3B8] [&_p]:leading-relaxed [&_p]:mb-4 [&_ul]:space-y-2 [&_ul]:mb-4 [&_ul]:pl-4 [&_ol]:space-y-2 [&_ol]:mb-4 [&_ol]:pl-4 [&_li]:text-[#94A3B8] [&_code]:text-[#00D4FF] [&_code]:bg-[#131B2E] [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:text-sm [&_code]:font-mono [&_pre]:bg-[#131B2E] [&_pre]:border [&_pre]:border-[#1e2a45] [&_pre]:rounded-xl [&_pre]:p-4 [&_pre]:overflow-x-auto [&_pre]:mb-4 [&_pre_code]:bg-transparent [&_pre_code]:p-0 [&_table]:w-full [&_table]:border-collapse [&_table]:mb-4 [&_th]:text-[#E2E8F0] [&_th]:bg-[#131B2E] [&_th]:border [&_th]:border-[#1e2a45] [&_th]:p-3 [&_th]:text-left [&_td]:text-[#94A3B8] [&_td]:border [&_td]:border-[#1e2a45] [&_td]:p-3 [&_blockquote]:border-l-4 [&_blockquote]:border-[#007BFF] [&_blockquote]:pl-4 [&_blockquote]:text-[#94A3B8] [&_blockquote]:italic [&_blockquote]:my-4 [&_strong]:text-[#E2E8F0] [&_strong]:font-semibold [&_a]:text-[#00D4FF] [&_a]:underline [&_hr]:border-[#1e2a45] [&_hr]:my-8">
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>{howtoDoc}</ReactMarkdown>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* OTHER SKILLS */}
       <section className="bg-[#131B2E] py-16 px-6 border-t border-[#1e2a45]">
