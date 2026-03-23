@@ -311,6 +311,35 @@ export const freeSkills: Skill[] = [
     ]
   },
   {
+    slug: "webcam-capture",
+    name: "Webcam Capture",
+    shortDesc: "Capture photos and videos from your webcam — let the AI see what you see",
+    fullDesc: "Give your AI assistant eyes. Capture photos and short videos from any connected webcam on demand. Hold something up to the camera — a whiteboard, document, product, or workspace — and ask the AI to analyze it. The camera light always blinks on capture, so you'll always know when it's active.",
+    tier: "free",
+    num: 13,
+    features: [
+      "Capture still photos from any connected webcam",
+      "Record short video clips (up to any duration)",
+      "Works with built-in, USB, or IP cameras",
+      "Privacy: camera light always blinks on capture",
+      "Specify which camera to use (for multi-camera setups)",
+      "Analyze captured images with AI vision models"
+    ],
+    useCases: [
+      "Show the AI a whiteboard or diagram to explain",
+      "Document your physical workspace or desk setup",
+      "Capture receipts, documents, or products for records",
+      "Have AI analyze something you're holding up to the camera",
+      "Record a quick video of a demo or process"
+    ],
+    howToUse: [
+      '"Take a photo with the webcam"',
+      '"Analyze what I\'m showing you on the camera"',
+      '"Record a 10-second video clip"',
+      '"Use the second camera to take a photo"'
+    ]
+  },
+  {
     slug: "skill-manager",
     name: "Skill Manager",
     shortDesc: "Visual tool for managing installed OpenClaw skills",

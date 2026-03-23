@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { freeSkills, proSkills } from "./data";
 
 export const metadata: Metadata = {
-  title: "SMF Skills | 26 Free + Pro OpenClaw Skills",
+  title: "SMF Skills | 27 Free + Pro OpenClaw Skills",
   description:
-    "26 productivity skills for OpenClaw: 12 free forever + 14 Pro with subscription. File organizers, PDF tools, lead capture, invoicing, booking, and more.",
+    "27 productivity skills for OpenClaw: 13 free forever + 14 Pro with subscription. File organizers, PDF tools, webcam capture, lead capture, invoicing, booking, and more.",
   alternates: { canonical: "https://smfworks.com/skills" },
 };
 
@@ -36,7 +36,7 @@ export default function SkillsPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <span className="inline-flex items-center gap-2 bg-[#00D4FF]/10 text-[#00D4FF] px-4 py-2 rounded-full text-sm font-medium">
               <span className="w-2 h-2 bg-[#00D4FF] rounded-full"></span>
-              12 Free Forever
+              13 Free Forever
             </span>
             <span className="inline-flex items-center gap-2 bg-[#007BFF]/10 text-[#007BFF] px-4 py-2 rounded-full text-sm font-medium">
               <span className="w-2 h-2 bg-[#007BFF] rounded-full"></span>
@@ -90,7 +90,7 @@ export default function SkillsPage() {
       <section className="bg-[#0A1628] py-16 px-6 border-t border-[#1e2a45]">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-4 mb-10">
-            <span className="inline-flex items-center justify-center w-10 h-10 bg-[#00D4FF] text-[#001F3F] rounded-full font-bold">10</span>
+            <span className="inline-flex items-center justify-center w-10 h-10 bg-[#00D4FF] text-[#001F3F] rounded-full font-bold">13</span>
             <h2 className="text-3xl font-bold text-[#E2E8F0]">Free Skills</h2>
             <span className="text-[#94A3B8] text-sm ml-auto">No subscription. No auth. Just works.</span>
           </div>
@@ -125,7 +125,7 @@ export default function SkillsPage() {
       <section className="bg-[#0A1628] py-16 px-6 border-t border-[#1e2a45]">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
-            <span className="inline-flex items-center justify-center w-10 h-10 bg-[#007BFF] text-white rounded-full font-bold">10</span>
+            <span className="inline-flex items-center justify-center w-10 h-10 bg-[#007BFF] text-white rounded-full font-bold">14</span>
             <h2 className="text-3xl font-bold text-[#E2E8F0]">Pro Skills</h2>
           </div>
           
