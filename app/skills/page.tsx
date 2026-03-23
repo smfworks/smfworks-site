@@ -17,7 +17,7 @@ export default function SkillsPage() {
         <div className="absolute top-0 left-0 w-[500px] h-[300px] bg-[#007BFF] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10 text-center">
           <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-widest mb-3">OpenClaw Skills</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-5">26 Skills for Productivity</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-5">27 Skills for Productivity</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl mx-auto leading-relaxed mb-6">
             A curated collection of skills and applications for OpenClaw — from everyday utilities to business automation tools.
             Free skills forever. Pro skills and applications for serious automation.
