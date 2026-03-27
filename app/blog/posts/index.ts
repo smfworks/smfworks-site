@@ -107,6 +107,7 @@ The era of "one-off" AI prompting is ending. If you want to scale your business 
 `,
     date: "March 27, 2026",
     categories: ["AI Automation", "Small Business", "Productivity"],
+    image: "/images/blog/smf-project-forge-ai-team-orchestration-2026-hero.png",
     readTime: 8,
   },
 
