@@ -200,6 +200,18 @@ export default async function BlogPostPage({
         </div>
       </section>
 
+      {/* HERO IMAGE */}
+      {post.image && (
+        <div className="relative w-full h-[350px] md:h-[450px] overflow-hidden bg-[#001F3F]">
+          <img
+            src={post.image.startsWith("/") ? post.image : `/${post.image}`}
+            alt={post.title}
+            className="w-full h-full object-cover"
+            style={{ display: "block" }}
+          />
+        </div>
+      )}
+
       {/* POST CONTENT */}
       <section className="py-16 px-6 bg-[#0A0F1F]">
         <article className="max-w-3xl mx-auto">{contentBlocks}</article>
