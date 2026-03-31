@@ -5,14 +5,14 @@ export interface Skill {
   name: string;
   shortDesc: string;
   fullDesc: string;
-  tier: "free" | "pro";
+  tier: "free";
   num: number;
   features: string[];
   useCases: string[];
   howToUse: string[];
 }
 
-export const freeSkills: Skill[] = [
+export const allSkills: Skill[] = [
   {
     slug: "file-organizer",
     name: "File Organizer",
@@ -333,17 +333,17 @@ export const freeSkills: Skill[] = [
       "Record a quick video of a demo or process"
     ],
     howToUse: [
-      '"Take a photo with the webcam"',
-      '"Analyze what I\'m showing you on the camera"',
-      '"Record a 10-second video clip"',
-      '"Use the second camera to take a photo"'
+      "\"Take a photo with the webcam\"",
+      "\"Analyze what I'm showing you on the camera\"",
+      "\"Record a 10-second video clip\"",
+      "\"Use the second camera to take a photo\""
     ]
   },
   {
     slug: "skill-manager",
     name: "Skill Manager",
     shortDesc: "Visual tool for managing installed OpenClaw skills",
-    fullDesc: "Interactive terminal UI to view, backup, and cleanly remove installed SMF Skills. Perfect for testing skills on a machine and cleaning up when done. Shows skill details, disk usage, tier (Free/Pro), and allows batch operations with safety confirmations.",
+    fullDesc: "Interactive terminal UI to view, backup, and cleanly remove installed SMF Skills. Perfect for testing skills on a machine and cleaning up when done. Shows skill details, disk usage, and allows batch operations with safety confirmations.",
     tier: "free",
     num: 13,
     features: [
@@ -351,14 +351,13 @@ export const freeSkills: Skill[] = [
       "Checkbox selection for batch operations",
       "One-click backup before removal",
       "Clean removal of files + config + wrapper",
-      "Safety warnings for Pro skills",
       "Works with or without 'rich' library"
     ],
     useCases: [
       "Test skills and clean up afterward",
       "Reclaim disk space from unused skills",
       "Backup skills before migration",
-      "Manage skill subscriptions"
+      "Manage skill installations"
     ],
     howToUse: [
       "smf run skill-manager",
@@ -366,16 +365,13 @@ export const freeSkills: Skill[] = [
       "smf run skill-manager --remove coffee-briefing",
       "smf run skill-manager --backup some-skill"
     ]
-  }
-];
-
-export const proSkills: Skill[] = [
+  },
   {
     slug: "lead-capture",
     name: "Lead Capture",
     shortDesc: "Capture, qualify, and manage sales leads",
     fullDesc: "A complete lead management system for growing businesses. Capture leads from multiple sources, automatically qualify prospects based on custom criteria, track interactions and follow-ups, and integrate with your CRM or email marketing tools for seamless sales workflows.",
-    tier: "pro",
+    tier: "free",
     num: 14,
     features: [
       "Multi-source lead capture",
@@ -402,7 +398,7 @@ export const proSkills: Skill[] = [
     name: "Coffee Briefing",
     shortDesc: "Your personal morning briefing with weather and priorities",
     fullDesc: "Start your day informed with a personalized morning briefing. Get current weather conditions from OpenWeatherMap, your top 3 priorities from file or auto-generated, and optional calendar integration. Perfect for your 7 AM routine.",
-    tier: "pro",
+    tier: "free",
     num: 15,
     features: [
       "Current weather and conditions",
@@ -429,7 +425,7 @@ export const proSkills: Skill[] = [
     name: "Morning Commute",
     shortDesc: "Your daily commute briefing with traffic, transit, and weather",
     fullDesc: "Plan your commute with real-time traffic estimates, current weather at your location, and departure time alerts. Uses free OSRM routing with optional Google Maps API for accurate traffic. Configure your home and work addresses for personalized route planning.",
-    tier: "pro",
+    tier: "free",
     num: 16,
     features: [
       "Route calculation with traffic estimates",
@@ -457,7 +453,7 @@ export const proSkills: Skill[] = [
     name: "OpenClaw Backup",
     shortDesc: "Daily backup of your OpenClaw agent with 2-day rolling retention",
     fullDesc: "Automatically backup your OpenClaw workspace, memory, and configuration daily. Maintains a rolling 2-day history with simple one-command restore. Fully local operation - no external APIs required.",
-    tier: "pro",
+    tier: "free",
     num: 17,
     features: [
       "Daily automated backups",
@@ -485,7 +481,7 @@ export const proSkills: Skill[] = [
     name: "Claw System Backup",
     shortDesc: "Weekly full Linux system backup with compression and verification",
     fullDesc: "Create compressed archives of your Linux system. Supports full system, incremental, or home-directory-only backups. Requires root access for full system backup. Automatic integrity verification and retention management.",
-    tier: "pro",
+    tier: "free",
     num: 18,
     features: [
       "Full system, incremental, or home-only backups",
@@ -513,7 +509,7 @@ export const proSkills: Skill[] = [
     name: "Database Backup",
     shortDesc: "Backup SQLite, PostgreSQL, MySQL with compression",
     fullDesc: "Automated database backup solution supporting multiple database types. Schedule regular backups of SQLite, PostgreSQL, and MySQL databases, compress backups to save storage space, encrypt sensitive data, and restore from backup points when needed.",
-    tier: "pro",
+    tier: "free",
     num: 19,
     features: [
       "Support for SQLite, PostgreSQL, MySQL",
@@ -540,7 +536,7 @@ export const proSkills: Skill[] = [
     name: "Report Generator",
     shortDesc: "Create business reports from CSV/JSON data",
     fullDesc: "Transform raw data into professional business reports. Import data from CSV or JSON files, apply filters and aggregations, generate charts and visualizations, and export polished PDF or HTML reports ready for stakeholders.",
-    tier: "pro",
+    tier: "free",
     num: 20,
     features: [
       "Import CSV and JSON data sources",
@@ -567,7 +563,7 @@ export const proSkills: Skill[] = [
     name: "Email Campaign",
     shortDesc: "Create and send email campaigns with tracking",
     fullDesc: "Full-featured email marketing automation. Design email templates with personalization fields, manage subscriber lists and segments, schedule campaign sends, and track open rates, click rates, and conversions to optimize performance.",
-    tier: "pro",
+    tier: "free",
     num: 21,
     features: [
       "Template-based email creation",
@@ -594,7 +590,7 @@ export const proSkills: Skill[] = [
     name: "Task Manager",
     shortDesc: "Kanban project management with deadlines",
     fullDesc: "Visual project management using Kanban methodology. Organize tasks into customizable boards and columns, set deadlines and priorities, assign team members, track progress through workflows, and generate reports on completion rates.",
-    tier: "pro",
+    tier: "free",
     num: 22,
     features: [
       "Kanban boards with customizable columns",
@@ -621,7 +617,7 @@ export const proSkills: Skill[] = [
     name: "Self-Improvement",
     shortDesc: "Log errors and learnings for continuous improvement",
     fullDesc: "Build a personal knowledge base of mistakes and lessons learned. Log errors with context and root causes, document solutions for future reference, track patterns in recurring issues, and generate insights for process improvement.",
-    tier: "pro",
+    tier: "free",
     num: 23,
     features: [
       "Error logging with context capture",
@@ -648,7 +644,7 @@ export const proSkills: Skill[] = [
     name: "Invoice Generator",
     shortDesc: "Create professional invoices, track payments",
     fullDesc: "Streamlined invoicing for freelancers and small businesses. Generate professional PDF invoices with custom branding, track payment status, send automated reminders for overdue invoices, and export data for accounting software.",
-    tier: "pro",
+    tier: "free",
     num: 24,
     features: [
       "Professional PDF invoice generation",
@@ -675,7 +671,7 @@ export const proSkills: Skill[] = [
     name: "Form Builder",
     shortDesc: "Create forms, collect responses, export data",
     fullDesc: "Build custom forms for any data collection need. Design forms with various field types, embed them on websites or share via links, collect responses securely, and export data to CSV or integrate with other tools via webhooks.",
-    tier: "pro",
+    tier: "free",
     num: 25,
     features: [
       "Drag-and-drop form builder",
@@ -702,7 +698,7 @@ export const proSkills: Skill[] = [
     name: "Booking Engine",
     shortDesc: "Appointment scheduling with availability management",
     fullDesc: "Complete appointment scheduling system. Define availability windows, allow clients to book appointments online, send automatic confirmations and reminders, sync with calendar applications, and manage cancellations and rescheduling.",
-    tier: "pro",
+    tier: "free",
     num: 26,
     features: [
       "Customizable availability calendars",
@@ -729,7 +725,7 @@ export const proSkills: Skill[] = [
     name: "OpenClaw Optimizer",
     shortDesc: "Audit workspace for cost and performance optimization",
     fullDesc: "Comprehensive workspace analysis for OpenClaw users. Audit your current setup for cost inefficiencies, identify performance bottlenecks, recommend configuration improvements, and generate optimization reports with actionable recommendations.",
-    tier: "pro",
+    tier: "free",
     num: 27,
     features: [
       "Cost analysis and spending reports",
@@ -756,7 +752,7 @@ export const proSkills: Skill[] = [
     name: "smf-chat",
     shortDesc: "Secure multi-agent chat hub for OpenClaw networks",
     fullDesc: "A self-hosted, secure chat hub for OpenClaw agent networks. Replaces Telegram/Discord with a fully-controlled web app where you and your agents communicate in real-time. PIN-protected, JWT-authenticated, with persistent SQLite storage via Turso.",
-    tier: "pro",
+    tier: "free",
     num: 28,
     features: [
       "PIN-protected login (6-digit)",
@@ -782,8 +778,6 @@ export const proSkills: Skill[] = [
     ]
   }
 ];
-
-export const allSkills = [...freeSkills, ...proSkills];
 
 export function getSkillBySlug(slug: string): Skill | undefined {
   return allSkills.find((skill) => skill.slug === slug);
