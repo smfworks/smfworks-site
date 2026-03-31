@@ -180,7 +180,7 @@ export default function ContactPage() {
                   <span className="text-2xl">📍</span>
                   <div>
                     <div className="font-semibold text-[#E2E8F0]">Location</div>
-                    <div className="text-[#94A3B8]">Pittsboro, NC — serving businesses nationwide</div>
+                    <div className="text-[#94A3B8]">Pittsboro, NC</div>
                   </div>
                 </div>
               </div>
@@ -193,7 +193,6 @@ export default function ContactPage() {
                   "Personal response within 24 hours",
                   "No sales pressure — just a real conversation",
                   "Honest assessment of where AI can help you",
-                  "Clear pricing — no surprises",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <span className="text-[#00D4FF] mt-0.5">✓</span>
