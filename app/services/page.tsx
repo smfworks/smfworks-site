@@ -27,27 +27,8 @@ const serviceSchema = {
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
-        name: "SEO/GEO-Optimized Blog Posts",
-        description: "AI-enhanced blog content optimized for traditional search engines (Google/Bing) and generative AI engines (ChatGPT, Perplexity, AI Overviews)",
-      },
-      price: "50.00",
-      priceCurrency: "USD",
-      priceValidUntil: "2026-12-31",
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Email Campaign Content",
-        description: "Automated email sequences and newsletter content",
-      },
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Social Media Content",
-        description: "Platform-optimized posts for LinkedIn, Twitter, Facebook, Instagram",
+        name: "White Papers & Thought Leadership",
+        description: "Long-form authoritative content for B2B positioning",
       },
     },
     {
@@ -56,14 +37,6 @@ const serviceSchema = {
         "@type": "Service",
         name: "Website Copy",
         description: "Landing pages, service pages, and full website content",
-      },
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "White Papers & Thought Leadership",
-        description: "Long-form authoritative content for B2B positioning",
       },
     },
   ],
@@ -148,10 +121,6 @@ export default function ServicesPage() {
             </div>
             <div className="space-y-4">
               {[
-                { title: "Company Websites", desc: "Professional websites that convey your brand with clarity and credibility.", href: "/services/company-websites" },
-                { title: "Blog Posts & Articles", desc: "SEO-optimized, brand-voice-matched, ready to publish.", href: "/services/blog-posts-articles" },
-                { title: "Email Sequences", desc: "Welcome series, nurture campaigns, promotional blasts.", href: "/services/email-sequences" },
-                { title: "Social Media Content", desc: "Consistent, platform-native content calendars.", href: "/services/social-media-content" },
                 { title: "White Papers & Reports", desc: "Establish authority with data-driven long-form content.", href: "/services/white-papers-reports" },
                 { title: "Thought Leadership", desc: "LinkedIn ghostwriting, op-eds, founder stories.", href: "/services/thought-leadership" },
                 { title: "Website Copy", desc: "Landing pages, service pages, about pages that convert.", href: "/services/website-copy" },
@@ -184,11 +153,7 @@ export default function ServicesPage() {
               {[
                 { title: "Concierge OpenClaw Installation & Configuration", desc: "Full-service OpenClaw installation and custom configuration with lifetime Pro skills access.", href: "/services/concierge-openclaw-installation" },
                 { title: "Concierge Microsoft 365 Copilot Consultation & Configuration", desc: "Supercharge your Microsoft 365 with Copilot AI, custom agents, and business intelligence.", href: "/services/concierge-microsoft-365-copilot" },
-                { title: "Process Automation", desc: "Identify and automate repetitive tasks that eat your hours.", href: "/services/process-automation" },
-                { title: "Custom AI Workflows", desc: "Build flows that connect your tools, your team, your data.", href: "/services/custom-ai-workflows" },
-                { title: "Staff Enablement", desc: "Train your people to work with AI, not around it.", href: "/services/staff-enablement" },
                 { title: "ROI Analysis", desc: "We show you the math before you spend a dime.", href: "/services/roi-analysis" },
-                { title: "Ongoing Optimization", desc: "AI moves fast. We keep your systems current.", href: "/services/ongoing-optimization" },
               ].map((item) => (
                 item.href ? (
                   <Link key={item.title} href={item.href} className="bg-[#0A0F1F] rounded-lg p-5 border border-[#1e2a45] hover:border-[#FF6B00]/30 transition-colors block group">
