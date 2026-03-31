@@ -173,6 +173,7 @@ The future belongs to the businesses that are fast, but the *profitable* future 
 *   *ISO/IEC 42001 Standard Documentation*`,
     date: "2026-03-31",
     categories: ["AI Strategy", "Governance", "Compliance"],
+    image: "/images/blog/ai-governance-small-business-2025-hero.png",
     readTime: 12,
   },
 
