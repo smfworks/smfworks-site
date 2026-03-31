@@ -171,7 +171,7 @@ The future belongs to the businesses that are fast, but the *profitable* future 
 *   *NIST AI Risk Management Framework (NIST.gov)*
 *   *EU AI Act Compliance Portal*
 *   *ISO/IEC 42001 Standard Documentation*`,
-    date: "2025-03-31",
+    date: "2026-03-31",
     categories: ["AI Strategy", "Governance", "Compliance"],
     image: "https://images.unsplash.com/photo-1639322537228-f710d8463101?w=1200&h=630&fit=crop",
     readTime: 12,
