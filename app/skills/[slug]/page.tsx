@@ -18,13 +18,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const skill = getSkillBySlug(slug);
-  
+
   if (!skill) {
     return {};
   }
 
-  const tierLabel = skill.tier === "free" ? "Free" : "Pro";
-  const title = `${skill.name} | ${tierLabel} OpenClaw Skill | SMF Works`;
+  const tierLabel = "Free";
+  const title = `${skill.name} | Free OpenClaw Skill | SMF Works`;
   const description = skill.fullDesc.slice(0, 160) + (skill.fullDesc.length > 160 ? "..." : "");
 
   return {
@@ -119,23 +119,17 @@ export default async function SkillDetailPage({
           >
             ← Back to all skills
           </Link>
-          
+
           <div className="flex flex-wrap items-center gap-4 mb-4">
-            <span 
-              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium ${
-                skill.tier === "free" 
-                  ? "bg-[#00D4FF]/10 text-[#00D4FF]" 
-                  : "bg-[#007BFF]/10 text-[#007BFF]"
-              }`}
+            <span
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-[#00D4FF]/10 text-[#00D4FF]"
             >
-              <span className={`w-2 h-2 rounded-full ${
-                skill.tier === "free" ? "bg-[#00D4FF]" : "bg-[#007BFF]"
-              }`} />
-              {skill.tier === "free" ? "Free" : "Subscription"}
+              <span className="w-2 h-2 rounded-full bg-[#00D4FF]" />
+              Free
             </span>
             <code className="text-[#64748B] text-sm">{skill.slug}</code>
           </div>
-          
+
           <h1 className="text-4xl md:text-5xl font-bold mb-6">{skill.name}</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
             {skill.fullDesc}
@@ -199,8 +193,8 @@ export default async function SkillDetailPage({
               <h2 className="text-xl font-bold text-[#E2E8F0]">Custom Workflow Integration</h2>
             </div>
             <p className="text-[#94A3B8] leading-relaxed mb-6">
-              This skill can be customized for your specific workflow as part of an SMF Works services engagement. 
-              Whether you need custom automation rules, integrations with your existing tools, or specialized 
+              This skill can be customized for your specific workflow as part of an SMF Works services engagement.
+              Whether you need custom automation rules, integrations with your existing tools, or specialized
               configurations for your team, we can tailor this skill to fit your exact requirements.
             </p>
             <Link
@@ -233,7 +227,7 @@ export default async function SkillDetailPage({
               <strong>💡 Tip:</strong> Install via the OpenClaw TUI skill manager for an interactive experience, or use the CLI command above.
             </p>
           </div>
-          
+
 
         </div>
       </section>
@@ -295,11 +289,6 @@ export default async function SkillDetailPage({
                     <span className="text-[#E2E8F0] font-medium group-hover:text-[#00D4FF] transition-colors">
                       {otherSkill.name}
                     </span>
-                    {otherSkill.tier === "pro" && (
-                      <span className="text-xs bg-[#007BFF]/10 text-[#007BFF] px-2 py-0.5 rounded">
-                        Pro
-                      </span>
-                    )}
                   </div>
                   <p className="text-[#94A3B8] text-sm truncate">{otherSkill.shortDesc}</p>
                 </Link>
