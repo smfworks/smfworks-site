@@ -62,12 +62,6 @@ export default function Home() {
             >
               Get Started
             </Link>
-            <Link
-              href="/services"
-              className="border border-[#00D4FF]/60 text-[#00D4FF] px-8 py-3.5 rounded-lg font-semibold text-center hover:bg-[#00D4FF] hover:text-[#001F3F] transition-all hover:shadow-lg hover:shadow-[#00D4FF]/20"
-            >
-              See Our Services
-            </Link>
           </div>
         </div>
       </section>
@@ -90,53 +84,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHAT WE DO — Glassmorphism Cards */}
+      {/* WHAT WE DO — Skills Focus */}
       <section className="py-20 px-6 bg-[#0A0F1F] relative overflow-hidden">
-        <div className="max-w-5xl mx-auto relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[#E2E8F0]">
+        <div className="max-w-5xl mx-auto relative z-10 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#E2E8F0]">
             What We Do
           </h2>
-          <p className="text-center text-[#94A3B8] max-w-2xl mx-auto mb-14">
-            Two service lines. Both built to give small businesses the same advantage
-            that enterprise companies have been hoarding.
+          <p className="text-[#94A3B8] max-w-2xl mx-auto mb-10 leading-relaxed">
+            SMF Works delivers AI-powered content and workflow solutions for small businesses. 
+            Explore our skills to see how we can help your business leverage AI effectively.
           </p>
-
-          {/* Glassmorphism container */}
-          <div className="bg-[#131B2E]/60 backdrop-blur-md rounded-2xl border border-[#1e2a45]/80 p-8 md:p-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Service 1 */}
-              <div className="bg-[#0A0F1F]/80 backdrop-blur-sm rounded-xl p-8 border border-[#1e2a45] hover:border-[#00D4FF]/40 transition-all group hover:shadow-lg hover:shadow-[#00D4FF]/5">
-                <div className="w-12 h-12 rounded-lg bg-[#00D4FF]/10 flex items-center justify-center mb-4 group-hover:bg-[#00D4FF]/20 transition-colors group-hover:shadow-lg group-hover:shadow-[#00D4FF]/20">
-                  <span className="text-2xl" aria-hidden="true">✍️</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">Marketing & SEO/GEO Content Production</h3>
-                <p className="text-[#94A3B8] leading-relaxed mb-6">
-                  Blog posts, email sequences, social media, white papers, thought leadership,
-                  and ghostwriting — all HighTech-powered, all precisely crafted to your brand voice.
-                  Optimized for both traditional search (Google/Bing) and AI engines (ChatGPT, Perplexity).
-                </p>
-                <Link href="/services#content" className="text-[#00D4FF] font-semibold hover:underline inline-flex items-center gap-1">
-                  Learn more <span className="transition-transform group-hover:translate-x-1">→</span>
-                </Link>
-              </div>
-
-              {/* Service 2 */}
-              <div className="bg-[#0A0F1F]/80 backdrop-blur-sm rounded-xl p-8 border border-[#1e2a45] hover:border-[#FF6B00]/40 transition-all group hover:shadow-lg hover:shadow-[#FF6B00]/5">
-                <div className="w-12 h-12 rounded-lg bg-[#FF6B00]/10 flex items-center justify-center mb-4 group-hover:bg-[#FF6B00]/20 transition-colors group-hover:shadow-lg group-hover:shadow-[#FF6B00]/20">
-                  <span className="text-2xl" aria-hidden="true">⚙️</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">AI Workflow Consulting</h3>
-                <p className="text-[#94A3B8] leading-relaxed mb-6">
-                  Implementing AI automation for your business operations — whether you&apos;re a
-                  trades business or a white-collar firm, we build practical systems that save
-                  you time and money.
-                </p>
-                <Link href="/services#workflow" className="text-[#FF6B00] font-semibold hover:underline inline-flex items-center gap-1">
-                  Learn more <span className="transition-transform group-hover:translate-x-1">→</span>
-                </Link>
-              </div>
-            </div>
-          </div>
+          <Link
+            href="/skills"
+            className="inline-flex items-center gap-2 bg-[#00D4FF] text-[#001F3F] px-8 py-3.5 rounded-lg font-semibold hover:bg-[#00b8e6] transition-all shadow-lg shadow-[#00D4FF]/25 hover:shadow-[#00D4FF]/40"
+          >
+            Explore Our Skills <span>→</span>
+          </Link>
         </div>
       </section>
 
