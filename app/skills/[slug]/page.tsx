@@ -234,16 +234,7 @@ export default async function SkillDetailPage({
             </p>
           </div>
           
-          {skill.tier === "pro" && (
-            <div className="mt-6 bg-[#007BFF]/10 border border-[#007BFF]/30 rounded-xl p-4">
-              <p className="text-[#E2E8F0] text-sm">
-                <span className="font-semibold text-[#007BFF]">Pro Skill:</span> This skill requires an active SMF Works subscription. 
-                <Link href="https://smf.works/subscribe" className="text-[#00D4FF] hover:underline ml-1">
-                  Subscribe now →
-                </Link>
-              </p>
-            </div>
-          )}
+
         </div>
       </section>
 
