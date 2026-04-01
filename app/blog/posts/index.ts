@@ -176,6 +176,7 @@ A: If it has an API or MCP support, an agent can likely connect to it. Major bus
 \n`,
     date: "2025-04-01",
     categories: ["AI Agents", "MCP", "Automation", "Small Business"],
+    image: "/images/blog/ai-agents-mcp-hero.png",
     readTime: 10,
   },
 
