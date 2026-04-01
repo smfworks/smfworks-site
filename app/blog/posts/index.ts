@@ -174,7 +174,7 @@ A: With MCP, simple automations can be running in days. More complex multi-syste
 
 A: If it has an API or MCP support, an agent can likely connect to it. Major business tools—Gmail, Outlook, Slack, Salesforce, HubSpot, QuickBooks, Xero, Notion, Airtable, Google Workspace, Microsoft 365—all have MCP connectors available. Custom internal systems may need custom connectors, but the ecosystem is growing rapidly.
 \n`,
-    date: "2025-04-01",
+    date: "2026-04-01",
     categories: ["AI Agents", "MCP", "Automation", "Small Business"],
     image: "/images/blog/ai-agents-mcp-hero.png",
     readTime: 10,
