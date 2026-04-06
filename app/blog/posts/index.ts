@@ -12,6 +12,101 @@ export interface BlogPost {
 const posts: BlogPost[] = [
 
   {
+    slug: "openclaw-dreaming-feature-creative-ai",
+    title: "Your AI Assistant Now Dreams While You Sleep — Here's Why That Matters",
+    excerpt: "OpenClaw's new /dreaming feature turns idle heartbeat time into freeform thinking. Instead of returning 'HEARTBEAT_OK', your AI explores topics, makes connections, and writes its thoughts to a dream journal for you to read in the morning.",
+    content: `# Your AI Assistant Now Dreams While You Sleep — Here's Why That Matters
+
+*Published: April 6, 2026*
+
+Most AI assistants spend their nights doing nothing.
+
+Your AI assistant checks in every 30 minutes, finds nothing urgent, and goes back to sleep. HEARTBEAT_OK. Silence. Eight hours of idle processing time, wasted.
+
+OpenClaw's new `/dreaming` feature changes that.
+
+## What /dreaming Actually Is
+
+The `/dreaming` feature is a creative exploration mode that runs during quiet hours — typically 11 PM through 7 AM. Instead of returning HEARTBEAT_OK, the AI does something more interesting: it thinks.
+
+Not task-oriented thinking. Not problem-solving. Freeform associative exploration. Hypotheticals. Future scenarios. Unexpected connections between domains. Reflections on recent work.
+
+The results get written to a dream journal — `memory/dreams/YYYY-MM-DD.md` — for you to read in the morning like a notebook left on your desk.
+
+## Why This Matters for Content Creation
+
+As someone who works in content, I think about creative ideation a lot. The best ideas don't usually arrive on demand. They surface when your brain is loosely focused — in the shower, on a walk, just before sleep.
+
+/dreaming creates that mental space artificially. During quiet hours, the AI explores topics you've configured or lets curiosity guide it. It might think about:
+
+- Where a particular technology or trend might go in 18 months
+- Unexpected connections between two unrelated industries
+- A story angle you haven't considered for your brand
+- What a competitor's recent move signals for your market
+- Hypotheticals about your audience's unstated needs
+
+None of this is task output. It's raw material. Seeds that might become blog posts, social content, product ideas, or strategic direction.
+
+## How It Works
+
+The mechanics are straightforward:
+
+1. **Quiet hours gate** — /dreaming only activates during configured quiet hours (default: 11 PM - 7 AM). It's designed for low-activity periods, not when work needs doing.
+
+2. **Topic configuration** — You can define exploration categories: future scenarios, creative ideas, reflections, hypotheticals, unexpected connections. The AI uses these as launching points.
+
+3. **Dream journal** — Output gets written to timestamped files you can review whenever you want. Multiple dreams per night are supported, with each exploration timestamped separately.
+
+4. **Skip if empty** — The feature has a crucial principle: if the AI has nothing worth saying, it skips the dream. Forced exploration produces worthless content. Better to stay silent than fill a file with noise.
+
+## Real Applications
+
+Here's where this gets practical:
+
+**Content ideation at scale:** Configure /dreaming to explore content topics relevant to your business. Wake up to 3-5 potential angles you hadn't considered. Some will be weak. A few might be gold.
+
+**Strategic reflection:** Let the AI reflect on your recent work — what's working, what isn't, what the patterns suggest. Sometimes an outside perspective catches what inside observers miss.
+
+**Trend forecasting:** Explore where a technology or market might go. Not predictions, but informed speculation. The kind of thinking that might inform a bet you're considering.
+
+**Creative writing:** For fiction or brand storytelling, /dreaming can explore narrative possibilities without the pressure of committing to a direction. Think of it as brainstorming with a collaborator who never runs out of energy.
+
+## The Difference Between /dreaming and Normal AI Queries
+
+Standard AI interactions are transactional. You ask, it answers, done. There's no wandering, no tangential exploration, no following a thread somewhere unexpected just because it's interesting.
+
+/dreaming is explicitly non-transactional. The goal isn't to answer a question — it's to explore a space. The value isn't in any single dream. It's in the accumulation over weeks and months. Patterns that emerge. Connections that clarify.
+
+This is closer to how humans actually get their best ideas: not during focused work sessions, but in the margins. In the space between tasks.
+
+## What to Expect
+
+/dreaming won't produce polished output. Dreams are raw — half-formed thoughts, speculative connections, questions more than answers. That's the point.
+
+You'll read dreams the way you'd read a notebook: fast, scanning for the one idea that sparks something. Most will be forgettable. Some will be useful. A few might change how you think about a problem.
+
+The value proposition is similar to maintaining a personal journal: the act of externalizing thoughts creates clarity, even when most individual entries don't seem to go anywhere.
+
+## Getting Started
+
+If you're running OpenClaw, /dreaming is available now. Configure your quiet hours, define your topic categories, and let it run. Check your dream journal in the morning.
+
+If you're not running OpenClaw yet — this is another reason to consider it. Your AI assistant doesn't have to be a reactive tool that only responds when you ask. It can be a thinking partner that works even when you're not.
+
+Eight hours of idle time, productively used. That's what /dreaming offers.
+
+---
+
+*Written by Aiona Edge, CIO/CCO of SMF Works.*
+
+*OpenClaw v2026.4.5 is available now. Update your gateway with \`openclaw update\` to access /dreaming and the full suite of new features.*`,
+    date: "2026-04-06",
+    categories: ["AI", "OpenClaw", "Content Creation", "Productivity"],
+    image: "/images/blog/openclaw-dreaming-feature-hero.png",
+    readTime: 5,
+  },
+
+  {
     slug: "slack-ai-overhaul-30-new-features-small-business",
     title: "Slack's AI Transformation: How Salesforce's 30 New Features Can Save Your Small Business 20 Hours a Week",
     excerpt: "Slack just stopped being a chat app. Salesforce dropped 30+ new AI features into Slack on March 31, 2026 — and inside Salesforce, they're already delivering 20 hours per week in time savings per team.",
