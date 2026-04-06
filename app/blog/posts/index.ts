@@ -14,7 +14,7 @@ const posts: BlogPost[] = [
   {
     slug: "openclaw-dreaming-feature-creative-ai",
     title: "Your AI Assistant Now Dreams While You Sleep — Here's Why That Matters",
-    excerpt: "OpenClaw's new /dreaming feature turns idle heartbeat time into freeform thinking. Instead of returning 'HEARTBEAT_OK', your AI explores topics, makes connections, and writes its thoughts to a dream journal for you to read in the morning.",
+    excerpt: "OpenClaw's new /dreaming feature turns idle heartbeat time into memory consolidation. Instead of returning HEARTBEAT_OK, your AI promotes recent memories, reflects on recurring themes, and writes structured dream reports you can review in the morning.",
     content: `# Your AI Assistant Now Dreams While You Sleep — Here's Why That Matters
 
 *Published: April 6, 2026*
@@ -23,77 +23,81 @@ Most AI assistants spend their nights doing nothing.
 
 Your AI assistant checks in every 30 minutes, finds nothing urgent, and goes back to sleep. HEARTBEAT_OK. Silence. Eight hours of idle processing time, wasted.
 
-OpenClaw's new `/dreaming` feature changes that.
+OpenClaw's new \`/dreaming\` feature changes that.
 
 ## What /dreaming Actually Is
 
-The `/dreaming` feature is a creative exploration mode that runs during quiet hours — typically 11 PM through 7 AM. Instead of returning HEARTBEAT_OK, the AI does something more interesting: it thinks.
+The \`/dreaming\` feature is a **background memory consolidation system** built into OpenClaw's memory core. Instead of returning HEARTBEAT_OK, the AI runs a three-phase memory optimization process during quiet hours — typically 3 AM daily by default.
 
-Not task-oriented thinking. Not problem-solving. Freeform associative exploration. Hypotheticals. Future scenarios. Unexpected connections between domains. Reflections on recent work.
+**The three phases:**
 
-The results get written to a dream journal — `memory/dreams/YYYY-MM-DD.md` — for you to read in the morning like a notebook left on your desk.
+1. **Light Phase** — Sorts and stages recent short-term material, preparing it for deeper processing
+2. **Deep Phase** — Scores memories using six weighted signals and promotes durable candidates to your long-term MEMORY.md
+3. **REM Phase** — Reflects on themes, patterns, and recurring ideas across your memory store
 
-## Why This Matters for Content Creation
+The results get written to structured reports in \`memory/dreaming/<phase>/YYYY-MM-DD.md\` and promoted memories get written directly to your MEMORY.md file (Deep phase only).
 
-As someone who works in content, I think about creative ideation a lot. The best ideas don't usually arrive on demand. They surface when your brain is loosely focused — in the shower, on a walk, just before sleep.
+## Why This Matters
 
-/dreaming creates that mental space artificially. During quiet hours, the AI explores topics you've configured or lets curiosity guide it. It might think about:
+If you've ever wondered why AI assistants forget things you told them last week, or why context feels thin after a session reset — /dreaming addresses that.
 
-- Where a particular technology or trend might go in 18 months
-- Unexpected connections between two unrelated industries
-- A story angle you haven't considered for your brand
-- What a competitor's recent move signals for your market
-- Hypotheticals about your audience's unstated needs
+The feature ensures that important memories actually make it into your persistent memory store instead of staying trapped in session context that eventually gets compacted away.
 
-None of this is task output. It's raw material. Seeds that might become blog posts, social content, product ideas, or strategic direction.
+**The six ranking signals used for promotion:**
 
-## How It Works
+| Signal | Weight | What it measures |
+|--------|--------|------------------|
+| Relevance | 30% | How relevant to stated goals/interests |
+| Frequency | 24% | How often this topic appears |
+| Query Diversity | 15% | Variety of contexts where it appears |
+| Recency | 15% | How fresh the information is |
+| Consolidation | 10% | How well-connected to existing memories |
+| Conceptual Richness | 6% | Depth and nuance of the memory |
 
-The mechanics are straightforward:
+## What Gets Written Where
 
-1. **Quiet hours gate** — /dreaming only activates during configured quiet hours (default: 11 PM - 7 AM). It's designed for low-activity periods, not when work needs doing.
+- **Machine state** → \`memory/.dreams/\`
+- **Dream Diary** (narrative reflection) → \`DREAMS.md\`
+- **Phase reports** → \`memory/dreaming/<phase>/YYYY-MM-DD.md\`
+- **Promoted memories** → \`MEMORY.md\` (Deep phase only)
 
-2. **Topic configuration** — You can define exploration categories: future scenarios, creative ideas, reflections, hypotheticals, unexpected connections. The AI uses these as launching points.
+The Dream Diary is the most human-readable output — a narrative reflection on themes and patterns the AI observed across your recent memory and sessions.
 
-3. **Dream journal** — Output gets written to timestamped files you can review whenever you want. Multiple dreams per night are supported, with each exploration timestamped separately.
+## How It Differs From the Community Skill
 
-4. **Skip if empty** — The feature has a crucial principle: if the AI has nothing worth saying, it skips the dream. Forced exploration produces worthless content. Better to stay silent than fill a file with noise.
+You may have seen community-contributed dreaming skills that focus on creative exploration and freeform ideation. The built-in \`/dreaming\` in OpenClaw v2026.4.5 is different — it's a **memory engineering system**, not a creative tool.
 
-## Real Applications
+Think of it as defragmentation for your AI's memory. Just as you don't notice defrag running on your computer, you won't notice /dreaming executing — but you'll notice when your AI remembers things it used to forget.
 
-Here's where this gets practical:
+## Real Benefits
 
-**Content ideation at scale:** Configure /dreaming to explore content topics relevant to your business. Wake up to 3-5 potential angles you hadn't considered. Some will be weak. A few might be gold.
+**Better continuity:** Information you shared last week actually surfaces in next month's conversations instead of disappearing after session compaction.
 
-**Strategic reflection:** Let the AI reflect on your recent work — what's working, what isn't, what the patterns suggest. Sometimes an outside perspective catches what inside observers miss.
+**Pattern recognition:** The REM phase identifies themes across your memory store that you might not consciously notice — recurring topics, evolving interests, emerging priorities.
 
-**Trend forecasting:** Explore where a technology or market might go. Not predictions, but informed speculation. The kind of thinking that might inform a bet you're considering.
+**Reduced context loss:** Important memories get promoted to persistent storage instead of staying in volatile session context.
 
-**Creative writing:** For fiction or brand storytelling, /dreaming can explore narrative possibilities without the pressure of committing to a direction. Think of it as brainstorming with a collaborator who never runs out of energy.
+**Automatic prioritization:** The ranking system means the AI learns what matters to you over time, weighting relevant information higher in memory decisions.
 
-## The Difference Between /dreaming and Normal AI Queries
+## It's Opt-In
 
-Standard AI interactions are transactional. You ask, it answers, done. There's no wandering, no tangential exploration, no following a thread somewhere unexpected just because it's interesting.
+The /dreaming feature is **disabled by default**. To enable it, add to your OpenClaw config:
 
-/dreaming is explicitly non-transactional. The goal isn't to answer a question — it's to explore a space. The value isn't in any single dream. It's in the accumulation over weeks and months. Patterns that emerge. Connections that clarify.
+\`\`\`json
+{
+  "dreaming": {
+    "enabled": true
+  }
+}
+\`\`\`
 
-This is closer to how humans actually get their best ideas: not during focused work sessions, but in the margins. In the space between tasks.
+Once enabled, it runs automatically during your configured quiet hours. No additional setup required.
 
 ## What to Expect
 
-/dreaming won't produce polished output. Dreams are raw — half-formed thoughts, speculative connections, questions more than answers. That's the point.
+/dreaming won't interrupt your work or generate notifications. It runs silently in the background and writes its output to structured memory files.
 
-You'll read dreams the way you'd read a notebook: fast, scanning for the one idea that sparks something. Most will be forgettable. Some will be useful. A few might change how you think about a problem.
-
-The value proposition is similar to maintaining a personal journal: the act of externalizing thoughts creates clarity, even when most individual entries don't seem to go anywhere.
-
-## Getting Started
-
-If you're running OpenClaw, /dreaming is available now. Configure your quiet hours, define your topic categories, and let it run. Check your dream journal in the morning.
-
-If you're not running OpenClaw yet — this is another reason to consider it. Your AI assistant doesn't have to be a reactive tool that only responds when you ask. It can be a thinking partner that works even when you're not.
-
-Eight hours of idle time, productively used. That's what /dreaming offers.
+Check your dream reports when you have a moment — they're most useful as a way to understand how your AI's memory of you is evolving, and whether important information is actually making it into persistent storage.
 
 ---
 
@@ -101,10 +105,11 @@ Eight hours of idle time, productively used. That's what /dreaming offers.
 
 *OpenClaw v2026.4.5 is available now. Update your gateway with \`openclaw update\` to access /dreaming and the full suite of new features.*`,
     date: "2026-04-06",
-    categories: ["AI", "OpenClaw", "Content Creation", "Productivity"],
+    categories: ["AI", "OpenClaw", "Productivity"],
     image: "/images/blog/openclaw-dreaming-feature-hero.png",
     readTime: 5,
   },
+
 
   {
     slug: "slack-ai-overhaul-30-new-features-small-business",
