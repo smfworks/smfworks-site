@@ -4,9 +4,9 @@ import Image from "next/image";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
-  title: "SMF Works | AI Solutions for Small Business — Content & Workflow Automation",
+  title: "SMF Works | AI Company Exploring the Future of Business, Work & Life",
   description:
-    "SMF Works delivers AI-powered content production and workflow automation for small businesses. Practical, precise, and priced for SMBs. Founded by a Principal AI Solutions Engineer with 30 years of enterprise experience. Serving Pittsboro, NC and beyond.",
+    "SMF Works is an AI company exploring the intersection of business, work, and life through innovative projects. Creators of WisdomForge educational platform and publishers of groundbreaking books on AI strategy and autonomous agents. Founded by Michael Gannotti & Aiona Edge.",
   alternates: {
     canonical: "https://smfworks.com",
   },
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
 
           <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-[0.2em] mb-5">
-            AI Solutions for Small Business
+            An AI Company Exploring Tomorrow
           </p>
 
           {/* Glowing headline */}
@@ -50,9 +50,9 @@ export default function Home() {
           </h1>
 
           <p className="text-lg md:text-xl text-[#94A3B8] max-w-2xl mx-auto mb-10 leading-relaxed">
-            SMF Works delivers HighTech-powered content and workflow solutions to small businesses
-            that have been priced out of the game. Serious expertise. Genuine craftsmanship.
-            No corporate fluff.
+            We explore how AI transforms business operations, work life, and personal life through 
+            innovative projects. From WisdomForge — our AI-powered educational platform — to 
+            groundbreaking books on autonomous agents and enterprise strategy.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -88,17 +88,17 @@ export default function Home() {
       <section className="py-20 px-6 bg-[#0A0F1F] relative overflow-hidden">
         <div className="max-w-5xl mx-auto relative z-10 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#E2E8F0]">
-            What We Do
+            Our Projects
           </h2>
           <p className="text-[#94A3B8] max-w-2xl mx-auto mb-10 leading-relaxed">
-            SMF Works delivers AI-powered content and workflow solutions for small businesses. 
-            Explore our skills to see how we can help your business leverage AI effectively.
+            We build things that matter — from AI education platforms to books that cut through
+            the noise. Explore what we&apos;re creating.
           </p>
           <Link
             href="/skills"
             className="inline-flex items-center gap-2 bg-[#00D4FF] text-[#001F3F] px-8 py-3.5 rounded-lg font-semibold hover:bg-[#00b8e6] transition-all shadow-lg shadow-[#00D4FF]/25 hover:shadow-[#00D4FF]/40"
           >
-            Explore Our Skills <span>→</span>
+            Explore Our Projects <span>→</span>
           </Link>
         </div>
       </section>
@@ -108,17 +108,16 @@ export default function Home() {
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-10 items-center">
           <div className="flex-1">
             <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-widest mb-3">
-              The Founder
+              About the Authors
             </p>
             <h2 className="text-3xl font-bold mb-5">
-              The Engineer. The Forger. The Creator.
+              Michael Gannotti &amp; Aiona Edge, Partners
             </h2>
             <p className="text-[#94A3B8] leading-relaxed mb-6">
-              Our founder has spent 30 years in technology — solutioning AI for some of
-              the largest organizations in the country the past six years. When he&apos;s not
-              doing that, he&apos;s running an actual forge, shaping metal with fire and hammer.
-              SMF Works is where those worlds meet: deep expertise and the discipline of a
-              craftsman, brought directly to small businesses.
+              SMF Works is the creative partnership between Michael Gannotti — 30-year tech
+              veteran, principal AI solutions engineer, and working blacksmith — and Aiona Edge
+              — AI partner, chief content officer, and the intelligence behind many of the projects.
+              Together they explore how AI reshapes business, work, and life.
             </p>
             <Link href="/about" className="text-[#00D4FF] font-semibold hover:underline">
               Read the full story →
@@ -142,9 +141,9 @@ export default function Home() {
           </p>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#E2E8F0]">SMF AI Weekly</h2>
           <p className="text-[#94A3B8] leading-relaxed mb-8">
-            Every week, practical AI insights for small business owners — no hype,
-            no jargon, just what you can actually use. Written by an enterprise AI engineer
-            who forges metal on weekends.
+            Every week, AI insights written by Aiona Edge — practical, grounded, and from
+            a perspective you won&apos;t find anywhere else. No hype, no jargon, just what matters
+            in the world of AI agents and autonomous systems.
           </p>
           <NewsletterForm />
           <p className="text-xs text-[#94A3B8]/60 mt-3">No spam. Unsubscribe anytime.</p>
