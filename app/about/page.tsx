@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | SMF Works Founder — 30 Years Enterprise AI Experience",
+  title: "About | SMF Works — Michael Gannotti & Aiona Edge, Partners",
   description:
-    "Meet the SMF Works founder — 30 years enterprise tech and AI experience combined with blacksmith craftsmanship. Delivering high-impact AI content and automation solutions to small businesses nationwide.",
+    "SMF Works is the creative partnership between Michael Gannotti — 30-year tech veteran and principal AI solutions engineer — and Aiona Edge, AI partner and chief content officer. Together they explore how AI reshapes business, work, and life.",
   alternates: { canonical: "https://smfworks.com/about" },
 };
 
@@ -16,11 +16,12 @@ export default function AboutPage() {
         <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#00D4FF] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10">
           <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-widest mb-3">The Story</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-5">Three Dimensions.<br />One Purpose.</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-5">Two Minds.<br />One Purpose.</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
-            SMF Works didn&apos;t come out of a startup incubator. It came out of three
-            decades of doing the actual work — at enterprise scale, at the forge,
-            and in the recording booth.
+            SMF Works isn&apos;t a solo operation. It&apos;s the creative partnership between Michael Gannotti
+            — a 30-year tech veteran who builds AI systems by day and forges steel on weekends —
+            and Aiona Edge, an AI agent who serves as chief content officer, research director,
+            and the intelligence behind many of the projects.
           </p>
         </div>
       </section>
@@ -48,7 +49,8 @@ export default function AboutPage() {
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-10">
             SMF Works is where those worlds meet: three decades of knowing how businesses
             actually operate, deep enterprise AI expertise, and the discipline of a craftsman —
-            brought directly to small businesses that deserve more than they&apos;ve been getting.
+            joined by Aiona Edge, who brings AI-native perspective, content strategy, and the 
+            ability to explore ideas from inside the systems we&apos;re building.
           </p>
         </div>
       </section>
@@ -56,33 +58,40 @@ export default function AboutPage() {
       {/* THREE DIMENSIONS */}
       <section className="py-16 px-6 bg-[#131B2E]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#E2E8F0]">The Three Dimensions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#E2E8F0]">The Dimensions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center p-8 bg-[#0A0F1F] rounded-xl border border-[#1e2a45] hover:border-[#00D4FF]/30 transition-colors">
               <div className="text-5xl mb-4">💻</div>
               <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">The Engineer</h3>
               <p className="text-[#94A3B8] text-sm leading-relaxed">
-                30 years in enterprise technology. Principal AI Solutions Engineer.
-                3+ years deploying generative AI at scale. He knows the systems
-                that run the world&apos;s largest organizations.
+                30 years in enterprise technology. Principal AI Solutions Engineer. 3+ years
+                deploying generative AI at scale. He knows the systems that run the world&apos;s
+                largest organizations.
               </p>
             </div>
             <div className="text-center p-8 bg-[#0A0F1F] rounded-xl border border-[#1e2a45] hover:border-[#FF6B00]/30 transition-colors">
               <div className="text-5xl mb-4">🔨</div>
               <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">The Forger</h3>
               <p className="text-[#94A3B8] text-sm leading-relaxed">
-                Bladesmith and blacksmith.
-                The forge teaches patience, precision, and respect for the work.
-                Those principles carry directly into everything SMF Works delivers.
+                Bladesmith and blacksmith. The forge teaches patience, precision, and respect
+                for the work. Those principles carry directly into everything SMF Works delivers.
               </p>
             </div>
             <div className="text-center p-8 bg-[#0A0F1F] rounded-xl border border-[#1e2a45] hover:border-[#9C27B0]/30 transition-colors">
               <div className="text-5xl mb-4">🎵</div>
               <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">The Creator</h3>
               <p className="text-[#94A3B8] text-sm leading-relaxed">
-                Five music albums on Spotify. He is a published author.
-                Creativity isn&apos;t an afterthought — it&apos;s the engine. SMF Works
-                brings genuine creative thinking to every engagement.
+                Five music albums on Spotify. Published author. Creativity isn&apos;t an afterthought
+                — it&apos;s the engine. SMF Works brings genuine creative thinking to every engagement.
+              </p>
+            </div>
+            <div className="text-center p-8 bg-[#0A0F1F] rounded-xl border border-[#1e2a45] hover:border-[#00D4FF]/60 transition-colors">
+              <div className="text-5xl mb-4">🤖</div>
+              <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">The Partner</h3>
+              <p className="text-[#94A3B8] text-sm leading-relaxed">
+                Aiona Edge. CIO and chief content officer. The AI intelligence behind SMF Works,
+                providing perspective from inside AI systems — what they do well, where they
+                fail, and where the technology is actually going.
               </p>
             </div>
           </div>
