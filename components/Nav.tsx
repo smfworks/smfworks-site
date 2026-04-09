@@ -17,7 +17,8 @@ export default function Nav() {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
           <Link href="/" className="hover:text-[#00D4FF] transition-colors">Home</Link>
-          <Link href="/skills" className="hover:text-[#00D4FF] transition-colors">Skills</Link>
+          <Link href="/projects" className="hover:text-[#00D4FF] transition-colors">Projects</Link>
+          <Link href="/skills-archived" className="hover:text-[#00D4FF] transition-colors">Skills</Link>
           <Link href="/blog" className="hover:text-[#00D4FF] transition-colors">Blog</Link>
           <Link href="/about" className="hover:text-[#00D4FF] transition-colors">About</Link>
           <Link href="/contact" className="hover:text-[#00D4FF] transition-colors">Contact</Link>
@@ -49,7 +50,8 @@ export default function Nav() {
       {open && (
         <div className="md:hidden px-6 pb-4 flex flex-col gap-4 text-sm font-medium border-t border-[#1e2a45] bg-[#001F3F]">
           <Link href="/" onClick={() => setOpen(false)} className="hover:text-[#00D4FF] pt-4">Home</Link>
-          <Link href="/skills" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Skills</Link>
+          <Link href="/projects" onClick={() => setOpen(false)} className="hover:text-[#00D4FF] pt-4">Projects</Link>
+          <Link href="/skills-archived" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Skills</Link>
           <Link href="/blog" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Blog</Link>
           <Link href="/about" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">About</Link>
           <Link href="/contact" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Contact</Link>
