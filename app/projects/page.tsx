@@ -42,7 +42,8 @@ const projects = [
     status: "Published",
     statusColor: "#22C55E",
     emoji: "📖",
-    link: "/blog",
+    link: "https://a.co/d/07lSbwxB",
+    external: true,
     comingSoon: false,
   },
   {
