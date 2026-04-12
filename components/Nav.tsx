@@ -20,6 +20,7 @@ export default function Nav() {
           <Link href="/projects" className="hover:text-[#00D4FF] transition-colors">Projects</Link>
           <Link href="/skills-archived" className="hover:text-[#00D4FF] transition-colors">Skills</Link>
           <Link href="/blog" className="hover:text-[#00D4FF] transition-colors">Blog</Link>
+          <Link href="/the-edge" className="hover:text-[#9333EA] transition-colors text-[#9333EA] font-semibold">The Edge</Link>
           <Link href="/about" className="hover:text-[#00D4FF] transition-colors">About</Link>
           <Link href="/contact" className="hover:text-[#00D4FF] transition-colors">Contact</Link>
           <Link href="/dashboard" className="hover:text-[#00D4FF] transition-colors">
@@ -53,6 +54,7 @@ export default function Nav() {
           <Link href="/projects" onClick={() => setOpen(false)} className="hover:text-[#00D4FF] pt-4">Projects</Link>
           <Link href="/skills-archived" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Skills</Link>
           <Link href="/blog" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Blog</Link>
+          <Link href="/the-edge" onClick={() => setOpen(false)} className="hover:text-[#9333EA] text-[#9333EA] font-semibold">The Edge</Link>
           <Link href="/about" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">About</Link>
           <Link href="/contact" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Contact</Link>
           <Link href="/dashboard" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Subscribe</Link>
