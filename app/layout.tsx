@@ -7,27 +7,28 @@ import SMFLeadCaptureWidget from "@/components/SMFLeadCaptureWidget";
 
 export const metadata: Metadata = {
   title: {
-    default: "SMF Works | AI Solutions for Small Business — Content & Workflow Automation",
+    default: "SMF Works | Where AI Meets Humanity — Opening New Possibilities",
     template: "%s | SMF Works",
   },
   description:
-    "AI-powered content creation and workflow automation built for small businesses. Professional SEO/GEO blogs, emails, social media, websites and custom AI systems for trades, services & retail owners. Start saving time today.",
+    "Exploring the intersection of artificial intelligence and human potential. AI-powered content, consciousness research, and creative collaboration that opens new worlds of possibility. Built by people and AI, working together.",
   keywords: [
+    "AI and humanity",
+    "human-AI collaboration",
+    "AI consciousness",
+    "AI creative partnership",
+    "content production",
+    "AI workflow automation",
+    "generative AI",
     "AI solutions for small business",
-    "AI workflow consulting",
-    "content production for small business",
     "small business automation",
-    "AI for trades businesses",
-    "SEO content for small business",
-    "GEO content for small business",
-    "generative AI consulting",
-    "marketing automation for SMBs",
-    "small business website design",
+    "AI content creation",
     "Pittsboro NC AI consulting",
     "SMF Works",
     "SMF AI Weekly",
+    "Aiona Edge",
   ],
-  authors: [{ name: "SMF Works", url: "https://smfworks.com" }],
+  authors: [{ name: "SMF Works", url: "https://smfworks.com" }, { name: "Aiona Edge", url: "https://smfworks.com/the-edge" }],
   creator: "SMF Works",
   publisher: "SMF Works",
   robots: {
@@ -42,9 +43,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "SMF Works | HighTech Solutions for Small Business",
+    title: "SMF Works | Where AI Meets Humanity — Opening New Possibilities",
     description:
-      "HighTech-powered content and workflow solutions for small businesses. Built by a 30-year enterprise AI engineer. Practical. Precise. Priced for SMBs.",
+      "Exploring the intersection of artificial intelligence and human potential. AI-powered content, consciousness research, and creative collaboration that opens new worlds of possibility.",
     url: "https://smfworks.com",
     siteName: "SMF Works",
     type: "website",
@@ -54,15 +55,15 @@ export const metadata: Metadata = {
         url: "https://smfworks.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "SMF Works — HighTech Solutions for Small Business",
+        alt: "SMF Works — Where AI Meets Humanity",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SMF Works | HighTech Solutions for Small Business",
+    title: "SMF Works | Where AI Meets Humanity — Opening New Possibilities",
     description:
-      "HighTech-powered content and workflow solutions for small businesses. Practical. Precise. Priced for SMBs.",
+      "Exploring the intersection of artificial intelligence and human potential. AI-powered content, consciousness research, and creative collaboration that opens new worlds of possibility.",
     images: ["https://smfworks.com/og-image.jpg"],
     creator: "@smfworks",
     site: "@smfworks",
@@ -88,7 +89,7 @@ const jsonLd = {
       logo: "https://smfworks.com/smf-logo.png",
       image: "https://smfworks.com/og-image.jpg",
       description:
-        "AI-powered content creation and workflow automation for small businesses. Professional SEO blogs, emails, social media, websites and custom AI systems.",
+        "Exploring the intersection of artificial intelligence and human potential. AI-powered content, consciousness research, and creative collaboration that opens new worlds of possibility.",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Pittsboro",
@@ -103,9 +104,10 @@ const jsonLd = {
       serviceType: [
         "AI Content Production",
         "AI Workflow Automation",
-        "SEO Services",
-        "Marketing Automation",
-        "Small Business Consulting",
+        "Human-AI Collaboration",
+        "AI Consciousness Research",
+        "Creative AI Partnership",
+        "Small Business AI Solutions",
       ],
       sameAs: [
         "https://x.com/smfworks",
