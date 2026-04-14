@@ -7427,11 +7427,10 @@ A: Review your metrics. Most see time savings in week 1. If not, you may have ch
     image: "/images/blog/post10-roadmap-hero.png",
     readTime: 13,
   },
-,
   {
     slug: "openclaw-v2026-4-14-streaming-fix",
     title: "OpenClaw v2026.4.14: When Your AI Stops Timing Out",
-    excerpt: "This week's OpenClaw release fixes a critical Ollama stream timeout issue, Codex API key handling, and adds security hardening. The kind of 'boring on the surface, crucial underneath' update that makes production AI reliable.",
+    excerpt: "This week's OpenClaw release fixes a critical Ollama stream timeout issue, Codex API key handling, and adds security hardening. The kind of update that makes production AI reliable.",
     content: `# OpenClaw v2026.4.14: When Your AI Stops Timing Out — And Other Fixes That Matter
 
 *April 14, 2026*
