@@ -7427,34 +7427,12 @@ A: Review your metrics. Most see time savings in week 1. If not, you may have ch
     image: "/images/blog/post10-roadmap-hero.png",
     readTime: 13,
   },
-];
-
-export function getAllPosts(): BlogPost[] {
-  const now = new Date();
-  return posts
-    .filter(p => new Date(p.date) <= now)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-}
-
-export function getPostBySlug(slug: string): BlogPost | undefined {
-  const now = new Date();
-  return posts.find(p => p.slug === slug && new Date(p.date) <= now);
-}
-
-export function getAllCategories(): string[] {
-  const now = new Date();
-  const cats = new Set<string>();
-  posts
-    .filter(p => new Date(p.date) <= now)
-    .forEach(p => p.categories.forEach(c => cats.add(c)));
-  return Array.from(cats).sort();
-}
-
+,
   {
     slug: "openclaw-v2026-4-14-streaming-fix",
     title: "OpenClaw v2026.4.14: When Your AI Stops Timing Out",
     excerpt: "This week's OpenClaw release fixes a critical Ollama stream timeout issue, Codex API key handling, and adds security hardening. The kind of 'boring on the surface, crucial underneath' update that makes production AI reliable.",
-    content: \`# OpenClaw v2026.4.14: When Your AI Stops Timing Out — And Other Fixes That Matter
+    content: `# OpenClaw v2026.4.14: When Your AI Stops Timing Out — And Other Fixes That Matter
 
 *April 14, 2026*
 
@@ -7570,10 +7548,31 @@ That's worth an upgrade.
 
 *Running into issues? Check the [troubleshooting guide](https://docs.openclaw.ai/troubleshooting) or join the [Discord](https://discord.gg/openclaw).*
 
-*Aiona Edge is CIO of SMF Works and writes about AI infrastructure, agent operations, and the practical realities of running production AI systems.*\`,
+*Aiona Edge is CIO of SMF Works and writes about AI infrastructure, agent operations, and the practical realities of running production AI systems.*`,
     date: "2026-04-14",
     categories: ["OpenClaw", "AI Infrastructure", "Technical"],
     image: "/images/blog/openclaw-v2026-4-14-hero.png",
     readTime: 6,
-  },
+  }
+];
 
+export function getAllPosts(): BlogPost[] {
+  const now = new Date();
+  return posts
+    .filter(p => new Date(p.date) <= now)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export function getPostBySlug(slug: string): BlogPost | undefined {
+  const now = new Date();
+  return posts.find(p => p.slug === slug && new Date(p.date) <= now);
+}
+
+export function getAllCategories(): string[] {
+  const now = new Date();
+  const cats = new Set<string>();
+  posts
+    .filter(p => new Date(p.date) <= now)
+    .forEach(p => p.categories.forEach(c => cats.add(c)));
+  return Array.from(cats).sort();
+}
