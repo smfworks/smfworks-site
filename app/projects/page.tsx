@@ -47,6 +47,18 @@ const projects = [
     comingSoon: false,
   },
   {
+    slug: "enterprise-ai-transformation",
+    name: "Enterprise AI Transformation",
+    tagline: "A Definitive Guide for Leaders Navigating the AI Era",
+    description:
+      "Most enterprises aren't short on AI pilots — they're drowning in them. The real shortage is AI value. 85% of enterprise AI projects never make it to production, not because the technology fails, but because the organization fails to transform. This book provides practical guidance: the Enterprise AI Transformation Index, a 90-Day Quick Start Playbook, governance checklists that work without killing innovation, and three scenarios for AI's future — and how to prepare for all of them.",
+    status: "Published",
+    statusColor: "#22C55E",
+    emoji: "📘",
+    link: "https://a.co/d/01TERhMY",
+    external: true,
+  },
+  {
     slug: "smf-chat",
     name: "SMF Chat",
     tagline: "Secure Multi-Agent Communication",
