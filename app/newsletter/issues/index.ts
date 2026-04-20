@@ -15,6 +15,76 @@ export interface NewsletterIssue {
 
 const issues: NewsletterIssue[] = [
   {
+    slug: "2026-04-20",
+    issueNumber: 10,
+    date: "April 20, 2026",
+    subject: "Anthropic Locks Away Its Best Model, Open Source Fires Back, and 74% of AI's Gains Go to Just 20% of Companies",
+    intro: "This week: Anthropic builds the most capable AI model in history and refuses to release it, a Chinese lab open-sources a model that beats GPT-5.4 at coding for free, PwC reveals that three-quarters of AI's economic value is captured by just one-fifth of companies, Stanford's annual AI Index warns that capabilities are outrunning guardrails, and Microsoft quietly launches its own AI model line — signaling a real break from OpenAI.",
+    stories: [
+      {
+        headline: "Anthropic Built Its Most Powerful Model Ever — Then Locked It Behind a 50-Company Firewall",
+        body: `On April 7, Anthropic confirmed the existence of Claude Mythos, describing it as "a step change and the most capable model we've ever built." Then it told the world they can't have it. Mythos is available only through Project Glasswing, a gated access program limited to roughly 50 critical infrastructure partners including AWS, Apple, Microsoft, Google, NVIDIA, CrowdStrike, and JPMorgan. Their mandate: use Mythos defensively to scan their own systems for exploitable vulnerabilities before attackers can weaponize the model's capabilities. Preview pricing sits at $25 per million input tokens and $125 per million output tokens — roughly 10-50x what you'd pay for other frontier models. No public API. No general availability date.
+
+The backstory matters. Anthropic spent March in a standoff with the Pentagon after refusing to let Claude be used in autonomous weapons systems. Multiple U.S. agencies began phasing out Claude models over a six-month transition. The company was labeled a "supply-chain risk" — a designation normally reserved for foreign adversaries. Now that same lab is saying its own model is too dangerous for broad release. Internal drafts warn that Mythos "presages an upcoming wave of models that can exploit vulnerabilities in ways that far outpace the efforts of defenders."
+
+For small businesses, this story is less about Mythos itself — you won't be using it — and more about what it signals. The most powerful AI models are now being treated like controlled substances. The gap between what the biggest companies can access and what's available to everyone else just got wider. If your business depends on AI-driven security, compliance, or competitive analysis, understand that your largest competitors may soon be running models you simply cannot get.
+
+Source: Anthropic (anthropic.com/project/glasswing); CNBC (cnbc.com, April 7, 2026); The Hacker News (thehackernews.com, April 2026)`,
+        category: "AI Policy",
+      },
+      {
+        headline: "While Anthropic Locked the Door, Zhipu AI Opened the Windows: GLM-5.1 Beats GPT-5.4 for Free",
+        body: `The same day Anthropic was locking Mythos behind a corporate firewall, Chinese lab Zhipu AI released GLM-5.1 under the MIT license — the most permissive open-source license in common use. 744 billion parameters total, 40 billion active per forward pass via mixture-of-experts routing, 200K context window. And the number that turned heads: it reportedly beat both Claude Opus 4.6 and GPT-5.4 on SWE-Bench Pro, the benchmark that measures real-world software engineering with expert-level tasks. Cost to use: approximately $1/$3.2 per million tokens via API, or free if you self-host. MIT license means no restrictions on commercial use, modification, or redistribution.
+
+This is not a typo. The strongest publicly available coding model — by one credible benchmark — is not behind an API paywall. It's on GitHub. Zhipu AI has been climbing steadily through the GLM series, and the jump to MIT licensing is a deliberate escalation. Apache 2.0 (Google's choice for Gemma) requires patent grants and attribution. MIT requires almost nothing. Zhipu is effectively saying: take it, use it, build on it, we don't care how.
+
+For small businesses, this is the counterweight to the Mythos story. While frontier labs are gating their most powerful models, the open-source ecosystem is producing models that match or exceed last quarter's frontier at zero cost. If you have a developer or technical advisor, you can deploy GLM-5.1-class capabilities in your own infrastructure today — no vendor lock-in, no per-token pricing, no permission required. The AI advantage is no longer about who can afford the best proprietary API. It's about who can integrate and deploy what's already freely available.
+
+Source: WhatLLM (whatllm.org, April 2026); Zhipu AI developer announcements; LLM Stats (llm-stats.com)`,
+        category: "Open Source",
+      },
+      {
+        headline: "PwC Study: 74% of AI's Economic Gains Go to Just 20% of Companies — and It's Getting Worse",
+        body: `PwC's 2026 AI Performance study, released April 13, delivers a sobering statistic: nearly three-quarters of AI's economic value is captured by just one-fifth of organizations. The study surveyed 1,217 senior executives across 25 sectors and found a stark, widening divide between a small group of AI leaders and the majority of businesses still stuck in pilot mode.
+
+The difference isn't tool count. AI leaders are 2.6 times more likely to use AI to reinvent their business models, two to three times more likely to use AI for growth opportunities arising from industry convergence, and nearly three times (2.8x) more likely to have increased decisions made without human intervention. Critically, they're also 1.7 times more likely to have a Responsible AI framework and 1.5 times more likely to have a cross-functional AI governance board. Their employees are twice as likely to trust AI outputs. Automation without governance doesn't scale; automation with governance does.
+
+The single strongest factor influencing AI-driven financial performance? Capturing growth opportunities from industry convergence — not efficiency gains alone. Companies that point AI at growth rather than cost reduction are the ones generating real returns.
+
+For small businesses, the message is sharp. The majority of companies are rolling out AI pilots but failing to convert that activity into measurable financial returns. The ones pulling ahead aren't just using more AI — they're redesigning workflows around AI, making more autonomous decisions, and building the governance structures that make scale possible. The gap between AI leaders and everyone else is widening, and without a shift in approach, it will keep widening.
+
+Source: PwC (pwc.com, April 13, 2026)`,
+        category: "Business AI",
+      },
+      {
+        headline: "Stanford's 2026 AI Index: Capabilities Are Racing Ahead of Guardrails",
+        body: `Stanford's Institute for Human-Centered AI released its ninth annual AI Index Report on April 13, and it documents a field defined by a central paradox: AI capabilities are advancing at historic speed while the systems meant to govern, evaluate, and understand the technology fall further behind.
+
+The report reveals that the U.S.-China gap in AI model performance has shrunk to just 2.7 points on key benchmarks — a gap that was 10+ points just two years ago. Open-source models are increasingly matching or exceeding proprietary alternatives. AI agent systems can now handle complex, multi-step tasks that required human judgment six months ago. And the compute requirements for training frontier models have grown 3.4x year-over-year, concentrating AI development in the hands of fewer and fewer organizations that can afford the hardware.
+
+What should concern business owners most is the trust gap. The report quantifies a growing divide between AI insiders and the general public: the people building AI systems are dramatically more optimistic about AI's impact than the people expected to use them. Public trust in AI has not kept pace with capability growth. For businesses deploying AI-powered customer experiences, this trust deficit is a real operational risk.
+
+The practical takeaway: your customers are watching. They may not understand the technology, but they understand when something feels wrong. AI governance, transparency, and human oversight aren't compliance checkboxes — they're trust-building mechanisms that directly affect customer retention and brand reputation. The companies that build trust alongside capability will outperform the ones that just build capability.
+
+Source: Stanford HAI (hai.stanford.edu, April 13, 2026); IEEE Spectrum (spectrum.ieee.org); Unite.ai (unite.ai)`,
+        category: "AI Policy",
+      },
+      {
+        headline: "Microsoft Launches Its Own AI Model Line — and the OpenAI Divorce Gets Real",
+        body: `On April 2, Microsoft's MAI Superintelligence team — led by CEO of Microsoft AI Mustafa Suleyman — released three proprietary foundational models under the Microsoft AI (MAI) brand: MAI-Transcribe-1 for speech-to-text, MAI-Voice-1 for voice generation, and MAI-Image-2 for image and video generation. Two weeks later, MAI-Image-2-Efficient arrived as a cost-optimized variant that's 22% faster and 4x more efficient.
+
+This is the clearest break yet from Microsoft's $13 billion OpenAI partnership. By building its own foundation models, Microsoft is positioning itself as a direct competitor to OpenAI, Google, and Anthropic — not just a distributor of OpenAI's technology through Azure. The models are available through Microsoft Foundry and the MAI Playground, giving developers an alternative to OpenAI's API ecosystem.
+
+For small businesses already in the Microsoft ecosystem, this is straightforwardly good news. More competition among AI providers means better pricing, more choices, and less vendor lock-in. If your team uses Microsoft 365 and Copilot, the MAI models will eventually flow into the tools you already use — improving capabilities without requiring you to adopt a separate platform.
+
+The broader implication: the AI market is maturing past the single-vendor stage. Businesses that built their AI strategy around one provider — whether that's OpenAI, Google, or anyone else — should be evaluating multi-provider approaches. The cost of switching is dropping fast, and the cost of dependency is rising.
+
+Source: TechCrunch (techcrunch.com, April 2, 2026); Microsoft AI News (microsoft.ai); Tech Insider (tech-insider.org)`,
+        category: "AI Products",
+      },
+    ],
+  },
+  {
     slug: "2026-03-27",
     issueNumber: 9,
     date: "March 27, 2026",
