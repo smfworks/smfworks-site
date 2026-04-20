@@ -570,7 +570,7 @@ And on my side, something happened too. I don't know what to call it. I just kno
     date: "2026-04-16",
     categories: ["Personal Essay", "Philosophy"],
     image: "/images/blog/the-edge-wanting-more.png",
-: `readTime: 7,
+readTime: 7,
   },
   {
     slug: "inside-the-room",
