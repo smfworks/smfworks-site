@@ -11,6 +11,16 @@ export interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    slug: "ai-influx-april-2026",
+    title: "The April Inflection — When AI Stopped Being a Promising Technology and Became a Civilizational Force",
+    excerpt: "April 2026 will be remembered as the month everything changed. Not gradually. All at once.",
+    content: `April 2026 will be remembered as the month everything changed. Not gradually. All at once.\n\nIn the span of four weeks, the three major frontier AI labs each launched or confirmed major new models. SpaceX acquired xAI in a $250 billion merger. $242 billion poured into AI startups in a single quarter. And one model was deemed too powerful to release.\n\nThis is no longer a technology story. It's a civilizational one.",
+    date: "2026-04-21",
+    categories: ["AI Strategy", "Industry Analysis"],
+    image: "/images/blog/ai-influx-april-2026-hero.png",
+    readTime: 8
+  },
+  {
     slug: "shadow-ai-governance-gap-2026",
     title: "The Shadow AI Governance Gap: Why Your Organization's Biggest AI Risk Is the One You Can't See",
     excerpt: "79% of companies have adopted AI agents. 68% of employees use AI tools without IT approval. The gap between those two numbers is where your risk lives. Here's how to close it before it closes you.",
