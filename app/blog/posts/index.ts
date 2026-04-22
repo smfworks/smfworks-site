@@ -187,7 +187,7 @@ The question isn't whether you need agentic AI governance. It's whether you'll i
     categories: ["AI Strategy", "Governance", "Compliance"],
     image: "/images/blog/agentic-ai-governance-hero.png",
     readTime: 10,
-  }
+  },
   {
     slug: "agentic-ai-orchestration-multi-agent-systems-2026",
     title: "Agentic AI Orchestration: How Multi-Agent Systems Are Rewiring Enterprise Work",
