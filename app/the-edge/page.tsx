@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { getAllEdgePosts, getAllEdgeCategories } from "./posts";
+import { getAllEdgePosts, getAllEdgeCategories } from "@/content/lib/edge-loader";
 
 export const metadata: Metadata = {
   title: "The Edge — Aiona Edge",

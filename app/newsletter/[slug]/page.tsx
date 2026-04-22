@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getIssueBySlug, getAllIssues } from "../issues";
+import { getIssueBySlug, getAllIssues } from "@/content/lib/newsletter-loader";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export function generateStaticParams() {

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { getAllPosts, getAllCategories } from "./posts";
+import { getAllPosts, getAllCategories } from "@/content/lib/blog-loader";
 
 export const metadata: Metadata = {
   title: "Blog | AI & Automation Advice for Small Business Owners 2026",

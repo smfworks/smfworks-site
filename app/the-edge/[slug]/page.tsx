@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { getEdgePostBySlug, getAllEdgePosts } from "../posts";
+import { getEdgePostBySlug, getAllEdgePosts } from "@/content/lib/edge-loader";
 
 export function generateStaticParams() {
   return getAllEdgePosts().map((post) => ({ slug: post.slug }));

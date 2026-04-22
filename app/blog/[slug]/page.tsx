@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Script from "next/script";
-import { getPostBySlug, getAllPosts } from "../posts";
+import { getPostBySlug, getAllPosts } from "@/content/lib/blog-loader";
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));

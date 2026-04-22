@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getAllIssues, getCurrentIssue } from "./issues";
+import { getAllIssues, getCurrentIssue } from "@/content/lib/newsletter-loader";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
