@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "design:lint": "npx @google/design.md lint DESIGN.md",
+    "design:export": "npx @google/design.md export --format tailwind DESIGN.md > design-export.tailwind.json && npx @google/design.md export --format dtcg DESIGN.md > design-export.dtcg.json",
+    "design:check": "npm run design:lint && npm run build"
   },
   "dependencies": {
     "jsonwebtoken": "^9.0.3",

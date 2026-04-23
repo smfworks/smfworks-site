@@ -1,0 +1,467 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+  "$description": "The SMF Works visual identity converges the blacksmith forge with synthetic intelligence. Deep navy evokes cooled steel at rest; ember amber recalls the heat of the hammer; brushed copper whispers of finished work held in hand.\n",
+  "color": {
+    "$type": "color",
+    "primary": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.039,
+          0.059,
+          0.122
+        ],
+        "hex": "#0a0f1f"
+      }
+    },
+    "forge-navy": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.039,
+          0.059,
+          0.122
+        ],
+        "hex": "#0a0f1f"
+      }
+    },
+    "forge-navy-deep": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0.122,
+          0.247
+        ],
+        "hex": "#001f3f"
+      }
+    },
+    "forge-card": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.075,
+          0.106,
+          0.18
+        ],
+        "hex": "#131b2e"
+      }
+    },
+    "forge-surface-alt": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.039,
+          0.086,
+          0.157
+        ],
+        "hex": "#0a1628"
+      }
+    },
+    "forge-surface-mid": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.118,
+          0.165,
+          0.271
+        ],
+        "hex": "#1e2a45"
+      }
+    },
+    "forge-border": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.118,
+          0.165,
+          0.271
+        ],
+        "hex": "#1e2a45"
+      }
+    },
+    "forge-ember": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.918,
+          0.345,
+          0.047
+        ],
+        "hex": "#ea580c"
+      }
+    },
+    "forge-ember-bright": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.976,
+          0.451,
+          0.086
+        ],
+        "hex": "#f97316"
+      }
+    },
+    "forge-ember-deep": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.898,
+          0.373,
+          0
+        ],
+        "hex": "#e55f00"
+      }
+    },
+    "forge-ember-soft": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.831,
+          0.647,
+          0.455
+        ],
+        "hex": "#d4a574"
+      }
+    },
+    "data-cyan": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0.831,
+          1
+        ],
+        "hex": "#00d4ff"
+      }
+    },
+    "data-cyan-soft": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0.722,
+          0.859
+        ],
+        "hex": "#00b8db"
+      }
+    },
+    "data-blue": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0.482,
+          1
+        ],
+        "hex": "#007bff"
+      }
+    },
+    "data-blue-deep": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0.4,
+          0.8
+        ],
+        "hex": "#0066cc"
+      }
+    },
+    "edge-purple": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.576,
+          0.2,
+          0.918
+        ],
+        "hex": "#9333ea"
+      }
+    },
+    "edge-purple-muted": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.655,
+          0.545,
+          0.859
+        ],
+        "hex": "#a78bdb"
+      }
+    },
+    "edge-surface": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.051,
+          0.043,
+          0.102
+        ],
+        "hex": "#0d0b1a"
+      }
+    },
+    "edge-border": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.176,
+          0.106,
+          0.306
+        ],
+        "hex": "#2d1b4e"
+      }
+    },
+    "edge-text": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.886,
+          0.851,
+          0.953
+        ],
+        "hex": "#e2d9f3"
+      }
+    },
+    "text-primary": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.886,
+          0.91,
+          0.941
+        ],
+        "hex": "#e2e8f0"
+      }
+    },
+    "text-muted": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.58,
+          0.639,
+          0.722
+        ],
+        "hex": "#94a3b8"
+      }
+    },
+    "text-inverse": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.039,
+          0.059,
+          0.122
+        ],
+        "hex": "#0a0f1f"
+      }
+    }
+  },
+  "spacing": {
+    "$type": "dimension",
+    "xs": {
+      "$value": {
+        "value": 4,
+        "unit": "px"
+      }
+    },
+    "sm": {
+      "$value": {
+        "value": 8,
+        "unit": "px"
+      }
+    },
+    "md": {
+      "$value": {
+        "value": 16,
+        "unit": "px"
+      }
+    },
+    "lg": {
+      "$value": {
+        "value": 24,
+        "unit": "px"
+      }
+    },
+    "xl": {
+      "$value": {
+        "value": 32,
+        "unit": "px"
+      }
+    },
+    "2xl": {
+      "$value": {
+        "value": 48,
+        "unit": "px"
+      }
+    },
+    "3xl": {
+      "$value": {
+        "value": 64,
+        "unit": "px"
+      }
+    },
+    "4xl": {
+      "$value": {
+        "value": 96,
+        "unit": "px"
+      }
+    },
+    "5xl": {
+      "$value": {
+        "value": 128,
+        "unit": "px"
+      }
+    }
+  },
+  "rounded": {
+    "$type": "dimension",
+    "sm": {
+      "$value": {
+        "value": 4,
+        "unit": "px"
+      }
+    },
+    "md": {
+      "$value": {
+        "value": 8,
+        "unit": "px"
+      }
+    },
+    "lg": {
+      "$value": {
+        "value": 12,
+        "unit": "px"
+      }
+    },
+    "xl": {
+      "$value": {
+        "value": 16,
+        "unit": "px"
+      }
+    },
+    "full": {
+      "$value": {
+        "value": 9999,
+        "unit": "px"
+      }
+    }
+  },
+  "typography": {
+    "display": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": {
+          "value": 4.5,
+          "unit": "rem"
+        },
+        "fontWeight": 800,
+        "letterSpacing": {
+          "value": -0.02,
+          "unit": "em"
+        }
+      }
+    },
+    "h1": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": {
+          "value": 3,
+          "unit": "rem"
+        },
+        "fontWeight": 700,
+        "letterSpacing": {
+          "value": -0.02,
+          "unit": "em"
+        }
+      }
+    },
+    "h2": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": {
+          "value": 2.25,
+          "unit": "rem"
+        },
+        "fontWeight": 700,
+        "letterSpacing": {
+          "value": -0.01,
+          "unit": "em"
+        }
+      }
+    },
+    "h3": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": {
+          "value": 1.5,
+          "unit": "rem"
+        },
+        "fontWeight": 600
+      }
+    },
+    "body-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": {
+          "value": 1.125,
+          "unit": "rem"
+        },
+        "fontWeight": 400
+      }
+    },
+    "body-md": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": {
+          "value": 1,
+          "unit": "rem"
+        },
+        "fontWeight": 400
+      }
+    },
+    "body-sm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": {
+          "value": 0.875,
+          "unit": "rem"
+        },
+        "fontWeight": 400
+      }
+    },
+    "label": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontSize": {
+          "value": 0.75,
+          "unit": "rem"
+        },
+        "fontWeight": 500,
+        "letterSpacing": {
+          "value": 0.08,
+          "unit": "em"
+        }
+      }
+    },
+    "code": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Space Grotesk",
+        "fontSize": {
+          "value": 0.875,
+          "unit": "rem"
+        },
+        "fontWeight": 400
+      }
+    }
+  }
+}

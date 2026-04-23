@@ -2,7 +2,46 @@
 
 @import "tailwindcss";
 
+/* ────────────────────────────────────────────
+   DESIGN.md Token Registry — Forge Aesthetic
+   Source of truth: /DESIGN.md (Google design.md spec)
+   ──────────────────────────────────────────── */
+
 @theme {
+  /* Forge foundation */
+  --color-primary: #0A0F1F;
+  --color-forge-navy: #0A0F1F;
+  --color-forge-navy-deep: #001F3F;
+  --color-forge-card: #131B2E;
+  --color-forge-surface-alt: #0A1628;
+  --color-forge-surface-mid: #1e2a45;
+  --color-forge-border: #1e2a45;
+
+  /* Forge fire */
+  --color-forge-ember: #ea580c;
+  --color-forge-ember-bright: #f97316;
+  --color-forge-ember-deep: #e55f00;
+  --color-forge-ember-soft: #d4a574;
+
+  /* Data / intelligence */
+  --color-data-cyan: #00D4FF;
+  --color-data-cyan-soft: #00B8DB;
+  --color-data-blue: #007BFF;
+  --color-data-blue-deep: #0066CC;
+
+  /* Edge — Aiona Edge brand exception */
+  --color-edge-purple: #9333EA;
+  --color-edge-purple-muted: #A78BDB;
+  --color-edge-surface: #0D0B1A;
+  --color-edge-border: #2D1B4E;
+  --color-edge-text: #E2D9F3;
+
+  /* Neutral — text */
+  --color-text-primary: #E2E8F0;
+  --color-text-muted: #94A3B8;
+  --color-text-inverse: #0A0F1F;
+
+  /* Aliases — backward compat with legacy class names */
   --color-navy: #0A0F1F;
   --color-navy-deep: #001F3F;
   --color-card: #131B2E;
@@ -19,7 +58,7 @@ html {
 }
 
 body {
-  background-color: #0A0F1F;
-  color: #E2E8F0;
+  background-color: var(--color-forge-navy);
+  color: var(--color-text-primary);
   font-family: 'Inter', 'Space Grotesk', sans-serif;
 }

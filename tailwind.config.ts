@@ -1,5 +1,15 @@
 import type { Config } from "tailwindcss";
 
+/**
+ * Tailwind configuration — SMF Works Forge aesthetic.
+ * Source of truth for design tokens: /DESIGN.md (Google design.md spec)
+ * Token registry lives in app/globals.css via @theme.
+ *
+ * This file exists for content-path resolution and any plugin
+ * requirements. Colors/typography/spacing are authored in DESIGN.md
+ * and exported to CSS.
+ */
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +18,8 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // Legacy aliases for incremental migration.
+      // Prefer DESIGN.md token names (forge-ember, data-cyan, etc.)
       colors: {
         charcoal: "#1E1E1E",
         amber: "#C87941",
