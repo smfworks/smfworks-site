@@ -35,23 +35,23 @@ export default function EmberCanvas() {
     function resetParticle(p: EmberParticle, initial = false) {
       p.x = Math.random() * w;
       p.y = initial ? h + Math.random() * 400 : h + Math.random() * 300;
-      p.size = Math.random() * 2.5 + 0.8;
-      p.speed = Math.random() * 1.0 + 0.3;
-      p.baseOpacity = Math.random() * 0.6 + 0.2;
+      p.size = Math.random() * 3.5 + 1.2;
+      p.speed = Math.random() * 1.2 + 0.4;
+      p.baseOpacity = Math.random() * 0.7 + 0.3;
       p.wobble = Math.random() * Math.PI * 2;
       p.wobbleSpeed = Math.random() * 0.03 + 0.01;
     }
 
-    for (let i = 0; i < 180; i++) {
+    for (let i = 0; i < 220; i++) {
       const p: EmberParticle = { x: 0, y: 0, size: 0, speed: 0, baseOpacity: 0, wobble: 0, wobbleSpeed: 0 };
       resetParticle(p, true);
       particles.push(p);
     }
 
     function getOpacity(p: EmberParticle) {
-      if (p.y >= h) return p.baseOpacity;
-      const fadeProgress = (h - p.y) / (h / 2);
-      return Math.max(0, p.baseOpacity * (1 - fadeProgress));
+      // Fully visible in bottom 75%, fade in top 25%
+      if (p.y > h * 0.25) return p.baseOpacity;
+      return Math.max(0, p.baseOpacity * (p.y / (h * 0.25)));
     }
 
     let running = true;

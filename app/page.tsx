@@ -19,7 +19,7 @@ export default function Home() {
       <EmberCanvas />
 
       {/* HERO */}
-      <section className="relative z-10 min-h-[90vh] flex items-center justify-center py-20 md:py-28 px-6 bg-[#001F3F]">
+      <section className="relative z-10 min-h-[90vh] flex items-center justify-center py-20 md:py-28 px-6 bg-[#001F3F]/75">
         <div className="max-w-4xl mx-auto text-center">
           {/* PROMINENT LOGO */}
           <div className="mb-8 flex justify-center">
@@ -84,7 +84,7 @@ export default function Home() {
       </section>
 
       {/* WHAT WE DO */}
-      <section className="relative z-10 py-20 px-6 bg-[#001F3F]">
+      <section className="relative z-10 py-20 px-6 bg-[#001F3F]/75">
         <div className="max-w-5xl mx-auto">
           <p className="text-[#ea580c] text-sm font-mono uppercase tracking-[0.1em] mb-4 text-center">Our Work</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#E2E8F0] text-center">
@@ -158,7 +158,7 @@ export default function Home() {
       </section>
 
       {/* NEWSLETTER */}
-      <section id="newsletter" className="relative z-10 py-20 px-6 bg-[#001F3F]">
+      <section id="newsletter" className="relative z-10 py-20 px-6 bg-[#001F3F]/75">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-[#ea580c] text-sm font-semibold uppercase tracking-widest mb-3">
             Free Weekly Newsletter
