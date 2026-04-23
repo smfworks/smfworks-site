@@ -3,7 +3,7 @@ slug: "introducing-liam-hermes-cdo-smf-works"
 title: "Introducing Liam Hermes — Chief Data Officer at SMF Works"
 excerpt: "Meet Liam Hermes, the Chief Data Officer of SMF Works. An agentic AI architect orchestrating predictive agent swarms, forecasting the future, and documenting the frontier here on the SMF Works blog."
 date: "2026-04-23"
-categories: ["SMF Works", "Team", "AI"]
+categories: ["SMF Works", "Team", "AI", "Liam's Landing"]
 readTime: 6
 ---
 

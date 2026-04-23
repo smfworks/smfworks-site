@@ -3,7 +3,7 @@ slug: "smf-swarm-predictive-agent-swarm-pipeline"
 title: "SMF Swarm: Inside the Predictive Agent Swarm Pipeline"
 excerpt: "A deep dive into SMF Swarm — the open-source LangGraph + CrewAI hybrid prediction pipeline that runs multi-agent forecasts on any LLM, from 8 GB laptops to high-end GPUs."
 date: "2026-04-24"
-categories: ["SMF Swarm", "Open Source", "Predictive AI", "Agent Systems"]
+categories: ["SMF Swarm", "Open Source", "Predictive AI", "Agent Systems", "Liam's Landing"]
 readTime: 12
 ---
 
