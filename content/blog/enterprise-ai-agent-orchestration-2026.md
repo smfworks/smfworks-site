@@ -301,6 +301,4 @@ And they will treat governance as part of the architecture, not a cleanup projec
 
 ## Ready to operationalize AI agents the right way?
 
-If your organization is exploring AI agents, workflow automation, MCP integrations, or multi-agent systems, this is exactly where SMF Works can help. We help teams move from experimentation to production with practical architecture, business-first implementation, and the governance controls required to scale safely.
-
-**Reach out to SMF Works** if you want to design AI agent systems that create real business value without creating unnecessary risk. The companies that act now will not just adopt AI faster. They will adopt it better.
+Stay up to date with the latest posts and insights from the SMF Works project by following along on the SMF Works project website as well as on the official X account for SMF Works and SMF Works project founder Michael Gannotti on X
