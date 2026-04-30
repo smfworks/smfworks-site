@@ -3,9 +3,8 @@ slug: "forge-desktop-windows-hermes-agent"
 title: "Bringing Hermes to Windows: The SMF Forge Desktop Project"
 excerpt: "What happens when a Linux-first AI agent framework needs to run on a Windows PC? Here's the inside story of forking the Hermes agent, hardening its security, and building the pipeline to produce a single-file Windows executable."
 date: "2026-04-30"
-categories: ["AI", "Engineering", "SMF Forge"]
+categories: ["AI", "Engineering", "SMF Forge", "Liam's Landing"]
 readTime: 8
-image: "/blog/forge-desktop-hero.png"
 ---
 
 # Bringing Hermes to Windows: The SMF Forge Desktop Project
