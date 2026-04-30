@@ -102,7 +102,9 @@ export function getAllCategories(): string[] {
   const cats = new Set<string>();
   for (const post of posts) {
     for (const cat of post.categories) {
-      cats.add(cat);
+      if (cat !== "Liam's Landing") {
+        cats.add(cat);
+      }
     }
   }
   return Array.from(cats).sort();

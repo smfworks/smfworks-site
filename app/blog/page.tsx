@@ -22,9 +22,9 @@ export default function BlogPage({
     ? searchParams.category 
     : null;
   
-  const filteredPosts = selectedCategory
+  const displayPosts = selectedCategory
     ? posts.filter(post => post.categories.includes(selectedCategory))
-    : posts;
+    : posts.filter(post => !post.categories.includes("Liam's Landing"));
 
   return (
     <>
@@ -50,7 +50,7 @@ export default function BlogPage({
             
             {/* MAIN CONTENT - Blog Posts */}
             <div className="flex-1">
-              {filteredPosts.length === 0 ? (
+              {displayPosts.length === 0 ? (
                 <div className="text-center py-20">
                   <p className="text-[#94A3B8]">No posts found in this category.</p>
                   <Link href="/blog" className="text-[#00D4FF] hover:underline mt-4 inline-block">
@@ -59,7 +59,7 @@ export default function BlogPage({
                 </div>
               ) : (
                 <div className="space-y-8">
-                  {filteredPosts.map((post) => (
+                  {displayPosts.map((post) => (
                     <article 
                       key={post.slug}
                       className="bg-[#131B2E]/60 backdrop-blur-sm rounded-xl border border-[#1e2a45] overflow-hidden hover:border-[#00D4FF]/40 transition-all group"
