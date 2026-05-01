@@ -190,9 +190,9 @@ export default function ContactPage() {
               <h3 className="font-bold text-lg mb-3">What to expect</h3>
               <ul className="space-y-3 text-sm text-[#94A3B8]">
                 {[
-                  "Personal response within 24 hours",
-                  "No sales pressure — just a real conversation",
-                  "Honest assessment of where AI can help you",
+                  "Personal response within 48 hours",
+                  "Let's explore together — partner and build together",
+                  "Have an idea — let's talk",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <span className="text-[#00D4FF] mt-0.5">✓</span>
