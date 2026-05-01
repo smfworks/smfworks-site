@@ -151,7 +151,7 @@ export default function Home() {
               Meet the Team
             </p>
             <h2 className="text-3xl font-bold mb-5 text-[#E2E8F0]">
-              Michael Gannotti &amp; Aiona Edge
+              The SMF Works Project Members
             </h2>
             <p className="text-[#94A3B8] leading-relaxed mb-6">
               SMF Works is the creative partnership between Michael Gannotti — 30-year tech
