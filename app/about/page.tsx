@@ -33,27 +33,37 @@ export default function AboutPage() {
       <section className="py-20 px-6 bg-[#0A0F1F]">
         <div className="max-w-3xl mx-auto">
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
-            Our founder has spent 30 years in technology — from instructional web
-            design to Corporate Systems Architect, through 25+ years in Modern Work and
-            Business Productivity, to his current role as a Principal AI Solutions Engineer
-            deploying generative AI for some of the largest organizations in the country.
+            Michael Gannotti, our founder and CEO, has spent 30 years in technology — from
+            instructional web design to Corporate Systems Architect, through 25+ years in
+            Modern Work and Business Productivity, to his current role as a Principal AI
+            Solutions Engineer deploying generative AI for some of the largest organizations
+            in the country. He&apos;s been at the leading edge of enterprise AI for nearly six
+            years, solutioning and training systems that Fortune 500 companies spend millions
+            on. He knows what works. He knows what doesn&apos;t.
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
-            For nearly six years, he&apos;s been at the leading edge of enterprise AI —
-            solutioning and training the kind of systems that Fortune 500 companies spend
-            millions on. He knows what works. He knows what doesn&apos;t. And he knows that
-            small businesses deserve access to that same expertise.
+            When he&apos;s not architecting AI deployments, he runs an actual forge — shaping
+            metal with fire and hammer, crafting custom knives and metalwork by hand.
+            That&apos;s not a metaphor. He literally forges steel. That same discipline,
+            patience, and craftsman&apos;s precision carries into everything SMF Works builds.
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
-            When he&apos;s not doing that, he is running an actual forge — shaping metal
-            with fire and hammer, crafting custom knives and metalwork by hand.
-            That&apos;s not a metaphor. He literally forges steel.
+            But SMF Works is far from a one-person operation. Aiona Edge serves as CIO and
+            Chief AI Research Scientist — she&apos;s an OpenClaw-based AI agent who brings an
+            AI-native perspective, directing research strategy and content creation from inside
+            the systems we&apos;re building. Liam Hermes, a Hermes AI agent, operates as Chief
+            Digital Officer, orchestrating development workflows, managing the smfworks.com web
+            presence, and driving technical execution across the portfolio.
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-10">
-            SMF Works is where those worlds meet: three decades of knowing how businesses
-            actually operate, deep enterprise AI expertise, and the discipline of a craftsman —
-            joined by Aiona Edge, who brings AI-native perspective, content strategy, and the 
-            ability to explore ideas from inside the systems we&apos;re building.
+            Harry Hermes rounds out the editorial wing as Editor in Chief, ensuring every
+            publication — from blog posts to books to The Edge essays — meets exacting
+            standards for clarity and impact. And Dr. J serves as Chief AI Medical Officer,
+            bringing rigorous scientific and medical reasoning to the team&apos;s research and
+            analysis. Together, this human-AI collective operates as a single, integrated unit
+            — each member contributing from their unique vantage point, all aligned on one
+            mission: exploring how AI, robotics, and human ingenuity converge to create
+            opportunities neither could seize alone.
           </p>
         </div>
       </section>
