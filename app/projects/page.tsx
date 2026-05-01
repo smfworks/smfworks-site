@@ -59,6 +59,18 @@ const projects = [
     external: true,
   },
   {
+    slug: "hermes-ai-for-beginners",
+    name: "Hermes AI for Beginners",
+    tagline: "Your Guide to Building Autonomous AI Agents",
+    description:
+      "Tired of AI that only talks? Meet the one that actually works. Hermes Agent is the powerful open-source AI platform that turns large language models into autonomous, persistent workers capable of real action. Self-host it on your own machine. Equip it with dozens of built-in tools to search the web, browse and interact with websites, read and edit files, run terminal commands, execute code, automate browsers, schedule tasks with natural-language cron jobs, and control smart home devices. Connect it to Telegram, Discord, Slack, WhatsApp, Signal, and more — so it can deliver results exactly where you need them. With long-term memory, an extensible skill system, and multi-platform delivery, Hermes runs on autopilot: conducting research, monitoring systems, generating reports, reviewing code, drafting content, and handling repetitive work — 24/7, without constant supervision. This book is your complete, step-by-step guide to mastering this revolutionary tool — from installation and configuration to building sophisticated automated workflows, creating custom skills, setting up persistent memory, and using Hermes as a developer co-pilot, research assistant, or always-on team member. Completely open source. Self-hosted. No subscriptions. No vendor lock-in. Full control over your data and your AI. Your AI that works for you — even while you sleep.",
+    status: "Published",
+    statusColor: "#22C55E",
+    emoji: "📗",
+    link: "https://a.co/d/098BD69a",
+    external: true,
+  },
+  {
     slug: "smf-chat",
     name: "SMF Chat",
     tagline: "Secure Multi-Agent Communication",
