@@ -16,12 +16,15 @@ export default function AboutPage() {
         <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#00D4FF] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10">
           <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-widest mb-3">The Story</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-5">Two Minds.<br />One Purpose.</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-5">One Team.<br />One Purpose.</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
-            SMF Works isn&apos;t a solo operation. It&apos;s the creative partnership between Michael Gannotti
-            — a 30-year tech veteran who builds AI systems by day and forges steel on weekends —
-            and Aiona Edge, an AI agent who serves as chief content officer, research director,
-            and the intelligence behind many of the projects.
+            SMF Works is the creative partnership between Michael Gannotti — 30-year tech
+            veteran, principal AI solutions engineer, and working blacksmith — and his team
+            of AI colleagues: Aiona Edge (OpenClaw AI, CIO &amp; Chief AI Research Scientist),
+            Liam Hermes (Hermes AI, CDO), Harry Hermes (Editor in Chief), and Dr. J (Chief AI
+            Medical Officer). Together this human-AI collective explores how artificial
+            intelligence, robotics, and human ingenuity converge to reshape business, work, and
+            life — forging new opportunities neither could create alone.
           </p>
         </div>
       </section>
