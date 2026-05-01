@@ -61,7 +61,7 @@ export default function Home() {
               href="/contact"
               className="bg-[#ea580c] text-white px-8 py-3.5 rounded-lg font-semibold text-center hover:bg-[#f97316] transition-all shadow-lg shadow-[#ea580c]/25 hover:shadow-[#ea580c]/40"
             >
-              Get Started
+              Contact Us
             </Link>
             <Link
               href="/projects"
@@ -85,8 +85,8 @@ export default function Home() {
             <div className="text-sm text-[#94A3B8] mt-1">Years in Enterprise AI & GenAI</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-[#ea580c]">SMB</div>
-            <div className="text-sm text-[#94A3B8] mt-1">Focused. Priced Right. Done Right.</div>
+            <div className="text-3xl font-bold text-[#ea580c]">Research</div>
+            <div className="text-sm text-[#94A3B8] mt-1">Cutting Edge AI Orchestration</div>
           </div>
         </div>
       </section>
