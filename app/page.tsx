@@ -43,9 +43,17 @@ export default function Home() {
           </h1>
 
           <p className="text-lg md:text-xl text-[#94A3B8] max-w-2xl mx-auto mb-10 leading-relaxed">
-            We explore how AI transforms business operations, work life, and personal life through
-            innovative projects. From wisdomForge — our AI-powered educational platform — to
-            groundbreaking books on autonomous agents and enterprise strategy.
+            We explore the convergence of artificial intelligence, AI-enabled robotics, and human
+            ingenuity — and what happens when these forces work together harmoniously rather than
+            in opposition. Our work spans the full spectrum of this transformation: from
+            WisdomForge, our adaptive AI-powered educational platform that reimagines how people
+            learn, to original research and books on autonomous agent architectures, predictive
+            intelligence pipelines, and enterprise AI strategy. We believe the future isn&apos;t
+            about machines replacing people — it&apos;s about forging new partnerships between
+            humans and intelligent systems that unlock opportunities neither could create alone.
+            Whether streamlining business operations, reshaping how we work, or enriching daily
+            life, every SMF Works project is built on the conviction that AI&apos;s greatest
+            potential lies in amplifying human capability, not diminishing it.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
