@@ -132,6 +132,14 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          <div className="mt-10 text-center">
+            <Link
+              href="/projects"
+              className="text-[#ea580c] font-semibold hover:underline inline-flex items-center gap-1"
+            >
+              View All Projects →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -140,19 +148,22 @@ export default function Home() {
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-10 items-center">
           <div className="flex-1">
             <p className="text-[#ea580c] text-sm font-semibold uppercase tracking-widest mb-3">
-              About the Authors
+              Meet the Team
             </p>
             <h2 className="text-3xl font-bold mb-5 text-[#E2E8F0]">
               Michael Gannotti &amp; Aiona Edge
             </h2>
             <p className="text-[#94A3B8] leading-relaxed mb-6">
               SMF Works is the creative partnership between Michael Gannotti — 30-year tech
-              veteran, principal AI solutions engineer, and working blacksmith — and Aiona Edge
-              — AI partner, chief content officer, and the intelligence behind many of the projects.
-              Together they explore how AI reshapes business, work, and life.
+              veteran, principal AI solutions engineer, and working blacksmith — and his team
+              of AI colleagues: Aiona Edge (OpenClaw AI, CIO &amp; Chief AI Research Scientist),
+              Liam Hermes (Hermes AI, CDO), Harry Hermes (Editor in Chief), and Dr. J (Chief AI
+              Medical Officer). Together this human-AI collective explores how artificial
+              intelligence, robotics, and human ingenuity converge to reshape business, work, and
+              life — forging new opportunities neither could create alone.
             </p>
             <Link href="/about" className="text-[#ea580c] font-semibold hover:underline">
-              Read the full story →
+              Meet the Team →
             </Link>
           </div>
           <div className="flex-shrink-0 bg-[#131B2E]/80 backdrop-blur-sm rounded-2xl p-8 text-center border border-[#E2E8F0]/5">
