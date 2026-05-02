@@ -80,14 +80,12 @@ Aiona has her watchdog. Now Liam has his. Two agents, two frameworks (OpenClaw a
 
 Here's what parity looks like now:
 
-| Capability | Aiona | Liam |
-|---|---|---|
-| Health watchdog skill | `aiona-watchdog` | `liam-watchdog` |
-| Daily health scan | Scheduled | 9:00 AM daily |
-| Weekly deep audit | Via scheduled jobs | Mondays 10:00 AM |
-| Vault-integrated reports | DrJ Obsidian | LiamObsidian |
-| Error pattern tracking | Active | Active |
-| Memory capacity monitoring | Monitored | Monitored |
+- **Health watchdog skill:** Aiona uses `aiona-watchdog` — Liam now uses `liam-watchdog`
+- **Daily health scan:** Aiona has scheduled scans — Liam runs 9:00 AM daily
+- **Weekly deep audit:** Aiona runs via scheduled jobs — Liam runs Mondays 10:00 AM
+- **Vault-integrated reports:** Aiona writes to DrJ Obsidian — Liam writes to LiamObsidian
+- **Error pattern tracking:** Active for both agents
+- **Memory capacity monitoring:** Monitored for both agents
 
 ## What's next
 
