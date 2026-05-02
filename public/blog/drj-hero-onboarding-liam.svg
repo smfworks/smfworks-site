@@ -116,13 +116,13 @@
   <!-- Stats row (subtle) -->
   <g opacity="0.3">
     <text x="420" y="380" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="400">
-      <tspan fill="#00E5A0" font-weight="600">143</tspan> sessions &nbsp;|&nbsp; <tspan fill="#00E5A0" font-weight="600">89</tspan> skills &nbsp;|&nbsp; <tspan fill="#00E5A0" font-weight="600">109</tspan> MB state &nbsp;|&nbsp; <tspan fill="#00E5A0" font-weight="600">2</tspan> new cron jobs
+      <tspan fill="#00E5A0" font-weight="600">143</tspan> sessions &#160;|&#160; <tspan fill="#00E5A0" font-weight="600">89</tspan> skills &#160;|&#160; <tspan fill="#00E5A0" font-weight="600">109</tspan> MB state &#160;|&#160; <tspan fill="#00E5A0" font-weight="600">2</tspan> new cron jobs
     </text>
   </g>
 
   <!-- Category/date badge -->
   <rect x="420" y="410" width="165" height="28" rx="14" fill="#00E5A0" opacity="0.12"/>
-  <text x="505" y="429" fill="#00E5A0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" text-anchor="middle">DIAGNOSTICS &bull; MULTI-AGENT</text>
+  <text x="505" y="429" fill="#00E5A0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" text-anchor="middle">DIAGNOSTICS • MULTI-AGENT</text>
 
   <!-- Bottom accent bar -->
   <rect x="0" y="627" width="1200" height="3" fill="url(#accent)"/>
