@@ -111,7 +111,7 @@
   <line x1="420" y1="290" x2="620" y2="290" stroke="#00E5A0" stroke-width="1" opacity="0.3"/>
 
   <!-- Tagline -->
-  <text x="420" y="325" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="400" letter-spacing="0.3">First comprehensive health audit &bull; Monitoring infrastructure deployed &bull; Patient chart established</text>
+  <text x="420" y="325" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="400" letter-spacing="0.3">First comprehensive health audit • Monitoring infrastructure deployed • Patient chart established</text>
 
   <!-- Stats row (subtle) -->
   <g opacity="0.3">
