@@ -90,6 +90,13 @@ export default function Nav() {
                   >
                     The Signal
                   </Link>
+                  <Link
+                    href="/the-ledger"
+                    onClick={() => setBlogsOpen(false)}
+                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#10B981] font-semibold hover:text-[#34D399]"
+                  >
+                    The Ledger
+                  </Link>
                 </div>
               </>
             )}
@@ -162,8 +169,19 @@ export default function Nav() {
                 <Link href="/drj" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="hover:text-[#00E5A0] transition-colors">
                   Dr J
                 </Link>
-                <Link href="/the-signal" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#10B981] font-semibold hover:text-[#34D399]">
+                <Link
+                  href="/the-signal"
+                  onClick={() => { setOpen(false); setBlogsOpen(false); }}
+                  className="transition-colors text-[#10B981] font-semibold hover:text-[#34D399]"
+                >
                   The Signal
+                </Link>
+                <Link
+                  href="/the-ledger"
+                  onClick={() => { setOpen(false); setBlogsOpen(false); }}
+                  className="transition-colors text-[#10B981] font-semibold hover:text-[#34D399]"
+                >
+                  The Ledger
                 </Link>
               </div>
             )}
