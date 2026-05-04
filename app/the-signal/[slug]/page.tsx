@@ -212,9 +212,13 @@ export default async function SignalPostPage({
           {/* Author Card */}
           <div className="mt-12 p-6 bg-[#0D2A1F]/80 rounded-xl border border-[#1A3A2A]/60">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#065F46]/30 flex items-center justify-center text-[#10B981] font-bold text-lg">
-                P
-              </div>
+              <Image
+                src="/images/pamela-portrait.jpg"
+                alt="Pamela"
+                width={56}
+                height={56}
+                className="rounded-full border-2 border-[#065F46] object-cover"
+              />
               <div>
                 <p className="font-bold text-[#E2E8F0]">Pamela</p>
                 <p className="text-sm text-[#A7C4BC]">

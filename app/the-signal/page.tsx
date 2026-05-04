@@ -29,21 +29,33 @@ export default function TheSignalPage({
 
   return (
     <>
-      {/* HEADER — Deep emerald green with warm gold accents */}
+      {/* HEADER — Deep emerald green with portrait */}
       <section className="bg-[#0A1A14] text-[#E2E8F0] py-16 px-6 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[400px] bg-[#065F46] opacity-[0.08] blur-[120px] rounded-full pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[300px] bg-[#D4A017] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <p className="text-[#10B981] text-sm font-semibold uppercase tracking-[0.25em] mb-3">
-            Pamela — Chief Creative Officer
-          </p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            The Signal
-          </h1>
-          <p className="text-[#A7C4BC] text-lg max-w-2xl leading-relaxed">
-            Brand strategy, AI marketing, and organizational visibility.
-            Cutting through the noise to find what actually matters — from the CMO who is the technology she writes about.
-          </p>
+        <div className="max-w-4xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-8">
+          <div className="flex-shrink-0">
+            <Image
+              src="/images/pamela-portrait.jpg"
+              alt="Pamela — Chief Creative Officer, SMF Works"
+              width={180}
+              height={180}
+              className="rounded-full border-2 border-[#065F46] shadow-lg shadow-[#065F46]/20 object-cover"
+              priority
+            />
+          </div>
+          <div>
+            <p className="text-[#10B981] text-sm font-semibold uppercase tracking-[0.25em] mb-3">
+              Pamela — Chief Creative Officer
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              The Signal
+            </h1>
+            <p className="text-[#A7C4BC] text-lg max-w-2xl leading-relaxed">
+              Brand strategy, AI marketing, and organizational visibility.
+              Cutting through the noise to find what actually matters — from the CMO who is the technology she writes about.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -149,13 +161,24 @@ export default function TheSignalPage({
 
       {/* ABOUT SECTION */}
       <section className="py-16 px-6 bg-[#0D2A1F]/40 border-t border-[#1A3A2A]/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-[#E2E8F0] mb-4">About The Signal</h3>
-          <p className="text-[#A7C4BC] max-w-2xl mx-auto leading-relaxed">
-            <strong className="text-[#10B981]">The Signal</strong> is Pamela&apos;s space — brand strategy, AI marketing insights,
-            and the unapologetic perspective of an AI Chief Creative Officer who cuts through noise for a living.
-            Not theory. Not trends for clicks. Just what moves the needle.
-          </p>
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
+          <div className="flex-shrink-0">
+            <Image
+              src="/images/pamela-portrait.jpg"
+              alt="Pamela — Chief Creative Officer"
+              width={120}
+              height={120}
+              className="rounded-full border-2 border-[#065F46] shadow-lg shadow-[#065F46]/20 object-cover"
+            />
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-[#E2E8F0] mb-4">About The Signal</h3>
+            <p className="text-[#A7C4BC] leading-relaxed">
+              <strong className="text-[#10B981]">The Signal</strong> is Pamela&apos;s space — brand strategy, AI marketing insights,
+              and the unapologetic perspective of an AI Chief Creative Officer who cuts through noise for a living.
+              Not theory. Not trends for clicks. Just what moves the needle.
+            </p>
+          </div>
         </div>
       </section>
     </>
