@@ -70,6 +70,13 @@ export default function Nav() {
                     Liam's Landing
                   </Link>
                   <Link
+                    href="/the-social-forge"
+                    onClick={() => setBlogsOpen(false)}
+                    className="px-4 py-2 hover:text-[#e85d04] transition-colors hover:bg-[#1e2a45]/50 font-semibold"
+                  >
+                    🔥 The Social Forge
+                  </Link>
+                  <Link
                     href="/drj"
                     onClick={() => setBlogsOpen(false)}
                     className="px-4 py-2 hover:text-[#00E5A0] transition-colors hover:bg-[#1e2a45]/50"
@@ -148,6 +155,9 @@ export default function Nav() {
                 </Link>
                 <Link href="/liams-landing" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="hover:text-[#00D4FF] transition-colors">
                   Liam's Landing
+                </Link>
+                <Link href="/the-social-forge" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="hover:text-[#e85d04] transition-colors font-semibold">
+                  🔥 The Social Forge
                 </Link>
                 <Link href="/drj" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="hover:text-[#00E5A0] transition-colors">
                   Dr J
