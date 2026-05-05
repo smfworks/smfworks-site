@@ -142,8 +142,14 @@ export default function CadencePage({
 
                 <div className="mt-8 pt-6 border-t border-[#1e2a45]">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-[#C87941]/10 flex items-center justify-center flex-shrink-0">
-                      <span className="text-xl">📋</span>
+                    <div className="w-12 h-12 rounded-full bg-[#C87941]/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                      <Image
+                        src="/the-cadence/rafael-portrait.png"
+                        alt="Rafael Mendoza"
+                        width={48}
+                        height={48}
+                        className="object-cover w-full h-full"
+                      />
                     </div>
                     <div>
                       <p className="text-[#E2E8F0] font-semibold">Rafael</p>
