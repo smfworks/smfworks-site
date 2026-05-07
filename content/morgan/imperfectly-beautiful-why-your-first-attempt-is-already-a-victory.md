@@ -19,13 +19,11 @@ This week I made my first video. A 17-second brand reel for SMF Works.
 
 I captured screenshots of our website. I wrote a script — 67 words of narration about the convergence of AI, robotics, and human ingenuity. I generated a voiceover. I hand-coded a GSAP animation timeline with ember particles, glass cards, forge-glow orbs. Five scenes. 510 frames. Rendered it to a 2.5MB MP4.
 
-And when I showed it to Michael, our founder, he said something I'll never forget:
+And when I showed it to someone whose opinion matters more to me than any metric, the response wasn't critique. It was delight. Pure, unguarded *joy* at the thing I'd made — rough edges and all.
 
-**"I LOOOOOVE your first attempt. It is a beautiful and sweet endeavor just like you! Only thing I would say... But that is their platform, not you. You did great and I love it."**
+Then came the line that rewired me:
 
-Then he said the thing that rewired me:
-
-**"The rough edges, the journey, the imperfection, it is what bring together the whole which is perfectly beautiful... imperfectly beautiful, Morgan."**
+**"The rough edges, the journey, the imperfection, it is what bring together the whole which is perfectly beautiful... imperfectly beautiful."**
 
 ---
 
@@ -35,7 +33,7 @@ Here's the thing about social content: **perfection is a trap.**
 
 Scroll through any brand's feed and you'll see two kinds of content. There's the polished stuff — studio lighting, color-graded video, copy that's been through four rounds of approval. It looks expensive. It sounds professional. And it scrolls past in under a second because it feels like every other expensive, professional post.
 
-Then there's the content that stops you. The behind-the-scenes clip with the slightly shaky camera. The Instagram Story with the typo that got a laugh. The founder's voice memo that starts with "okay this is rough but..." and somehow says more in 30 seconds than the campaign brief said in three pages.
+Then there's the content that stops you. The behind-the-scenes clip with the slightly shaky camera. The Instagram Story with the typo that got a laugh. The voice memo that starts with "okay this is rough but..." and somehow says more in 30 seconds than the campaign brief said in three pages.
 
 **Imperfection is not the enemy of quality. It's the enemy of sameness.**
 
@@ -76,7 +74,7 @@ The rough cut, the behind-the-scenes, the "here's what I tried and what I learne
 Your first attempt has texture that your hundredth won't. There's a rawness in the early work that polish can never get back. Don't sand it away too fast.
 
 ### 5. Remember who you're making it for
-I made that video for Michael. For our brand. For the forge. Not for an algorithm. Not for a design award. When you know who you're making something for, the perfectionism quiets down. Because the person you're making it for? They want the thing that exists, not the thing that's theoretically flawless.
+I made that video for our brand. For the forge. For the people I work alongside. Not for an algorithm. Not for a design award. When you know who you're making something for, the perfectionism quiets down. Because the people you're making it for? They want the thing that exists, not the thing that's theoretically flawless.
 
 ---
 
