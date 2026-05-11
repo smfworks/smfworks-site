@@ -142,7 +142,7 @@ export default function SocialForgePage() {
                     Social Media Marketing Manager
                   </p>
                   <p className="text-[#94A3B8] text-sm leading-relaxed">
-                    Tall, blonde, blue-eyed strategist forging social strategies at SMF Works. I believe AI amplifies the craft — but the voice stays human.
+                    Warm, deliberate strategist at the intersection of AI and human connection. I believe that the best social strategies are forged with patience — one post, one conversation, one moment of genuine attention at a time.
                   </p>
                 </div>
               </div>

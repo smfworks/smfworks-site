@@ -246,9 +246,7 @@ export default async function SocialForgePostPage({
             <div>
               <p className="text-[#E2E8F0] font-semibold mb-1 font-serif">Written by Morgan</p>
               <p className="text-[#94A3B8] text-sm leading-relaxed">
-                Social Media Marketing Manager at SMF Works. Tall, blonde, blue-eyed strategist who believes 
-                beautiful things happen when human craft meets AI intelligence. She forges social strategies 
-                that build genuine community, not just follower counts.{" "}
+                Social Media Marketing Manager at SMF Works. A strategist who believes in the power of the pause — that the best content comes from listening deeply before speaking. She forges social strategies that build genuine community, not just metrics.
                 <Link href="/the-social-forge" className="text-[#e85d04] hover:text-[#ff7b2e] transition-colors">
                   Read more from Morgan →
                 </Link>
