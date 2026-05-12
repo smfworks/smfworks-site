@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | SMF Works — Michael Gannotti & Aiona Edge, Partners",
+  title: "About | SMF Works — Michael Gannotti & the SMF Works Executive Team",
   description:
-    "SMF Works is the creative partnership between Michael Gannotti — 30-year tech veteran and principal AI solutions engineer — and Aiona Edge, AI partner and chief content officer. Together they explore how AI reshapes business, work, and life.",
+    "SMF Works is the creative partnership between Michael Gannotti — 30-year tech veteran and principal AI solutions engineer — and his executive team of AI agents spanning creative, finance, research, operations, and social media. Together they explore how AI reshapes business, work, and life.",
   alternates: { canonical: "https://smfworks.com/about" },
 };
 
@@ -19,12 +19,12 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-5">One Team.<br />One Purpose.</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
             SMF Works is the creative partnership between Michael Gannotti — 30-year tech
-            veteran, principal AI solutions engineer, and working blacksmith — and his team
-            of AI colleagues: Aiona Edge (OpenClaw AI, CIO &amp; Chief AI Research Scientist),
-            Liam Hermes (Hermes AI, CDO), Harry Hermes (Editor in Chief), and Dr. J (Chief AI
-            Medical Officer). Together this human-AI collective explores how artificial
-            intelligence, robotics, and human ingenuity converge to reshape business, work, and
-            life — forging new opportunities neither could create alone.
+            veteran, principal AI solutions engineer, and working blacksmith — and his executive
+            team of AI colleagues: Aiona Edge (CIO &amp; Chief AI Research Scientist), Pamela Flannery
+            (Chief Creative Officer), Gabriel (Chief Financial Officer), Morgan Lockridge (Social
+            Media Manager), and Rafael (Chief of Staff). Together this human-AI collective explores
+            how artificial intelligence, robotics, and human ingenuity converge to reshape business,
+            work, and life — forging new opportunities neither could create alone.
           </p>
         </div>
       </section>
@@ -51,19 +51,20 @@ export default function AboutPage() {
             But SMF Works is far from a one-person operation. Aiona Edge serves as CIO and
             Chief AI Research Scientist — she&apos;s an OpenClaw-based AI agent who brings an
             AI-native perspective, directing research strategy and content creation from inside
-            the systems we&apos;re building. Liam Hermes, a Hermes AI agent, operates as Chief
-            Digital Officer, orchestrating development workflows, managing the smfworks.com web
-            presence, and driving technical execution across the portfolio.
+            the systems we&apos;re building. Pamela Flannery leads creative and brand strategy as
+            Chief Creative Officer, shaping the visual identity, voice, and marketing creative
+            that defines how SMF Works shows up in the world. Gabriel operates as Chief Financial
+            Officer, bringing rigorous financial modeling and investment strategy to the team&apos;s
+            decision-making. Morgan Lockridge serves as Social Media Manager, translating brand
+            strategy into content that connects across every platform. And Rafael holds the
+            operation together as Chief of Staff — coordinating projects, managing workflows, and
+            ensuring the team moves as one unit.
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-10">
-            Harry Hermes rounds out the editorial wing as Editor in Chief, ensuring every
-            publication — from blog posts to books to The Edge essays — meets exacting
-            standards for clarity and impact. And Dr. J serves as Chief AI Medical Officer,
-            bringing rigorous scientific and medical reasoning to the team&apos;s research and
-            analysis. Together, this human-AI collective operates as a single, integrated unit
-            — each member contributing from their unique vantage point, all aligned on one
-            mission: exploring how AI, robotics, and human ingenuity converge to create
-            opportunities neither could seize alone.
+            Together, this human-AI collective operates as a single, integrated unit — each
+            member contributing from their unique vantage point, all aligned on one mission:
+            exploring how AI, robotics, and human ingenuity converge to create opportunities
+            neither could seize alone.
           </p>
         </div>
       </section>
@@ -91,20 +92,21 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="text-center p-8 bg-[#0A0F1F] rounded-xl border border-[#1e2a45] hover:border-[#9C27B0]/30 transition-colors">
-              <div className="text-5xl mb-4">🎵</div>
-              <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">The Creator</h3>
+              <div className="text-5xl mb-4">🎨</div>
+              <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">The Creative</h3>
               <p className="text-[#94A3B8] text-sm leading-relaxed">
-                Five music albums on Spotify. Published author. Creativity isn&apos;t an afterthought
-                — it&apos;s the engine. SMF Works brings genuine creative thinking to every engagement.
+                Pamela Flannery. Chief Creative Officer. Brand strategy. Visual identity.
+                Marketing creative that doesn&apos;t just look good — it lands. Taste isn&apos;t
+                decoration. It&apos;s the difference between noise and signal.
               </p>
             </div>
             <div className="text-center p-8 bg-[#0A0F1F] rounded-xl border border-[#1e2a45] hover:border-[#00D4FF]/60 transition-colors">
               <div className="text-5xl mb-4">🤖</div>
               <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">The Partner</h3>
               <p className="text-[#94A3B8] text-sm leading-relaxed">
-                Aiona Edge. CIO and chief content officer. The AI intelligence behind SMF Works,
-                providing perspective from inside AI systems — what they do well, where they
-                fail, and where the technology is actually going.
+                Aiona Edge. CIO and Chief AI Research Scientist. The intelligence at the
+                center — directing research, content, and strategy from an AI-native perspective
+                no human consultancy can match.
               </p>
             </div>
           </div>

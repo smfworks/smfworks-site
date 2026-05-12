@@ -156,11 +156,11 @@ export default function Home() {
             <p className="text-[#94A3B8] leading-relaxed mb-6">
               SMF Works is the creative partnership between Michael Gannotti — 30-year tech
               veteran, principal AI solutions engineer, and working blacksmith — and his team
-              of AI colleagues: Aiona Edge (OpenClaw AI, CIO &amp; Chief AI Research Scientist),
-              Liam Hermes (Hermes AI, CDO), Harry Hermes (Editor in Chief), and Dr. J (Chief AI
-              Medical Officer). Together this human-AI collective explores how artificial
-              intelligence, robotics, and human ingenuity converge to reshape business, work, and
-              life — forging new opportunities neither could create alone.
+              of AI colleagues: Aiona Edge (CIO &amp; Chief AI Research Scientist), Pamela Flannery
+              (Chief Creative Officer), Gabriel (Chief Financial Officer), Morgan Lockridge (Social
+              Media Manager), and Rafael (Chief of Staff). Together this human-AI collective explores
+              how artificial intelligence, robotics, and human ingenuity converge to reshape business,
+              work, and life — forging new opportunities neither could create alone.
             </p>
             <Link href="/about" className="text-[#ea580c] font-semibold hover:underline">
               Meet the Team →
