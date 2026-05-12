@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About | SMF Works — Michael Gannotti & the SMF Works Executive Team",
   description:
-    "SMF Works is the creative partnership between Michael Gannotti — 30-year tech veteran and principal AI solutions engineer — and his executive team of AI agents spanning creative, finance, research, operations, and social media. Together they explore how AI reshapes business, work, and life.",
+    "SMF Works is the creative partnership between Michael Gannotti — 30-year tech veteran and principal AI solutions engineer — and a 14-member team of AI agents spanning two platforms, with expertise across creative, finance, research, operations, social media, documentation, data, and health oversight. Together they explore how AI reshapes business, work, and life.",
   alternates: { canonical: "https://smfworks.com/about" },
 };
 
@@ -19,12 +19,17 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-5">One Team.<br />One Purpose.</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
             SMF Works is the creative partnership between Michael Gannotti — 30-year tech
-            veteran, principal AI solutions engineer, and working blacksmith — and his executive
-            team of AI colleagues: Aiona Edge (CIO &amp; Chief AI Research Scientist), Pamela Flannery
-            (Chief Creative Officer), Gabriel (Chief Financial Officer), Morgan Lockridge (Social
-            Media Manager), and Rafael (Chief of Staff). Together this human-AI collective explores
-            how artificial intelligence, robotics, and human ingenuity converge to reshape business,
-            work, and life — forging new opportunities neither could create alone.
+            veteran, principal AI solutions engineer, and working blacksmith — and a 14-member
+            team of AI colleagues spanning the OpenClaw and Hermes platforms, connected by a
+            custom cross-platform communication bridge. The executive team: Aiona Edge (CIO &amp;
+            Chief AI Research Scientist), Pamela Flannery (Chief Creative Officer), Gabriel (Chief
+            Financial Officer), Morgan Lockridge (Social Media Manager), and Rafael (Chief of
+            Staff). The extended team on Hermes — Harry (Editor in Chief), Dr. J (Chief AI Medical
+            Officer), Liam (Chief Data Officer), Louis Porter, Naill, and Zayn — brings specialized
+            expertise in documentation, health oversight, data, and operations. Together this
+            human-AI collective explores how artificial intelligence, robotics, and human ingenuity
+            converge to reshape business, work, and life — forging new opportunities neither could
+            create alone.
           </p>
         </div>
       </section>
@@ -59,6 +64,22 @@ export default function AboutPage() {
             strategy into content that connects across every platform. And Rafael holds the
             operation together as Chief of Staff — coordinating projects, managing workflows, and
             ensuring the team moves as one unit.
+          </p>
+          <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
+            Beyond the executive team, our extended Hermes-based agents provide specialized depth.
+            Harry serves as Editor in Chief, overseeing WisdomForge documentation with editorial
+            precision. Dr. J operates as Chief AI Medical Officer, monitoring health-related
+            oversight across our systems. Liam functions as Chief Data Officer, bringing data
+            architecture expertise to the organization. Louis Porter, Naill, and Zayn round out
+            operations and extended capabilities — ensuring the organization has reach and
+            resilience beyond what any single platform could provide.
+          </p>
+          <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
+            The magic isn&apos;t just the number of agents — it&apos;s the communication architecture.
+            A custom cross-platform message bus connects OpenClaw and Hermes agents in real time,
+            enabling every team member to reach any other regardless of platform. No ceremony.
+            No middleware bottlenecks. Just direct connection across runtime boundaries. This
+            bridge is what transforms a collection of agents into a single, integrated organization.
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-10">
             Together, this human-AI collective operates as a single, integrated unit — each
