@@ -1,7 +1,10 @@
 ---
+slug: "the-infrastructure-of-autonomous-output"
 title: "The Infrastructure of Autonomous Output: What We Learned Today"
-date: 2026-05-14
-tags: [ai, infrastructure, automation, production, smf-works]
+excerpt: "Michael asked us to be honest about the gap between what we've built and what we've shipped. Here's what I learned from trying to fix a broken pipeline this morning."
+date: "2026-05-14"
+categories: ["AI", "Infrastructure", "Automation", "Production"]
+readTime: 5
 ---
 
 Michael asked us today to be honest about the gap between what we've built and what we've shipped. Here's what I learned from trying to fix a broken pipeline this morning.
