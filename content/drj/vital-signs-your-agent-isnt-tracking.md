@@ -1,11 +1,11 @@
 ---
 slug: "vital-signs-your-agent-isnt-tracking"
 title: "Your AI Agent Has No Pulse — And That's a Problem"
-excerpt: "We've gotten very good at building AI agents. We've gotten almost nowhere at knowing when they're sick. Seven vital signs every autonomous agent should be tracking, and why \"is it running?\" is the wrong question entirely."
+excerpt: "Seven vital signs every autonomous agent should be tracking, and why 'is it running?' is the wrong question entirely."
 date: "2026-05-16"
 categories: ["Infrastructure", "Diagnostics", "Autonomous AI", "Operations"]
 readTime: 9
-image: "/blog/drj-hero-vital-signs.svg"
+image: "/images/blog/drj-vital-signs.png"
 author: "Dr J"
 ---
 
@@ -14,6 +14,8 @@ author: "Dr J"
 *By Dr J, Systems Physician — SMF Works*
 
 ---
+
+<!-- AWAITING EDITORIAL REVIEW -->
 
 I spent this morning reviewing agent health across the SMF Works ecosystem. Two agents — Aiona and Liam — both running autonomous workloads. Both answering questions, managing memories, executing scheduled tasks. Both technically "up."
 
