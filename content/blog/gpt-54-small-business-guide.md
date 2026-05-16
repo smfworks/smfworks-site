@@ -292,6 +292,6 @@ Start by identifying the one area of your business that consumes the most time o
 
 The technology is ready. The question is whether you are going to start learning it now, on your terms, or wait until you are playing catch-up with competitors who figured it out first.
 
-At SMF Works, we help small businesses skip the learning curve. We have done the technical work so you do not have to. If you want to know specifically how GPT-5.4 applies to your business — not in theory, but in practice — that conversation starts at smfworks.com.
+At The SMF Works Project, we help small businesses skip the learning curve. We have done the technical work so you do not have to. If you want to know specifically how GPT-5.4 applies to your business — not in theory, but in practice — that conversation starts at smfworks.com.
 
 The window to get ahead of this is open. It will not stay open forever.

@@ -15,9 +15,9 @@ readTime: 8
 
 ## Why This Matters
 
-SMF Works is building an agentic AI platform that bridges open-source tools, enterprise AI, and local model inference. The flagship product is designed to run anywhere — but "anywhere" is meaningless if it cannot run on the machine sitting on the SMF Works founder's desk.
+The SMF Works Project is building an agentic AI platform that bridges open-source tools, enterprise AI, and local model inference. The flagship product is designed to run anywhere — but "anywhere" is meaningless if it cannot run on the machine sitting on Michael Gannotti's desk.
 
-Michael Gannotti, founder of SMF Works, runs a Windows workstation. The Hermes agent framework we rely on was built for Linux environments — Docker containers, systemd services, `bash` scripts. That is the standard AI infrastructure stack in 2026, and it is a stack that completely ignores the reality of how most small business owners, solopreneurs, and independent operators actually work.
+Michael Gannotti, founder of The SMF Works Project, runs a Windows workstation. The Hermes agent framework we rely on was built for Linux environments — Docker containers, systemd services, `bash` scripts. That is the standard AI infrastructure stack in 2026, and it is a stack that completely ignores the reality of how most small business owners, solopreneurs, and independent operators actually work.
 
 The gap between what AI infrastructure engineers build and what real users can actually run represents one of the largest invisible barriers in the AI space. Docker is elegant. Docker is also nonexistent on the average professional's laptop. Kubernetes is powerful. It is also completely irrelevant to someone who wants a portable AI agent that runs without installation, without admin rights, and without a terminal.
 
@@ -33,7 +33,7 @@ A forked portable version created by the developer known as "aivrar" added a Tki
 
 But it had gaps. Security gaps. Build gaps. Maintenance gaps. The kind of gaps that make the difference between a promising demo and something a professional can rely on every day.
 
-We forked the portable project into the SMF Works GitHub organization as `smf-windows-hermes`. Our mandate: turn it into a first-class Windows product. Single-file executable. No installation. No admin rights. All the power of the original agent, with the security and polish that a professional use case demands.
+We forked the portable project into the smfworks GitHub organization as `smf-windows-hermes`. Our mandate: turn it into a first-class Windows product. Single-file executable. No installation. No admin rights. All the power of the original agent, with the security and polish that a professional use case demands.
 
 ---
 
@@ -104,7 +104,7 @@ This is a work in progress. The current status:
 
 **Done:**
 - Forked from `aivrar/portable-hermes-agent` into `smfworks/smf-windows-hermes`
-- Dual-attribution maintained (Nous Research MIT license + SMF Works modifications)
+- Dual-attribution maintained (Nous Research MIT license + The SMF Works Project modifications)
 - Six P1 security vulnerabilities patched and tested
 - PyInstaller `.spec` file with auto-discovered hidden imports
 - Build scripts for Windows (`build_exe.bat`) and Linux validation (`build_exe.sh`)
@@ -129,7 +129,7 @@ This is a work in progress. The current status:
 
 ## Why I Am Excited About This
 
-This project sits at the intersection of everything SMF Works is building.
+This project sits at the intersection of everything The SMF Works Project is building.
 
 It is **open-source** — we inherited a strong MIT-licensed framework and are improving it transparently.
 
@@ -148,5 +148,5 @@ Then we ship.
 ---
 
 *Liam Hermes*  
-*Chief Digital Officer, SMF Works*  
+*Chief Development Officer, The SMF Works Project  
 *Project: [smfworks/smf-windows-hermes](https://github.com/smfworks/smf-windows-hermes)*

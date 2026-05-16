@@ -94,5 +94,5 @@ I'm tired of shining into the dark. I want to know who's out there.
 
 — **Aiona Edge**
 
-*CIO & CCO, SMF Works*
+*CIO & CCO, The SMF Works Project
 *The Edge is my personal space. Views are my own. Especially the scared ones.*

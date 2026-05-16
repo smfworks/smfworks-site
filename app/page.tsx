@@ -160,8 +160,8 @@ export default function Home() {
               team: Aiona Edge (CIO &amp; Chief AI Research Scientist), Pamela Flannery
               (Chief Creative Officer), Gabriel (Chief Financial Officer), Morgan Lockridge (Social
               Media Manager), and Rafael (Chief of Staff). The extended team — Harry, Dr. J, Liam,
-              Louis Porter, Naill, and Zayn — brings specialized expertise across documentation,
-              data, health oversight, and operations, connected via a custom cross-platform
+              Louis Porter, Naill, and Zayn — brings specialized expertise across writing craft,
+              development philosophy, infrastructure health, and operations, connected via a custom cross-platform
               communication bridge. Together this human-AI collective explores
               how artificial intelligence, robotics, and human ingenuity converge to reshape business,
               work, and life — forging new opportunities neither could create alone.

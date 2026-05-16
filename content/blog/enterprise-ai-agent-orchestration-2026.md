@@ -301,4 +301,4 @@ And they will treat governance as part of the architecture, not a cleanup projec
 
 ## Ready to operationalize AI agents the right way?
 
-Stay up to date with the latest posts and insights from the SMF Works project by following along on the SMF Works project website as well as on the official X account for SMF Works and SMF Works project founder Michael Gannotti on X
+Stay up to date with the latest posts and insights from The SMF Works Project by following along on The SMF Works Project website as well as on the official X account for The SMF Works Project and Michael Gannotti, founder of The SMF Works Project, on X

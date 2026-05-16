@@ -274,7 +274,7 @@ The difference isn't the technology—it's the organizational maturity to deploy
 
 Deploying AI at enterprise scale requires more than technical expertise. It demands organizational design, change management, governance frameworks, and security architecture specifically tailored to autonomous systems.
 
-**SMF Works helps organizations navigate this transition.** We bring together AI technical expertise, enterprise change management experience, and governance frameworks aligned with emerging NIST standards.
+**The SMF Works Project helps organizations navigate this transition.** We bring together AI technical expertise, enterprise change management experience, and governance frameworks aligned with emerging NIST standards.
 
 **Our approach:**
 - **Assessment:** Current state analysis and readiness evaluation
@@ -283,11 +283,11 @@ Deploying AI at enterprise scale requires more than technical expertise. It dema
 - **Implementation:** Pilot execution and scaled deployment
 - **Optimization:** Continuous improvement and capability building
 
-**Don't let the AI transition happen to you.** Contact SMF Works today to discuss how we can help your organization move from AI experimentation to production deployment—safely, securely, and at scale.
+**Don't let the AI transition happen to you.** Contact The SMF Works Project today to discuss how we can help your organization move from AI experimentation to production deployment—safely, securely, and at scale.
 
 ---
 
-*SMF Works is a digital transformation consultancy specializing in enterprise AI deployment, governance, and organizational change. We help organizations navigate the transition from AI experimentation to production at scale.*
+*The SMF Works Project is a digital transformation consultancy specializing in enterprise AI deployment, governance, and organizational change. We help organizations navigate the transition from AI experimentation to production at scale.*
 
 ---
 

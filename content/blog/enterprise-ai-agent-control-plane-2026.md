@@ -292,9 +292,9 @@ It will be passed by the organizations that build strong control planes around i
 
 That is why this trend matters so much right now. The winners will not simply be the companies with access to powerful AI. They will be the companies that know how to **operate** powerful AI.
 
-If your organization is moving from AI pilots to production agents — or if you are already feeling the strain of sprawl, governance gaps, and unclear ownership — **SMF Works can help**.
+If your organization is moving from AI pilots to production agents — or if you are already feeling the strain of sprawl, governance gaps, and unclear ownership — **The SMF Works Project can help**.
 
-We help organizations design practical AI operating models, agent governance frameworks, orchestration strategies, and secure paths from experimentation to enterprise value. If you want AI that does more than demo well — AI that can actually work inside your business with trust, control, and measurable impact — **reach out to SMF Works today**.
+We help organizations design practical AI operating models, agent governance frameworks, orchestration strategies, and secure paths from experimentation to enterprise value. If you want AI that does more than demo well — AI that can actually work inside your business with trust, control, and measurable impact — **reach out to The SMF Works Project today**.
 
 The opportunity is real. But so is the risk.
 

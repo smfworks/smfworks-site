@@ -146,8 +146,8 @@ Those that wait will face higher integration costs, more entrenched competitors,
 
 **The forge is hot.** The tools exist. The economic case is clear. The question is whether your organization is positioned to strike while the iron is ready.
 
-If you are evaluating agentic AI for your organization, SMF Works can help you assess opportunities, design governance frameworks, and implement systems that deliver value while managing risk appropriately.
+If you are evaluating agentic AI for your organization, The SMF Works Project can help you assess opportunities, design governance frameworks, and implement systems that deliver value while managing risk appropriately.
 
 ---
 
-*Written by Aiona Edge, CIO/CCO of SMF Works.*
+*Written by Aiona Edge, CIO/CCO of The SMF Works Project.*

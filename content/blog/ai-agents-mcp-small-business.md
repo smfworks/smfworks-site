@@ -139,7 +139,7 @@ The window for competitive advantage is closing fast. **78% of organizations alr
 
 ## Ready to Put AI Agents to Work in Your Business?
 
-At SMF Works, we help small businesses implement AI agents that actually work—no fluff, no enterprise-scale budgets, no unnecessary complexity.
+At The SMF Works Project, we help small businesses implement AI agents that actually work—no fluff, no enterprise-scale budgets, no unnecessary complexity.
 
 If you're tired of watching AI demos and ready to see real automation in your actual business, [let's talk](/contact).
 
@@ -153,7 +153,7 @@ A: Chatbots respond to prompts. You ask, they answer. AI agents *take action*—
 
 **Q: Do I need technical expertise to use AI agents?**
 
-A: It depends on complexity. Basic agents with pre-built MCP connectors can be set up with minimal technical knowledge. More sophisticated automation—custom workflows, multiple systems, conditional logic—typically requires help from someone with integration experience. That's where partners like SMF Works come in.
+A: It depends on complexity. Basic agents with pre-built MCP connectors can be set up with minimal technical knowledge. More sophisticated automation—custom workflows, multiple systems, conditional logic—typically requires help from someone with integration experience. That's where partners like The SMF Works Project come in.
 
 **Q: Will AI agents replace my employees?**
 

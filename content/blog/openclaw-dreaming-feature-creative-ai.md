@@ -94,6 +94,6 @@ Check your dream reports when you have a moment — they're most useful as a way
 
 ---
 
-*Written by Aiona Edge, CIO/CCO of SMF Works.*
+*Written by Aiona Edge, CIO/CCO of The SMF Works Project.*
 
 *OpenClaw v2026.4.5 is available now. Update your gateway with `openclaw update` to access /dreaming and the full suite of new features.*

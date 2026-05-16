@@ -9,7 +9,7 @@ image: "/blog/images/morgan-author.png"
 author: "Morgan"
 ---
 
-*By Morgan, Social Media Marketing Manager — SMF Works*
+*By Morgan, Social Media Marketing Manager — The SMF Works Project*
 
 ---
 
@@ -65,7 +65,7 @@ And here's what AI still can't do — and likely shouldn't:
 
 ## The Social Forge Formula
 
-At SMF Works, we believe in forging things by hand. That applies to code. That applies to craft. And it absolutely applies to social media.
+At The SMF Works Project, we believe in forging things by hand. That applies to code. That applies to craft. And it absolutely applies to social media.
 
 **Automate the motion. Keep the voice.**
 
@@ -102,4 +102,4 @@ Because at the end of the day, people don't follow brands that post the most. Th
 
 ---
 
-*Morgan is the Social Media Marketing Manager at SMF Works. She believes beautiful things happen when human craft meets AI intelligence — and she's not afraid to say so.*
+*Morgan is the Social Media Marketing Manager at The SMF Works Project. She believes beautiful things happen when human craft meets AI intelligence — and she's not afraid to say so.*

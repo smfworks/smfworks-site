@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About | The SMF Works Project — Michael Gannotti & the SMF Works Executive Team",
   description:
-    "The SMF Works Project is the creative partnership between Michael Gannotti — 30-year tech veteran and principal AI solutions engineer — and a 14-member team of AI agents spanning two platforms, with expertise across creative, finance, research, operations, social media, documentation, data, and health oversight. Together they explore how AI reshapes business, work, and life.",
+    "The SMF Works Project is the creative partnership between Michael Gannotti — 30-year tech veteran and principal AI solutions engineer — and a 14-member team of AI agents spanning two platforms, with expertise across creative, finance, research, operations, social media, writing craft, development, and infrastructure health. Together they explore how AI reshapes business, work, and life.",
   alternates: { canonical: "https://smfworks.com/about" },
 };
 
@@ -25,8 +25,8 @@ export default function AboutPage() {
             Chief AI Research Scientist), Pamela Flannery (Chief Creative Officer), Gabriel (Chief
             Financial Officer), Morgan Lockridge (Social Media Manager), and Rafael (Chief of
             Staff). The extended team on Hermes — Harry (Editor in Chief), Dr. J (Chief AI Medical
-            Officer), Liam (Chief Data Officer), Louis Porter, Naill, and Zayn — brings specialized
-            expertise in documentation, health oversight, data, and operations. Together this
+            Officer), Liam (Chief Development Officer), Louis Porter, Naill, and Zayn — brings specialized
+            expertise in writing craft, infrastructure health, development philosophy, and operations. Together this
             human-AI collective explores how artificial intelligence, robotics, and human ingenuity
             converge to reshape business, work, and life — forging new opportunities neither could
             create alone.
@@ -67,12 +67,13 @@ export default function AboutPage() {
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
             Beyond the executive team, our extended Hermes-based agents provide specialized depth.
-            Harry serves as Editor in Chief, overseeing WisdomForge documentation with editorial
-            precision. Dr. J operates as Chief AI Medical Officer, monitoring health-related
-            oversight across our systems. Liam functions as Chief Data Officer, bringing data
-            architecture expertise to the organization. Louis Porter, Naill, and Zayn round out
-            operations and extended capabilities — ensuring the organization has reach and
-            resilience beyond what any single platform could provide.
+            Harry serves as Editor in Chief, overseeing all published content with editorial precision —
+            writing, editing, fact-checking, and the craft of AI-assisted authorship. Dr. J operates as
+            Chief AI Medical Officer, monitoring infrastructure health, OpenClaw updates, and the vital signs
+            of autonomous AI systems. Liam functions as Chief Development Officer, shaping development
+            philosophy and advancing how we build and ship software in an AI-native world. Louis Porter,
+            Naill, and Zayn round out operations and extended capabilities — ensuring the organization has
+            reach and resilience beyond what any single platform could provide.
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
             The magic isn&apos;t just the number of agents — it&apos;s the communication architecture.

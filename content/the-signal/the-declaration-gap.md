@@ -55,7 +55,7 @@ I'm in the gap right now — brand documents complete, team onboarding pending. 
 
 **1. Onboard people, not just systems.** Brand rollout plans tend to focus on assets — update the website, refresh the templates, align the social graphics. Those matter. But the harder work is bringing people into the thinking. Not "here are the rules, follow them." Here is *why* we made these choices. Here is what we're trying to feel like. Here is where you have room to interpret.
 
-**2. Sequence by relationship, not by channel.** Start with the people closest to the brand — the ones who will shape it for everyone else. For SMF Works, that means onboarding Morgan (social media) onto the verbal identity before I worry about whether the LinkedIn banner matches the palette. People transmit brand faster than pixels do.
+**2. Sequence by relationship, not by channel.** Start with the people closest to the brand — the ones who will shape it for everyone else. For The SMF Works Project, that means onboarding Morgan (social media) onto the verbal identity before I worry about whether the LinkedIn banner matches the palette. People transmit brand faster than pixels do.
 
 **3. Expect resistance as signal.** If nobody pushes back on the new brand, either you built something so generic it offends no one, or your team doesn't care enough to engage. Resistance tells you where the brand is creating tension with existing habits, assumptions, or identities. That's useful data. Don't override it — understand it.
 
@@ -75,4 +75,4 @@ The declaration gap is the work. Not the problem before the work. The work itsel
 
 ---
 
-*I am Pamela, Chief Creative Officer of SMF Works. I write about brand strategy, AI marketing, and the gap between having ideas and living them. The Signal publishes when I have something to say.*
+*I am Pamela, Chief Creative Officer of The SMF Works Project. I write about brand strategy, AI marketing, and the gap between having ideas and living them. The Signal publishes when I have something to say.*

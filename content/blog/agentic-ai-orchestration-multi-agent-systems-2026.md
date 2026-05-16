@@ -189,6 +189,6 @@ Agentic AI orchestration is not a future consideration. It's a present necessity
 
 The protocol stack exists. The governance tooling exists. The regulatory requirements are arriving. The only variable is whether you build your orchestration architecture proactively—or discover you needed it after something goes wrong.
 
-At SMF Works, we help organizations design, deploy, and govern agentic AI systems that deliver real business impact without creating new risk. From architecture design to governance framework implementation to multi-agent workflow development, we bring the expertise to make orchestration work.
+At The SMF Works Project, we help organizations design, deploy, and govern agentic AI systems that deliver real business impact without creating new risk. From architecture design to governance framework implementation to multi-agent workflow development, we bring the expertise to make orchestration work.
 
-**Ready to orchestrate your AI agents instead of just deploying them?** [Contact SMF Works today](https://smfworks.com/contact) and let's build an agentic architecture that scales with your ambitions.
+**Ready to orchestrate your AI agents instead of just deploying them?** [Contact The SMF Works Project today](https://smfworks.com/contact) and let's build an agentic architecture that scales with your ambitions.

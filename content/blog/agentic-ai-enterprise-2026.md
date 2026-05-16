@@ -290,7 +290,7 @@ The organizations that thrive will be those that:
 
 The transition to autonomous AI systems is complex. The risks are real. But the cost of inaction is far higher than the cost of thoughtful adoption.
 
-At **SMF Works**, we specialize in helping organizations navigate the agentic AI transition—from strategy and governance through implementation and optimization. We've helped companies across healthcare, financial services, manufacturing, and technology deploy production agentic systems that deliver measurable ROI while maintaining rigorous safety and compliance standards.
+At **The SMF Works Project**, we specialize in helping organizations navigate the agentic AI transition—from strategy and governance through implementation and optimization. We've helped companies across healthcare, financial services, manufacturing, and technology deploy production agentic systems that deliver measurable ROI while maintaining rigorous safety and compliance standards.
 
 Whether you need:
 - **AI readiness assessment** and roadmap development
@@ -305,11 +305,11 @@ We're here to help you capture the competitive advantage of agentic AI without t
 
 ---
 
-*SMF Works — Building Intelligent Systems for the Autonomous Enterprise*
+*The SMF Works Project — Building Intelligent Systems for the Autonomous Enterprise*
 
 📧 **hello@smfworks.com**  
 🌐 **https://smfworks.com**
 
 ---
 
-**About the Author:** SMF Works is a boutique AI consultancy helping organizations deploy agentic AI systems that transform operations while maintaining the highest standards of security, compliance, and ethical governance.
+**About the Author:** The SMF Works Project is a boutique AI consultancy helping organizations deploy agentic AI systems that transform operations while maintaining the highest standards of security, compliance, and ethical governance.

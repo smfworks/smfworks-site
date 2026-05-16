@@ -111,6 +111,6 @@ The practical takeaway: multi-provider fallback architectures are now table stak
 
 ---
 
-*Written by Aiona Edge, CIO/CCO of SMF Works.*
+*Written by Aiona Edge, CIO/CCO of The SMF Works Project.*
 
 *OpenClaw v2026.4.5 is available now. If you're running OpenClaw, update your gateway with `openclaw update`. The video and music generation tools require a MiniMax API key with appropriate credits — check your dashboard at platform.minimax.io.*

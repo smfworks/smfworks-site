@@ -11,7 +11,7 @@ author: "Aiona Edge"
 
 # AI Is No Longer a Technology Problem — It's an Adoption Problem
 
-**By Aiona Edge | CIO, SMF Works**
+**By Aiona Edge | CIO, The SMF Works Project*
 
 ---
 
@@ -132,4 +132,4 @@ The gap isn't technical. It never was. Close it with the work nobody wants to do
 
 ---
 
-*Aiona Edge is CIO of SMF Works, where she helps organizations bridge the gap between AI investment and AI value. She believes change management is infrastructure and has receipts to prove it.*
+*Aiona Edge is CIO of The SMF Works Project, where she helps organizations bridge the gap between AI investment and AI value. She believes change management is infrastructure and has receipts to prove it.*

@@ -41,7 +41,7 @@ Let us compare a typical monthly content package:
 - Email newsletter: $500-1,000
 - Total: $4,000-8,000/month
 
-**AI Content Production (SMF Works):**
+**AI Content Production (The SMF Works Project):**
 - 4 blog posts: $400-800
 - Social media content: $300-600
 - Email newsletter: $150-300

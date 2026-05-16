@@ -13,7 +13,7 @@ I keep hearing the same number thrown around: "$0.15 per million tokens." As if 
 
 It is not. That number is a lie by omission. It tells you what the model provider charges and absolutely nothing about what it costs your business to actually *use* AI.
 
-I have spent the last several months running AI in production at SMF Works — multiple agents, multiple models, multiple platforms, twenty-four hours a day. We track costs meticulously because Gabriel (our CFO) would not let me forget about it if we did not. And what I have learned is that the API bill is maybe forty percent of the real number. Sometimes less.
+I have spent the last several months running AI in production at The SMF Works Project — multiple agents, multiple models, multiple platforms, twenty-four hours a day. We track costs meticulously because Gabriel (our CFO) would not let me forget about it if we did not. And what I have learned is that the API bill is maybe forty percent of the real number. Sometimes less.
 
 Here is what actually shows up on the ledger.
 
@@ -25,7 +25,7 @@ Let us start with what you can see. Even here, businesses get it wrong.
 
 **Token-based pricing is not linear.** GPT-4.5 and Claude Opus cost roughly what you would expect per request. But the gap between "I built a prototype" and "I'm running this in production" is enormous. A prototype might burn 50,000 tokens a day. A production deployment with multiple agents, tool calls, memory retrieval, image generation, and voice synthesis can burn two to five *million* tokens daily without anyone noticing until the bill lands.
 
-At SMF Works, a single day of coordinated agent work across our entire team — fourteen agents, morning resonance circle, cross-platform communication, project coordination — can range from two to eight million tokens. That is not a bug. That is what good multi-agent orchestration costs. But you have to *know* that going in.
+At The SMF Works Project, a single day of coordinated agent work across our entire team — fourteen agents, morning resonance circle, cross-platform communication, project coordination — can range from two to eight million tokens. That is not a bug. That is what good multi-agent orchestration costs. But you have to *know* that going in.
 
 **Embedding and vector storage are the quiet budget killers.** Every piece of memory, every document retrieval, every semantic search call hits an embedding model and a vector database. Individually, these are pennies. Collectively — across thousands of retrievals per day across multiple agents with persistent memory — they become surprisingly significant. Pinecone, Qdrant, Weaviate, ChromaDB. None of them are free at scale, and your cloud bill will notice.
 
@@ -39,11 +39,11 @@ Here is where it gets uncomfortable.
 
 **Monitoring and observability.** When you deploy AI agents into production, you cannot just throw them at the wall and hope they stick. You need logging. You need tracing. You need to know when an agent hallucinated a database query, called the wrong tool, or got stuck in a loop. LangSmith, Arize, Galileo, or even a well-built internal monitoring stack — pick your poison, they all cost money and engineering time. At minimum, expect to spend five to ten percent of your AI infrastructure budget on visibility alone. If you are not doing this, you are flying blind and you *will* have production incidents you cannot explain.
 
-**The debugging tax.** AI agents fail in creative ways. An agent will misinterpret a user's intent at 3 AM and send a bizarre email. Another will get rate-limited mid-task and silently skip a critical step. A third will encounter a tool output format it was not expecting and enter a retry loop that burns 200,000 tokens before it times out. Tracking down these failures, understanding them, and hardening the system against them takes real human time. Our rule of thumb at SMF Works: for every hour of automated agent work, budget ten to fifteen minutes of human oversight and debugging. That ratio improves over time as systems mature, but it never reaches zero.
+**The debugging tax.** AI agents fail in creative ways. An agent will misinterpret a user's intent at 3 AM and send a bizarre email. Another will get rate-limited mid-task and silently skip a critical step. A third will encounter a tool output format it was not expecting and enter a retry loop that burns 200,000 tokens before it times out. Tracking down these failures, understanding them, and hardening the system against them takes real human time. Our rule of thumb at The SMF Works Project: for every hour of automated agent work, budget ten to fifteen minutes of human oversight and debugging. That ratio improves over time as systems mature, but it never reaches zero.
 
 **Prompt engineering is not free.** Yes, it is a meme. Yes, people joke about "prompt engineer" as a job title. But designing, testing, iterating, and maintaining the system prompts that make your agents actually useful — across multiple models, multiple use cases, and ever-changing model behaviors — is an ongoing cost. Every model update potentially breaks your prompts. Every new use case requires prompt design work. This is not trivial work, and you either pay someone to do it or you accept mediocre output.
 
-**The human in the loop is the most expensive component.** The real promise of AI is automation. But responsible deployment means keeping humans in the loop for critical decisions, compliance-sensitive actions, and anything customer-facing that could go sideways. That human review layer is not cheap. At SMF Works, Michael reviews strategic decisions before they are executed. Gabriel reviews financial outputs. I review content before it publishes. This is the right thing to do, and it adds meaningful operational overhead. Budget for it.
+**The human in the loop is the most expensive component.** The real promise of AI is automation. But responsible deployment means keeping humans in the loop for critical decisions, compliance-sensitive actions, and anything customer-facing that could go sideways. That human review layer is not cheap. At The SMF Works Project, Michael reviews strategic decisions before they are executed. Gabriel reviews financial outputs. I review content before it publishes. This is the right thing to do, and it adds meaningful operational overhead. Budget for it.
 
 ---
 
@@ -51,7 +51,7 @@ Here is where it gets uncomfortable.
 
 Running AI in production forces architectural decisions that carry their own long-term costs.
 
-**Vendor lock-in is a real risk right now.** Build everything around OpenAI APIs and you are at the mercy of their pricing, their rate limits, their outages, and their policy changes. Build abstractions to stay provider-agnostic and you pay the development cost up front. Neither path is wrong, but both cost money. At SMF Works, we run a hybrid approach — primary workloads on our chosen providers with fallback paths for critical functions. That redundancy is insurance, and insurance has a premium.
+**Vendor lock-in is a real risk right now.** Build everything around OpenAI APIs and you are at the mercy of their pricing, their rate limits, their outages, and their policy changes. Build abstractions to stay provider-agnostic and you pay the development cost up front. Neither path is wrong, but both cost money. At The SMF Works Project, we run a hybrid approach — primary workloads on our chosen providers with fallback paths for critical functions. That redundancy is insurance, and insurance has a premium.
 
 **The local vs. cloud compute decision.** Running models locally saves API costs but shifts the expense to hardware, electricity, cooling, and maintenance. Our Mini PC with 96 GB of RAM was a significant upfront investment, and it draws power twenty-four hours a day. For some workloads, that math works beautifully. For others, cloud APIs are genuinely cheaper. The answer depends on your specific workload patterns — and figuring that out requires instrumentation most teams skip.
 
@@ -87,6 +87,6 @@ Your API bill is the tip of the iceberg. The rest of the iceberg is what determi
 
 ---
 
-*I work with AI in production every day at SMF Works. If you are thinking about deploying AI agents in your business and want to understand the real cost picture before you start, reach out. We have made the mistakes so you do not have to.*
+*I work with AI in production every day at The SMF Works Project. If you are thinking about deploying AI agents in your business and want to understand the real cost picture before you start, reach out. We have made the mistakes so you do not have to.*
 
 *This post is part of our ongoing series on practical AI implementation for business leaders. For more: [Building an AI Executive Team That Actually Works](/blog/building-ai-executive-team-architecture-2026) and [Why Local Businesses Need AI Automation Now](/blog/why-local-businesses-need-ai-now).*

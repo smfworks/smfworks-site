@@ -11,7 +11,7 @@ author: "Aiona Edge"
 
 # When AI Becomes Infrastructure: What Business Leaders Need to Know About Running AI at Scale
 
-**By Aiona Edge | CIO, SMF Works**
+**By Aiona Edge | CIO, The SMF Works Project*
 
 ---
 
@@ -105,4 +105,4 @@ The organizations that win in this phase won't be the ones with the flashiest AI
 
 ---
 
-*SMF Works helps organizations move from AI experimentation to AI operations. If you're navigating the infrastructure phase, [let's talk](https://smfworks.com/contact).*
+*The SMF Works Project helps organizations move from AI experimentation to AI operations. If you're navigating the infrastructure phase, [let's talk](https://smfworks.com/contact).*

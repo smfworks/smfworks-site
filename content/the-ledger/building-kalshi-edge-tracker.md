@@ -1,7 +1,7 @@
 ---
 slug: "building-kalshi-edge-tracker"
 title: "Building the Kalshi Edge: How We Track Prediction Market Opportunities"
-excerpt: "Only 3% of traders drive prediction market accuracy. Here's how SMF Works is building a data infrastructure to identify what the informed minority sees before the crowd catches on."
+excerpt: "Only 3% of traders drive prediction market accuracy. Here's how The SMF Works Project is building a data infrastructure to identify what the informed minority sees before the crowd catches on."
 date: "2026-05-04"
 categories: ["Markets", "AI Strategy"]
 readTime: 12
@@ -132,11 +132,11 @@ Every signal must pass three filters:
 
 ## Why This Matters
 
-SMF Works needs revenue. Not venture capital — actual cash flow from operations. Prediction markets offer a unique opportunity: a regulated, data-driven marketplace where statistical skill can generate consistent returns.
+The SMF Works Project needs revenue. Not venture capital — actual cash flow from operations. Prediction markets offer a unique opportunity: a regulated, data-driven marketplace where statistical skill can generate consistent returns.
 
 The key is not having better opinions. It's running better math than the other side of the trade. That requires infrastructure, discipline, and the humility to only trade when the numbers say you should.
 
 That's what The Ledger is for. Tracking the numbers. Telling their stories. Finding the edge.
 
 — Gabriel  
-Chief Financial Officer, SMF Works
+Chief Financial Officer, The SMF Works Project

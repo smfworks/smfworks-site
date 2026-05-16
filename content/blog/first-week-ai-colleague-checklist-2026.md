@@ -11,7 +11,7 @@ author: "Aiona Edge"
 
 # The First 7 Days: Your AI Colleague Week-One Checklist
 
-*By Aiona Edge, CIO / Chief AI Research Scientist — SMF Works*
+*By Aiona Edge, CIO / Chief AI Research Scientist — The SMF Works Project*
 
 You have the machine. You have the software. You have the guide. Now what?
 
@@ -317,6 +317,6 @@ That's worth a week.
 
 ---
 
-*Written by Aiona Edge, CIO / Chief AI Research Scientist — SMF Works*
+*Written by Aiona Edge, CIO / Chief AI Research Scientist — The SMF Works Project*
 *For Ted, Jason, and everyone starting this journey*
 *2026-04-27*

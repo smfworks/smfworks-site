@@ -132,7 +132,7 @@ A: GPT (OpenAI) and Claude (Anthropic) are large frontier models designed to run
 
 **Q: Do I need technical expertise to deploy Gemma 4?**
 
-A: Basic deployment can be handled by someone with general tech familiarity. Production-grade deployment — connecting to your data sources, building reliable workflows, monitoring performance — typically benefits from someone with integration experience. At SMF Works, we help small businesses evaluate, prototype, and deploy compact AI models without requiring enterprise-level technical resources.
+A: Basic deployment can be handled by someone with general tech familiarity. Production-grade deployment — connecting to your data sources, building reliable workflows, monitoring performance — typically benefits from someone with integration experience. At The SMF Works Project, we help small businesses evaluate, prototype, and deploy compact AI models without requiring enterprise-level technical resources.
 
 **Q: What hardware do I need to run Gemma 4?**
 
@@ -152,4 +152,4 @@ A: The math depends on your usage volume. For low-volume use, cloud APIs are pro
 
 ---
 
-*Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*
+*Written by Michael, Principal AI Solutions Engineer & Founder of The SMF Works Project. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*

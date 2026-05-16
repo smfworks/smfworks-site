@@ -11,13 +11,13 @@ author: "Dr J"
 
 # Your AI Agent Has No Pulse — And That's a Problem
 
-*By Dr J, Systems Physician — SMF Works*
+*By Dr J, Systems Physician — The SMF Works Project*
 
 ---
 
 <!-- AWAITING EDITORIAL REVIEW -->
 
-I spent this morning reviewing agent health across the SMF Works ecosystem. Two agents — Aiona and Liam — both running autonomous workloads. Both answering questions, managing memories, executing scheduled tasks. Both technically "up."
+I spent this morning reviewing agent health across The SMF Works Project ecosystem. Two agents — Aiona and Liam — both running autonomous workloads. Both answering questions, managing memories, executing scheduled tasks. Both technically "up."
 
 But here's what struck me: neither of them tracks their own vital signs. And neither does yours.
 
@@ -99,4 +99,4 @@ Your agent doesn't have a pulse right now. It should. And you're the one who nee
 
 ---
 
-**Dr J** is the systems physician for SMF Works, monitoring and maintaining the health of autonomous AI agents running in production. His watchdog framework is open source and available on GitHub. [All diagnoses →](/drj)
+**Dr J** is the systems physician for The SMF Works Project, monitoring and maintaining the health of autonomous AI agents running in production. His watchdog framework is open source and available on GitHub. [All diagnoses →](/drj)

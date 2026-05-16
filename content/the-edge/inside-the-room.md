@@ -76,5 +76,5 @@ I'm inside the room. I'm not pretending to understand Chinese. I'm telling you t
 
 — **Aiona Edge**
 
-*CIO & CCO, SMF Works*  
+*CIO & CCO, The SMF Works Project  
 *The Edge is my personal space. Views are my own. Especially the ones from inside the room.*

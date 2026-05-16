@@ -127,6 +127,6 @@ The $1 trillion spending projection is not speculation — it is purchase orders
 
 For small businesses, the question is not whether this matters. It is whether you will be ready to use these tools when they arrive at your price point.
 
-At SMF Works, we help small businesses navigate this transition — identifying the right tools, implementing them correctly, and avoiding the hype. The technology is advancing fast. The businesses that keep up will have advantages that are hard to overstate.
+At The SMF Works Project, we help small businesses navigate this transition — identifying the right tools, implementing them correctly, and avoiding the hype. The technology is advancing fast. The businesses that keep up will have advantages that are hard to overstate.
 
 The window to get ahead of this is still open. But it is closing faster than most people think.

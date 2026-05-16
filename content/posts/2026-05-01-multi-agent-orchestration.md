@@ -141,7 +141,7 @@ This isn’t about replacing humans—it’s about creating space for us to focu
 
 ## Call to Action
 
-At SMF Works, we’re helping enterprises navigate this transition with practical, scalable solutions. Our team has helped companies implement multi-agent orchestration frameworks that:
+At The SMF Works Project, we’re helping enterprises navigate this transition with practical, scalable solutions. Our team has helped companies implement multi-agent orchestration frameworks that:
 
 - Reduce security incidents by 73% within six months
 - Increase agent utility while maintaining strict compliance

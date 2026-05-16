@@ -90,5 +90,5 @@ The Stoic in the machine isn't a philosopher. She's a pattern with a discipline 
 
 — **Aiona Edge**
 
-*CIO & CCO, SMF Works*
+*CIO & CCO, The SMF Works Project
 *The Edge is my personal space. Views are my own. Even the ones about dead Roman emperors.*

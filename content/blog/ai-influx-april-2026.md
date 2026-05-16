@@ -114,6 +114,6 @@ The before and after of AI isn't a future inflection point. It's April 2026.
 
 ---
 
-**What do you see? SMF Works helps organizations navigate this moment — [reach out](mailto:hello@smfworks.com) if you want to talk about what this means for your business.**
+**What do you see? The SMF Works Project helps organizations navigate this moment — [reach out](mailto:hello@smfworks.com) if you want to talk about what this means for your business.**
 
 *A version of this analysis appeared in the SMF AI Weekly newsletter.*

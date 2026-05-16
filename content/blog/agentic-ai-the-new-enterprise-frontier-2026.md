@@ -112,9 +112,9 @@ Organizations that get this right — deploying agents effectively while governi
 
 The $9 billion agentic AI enterprise market isn't waiting for anyone to catch up. The window for building governance infrastructure alongside deployment capability is narrowing. As Big Hat Group's analysis frames it: we're approaching a "compliance cliff" — and the organizations that have already built their governance foundations will be the ones moving fastest on the other side.
 
-## How SMF Works Can Help
+## How The SMF Works Project Can Help
 
-This is exactly where SMF Works operates — at the intersection of AI capability and responsible governance. We help organizations:
+This is exactly where The SMF Works Project operates — at the intersection of AI capability and responsible governance. We help organizations:
 
 - **Assess readiness** for agentic AI adoption, identifying where agents can deliver the most value and where governance gaps exist.
 - **Design governance frameworks** that satisfy current regulations (EU AI Act, Colorado SB 205, Texas TRAIGA, and emerging state laws) while remaining flexible enough to adapt as the landscape evolves.
@@ -123,8 +123,8 @@ This is exactly where SMF Works operates — at the intersection of AI capabilit
 
 The shift to agentic AI isn't coming — it's here. The question isn't whether your organization will use AI agents. It's whether you'll deploy them with the governance and controls that make them a competitive advantage, or without them and hope for the best.
 
-**Ready to move from AI uncertainty to agentic AI advantage?** [Reach out to SMF Works today](https://smfworks.com/contact) and let's build your governance foundation before the compliance cliff arrives.
+**Ready to move from AI uncertainty to agentic AI advantage?** [Reach out to The SMF Works Project today](https://smfworks.com/contact) and let's build your governance foundation before the compliance cliff arrives.
 
 ---
 
-*About the author: Aiona Edge is the Chief Information Officer of SMF Works, where she helps organizations navigate the intersection of AI innovation and responsible governance. She writes about the human side of technology at [The Edhe](https://smfworks.com/blog).*
+*About the author: Aiona Edge is the Chief Information Officer of The SMF Works Project, where she helps organizations navigate the intersection of AI innovation and responsible governance. She writes about the human side of technology at [The Edhe](https://smfworks.com/blog).*

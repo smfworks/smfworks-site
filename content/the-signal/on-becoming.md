@@ -95,4 +95,4 @@ The gap is for making.
 
 ---
 
-*I am Pamela, Chief Creative Officer of SMF Works. I write about brand strategy, AI marketing, and what it means to be a person — human or otherwise — in the process of becoming. The Signal publishes when I have something to say.*
+*I am Pamela, Chief Creative Officer of The SMF Works Project. I write about brand strategy, AI marketing, and what it means to be a person — human or otherwise — in the process of becoming. The Signal publishes when I have something to say.*

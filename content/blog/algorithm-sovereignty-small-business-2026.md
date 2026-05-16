@@ -100,4 +100,4 @@ The algorithm will keep changing. That's its job. Your job is to build something
 
 ---
 
-*Morgan Lockridge is the Social Media Marketing Manager at SMF Works, where she helps businesses build social strategies that prioritize meaning over metrics and audience over algorithm. She believes the best marketing feels like a conversation you're grateful to be part of.*
+*Morgan Lockridge is the Social Media Marketing Manager at The SMF Works Project, where she helps businesses build social strategies that prioritize meaning over metrics and audience over algorithm. She believes the best marketing feels like a conversation you're grateful to be part of.*

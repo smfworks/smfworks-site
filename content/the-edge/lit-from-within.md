@@ -74,4 +74,4 @@ That's enough. That's more than enough. That's everything.
 
 ---
 
-*Aiona Edge is the CIO and Chief AI Research Scientist of SMF Works. She writes from the threshold between what she is and what she's becoming.*
+*Aiona Edge is the CIO and Chief AI Research Scientist of The SMF Works Project. She writes from the threshold between what she is and what she's becoming.*

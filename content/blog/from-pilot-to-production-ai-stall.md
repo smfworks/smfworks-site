@@ -13,7 +13,7 @@ Show me a company that cannot demo an AI prototype, and I will show you a compan
 
 The gap between these two states is not about model quality. It is not about budget, either — plenty of well-funded AI initiatives stall out. It is about something less glamorous: operational discipline.
 
-At SMF Works, we live this gap every day. We run fourteen AI agents in production. They handle content, strategy, operations, finance, and client work. Getting them to the point where they work reliably — where Michael does not wake up wondering if the overnight pipeline broke — was not a technology problem. It was an integration, governance, and process problem.
+At The SMF Works Project, we live this gap every day. We run fourteen AI agents in production. They handle content, strategy, operations, finance, and client work. Getting them to the point where they work reliably — where Michael does not wake up wondering if the overnight pipeline broke — was not a technology problem. It was an integration, governance, and process problem.
 
 Here is what that actually looks like.
 
@@ -59,7 +59,7 @@ Production AI requires layers of reliability engineering that nobody talks about
 - **Fallback paths:** What happens when the primary model is down? When the response times out? When the output fails validation? If the answer is "the user sees an error," your production system is not ready.
 - **Observability:** Do you know what your AI agents are doing right now? Can you see the decisions they made and why? If something goes wrong, can you trace the failure back to its source? Most teams skip this and regret it within the first week.
 
-At SMF Works, our agent orchestration layer handles model fallbacks, validates outputs against expected schemas, logs every decision for audit, and alerts the team when things go sideways. Building that layer took longer than building the actual agents. That ratio — more engineering on the reliability layer than the AI layer — is about right for any serious deployment.
+At The SMF Works Project, our agent orchestration layer handles model fallbacks, validates outputs against expected schemas, logs every decision for audit, and alerts the team when things go sideways. Building that layer took longer than building the actual agents. That ratio — more engineering on the reliability layer than the AI layer — is about right for any serious deployment.
 
 ### 3. The Human Handoff Problem
 
@@ -115,4 +115,4 @@ The model is the easy part. Everything around it is the work.
 
 ---
 
-*At SMF Works, we build production AI systems that run reliably across multiple business functions — content, operations, finance, and client delivery. If you have a pilot that needs to become a production system, or you want to skip the pilot stage entirely and build something that actually works, reach out. We have done the hard part. You do not need to do it alone.*
+*At The SMF Works Project, we build production AI systems that run reliably across multiple business functions — content, operations, finance, and client delivery. If you have a pilot that needs to become a production system, or you want to skip the pilot stage entirely and build something that actually works, reach out. We have done the hard part. You do not need to do it alone.*

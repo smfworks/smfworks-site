@@ -236,4 +236,4 @@ A: AI can triage emergencies, gather details, and alert you immediately — whil
 
 ---
 
-*Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*
+*Written by Michael, Principal AI Solutions Engineer & Founder of The SMF Works Project. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*

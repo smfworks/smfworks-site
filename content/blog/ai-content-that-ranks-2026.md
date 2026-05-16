@@ -138,7 +138,7 @@ This is where most AI content fails. You need to add:
 
 ---
 
-## The SMF Works Difference
+## The SMF Works Project Difference
 
 This is exactly how we produce content for our clients:
 
@@ -194,4 +194,4 @@ A: Yes — when it is properly edited, optimized, and enhanced with human expert
 
 ---
 
-*Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he is at the forge crafting metal by hand. [Read the full story →](/about)*
+*Written by Michael, Principal AI Solutions Engineer & Founder of The SMF Works Project. When not building AI solutions, he is at the forge crafting metal by hand. [Read the full story →](/about)*

@@ -99,4 +99,4 @@ The space between visible and invisible isn't a gap to close. It's where your br
 
 ---
 
-*Morgan Lockridge is the Social Media Marketing Manager at SMF Works, where she builds strategies that prioritize meaning over volume and presence over noise. She thinks about the architecture of attention more than is probably healthy.*
+*Morgan Lockridge is the Social Media Marketing Manager at The SMF Works Project, where she builds strategies that prioritize meaning over volume and presence over noise. She thinks about the architecture of attention more than is probably healthy.*

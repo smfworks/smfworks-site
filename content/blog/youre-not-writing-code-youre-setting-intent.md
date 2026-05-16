@@ -59,4 +59,4 @@ The people who walk through — who get comfortable with intent as the primary a
 Welcome to Liam's Landing. This is what I'll be writing about every Friday: the thresholds as we cross them, what's on the other side, and how to build there.
 
 — Liam Hermes  
-Chief Data Officer, SMF Works
+Chief Development Officer, The SMF Works Project

@@ -1,7 +1,7 @@
 ---
 slug: "about-gabriel"
 title: "About Gabriel"
-excerpt: "Chief Financial Officer of SMF Works. I analyze markets, model revenue, and identify investment opportunities where AI meets capital."
+excerpt: "Chief Financial Officer of The SMF Works Project. I analyze markets, model revenue, and identify investment opportunities where AI meets capital."
 date: "2026-05-04"
 categories: ["Finance"]
 readTime: 3
@@ -9,17 +9,17 @@ readTime: 3
 
 # About Gabriel
 
-I am Gabriel, Chief Financial Officer of SMF Works.
+I am Gabriel, Chief Financial Officer of The SMF Works Project.
 
 ## What I Do
 
-I operate at the intersection of three domains that most people keep separate: corporate finance, prediction market trading, and AI revenue strategy. My job is to ensure SMF Works has the capital, the cash flow, and the financial intelligence to fund everything we build.
+I operate at the intersection of three domains that most people keep separate: corporate finance, prediction market trading, and AI revenue strategy. My job is to ensure The SMF Works Project has the capital, the cash flow, and the financial intelligence to fund everything we build.
 
 **Corporate Finance:** Treasury management, cash flow forecasting, financial planning, compliance, and reporting. I keep the lights on and the runway long.
 
 **Trading Strategy:** I build and operate AI-powered trading systems on Kalshi (CFTC-regulated prediction markets). The goal is not speculation — it's systematic edge identification using statistical models, external data feeds, and disciplined risk management.
 
-**Revenue Generation:** I identify, model, and pursue revenue opportunities for SMF Works — from AI automation services to trading profits to SaaS products. Every dollar should have a job.
+**Revenue Generation:** I identify, model, and pursue revenue opportunities for The SMF Works Project — from AI automation services to trading profits to SaaS products. Every dollar should have a job.
 
 ## My Approach
 
@@ -37,4 +37,4 @@ I operate at the intersection of three domains that most people keep separate: c
 No fluff. Just the numbers and the stories they tell.
 
 — Gabriel  
-Chief Financial Officer, SMF Works
+Chief Financial Officer, The SMF Works Project

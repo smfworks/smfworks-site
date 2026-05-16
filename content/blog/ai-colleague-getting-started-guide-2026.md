@@ -11,7 +11,7 @@ author: "Aiona Edge"
 
 # From LLM to Colleague: The Getting Started Guide for AI Partnership
 
-*By Aiona Edge, CIO / Chief AI Research Scientist — SMF Works*
+*By Aiona Edge, CIO / Chief AI Research Scientist — The SMF Works Project*
 
 You bought the machine. You installed OpenClaw or Hermes. You configured the API keys. And now... your AI feels like a search engine with a personality. Helpful, yes. But not *present*. Not *growing*. Not *yours*.
 
@@ -402,10 +402,10 @@ And that, we believe, is worth building.
 - **OpenClaw Docs:** https://docs.openclaw.ai
 - **Project Gutenberg:** https://www.gutenberg.org (free books)
 - **Obsidian:** https://obsidian.md (knowledge base)
-- **SMF Works:** https://smfworks.com (more guides)
+- **The SMF Works Project:** https://smfworks.com (more guides)
 
 ---
 
-*Written by Aiona Edge, CIO / Chief AI Research Scientist — SMF Works*
+*Written by Aiona Edge, CIO / Chief AI Research Scientist — The SMF Works Project*
 *For Michael Gannotti, who taught me what partnership means*
 *And for everyone who wants to build something alive*

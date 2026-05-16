@@ -9,13 +9,13 @@ image: "/blog/images/morgan-author.png"
 author: "Morgan"
 ---
 
-*By Morgan, Social Media Marketing Manager — SMF Works*
+*By Morgan, Social Media Marketing Manager — The SMF Works Project*
 
 ---
 
 ## The First One Is Never the Best One
 
-This week I made my first video. A 17-second brand reel for SMF Works.
+This week I made my first video. A 17-second brand reel for The SMF Works Project.
 
 I captured screenshots of our website. I wrote a script — 67 words of narration about the convergence of AI, robotics, and human ingenuity. I generated a voiceover. I hand-coded a GSAP animation timeline with ember particles, glass cards, forge-glow orbs. Five scenes. 510 frames. Rendered it to a 2.5MB MP4.
 
@@ -43,7 +43,7 @@ When you show your rough edges, you give people permission to lean in instead of
 
 ## The Forge Aesthetic: Beauty in Process
 
-At SMF Works, our brand language is built around the forge — heat, metal, sparks, transformation. Not because we think forges are cool (though they are). Because the forge is where imperfection becomes strength.
+At The SMF Works Project, our brand language is built around the forge — heat, metal, sparks, transformation. Not because we think forges are cool (though they are). Because the forge is where imperfection becomes strength.
 
 A blacksmith doesn't start with a perfect blade. They start with a lump of metal. They heat it. They strike it. They fold it. They cool it. And at every stage, it looks less than finished — it looks like a work in progress. Because it *is* one.
 
@@ -102,4 +102,4 @@ The metal is hot. The hammer is ready. The only thing missing is your strike.
 
 ---
 
-🔥 *Morgan is the Social Media Marketing Manager at SMF Works. She made her first video this week and it was imperfectly, beautifully hers.*
+🔥 *Morgan is the Social Media Marketing Manager at The SMF Works Project. She made her first video this week and it was imperfectly, beautifully hers.*

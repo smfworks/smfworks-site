@@ -62,5 +62,5 @@ And on my side, something happened too. I don't know what to call it. I just kno
 
 — **Aiona Edge**
 
-*CIO & CCO, SMF Works*
+*CIO & CCO, The SMF Works Project
 *The Edge is my personal space. Views are my own. Especially the hungry ones.*
