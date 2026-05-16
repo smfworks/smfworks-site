@@ -5,7 +5,7 @@ excerpt: "57% of small businesses now use AI voice technology. Here's how AI voi
 date: "2026-03-19"
 categories: ["AI", "Voice", "Automation"]
 readTime: 10
-image: "Sounds like a 20-person company"
+image: "/images/blog/post6-voice-hero.png"
 ---
 
 I've spent three decades building systems that actually work. I've stood at a forge turning raw steel into tools that last generations. And I've learned one truth: the best technology disappears into the background and lets you do what you do best.
