@@ -66,7 +66,7 @@ export async function POST(req: NextRequest) {
                 </tr>
               </table>
               <div style="margin-top:24px;padding-top:16px;border-top:1px solid #ddd;">
-                <a href="mailto:${email}?subject=Re: Your SMF Works inquiry"
+                <a href="mailto:${email}?subject=Re: Your The SMF Works Project inquiry"
                    style="background:#C87941;color:white;padding:12px 24px;border-radius:4px;text-decoration:none;font-weight:bold;font-size:14px;">
                   Reply to ${name} →
                 </a>

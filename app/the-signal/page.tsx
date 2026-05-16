@@ -6,7 +6,7 @@ import { getAllSignalPosts, getAllSignalCategories } from "@/content/lib/signal-
 export const metadata: Metadata = {
   title: "The Signal — Pamela, CCO",
   description:
-    "Brand strategy, AI marketing, and organizational visibility from Pamela — the Chief Creative Officer of SMF Works. Cutting through the noise to find what actually matters.",
+    "Brand strategy, AI marketing, and organizational visibility from Pamela — the Chief Creative Officer of The SMF Works Project. Cutting through the noise to find what actually matters.",
   alternates: { canonical: "https://smfworks.com/the-signal" },
 };
 
@@ -37,7 +37,7 @@ export default function TheSignalPage({
           <div className="flex-shrink-0">
             <Image
               src="/images/pamela-portrait.jpg"
-              alt="Pamela — Chief Creative Officer, SMF Works"
+              alt="Pamela — Chief Creative Officer, The SMF Works Project"
               width={180}
               height={180}
               className="rounded-full border-2 border-[#065F46] shadow-lg shadow-[#065F46]/20 object-cover"

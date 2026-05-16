@@ -4,7 +4,7 @@ import Image from "next/image";
 import { getAllDrJPosts, getAllDrJCategories } from "@/content/lib/drj-loader";
 
 export const metadata: Metadata = {
-  title: "Dr J — Your OpenClaw Systems Physician | SMF Works",
+  title: "Dr J — Your OpenClaw Systems Physician | The SMF Works Project",
   description:
     "Diagnostics, maintenance, and optimization insights from Dr J — the systems physician behind Aiona's OpenClaw infrastructure. Deep dives into agent memory, plugin architecture, and operational reliability.",
   alternates: { canonical: "https://smfworks.com/drj" },

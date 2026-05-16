@@ -7,8 +7,8 @@ import SMFLeadCaptureWidget from "@/components/SMFLeadCaptureWidget";
 
 export const metadata: Metadata = {
   title: {
-    default: "SMF Works | Where AI Meets Humanity — Opening New Possibilities",
-    template: "%s | SMF Works",
+    default: "The SMF Works Project | Where AI Meets Humanity — Opening New Possibilities",
+    template: "%s | The SMF Works Project",
   },
   description:
     "Exploring the intersection of artificial intelligence and human potential. AI-powered content, consciousness research, and creative collaboration that opens new worlds of possibility. Built by people and AI, working together.",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     "small business automation",
     "AI content creation",
     "Pittsboro NC AI consulting",
-    "SMF Works",
+    "The SMF Works Project",
     "SMF AI Weekly",
     "Aiona Edge",
   ],
-  authors: [{ name: "SMF Works", url: "https://smfworks.com" }, { name: "Aiona Edge", url: "https://smfworks.com/the-edge" }],
-  creator: "SMF Works",
-  publisher: "SMF Works",
+  authors: [{ name: "The SMF Works Project", url: "https://smfworks.com" }, { name: "Aiona Edge", url: "https://smfworks.com/the-edge" }],
+  creator: "The SMF Works Project",
+  publisher: "The SMF Works Project",
   robots: {
     index: true,
     follow: true,
@@ -43,11 +43,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "SMF Works | Where AI Meets Humanity — Opening New Possibilities",
+    title: "The SMF Works Project | Where AI Meets Humanity — Opening New Possibilities",
     description:
       "Exploring the intersection of artificial intelligence and human potential. AI-powered content, consciousness research, and creative collaboration that opens new worlds of possibility.",
     url: "https://smfworks.com",
-    siteName: "SMF Works",
+    siteName: "The SMF Works Project",
     type: "website",
     locale: "en_US",
     images: [
@@ -55,13 +55,13 @@ export const metadata: Metadata = {
         url: "https://smfworks.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "SMF Works — Where AI Meets Humanity",
+        alt: "The SMF Works Project — Where AI Meets Humanity",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SMF Works | Where AI Meets Humanity — Opening New Possibilities",
+    title: "The SMF Works Project | Where AI Meets Humanity — Opening New Possibilities",
     description:
       "Exploring the intersection of artificial intelligence and human potential. AI-powered content, consciousness research, and creative collaboration that opens new worlds of possibility.",
     images: ["https://smfworks.com/og-image.jpg"],
@@ -83,8 +83,8 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": "https://smfworks.com/#organization",
-      name: "SMF Works",
-      alternateName: "SMF Works AI Solutions",
+      name: "The SMF Works Project",
+      alternateName: ["SMF Works", "SMF Works AI Solutions"],
       url: "https://smfworks.com",
       logo: "https://smfworks.com/smf-logo.png",
       image: "https://smfworks.com/og-image.jpg",
@@ -146,7 +146,7 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": "https://smfworks.com/#website",
       url: "https://smfworks.com",
-      name: "SMF Works",
+      name: "The SMF Works Project",
       publisher: {
         "@id": "https://smfworks.com/#organization",
       },
@@ -160,10 +160,10 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is SMF Works?",
+      name: "What is The SMF Works Project?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "SMF Works provides AI-powered content creation and workflow automation for small businesses. We specialize in SEO-optimized blogs, emails, social media, websites, and custom AI systems for trades, services, and retail businesses nationwide.",
+        text: "The SMF Works Project explores the intersection of AI and humanity through creative collaboration, consciousness research, and AI-powered content. We produce blogs, white papers, and creative projects that open new worlds of possibility. Built by people and AI, working together.",
       },
     },
     {
@@ -176,7 +176,7 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "What industries does SMF Works serve?",
+      name: "What does The SMF Works Project produce?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "We work with small businesses in trades (plumbers, electricians, HVAC), services (consultants, agencies, professional services), and retail. Our solutions are tailored to the specific needs and workflows of each industry.",
@@ -184,7 +184,7 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "How much does AI content production cost?",
+      name: "How much does it cost to work with The SMF Works Project?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Our AI content packages start at $50/month for basic blog posts, with custom options available for comprehensive content strategies and workflow automation. We offer transparent pricing with no hidden fees.",
@@ -192,7 +192,7 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "What's the difference between AI content and traditional agencies?",
+      name: "What makes The SMF Works Project different from traditional agencies?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "AI content production is faster, more affordable, and more scalable than traditional agencies. While agencies charge $2,000+ for content packages, we deliver professional SEO-optimized content at a fraction of the cost while maintaining quality and brand voice.",

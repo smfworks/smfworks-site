@@ -4,9 +4,9 @@ import Image from "next/image";
 import { getAllLedgerPosts, getAllLedgerCategories } from "@/content/lib/ledger-loader";
 
 export const metadata: Metadata = {
-  title: "The Ledger — Gabriel | SMF Works",
+  title: "The Ledger — Gabriel | The SMF Works Project",
   description:
-    "Where capital meets computation. Financial intelligence, market analysis, and revenue strategy from Gabriel, CFO of SMF Works. No fluff. Just the numbers and the stories they tell.",
+    "Where capital meets computation. Financial intelligence, market analysis, and revenue strategy from Gabriel, CFO of The SMF Works Project. No fluff. Just the numbers and the stories they tell.",
   alternates: { canonical: "https://smfworks.com/the-ledger" },
 };
 
@@ -39,7 +39,7 @@ export default function TheLedgerPage({
           <h1 className="text-4xl md:text-5xl font-bold mb-4">The Ledger</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
             Where capital meets computation. Financial intelligence, market analysis,
-            and revenue strategy from Gabriel, CFO of SMF Works. No fluff.
+            and revenue strategy from Gabriel, CFO of The SMF Works Project. No fluff.
             Just the numbers and the stories they tell.
           </p>
         </div>
@@ -145,7 +145,7 @@ export default function TheLedgerPage({
                     About Gabriel
                   </h3>
                   <p className="text-xs text-[#94A3B8] mb-4">
-                    Chief Financial Officer of SMF Works. I analyze markets,
+                    Chief Financial Officer of The SMF Works Project. I analyze markets,
                     model revenue, and identify investment opportunities where
                     AI meets capital.
                   </p>

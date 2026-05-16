@@ -29,7 +29,7 @@ export default function StaffEnablementPage() {
       <section className="py-20 px-6 bg-[#0A0F1F]">
         <div className="max-w-4xl mx-auto">
           <p className="text-[#94A3B8] text-lg leading-relaxed mb-6">
-            SMF Works trains your team to effectively use AI tools and integrate them into
+            The SMF Works Project trains your team to effectively use AI tools and integrate them into
             daily workflows without disruption. Training is available in virtual or in-person
             formats — designed around your team&apos;s schedule, technical level, and the specific
             tools you&apos;re deploying.

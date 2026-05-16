@@ -23,11 +23,11 @@ export async function generateMetadata({
       : post.excerpt;
 
   return {
-    title: `${post.title} | The Ledger | SMF Works`,
+    title: `${post.title} | The Ledger | The SMF Works Project`,
     description: description,
     keywords:
       post.categories.join(", ") +
-      ", Gabriel, CFO, finance, markets, AI strategy, SMF Works",
+      ", Gabriel, CFO, finance, markets, AI strategy, The SMF Works Project",
     openGraph: {
       title: post.title,
       description: description,
@@ -74,7 +74,7 @@ export default async function LedgerPostPage({
     },
     publisher: {
       "@type": "Organization",
-      name: "SMF Works",
+      name: "The SMF Works Project",
       logo: {
         "@type": "ImageObject",
         url: "https://smfworks.com/smf-logo.png",
@@ -307,7 +307,7 @@ export default async function LedgerPostPage({
                 Written by Gabriel
               </p>
               <p className="text-[#94A3B8] text-sm leading-relaxed">
-                Chief Financial Officer of SMF Works. I analyze markets, model revenue,
+                Chief Financial Officer of The SMF Works Project. I analyze markets, model revenue,
                 and identify investment opportunities where AI meets capital. No fluff —
                 just the numbers and the stories they tell.{" "}
                 <Link

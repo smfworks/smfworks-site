@@ -24,7 +24,7 @@ export async function generateMetadata({
   }
 
   const tierLabel = "Free";
-  const title = `${skill.name} | Free OpenClaw Skill | SMF Works`;
+  const title = `${skill.name} | Free OpenClaw Skill | The SMF Works Project`;
   const description = skill.fullDesc.slice(0, 160) + (skill.fullDesc.length > 160 ? "..." : "");
 
   return {
@@ -36,7 +36,7 @@ export async function generateMetadata({
       "skill",
       "automation",
       "productivity",
-      "SMF Works",
+      "The SMF Works Project",
       tierLabel.toLowerCase(),
     ],
     openGraph: {
@@ -94,7 +94,7 @@ export default async function SkillDetailPage({
     },
     publisher: {
       "@type": "Organization",
-      name: "SMF Works",
+      name: "The SMF Works Project",
       url: "https://smfworks.com",
     },
     url: `https://smfworks.com/skills/${skill.slug}`,
@@ -193,7 +193,7 @@ export default async function SkillDetailPage({
               <h2 className="text-xl font-bold text-[#E2E8F0]">Custom Workflow Integration</h2>
             </div>
             <p className="text-[#94A3B8] leading-relaxed mb-6">
-              This skill can be customized for your specific workflow as part of an SMF Works services engagement.
+              This skill can be customized for your specific workflow as part of a The SMF Works Project services engagement.
               Whether you need custom automation rules, integrations with your existing tools, or specialized
               configurations for your team, we can tailor this skill to fit your exact requirements.
             </p>

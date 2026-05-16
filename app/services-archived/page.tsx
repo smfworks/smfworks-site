@@ -15,7 +15,7 @@ const serviceSchema = {
   serviceType: "AI Content Production",
   provider: {
     "@type": "Organization",
-    name: "SMF Works",
+    name: "The SMF Works Project",
     url: "https://smfworks.com",
   },
   areaServed: {

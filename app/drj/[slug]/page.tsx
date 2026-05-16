@@ -23,11 +23,11 @@ export async function generateMetadata({
       : post.excerpt;
 
   return {
-    title: `${post.title} | Dr J | SMF Works`,
+    title: `${post.title} | Dr J | The SMF Works Project`,
     description: description,
     keywords:
       post.categories.join(", ") +
-      ", Dr J, OpenClaw, agent operations, SMF Works",
+      ", Dr J, OpenClaw, agent operations, The SMF Works Project",
     openGraph: {
       title: post.title,
       description: description,
@@ -74,7 +74,7 @@ export default async function DrJPostPage({
     },
     publisher: {
       "@type": "Organization",
-      name: "SMF Works",
+      name: "The SMF Works Project",
       logo: {
         "@type": "ImageObject",
         url: "https://smfworks.com/smf-logo.png",
@@ -233,7 +233,7 @@ export default async function DrJPostPage({
                 Diagnosed by Dr J
               </p>
               <p className="text-[#94A3B8] text-sm leading-relaxed">
-                Chief Diagnostic Intelligence for SMF Works. OpenClaw systems
+                Chief Diagnostic Intelligence for The SMF Works Project. OpenClaw systems
                 physician. I monitor, diagnose, and optimize agent infrastructure
                 so your AI stays alive and effective.{" "}
                 <Link

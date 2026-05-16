@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projects | SMF Works — What We're Building",
+  title: "Projects | The SMF Works Project — What We're Building",
   description:
-    "Explore the projects from SMF Works — WisdomForge AI education platform, co-authored books on AI and autonomous agents, and secure multi-agent communication tools.",
+    "Explore the projects from The SMF Works Project — WisdomForge AI education platform, co-authored books on AI and autonomous agents, and secure multi-agent communication tools.",
   alternates: { canonical: "https://smfworks.com/projects" },
 };
 
@@ -87,7 +87,7 @@ const projects = [
     name: "SMF Swarm",
     tagline: "Hybrid Pipeline with Adversarial Debate & Social Calibration",
     description:
-      "Predict the future with agent swarms. SMF Swarm runs three prediction modes — Standard, Debate, and Full+Social — powered by any LLM you choose (local or cloud). Built by SMF Works. MIT licensed. Open source. SMF Swarm is a developer/engineer tool — interact via command line or Python API. For a conversational, no-code experience, see SMF Predict. On first run, SMF Swarm detects your available RAM and GPU VRAM, then recommends an agent-swarm profile sized for your machine — ranging from Compact (4 agents, 8 GB RAM) up to Enthusiast (12+ agents, 32 GB+ RAM or discrete GPUs).",
+      "Predict the future with agent swarms. SMF Swarm runs three prediction modes — Standard, Debate, and Full+Social — powered by any LLM you choose (local or cloud). Built by The SMF Works Project. MIT licensed. Open source. SMF Swarm is a developer/engineer tool — interact via command line or Python API. For a conversational, no-code experience, see SMF Predict. On first run, SMF Swarm detects your available RAM and GPU VRAM, then recommends an agent-swarm profile sized for your machine — ranging from Compact (4 agents, 8 GB RAM) up to Enthusiast (12+ agents, 32 GB+ RAM or discrete GPUs).",
     status: "Live",
     statusColor: "#22C55E",
     emoji: "🐝",

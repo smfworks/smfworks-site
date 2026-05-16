@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Concierge OpenClaw Installation & Configuration | SMF Works",
+  title: "Concierge OpenClaw Installation & Configuration | The SMF Works Project",
   description:
     "Full-service OpenClaw installation and custom configuration. We install Linux, OpenClaw, configure LLMs, and set up custom skills. Includes lifetime access to all SMF Pro skills.",
   alternates: { canonical: "https://smfworks.com/services/concierge-openclaw-installation" },

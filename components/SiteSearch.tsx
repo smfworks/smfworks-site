@@ -62,13 +62,13 @@ const SEARCH_INDEX: SearchResult[] = [
     type: "page",
   },
   {
-    title: "About SMF Works",
+    title: "About The SMF Works Project",
     excerpt: "Founded by a Principal AI Solutions Engineer with 30 years of enterprise experience. Three dimensions: The Engineer, The Forger, The Creator.",
     url: "/about",
     type: "page",
   },
   {
-    title: "Contact SMF Works",
+    title: "Contact The SMF Works Project",
     excerpt: "No pitch decks. No sales funnels. Just a real conversation about your business and where AI can actually help.",
     url: "/contact",
     type: "page",

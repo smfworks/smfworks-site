@@ -29,7 +29,7 @@ export default function OngoingOptimizationPage() {
       <section className="py-20 px-6 bg-[#0A0F1F]">
         <div className="max-w-4xl mx-auto">
           <p className="text-[#94A3B8] text-lg leading-relaxed mb-6">
-            AI evolves rapidly, and so should your systems. SMF Works offers continuous
+            AI evolves rapidly, and so should your systems. The SMF Works Project offers continuous
             monitoring and optimization of your AI workflows — including ongoing consultation,
             updates, briefings, and analysis of AI advances, their applicability, and
             opportunities for your business to exploit them.

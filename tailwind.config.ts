@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 /**
- * Tailwind configuration — SMF Works Forge aesthetic.
+ * Tailwind configuration — The SMF Works Project Forge aesthetic.
  * Source of truth for design tokens: /DESIGN.md (Google design.md spec)
  * Token registry lives in app/globals.css via @theme.
  *

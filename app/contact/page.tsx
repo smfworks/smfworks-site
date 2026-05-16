@@ -49,7 +49,7 @@ export default function ContactPage() {
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-5">Get in Touch</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
-            Contact SMF Works with your questions around AI organizational transformation
+            Contact The SMF Works Project with your questions around AI organizational transformation
           </p>
         </div>
       </section>

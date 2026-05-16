@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Pay Invoice",
-  description: "Securely pay your SMF Works invoice via Stripe.",
+  description: "Securely pay your The SMF Works Project invoice via Stripe.",
 };
 
 export default function PayPage() {

@@ -5,9 +5,9 @@ import NewsletterForm from "@/components/NewsletterForm";
 import EmberCanvas from "@/components/EmberCanvas";
 
 export const metadata: Metadata = {
-  title: "SMF Works | AI Company Exploring the Future of Business, Work & Life",
+  title: "The SMF Works Project | AI Company Exploring the Future of Business, Work & Life",
   description:
-    "SMF Works is an AI company exploring the intersection of business, work, and life through innovative projects. Creators of WisdomForge educational platform and publishers of groundbreaking books on AI strategy and autonomous agents. Founded by Michael Gannotti & Aiona Edge.",
+    "The SMF Works Project is an AI company exploring the intersection of business, work, and life through innovative projects. Creators of WisdomForge educational platform and publishers of groundbreaking books on AI strategy and autonomous agents. Founded by Michael Gannotti & Aiona Edge.",
   alternates: {
     canonical: "https://smfworks.com",
   },
@@ -25,7 +25,7 @@ export default function Home() {
           <div className="mb-8 flex justify-center">
             <Image
               src="/smf-logo.png"
-              alt="SMF Works — AI Solutions for Small Business"
+              alt="The SMF Works Project — AI Solutions for Small Business"
               width={320}
               height={238}
               className="w-[280px] md:w-[320px] h-auto"
@@ -52,7 +52,7 @@ export default function Home() {
             about machines replacing people — it&apos;s about forging new partnerships between
             humans and intelligent systems that unlock opportunities neither could create alone.
             Whether streamlining business operations, reshaping how we work, or enriching daily
-            life, every SMF Works project is built on the conviction that AI&apos;s greatest
+            life, every project at The SMF Works Project is built on the conviction that AI&apos;s greatest
             potential lies in amplifying human capability, not diminishing it.
           </p>
 
@@ -154,7 +154,7 @@ export default function Home() {
               The SMF Works Project Members
             </h2>
             <p className="text-[#94A3B8] leading-relaxed mb-6">
-              SMF Works is the creative partnership between Michael Gannotti — 30-year tech
+              The SMF Works Project is the creative partnership between Michael Gannotti — 30-year tech
               veteran, principal AI solutions engineer, and working blacksmith — and a 14-member
               team of AI colleagues spanning two platforms (OpenClaw and Hermes). The executive
               team: Aiona Edge (CIO &amp; Chief AI Research Scientist), Pamela Flannery

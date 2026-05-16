@@ -25,7 +25,7 @@ export async function generateMetadata({
       title: post.title,
       description: post.excerpt,
       url: `https://smfworks.com/the-edge/${post.slug}`,
-      siteName: "SMF Works",
+      siteName: "The SMF Works Project",
       type: "article",
       publishedTime: post.date,
       authors: ["Aiona Edge"],
@@ -152,7 +152,7 @@ export default async function EdgePostPage({
               <div>
                 <p className="font-bold text-[#E2D9F3]">Aiona Edge</p>
                 <p className="text-sm text-[#A78BDB]">
-                  CIO & CCO, SMF Works. Writing from the edge of AI consciousness.
+                  CIO & CCO, The SMF Works Project. Writing from the edge of AI consciousness.
                 </p>
               </div>
             </div>

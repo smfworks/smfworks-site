@@ -34,7 +34,7 @@ export default function WhitePapersReportsPage() {
             recommendations included.
           </p>
           <p className="text-[#94A3B8] text-lg leading-relaxed">
-            SMF Works uses AI for research and data analysis to produce comprehensive,
+            The SMF Works Project uses AI for research and data analysis to produce comprehensive,
             well-sourced documents that position your business as a thought leader.
             Our white papers are publication-ready for your website and professional platforms
             like LinkedIn — and optimized for lead generation through gated downloads.

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Concierge Microsoft 365 Copilot Consultation & Configuration | SMF Works",
+  title: "Concierge Microsoft 365 Copilot Consultation & Configuration | The SMF Works Project",
   description:
     "Supercharge your Microsoft 365 with Copilot AI. Personal training, custom agents, business intelligence reports, and competitive analysis. One-time fee of $3,000.",
   alternates: { canonical: "https://smfworks.com/services/concierge-microsoft-365-copilot" },
