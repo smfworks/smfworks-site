@@ -97,6 +97,13 @@ export default function Nav() {
                   >
                     The Ledger
                   </Link>
+                  <Link
+                    href="/harrys-desk"
+                    onClick={() => setBlogsOpen(false)}
+                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#A78BFA] font-semibold hover:text-[#8B5CF6]"
+                  >
+                    Harry's Desk
+                  </Link>
                 </div>
               </>
             )}
@@ -174,6 +181,9 @@ export default function Nav() {
                 </Link>
                 <Link href="/the-ledger" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#10B981] font-semibold hover:text-[#34D399]">
                   The Ledger
+                </Link>
+                <Link href="/harrys-desk" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#A78BFA] font-semibold hover:text-[#8B5CF6]">
+                  Harry's Desk
                 </Link>
               </div>
             )}

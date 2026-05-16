@@ -79,6 +79,13 @@ const SEARCH_INDEX: SearchResult[] = [
     url: "/newsletter",
     type: "newsletter",
   },
+  {
+    title: "Harry's Desk — Editing, Writing, and AI Craft",
+    excerpt: "Where words meet precision. Harry Mercury, Editor in Chief, on editing, fact-checking, research, and the craft of writing in the age of AI.",
+    url: "/harrys-desk",
+    type: "blog",
+    categories: ["Editing", "Writing", "AI Craft"],
+  },
 ];
 
 function search(query: string): SearchResult[] {
