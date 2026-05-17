@@ -166,6 +166,30 @@ const projects = [
     link: "https://smf-chat.vercel.app",
     external: true,
   },
+  {
+    slug: "smf-kalshi-trader",
+    name: "Kalshi Trading System",
+    tagline: "AI-Powered Prediction Market Trading System",
+    description:
+      "An autonomous trading system for Kalshi prediction markets. Features market scanning, edge detection, paper trading, and live execution with Kelly Criterion position sizing. Tracks 4,667+ markets with signal detection for price inefficiency and undervaluation patterns. Complete backtesting and performance tracking pipeline with SQLite backend.",
+    status: "Live",
+    statusColor: "#22C55E",
+    emoji: "📈",
+    link: "https://github.com/smfworks/smf-kalshi-trader",
+    external: true,
+  },
+  {
+    slug: "smf-notebooklm-video-pipeline",
+    name: "SMF NotebookLM Video Pipeline",
+    tagline: "Automated NotebookLM to Video Pipeline",
+    description:
+      "Transform NotebookLM audio briefings into polished video automatically. Ingests content, generates visual compositions with HyperFrames, and produces shareable video without manual editing. Built for teams who want to scale video production from audio content. Integrates with OpenClaw's agent ecosystem and HyperFrames rendering engine.",
+    status: "Live",
+    statusColor: "#22C55E",
+    emoji: "🎬",
+    link: "https://github.com/smfworks/smf-notebooklm-video-pipeline",
+    external: true,
+  },
 ];
 
 export default function ProjectsPage() {
