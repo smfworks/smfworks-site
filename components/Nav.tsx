@@ -104,6 +104,13 @@ export default function Nav() {
                   >
                     Harry's Desk
                   </Link>
+                  <Link
+                    href="/social-strategy"
+                    onClick={() => setBlogsOpen(false)}
+                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#D4A017] font-semibold hover:text-[#E8C547]"
+                  >
+                    Social Strategy
+                  </Link>
                 </div>
               </>
             )}
@@ -184,6 +191,9 @@ export default function Nav() {
                 </Link>
                 <Link href="/harrys-desk" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#A78BFA] font-semibold hover:text-[#8B5CF6]">
                   Harry's Desk
+                </Link>
+                <Link href="/social-strategy" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#D4A017] font-semibold hover:text-[#E8C547]">
+                  Social Strategy
                 </Link>
               </div>
             )}
