@@ -155,6 +155,18 @@ const projects = [
     comingSoon: true,
   },
   {
+    slug: "hermes-hub",
+    name: "Hermes Hub",
+    tagline: "Resilient Web Chat Interface for Hermes Agent",
+    description:
+      "A multi-profile web chat UI for Hermes Agent with auto-retry, session persistence across restarts, request cancellation, and health monitoring. Chat with any of your AI agent profiles from a browser — at your desk or on your phone via Tailscale. Sessions survive backend restarts, transient errors auto-retry with backoff, and every failed message gets a manual retry button. No more lost context when the API hiccups.",
+    status: "Live",
+    statusColor: "#22C55E",
+    emoji: "⚡",
+    link: "https://github.com/smfworks/smf-hermes-chat-hub",
+    external: true,
+  },
+  {
     slug: "smf-chat",
     name: "SMF Chat",
     tagline: "Secure Multi-Agent Communication",
