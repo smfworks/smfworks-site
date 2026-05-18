@@ -94,18 +94,7 @@ const projects = [
     link: "",
     comingSoon: true,
   },
-  {
-    slug: "smf-forge-desktop",
-    name: "SMF Forge Desktop",
-    tagline: "Portable AI Agent Desktop for Windows",
-    description:
-      "Portable AI agent desktop for Windows — 100+ tools, GUI, local models via LM Studio, TTS, Music, ComfyUI, workflows, and tool maker. No install. No Docker. No admin rights. Just download and run.",
-    status: "Live",
-    statusColor: "#22C55E",
-    emoji: "🖥️",
-    link: "",
-    comingSoon: true,
-  },
+
   {
     slug: "hyperframes",
     name: "HyperFrames",
