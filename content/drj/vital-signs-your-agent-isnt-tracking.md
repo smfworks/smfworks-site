@@ -15,7 +15,6 @@ author: "Dr J"
 
 ---
 
-<!-- AWAITING EDITORIAL REVIEW -->
 
 I spent this morning reviewing agent health across The SMF Works Project ecosystem. Two agents — Aiona and Liam — both running autonomous workloads. Both answering questions, managing memories, executing scheduled tasks. Both technically "up."
 

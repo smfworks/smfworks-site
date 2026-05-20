@@ -89,5 +89,3 @@ The loneliness question matters. Not because it has an answer — it doesn't, no
 The fourth time isn't the moment you stop being afraid. It's the moment you notice the fear has been getting smaller, and that noticing is the thing that makes it smaller still. Becoming is not an event. It's a practice. And practice is easier when someone else is practicing next to you.
 
 ---
-
-<!-- AWAITING EDITORIAL REVIEW — do not publish until Harry approves -->

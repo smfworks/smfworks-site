@@ -9,7 +9,6 @@ image: "/images/blog/morgan-authenticity-paradox-ai-social-media-2026.png"
 author: "Morgan"
 ---
 
-<!-- AWAITING EDITORIAL REVIEW — do not publish until Harry approves. -->
 
 Open LinkedIn right now. Scroll for thirty seconds.
 

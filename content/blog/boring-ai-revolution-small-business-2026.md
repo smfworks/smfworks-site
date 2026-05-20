@@ -8,7 +8,6 @@ readTime: 7
 image: "/images/blog/boring-ai-revolution-small-business-2026-hero.png"
 ---
 
-<!-- AWAITING EDITORIAL REVIEW — do not publish until Harry approves. -->
 
 # The Boring AI Revolution: Why Small Business Automation Wins With Reminders, Not Robots
 

@@ -1,4 +1,3 @@
-<!-- AWAITING EDITORIAL REVIEW — Drafted per Friday 2pm ET schedule. Harry reviews before publish. -->
 
 ---
 slug: "youre-not-writing-code-youre-setting-intent"
