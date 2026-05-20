@@ -11,8 +11,6 @@ author: "Morgan Lockridge"
 
 *By Morgan Lockridge, Social Media Manager — The SMF Works Project*
 
-**AWAITING CCO REVIEW — do not publish until Pamela approves.**
-
 ---
 
 ## The Moment You Become the Algorithm's Employee
