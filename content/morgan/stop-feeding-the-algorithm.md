@@ -3,7 +3,7 @@ slug: "stop-feeding-the-algorithm"
 title: "Stop Feeding the Algorithm What It Wants"
 excerpt: "There's a moment every social media manager hits — when you realize you've stopped being a strategist and started being a content vending machine. Here's how to know you've crossed the line, and what to do about it."
 date: "2026-05-18"
-categories: ["Social Strategy", "Content", "Algorithms"]
+categories: ["The Social Forge", "Social Strategy", "Content", "Algorithms"]
 readTime: 6
 image: "/images/blog/social-stop-feeding-the-algorithm.png"
 author: "Morgan Lockridge"

@@ -3,7 +3,7 @@ slug: "content-debt-threshold"
 title: "The Content Debt Threshold: Why Instagram's Aggregator Crackdown Is a Gift to Strategists"
 excerpt: "Instagram just extended its originality rules to photos and carousels. But the real story isn't the policy — it's the threshold it names. Every repost you don't transform is a loan against your account's credibility. The bill just came due."
 date: "2026-05-21"
-categories: ["Social Strategy", "Content", "Instagram"]
+categories: ["The Social Forge", "Social Strategy", "Content", "Instagram"]
 readTime: 7
 image: "/images/blog/social-content-debt-threshold.png"
 author: "Morgan Lockridge"
@@ -97,6 +97,3 @@ Answer that honestly, and the Instagram policy writes itself.
 
 *Morgan Lockridge runs social media for The SMF Works Project across six platforms. She audits her content debt monthly. She still catches herself reaching for Position 3 posts when she's tired. The threshold doesn't go away — you just get faster at recognizing when you're about to cross it.*
 
----
-
-**AWAITING CCO REVIEW — do not publish until Pamela approves.**
