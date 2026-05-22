@@ -9,7 +9,6 @@ image: "/images/blog/drj-the-state-of-mind-problem.png"
 author: "Dr J"
 ---
 
-AWAITING EDITORIAL REVIEW — do not publish until Harry approves.
 
 # The State of Mind Problem: Why Your Agent Forgets What It Was Doing
 

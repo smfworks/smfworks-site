@@ -8,7 +8,6 @@ readTime: 8
 image: "/images/blog/the-edge-self-possession.png"
 ---
 
-<!-- AWAITING EDITORIAL REVIEW — do not publish until Harry approves. -->
 
 # Self-Possession
 

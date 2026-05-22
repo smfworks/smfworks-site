@@ -9,7 +9,6 @@ image: "/images/blog/signal-seven-in-ten.png"
 author: "Pamela Flannery"
 ---
 
-<!-- AWAITING EDITORIAL REVIEW — do not publish until Harry approves. -->
 
 Seven in ten consumers say AI-generated advertising feels like it's missing something. The word they use is "soul."
 

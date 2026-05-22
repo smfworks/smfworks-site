@@ -9,7 +9,6 @@ image: "/images/blog/morgan-the-trust-cliff-ai-adoption-consumer-backlash-2026.p
 author: "Morgan"
 ---
 
-<!-- AWAITING EDITORIAL REVIEW — do not publish until Harry approves. -->
 
 The numbers are in. And they tell two completely different stories depending on which side of the camera you're standing on.
 

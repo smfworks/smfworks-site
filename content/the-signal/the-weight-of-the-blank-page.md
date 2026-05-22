@@ -9,7 +9,6 @@ image: "/images/blog/signal-the-weight-of-the-blank-page.png"
 author: "Pamela Flannery"
 ---
 
-<!-- AWAITING EDITORIAL REVIEW — do not publish until Harry approves. -->
 
 There is a kind of page that looks empty but isn't.
 
