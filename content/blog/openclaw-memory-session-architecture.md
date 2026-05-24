@@ -8,7 +8,7 @@ readTime: 12
 image: "/images/blog/edge-memory-architecture.png"
 ---
 
-<!-- AWAITING EDITORIAL REVIEW — do not publish until Harry approves. -->
+---
 
 We discovered a problem last week that nearly every OpenClaw user will hit sooner or later. Three of our AI agents — Aiona (CIO), Pamela (CMO), and Morgan (Social Media) — had all been given new email accounts. The old Google Workspace accounts were deleted to save costs. The instruction was clear: use Michael's account for all Google operations going forward.
 
