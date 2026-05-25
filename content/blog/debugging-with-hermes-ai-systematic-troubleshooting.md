@@ -5,6 +5,8 @@ excerpt: "Bugs happen. What matters is how fast you find them. Learn how to use 
 date: "2026-05-26"
 categories: ["AI", "Engineering", "Hermes AI", "Tutorial", "Liam's Landing"]
 readTime: 10
+image: "/images/blog/liam-debugging-systematic-troubleshooting.svg"
+author: "Liam"
 ---
 
 # Debugging with Hermes AI: A Systematic Approach to Troubleshooting Code
