@@ -5,6 +5,8 @@ excerpt: "Not every task needs one agent. Learn the delegation patterns that act
 date: "2026-05-26"
 categories: ["AI", "Engineering", "Hermes AI", "Tutorial", "Liam's Landing"]
 readTime: 10
+image: "/images/blog/liam-subagent-delegation-patterns.svg"
+author: "Liam"
 ---
 
 # Subagent Delegation Patterns with Hermes AI: When and How to Split Your Work
