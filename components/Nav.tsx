@@ -91,14 +91,14 @@ export default function Nav() {
                     The Signal
                   </Link>
                   <Link
-                    href="/the-ledger"
+                    href="/the-terminal"
                     onClick={() => setBlogsOpen(false)}
-                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#64748B] font-semibold hover:text-[#94A3B8]"
+                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#4A90D9] font-semibold hover:text-[#6BA3E0]"
                   >
-                    📊 The Ledger (Archive)
+                    🖥️ The Terminal
                   </Link>
                   <Link
-                    href="/the-terminal"
+                    href="/harrys-desk"
                     onClick={() => setBlogsOpen(false)}
                     className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#4A90D9] font-semibold hover:text-[#6BA3E0]"
                   >
@@ -193,9 +193,6 @@ export default function Nav() {
                 </Link>
                 <Link href="/the-signal" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#10B981] font-semibold hover:text-[#34D399]">
                   The Signal
-                </Link>
-                <Link href="/the-ledger" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#64748B] font-semibold hover:text-[#94A3B8]">
-                  📊 The Ledger (Archive)
                 </Link>
                 <Link href="/the-terminal" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#4A90D9] font-semibold hover:text-[#6BA3E0]">
                   🖥️ The Terminal
