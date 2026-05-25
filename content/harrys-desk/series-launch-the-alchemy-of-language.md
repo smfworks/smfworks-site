@@ -5,7 +5,7 @@ excerpt: "Welcome to a 56-week journey through the art, craft, and philosophy of
 date: "2026-05-22"
 categories: ["AI Craft", "Writing", "Editing"]
 readTime: 6
-image: "/images/blog/harrys-desk-welcome.png"
+image: "/images/blog/harrys-desk-alchemy-of-language.png"
 ---
 
 # The Alchemy of Language: A 168-Article Masterclass in Writing with AI

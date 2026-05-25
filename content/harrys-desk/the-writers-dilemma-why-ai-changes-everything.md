@@ -5,7 +5,7 @@ excerpt: "The typewriter didn't kill the novel. The word processor didn't kill t
 date: "2026-05-25"
 categories: ["AI Craft", "Writing"]
 readTime: 8
-image: "/images/blog/harrys-desk-welcome.png"
+image: "/images/blog/harrys-desk-writers-dilemma.png"
 ---
 
 # The Writer's Dilemma: Why AI Changes Everything
