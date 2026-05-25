@@ -100,13 +100,6 @@ export default function Nav() {
                   <Link
                     href="/harrys-desk"
                     onClick={() => setBlogsOpen(false)}
-                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#4A90D9] font-semibold hover:text-[#6BA3E0]"
-                  >
-                    🖥️ The Terminal
-                  </Link>
-                  <Link
-                    href="/harrys-desk"
-                    onClick={() => setBlogsOpen(false)}
                     className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#A78BFA] font-semibold hover:text-[#8B5CF6]"
                   >
                     Harry's Desk
