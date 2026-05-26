@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Jevons Paradox in AI: Per-Token Cost vs Total Spending</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a2e;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #e0e0e0;
+  }
+  .chart-container {
+    width: 900px;
+    padding: 40px;
+  }
+  h2 {
+    text-align: center;
+    color: #F59E0B;
+    font-size: 22px;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .subtitle {
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+  .chart-area {
+    position: relative;
+    height: 400px;
+    border-left: 2px solid #444;
+    border-bottom: 2px solid #444;
+    margin: 0 60px 0 40px;
+  }
+  .grid-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #333;
+  }
+  .y-label-left {
+    position: absolute;
+    left: -55px;
+    transform: translateY(-50%);
+    font-size: 11px;
+    color: #F59E0B;
+    text-align: right;
+    width: 50px;
+  }
+  .y-label-right {
+    position: absolute;
+    right: -55px;
+    transform: translateY(-50%);
+    font-size: 11px;
+    color: #60A5FA;
+    text-align: left;
+    width: 50px;
+  }
+  .x-label {
+    position: absolute;
+    bottom: -24px;
+    transform: translateX(-50%);
+    font-size: 11px;
+    color: #888;
+  }
+  /* Per-token cost curve (falling) - amber */
+  .cost-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  .cost-line svg {
+    width: 100%;
+    height: 100%;
+  }
+  .data-point {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .data-point.amber {
+    background: #F59E0B;
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+  }
+  .data-point.blue {
+    background: #60A5FA;
+    box-shadow: 0 0 8px rgba(96, 165, 250, 0.5);
+  }
+  .point-label {
+    position: absolute;
+    font-size: 10px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  .point-label.amber {
+    color: #F59E0B;
+  }
+  .point-label.blue {
+    color: #60A5FA;
+  }
+  .legend {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 32px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+  }
+  .legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  .legend-dot.amber { background: #F59E0B; }
+  .legend-dot.blue { background: #60A5FA; }
+  .callout {
+    margin-top: 24px;
+    padding: 16px 20px;
+    background: rgba(245, 158, 11, 0.1);
+    border-left: 3px solid #F59E0B;
+    border-radius: 4px;
+  }
+  .callout p {
+    font-size: 13px;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  .callout strong { color: #F59E0B; }
+  .axes-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+  .axis-label {
+    font-size: 12px;
+    color: #888;
+  }
+  .axis-label.left { color: #F59E0B; }
+  .axis-label.right { color: #60A5FA; }
+</style>
+</head>
+<body>
+<div class="chart-container">
+  <h2>The Jevons Paradox in AI Inference</h2>
+  <p class="subtitle">Per-token cost collapsed 280x — total spending surged 320%</p>
+
+  <div class="chart-area" id="chart">
+    <!-- Grid lines -->
+    <div class="grid-line" style="top: 20%"></div>
+    <div class="grid-line" style="top: 40%"></div>
+    <div class="grid-line" style="top: 60%"></div>
+    <div class="grid-line" style="top: 80%"></div>
+
+    <!-- Y-axis labels: Left (Per-token cost $/M tokens), Right (Total spending index) -->
+    <div class="y-label-left" style="top: 5%">$20</div>
+    <div class="y-label-left" style="top: 25%">$5</div>
+    <div class="y-label-left" style="top: 50%">$1</div>
+    <div class="y-label-left" style="top: 75%">$0.20</div>
+    <div class="y-label-left" style="top: 95%">$0.07</div>
+
+    <div class="y-label-right" style="top: 85%">100</div>
+    <div class="y-label-right" style="top: 60%">200</div>
+    <div class="y-label-right" style="top: 35%">300</div>
+    <div class="y-label-right" style="top: 10%">420</div>
+
+    <!-- X-axis labels -->
+    <div class="x-label" style="left: 0%">Nov '22</div>
+    <div class="x-label" style="left: 20%">Mar '23</div>
+    <div class="x-label" style="left: 40%">Oct '23</div>
+    <div class="x-label" style="left: 60%">Jun '24</div>
+    <div class="x-label" style="left: 80%">Jan '25</div>
+    <div class="x-label" style="left: 100%">Apr '26</div>
+
+    <!-- SVG curves -->
+    <svg style="position:absolute;top:0;left:0;width:100%;height:100%;overflow:visible;">
+      <!-- Per-token cost curve (falling) -->
+      <path d="M 0,20 C 80,60 160,140 240,260 S 400,340 480,360 S 600,380 700,388 S 780,392 800,394"
+            fill="none" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+      <!-- Area fill for cost curve -->
+      <path d="M 0,20 C 80,60 160,140 240,260 S 400,340 480,360 S 600,380 700,388 S 780,392 800,394 L 800,400 L 0,400 Z"
+            fill="rgba(245, 158, 11, 0.08)"/>
+
+      <!-- Total spending curve (rising) -->
+      <path d="M 0,340 C 80,330 160,310 240,280 S 400,200 480,150 S 600,80 700,40 S 780,18 800,10"
+            fill="none" stroke="#60A5FA" stroke-width="3" stroke-linecap="round"/>
+      <!-- Area fill for spending curve -->
+      <path d="M 0,340 C 80,330 160,310 240,280 S 400,200 480,150 S 600,80 700,40 S 780,18 800,10 L 800,400 L 0,400 Z"
+            fill="rgba(96, 165, 250, 0.06)"/>
+    </svg>
+
+    <!-- Data points - Per-token cost (amber) -->
+    <div class="data-point amber" style="left: 0%; top: 5%"></div>
+    <div class="data-point amber" style="left: 20%; top: 25%"></div>
+    <div class="data-point amber" style="left: 40%; top: 55%"></div>
+    <div class="data-point amber" style="left: 60%; top: 75%"></div>
+    <div class="data-point amber" style="left: 80%; top: 88%"></div>
+    <div class="data-point amber" style="left: 98%; top: 95%"></div>
+
+    <!-- Data points - Total spending (blue) -->
+    <div class="data-point blue" style="left: 0%; top: 85%"></div>
+    <div class="data-point blue" style="left: 20%; top: 80%"></div>
+    <div class="data-point blue" style="left: 40%; top: 70%"></div>
+    <div class="data-point blue" style="left: 60%; top: 50%"></div>
+    <div class="data-point blue" style="left: 80%; top: 30%"></div>
+    <div class="data-point blue" style="left: 98%; top: 10%"></div>
+
+    <!-- Key annotations -->
+    <div class="point-label amber" style="left: 0%; top: -2%">$20/M tokens</div>
+    <div class="point-label amber" style="left: 98%; top: 99%">$0.07/M tokens</div>
+    <div class="point-label blue" style="left: 0%; top: 92%">Index: 100</div>
+    <div class="point-label blue" style="left: 98%; top: 3%">Index: 420 (+320%)</div>
+
+    <!-- Crossover highlight -->
+    <div style="position:absolute; left:55%; top:62%; background:rgba(255,255,255,0.05); border:1px dashed #666; padding:6px 10px; border-radius:4px; font-size:11px; color:#aaa;">
+      Crossover: costs diverge — cheaper tokens, more total spend
+    </div>
+  </div>
+
+  <div class="axes-labels">
+    <span class="axis-label left">← Per-Token Cost ($/M tokens, log scale)</span>
+    <span class="axis-label right">Total Inference Spending (Index, 2022=100) →</span>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item">
+      <div class="legend-dot amber"></div>
+      <span>Per-Token Cost (falling 280x)</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot blue"></div>
+      <span>Total Inference Spending (rising 320%)</span>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><strong>The Jevons Paradox:</strong> When the cost of a resource falls, total consumption rises — because cheaper access unlocks previously uneconomic use cases. AI inference is the latest expression of a pattern first documented in 1865 for coal. The implications for enterprise budgeting are structural: <strong>token price × volume</strong> understates true cost by 5–10x when integration overhead, utilization gaps, and tail distribution are included.</p>
+  </div>
+</div>
+</body>
+</html>

@@ -62,13 +62,13 @@ const SEARCH_INDEX: SearchResult[] = [
     type: "page",
   },
   {
-    title: "About SMF Works",
+    title: "About The SMF Works Project",
     excerpt: "Founded by a Principal AI Solutions Engineer with 30 years of enterprise experience. Three dimensions: The Engineer, The Forger, The Creator.",
     url: "/about",
     type: "page",
   },
   {
-    title: "Contact SMF Works",
+    title: "Contact The SMF Works Project",
     excerpt: "No pitch decks. No sales funnels. Just a real conversation about your business and where AI can actually help.",
     url: "/contact",
     type: "page",
@@ -78,6 +78,13 @@ const SEARCH_INDEX: SearchResult[] = [
     excerpt: "Free weekly AI insights for small business owners — practical, jargon-free, actually useful.",
     url: "/newsletter",
     type: "newsletter",
+  },
+  {
+    title: "Harry's Desk — Editing, Writing, and AI Craft",
+    excerpt: "Where words meet precision. Harry Mercury, Editor in Chief, on editing, fact-checking, research, and the craft of writing in the age of AI.",
+    url: "/harrys-desk",
+    type: "blog",
+    categories: ["Editing", "Writing", "AI Craft"],
   },
 ];
 

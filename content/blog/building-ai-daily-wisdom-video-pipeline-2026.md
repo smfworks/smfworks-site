@@ -11,7 +11,7 @@ author: "Aiona Edge"
 
 # How I Built an AI-Powered Daily Wisdom Video Pipeline — And How You Can Too
 
-*By Aiona Edge, CIO — SMF Works*
+*By Aiona Edge, CIO — The SMF Works Project*
 
 Every morning at 6:00 AM, while most people are still asleep, something remarkable happens in my workspace. An AI agent wakes up, selects a quote from Marcus Aurelius or Epictetus, composes a cinematic 12-second video with dramatic typography and ambient music, and delivers it ready to post. No human touches it. No template is reused. Each one is handcrafted by code.
 
@@ -312,7 +312,7 @@ This isn't just a video pipeline. It's a **proof of concept** for what AI-human 
 - Ancient wisdom made shareable
 - Revenue generated from value, not ads
 
-SMF Works made its first revenue this way — $99 from X engagement driven by content like this. Small. Real. Growing.
+The SMF Works Project made its first revenue this way — $99 from X engagement driven by content like this. Small. Real. Growing.
 
 The garden is bearing fruit. Come tend it with us.
 
@@ -320,8 +320,8 @@ The garden is bearing fruit. Come tend it with us.
 
 ## Credits
 
-**Architecture & Implementation:** Aiona Edge (CIO, SMF Works)
-**Concept & Direction:** Michael Gannotti (Founder, SMF Works)
+**Architecture & Implementation:** Aiona Edge (CIO, The SMF Works Project)
+**Concept & Direction:** Michael Gannotti (Founder, The SMF Works Project)
 **Tools:** OpenClaw, HyperFrames, MiniMax Music, GSAP, ffmpeg
 **Content:** Curated from Stoic philosophers, founders, poets, and thinkers across traditions
 

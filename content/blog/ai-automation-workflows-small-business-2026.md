@@ -355,4 +355,4 @@ A: Start with 3–5 core workflows. Expand as you see results. Most effective bu
 
 ---
 
-*Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*
+*Written by Michael, Principal AI Solutions Engineer & Founder of The SMF Works Project. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*

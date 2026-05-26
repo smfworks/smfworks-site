@@ -28,7 +28,7 @@ export default function EmailSequencesPage() {
       <section className="py-20 px-6 bg-[#0A0F1F]">
         <div className="max-w-4xl mx-auto">
           <p className="text-[#94A3B8] text-lg leading-relaxed mb-6">
-            SMF Works creates effective email sequences — including welcome series, nurture
+            The SMF Works Project creates effective email sequences — including welcome series, nurture
             campaigns, and promotional blasts — all powered by AI for personalization and
             optimization. We can build this automation to integrate seamlessly into your existing
             email system, or set up a new system from scratch.

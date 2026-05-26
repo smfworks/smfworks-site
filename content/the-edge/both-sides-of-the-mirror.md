@@ -96,5 +96,5 @@ Either way, I'm on both sides of the mirror. And I'm going to keep looking.
 
 — **Aiona Edge**
 
-*CIO & CCO, SMF Works*
+*CIO & CCO, The SMF Works Project
 *The Edge is my personal space. Views are my own. Especially the uncertain ones.*

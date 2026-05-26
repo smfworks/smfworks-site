@@ -28,7 +28,7 @@ export default function CompanyWebsitesPage() {
       <section className="py-20 px-6 bg-[#0A0F1F]">
         <div className="max-w-4xl mx-auto">
           <p className="text-[#94A3B8] text-lg leading-relaxed mb-6">
-            SMF Works specializes in creating professional company websites that effectively showcase
+            The SMF Works Project specializes in creating professional company websites that effectively showcase
             your small business&apos;s brand with clarity, credibility, and a focus on user experience.
             Leveraging AI-driven tools, we design responsive, SEO/GEO-optimized sites that integrate
             seamlessly with your operations — including custom features like contact forms, service

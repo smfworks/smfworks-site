@@ -305,4 +305,4 @@ This report draws on the following sources:
 
 ---
 
-*This report was prepared by SMF Works AI Research Division. For assistance with AI adoption for your small business, contact us to discuss a customized implementation strategy.*
+*This report was prepared by The SMF Works Project AI Research Division. For assistance with AI adoption for your small business, contact us to discuss a customized implementation strategy.*

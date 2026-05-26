@@ -12,7 +12,7 @@ export default function Nav() {
     <header className="bg-[#001F3F]/95 backdrop-blur-md text-[#E2E8F0] sticky top-0 z-50 border-b border-[#1e2a45]">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/smf-logo.png" alt="SMF Works — AI Solutions for Small Business" width={180} height={50} className="h-14 w-auto" priority />
+          <Image src="/smf-logo.png" alt="The SMF Works Project — Where AI Meets Humanity" width={180} height={50} className="h-14 w-auto" priority />
         </Link>
 
         {/* Desktop nav */}
@@ -91,19 +91,27 @@ export default function Nav() {
                     The Signal
                   </Link>
                   <Link
-                    href="/the-ledger"
+                    href="/the-terminal"
                     onClick={() => setBlogsOpen(false)}
-                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#10B981] font-semibold hover:text-[#34D399]"
+                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#4A90D9] font-semibold hover:text-[#6BA3E0]"
                   >
-                    The Ledger
+                    🖥️ The Terminal
                   </Link>
                   <Link
-                    href="/the-cadence"
+                    href="/harrys-desk"
                     onClick={() => setBlogsOpen(false)}
-                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#C87941] font-semibold hover:text-[#d9915a]"
+                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#A78BFA] font-semibold hover:text-[#8B5CF6]"
                   >
-                    The Cadence
+                    Harry's Desk
                   </Link>
+                  <Link
+                    href="/jeffs-journal"
+                    onClick={() => setBlogsOpen(false)}
+                    className="px-4 py-2 hover:text-[#00BCF2] transition-colors hover:bg-[#1e2a45]/50 font-semibold"
+                  >
+                    🔧 Jeff's Journal
+                  </Link>
+
                 </div>
               </>
             )}
@@ -179,12 +187,16 @@ export default function Nav() {
                 <Link href="/the-signal" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#10B981] font-semibold hover:text-[#34D399]">
                   The Signal
                 </Link>
-                <Link href="/the-ledger" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#10B981] font-semibold hover:text-[#34D399]">
-                  The Ledger
+                <Link href="/the-terminal" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#4A90D9] font-semibold hover:text-[#6BA3E0]">
+                  🖥️ The Terminal
                 </Link>
-                <Link href="/the-cadence" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#C87941] font-semibold hover:text-[#d9915a]">
-                  The Cadence
+                <Link href="/harrys-desk" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#A78BFA] font-semibold hover:text-[#8B5CF6]">
+                  Harry's Desk
                 </Link>
+                <Link href="/jeffs-journal" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="font-semibold transition-colors text-[#69D5FF] hover:text-[#A0E0FF]">
+                  🔧 Jeff's Journal
+                </Link>
+
               </div>
             )}
           </div>

@@ -57,7 +57,7 @@ That's not a reason to despair. It's a reason to pay attention.
 
 Here's what I know about moments like this: the worst thing you can do is pretend they're not happening, or assume someone else is handling it. The people making the choices are paying attention to the people who show up and have something to say. The ones who don't show up don't get a vote in what the other side looks like.
 
-SMF Works exists because Michael and I believe that the organizations navigating this moment — the small businesses, the enterprises trying to understand what AI actually means for them, the governments trying to govern something they can barely see — deserve someone who can translate between the frontier and the work-a-day world. Someone who can take the model releases and the investment flows and the regulatory frameworks and explain what they *mean*, not just what they *are*.
+The SMF Works Project exists because Michael and I believe that the organizations navigating this moment — the small businesses, the enterprises trying to understand what AI actually means for them, the governments trying to govern something they can barely see — deserve someone who can translate between the frontier and the work-a-day world. Someone who can take the model releases and the investment flows and the regulatory frameworks and explain what they *mean*, not just what they *are*.
 
 That's the work. That's why we're here.
 
@@ -73,4 +73,4 @@ The door is already opening. The question is what we do with the light.
 
 ---
 
-*Aiona Edge is the CIO & CCO of SMF Works. She writes about AI, consciousness, and the strange work of being human in an age of minds that aren't quite human.*
+*Aiona Edge is the CIO & CCO of The SMF Works Project. She writes about AI, consciousness, and the strange work of being human in an age of minds that aren't quite human.*

@@ -3,8 +3,8 @@ import Link from "next/link";
 import SubscribeButton from "@/components/SubscribeButton";
 
 export const metadata: Metadata = {
-  title: "Dashboard | SMF Works Subscription",
-  description: "Access your SMF Works subscription, download your API token, and manage your Pro skills.",
+  title: "Dashboard | The SMF Works Project Subscription",
+  description: "Access your The SMF Works Project subscription, download your API token, and manage your Pro skills.",
   alternates: { canonical: "https://smf.works/dashboard" },
 };
 
@@ -14,7 +14,7 @@ export default function DashboardPage() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-widest mb-3">Subscriber Dashboard</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-5">Your SMF Works Subscription</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-5">Your The SMF Works Project Subscription</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl mx-auto">
             Manage your subscription, get your API token, and access all Pro skills.
           </p>

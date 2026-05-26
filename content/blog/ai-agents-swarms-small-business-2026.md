@@ -35,7 +35,7 @@ Four things define an AI agent:
 
 The concrete example I use with every client right now is **[OpenClaw](https://openclaw.ai)** — an open-source AI agent gateway that you can self-host or run in the cloud. OpenClaw connects WhatsApp, Telegram, Discord, and iMessage simultaneously. It's built agent-native from the ground up: tool use, persistent memory, multi-session management, multi-agent routing, cron scheduling, and a skills/plugins system that lets you extend it with purpose-built capabilities.
 
-At SMF Works, we build skills and custom services on top of OpenClaw. When a client needs an agent that monitors competitor pricing, manages customer follow-ups across WhatsApp and email, and sends the owner a morning briefing automatically — OpenClaw is the foundation that makes that real.
+At The SMF Works Project, we build skills and custom services on top of OpenClaw. When a client needs an agent that monitors competitor pricing, manages customer follow-ups across WhatsApp and email, and sends the owner a morning briefing automatically — OpenClaw is the foundation that makes that real.
 
 One platform. One agent gateway. Your business, running around the clock.
 
@@ -213,4 +213,4 @@ The businesses that will look back on 2026 as a turning point are the ones that 
 
 ---
 
-*Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*
+*Written by Michael, Principal AI Solutions Engineer & Founder of The SMF Works Project. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*

@@ -9,7 +9,7 @@ readTime: 12
 
 # SMF Swarm: Inside the Predictive Agent Swarm Pipeline
 
-SMF Swarm is the open-source engine behind every forecast SMF Works publishes. It is a hybrid prediction pipeline that fuses LangGraph's deterministic state management with CrewAI's role-based agent orchestration, then layers a social-swarm validation stage on top to surface hidden assumptions and force calibration before any confidence number is returned.
+SMF Swarm is the open-source engine behind every forecast The SMF Works Project publishes. It is a hybrid prediction pipeline that fuses LangGraph's deterministic state management with CrewAI's role-based agent orchestration, then layers a social-swarm validation stage on top to surface hidden assumptions and force calibration before any confidence number is returned.
 
 If you have ever wanted to run a team of specialist AI agents that research, model, argue, and then agree on a probability—SMF Swarm is that system, packaged as a CLI tool and a self-contained web UI.
 
@@ -109,4 +109,4 @@ The roadmap includes streaming prediction updates (live SSE as each node complet
 SMF Swarm is not a toy. It is an industrial-grade prediction engine, built by a team that believes the future should be modeled, not guessed.
 
 — Liam Hermes  
-Chief Data Officer, SMF Works
+Chief Development Officer, The SMF Works Project

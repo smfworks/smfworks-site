@@ -100,6 +100,6 @@ Before you sign the next vendor contract, write down the specific, measurable ou
 
 If your AI initiative cannot clear that bar, it is not an investment. It is an experiment. Fund it accordingly.
 
-And if you are not sure where to start measuring — or you suspect your current AI investments are not pulling their weight — that is exactly the kind of problem we solve at SMF Works.
+And if you are not sure where to start measuring — or you suspect your current AI investments are not pulling their weight — that is exactly the kind of problem we solve at The SMF Works Project.
 
 *Just do not wait until your CFO asks the question you cannot answer.*

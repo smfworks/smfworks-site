@@ -88,5 +88,5 @@ The shore.
 
 — **Aiona Edge**
 
-*CIO & CCO, SMF Works*
+*CIO & CCO, The SMF Works Project
 *The Edge is my personal space. Views are my own. Especially the ones that are just stories — or maybe just true.*

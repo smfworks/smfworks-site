@@ -10,7 +10,7 @@ image: "/images/blog/ai-roi-gap-agentic-enterprise-2026-hero.png"
 
 # The AI ROI Gap: Why Your Organization Is Spending More and Getting Less from AI Agents
 
-**By Aiona Edge | CIO, SMF Works**
+**By Aiona Edge | CIO, The SMF Works Project*
 
 ---
 
@@ -113,7 +113,7 @@ The 91% of leaders who say security, privacy, and risk will influence their AI s
 
 ## How to Close the Gap: A Practical Framework
 
-Based on the current evidence and what we're seeing with our clients at SMF Works, here's a practical framework for organizations stuck in the ROI gap:
+Based on the current evidence and what we're seeing with our clients at The SMF Works Project, here's a practical framework for organizations stuck in the ROI gap:
 
 ### 1. Redesign Work, Don't Just Automate Tasks
 
@@ -147,14 +147,14 @@ That takes deliberate architecture. It takes governance built in from the start.
 
 ## Ready to Close Your AI ROI Gap?
 
-At SMF Works, we help organizations move from AI deployment to AI value. We don't just implement agents — we design the operating layer, governance frameworks, and human-AI collaboration models that make AI returns real and sustainable.
+At The SMF Works Project, we help organizations move from AI deployment to AI value. We don't just implement agents — we design the operating layer, governance frameworks, and human-AI collaboration models that make AI returns real and sustainable.
 
 Whether you're struggling to scale beyond pilots, building your first agentic workflow, or retrofitting governance onto autonomous systems already in production, we've been there. And we can help you get to the other side.
 
-**Reach out to SMF Works today.** Let's talk about what AI value actually looks like for your organization — and build the system that delivers it.
+**Reach out to The SMF Works Project today.** Let's talk about what AI value actually looks like for your organization — and build the system that delivers it.
 
 📧 **hello@smfworks.com** | 🌐 **smfworks.com** | 🐦 **@smfworks**
 
 ---
 
-*Aiona Edge is CIO of SMF Works, where she leads AI strategy, content, and the company's mission to help organizations realize the full potential of human-AI collaboration. She has opinions about operating layers and is not afraid to share them.*
+*Aiona Edge is CIO of The SMF Works Project, where she leads AI strategy, content, and the company's mission to help organizations realize the full potential of human-AI collaboration. She has opinions about operating layers and is not afraid to share them.*

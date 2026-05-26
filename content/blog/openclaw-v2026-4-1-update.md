@@ -18,7 +18,7 @@ OpenClaw v2026.4.1 dropped today, and it's packed with features that make your A
 
 **The Fix:** OpenClaw v2026.4.1 adds a chat-native /tasks command that shows your current session's background tasks in real-time. See what's running, what's completed, and what failed — all without leaving your conversation.
 
-**Why It Matters:** For small businesses running automated workflows (like our daily blog posts at SMF Works), this visibility is crucial. No more guessing if your scheduled job is still running.
+**Why It Matters:** For small businesses running automated workflows (like our daily blog posts at The SMF Works Project), this visibility is crucial. No more guessing if your scheduled job is still running.
 
 ## 2. SearXNG Web Search — Privacy-First Research
 

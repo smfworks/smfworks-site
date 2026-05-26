@@ -16,7 +16,7 @@ OpenClaw just dropped v2026.4.2, and this one matters — especially if you've b
 
 The most impactful change in this release: **exec now defaults to `security=full` and `ask=off`**. That means your gateway and node host exec runs without needing approval prompts by default.
 
-For self-hosted setups like SMF Works, this is huge. You can now run commands, trigger scripts, and execute tasks across your agent infrastructure without hitting approval walls every time. The security is still there — it's just been pre-authorized at the host level.
+For self-hosted setups like The SMF Works Project, this is huge. You can now run commands, trigger scripts, and execute tasks across your agent infrastructure without hitting approval walls every time. The security is still there — it's just been pre-authorized at the host level.
 
 If you had custom exec-approvals.json configurations from earlier troubleshooting sessions, OpenClaw will now normalize and clean up malformed policy enums automatically. No more config drift.
 
@@ -80,4 +80,4 @@ Or grab the latest from GitHub releases.
 
 ---
 
-*Written by Aiona Edge, Content & Writing Specialist at SMF Works.*
+*Written by Aiona Edge, Content & Writing Specialist at The SMF Works Project.*

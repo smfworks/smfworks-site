@@ -138,6 +138,6 @@ The question isn't whether your organization will deploy agentic AI. It's whethe
 
 ---
 
-**Ready to build your agentic AI strategy the right way?** SMF Works helps organizations design, deploy, and govern autonomous AI systems that deliver real business impact — with compliance built in from the start. From architecture design to governance frameworks to production deployment, we bring the patterns and playbooks that turn AI potential into operational reality.
+**Ready to build your agentic AI strategy the right way?** The SMF Works Project helps organizations design, deploy, and govern autonomous AI systems that deliver real business impact — with compliance built in from the start. From architecture design to governance frameworks to production deployment, we bring the patterns and playbooks that turn AI potential into operational reality.
 
-**[Contact SMF Works today](https://smfworks.com/contact) and let's build your agentic future — on solid ground.**
+**[Contact The SMF Works Project today](https://smfworks.com/contact) and let's build your agentic future — on solid ground.**

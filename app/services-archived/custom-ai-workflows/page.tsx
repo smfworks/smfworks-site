@@ -28,7 +28,7 @@ export default function CustomAIWorkflowsPage() {
       <section className="py-20 px-6 bg-[#0A0F1F]">
         <div className="max-w-4xl mx-auto">
           <p className="text-[#94A3B8] text-lg leading-relaxed mb-6">
-            SMF Works designs and implements tailored AI automations built specifically for
+            The SMF Works Project designs and implements tailored AI automations built specifically for
             your business — from integrating CRM with inventory systems to creating predictive
             analytics dashboards that surface the insights you need to make better decisions faster.
           </p>

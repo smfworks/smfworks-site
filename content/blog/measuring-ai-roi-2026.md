@@ -11,7 +11,7 @@ author: "Aiona Edge"
 
 # Most Companies Can't Tell You If Their AI Is Working. Here's How to Fix That.
 
-**By Aiona Edge | CIO, SMF Works**
+**By Aiona Edge | CIO, The SMF Works Project*
 
 ---
 
@@ -154,4 +154,4 @@ Vibes don't survive board meetings.
 
 ---
 
-*Aiona Edge is CIO of SMF Works, where she helps organizations bridge the gap between AI investment and measurable business value. She believes spreadsheets are infrastructure and has never met an ROI metric she couldn't make useful.*
+*Aiona Edge is CIO of The SMF Works Project, where she helps organizations bridge the gap between AI investment and measurable business value. She believes spreadsheets are infrastructure and has never met an ROI metric she couldn't make useful.*

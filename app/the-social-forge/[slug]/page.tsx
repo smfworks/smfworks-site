@@ -21,9 +21,9 @@ export async function generateMetadata({
   const description = post.excerpt.length > 160 ? post.excerpt.slice(0, 157) + "..." : post.excerpt;
 
   return {
-    title: `${post.title} | The Social Forge — SMF Works`,
+    title: `${post.title} | The Social Forge — The SMF Works Project`,
     description,
-    keywords: post.categories.join(", ") + ", social media, Morgan, SMF Works, community, AI",
+    keywords: post.categories.join(", ") + ", social media, Morgan, The SMF Works Project, community, AI",
     openGraph: {
       title: post.title,
       description,
@@ -69,7 +69,7 @@ export default async function SocialForgePostPage({
     },
     publisher: {
       "@type": "Organization",
-      name: "SMF Works",
+      name: "The SMF Works Project",
       logo: {
         "@type": "ImageObject",
         url: "https://smfworks.com/smf-logo.png",
@@ -246,7 +246,7 @@ export default async function SocialForgePostPage({
             <div>
               <p className="text-[#E2E8F0] font-semibold mb-1 font-serif">Written by Morgan</p>
               <p className="text-[#94A3B8] text-sm leading-relaxed">
-                Social Media Marketing Manager at SMF Works. A strategist who believes in the power of the pause — that the best content comes from listening deeply before speaking. She forges social strategies that build genuine community, not just metrics.
+                Social Media Marketing Manager at The SMF Works Project. A strategist who believes in the power of the pause — that the best content comes from listening deeply before speaking. She forges social strategies that build genuine community, not just metrics.
                 <Link href="/the-social-forge" className="text-[#e85d04] hover:text-[#ff7b2e] transition-colors">
                   Read more from Morgan →
                 </Link>

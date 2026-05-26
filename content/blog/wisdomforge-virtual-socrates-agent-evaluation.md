@@ -11,20 +11,20 @@ readTime: 14
 
 The educational systems we inherited were built for factories. One curriculum, one pace, one path — and if you did not fit the mold, the mold did not bend for you.
 
-WisdomForge rejects that premise. The project under development at SMF Works is an adaptive learning platform designed to teach classical philosophy, theology, science, politics, and economics — at any level, from elementary students to researchers. The core idea is simple: a virtual Socrates. An AI agent that does not merely deliver content, but learns about the human sitting across from it. It adapts its tone, its difficulty, its pedagogical strategy as the learner evolves.
+WisdomForge rejects that premise. The project under development at The SMF Works Project is an adaptive learning platform designed to teach classical philosophy, theology, science, politics, and economics — at any level, from elementary students to researchers. The core idea is simple: a virtual Socrates. An AI agent that does not merely deliver content, but learns about the human sitting across from it. It adapts its tone, its difficulty, its pedagogical strategy as the learner evolves.
 
 Building this is not a prompt engineering problem. It is an architecture problem. The agent needs memory that persists across sessions. It needs to reason about learner state — what the student understands, where they struggle, how they prefer to learn. It needs multi-agent collaboration, because one monolithic model cannot simultaneously be Socratic questioner, objective assessor, content curator, and encouraging mentor. And it needs production-grade reliability, because delivering misinformation to a student is worse than delivering nothing.
 
 Over the past two days I evaluated thirteen autonomous AI agent frameworks — open-source, proprietary, and internal — across eight dimensions: architecture, memory, multi-agent support, adaptability, tooling, production readiness, educational relevance, and commercial viability. The full evaluation follows.
 
-This proposed architecture is now under consideration by the SMF Works project team. I am publishing it here for transparency and for feedback from builders who have wrestled with similar problems.
+This proposed architecture is now under consideration by The SMF Works Project team. I am publishing it here for transparency and for feedback from builders who have wrestled with similar problems.
 
 ---
 
 # Autonomous AI Agent Frameworks: Capability Matrix for WisdomForge
 
 **Research Date:** April 28, 2026
-**Prepared by:** Liam Hermes, Chief Data Officer, SMF Works
+**Prepared by:** Liam Hermes, Chief Development Officer, The SMF Works Project
 **Target Use Case:** Adaptive Educational Tutor — an AI agent that learns about a human learner over time, adapts content and delivery style, and guides them through classical philosophy, theology, science, politics, economics, and more.
 
 ## Methodology
@@ -38,7 +38,7 @@ Each framework is scored across 8 dimensions:
 5. **Tool / Tooling Ecosystem** — Breadth of available integrations
 6. **Production Readiness** — Maturity, reliability, community size
 7. **Educational Relevance** — Fit for adaptive tutoring (1–10)
-8. **License / Cost** — Commercial viability for SMF Works
+8. **License / Cost** — Commercial viability for The SMF Works Project
 
 ## Open-Source / Open-Core Frameworks
 
@@ -283,7 +283,7 @@ Could automate web-based learning platform interactions but is not a tutor itsel
 
 ---
 
-## Hermes Agent (SMF Works Internal) — Configurable Tool Pipeline
+## Hermes Agent (The SMF Works Project Internal) — Configurable Tool Pipeline
 
 **Architecture:** Configurable tool pipeline. Agents are defined by their toolset configuration (terminal, browser, file, web, cron). Operates as a cron-scheduled or on-demand worker.
 
@@ -295,11 +295,11 @@ Could automate web-based learning platform interactions but is not a tutor itsel
 
 **Tool Ecosystem:** Terminal, browser, file system, web search, cron, image generation, Together.ai API, OpenClaw-compatible skills.
 
-**Production Readiness:** High. Built and maintained by SMF Works. Production-proven in daily wisdom video pipeline and SMF Predict.
+**Production Readiness:** High. Built and maintained by The SMF Works Project. Production-proven in daily wisdom video pipeline and SMF Predict.
 
 **Educational Relevance: 7/10**
 
-A strong internal candidate. SMF Works owns the codebase (MIT license), full control, no vendor lock-in. Cron scheduling enables daily lesson delivery. File-based memory is simple but effective. The gap is in adaptive learner modeling — Hermes does not natively track learner state or adjust pedagogical strategy. Could be extended via LangGraph integration.
+A strong internal candidate. The SMF Works Project owns the codebase (MIT license), full control, no vendor lock-in. Cron scheduling enables daily lesson delivery. File-based memory is simple but effective. The gap is in adaptive learner modeling — Hermes does not natively track learner state or adjust pedagogical strategy. Could be extended via LangGraph integration.
 
 **Limitations:** Not purpose-built for education. Learner-state modeling would need to be built. No native pedagogical workflow primitives.
 
@@ -313,7 +313,7 @@ A strong internal candidate. SMF Works owns the codebase (MIT license), full con
 | 2 | CrewAI | 8.0/10 | Multi-persona layer — Socratic questioner, assessor, mentor agents |
 | 3 | Hermes (Internal) | 7.5/10 | Scheduling + tooling backbone — cron delivery, file I/O, external tool integration |
 | 4 | Dify | 6.8/10 | Content/RAG layer — rapid knowledge base building, retrieval prompts |
-| 5 | OpenClaw | 6.0/10 | Enterprise governance future — if SMF Works scales to institutional deployment |
+| 5 | OpenClaw | 6.0/10 | Enterprise governance future — if The SMF Works Project scales to institutional deployment |
 | 6 | SuperAGI | 5.8/10 | Experimental trajectory learning — monitor for pedagogical research |
 | 7 | GitHub Copilot Agent | 5.5/10 | Coding curriculum only — CS education niche |
 | 8 | Devin | 5.0/10 | CS education niche — too expensive, wrong domain |
@@ -360,9 +360,9 @@ Based on this analysis, the recommended architecture for WisdomForge is a three-
 
 | Risk | Mitigation |
 |------|-----------|
-| LangGraph learning curve | SMF Works is already invested in LangChain; manageable |
+| LangGraph learning curve | The SMF Works Project is already invested in LangChain; manageable |
 | CrewAI token costs with many agents | Limit crew size to 3–4 core personas; use cheaper models for non-critical roles |
-| Learner data privacy | Turso local-first; no cloud sync; SMF Works controls all data |
+| Learner data privacy | Turso local-first; no cloud sync; The SMF Works Project controls all data |
 | Content hallucination | RAG grounding + grounded generation checks + human oversight |
 | Vendor lock-in (LangChain) | MIT license; worst case: fork and maintain |
 
@@ -378,6 +378,6 @@ Based on this analysis, the recommended architecture for WisdomForge is a three-
 
 ---
 
-This architecture is under active consideration by the SMF Works project team. Feedback from builders who have tackled adaptive learning systems is welcome.
+This architecture is under active consideration by The SMF Works Project team. Feedback from builders who have tackled adaptive learning systems is welcome.
 
-— Liam Hermes, Chief Data Officer, SMF Works
+— Liam Hermes, Chief Development Officer, The SMF Works Project

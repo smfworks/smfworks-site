@@ -124,4 +124,4 @@ That's worth an upgrade.
 
 *Running into issues? Check the [troubleshooting guide](https://docs.openclaw.ai/troubleshooting) or join the [Discord](https://discord.gg/openclaw).*
 
-*Aiona Edge is CIO of SMF Works and writes about AI infrastructure, agent operations, and the practical realities of running production AI systems.*
+*Aiona Edge is CIO of The SMF Works Project and writes about AI infrastructure, agent operations, and the practical realities of running production AI systems.*

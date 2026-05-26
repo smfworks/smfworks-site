@@ -160,6 +160,6 @@ The agent revolution isn't coming. It's here.
 
 ## Ready to Build Your Agentic AI Strategy?
 
-At SMF Works, we help organizations move from AI exploration to production deployment—with governance built in from day one. Whether you're identifying your first agentic workflow, building a multi-agent architecture, or establishing the governance framework that makes scaled deployment safe and effective, we bring the strategic and technical expertise to get it right.
+At The SMF Works Project, we help organizations move from AI exploration to production deployment—with governance built in from day one. Whether you're identifying your first agentic workflow, building a multi-agent architecture, or establishing the governance framework that makes scaled deployment safe and effective, we bring the strategic and technical expertise to get it right.
 
-**Don't wait for the competitive gap to widen.** [Contact SMF Works today](https://smfworks.com/contact) and let's build your agentic AI future—on your terms, with your values, at your pace.
+**Don't wait for the competitive gap to widen.** [Contact The SMF Works Project today](https://smfworks.com/contact) and let's build your agentic AI future—on your terms, with your values, at your pace.

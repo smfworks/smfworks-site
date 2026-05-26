@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A0F1F"/>
+      <stop offset="50%" stop-color="#001F3F"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+    <linearGradient id="flatline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00E5A0" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#00E5A0" stop-opacity="0.05"/>
+      <stop offset="70%" stop-color="#E53E3E" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#E53E3E" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="redGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.03" stroke="#00E5A0">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="630" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="630" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke-width="0.5"/>
+    <line x1="800" y1="0" x2="800" y2="630" stroke-width="0.5"/>
+    <line x1="1000" y1="0" x2="1000" y2="630" stroke-width="0.5"/>
+  </g>
+
+  <!-- Left side: ECG monitor panel -->
+  <g transform="translate(80, 140)">
+    <!-- Monitor bezel -->
+    <rect x="0" y="0" width="340" height="340" rx="12" fill="#0D1525" stroke="#1E2A45" stroke-width="2"/>
+
+    <!-- Top bar -->
+    <rect x="0" y="0" width="340" height="36" rx="12" fill="#111A30"/>
+    <rect x="0" y="24" width="340" height="12" fill="#111A30"/>
+
+    <!-- Monitor indicator lights -->
+    <circle cx="26" cy="18" r="5" fill="#E53E3E" filter="url(#redGlow)"/>
+    <circle cx="44" cy="18" r="5" fill="#00E5A0" opacity="0.3"/>
+    <circle cx="62" cy="18" r="5" fill="#00E5A0" opacity="0.15"/>
+
+    <!-- Monitor label -->
+    <text x="320" y="22" fill="#4A5568" font-family="monospace" font-size="11" text-anchor="end">VITAL SIGNS — NO SIGNAL</text>
+
+    <!-- ECG flatline -->
+    <polyline points="30,280 370,280" stroke="#E53E3E" stroke-width="2" opacity="0.9" filter="url(#redGlow)"/>
+
+    <!-- Grid lines inside monitor -->
+    <g opacity="0.08" stroke="#00E5A0" stroke-width="0.5">
+      <line x1="30" y1="100" x2="310" y2="100"/>
+      <line x1="30" y1="140" x2="310" y2="140"/>
+      <line x1="30" y1="180" x2="310" y2="180"/>
+      <line x1="30" y1="220" x2="310" y2="220"/>
+      <line x1="30" y1="260" x2="310" y2="260"/>
+    </g>
+
+    <!-- Blinking cursor at end of flatline -->
+    <rect x="366" y="275" width="8" height="10" rx="2" fill="#E53E3E" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="1s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Pulse line (subtle, in background) -->
+    <polyline points="30,230 70,230 90,230 100,160 110,280 120,240 130,230 170,230 190,230 200,120 210,300 220,220 230,230 310,230" stroke="#00E5A0" stroke-width="1.2" fill="none" opacity="0.15"/>
+
+    <!-- Heart rate BPM display -->
+    <text x="170" y="75" fill="#E53E3E" font-family="monospace" font-size="42" font-weight="bold" text-anchor="middle" filter="url(#redGlow)">0</text>
+    <text x="170" y="100" fill="#4A5568" font-family="monospace" font-size="13" text-anchor="middle">BPM — FLATLINE</text>
+  </g>
+
+  <!-- Right side decorative circuits -->
+  <g opacity="0.05" stroke="#00E5A0" stroke-width="1.5" fill="none">
+    <path d="M 850,80 L 1050,80 L 1050,180 L 1150,180"/>
+    <path d="M 900,140 L 1100,140"/>
+    <path d="M 950,200 L 950,300 L 850,300"/>
+    <path d="M 800,260 L 750,260"/>
+    <circle cx="1150" cy="180" r="4" fill="#00E5A0"/>
+    <circle cx="1100" cy="140" r="2.5" fill="#00E5A0"/>
+    <circle cx="850" cy="300" r="2.5" fill="#00E5A0"/>
+    <path d="M 900,420 L 1050,420 L 1050,520 L 1150,520"/>
+    <path d="M 950,480 L 1100,480"/>
+    <circle cx="1150" cy="520" r="3" fill="#00E5A0"/>
+    <circle cx="1100" cy="480" r="2" fill="#00E5A0"/>
+  </g>
+
+  <!-- Title text -->
+  <text x="540" y="270" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="46" font-weight="bold" letter-spacing="-1">
+    Your AI Agent Has
+  </text>
+  <text x="540" y="325" fill="#E53E3E" font-family="system-ui, -apple-system, sans-serif" font-size="46" font-weight="bold" letter-spacing="-1">
+    No Pulse
+  </text>
+
+  <!-- Divider -->
+  <line x1="540" y1="352" x2="860" y2="352" stroke="#00E5A0" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Subtitle -->
+  <text x="540" y="390" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="16">
+    And that's a problem
+  </text>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="627" width="1200" height="3" fill="#E53E3E" opacity="0.4"/>
+</svg>

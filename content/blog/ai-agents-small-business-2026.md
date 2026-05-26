@@ -42,7 +42,7 @@ Here's what most small businesses miss: the tools are only half the equation. Th
 
 "The new competitive edge is upskilling on AI literacy," Raghavan said. "This is emerging as a driving force for small businesses."
 
-This aligns with what we're seeing at SMF Works. Clients who invest in training their people alongside AI tools get dramatically better results than those who just buy subscriptions and hope for the best.
+This aligns with what we're seeing at The SMF Works Project. Clients who invest in training their people alongside AI tools get dramatically better results than those who just buy subscriptions and hope for the best.
 
 AI literacy isn't about becoming a data scientist. It's about understanding what the tools can do, what they can't do, and how to work effectively with them.
 
@@ -78,4 +78,4 @@ The good news: you don't need a massive budget or a dedicated tech team. You nee
 
 ---
 
-*Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*
+*Written by Michael, Principal AI Solutions Engineer & Founder of The SMF Works Project. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*

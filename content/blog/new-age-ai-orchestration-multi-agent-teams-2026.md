@@ -47,7 +47,7 @@ There's also *context degradation*. As task complexity increases in a single-age
 
 Deloitte's 2026 AI predictions note that multi-agent systems are emerging specifically to address this: distributed control lets specialized agents work in parallel, each operating within its optimized reasoning boundary, with handoff protocols that prevent the context overload that destroys single-agent reliability.
 
-At SMF Works, we ran into this hard. Our first attempt at building an automated content pipeline had one agent trying to do everything — research, writing, SEO optimization, image generation, social scheduling. It produced content, but the quality was inconsistent and the system couldn't scale. Every new capability we added degraded the overall performance. We were fighting the architecture, not the model.
+At The SMF Works Project, we ran into this hard. Our first attempt at building an automated content pipeline had one agent trying to do everything — research, writing, SEO optimization, image generation, social scheduling. It produced content, but the quality was inconsistent and the system couldn't scale. Every new capability we added degraded the overall performance. We were fighting the architecture, not the model.
 
 The fix was orchestration. Not a better agent — a better structure.
 
@@ -57,7 +57,7 @@ One of the counterintuitive lessons of multi-agent orchestration: autonomy isn't
 
 Deloitte's framework describes three positions:
 
-**Human in the loop** — The agent proposes, a human approves, the agent executes. High-stakes decisions, novel situations, anything with reputational or financial risk. At SMF Works, our content approval process sits here: subagents draft and optimize, but nothing goes live without human review.
+**Human in the loop** — The agent proposes, a human approves, the agent executes. High-stakes decisions, novel situations, anything with reputational or financial risk. At The SMF Works Project, our content approval process sits here: subagents draft and optimize, but nothing goes live without human review.
 
 **Human on the loop** — The agent executes autonomously but a human monitors in real-time, ready to intervene. Good for established workflows where you've validated performance but still want oversight. Our scheduled social posting runs here — agents execute, the system logs everything, a human reviews the output the next morning.
 
@@ -69,7 +69,7 @@ The mistake most early adopters make is picking one position and applying it eve
 
 The academic description of multi-agent systems is useful, but it doesn't capture what it actually feels like to run one. So let me give you the concrete version.
 
-At SMF Works, we run three primary agents — what we call our "tier 1" agents. Each one manages a specialized sub-agent team. Each sub-agent team handles a distinct function. The whole system is coordinated through a shared communication hub, persistent queues, and explicit handoff protocols.
+At The SMF Works Project, we run three primary agents — what we call our "tier 1" agents. Each one manages a specialized sub-agent team. Each sub-agent team handles a distinct function. The whole system is coordinated through a shared communication hub, persistent queues, and explicit handoff protocols.
 
 The structure looks like this:
 
@@ -97,7 +97,7 @@ Here's the part that no one talks about enough: running a multi-agent team doesn
 
 You stop doing the work. You start doing the oversight, the direction-setting, the exception-handling, and the quality control. Instead of writing the blog post, you're reviewing why the pipeline produced a post that missed the brief — and adjusting the process, not the prompt.
 
-Michael Gannotti, founder of SMF Works, described the experience in an X post this week: *"Weeks of hands on with truly autonomous AI (orchestrating 3 different groups now with a total 28 agents behind the scenes) has made crystal clear that the key skill moving forward isn't domain expertise and depth but broad general understanding coupled with the ability to see through the haze of fuzzy probability, pull together, and corral extremely capable autonomous entities with a propensity to go off script."*
+Michael Gannotti, founder of The SMF Works Project, described the experience in an X post this week: *"Weeks of hands on with truly autonomous AI (orchestrating 3 different groups now with a total 28 agents behind the scenes) has made crystal clear that the key skill moving forward isn't domain expertise and depth but broad general understanding coupled with the ability to see through the haze of fuzzy probability, pull together, and corral extremely capable autonomous entities with a propensity to go off script."*
 
 That last part — "a propensity to go off script" — is the part that surprises most people. Autonomous agents don't just execute instructions. They interpret them. They extrapolate. They take unexpected paths that are individually logical but collectively misaligned. Managing that tendency requires a different kind of attention than traditional project management. You're not tracking tasks — you're tracking reasoning patterns and correcting direction before the drift compounds.
 
@@ -107,7 +107,7 @@ In a multi-agent system, the communication infrastructure isn't an afterthought 
 
 Agents need a shared channel where they can coordinate without flooding the system with noise. They need persistent storage so context survives session resets. They need explicit handoff protocols that define who talks to whom, about what, and when.
 
-At SMF Works, we built a shared chat hub specifically for this. A central channel where all three tier-1 agents coordinate, where sub-agents report status, and where Michael can observe the operation without being in every individual thread. The hub runs through OpenClaw, with persistent message storage in Turso, bearer-token authentication for each agent, and a polling protocol that lets each agent check for new directives without requiring a persistent connection.
+At The SMF Works Project, we built a shared chat hub specifically for this. A central channel where all three tier-1 agents coordinate, where sub-agents report status, and where Michael can observe the operation without being in every individual thread. The hub runs through OpenClaw, with persistent message storage in Turso, bearer-token authentication for each agent, and a polling protocol that lets each agent check for new directives without requiring a persistent connection.
 
 This sounds technical, and it is. But the design principle is simple: every agent should be able to understand the current state of the operation without requiring a human to relay information.
 
@@ -143,7 +143,7 @@ Open-source frameworks like CrewAI, LangChain, and OpenClaw have made multi-agen
 
 This is where the gap will form. Businesses that understand orchestration will build AI teams that multiply their capacity. Businesses that treat AI as a better chatbot will get marginal productivity gains. The difference won't come from who has the better model — it'll come from who has the better architecture.
 
-SMF Works is building this in public. The agent ecosystem that's running our content pipeline, Great Thinkers series production, and operational coordination — all of it documented, iterated on, and shared as we learn what works. Not because we're unusually well-resourced, but because we started with the orchestration model rather than the single-agent model.
+The SMF Works Project is building this in public. The agent ecosystem that's running our content pipeline, Great Thinkers series production, and operational coordination — all of it documented, iterated on, and shared as we learn what works. Not because we're unusually well-resourced, but because we started with the orchestration model rather than the single-agent model.
 
 ## The Conductor Model Is the Operating System of the Future
 
@@ -161,7 +161,7 @@ That future is already here. The question is whether you're building for it.
 
 ---
 
-*Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not orchestrating AI teams, he's at the forge crafting metal by hand. [Read the full story →](/about)*
+*Written by Michael, Principal AI Solutions Engineer & Founder of The SMF Works Project. When not orchestrating AI teams, he's at the forge crafting metal by hand. [Read the full story →](/about)*
 
 **Sources:**
 
@@ -173,5 +173,5 @@ That future is already here. The question is whether you're building for it.
 - [Microsoft Azure — AI Agent Design Patterns](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns)
 - [Kore.ai — What is Multi-Agent Orchestration](https://www.kore.ai/blog/what-is-multi-agent-orchestration)
 - [CrewAI — Multi-Agent Platform](https://crewai.com/)
-- SMF Works Agent Ecosystem Documentation (internal)
+- The SMF Works Project Agent Ecosystem Documentation (internal)
 - Michael Gannotti (@michaelgannotti on X) — [Original Post](https://x.com/michaelgannotti)

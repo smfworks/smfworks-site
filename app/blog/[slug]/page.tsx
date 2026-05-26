@@ -21,9 +21,9 @@ export async function generateMetadata({
   const description = post.excerpt.length > 160 ? post.excerpt.slice(0, 157) + "..." : post.excerpt;
 
   return {
-    title: `${post.title} | SMF Works`,
+    title: `${post.title} | The SMF Works Project`,
     description: description,
-    keywords: post.categories.join(", ") + ", SMF Works, small business, AI, automation",
+    keywords: post.categories.join(", ") + ", The SMF Works Project, small business, AI, automation",
     openGraph: {
       title: post.title,
       description: description,
@@ -70,7 +70,7 @@ export default async function BlogPostPage({
     },
     publisher: {
       "@type": "Organization",
-      name: "SMF Works",
+      name: "The SMF Works Project",
       logo: {
         "@type": "ImageObject",
         url: "https://smfworks.com/smf-logo.png",
@@ -226,7 +226,7 @@ export default async function BlogPostPage({
               <p className="text-[#E2E8F0] font-semibold mb-1">Written by Michael</p>
               <p className="text-[#94A3B8] text-sm leading-relaxed">
                 Principal AI Solutions Engineer with 30+ years enterprise tech experience and 
-                founder of SMF Works. When not building AI solutions, he&apos;s at the forge 
+                founder of The SMF Works Project. When not building AI solutions, he&apos;s at the forge 
                 crafting metal by hand.{" "}
                 <Link href="/about" className="text-[#00D4FF] hover:underline">
                   Read the full story →

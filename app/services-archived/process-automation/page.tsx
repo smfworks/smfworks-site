@@ -28,7 +28,7 @@ export default function ProcessAutomationPage() {
       <section className="py-20 px-6 bg-[#0A0F1F]">
         <div className="max-w-4xl mx-auto">
           <p className="text-[#94A3B8] text-lg leading-relaxed mb-6">
-            SMF Works identifies and automates repetitive tasks in your operations, freeing up
+            The SMF Works Project identifies and automates repetitive tasks in your operations, freeing up
             hours for more valuable work. Using AI tools, we map your workflows, select the
             appropriate automation software, and implement solutions — from automated invoicing
             to inventory tracking and beyond.

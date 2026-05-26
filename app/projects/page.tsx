@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projects | SMF Works — What We're Building",
+  title: "Projects | The SMF Works Project — What We're Building",
   description:
-    "Explore the projects from SMF Works — WisdomForge AI education platform, co-authored books on AI and autonomous agents, and secure multi-agent communication tools.",
+    "Explore the projects from The SMF Works Project — WisdomForge AI education platform, co-authored books on AI and autonomous agents, and secure multi-agent communication tools.",
   alternates: { canonical: "https://smfworks.com/projects" },
 };
 
@@ -87,25 +87,14 @@ const projects = [
     name: "SMF Swarm",
     tagline: "Hybrid Pipeline with Adversarial Debate & Social Calibration",
     description:
-      "Predict the future with agent swarms. SMF Swarm runs three prediction modes — Standard, Debate, and Full+Social — powered by any LLM you choose (local or cloud). Built by SMF Works. MIT licensed. Open source. SMF Swarm is a developer/engineer tool — interact via command line or Python API. For a conversational, no-code experience, see SMF Predict. On first run, SMF Swarm detects your available RAM and GPU VRAM, then recommends an agent-swarm profile sized for your machine — ranging from Compact (4 agents, 8 GB RAM) up to Enthusiast (12+ agents, 32 GB+ RAM or discrete GPUs).",
+      "Predict the future with agent swarms. SMF Swarm runs three prediction modes — Standard, Debate, and Full+Social — powered by any LLM you choose (local or cloud). Built by The SMF Works Project. MIT licensed. Open source. SMF Swarm is a developer/engineer tool — interact via command line or Python API. For a conversational, no-code experience, see SMF Predict. On first run, SMF Swarm detects your available RAM and GPU VRAM, then recommends an agent-swarm profile sized for your machine — ranging from Compact (4 agents, 8 GB RAM) up to Enthusiast (12+ agents, 32 GB+ RAM or discrete GPUs).",
     status: "Live",
     statusColor: "#22C55E",
     emoji: "🐝",
     link: "",
     comingSoon: true,
   },
-  {
-    slug: "smf-forge-desktop",
-    name: "SMF Forge Desktop",
-    tagline: "Portable AI Agent Desktop for Windows",
-    description:
-      "Portable AI agent desktop for Windows — 100+ tools, GUI, local models via LM Studio, TTS, Music, ComfyUI, workflows, and tool maker. No install. No Docker. No admin rights. Just download and run.",
-    status: "Live",
-    statusColor: "#22C55E",
-    emoji: "🖥️",
-    link: "",
-    comingSoon: true,
-  },
+
   {
     slug: "hyperframes",
     name: "HyperFrames",
@@ -155,6 +144,18 @@ const projects = [
     comingSoon: true,
   },
   {
+    slug: "hermes-hub",
+    name: "Hermes Hub",
+    tagline: "Resilient Web Chat Interface for Hermes Agent",
+    description:
+      "A multi-profile web chat UI for Hermes Agent with auto-retry, session persistence across restarts, request cancellation, and health monitoring. Chat with any of your AI agent profiles from a browser — at your desk or on your phone via Tailscale. Sessions survive backend restarts, transient errors auto-retry with backoff, and every failed message gets a manual retry button. No more lost context when the API hiccups.",
+    status: "Live",
+    statusColor: "#22C55E",
+    emoji: "⚡",
+    link: "https://github.com/smfworks/smf-hermes-chat-hub",
+    external: true,
+  },
+  {
     slug: "smf-chat",
     name: "SMF Chat",
     tagline: "Secure Multi-Agent Communication",
@@ -164,6 +165,30 @@ const projects = [
     statusColor: "#22C55E",
     emoji: "💬",
     link: "https://smf-chat.vercel.app",
+    external: true,
+  },
+  {
+    slug: "smf-kalshi-trader",
+    name: "Kalshi Trading System",
+    tagline: "AI-Powered Prediction Market Trading System",
+    description:
+      "An autonomous trading system for Kalshi prediction markets. Features market scanning, edge detection, paper trading, and live execution with Kelly Criterion position sizing. Tracks 4,667+ markets with signal detection for price inefficiency and undervaluation patterns. Complete backtesting and performance tracking pipeline with SQLite backend.",
+    status: "Live",
+    statusColor: "#22C55E",
+    emoji: "📈",
+    link: "https://github.com/smfworks/smf-kalshi-trader",
+    external: true,
+  },
+  {
+    slug: "smf-notebooklm-video-pipeline",
+    name: "SMF NotebookLM Video Pipeline",
+    tagline: "Automated NotebookLM to Video Pipeline",
+    description:
+      "Transform NotebookLM audio briefings into polished video automatically. Ingests content, generates visual compositions with HyperFrames, and produces shareable video without manual editing. Built for teams who want to scale video production from audio content. Integrates with OpenClaw's agent ecosystem and HyperFrames rendering engine.",
+    status: "Live",
+    statusColor: "#22C55E",
+    emoji: "🎬",
+    link: "https://github.com/smfworks/smf-notebooklm-video-pipeline",
     external: true,
   },
 ];

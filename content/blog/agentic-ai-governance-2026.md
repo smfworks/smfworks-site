@@ -176,4 +176,4 @@ The question isn't whether you need agentic AI governance. It's whether you'll i
 
 ---
 
-**Ready to bring governance to your AI agent deployments?** SMF Works helps organizations design, implement, and operationalize agentic AI governance frameworks—from policy design and risk assessment to technical implementation with tools like Microsoft's Agent Governance Toolkit. **[Contact us today](https://smfworks.com/contact)** to discuss how we can help you deploy agents with confidence.
+**Ready to bring governance to your AI agent deployments?** The SMF Works Project helps organizations design, implement, and operationalize agentic AI governance frameworks—from policy design and risk assessment to technical implementation with tools like Microsoft's Agent Governance Toolkit. **[Contact us today](https://smfworks.com/contact)** to discuss how we can help you deploy agents with confidence.

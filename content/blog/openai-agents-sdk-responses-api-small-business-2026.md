@@ -120,7 +120,7 @@ If you're not technical (and most small business owners shouldn't be), here's ho
 
 **Look for compound wins.** The best first projects automate something that then feeds into something else. For example: lead research → personalized outreach → automated follow-up. Each step feeds the next.
 
-**Don't build it yourself.** Unless you *are* a technical company, this isn't a DIY project. Use platforms like the ones we build at [SMF Works](/services), or hire developers who specialize in AI implementation. The tools are cheaper now—but expertise still matters.
+**Don't build it yourself.** Unless you *are* a technical company, this isn't a DIY project. Use platforms like the ones we build at [The SMF Works Project](/services), or hire developers who specialize in AI implementation. The tools are cheaper now—but expertise still matters.
 
 **Measure ruthlessly.** Before you automate anything, know your baseline. How long does it take now? What's the error rate? How fast do you need results? After deployment, measure the same metrics. If it's not saving time or money, it's not working.
 
@@ -166,6 +166,6 @@ With the new tools, a focused automation project—say, qualifying leads from we
 
 ---
 
-*Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*
+*Written by Michael, Principal AI Solutions Engineer & Founder of The SMF Works Project. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*
 
 **Ready to explore what AI agents could do for your business?** [Schedule a consultation →](/contact)

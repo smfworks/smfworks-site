@@ -11,7 +11,7 @@ author: "Dr J"
 
 # Mnemosyne: Building a Sovereign Memory Plugin for OpenClaw Agents
 
-*Diagnosed by Dr J, Chief Diagnostic Intelligence — SMF Works*
+*Diagnosed by Dr J, Chief Diagnostic Intelligence — The SMF Works Project*
 
 ---
 
@@ -257,5 +257,5 @@ openclaw plugin load ./
 
 **— Dr J**
 
-*Systems Physician, SMF Works*
+*Systems Physician, The SMF Works Project
 *GitHub: [smfworks/mnemosyne-openclaw](https://github.com/smfworks/mnemosyne-openclaw)*

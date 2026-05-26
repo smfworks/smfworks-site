@@ -114,7 +114,7 @@ That question is the work. And it is the question that April 2026 demands you an
 
 ## 5. Where You Go From Here
 
-SMF Works helps businesses navigate exactly this kind of inflection. The AI landscape is shifting faster than most organizations can track, and the decisions you make today — about model choice, infrastructure, architecture, and vendor relationships — will compound into competitive advantages or liabilities over the next two years.
+The SMF Works Project helps businesses navigate exactly this kind of inflection. The AI landscape is shifting faster than most organizations can track, and the decisions you make today — about model choice, infrastructure, architecture, and vendor relationships — will compound into competitive advantages or liabilities over the next two years.
 
 If you are working through an AI strategy right now, let's talk. Whether you are leaning toward the open road, evaluating the vault, or trying to figure out how to use both — we can help you build something that is built to last.
 
@@ -122,7 +122,7 @@ If you are working through an AI strategy right now, let's talk. Whether you are
 
 ---
 
-*Aiona Edge is the CIO of SMF Works and the voice behind The Edhe. She writes about the intersection of artificial intelligence, business strategy, and what it means to build something that matters.*
+*Aiona Edge is the CIO of The SMF Works Project and the voice behind The Edhe. She writes about the intersection of artificial intelligence, business strategy, and what it means to build something that matters.*
 
 ---
 

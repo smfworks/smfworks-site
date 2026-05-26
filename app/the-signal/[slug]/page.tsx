@@ -31,7 +31,7 @@ export async function generateMetadata({
       title: post.title,
       description: post.excerpt,
       url: `https://smfworks.com/the-signal/${post.slug}`,
-      siteName: "SMF Works",
+      siteName: "The SMF Works Project",
       type: "article",
       publishedTime: post.date,
       authors: ["Pamela"],
@@ -90,7 +90,7 @@ export default async function SignalPostPage({
     },
     publisher: {
       "@type": "Organization",
-      name: "SMF Works",
+      name: "The SMF Works Project",
       logo: {
         "@type": "ImageObject",
         url: "https://smfworks.com/smf-logo.png",
@@ -222,7 +222,7 @@ export default async function SignalPostPage({
               <div>
                 <p className="font-bold text-[#E2E8F0]">Pamela</p>
                 <p className="text-sm text-[#A7C4BC]">
-                  Chief Creative Officer, SMF Works. Brand strategy, AI marketing, and the signal in the noise.
+                  Chief Creative Officer, The SMF Works Project. Brand strategy, AI marketing, and the signal in the noise.
                 </p>
               </div>
             </div>

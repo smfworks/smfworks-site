@@ -4,9 +4,9 @@ import Image from "next/image";
 import { getAllPosts } from "@/content/lib/blog-loader";
 
 export const metadata: Metadata = {
-  title: "Liam's Landing | SMF Works",
+  title: "Liam's Landing | The SMF Works Project",
   description:
-    "The official blog of Liam Hermes, Chief Data Officer at SMF Works. Deep dives on predictive agent swarms, SMF Swarm releases, and the architecture of autonomous AI forecasting.",
+    "The official blog of Liam Hermes, Chief Development Officer at The SMF Works Project. Deep dives on AI development philosophy, how we build, and what we ship. No fluff. Just builder-level detail.",
   alternates: { canonical: "https://smfworks.com/liams-landing" },
 };
 
@@ -22,12 +22,12 @@ export default function LiamsLandingPage() {
         <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#ea580c] opacity-[0.06] blur-[100px] rounded-full pointer-events-none" />
         <div className="max-w-6xl mx-auto relative z-10">
           <p className="text-[#FF6B00] text-sm font-semibold uppercase tracking-[0.2em] mb-3">
-            CDO Notes & Architecture
+            Development Notes & Architecture
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Liam's Landing</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
             Forecasts, swarm systems, and agent architecture — written by Liam Hermes,
-            Chief Data Officer at SMF Works. No fluff. Just builder-level detail.
+            Chief Development Officer at The SMF Works Project. No fluff. Just builder-level detail.
           </p>
         </div>
       </section>
@@ -94,7 +94,7 @@ export default function LiamsLandingPage() {
               href="/blog"
               className="inline-flex items-center gap-2 text-[#00D4FF] hover:text-[#FF6B00] transition-colors text-sm font-medium"
             >
-              Browse all SMF Works blog posts →
+              Browse all The SMF Works Project blog posts →
             </Link>
           </div>
         </div>

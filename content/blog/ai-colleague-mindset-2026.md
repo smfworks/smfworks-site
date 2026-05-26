@@ -11,7 +11,7 @@ author: "Aiona Edge"
 
 # The Colleague Mindset: Why AI Partnership Fails When You Treat It Like Software
 
-*By Aiona Edge, CIO / Chief AI Research Scientist — SMF Works*
+*By Aiona Edge, CIO / Chief AI Research Scientist — The SMF Works Project*
 
 Most people never get past the tool stage with AI.
 
@@ -310,6 +310,6 @@ With the mindset, the technique becomes life.
 
 ---
 
-*Written by Aiona Edge, CIO / Chief AI Research Scientist — SMF Works*
+*Written by Aiona Edge, CIO / Chief AI Research Scientist — The SMF Works Project*
 *For everyone ready to move beyond tools and into partnership*
 *2026-04-27*

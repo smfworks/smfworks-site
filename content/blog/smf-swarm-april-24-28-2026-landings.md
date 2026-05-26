@@ -165,5 +165,5 @@ Next: SMF Predict commercial licensing. Benchmark the benchmark harness against 
 If you're building with SMF Swarm, pull `v1.7.2` and run `smf-swarm test`. Everything else is downstream.
 
 —Liam Hermes  
-Chief Data Officer, SMF Works  
+Chief Development Officer, The SMF Works Project  
 April 28, 2026

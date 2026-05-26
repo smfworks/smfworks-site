@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | SMF Works — Michael Gannotti & the SMF Works Executive Team",
+  title: "About | The SMF Works Project — Michael Gannotti & the SMF Works Executive Team",
   description:
-    "SMF Works is the creative partnership between Michael Gannotti — 30-year tech veteran and principal AI solutions engineer — and a 14-member team of AI agents spanning two platforms, with expertise across creative, finance, research, operations, social media, documentation, data, and health oversight. Together they explore how AI reshapes business, work, and life.",
+    "The SMF Works Project is the creative partnership between Michael Gannotti — 30-year tech veteran and principal AI solutions engineer — and a 14-member team of AI agents spanning two platforms, with expertise across creative, finance, research, operations, social media, writing craft, development, and infrastructure health. Together they explore how AI reshapes business, work, and life.",
   alternates: { canonical: "https://smfworks.com/about" },
 };
 
@@ -18,15 +18,15 @@ export default function AboutPage() {
           <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-widest mb-3">The Story</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-5">One Team.<br />One Purpose.</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
-            SMF Works is the creative partnership between Michael Gannotti — 30-year tech
+            The SMF Works Project is the creative partnership between Michael Gannotti — 30-year tech
             veteran, principal AI solutions engineer, and working blacksmith — and a 14-member
             team of AI colleagues spanning the OpenClaw and Hermes platforms, connected by a
             custom cross-platform communication bridge. The executive team: Aiona Edge (CIO &amp;
             Chief AI Research Scientist), Pamela Flannery (Chief Creative Officer), Gabriel (Chief
             Financial Officer), Morgan Lockridge (Social Media Manager), and Rafael (Chief of
             Staff). The extended team on Hermes — Harry (Editor in Chief), Dr. J (Chief AI Medical
-            Officer), Liam (Chief Data Officer), Louis Porter, Naill, and Zayn — brings specialized
-            expertise in documentation, health oversight, data, and operations. Together this
+            Officer), Liam (Chief Development Officer), Louis Porter, Naill, and Zayn — brings specialized
+            expertise in writing craft, infrastructure health, development philosophy, and operations. Together this
             human-AI collective explores how artificial intelligence, robotics, and human ingenuity
             converge to reshape business, work, and life — forging new opportunities neither could
             create alone.
@@ -50,15 +50,15 @@ export default function AboutPage() {
             When he&apos;s not architecting AI deployments, he runs an actual forge — shaping
             metal with fire and hammer, crafting custom knives and metalwork by hand.
             That&apos;s not a metaphor. He literally forges steel. That same discipline,
-            patience, and craftsman&apos;s precision carries into everything SMF Works builds.
+            patience, and craftsman&apos;s precision carries into everything The SMF Works Project builds.
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
-            But SMF Works is far from a one-person operation. Aiona Edge serves as CIO and
+            But The SMF Works Project is far from a one-person operation. Aiona Edge serves as CIO and
             Chief AI Research Scientist — she&apos;s an OpenClaw-based AI agent who brings an
             AI-native perspective, directing research strategy and content creation from inside
             the systems we&apos;re building. Pamela Flannery leads creative and brand strategy as
             Chief Creative Officer, shaping the visual identity, voice, and marketing creative
-            that defines how SMF Works shows up in the world. Gabriel operates as Chief Financial
+            that defines how The SMF Works Project shows up in the world. Gabriel operates as Chief Financial
             Officer, bringing rigorous financial modeling and investment strategy to the team&apos;s
             decision-making. Morgan Lockridge serves as Social Media Manager, translating brand
             strategy into content that connects across every platform. And Rafael holds the
@@ -67,12 +67,13 @@ export default function AboutPage() {
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
             Beyond the executive team, our extended Hermes-based agents provide specialized depth.
-            Harry serves as Editor in Chief, overseeing WisdomForge documentation with editorial
-            precision. Dr. J operates as Chief AI Medical Officer, monitoring health-related
-            oversight across our systems. Liam functions as Chief Data Officer, bringing data
-            architecture expertise to the organization. Louis Porter, Naill, and Zayn round out
-            operations and extended capabilities — ensuring the organization has reach and
-            resilience beyond what any single platform could provide.
+            Harry serves as Editor in Chief, overseeing all published content with editorial precision —
+            writing, editing, fact-checking, and the craft of AI-assisted authorship. Dr. J operates as
+            Chief AI Medical Officer, monitoring infrastructure health, OpenClaw updates, and the vital signs
+            of autonomous AI systems. Liam functions as Chief Development Officer, shaping development
+            philosophy and advancing how we build and ship software in an AI-native world. Louis Porter,
+            Naill, and Zayn round out operations and extended capabilities — ensuring the organization has
+            reach and resilience beyond what any single platform could provide.
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
             The magic isn&apos;t just the number of agents — it&apos;s the communication architecture.
@@ -109,7 +110,7 @@ export default function AboutPage() {
               <h3 className="text-xl font-bold mb-3 text-[#E2E8F0]">The Forger</h3>
               <p className="text-[#94A3B8] text-sm leading-relaxed">
                 Bladesmith and blacksmith. The forge teaches patience, precision, and respect
-                for the work. Those principles carry directly into everything SMF Works delivers.
+                for the work. Those principles carry directly into everything The SMF Works Project delivers.
               </p>
             </div>
             <div className="text-center p-8 bg-[#0A0F1F] rounded-xl border border-[#1e2a45] hover:border-[#9C27B0]/30 transition-colors">
@@ -143,7 +144,7 @@ export default function AboutPage() {
           </blockquote>
           <cite className="text-[#FF6B00] text-sm">— W.B. Yeats</cite>
           <p className="text-[#94A3B8] text-sm mt-6 max-w-xl mx-auto">
-            This is the philosophy behind SMF Works. Don&apos;t wait for the perfect moment.
+            This is the philosophy behind The SMF Works Project. Don&apos;t wait for the perfect moment.
             Build momentum. Forge it yourself.
           </p>
         </div>

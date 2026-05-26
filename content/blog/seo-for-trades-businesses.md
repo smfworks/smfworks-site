@@ -66,4 +66,4 @@ Here is what you can do this week to start improving your local SEO:
 
 SEO is not a one-time fix. It is an ongoing process of creating content, earning reviews, and building your online authority. The businesses that commit to it consistently are the ones that dominate local search results.
 
-And if creating weekly content, managing your online presence, and optimizing your SEO sounds like too much on top of running your actual business — that is exactly the kind of work we do at SMF Works.
+And if creating weekly content, managing your online presence, and optimizing your SEO sounds like too much on top of running your actual business — that is exactly the kind of work we do at The SMF Works Project.

@@ -16,7 +16,7 @@ Most small business owners approach AI the same way they approach a junk drawer.
 
 If you have ever felt like you are spending more time managing your AI than actually doing your work, you are experiencing the "fragmentation tax."
 
-Today, SMF Works is launching the solution: **SMF Project Forge.**
+Today, The SMF Works Project is launching the solution: **SMF Project Forge.**
 
 Built on March 27, 2026, Project Forge is not another chatbot. It is a visual command center designed specifically for small businesses to orchestrate a 28-agent AI ecosystem through a professional creative production pipeline.
 
@@ -70,7 +70,7 @@ We know that every business has a different workflow. That is why we have built 
 - **Standalone Web App:** Use Project Forge as its own dedicated command center for heavy-duty project management.
 - **SMF Dashboard Module:** If you are already using the [SMF Dashboard](/services), Project Forge snaps in as a plug-in module, living right alongside your other business tools.
 
-This release is part of the bigger picture at [SMF Works](/about). We are releasing a series of OpenClaw skills and applications designed to give small businesses "Fortune 500" capabilities. Project Forge is the orchestration layer — the "brain" — that ties all these individual skills together.
+This release is part of the bigger picture at [The SMF Works Project](/about). We are releasing a series of OpenClaw skills and applications designed to give small businesses "Fortune 500" capabilities. Project Forge is the orchestration layer — the "brain" — that ties all these individual skills together.
 
 **Key Takeaway: Project Forge fits into your existing workflow as either a standalone app or an integrated part of your SMF Dashboard.**
 

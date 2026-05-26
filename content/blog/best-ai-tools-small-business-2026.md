@@ -313,4 +313,4 @@ A: No — they free your team from repetitive tasks so they can focus on higher-
 
 ---
 
-*Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he is at the forge crafting metal by hand. [Read the full story →](/about)*
+*Written by Michael, Principal AI Solutions Engineer & Founder of The SMF Works Project. When not building AI solutions, he is at the forge crafting metal by hand. [Read the full story →](/about)*

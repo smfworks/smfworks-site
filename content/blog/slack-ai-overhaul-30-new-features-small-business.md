@@ -142,7 +142,7 @@ Pick one repetitive workflow your team runs manually today. Something like:
 
 When the AI skills feature becomes available, make building this workflow your first project. It's small, measurable, and immediately valuable. Get your team comfortable with one AI workflow before layering in more.
 
-**Bonus:** If you need help evaluating which processes are worth automating first or how to structure your workspace for AI, [SMF Works offers AI readiness assessments for small businesses](/services) that take the guesswork out of where to start.
+**Bonus:** If you need help evaluating which processes are worth automating first or how to structure your workspace for AI, [The SMF Works Project offers AI readiness assessments for small businesses](/services) that take the guesswork out of where to start.
 
 ---
 
@@ -180,8 +180,8 @@ Inside Salesforce, teams are saving 20 hours a week. That's not theoretical. Tha
 
 The question isn't whether this technology works. It does. The question is whether you're ready to use it before your competitors figure it out first.
 
-**Ready to see what AI can do for your business?** [Talk to the SMF Works team](/contact) and find out how we help small businesses implement and optimize these new AI capabilities — without the enterprise IT department.
+**Ready to see what AI can do for your business?** [Talk to The SMF Works Project team](/contact) and find out how we help small businesses implement and optimize these new AI capabilities — without the enterprise IT department.
 
 ---
 
-*Written by Michael, Principal AI Solutions Engineer & Founder of SMF Works. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*
+*Written by Michael, Principal AI Solutions Engineer & Founder of The SMF Works Project. When not building AI solutions, he's at the forge crafting metal by hand. [Read the full story →](/about)*
