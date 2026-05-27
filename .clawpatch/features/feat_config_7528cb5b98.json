@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "featureId": "feat_config_7528cb5b98",
+  "title": "Project config package.json",
+  "summary": "Build, release, or quality configuration in package.json.",
+  "kind": "config",
+  "source": "shared-infra-heuristic",
+  "confidence": "medium",
+  "entrypoints": [
+    {
+      "path": "package.json",
+      "symbol": null,
+      "route": null,
+      "command": null
+    }
+  ],
+  "ownedFiles": [
+    {
+      "path": "package.json",
+      "reason": "entrypoint"
+    }
+  ],
+  "contextFiles": [],
+  "tests": [],
+  "tags": [
+    "config"
+  ],
+  "trustBoundaries": [
+    "process-exec",
+    "filesystem"
+  ],
+  "status": "needs-fix",
+  "lock": null,
+  "findingIds": [
+    "fnd_sig-feat-config-7528cb5b98-c84cd_549068010e",
+    "fnd_sig-feat-config-7528cb5b98-1f70c_dd24d24c49",
+    "fnd_sig-feat-config-7528cb5b98-b246c_71b9cdc221"
+  ],
+  "patchAttemptIds": [],
+  "analysisHistory": [
+    {
+      "runId": "20260525T223920-e10401",
+      "kind": "review-error",
+      "summary": "codex provider failed: OpenAI Codex v0.123.0 (research preview)\n--------\nworkdir: /home/mikesai1/projects/smfworks-site\nmodel: deepseek-v4-pro:cloud\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e614b-07d2-7cb0-a446-47c4b541db53\n--------\nuser\nYou are reviewing one semantic feature for clawpatch.\n\nReturn strict JSON only. No markdown fences.\n\nProject:\n{\n  \"name\": \"smfworks-site\",\n  \"detected\": {\n    \"languages\": [\n      \"typescript\",\n      \"javascript\",\n      \"python\"\n    ],\n    \"frameworks\": [\n      \"next\"\n    ],\n    \"packageManagers\": [\n      \"npm\",\n      \"python\"\n    ],\n    \"commands\": {\n      \"typecheck\": null,\n      \"lint\": \"npm run lint\",\n      \"format\": null,\n      \"test\": null\n    }\n  }\n}\n\nFeature:\n{\n  \"featureId\": \"feat_config_7528cb5b98\",\n  \"title\": \"Project config package.json\",\n  \"summary\": \"Build, release, or quality configuration in package.json.\",\n  \"kind\": \"config\",\n  \"source\": \"shared-infra-heuristic\",\n  \"confidence\": \"medium\",\n  \"entrypoints\": [\n    {\n      \"path\": \"package.json\",\n      \"symbol\": null,\n      \"route\": null,\n      \"command\": null\n    }\n  ],\n  \"ownedFiles\": [\n    {\n      \"path\": \"package.json\",\n      \"reason\": \"entrypoint\"\n    }\n  ],\n  \"contextFiles\": [],\n  \"tests\": [],\n  \"tags\": [\n    \"config\"\n  ],\n  \"trustBoundaries\": [\n    \"process-exec\",\n    \"filesystem\"\n  ]\n}\n\nReview categories:\n- correctness bugs\n- security issues\n- race/concurrency bugs\n- data loss/corruption\n- resource leaks\n- bad error handling\n- permission/auth gaps\n- API contract mismatches\n- missing/weak tests\n- release/build hazards\n- maintainability risks with concrete impact\n\n\n\nInspect owned files, context files, and linked tests. Treat included tests as first-class\nevidence of intended behavior. If tests contradict a suspected bug, either skip it or\ndowngrade confidence and explain the uncertainty. Avoid reporting behavior as a bug\nsolely because a helper name implies a broader contract. Deduplicate sibling/root-cause\nissues: when the same bug pattern appears in multiple owned files, emit one finding\nwith multiple evidence refs instead of separate one-off findings.\n\nAvoid speculative low-evidence findings. Evidence must point at included files.\nValid evidence paths are exactly:\n- package.json\nFeature metadata paths are not valid evidence unless listed above.\nWhen providing evidence line ranges, use the line-number gutter in the Files section.\nDo not inspect files beyond the shown excerpts for evidence. If an excerpt is truncated,\nonly cite lines that appear in the Files section.\nSet evidence.quote to null; line ranges are enough for validation.\n\nPrompt context:\n{\n  \"maxOwnedFiles\": 12,\n  \"maxContextFiles\": 24,\n  \"includedFiles\": [\n    {\n      \"path\": \"package.json\",\n      \"role\": \"owned\",\n      \"bytes\": 1034,\n      \"includedBytes\": 1034,\n      \"includedStartLine\": 1,\n      \"includedEndLine\": 35,\n      \"includedLineRanges\": [\n        {\n          \"startLine\": 1,\n          \"endLine\": 35\n        }\n      ],\n      \"truncated\": false\n    }\n  ],\n  \"omittedFiles\": []\n}\n\nJSON shape:\n{\n  \"findings\": [\n    {\n      \"title\": \"string\",\n      \"category\": \"bug|security|performance|concurrency|api-contract|data-loss|test-gap|docs-gap|build-release|maintainability\",\n      \"severity\": \"critical|high|medium|low\",\n      \"confidence\": \"high|medium|low\",\n      \"evidence\": [{\"path\":\"string\",\"startLine\":1,\"endLine\":1,\"symbol\":null,\"quote\":null}],\n      \"reasoning\": \"string\",\n      \"reproduction\": null,\n      \"recommendation\": \"string\",\n      \"whyTestsDoNotAlreadyCoverThis\": \"string\",\n      \"suggestedRegressionTest\": \"string or null\",\n      \"minimumFixScope\": \"string\"\n    }\n  ],\n  \"inspected\": {\"files\":[\"string\"],\"symbols\":[\"string\"],\"notes\":[\"string\"]}\n}\n\nFiles:\n--- package.json (owned, lines 1-35)\n1 | {\n2 |   \"name\": \"smfworks-site\",\n3 |   \"version\": \"0.1.0\",\n4 |   \"private\": true,\n5 |   \"scripts\": {\n6 |     \"dev\": \"next dev\",\n7 |     \"build\": \"next build\",\n8 |     \"start\": \"next start\",\n9 |     \"lint\": \"eslint\",\n10 |     \"design:lint\": \"npx @google/design.md lint DESIGN.md\",\n11 |     \"design:export\": \"npx @google/design.md export --format tailwind DESIGN.md > design-export.tailwind.json && npx @google/design.md export --format dtcg DESIGN.md > design-export.dtcg.json\",\n12 |     \"design:check\": \"npm run design:lint && npm run build\"\n13 |   },\n14 |   \"dependencies\": {\n15 |     \"jsonwebtoken\": \"^9.0.3\",\n16 |     \"next\": \"16.1.6\",\n17 |     \"react\": \"19.2.3\",\n18 |     \"react-dom\": \"19.2.3\",\n19 |     \"react-markdown\": \"^10.1.0\",\n20 |     \"remark-gfm\": \"^4.0.1\",\n21 |     \"stripe\": \"^20.4.1\"\n22 |   },\n23 |   \"devDependencies\": {\n24 |     \"@tailwindcss/postcss\": \"^4\",\n25 |     \"@types/jsonwebtoken\": \"^9.0.10\",\n26 |     \"@types/node\": \"^20\",\n27 |     \"@types/react\": \"^19\",\n28 |     \"@types/react-dom\": \"^19\",\n29 |     \"@types/stripe\": \"^8.0.416\",\n30 |     \"eslint\": \"^9\",\n31 |     \"eslint-config-next\": \"16.1.6\",\n32 |     \"tailwindcss\": \"^4\",\n33 |     \"typescript\": \"^5\"\n34 |   }\n35 | }\nwarning: Codex's Linux sandbox uses bubblewrap and needs access to create user namespaces.\nERROR: {\"type\":\"error\",\"status\":400,\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The 'deepseek-v4-pro:cloud' model is not supported when using Codex with a ChatGPT account.\"}}\nERROR: {\"type\":\"error\",\"status\":400,\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The 'deepseek-v4-pro:cloud' model is not supported when using Codex with a ChatGPT account.\"}}\n",
+      "provider": "codex",
+      "model": "deepseek-v4-pro:cloud",
+      "reasoningEffort": null,
+      "createdAt": "2026-05-25T22:39:30.321Z"
+    },
+    {
+      "runId": "20260525T224249-d71370",
+      "kind": "review",
+      "summary": "3 finding(s); prompt=4694 bytes; approxTokens=1174; includedFiles=1; omittedFiles=0",
+      "provider": "codex",
+      "model": "deepseek-v4-pro:cloud",
+      "reasoningEffort": null,
+      "createdAt": "2026-05-25T22:44:29.299Z"
+    }
+  ],
+  "createdAt": "2026-05-25T22:39:00.330Z",
+  "updatedAt": "2026-05-25T22:44:29.299Z"
+}

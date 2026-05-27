@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "findingId": "fnd_sig-feat-library-00a265d498-0a01_88889c5e48",
+  "featureId": "feat_library_00a265d498",
+  "title": "Hardcoded pricing data in component markup creates stale-data risk",
+  "category": "maintainability",
+  "severity": "low",
+  "confidence": "medium",
+  "triage": "risk",
+  "evidence": [
+    {
+      "path": "app/services-archived/thought-leadership/page.tsx",
+      "startLine": 83,
+      "endLine": 128,
+      "symbol": null,
+      "quote": null
+    }
+  ],
+  "reasoning": "Pricing tiers ($150 per piece, $100/month, $3,500 book) are inlined as static object literals inside the JSX render function rather than extracted into a data module or CMS-driven source. Any price change requires a code change and deployment, and the risk of stale displayed pricing increases if the data is overlooked during updates.",
+  "reproduction": null,
+  "recommendation": "Extract pricing tiers into a separate data file or a headless CMS so content editors can update pricing without touching component code.",
+  "whyTestsDoNotAlreadyCoverThis": "No tests are included for this page. The project has no test command configured.",
+  "suggestedRegressionTest": null,
+  "minimumFixScope": "app/services-archived/thought-leadership/page.tsx",
+  "status": "open",
+  "history": [],
+  "signature": "sig_feat-library-00a265d498_0a0195ea75",
+  "linkedPatchAttemptIds": [],
+  "createdByRunId": "20260525T224249-d71370",
+  "createdAt": "2026-05-25T22:44:58.401Z",
+  "updatedAt": "2026-05-25T22:44:58.401Z"
+}

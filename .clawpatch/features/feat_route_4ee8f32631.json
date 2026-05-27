@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "featureId": "feat_route_4ee8f32631",
+  "title": "Route /about",
+  "summary": "Web route implemented by app/about/page.tsx.",
+  "kind": "route",
+  "source": "next-app-route",
+  "confidence": "high",
+  "entrypoints": [
+    {
+      "path": "app/about/page.tsx",
+      "symbol": null,
+      "route": "/about",
+      "command": null
+    }
+  ],
+  "ownedFiles": [
+    {
+      "path": "app/about/page.tsx",
+      "reason": "entrypoint"
+    }
+  ],
+  "contextFiles": [
+    {
+      "path": "package.json",
+      "reason": "package manifest"
+    },
+    {
+      "path": "README.md",
+      "reason": "package context"
+    },
+    {
+      "path": "tsconfig.json",
+      "reason": "package context"
+    },
+    {
+      "path": "next.config.js",
+      "reason": "project context"
+    }
+  ],
+  "tests": [],
+  "tags": [
+    "next",
+    "web",
+    "project:smfworks-site",
+    "project-root:."
+  ],
+  "trustBoundaries": [
+    "user-input",
+    "network",
+    "serialization"
+  ],
+  "status": "pending",
+  "lock": null,
+  "findingIds": [],
+  "patchAttemptIds": [],
+  "analysisHistory": [],
+  "createdAt": "2026-05-25T22:39:00.330Z",
+  "updatedAt": "2026-05-25T22:39:00.330Z"
+}

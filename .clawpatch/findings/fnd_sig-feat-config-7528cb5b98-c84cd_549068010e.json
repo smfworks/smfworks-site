@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "findingId": "fnd_sig-feat-config-7528cb5b98-c84cd_549068010e",
+  "featureId": "feat_config_7528cb5b98",
+  "title": "@types/stripe v8 conflicts with stripe v20 — built-in types already ship",
+  "category": "api-contract",
+  "severity": "high",
+  "confidence": "high",
+  "triage": "contract-mismatch",
+  "evidence": [
+    {
+      "path": "package.json",
+      "startLine": 21,
+      "endLine": 21,
+      "symbol": null,
+      "quote": null
+    },
+    {
+      "path": "package.json",
+      "startLine": 29,
+      "endLine": 29,
+      "symbol": null,
+      "quote": null
+    }
+  ],
+  "reasoning": "stripe@^20.4.1 ships its own TypeScript declarations starting from v9. The devDependency @types/stripe@^8.0.416 provides type definitions for the Stripe v8 API surface, which is fundamentally different from the v20 API (different method names, parameter shapes, and response types). TypeScript will resolve these competing definitions unpredictably, likely preferring the ambient @types/stripe declarations over the bundled ones, producing incorrect type inference for Stripe API calls. This can mask real bugs — e.g., passing wrong parameter types to charge creation or payment-intent calls — until they surface at runtime against the live Stripe API.",
+  "reproduction": null,
+  "recommendation": "Remove @types/stripe from devDependencies entirely; stripe v20 already provides accurate types. If any code imports types from 'stripe' directly, TypeScript will resolve them correctly once the ambient declarations are gone.",
+  "whyTestsDoNotAlreadyCoverThis": "The project has no test script defined, so there is no automated validation that Stripe API calls compile or behave correctly.",
+  "suggestedRegressionTest": "Add a type-level compile check that instantiates a Stripe client and calls a single API method (e.g., stripe.customers.list({limit: 1})) to ensure types resolve from the bundled declarations.",
+  "minimumFixScope": "Remove @types/stripe from devDependencies, run tsc to verify no new errors appear, and verify Stripe imports resolve correctly.",
+  "status": "open",
+  "history": [],
+  "signature": "sig_feat-config-7528cb5b98_c84cd858b9",
+  "linkedPatchAttemptIds": [],
+  "createdByRunId": "20260525T224249-d71370",
+  "createdAt": "2026-05-25T22:44:29.299Z",
+  "updatedAt": "2026-05-25T22:44:29.299Z"
+}

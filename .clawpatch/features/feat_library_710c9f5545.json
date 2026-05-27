@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "featureId": "feat_library_710c9f5545",
+  "title": "Node source scripts",
+  "summary": "Node/TypeScript source file scripts/generate-hero.mjs.",
+  "kind": "library",
+  "source": "node-source-group",
+  "confidence": "medium",
+  "entrypoints": [
+    {
+      "path": "package.json",
+      "symbol": "scripts",
+      "route": null,
+      "command": null
+    }
+  ],
+  "ownedFiles": [
+    {
+      "path": "scripts/generate-hero.mjs",
+      "reason": "source group scripts"
+    }
+  ],
+  "contextFiles": [
+    {
+      "path": "package.json",
+      "reason": "package manifest"
+    }
+  ],
+  "tests": [],
+  "tags": [
+    "node",
+    "typescript",
+    "source-group",
+    "project:smfworks-site",
+    "project-root:."
+  ],
+  "trustBoundaries": [],
+  "status": "pending",
+  "lock": null,
+  "findingIds": [],
+  "patchAttemptIds": [],
+  "analysisHistory": [],
+  "createdAt": "2026-05-25T22:39:00.330Z",
+  "updatedAt": "2026-05-25T22:39:00.330Z"
+}

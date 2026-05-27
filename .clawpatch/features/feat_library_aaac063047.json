@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "featureId": "feat_library_aaac063047",
+  "title": "Node source app/newsletter",
+  "summary": "Node/TypeScript source group app/newsletter with 2 files.",
+  "kind": "library",
+  "source": "node-source-group",
+  "confidence": "medium",
+  "entrypoints": [
+    {
+      "path": "package.json",
+      "symbol": "app/newsletter",
+      "route": null,
+      "command": null
+    }
+  ],
+  "ownedFiles": [
+    {
+      "path": "app/newsletter/[slug]/page.tsx",
+      "reason": "source group app/newsletter"
+    },
+    {
+      "path": "app/newsletter/page.tsx",
+      "reason": "source group app/newsletter"
+    }
+  ],
+  "contextFiles": [
+    {
+      "path": "package.json",
+      "reason": "package manifest"
+    }
+  ],
+  "tests": [],
+  "tags": [
+    "node",
+    "typescript",
+    "source-group",
+    "project:smfworks-site",
+    "project-root:."
+  ],
+  "trustBoundaries": [],
+  "status": "pending",
+  "lock": null,
+  "findingIds": [],
+  "patchAttemptIds": [],
+  "analysisHistory": [],
+  "createdAt": "2026-05-25T22:39:00.330Z",
+  "updatedAt": "2026-05-25T22:39:00.330Z"
+}

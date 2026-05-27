@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "featureId": "feat_library_68fe76dd70",
+  "title": "Node source app/services-archived/social-media-content",
+  "summary": "Node/TypeScript source file app/services-archived/social-media-content/page.tsx.",
+  "kind": "library",
+  "source": "node-source-group",
+  "confidence": "medium",
+  "entrypoints": [
+    {
+      "path": "package.json",
+      "symbol": "app/services-archived/social-media-content",
+      "route": null,
+      "command": null
+    }
+  ],
+  "ownedFiles": [
+    {
+      "path": "app/services-archived/social-media-content/page.tsx",
+      "reason": "source group app/services-archived/social-media-content"
+    }
+  ],
+  "contextFiles": [
+    {
+      "path": "package.json",
+      "reason": "package manifest"
+    }
+  ],
+  "tests": [],
+  "tags": [
+    "node",
+    "typescript",
+    "source-group",
+    "project:smfworks-site",
+    "project-root:."
+  ],
+  "trustBoundaries": [],
+  "status": "pending",
+  "lock": null,
+  "findingIds": [],
+  "patchAttemptIds": [],
+  "analysisHistory": [],
+  "createdAt": "2026-05-25T22:39:00.330Z",
+  "updatedAt": "2026-05-25T22:39:00.330Z"
+}

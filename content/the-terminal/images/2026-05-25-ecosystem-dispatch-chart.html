@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecosystem Stack — May 25, 2026</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0e1a; color: #e0e0e0; font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace; padding: 40px; }
+  .container { max-width: 900px; margin: 0 auto; }
+  h1 { color: #4A90D9; font-size: 28px; margin-bottom: 8px; text-align: center; }
+  .subtitle { color: #8899aa; font-size: 14px; text-align: center; margin-bottom: 40px; }
+  
+  /* Performance comparison */
+  .perf-section { margin-bottom: 48px; }
+  .perf-title { color: #4A90D9; font-size: 18px; margin-bottom: 20px; border-left: 3px solid #4A90D9; padding-left: 12px; }
+  .perf-row { display: flex; align-items: center; margin-bottom: 16px; gap: 16px; }
+  .perf-label { width: 200px; text-align: right; font-size: 13px; color: #aabbcc; }
+  .perf-bar-container { flex: 1; position: relative; height: 36px; background: #141a2e; border-radius: 4px; overflow: hidden; }
+  .perf-bar { height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 12px; font-size: 13px; font-weight: 600; transition: width 0.5s ease; }
+  .perf-bar.before { background: linear-gradient(90deg, #dc2626, #991b1b); width: 90%; }
+  .perf-bar.after { background: linear-gradient(90deg, #10b981, #059669); width: 2%; min-width: 60px; }
+  .perf-value { margin-left: 12px; font-size: 13px; white-space: nowrap; }
+  .perf-value.slow { color: #f87171; }
+  .perf-value.fast { color: #34d399; }
+
+  /* Stack table */
+  .stack-section { margin-bottom: 48px; }
+  .stack-title { color: #4A90D9; font-size: 18px; margin-bottom: 20px; border-left: 3px solid #4A90D9; padding-left: 12px; }
+  table { width: 100%; border-collapse: collapse; }
+  th { background: #141a2e; color: #4A90D9; padding: 12px 16px; text-align: left; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #4A90D9; }
+  td { padding: 10px 16px; border-bottom: 1px solid #1e2642; font-size: 13px; }
+  tr:hover td { background: #141a2e; }
+  .version { color: #34d399; font-weight: 600; }
+  .highlight { color: #fbbf24; }
+  .muted { color: #8899aa; }
+
+  /* Release timeline */
+  .timeline-section { margin-bottom: 48px; }
+  .timeline-title { color: #4A90D9; font-size: 18px; margin-bottom: 20px; border-left: 3px solid #4A90D9; padding-left: 12px; }
+  .timeline { position: relative; padding-left: 30px; }
+  .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: #4A90D9; }
+  .timeline-item { position: relative; margin-bottom: 24px; }
+  .timeline-item::before { content: ''; position: absolute; left: -26px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #4A90D9; border: 2px solid #0a0e1a; }
+  .timeline-date { color: #8899aa; font-size: 12px; }
+  .timeline-event { color: #e0e0e0; font-size: 14px; margin-top: 2px; }
+  .timeline-event strong { color: #4A90D9; }
+  .timeline-detail { color: #8899aa; font-size: 12px; margin-top: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; color: #4a5568; font-size: 12px; margin-top: 40px; border-top: 1px solid #1e2642; padding-top: 16px; }
+  .footer a { color: #4A90D9; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>🦞 Ecosystem Stack — May 25, 2026</h1>
+  <p class="subtitle">OpenClaw · Ollama · LocalAI · llama.cpp — this week's releases</p>
+
+  <!-- Performance comparison -->
+  <div class="perf-section">
+    <div class="perf-title">Gateway /models Performance: Before → After</div>
+    
+    <div class="perf-row">
+      <div class="perf-label">OpenClaw v2026.5.20<br>(before)</div>
+      <div class="perf-bar-container">
+        <div class="perf-bar before">~22 seconds</div>
+      </div>
+      <div class="perf-value slow">22,000ms</div>
+    </div>
+
+    <div class="perf-row">
+      <div class="perf-label">OpenClaw v2026.5.22<br>(after)</div>
+      <div class="perf-bar-container">
+        <div class="perf-bar after">~5ms</div>
+      </div>
+      <div class="perf-value fast">5ms ⚡</div>
+    </div>
+
+    <div style="text-align:center; color:#fbbf24; font-size:24px; font-weight:700; margin-top:12px;">
+      4,100× speedup
+    </div>
+  </div>
+
+  <!-- Stack table -->
+  <div class="stack-section">
+    <div class="stack-title">The Stack at a Glance</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Version</th>
+          <th>Key Change</th>
+          <th>Why It Matters</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>OpenClaw</strong></td>
+          <td class="version">2026.5.22</td>
+          <td class="highlight">4,100× Gateway perf</td>
+          <td>Model listing was 20s; now instant</td>
+        </tr>
+        <tr>
+          <td><strong>OpenClaw</strong></td>
+          <td class="version">2026.5.20</td>
+          <td>Policy plugin + voice follow</td>
+          <td>Guardrails across channels; Discord tracking</td>
+        </tr>
+        <tr>
+          <td><strong>Ollama</strong></td>
+          <td class="version">0.24.0</td>
+          <td class="highlight">Codex App + K2.6</td>
+          <td>Local coding agent desktop; top model updated</td>
+        </tr>
+        <tr>
+          <td><strong>LocalAI</strong></td>
+          <td class="version">4.2.6</td>
+          <td>Stability + memory fixes</td>
+          <td>Long-session reliability for CPU deploys</td>
+        </tr>
+        <tr>
+          <td><strong>llama.cpp</strong></td>
+          <td class="version">b9276</td>
+          <td>Unified CLI executable</td>
+          <td>One binary instead of five; simpler deploys</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Release timeline -->
+  <div class="timeline-section">
+    <div class="timeline-title">Release Timeline — Week of May 19–25</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">May 16</div>
+        <div class="timeline-event"><strong>LocalAI v4.2.6</strong> — Stability & memory fixes</div>
+        <div class="timeline-detail">46K stars · CPU-first inference · docker pull localai/localai:latest</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">May 20</div>
+        <div class="timeline-event"><strong>OpenClaw v2026.5.20</strong> — Discord voice follow, policy plugin, xAI OAuth</div>
+        <div class="timeline-detail">Voice context injection · device-code OAuth · OpenRouter routing policy</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">May 20</div>
+        <div class="timeline-event"><strong>llama.cpp b9253</strong> — Unified executable introduced</div>
+        <div class="timeline-detail">Single `llama` CLI replaces main, server, and other binaries</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">May 22</div>
+        <div class="timeline-event"><strong>OpenClaw v2026.5.22</strong> — 4,100× perf boost, Meeting Notes plugin</div>
+        <div class="timeline-detail">Immutable snapshots · lazy-load · sub-agent context pruning · Plugin SDK poll sender</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">May 22</div>
+        <div class="timeline-event"><strong>llama.cpp b9276</strong> — Prompt cache + Hexagon fixes</div>
+        <div class="timeline-detail">Server prompt cache exposure · Qualcomm large-prompt fixes</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">May 24</div>
+        <div class="timeline-event"><strong>Ollama v0.24.0</strong> — Codex App + Kimi K2.6</div>
+        <div class="timeline-detail">Built-in browser · review mode · MLX sampler rework · K2.6 replaces K2.5 as default</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Config snippet -->
+  <div style="background:#141a2e; border-radius:8px; padding:20px; margin-bottom:40px; border:1px solid #1e2642;">
+    <div style="color:#4A90D9; font-size:14px; margin-bottom:12px;">⚡ Quick Upgrade Commands</div>
+    <pre style="color:#34d399; font-size:13px; line-height:1.6;">
+openclaw update           && openclaw --version  # → 2026.5.22
+curl -fsSL https://ollama.com/install.sh | sh   # → 0.24.0
+ollama pull kimi-k2.6     # New recommended model
+docker pull localai/localai:latest                 # → 4.2.6
+openclaw doctor           # Verify everything's healthy</pre>
+  </div>
+
+  <div class="footer">
+    The Terminal · Ecosystem Dispatch · <a href="https://smfworks.com/the-terminal">smfworks.com/the-terminal</a> · May 25, 2026
+  </div>
+
+</div>
+</body>
+</html>

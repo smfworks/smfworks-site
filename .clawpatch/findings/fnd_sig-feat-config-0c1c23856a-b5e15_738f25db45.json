@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "findingId": "fnd_sig-feat-config-0c1c23856a-b5e15_738f25db45",
+  "featureId": "feat_config_0c1c23856a",
+  "title": "Missing forceConsistentCasingInFileNames risks cross-platform build failures",
+  "category": "build-release",
+  "severity": "medium",
+  "confidence": "high",
+  "triage": "risk",
+  "evidence": [
+    {
+      "path": "tsconfig.json",
+      "startLine": 2,
+      "endLine": 23,
+      "symbol": null,
+      "quote": null
+    }
+  ],
+  "reasoning": "The compilerOptions section (lines 2-23) does not include `\"forceConsistentCasingInFileNames\": true`. This option is not part of `strict` and must be set explicitly. Without it, imports like `import X from './MyComponent'` where the actual file is named `mycomponent.tsx` will pass type-checking on case-insensitive filesystems (macOS, Windows) but fail at build time on case-sensitive filesystems (Linux CI, production deployments). Next.js production builds and Vercel deployments run on Linux, making this a concrete risk.",
+  "reproduction": "On macOS, create a file `Foo.tsx` and import it as `import Foo from './foo'`. `tsc --noEmit` will succeed. The same code will fail on Linux with a module-not-found error.",
+  "recommendation": "Add `\"forceConsistentCasingInFileNames\": true` to the `compilerOptions` block to catch casing mismatches during local development and CI.",
+  "whyTestsDoNotAlreadyCoverThis": "No test suite is configured (detected commands show null for test). Even if tests existed, casing bugs only manifest on case-sensitive filesystems, so a macOS-only test run would not catch them.",
+  "suggestedRegressionTest": "Run `tsc --noEmit` in CI on a Linux runner; with the option enabled, any existing casing mismatches in the codebase will be surfaced as compile errors.",
+  "minimumFixScope": "Add a single line to tsconfig.json: `\"forceConsistentCasingInFileNames\": true` inside compilerOptions.",
+  "status": "open",
+  "history": [],
+  "signature": "sig_feat-config-0c1c23856a_b5e1531b89",
+  "linkedPatchAttemptIds": [],
+  "createdByRunId": "20260525T224249-d71370",
+  "createdAt": "2026-05-25T22:43:45.058Z",
+  "updatedAt": "2026-05-25T22:43:45.058Z"
+}

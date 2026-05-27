@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "featureId": "feat_route_87aa3a2659",
+  "title": "Route /api/checkout",
+  "summary": "Web route implemented by app/api/checkout/route.ts.",
+  "kind": "route",
+  "source": "next-app-route",
+  "confidence": "high",
+  "entrypoints": [
+    {
+      "path": "app/api/checkout/route.ts",
+      "symbol": null,
+      "route": "/api/checkout",
+      "command": null
+    }
+  ],
+  "ownedFiles": [
+    {
+      "path": "app/api/checkout/route.ts",
+      "reason": "entrypoint"
+    }
+  ],
+  "contextFiles": [
+    {
+      "path": "package.json",
+      "reason": "package manifest"
+    },
+    {
+      "path": "README.md",
+      "reason": "package context"
+    },
+    {
+      "path": "tsconfig.json",
+      "reason": "package context"
+    },
+    {
+      "path": "next.config.js",
+      "reason": "project context"
+    }
+  ],
+  "tests": [],
+  "tags": [
+    "next",
+    "web",
+    "project:smfworks-site",
+    "project-root:."
+  ],
+  "trustBoundaries": [
+    "user-input",
+    "network",
+    "serialization"
+  ],
+  "status": "pending",
+  "lock": null,
+  "findingIds": [],
+  "patchAttemptIds": [],
+  "analysisHistory": [],
+  "createdAt": "2026-05-25T22:39:00.330Z",
+  "updatedAt": "2026-05-25T22:39:00.330Z"
+}

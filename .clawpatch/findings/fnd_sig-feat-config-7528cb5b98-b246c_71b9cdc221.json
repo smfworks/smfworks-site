@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "findingId": "fnd_sig-feat-config-7528cb5b98-b246c_71b9cdc221",
+  "featureId": "feat_config_7528cb5b98",
+  "title": "design:export silently swallows failures from the first npx command",
+  "category": "build-release",
+  "severity": "low",
+  "confidence": "medium",
+  "triage": "risk",
+  "evidence": [
+    {
+      "path": "package.json",
+      "startLine": 11,
+      "endLine": 11,
+      "symbol": null,
+      "quote": null
+    }
+  ],
+  "reasoning": "The design:export script chains two npx commands with &&. If the first export (--format tailwind) fails, the second (--format dtcg) is never run, but no explicit error handling or exit-code propagation exists beyond what && provides. More critically, npx downloads and caches @google/design.md on each run if not locally installed, making build reproducibility dependent on network availability and npm registry state. A CI pipeline invoking this script may succeed with only a partial export without any visible failure unless set -e or equivalent is active in the shell environment.",
+  "reproduction": null,
+  "recommendation": "Either add @google/design.md as a devDependency for reproducible installs, or wrap the npx calls with explicit error handling (e.g., set -e; npx ... && npx ...). Consider running both exports unconditionally or capturing exit codes.",
+  "whyTestsDoNotAlreadyCoverThis": "No post-export validation step checks that both output files were produced and contain valid content.",
+  "suggestedRegressionTest": "Add a script that asserts both design-export.tailwind.json and design-export.dtcg.json exist and are non-empty after design:export runs.",
+  "minimumFixScope": "Add error handling to the design:export script or make @google/design.md a declared dependency.",
+  "status": "open",
+  "history": [],
+  "signature": "sig_feat-config-7528cb5b98_b246c8dbc1",
+  "linkedPatchAttemptIds": [],
+  "createdByRunId": "20260525T224249-d71370",
+  "createdAt": "2026-05-25T22:44:29.299Z",
+  "updatedAt": "2026-05-25T22:44:29.299Z"
+}

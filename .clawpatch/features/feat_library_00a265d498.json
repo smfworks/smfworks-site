@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "featureId": "feat_library_00a265d498",
+  "title": "Node source app/services-archived/thought-leadership",
+  "summary": "Node/TypeScript source file app/services-archived/thought-leadership/page.tsx.",
+  "kind": "library",
+  "source": "node-source-group",
+  "confidence": "medium",
+  "entrypoints": [
+    {
+      "path": "package.json",
+      "symbol": "app/services-archived/thought-leadership",
+      "route": null,
+      "command": null
+    }
+  ],
+  "ownedFiles": [
+    {
+      "path": "app/services-archived/thought-leadership/page.tsx",
+      "reason": "source group app/services-archived/thought-leadership"
+    }
+  ],
+  "contextFiles": [
+    {
+      "path": "package.json",
+      "reason": "package manifest"
+    }
+  ],
+  "tests": [],
+  "tags": [
+    "node",
+    "typescript",
+    "source-group",
+    "project:smfworks-site",
+    "project-root:."
+  ],
+  "trustBoundaries": [],
+  "status": "needs-fix",
+  "lock": null,
+  "findingIds": [
+    "fnd_sig-feat-library-00a265d498-0a01_88889c5e48"
+  ],
+  "patchAttemptIds": [],
+  "analysisHistory": [
+    {
+      "runId": "20260525T223920-e10401",
+      "kind": "review-error",
+      "summary": "codex provider failed: OpenAI Codex v0.123.0 (research preview)\n--------\nworkdir: /home/mikesai1/projects/smfworks-site\nmodel: deepseek-v4-pro:cloud\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e614b-1266-7631-b17e-cbdcf98953fc\n--------\nuser\nYou are reviewing one semantic feature for clawpatch.\n\nReturn strict JSON only. No markdown fences.\n\nProject:\n{\n  \"name\": \"smfworks-site\",\n  \"detected\": {\n    \"languages\": [\n      \"typescript\",\n      \"javascript\",\n      \"python\"\n    ],\n    \"frameworks\": [\n      \"next\"\n    ],\n    \"packageManagers\": [\n      \"npm\",\n      \"python\"\n    ],\n    \"commands\": {\n      \"typecheck\": null,\n      \"lint\": \"npm run lint\",\n      \"format\": null,\n      \"test\": null\n    }\n  }\n}\n\nFeature:\n{\n  \"featureId\": \"feat_library_00a265d498\",\n  \"title\": \"Node source app/services-archived/thought-leadership\",\n  \"summary\": \"Node/TypeScript source file app/services-archived/thought-leadership/page.tsx.\",\n  \"kind\": \"library\",\n  \"source\": \"node-source-group\",\n  \"confidence\": \"medium\",\n  \"entrypoints\": [\n    {\n      \"path\": \"package.json\",\n      \"symbol\": \"app/services-archived/thought-leadership\",\n      \"route\": null,\n      \"command\": null\n    }\n  ],\n  \"ownedFiles\": [\n    {\n      \"path\": \"app/services-archived/thought-leadership/page.tsx\",\n      \"reason\": \"source group app/services-archived/thought-leadership\"\n    }\n  ],\n  \"contextFiles\": [\n    {\n      \"path\": \"package.json\",\n      \"reason\": \"package manifest\"\n    }\n  ],\n  \"tests\": [],\n  \"tags\": [\n    \"node\",\n    \"typescript\",\n    \"source-group\",\n    \"project:smfworks-site\",\n    \"project-root:.\"\n  ],\n  \"trustBoundaries\": []\n}\n\nReview categories:\n- correctness bugs\n- security issues\n- race/concurrency bugs\n- data loss/corruption\n- resource leaks\n- bad error handling\n- permission/auth gaps\n- API contract mismatches\n- missing/weak tests\n- release/build hazards\n- maintainability risks with concrete impact\n\n\n\nInspect owned files, context files, and linked tests. Treat included tests as first-class\nevidence of intended behavior. If tests contradict a suspected bug, either skip it or\ndowngrade confidence and explain the uncertainty. Avoid reporting behavior as a bug\nsolely because a helper name implies a broader contract. Deduplicate sibling/root-cause\nissues: when the same bug pattern appears in multiple owned files, emit one finding\nwith multiple evidence refs instead of separate one-off findings.\n\nAvoid speculative low-evidence findings. Evidence must point at included files.\nValid evidence paths are exactly:\n- app/services-archived/thought-leadership/page.tsx\n- package.json\nFeature metadata paths are not valid evidence unless listed above.\nWhen providing evidence line ranges, use the line-number gutter in the Files section.\nDo not inspect files beyond the shown excerpts for evidence. If an excerpt is truncated,\nonly cite lines that appear in the Files section.\nSet evidence.quote to null; line ranges are enough for validation.\n\nPrompt context:\n{\n  \"maxOwnedFiles\": 12,\n  \"maxContextFiles\": 24,\n  \"includedFiles\": [\n    {\n      \"path\": \"app/services-archived/thought-leadership/page.tsx\",\n      \"role\": \"owned\",\n      \"bytes\": 10708,\n      \"includedBytes\": 10708,\n      \"includedStartLine\": 1,\n      \"includedEndLine\": 202,\n      \"includedLineRanges\": [\n        {\n          \"startLine\": 1,\n          \"endLine\": 202\n        }\n      ],\n      \"truncated\": false\n    },\n    {\n      \"path\": \"package.json\",\n      \"role\": \"context\",\n      \"bytes\": 1034,\n      \"includedBytes\": 1034,\n      \"includedStartLine\": 1,\n      \"includedEndLine\": 35,\n      \"includedLineRanges\": [\n        {\n          \"startLine\": 1,\n          \"endLine\": 35\n        }\n      ],\n      \"truncated\": false\n    }\n  ],\n  \"omittedFiles\": []\n}\n\nJSON shape:\n{\n  \"findings\": [\n    {\n      \"title\": \"string\",\n      \"category\": \"bug|security|performance|concurrency|api-contract|data-loss|test-gap|docs-gap|build-release|maintainability\",\n      \"severity\": \"critical|high|medium|low\",\n      \"confid\n...[trimmed]...\n-[#FF6B00] text-white hover:bg-[#e55f00] shadow-lg shadow-[#FF6B00]/20\"\n158 |                       : \"border border-[#00D4FF] text-[#00D4FF] hover:bg-[#00D4FF]/10\"\n159 |                   }`}\n160 |                 >\n161 |                   Get a Quote\n162 |                 </Link>\n163 |               </div>\n164 |             ))}\n165 |           </div>\n166 |           <p className=\"text-center text-[#94A3B8] text-sm mt-8\">\n167 |             All pricing negotiable based on scope, length, and requirements.\n168 |           </p>\n169 |         </div>\n170 |       </section>\n171 | \n172 |       {/* AUTHOR CALLOUT */}\n173 |       <section className=\"py-16 px-6 bg-[#131B2E] border-t border-[#1e2a45]\">\n174 |         <div className=\"max-w-3xl mx-auto text-center\">\n175 |           <p className=\"text-4xl mb-5\">📖</p>\n176 |           <h2 className=\"text-2xl font-bold text-[#E2E8F0] mb-4\">Become a Published Author</h2>\n177 |           <p className=\"text-[#94A3B8] leading-relaxed max-w-2xl mx-auto\">\n178 |             There is no faster way to establish unassailable authority in your industry than a\n179 |             published book with your name on the cover. We handle everything — writing, editing,\n180 |             cover design guidance, and full Amazon publication in Kindle and Paperback — so you\n181 |             can walk into any room as a published author.\n182 |           </p>\n183 |         </div>\n184 |       </section>\n185 | \n186 |       {/* CTA */}\n187 |       <section className=\"bg-gradient-to-r from-[#001F3F] to-[#131B2E] text-white py-16 px-6 text-center border-t border-[#1e2a45]\">\n188 |         <h2 className=\"text-3xl font-bold mb-4 text-[#E2E8F0]\">Ready to build your authority?</h2>\n189 |         <p className=\"text-[#94A3B8] mb-8 max-w-xl mx-auto\">\n190 |           Let&apos;s talk about your expertise, your audience, and the content strategy that gets\n191 |           you recognized as the expert you already are.\n192 |         </p>\n193 |         <Link\n194 |           href=\"/contact\"\n195 |           className=\"bg-[#FF6B00] text-white px-10 py-3 rounded-lg font-semibold hover:bg-[#e55f00] transition-colors shadow-lg shadow-[#FF6B00]/20 inline-block\"\n196 |         >\n197 |           Request a Call\n198 |         </Link>\n199 |       </section>\n200 |     </>\n201 |   );\n202 | }\n\n--- package.json (context, lines 1-35)\n1 | {\n2 |   \"name\": \"smfworks-site\",\n3 |   \"version\": \"0.1.0\",\n4 |   \"private\": true,\n5 |   \"scripts\": {\n6 |     \"dev\": \"next dev\",\n7 |     \"build\": \"next build\",\n8 |     \"start\": \"next start\",\n9 |     \"lint\": \"eslint\",\n10 |     \"design:lint\": \"npx @google/design.md lint DESIGN.md\",\n11 |     \"design:export\": \"npx @google/design.md export --format tailwind DESIGN.md > design-export.tailwind.json && npx @google/design.md export --format dtcg DESIGN.md > design-export.dtcg.json\",\n12 |     \"design:check\": \"npm run design:lint && npm run build\"\n13 |   },\n14 |   \"dependencies\": {\n15 |     \"jsonwebtoken\": \"^9.0.3\",\n16 |     \"next\": \"16.1.6\",\n17 |     \"react\": \"19.2.3\",\n18 |     \"react-dom\": \"19.2.3\",\n19 |     \"react-markdown\": \"^10.1.0\",\n20 |     \"remark-gfm\": \"^4.0.1\",\n21 |     \"stripe\": \"^20.4.1\"\n22 |   },\n23 |   \"devDependencies\": {\n24 |     \"@tailwindcss/postcss\": \"^4\",\n25 |     \"@types/jsonwebtoken\": \"^9.0.10\",\n26 |     \"@types/node\": \"^20\",\n27 |     \"@types/react\": \"^19\",\n28 |     \"@types/react-dom\": \"^19\",\n29 |     \"@types/stripe\": \"^8.0.416\",\n30 |     \"eslint\": \"^9\",\n31 |     \"eslint-config-next\": \"16.1.6\",\n32 |     \"tailwindcss\": \"^4\",\n33 |     \"typescript\": \"^5\"\n34 |   }\n35 | }\nwarning: Codex's Linux sandbox uses bubblewrap and needs access to create user namespaces.\nERROR: {\"type\":\"error\",\"status\":400,\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The 'deepseek-v4-pro:cloud' model is not supported when using Codex with a ChatGPT account.\"}}\nERROR: {\"type\":\"error\",\"status\":400,\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The 'deepseek-v4-pro:cloud' model is not supported when using Codex with a ChatGPT account.\"}}\n",
+      "provider": "codex",
+      "model": "deepseek-v4-pro:cloud",
+      "reasoningEffort": null,
+      "createdAt": "2026-05-25T22:39:36.193Z"
+    },
+    {
+      "runId": "20260525T224249-d71370",
+      "kind": "review",
+      "summary": "1 finding(s); prompt=17276 bytes; approxTokens=4309; includedFiles=2; omittedFiles=0",
+      "provider": "codex",
+      "model": "deepseek-v4-pro:cloud",
+      "reasoningEffort": null,
+      "createdAt": "2026-05-25T22:44:58.401Z"
+    }
+  ],
+  "createdAt": "2026-05-25T22:39:00.330Z",
+  "updatedAt": "2026-05-25T22:44:58.401Z"
+}

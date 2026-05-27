@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "runId": "20260525T224249-d71370",
+  "command": "review",
+  "args": [
+    "review",
+    "--limit",
+    "3",
+    "--jobs",
+    "1"
+  ],
+  "rootPath": "/home/mikesai1/projects/smfworks-site",
+  "headSha": "469a81bae2ec05fdf1c36fe1bfd9dd37099db7dd",
+  "startedAt": "2026-05-25T22:42:49.869Z",
+  "finishedAt": "2026-05-25T22:44:58.402Z",
+  "status": "completed",
+  "claimedFeatureIds": [
+    "feat_config_0c1c23856a",
+    "feat_config_7528cb5b98",
+    "feat_library_00a265d498"
+  ],
+  "findingIds": [
+    "fnd_sig-feat-config-0c1c23856a-b5e15_738f25db45",
+    "fnd_sig-feat-config-7528cb5b98-c84cd_549068010e",
+    "fnd_sig-feat-config-7528cb5b98-1f70c_dd24d24c49",
+    "fnd_sig-feat-config-7528cb5b98-b246c_71b9cdc221",
+    "fnd_sig-feat-library-00a265d498-0a01_88889c5e48"
+  ],
+  "patchAttemptIds": [],
+  "errors": []
+}

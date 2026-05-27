@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "featureId": "feat_library_e8d73d3f63",
+  "title": "Node source app/skills-archived",
+  "summary": "Node/TypeScript source group app/skills-archived with 3 files.",
+  "kind": "library",
+  "source": "node-source-group",
+  "confidence": "medium",
+  "entrypoints": [
+    {
+      "path": "package.json",
+      "symbol": "app/skills-archived",
+      "route": null,
+      "command": null
+    }
+  ],
+  "ownedFiles": [
+    {
+      "path": "app/skills-archived/[slug]/page.tsx",
+      "reason": "source group app/skills-archived"
+    },
+    {
+      "path": "app/skills-archived/data.ts",
+      "reason": "source group app/skills-archived"
+    },
+    {
+      "path": "app/skills-archived/page.tsx",
+      "reason": "source group app/skills-archived"
+    }
+  ],
+  "contextFiles": [
+    {
+      "path": "package.json",
+      "reason": "package manifest"
+    }
+  ],
+  "tests": [],
+  "tags": [
+    "node",
+    "typescript",
+    "source-group",
+    "project:smfworks-site",
+    "project-root:."
+  ],
+  "trustBoundaries": [],
+  "status": "pending",
+  "lock": null,
+  "findingIds": [],
+  "patchAttemptIds": [],
+  "analysisHistory": [],
+  "createdAt": "2026-05-25T22:39:00.330Z",
+  "updatedAt": "2026-05-25T22:39:00.330Z"
+}

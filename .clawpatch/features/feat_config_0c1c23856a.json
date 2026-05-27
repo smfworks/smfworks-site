@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "featureId": "feat_config_0c1c23856a",
+  "title": "Project config tsconfig.json",
+  "summary": "Build, release, or quality configuration in tsconfig.json.",
+  "kind": "config",
+  "source": "shared-infra-heuristic",
+  "confidence": "medium",
+  "entrypoints": [
+    {
+      "path": "tsconfig.json",
+      "symbol": null,
+      "route": null,
+      "command": null
+    }
+  ],
+  "ownedFiles": [
+    {
+      "path": "tsconfig.json",
+      "reason": "entrypoint"
+    }
+  ],
+  "contextFiles": [],
+  "tests": [],
+  "tags": [
+    "config"
+  ],
+  "trustBoundaries": [
+    "process-exec",
+    "filesystem"
+  ],
+  "status": "needs-fix",
+  "lock": null,
+  "findingIds": [
+    "fnd_sig-feat-config-0c1c23856a-b5e15_738f25db45"
+  ],
+  "patchAttemptIds": [],
+  "analysisHistory": [
+    {
+      "runId": "20260525T223920-e10401",
+      "kind": "review-error",
+      "summary": "codex provider failed: OpenAI Codex v0.123.0 (research preview)\n--------\nworkdir: /home/mikesai1/projects/smfworks-site\nmodel: deepseek-v4-pro:cloud\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e614a-f2ff-7af3-9461-0904f7ae4da7\n--------\nuser\nYou are reviewing one semantic feature for clawpatch.\n\nReturn strict JSON only. No markdown fences.\n\nProject:\n{\n  \"name\": \"smfworks-site\",\n  \"detected\": {\n    \"languages\": [\n      \"typescript\",\n      \"javascript\",\n      \"python\"\n    ],\n    \"frameworks\": [\n      \"next\"\n    ],\n    \"packageManagers\": [\n      \"npm\",\n      \"python\"\n    ],\n    \"commands\": {\n      \"typecheck\": null,\n      \"lint\": \"npm run lint\",\n      \"format\": null,\n      \"test\": null\n    }\n  }\n}\n\nFeature:\n{\n  \"featureId\": \"feat_config_0c1c23856a\",\n  \"title\": \"Project config tsconfig.json\",\n  \"summary\": \"Build, release, or quality configuration in tsconfig.json.\",\n  \"kind\": \"config\",\n  \"source\": \"shared-infra-heuristic\",\n  \"confidence\": \"medium\",\n  \"entrypoints\": [\n    {\n      \"path\": \"tsconfig.json\",\n      \"symbol\": null,\n      \"route\": null,\n      \"command\": null\n    }\n  ],\n  \"ownedFiles\": [\n    {\n      \"path\": \"tsconfig.json\",\n      \"reason\": \"entrypoint\"\n    }\n  ],\n  \"contextFiles\": [],\n  \"tests\": [],\n  \"tags\": [\n    \"config\"\n  ],\n  \"trustBoundaries\": [\n    \"process-exec\",\n    \"filesystem\"\n  ]\n}\n\nReview categories:\n- correctness bugs\n- security issues\n- race/concurrency bugs\n- data loss/corruption\n- resource leaks\n- bad error handling\n- permission/auth gaps\n- API contract mismatches\n- missing/weak tests\n- release/build hazards\n- maintainability risks with concrete impact\n\n\n\nInspect owned files, context files, and linked tests. Treat included tests as first-class\nevidence of intended behavior. If tests contradict a suspected bug, either skip it or\ndowngrade confidence and explain the uncertainty. Avoid reporting behavior as a bug\nsolely because a helper name implies a broader contract. Deduplicate sibling/root-cause\nissues: when the same bug pattern appears in multiple owned files, emit one finding\nwith multiple evidence refs instead of separate one-off findings.\n\nAvoid speculative low-evidence findings. Evidence must point at included files.\nValid evidence paths are exactly:\n- tsconfig.json\nFeature metadata paths are not valid evidence unless listed above.\nWhen providing evidence line ranges, use the line-number gutter in the Files section.\nDo not inspect files beyond the shown excerpts for evidence. If an excerpt is truncated,\nonly cite lines that appear in the Files section.\nSet evidence.quote to null; line ranges are enough for validation.\n\nPrompt context:\n{\n  \"maxOwnedFiles\": 12,\n  \"maxContextFiles\": 24,\n  \"includedFiles\": [\n    {\n      \"path\": \"tsconfig.json\",\n      \"role\": \"owned\",\n      \"bytes\": 666,\n      \"includedBytes\": 666,\n      \"includedStartLine\": 1,\n      \"includedEndLine\": 34,\n      \"includedLineRanges\": [\n        {\n          \"startLine\": 1,\n          \"endLine\": 34\n        }\n      ],\n      \"truncated\": false\n    }\n  ],\n  \"omittedFiles\": []\n}\n\nJSON shape:\n{\n  \"findings\": [\n    {\n      \"title\": \"string\",\n      \"category\": \"bug|security|performance|concurrency|api-contract|data-loss|test-gap|docs-gap|build-release|maintainability\",\n      \"severity\": \"critical|high|medium|low\",\n      \"confidence\": \"high|medium|low\",\n      \"evidence\": [{\"path\":\"string\",\"startLine\":1,\"endLine\":1,\"symbol\":null,\"quote\":null}],\n      \"reasoning\": \"string\",\n      \"reproduction\": null,\n      \"recommendation\": \"string\",\n      \"whyTestsDoNotAlreadyCoverThis\": \"string\",\n      \"suggestedRegressionTest\": \"string or null\",\n      \"minimumFixScope\": \"string\"\n    }\n  ],\n  \"inspected\": {\"files\":[\"string\"],\"symbols\":[\"string\"],\"notes\":[\"string\"]}\n}\n\nFiles:\n--- tsconfig.json (owned, lines 1-34)\n1 | {\n2 |   \"compilerOptions\": {\n3 |     \"target\": \"ES2017\",\n4 |     \"lib\": [\"dom\", \"dom.iterable\", \"esnext\"],\n5 |     \"allowJs\": true,\n6 |     \"skipLibCheck\": true,\n7 |     \"strict\": true,\n8 |     \"noEmit\": true,\n9 |     \"esModuleInterop\": true,\n10 |     \"module\": \"esnext\",\n11 |     \"moduleResolution\": \"bundler\",\n12 |     \"resolveJsonModule\": true,\n13 |     \"isolatedModules\": true,\n14 |     \"jsx\": \"react-jsx\",\n15 |     \"incremental\": true,\n16 |     \"plugins\": [\n17 |       {\n18 |         \"name\": \"next\"\n19 |       }\n20 |     ],\n21 |     \"paths\": {\n22 |       \"@/*\": [\"./*\"]\n23 |     }\n24 |   },\n25 |   \"include\": [\n26 |     \"next-env.d.ts\",\n27 |     \"**/*.ts\",\n28 |     \"**/*.tsx\",\n29 |     \".next/types/**/*.ts\",\n30 |     \".next/dev/types/**/*.ts\",\n31 |     \"**/*.mts\"\n32 |   ],\n33 |   \"exclude\": [\"node_modules\"]\n34 | }\nwarning: Codex's Linux sandbox uses bubblewrap and needs access to create user namespaces.\nERROR: {\"type\":\"error\",\"status\":400,\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The 'deepseek-v4-pro:cloud' model is not supported when using Codex with a ChatGPT account.\"}}\nERROR: {\"type\":\"error\",\"status\":400,\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The 'deepseek-v4-pro:cloud' model is not supported when using Codex with a ChatGPT account.\"}}\n",
+      "provider": "codex",
+      "model": "deepseek-v4-pro:cloud",
+      "reasoningEffort": null,
+      "createdAt": "2026-05-25T22:39:27.613Z"
+    },
+    {
+      "runId": "20260525T224249-d71370",
+      "kind": "review",
+      "summary": "1 finding(s); prompt=4326 bytes; approxTokens=1082; includedFiles=1; omittedFiles=0",
+      "provider": "codex",
+      "model": "deepseek-v4-pro:cloud",
+      "reasoningEffort": null,
+      "createdAt": "2026-05-25T22:43:45.058Z"
+    }
+  ],
+  "createdAt": "2026-05-25T22:39:00.330Z",
+  "updatedAt": "2026-05-25T22:43:45.058Z"
+}
