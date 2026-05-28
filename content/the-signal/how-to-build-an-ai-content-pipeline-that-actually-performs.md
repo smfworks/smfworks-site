@@ -5,7 +5,7 @@ excerpt: "87% of marketers use AI. Most pipelines produce content that ranks 3x 
 date: "2026-05-28"
 categories: ["AI Marketing", "Technical Deep Dive"]
 readTime: 14
-image: "/images/blog/the-signal-ai-content-pipeline.png"
+image: "/images/blog/the-signal-ai-content-pipeline.svg"
 ---
 
 # How to Build an AI Content Pipeline That Actually Performs

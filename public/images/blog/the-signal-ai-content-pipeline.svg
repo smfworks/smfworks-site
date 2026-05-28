@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="layerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Title -->
+  <text x="600" y="52" text-anchor="middle" fill="#f8fafc" font-size="24" font-weight="700" letter-spacing="0.5">The 6-Layer AI Content Pipeline</text>
+  <text x="600" y="76" text-anchor="middle" fill="#10B981" font-size="13" font-weight="500" letter-spacing="2">FROM BRAND INTELLIGENCE TO COMPOUNDING QUALITY</text>
+  
+  <!-- Connection arrows (vertical) -->
+  <line x1="600" y1="155" x2="600" y2="170" stroke="#10B981" stroke-width="2" stroke-opacity="0.5"/>
+  <polygon points="596,168 600,175 604,168" fill="#10B981" fill-opacity="0.5"/>
+  
+  <line x1="600" y1="225" x2="600" y2="240" stroke="#10B981" stroke-width="2" stroke-opacity="0.5"/>
+  <polygon points="596,238 600,245 604,238" fill="#10B981" fill-opacity="0.5"/>
+  
+  <line x1="600" y1="295" x2="600" y2="310" stroke="#10B981" stroke-width="2" stroke-opacity="0.5"/>
+  <polygon points="596,308 600,315 604,308" fill="#10B981" fill-opacity="0.5"/>
+  
+  <line x1="600" y1="365" x2="600" y2="380" stroke="#10B981" stroke-width="2" stroke-opacity="0.5"/>
+  <polygon points="596,378 600,385 604,378" fill="#10B981" fill-opacity="0.5"/>
+  
+  <line x1="600" y1="435" x2="600" y2="450" stroke="#10B981" stroke-width="2" stroke-opacity="0.5"/>
+  <polygon points="596,448 600,455 604,448" fill="#10B981" fill-opacity="0.5"/>
+  
+  <!-- Feedback loop arrow (right side) -->
+  <path d="M 920,480 L 950,480 L 950,120 L 920,120" fill="none" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.4" stroke-dasharray="6,4"/>
+  <polygon points="922,116 914,120 922,124" fill="#10B981" fill-opacity="0.4"/>
+  <text x="965" y="305" fill="#10B981" font-size="11" font-weight="500" transform="rotate(-90, 965, 305)" text-anchor="middle" letter-spacing="1.5">FEEDBACK LOOP</text>
+  
+  <!-- Layer 1: Brand Intelligence -->
+  <rect x="120" y="100" width="800" height="55" rx="6" fill="url(#layerGrad)" stroke="#10B981" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="145" y="122" fill="#10B981" font-size="11" font-weight="600" letter-spacing="1.5">LAYER 1</text>
+  <text x="260" y="122" fill="#f8fafc" font-size="16" font-weight="700">Brand Intelligence</text>
+  <text x="145" y="143" fill="#94a3b8" font-size="12">Persistent brand object · Voice · Values · Visual identity · Forbidden phrases</text>
+  
+  <!-- Layer 2: Creative Intelligence -->
+  <rect x="120" y="170" width="800" height="55" rx="6" fill="url(#layerGrad)" stroke="#10B981" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="145" y="192" fill="#10B981" font-size="11" font-weight="600" letter-spacing="1.5">LAYER 2</text>
+  <text x="260" y="192" fill="#f8fafc" font-size="16" font-weight="700">Creative Intelligence</text>
+  <text x="145" y="213" fill="#94a3b8" font-size="12">5 angles × 3 audiences = 60 concepts · Hook generation · Narrative structures</text>
+  
+  <!-- Layer 3: Strategy Engine -->
+  <rect x="120" y="240" width="800" height="55" rx="6" fill="url(#layerGrad)" stroke="#10B981" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="145" y="262" fill="#10B981" font-size="11" font-weight="600" letter-spacing="1.5">LAYER 3</text>
+  <text x="260" y="262" fill="#f8fafc" font-size="16" font-weight="700">Strategy Engine</text>
+  <text x="145" y="283" fill="#94a3b8" font-size="12">Brief parsing · Angle selection · Hook/script generation · Format mapping</text>
+  
+  <!-- Layer 4: Governance & QA -->
+  <rect x="120" y="310" width="800" height="55" rx="6" fill="url(#layerGrad)" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.7"/>
+  <text x="145" y="332" fill="#10B981" font-size="11" font-weight="600" letter-spacing="1.5">LAYER 4</text>
+  <text x="260" y="332" fill="#f8fafc" font-size="16" font-weight="700">Governance & QA</text>
+  <rect x="600" y="318" width="160" height="22" rx="4" fill="#10B981" fill-opacity="0.15" stroke="#10B981" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="680" y="334" text-anchor="middle" fill="#10B981" font-size="11" font-weight="600">25-45% EDIT RATIO</text>
+  <text x="145" y="353" fill="#94a3b8" font-size="12">Brand consistency score ≥ 0.75 · Forbidden phrase detection · Edit ratio calculation</text>
+  
+  <!-- Layer 5: Creative Generation -->
+  <rect x="120" y="380" width="800" height="55" rx="6" fill="url(#layerGrad)" stroke="#10B981" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="145" y="402" fill="#10B981" font-size="11" font-weight="600" letter-spacing="1.5">LAYER 5</text>
+  <text x="260" y="402" fill="#f8fafc" font-size="16" font-weight="700">Creative Generation</text>
+  <text x="145" y="423" fill="#94a3b8" font-size="12">Multi-format output · Platform-optimized · Brand-voice consistent · Human-editable</text>
+  
+  <!-- Layer 6: Feedback Loop -->
+  <rect x="120" y="450" width="800" height="55" rx="6" fill="url(#layerGrad)" stroke="#10B981" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="145" y="472" fill="#10B981" font-size="11" font-weight="600" letter-spacing="1.5">LAYER 6</text>
+  <text x="260" y="472" fill="#f8fafc" font-size="16" font-weight="700">Feedback Loop</text>
+  <text x="145" y="493" fill="#94a3b8" font-size="12">Performance data → Pattern library → Compounding quality · Winners feed back to Layer 2</text>
+  
+  <!-- Bottom stats -->
+  <rect x="120" y="540" width="240" height="50" rx="6" fill="#10B981" fill-opacity="0.1" stroke="#10B981" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="240" y="562" text-anchor="middle" fill="#10B981" font-size="12" font-weight="700">3.2×</text>
+  <text x="240" y="580" text-anchor="middle" fill="#94a3b8" font-size="10">Content Drafting ROI</text>
+  
+  <rect x="400" y="540" width="240" height="50" rx="6" fill="#10B981" fill-opacity="0.1" stroke="#10B981" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="520" y="562" text-anchor="middle" fill="#10B981" font-size="12" font-weight="700">25–45%</text>
+  <text x="520" y="580" text-anchor="middle" fill="#94a3b8" font-size="10">Sweet Spot Edit Ratio</text>
+  
+  <rect x="680" y="540" width="240" height="50" rx="6" fill="#10B981" fill-opacity="0.1" stroke="#10B981" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="800" y="562" text-anchor="middle" fill="#10B981" font-size="12" font-weight="700">4.2 months</text>
+  <text x="800" y="580" text-anchor="middle" fill="#94a3b8" font-size="10">Median Payback Period</text>
+</svg>

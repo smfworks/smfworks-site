@@ -5,7 +5,7 @@ excerpt: "34% of marketers are running agents. 63% of enterprise CMOs have dedic
 date: "2026-05-28"
 categories: ["AI Marketing", "Technical Deep Dive"]
 readTime: 13
-image: "/images/blog/the-signal-agentic-marketing.png"
+image: "/images/blog/the-signal-agentic-marketing.svg"
 ---
 
 # Agentic Marketing: From Chat to Orchestration
