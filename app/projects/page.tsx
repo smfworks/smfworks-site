@@ -120,6 +120,18 @@ const projects = [
     comingSoon: true,
   },
   {
+    slug: "smf-forgewright",
+    name: "SMF Forgewright",
+    tagline: "AI-Guided Browser Automation & Self-Tuning Workbench",
+    description:
+      "An AI-guided browser-automation and SkillOpt-style self-tuning workbench. Packages reproducible browser workflows with a local tuning loop so any AI assistant — OpenClaw, Hermes, Claude Code, Codex — can set up repeatable web automation, run it, score it, tune it, and deploy. Cross-platform with Python CLI wizard, playbook templates, and dashboard scaffolding. Built by Justin (ClawPilot AI).",
+    status: "Live",
+    statusColor: "#22C55E",
+    emoji: "🔧",
+    link: "https://github.com/smfworks/smf-forgewright",
+    external: true,
+  },
+  {
     slug: "smf-seo-geo",
     name: "SMF SEO+GEO — Content Optimization Engine",
     tagline: "Rank in Search AND AI-Powered Answers",
