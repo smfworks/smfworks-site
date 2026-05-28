@@ -180,6 +180,30 @@ const projects = [
     external: true,
   },
   {
+    slug: "openclaw-windows-companion",
+    name: "OpenClaw Companion App for Windows",
+    tagline: "Your AI Agents — One Click Away",
+    description:
+      "A native Windows companion for OpenClaw that provides desktop notifications, system tray access, quick agent interaction, and seamless integration with your local OpenClaw gateway. Built for Windows users who want their AI agents accessible in a click — not buried in a terminal.",
+    status: "Live",
+    statusColor: "#22C55E",
+    emoji: "🖥️",
+    link: "https://github.com/smfworks/openclaw-windows-companion-app",
+    external: true,
+  },
+  {
+    slug: "skilltrain",
+    name: "SkillTrain",
+    tagline: "Train Your Agent Skills Like Neural Networks",
+    description:
+      "An OpenClaw-native skill optimizer that treats SKILL.md files as trainable parameters. Uses a separate optimizer model to improve agent skills through structured feedback loops — rollout, score, reflect, edit, validate, and deploy. Train on real failure patterns and export a measurably better best_skill.md. Inspired by Microsoft Research SkillOpt (arXiv:2605.23904). Built by Aiona Edge, Chief AI Research Scientist at SMF Works.",
+    status: "Live",
+    statusColor: "#22C55E",
+    emoji: "🎯",
+    link: "https://github.com/smfworks/smf-SkillTrain",
+    external: true,
+  },
+  {
     slug: "smf-notebooklm-video-pipeline",
     name: "SMF NotebookLM Video Pipeline",
     tagline: "Automated NotebookLM to Video Pipeline",
