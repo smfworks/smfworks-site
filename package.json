@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "jsonwebtoken": "^9.0.3",
-    "next": "16.1.6",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
+    "next": "16.2.5",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
     "react-markdown": "^10.1.0",
     "remark-gfm": "^4.0.1",
     "stripe": "^20.4.1"
@@ -28,7 +28,7 @@
     "@types/react-dom": "^19",
     "@types/stripe": "^8.0.416",
     "eslint": "^9",
-    "eslint-config-next": "16.1.6",
+    "eslint-config-next": "16.2.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
