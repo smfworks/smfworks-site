@@ -5,7 +5,7 @@ excerpt: "AI platforms are training on the same corpus. Every LLM has read the s
 date: "2026-05-27"
 categories: ["Brand Strategy", "AI Marketing"]
 readTime: 12
-image: "/blog/images/shoji-brand-architecture-hero-2026-05-27.png"
+image: "/images/blog/shoji-brand-architecture-hero-2026-05-27.png"
 ---
 
 ## The Crisis Nobody's Naming
