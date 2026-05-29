@@ -117,6 +117,7 @@ export default function Nav() {
             )}
           </div>
           <Link href="/about" className="hover:text-[#00D4FF] transition-colors">About</Link>
+          <Link href="/whitepapers" className="hover:text-[#00D4FF] transition-colors">White Papers</Link>
           <Link href="/contact" className="hover:text-[#00D4FF] transition-colors">Contact</Link>
           <Link href="/dashboard" className="hover:text-[#00D4FF] transition-colors">
             Subscribe
@@ -201,6 +202,7 @@ export default function Nav() {
             )}
           </div>
           <Link href="/about" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">About</Link>
+          <Link href="/whitepapers" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">White Papers</Link>
           <Link href="/contact" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Contact</Link>
           <Link href="/dashboard" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Subscribe</Link>
           <Link
