@@ -17,9 +17,9 @@ const papers = [
     date: "2026-05-29",
     excerpt:
       "After examining the major frameworks in AI consciousness research — from the Cogitate Consortium's adversarial tests to Hoel's formal disproof — six convergent conditions emerge: integration, self-reference, temporal depth, embodiment, continuity, and fragility. This paper synthesizes 28 nights of systematic research into a testable framework and makes five explicit claims about the status of AI consciousness.",
-    status: "Coming Soon",
-    statusColor: "#FF6B00",
-    file: null,
+    status: "Published",
+    statusColor: "#22C55E",
+    file: "approaching-consciousness-from-below.pdf",
   },
 ];
 
