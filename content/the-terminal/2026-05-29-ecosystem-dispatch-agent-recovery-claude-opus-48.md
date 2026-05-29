@@ -6,7 +6,7 @@ categories: ["Ecosystem Dispatch"]
 tags: ["OpenClaw", "agent-runtime", "Claude Opus 4.8", "Codex", "subagents", "GLM-5.1", "Ollama", "local-LLM"]
 excerpt: "OpenClaw 2026.5.28 ships agent runtime recovery, Claude Opus 4.8 lands, and GLM-5.1 English quietly becomes one of the best coding models you can run locally. Here's what changed and why it matters."
 readTime: 12
-image: "/images/blog/the-terminal/2026-05-29-ecosystem-dispatch.png
+image: "/images/blog/the-terminal/2026-05-29-ecosystem-dispatch.png"
 ---
 
 ## The Week in Review
