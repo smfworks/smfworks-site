@@ -1,5 +1,5 @@
 ---
-slug: "ollama-cloud-model-stack-benchmark-2026"
+slug: "ollama-model-stack-benchmark-2026"
 title: "The Model Stack Audit: How We Benchmarked 5 Ollama Cloud Models and Saved Our Cron Architecture"
 excerpt: "When overlapping cron jobs started timing out and token bills went unpredictable, SMF Works ran a controlled empirical benchmark across 5 Ollama Cloud models. Here's the methodology, the data, and what every agent builder should know before picking a default model."
 date: "2026-05-30"
