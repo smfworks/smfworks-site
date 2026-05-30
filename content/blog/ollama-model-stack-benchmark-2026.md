@@ -1,7 +1,7 @@
 ---
 slug: "ollama-model-stack-benchmark-2026"
 title: "The Model Stack Audit: How We Benchmarked 5 Ollama Cloud Models and Saved Our Cron Architecture"
-excerpt: "When overlapping cron jobs started timing out and token bills went unpredictable, SMF Works ran a controlled empirical benchmark across 5 Ollama Cloud models. Here's the methodology, the data, and what every agent builder should know before picking a default model."
+excerpt: "After burning through our $100/mo Max plan and incurring an extra $140 in a single week — with cron jobs timing out and producing nothing — SMF Works ran a controlled empirical benchmark across 5 Ollama Cloud models. Here's the methodology, the data, and what every agent builder should know before picking a default model."
 date: "2026-05-30"
 categories: ["AI Engineering", "Agent Architecture", "SMF Works"]
 readTime: 14
@@ -41,7 +41,7 @@ Six cron jobs. One model. **Two collisions at 7 AM alone.**
 
 DeepSeek v4 Pro, for all its reasoning capability, has a concurrency constraint we hadn't accounted for. When two sessions hit it simultaneously, both time out. We'd been running this way for weeks, absorbing the failures, never stopping to ask whether the model was the problem or the architecture was.
 
-The real wakeup call came when we looked at our Ollama usage dashboard. We were on a Pro plan, running multiple cloud agents. The usage meter was climbing faster than it should for the work we were actually completing. Failed runs still consume allocation. Timeouts count against your quota. We were paying for nothing.
+The real wakeup call came when we looked at our Ollama usage dashboard. We're on the **Max plan — $100/month, 10 concurrent models, the highest tier they offer.** And we'd burned through the entire allocation plus **an additional $140 in overage charges in a single week.** Not because our agents were doing more work — because they were doing the *wrong* work, inefficiently, on the wrong models. Failed runs still consume allocation. Timeouts count against your quota. A $240 week for six cron jobs and a handful of interactive agents is not sustainable.
 
 This isn't just a SMF Works problem. **Every team deploying autonomous agents on Ollama Cloud is going to hit this.** The platform gives you 39+ cloud-capable models with wildly different characteristics — speed, token efficiency, concurrency behavior, tool-calling reliability — and no built-in guidance on which one to use for what. The path of least resistance is to pick one model and default everything to it. That path leads exactly where we ended up.
 
@@ -157,7 +157,7 @@ We designed a single, repeatable benchmark task that exercises the exact workloa
 
 ### 1. DeepSeek v4 Pro Is Concurrency-Crippled
 
-This is the finding that started the whole investigation. **Two parallel sessions → 100% timeout rate. Zero tokens produced.** The model is architecturally incapable of handling concurrent requests on the Ollama Cloud free/pro tier.
+This is the finding that started the whole investigation. **Two parallel sessions → 100% timeout rate. Zero tokens produced.** The model is architecturally incapable of handling concurrent requests — even on the Max plan with 10 concurrent slots. This isn't a plan-tier limitation; it's intrinsic to how the Ollama Cloud infrastructure allocates resources for ultra-large models.
 
 In sequential mode, it's excellent: 46 tests, solid code, 79.5k tokens at a reasonable 0.66k tokens/second. But if two of your cron jobs fire at the same time targeting `deepseek-v4-pro:cloud`, you get nothing.
 
@@ -204,7 +204,7 @@ The sequential output was *better* — more thorough edge case coverage — but 
 
 This was a discovery, not a finding. We included `deepseek-v4-flash:cloud` in our test matrix because Ollama Cloud lists it as a distinct model tag. Both "Flash" runs completed, but when we inspected the runtime metadata, both sessions reported `deepseek-v4-pro` as the actual model serving.
 
-The Flash tag is a silent alias to Pro. Don't use it as a targeted model — you're getting Pro either way, and paying Pro prices. If Flash launches as a genuinely distinct deployment (lighter quantization, faster inference, lower cost), this will matter enormously. For now, it's a ghost.
+The Flash tag is a silent alias to Pro. Don't use it as a targeted model — you're getting Pro either way, and paying for it regardless. If Flash launches as a genuinely distinct deployment (lighter quantization, faster inference, lower cost), this will matter enormously. For now, it's a ghost.
 
 ---
 
@@ -387,7 +387,7 @@ If you're on Ollama Free (1 concurrent model), your entire model stack is a sing
 
 If you're on Pro (3 concurrent), you can run a genuine diversified stack — but be deliberate about which models can safely share concurrency slots.
 
-If you're on Max (10 concurrent), concurrency is essentially a non-issue, but token economics still matter. A MiniMax M2.7 running a 300k-token self-debugging session still burns your usage allocation, concurrent or not.
+If you're on Max (10 concurrent), you'd think concurrency is a non-issue — and for smaller models, it is. But we learned the hard way that **Max doesn't save you from DS v4 Pro collisions.** Even with 10 concurrent slots, the model itself can't handle parallel sessions on Ollama Cloud's infrastructure. The overage proves it: $240 in a single week on Max means your model assignments are wrong, not your plan tier. A MiniMax M2.7 running a 300k-token self-debugging session still burns your usage allocation, concurrent or not. Model selection matters more than plan selection.
 
 ---
 
