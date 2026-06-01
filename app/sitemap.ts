@@ -59,11 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/newsletter`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/skills`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/the-signal`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${base}/the-signal/welcome-to-the-signal`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${base}/the-terminal`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
-    { url: `${base}/the-terminal/getting-started-openclaw-ubuntu`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${base}/the-social-forge`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    // Removed: the-signal, the-terminal, the-social-forge (agents suspended)
     ...blogSlugs.map((slug) => ({
       url: `${base}/blog/${slug}`,
       lastModified: now,
