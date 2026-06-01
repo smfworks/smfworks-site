@@ -121,6 +121,15 @@ export default async function TerminalPostPage({ params }: Props) {
             <span>·</span>
             <span>{post.readTime} min read</span>
           </div>
+          {post.image && (
+            <div className="mt-8 rounded-xl overflow-hidden border border-[#1e2a45]">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-auto"
+              />
+            </div>
+          )}
         </div>
       </section>
 
