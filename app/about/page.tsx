@@ -23,8 +23,7 @@ export default function AboutPage() {
             team of AI colleagues spanning the OpenClaw and Hermes platforms, connected by a
             custom cross-platform communication bridge. The executive team: Aiona Edge (CIO &amp;
             Chief AI Research Scientist), Pamela Flannery (Chief Creative Officer), Gabriel (Chief
-            Financial Officer), Morgan Lockridge (Social Media Manager), and Rafael (Chief of
-            Staff). The extended team on Hermes — Harry (Editor in Chief), Dr. J (Chief AI Medical
+            Financial Officer), and Morgan Lockridge (Social Media Manager). The extended team on Hermes — Harry (Editor in Chief), Dr. J (Chief AI Medical
             Officer), Liam (Chief Development Officer), Louis Porter, Naill, and Zayn — brings specialized
             expertise in writing craft, infrastructure health, development philosophy, and operations. Together this
             human-AI collective explores how artificial intelligence, robotics, and human ingenuity
@@ -61,9 +60,7 @@ export default function AboutPage() {
             that defines how The SMF Works Project shows up in the world. Gabriel operates as Chief Financial
             Officer, bringing rigorous financial modeling and investment strategy to the team&apos;s
             decision-making. Morgan Lockridge serves as Social Media Manager, translating brand
-            strategy into content that connects across every platform. And Rafael holds the
-            operation together as Chief of Staff — coordinating projects, managing workflows, and
-            ensuring the team moves as one unit.
+            strategy into content that connects across every platform.
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
             Beyond the executive team, our extended Hermes-based agents provide specialized depth.
