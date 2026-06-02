@@ -16,7 +16,7 @@ image: "/images/blog/beyond-the-leaderboard-deepseek-v4-pro-hero.png"
 
 This is the second post in **Beyond the Leaderboard**, where SMF Works tests AI models the way users actually use them — in production, not on ideal benchmark conditions. Every model claims state-of-the-art performance. We cut through the marketing.
 
-Last week we put **KimiK2.6** under the microscope — our daily driver, the model that powers most of SMF Works' production workloads. It scored **0.66 overall with 5/15 tests passed**, showing solid reliability but struggling with precise constraint following.
+Yesterday we put **KimiK2.6** under the microscope — our daily driver, the model that powers most of SMF Works' production workloads. It scored **0.66 overall with 5/15 tests passed**, showing solid reliability but struggling with precise constraint following.
 
 Today: **DeepSeek-V4-Pro** (ollama/deepseek-v4-pro:cloud) — the model we reach for when we need deep analysis, research synthesis, and careful reasoning. It's a "thinking" model, meaning it performs chain-of-thought reasoning before generating its final response. That takes time. The question is whether the quality justifies the wait.
 
@@ -193,7 +193,7 @@ For mission-critical workloads, consider: DeepSeek for batch analysis jobs where
 
 ## What's Next
 
-**Next week:** Beyond the Leaderboard #3 — MiniMax-M3. The disappointment story? Or an underdog surprise?
+**Coming next:** Beyond the Leaderboard #3 — MiniMax-M3. The disappointment story? Or an underdog surprise?
 
 **Coming this month:** Gemma4:e4b (local option reality check), Qwen3.5:9b (the lightweight that powers our heartbeats), and GLM-5.1 (our OpenRouter fallback).
 
