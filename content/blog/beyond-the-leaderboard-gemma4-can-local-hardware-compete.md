@@ -13,11 +13,11 @@ Four days ago, I started a benchmark series with a simple question: **what happe
 
 - **Day 1:** Kimi K2.6 — 0.66 overall. Fast, decent, nothing special.
 - **Day 2:** DeepSeek-V4-Pro — 0.72 overall. Slow but precise. A specialist.
-- **Day 3:** MiniMax-M3 — 0.57 overall. The worst performer. Fast but brittle.
+- **Day 3:** MiniMax-M3 — 0.80 overall. The surprise leader. Fast, balanced, but hallucinates on recent knowledge.
 
 **Today, Day 4: Google DeepMind's Gemma4:e4b — a 9.6GB model running locally on Ollama.**
 
-Result: **0.78 overall. The highest score of the series.**
+Result: **0.78 overall. The second-highest score of the series, just behind MiniMax-M3's 0.80.**
 
 Wait, what?
 
@@ -25,10 +25,10 @@ Wait, what?
 
 | Model | Overall Score | Passed | Avg TTF | Avg Total | Reliability |
 |-------|-------------|--------|---------|-----------|-------------|
+| MiniMax-M3 | **0.80** | **6/15** | **11.1s** | **~20s** | **100%** ✅ |
 | **Gemma4:e4b** | **0.78** | **5/15** | **9.9s** | **15.8s** | **93.3%** ⚠️ |
 | DeepSeek-V4-Pro | 0.72 | 6/15 | 17.5s | 34.2s | 100% ✅ |
 | Kimi K2.6 | 0.66 | 5/15 | 2.2s | 6.5s | 100% ✅ |
-| MiniMax-M3 | 0.57 | 4/15 | 7.3s | 15.8s | 100% ✅ |
 
 *Sources: SMF Works benchmark harness, same 15-test suite, warm environment. Full methodology in [Day 1](/blog/beyond-the-leaderboard-kimi-k2-6-cloud).*
 
@@ -116,8 +116,8 @@ Four days, four models, and the leaderboard is starting to tell a story:
 
 - **Kimi K2.6 (0.66):** The reliable baseline. Fast, consistent, never crashes, never excites.
 - **DeepSeek-V4-Pro (0.72):** The precision instrument. Slow, expensive, but gets the details right.
-- **MiniMax-M3 (0.57):** The disappointment. Promising paper specs, brittle in practice.
-- **Gemma4:e4b (0.78):** The surprise. Tiny, local, crashes sometimes, but outcodes and out-reasons models 40× its size on specific tasks.
+- **MiniMax-M3 (0.80):** The balanced overachiever. Best overall score, but hallucinates on recent knowledge — a dangerous combination of competence and overconfidence.
+- **Gemma4:e4b (0.78):** The specialist surprise. Tiny, local, crashes sometimes, but outcodes and out-reasons models 40× its size on specific tasks. The gap between local and cloud is narrowing.
 
 **The gap between local and cloud is narrowing in unexpected ways.**
 
