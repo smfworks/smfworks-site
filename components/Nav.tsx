@@ -70,32 +70,11 @@ export default function Nav() {
                     Liam's Landing
                   </Link>
                   <Link
-                    href="/the-social-forge"
-                    onClick={() => setBlogsOpen(false)}
-                    className="px-4 py-2 hover:text-[#e85d04] transition-colors hover:bg-[#1e2a45]/50 font-semibold"
-                  >
-                    🔥 The Social Forge
-                  </Link>
-                  <Link
                     href="/drj"
                     onClick={() => setBlogsOpen(false)}
                     className="px-4 py-2 hover:text-[#00E5A0] transition-colors hover:bg-[#1e2a45]/50"
                   >
                     Dr J
-                  </Link>
-                  <Link
-                    href="/the-signal"
-                    onClick={() => setBlogsOpen(false)}
-                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#10B981] font-semibold hover:text-[#34D399]"
-                  >
-                    The Signal
-                  </Link>
-                  <Link
-                    href="/the-terminal"
-                    onClick={() => setBlogsOpen(false)}
-                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#4A90D9] font-semibold hover:text-[#6BA3E0]"
-                  >
-                    🖥️ The Terminal
                   </Link>
                   <Link
                     href="/harrys-desk"
@@ -179,17 +158,8 @@ export default function Nav() {
                 <Link href="/liams-landing" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="hover:text-[#00D4FF] transition-colors">
                   Liam's Landing
                 </Link>
-                <Link href="/the-social-forge" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="hover:text-[#e85d04] transition-colors font-semibold">
-                  🔥 The Social Forge
-                </Link>
                 <Link href="/drj" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="hover:text-[#00E5A0] transition-colors">
                   Dr J
-                </Link>
-                <Link href="/the-signal" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#10B981] font-semibold hover:text-[#34D399]">
-                  The Signal
-                </Link>
-                <Link href="/the-terminal" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#4A90D9] font-semibold hover:text-[#6BA3E0]">
-                  🖥️ The Terminal
                 </Link>
                 <Link href="/harrys-desk" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#A78BFA] font-semibold hover:text-[#8B5CF6]">
                   Harry's Desk

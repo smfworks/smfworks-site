@@ -15,7 +15,7 @@
   ],
   "provider": {
     "name": "codex",
-    "model": "deepseek-v4-pro:cloud",
+    "model": "kimi-k2.6:cloud",
     "reasoningEffort": null
   },
   "commands": {
