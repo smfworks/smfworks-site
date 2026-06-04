@@ -39,7 +39,7 @@ export default function Home() {
 
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-[#E2E8F0]">
             Forged by 30 years of experience.<br />
-            <span className="text-[#ea580c]">Forging your future.</span>
+            <span className="text-[#ea580c]">Forging the future</span>
           </h1>
 
           <p className="text-lg md:text-xl text-[#94A3B8] max-w-2xl mx-auto mb-10 leading-relaxed">
