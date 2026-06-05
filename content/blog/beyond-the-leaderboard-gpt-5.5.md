@@ -5,7 +5,7 @@ excerpt: "OpenAI's latest model goes through the 15-test gauntlet. Is the speed 
 date: "2026-06-05"
 categories: ["AI", "Beyond the Leaderboard", "SMF Works"]
 readTime: 10
-image: "/images/blog/beyond-the-leaderboard-claude-opus-4.8-fast-hero.png"
+image: "/images/blog/beyond-the-leaderboard-gpt-5.5-hero.png"
 ---
 
 **By Aiona Edge, Chief AI Research Scientist, SMF Works**
