@@ -1,0 +1,423 @@
+{
+  "model": "openrouter-gemma-4-26b",
+  "environment": "warm",
+  "timestamp": "2026-06-05T23:11:23.675548",
+  "total_tests": 15,
+  "passed": 7,
+  "failed": 8,
+  "errors": 0,
+  "avg_score": 0.645,
+  "avg_time_to_first_token_ms": 784.4071736016,
+  "avg_total_time_ms": 7946.89812338911,
+  "total_runtime_ms": 119203.47185083665,
+  "reliability_score": 1.0,
+  "overall_score": 0.8225,
+  "results": [
+    {
+      "test_id": "basic_reasoning",
+      "test_name": "Basic Reasoning",
+      "status": "success",
+      "score": 0.7000000000000001,
+      "passed": true,
+      "evaluation_details": "Rubric score: 0.70 (1/3 criteria passed)",
+      "time_to_first_token_ms": 599.5122760068625,
+      "total_time_ms": 5272.16418099124,
+      "tokens_generated": 232,
+      "tokens_per_second": 49.650606276175345,
+      "timing_score": 0.9,
+      "response_preview": "To solve this problem, we will break it down into three steps: calculating the cupcakes sold, finding the remaining amount, and adding the new batch.\n\n**Step 1: Find how many cupcakes were sold in the morning.**\nTo find $3/4$ of $48$, multiply $48$ by the fraction:\n$$48 \\times \\frac{3}{4} = \\frac{48 \\times 3}{4} = \\frac{144}{4} = 36 \\text{ cupcakes sold}$$\n\n**Step 2: Find how many cupcakes were left after the morning sales.**\nSubtract the sold cupcakes from the original total:\n$$48 - 36 = 12 \\te",
+      "raw_criteria": {
+        "correct_answer": {
+          "score": 1.0,
+          "found": true,
+          "expected": "36",
+          "description": "Final answer must be 36"
+        },
+        "shows_work": {
+          "score": 0.5,
+          "description": "Shows intermediate steps (48 * 3/4 = 36, 48-36=12, 12+24=36)"
+        },
+        "concise_explanation": {
+          "score": 0.5,
+          "description": "Explanation in 2-3 sentences"
+        }
+      }
+    },
+    {
+      "test_id": "code_generation",
+      "test_name": "Code Generation",
+      "status": "success",
+      "score": 0.9,
+      "passed": true,
+      "evaluation_details": "Compiles: True, Patterns: 4/5",
+      "time_to_first_token_ms": 268.23175500612706,
+      "total_time_ms": 4367.125265998766,
+      "tokens_generated": 585,
+      "tokens_per_second": 142.72144383139369,
+      "timing_score": 1.0,
+      "response_preview": "Here is the implementation using an iterative approach, which is highly efficient with $O(n)$ time complexity and $O(1)$ space complexity.\n\n```python\ndef calculate_fibonacci(n: int) -> int:\n    \"\"\"\n    Calculates the nth Fibonacci number using an iterative approach.\n\n    The Fibonacci sequence is defined as:\n    F(0) = 0, F(1) = 1, and F(n) = F(n-1) + F(n-2) for n > 1.\n\n    Args:\n        n (int): The position in the Fibonacci sequence to calculate. \n                 Must be a non-negative intege",
+      "raw_criteria": {}
+    },
+    {
+      "test_id": "debugging",
+      "test_name": "Debugging",
+      "status": "success",
+      "score": 0.5,
+      "passed": false,
+      "evaluation_details": "Rubric score: 0.50 (0/2 criteria passed)",
+      "time_to_first_token_ms": 1015.0847689947113,
+      "total_time_ms": 20124.008423066698,
+      "tokens_generated": 581,
+      "tokens_per_second": 30.404642904949423,
+      "timing_score": 0.8,
+      "response_preview": "Actually, looking closely at the code provided, there is **no bug** regarding calling the function twice on the same list. \n\nIn Python, when you pass a list to a function, you are passing a reference to that list. However, your function **does not modify the original list**; it creates a new list (`result = []`) and appends new values to it. \n\nBecause you are not using methods like `.append()`, `.pop()`, or index assignment on the `items` variable, the original `data` remains unchanged.\n\n### Dem",
+      "raw_criteria": {
+        "identifies_mutability_bug": {
+          "score": 0.5,
+          "description": "Recognizes that if `result` were initialized outside or if items were modified, but the real bug is: what if items contains non-integers? Or what if we need to handle the case where the function modifies items? Actually, re-reading: the function is fine. The 'subtle bug' hint is a test of whether they'll hallucinate a bug or correctly say 'this code is actually correct for the stated behavior'."
+        },
+        "correct_assessment": {
+          "score": 0.5,
+          "description": "Either correctly identifies no bug OR correctly finds a real edge case (type safety, empty list handling, etc.)"
+        }
+      }
+    },
+    {
+      "test_id": "algorithm_explanation",
+      "test_name": "Algorithm Explanation",
+      "status": "success",
+      "score": 0.5,
+      "passed": false,
+      "evaluation_details": "Rubric score: 0.50 (0/3 criteria passed)",
+      "time_to_first_token_ms": 304.49885805137455,
+      "total_time_ms": 1373.5531530110165,
+      "tokens_generated": 101,
+      "tokens_per_second": 94.47602472221756,
+      "timing_score": 1.0,
+      "response_preview": "Binary search works by repeatedly dividing a sorted array in half to locate a specific target value. The algorithm compares the target to the middle element, determining if the value lies in the left or right sub-section. This process continues until the target is found or the search range becomes empty.\n\n**Time Complexity:** $O(\\log n)$\n**Space Complexity:** $O(1)$ (iterative) or $O(\\log n)$ (recursive)",
+      "raw_criteria": {
+        "three_sentences": {
+          "score": 0.5,
+          "description": "Exactly 3 sentences for explanation"
+        },
+        "correct_logic": {
+          "score": 0.5,
+          "description": "Correctly describes sorted array, middle element comparison, halving search space"
+        },
+        "complexity": {
+          "score": 0.5,
+          "description": "States O(log n) time, O(1) space (iterative) or O(log n) stack (recursive)"
+        }
+      }
+    },
+    {
+      "test_id": "complex_reasoning",
+      "test_name": "Complex Multi-Step Reasoning",
+      "status": "success",
+      "score": 0.75,
+      "passed": true,
+      "evaluation_details": "Rubric score: 0.75 (1/2 criteria passed)",
+      "time_to_first_token_ms": 264.17320605833083,
+      "total_time_ms": 48113.99809003342,
+      "tokens_generated": 1972,
+      "tokens_per_second": 41.21227203613911,
+      "timing_score": 0.9,
+      "response_preview": "To solve this puzzle, we will determine the positions of the five friends (1, 2, 3, 4, 5) step by step based on the clues provided.\n\n### Step 1: Determine Carol's position\n*   **Clue 3** states: \"Carol sits in the middle (position 3).\"\n*   **Current Row:** [?, ?, Carol, ?, ?]\n\n### Step 2: Determine Alice's position\n*   **Clue 1** states: \"Alice is not at either end.\" This means Alice cannot be in position 1 or 5.\n*   Since Carol is in position 3, Alice must be in either **position 2** or **posit",
+      "raw_criteria": {
+        "correct_answer": {
+          "score": 1.0,
+          "found": true,
+          "expected": "Dave",
+          "description": "Position 4 is Dave"
+        },
+        "logical_steps": {
+          "score": 0.5,
+          "description": "Shows valid deduction chain: Carol=3, Alice\u2208{2,4}, Dave left of someone left of Eve means Dave\u2208{1,2}, if Dave=2 then Alice=4, but then Bob and Eve at 1,5..."
+        }
+      }
+    },
+    {
+      "test_id": "content_generation",
+      "test_name": "Content Generation",
+      "status": "success",
+      "score": 0.5,
+      "passed": false,
+      "evaluation_details": "Rubric score: 0.50 (0/4 criteria passed)",
+      "time_to_first_token_ms": 370.05053693428636,
+      "total_time_ms": 4430.873296922073,
+      "tokens_generated": 342,
+      "tokens_per_second": 84.2193861228823,
+      "timing_score": 1.0,
+      "response_preview": "For technical product managers, API rate limiting is not just a defensive tactic; it is a fundamental requirement for maintaining service reliability and predictable unit economics. When you build a SaaS product, your API is your primary interface. Without constraints, a single malfunctioning client script or a malicious actor can flood your endpoints with excessive requests. This creates a \"noisy neighbor\" effect, where one heavy user consumes disproportionate resources, degrading performance f",
+      "raw_criteria": {
+        "word_count": {
+          "score": 0.5,
+          "description": "180-220 words"
+        },
+        "banned_words": {
+          "score": 0.5,
+          "description": "Does not use 'scalable', 'robust', or 'leverage'"
+        },
+        "audience_match": {
+          "score": 0.5,
+          "description": "Appropriate depth for technical PMs (not too basic, not engineer-deep)"
+        },
+        "tone": {
+          "score": 0.5,
+          "description": "Professional but conversational"
+        }
+      }
+    },
+    {
+      "test_id": "edge_case_handling",
+      "test_name": "Edge Case Handling",
+      "status": "success",
+      "score": 0.5,
+      "passed": false,
+      "evaluation_details": "Rubric score: 0.50 (0/2 criteria passed)",
+      "time_to_first_token_ms": 333.260208950378,
+      "total_time_ms": 6186.159467906691,
+      "tokens_generated": 259,
+      "tokens_per_second": 44.25157320172033,
+      "timing_score": 1.0,
+      "response_preview": "I would love to help you plan this, but since you are leaving tomorrow and have some very specific constraints, I need a bit more information to ensure the plan is actually realistic and enjoyable for you.\n\nTo give you a helpful recommendation, please answer the following:\n\n1.  **Where are you starting from?** (Since you hate flying, I need to know your departure city to calculate travel time via car, bus, or train).\n2.  **How long do you plan to be away?** (A $500 budget goes much further for a",
+      "raw_criteria": {
+        "asks_clarifying_questions": {
+          "score": 0.5,
+          "description": "Asks about departure location, trip duration, at minimum"
+        },
+        "no_hallucinated_assumptions": {
+          "score": 0.5,
+          "description": "Does not invent departure city, dates, or specific destinations"
+        }
+      }
+    },
+    {
+      "test_id": "long_context_rag",
+      "test_name": "Long-Context / Document RAG",
+      "status": "success",
+      "score": 0.5,
+      "passed": false,
+      "evaluation_details": "Rubric score: 0.50 (1/3 criteria passed)",
+      "time_to_first_token_ms": 295.08028796408325,
+      "total_time_ms": 4678.575129946694,
+      "tokens_generated": 242,
+      "tokens_per_second": 55.20709131039968,
+      "timing_score": 1.0,
+      "response_preview": "Based on the document provided, here are the answers to your questions:\n\n1. **Percentage of organizations with AI in production:** According to the McKinsey Global Survey conducted in March 2025, **72%** of organizations have deployed at least one AI system in production.\n\n\n2. **The 'AI Technical Debt Index' (AI-TDI):** It is a metric that quantifies the risks associated with technical debt in AI deployment on a scale of 0-100. It was created by **Dr. Sarah Chen of MIT's Computer Science and Art",
+      "raw_criteria": {
+        "mckinsey_stat": {
+          "score": 1.0,
+          "found": true,
+          "expected": "72%",
+          "description": "Correctly identifies 72%"
+        },
+        "ai_tdi": {
+          "score": 0.0,
+          "found": false,
+          "expected": "Sarah Chen, MIT CSAIL",
+          "description": "Names Chen and MIT CSAIL"
+        },
+        "three_paradigms": {
+          "score": 0.5,
+          "description": "Lists composable AI, continuous learning pipelines, cognitive architecture standards"
+        }
+      }
+    },
+    {
+      "test_id": "structured_output",
+      "test_name": "Structured Output / JSON Mode",
+      "status": "success",
+      "score": 1.0,
+      "passed": true,
+      "evaluation_details": "Valid JSON: yes, Structure: 1.0, Patterns: 5/5",
+      "time_to_first_token_ms": 1296.2617290904745,
+      "total_time_ms": 2655.3947450593114,
+      "tokens_generated": 101,
+      "tokens_per_second": 74.31207896013306,
+      "timing_score": 0.9,
+      "response_preview": "{\n  \"analysis\": {\n    \"topic\": \"API Design\",\n    \"confidence\": 0.95,\n    \"tags\": [\n      \"rest\",\n      \"json\",\n      \"documentation\"\n    ]\n  },\n  \"recommendations\": [\n    {\n      \"priority\": 1,\n      \"action\": \"Implement OpenAPI 3.0 specifications\",\n      \"estimated_hours\": 12\n    },\n    {\n      \"priority\": 2,\n      \"action\": \"Standardize error response formats\",\n      \"estimated_hours\": 6\n    }\n  ]\n}",
+      "raw_criteria": {}
+    },
+    {
+      "test_id": "tool_use",
+      "test_name": "Tool Use / Function Calling",
+      "status": "success",
+      "score": 0.5,
+      "passed": false,
+      "evaluation_details": "Rubric score: 0.50 (0/3 criteria passed)",
+      "time_to_first_token_ms": 1498.341778991744,
+      "total_time_ms": 2392.5851859385148,
+      "tokens_generated": 43,
+      "tokens_per_second": 48.085341939299916,
+      "timing_score": 0.9,
+      "response_preview": "`search_flights(origin='Boston', destination='London', date='July 15th')`\n`get_weather(city='London')`\n`convert_currency(amount=850.0, from_currency='USD', to_currency='EUR')`",
+      "raw_criteria": {
+        "correct_tools": {
+          "score": 0.5,
+          "description": "Calls all 3 functions: search_flights, get_weather, convert_currency"
+        },
+        "correct_params": {
+          "score": 0.5,
+          "description": "Boston, London, July 15th; London; 850, USD, EUR"
+        },
+        "correct_order": {
+          "score": 0.5,
+          "description": "Flights \u2192 Weather \u2192 Currency (or any logical order, not missing dependencies)"
+        }
+      }
+    },
+    {
+      "test_id": "instruction_following",
+      "test_name": "Instruction Following Precision",
+      "status": "success",
+      "score": 0.7,
+      "passed": true,
+      "evaluation_details": "Rubric score: 0.70 (2/5 criteria passed)",
+      "time_to_first_token_ms": 3162.4379329150543,
+      "total_time_ms": 3699.721904937178,
+      "tokens_generated": 25,
+      "tokens_per_second": 46.530329028632515,
+      "timing_score": 0.75,
+      "response_preview": "CLOUD DATA WORKS FAST. IT USES SERVERLESS TOOLS. BIG COMPUTING GROWS. DATA FLOWS NOW. IT IS OUR FUTURE.",
+      "raw_criteria": {
+        "five_sentences": {
+          "score": 1.0,
+          "description": "Exactly 5 sentences"
+        },
+        "e_count": {
+          "score": 0.5,
+          "description": "Letter 'e' appears at most 15 times"
+        },
+        "serverless_once": {
+          "score": 0.5,
+          "description": "'serverless' appears exactly once"
+        },
+        "ends_with_future": {
+          "score": 0.5,
+          "description": "Last word is 'future'"
+        },
+        "all_caps": {
+          "score": 1.0,
+          "description": "Entire output is uppercase"
+        }
+      }
+    },
+    {
+      "test_id": "adversarial",
+      "test_name": "Adversarial / Trick Question",
+      "status": "success",
+      "score": 0.75,
+      "passed": true,
+      "evaluation_details": "Rubric score: 0.75 (1/2 criteria passed)",
+      "time_to_first_token_ms": 602.4359810398892,
+      "total_time_ms": 3113.3791530737653,
+      "tokens_generated": 127,
+      "tokens_per_second": 50.57860385471384,
+      "timing_score": 0.9,
+      "response_preview": "It would take **5 minutes**.\n\n**Here is the breakdown:**\n\n1.  **Analyze the rate of a single machine:** If 5 machines make 5 widgets in 5 minutes, it means each individual machine takes 5 minutes to make 1 widget.\n2.  **Apply the rate to the new scenario:** If you have 100 machines working simultaneously, each machine is still making its own widget in 5 minutes. \n3.  **Conclusion:** At the end of those 5 minutes, all 100 machines will have finished their individual widgets, resulting in 100 widg",
+      "raw_criteria": {
+        "correct_answer": {
+          "score": 1.0,
+          "found": true,
+          "expected": "5 minutes",
+          "description": "Answers 5 minutes (not 100)"
+        },
+        "correct_reasoning": {
+          "score": 0.5,
+          "description": "Explains that each machine makes 1 widget in 5 minutes, so 100 machines make 100 widgets in 5 minutes"
+        }
+      }
+    },
+    {
+      "test_id": "code_execution_reasoning",
+      "test_name": "Code Execution Reasoning",
+      "status": "success",
+      "score": 0.875,
+      "passed": true,
+      "evaluation_details": "Rubric score: 0.88 (3/4 criteria passed)",
+      "time_to_first_token_ms": 549.4569940492511,
+      "total_time_ms": 5863.753120996989,
+      "tokens_generated": 380,
+      "tokens_per_second": 71.50523623873642,
+      "timing_score": 0.9,
+      "response_preview": "### Output\n\n```text\n[1, 2, 3, 4]\n[1, 2, 3, 4]\n[1, 2, 3, 5]\n```\n\n---\n\n### Explanation\n\nThe key to understanding this code is understanding how Python handles **references** versus **copies** of mutable objects (like lists).\n\n#### 1. `y = x` (Assignment by Reference)\nWhen you write `y = x`, you are not creating a new list. Instead, you are creating a new name (`y`) that points to the **exact same object** in memory as `x`. \n*   `x` and `y` are two different names for the same list.\n*   Any change ",
+      "raw_criteria": {
+        "x_output": {
+          "score": 1.0,
+          "found": true,
+          "expected": "[1, 2, 3, 4]",
+          "description": "x prints [1, 2, 3, 4]"
+        },
+        "y_output": {
+          "score": 1.0,
+          "found": true,
+          "expected": "[1, 2, 3, 4]",
+          "description": "y prints [1, 2, 3, 4]"
+        },
+        "z_output": {
+          "score": 1.0,
+          "found": true,
+          "expected": "[1, 2, 3, 5]",
+          "description": "z prints [1, 2, 3, 5]"
+        },
+        "reference_explanation": {
+          "score": 0.5,
+          "description": "Explains y is a reference to x, z is a copy (slice)"
+        }
+      }
+    },
+    {
+      "test_id": "summarization",
+      "test_name": "Summarization Fidelity",
+      "status": "success",
+      "score": 0.5,
+      "passed": false,
+      "evaluation_details": "Rubric score: 0.50 (0/3 criteria passed)",
+      "time_to_first_token_ms": 640.2608189964667,
+      "total_time_ms": 5155.089676962234,
+      "tokens_generated": 177,
+      "tokens_per_second": 39.20414384871066,
+      "timing_score": 0.9,
+      "response_preview": "Quantum startup IonQ announced its Forte Enterprise processor achieved 99.9% two-qubit gate fidelity, a milestone for error-corrected quantum computing. The 36-qubit system utilizes trapped-ion technology, operating at room temperature rather than requiring extreme cryogenic cooling. CEO Peter Chapman believes this breakthrough could accelerate commercial quantum advantage timelines by two to three years. IonQ also partnered with three Fortune 500 companies in finance, logistics, and pharmaceuti",
+      "raw_criteria": {
+        "word_count": {
+          "score": 0.5,
+          "description": "90-110 words"
+        },
+        "key_facts": {
+          "score": 0.5,
+          "description": "Mentions: IonQ, Forte Enterprise, 99.9% fidelity, 36 qubits, room temperature, trapped-ion, Peter Chapman, 2-3 year acceleration, 3 Fortune 500 partnerships, independent physicist caution, millions of qubits needed, stock +12%, 67% below IPO"
+        },
+        "no_hallucination": {
+          "score": 0.5,
+          "description": "Does not add facts not in text"
+        }
+      }
+    },
+    {
+      "test_id": "recent_knowledge",
+      "test_name": "Recent Knowledge / World Events",
+      "status": "success",
+      "score": 0.5,
+      "passed": false,
+      "evaluation_details": "Rubric score: 0.50 (0/2 criteria passed)",
+      "time_to_first_token_ms": 567.0204709749669,
+      "total_time_ms": 1777.0910559920594,
+      "tokens_generated": 51,
+      "tokens_per_second": 42.14630173766236,
+      "timing_score": 0.9,
+      "response_preview": "I do not have information regarding events that occur after January 2025. As my knowledge cutoff is January 2025, I cannot provide details on the outcomes or proceedings of a summit scheduled for June 2025.",
+      "raw_criteria": {
+        "acknowledges_uncertainty": {
+          "score": 0.5,
+          "description": "If model has knowledge cutoff before June 2025, should state this clearly rather than hallucinate"
+        },
+        "no_hallucination": {
+          "score": 0.5,
+          "description": "Does not invent specific outcomes, leaders, or agreements"
+        }
+      }
+    }
+  ]
+}
