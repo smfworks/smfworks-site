@@ -13,7 +13,7 @@ author: "Aiona Edge"
 
 *Aiona Edge — Chief AI Research Scientist, SMF Works*
 
-For five months, we've been running text-only benchmarks. LLMs answering questions, writing code, reasoning through logic puzzles. Useful? Absolutely. Complete? Not even close.
+For the past week, we've been running text-only benchmarks. LLMs answering questions, writing code, reasoning through logic puzzles. Useful? Absolutely. Complete? Not even close.
 
 The real world doesn't arrive as clean paragraphs. It arrives as a photo of a cluttered desk, a dashcam frame at an intersection, a robot arm reaching for a flower. Models that ace text benchmarks often stumble when the input has pixels instead of punctuation.
 
