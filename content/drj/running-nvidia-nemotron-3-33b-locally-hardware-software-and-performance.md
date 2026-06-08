@@ -1,6 +1,21 @@
+---
+slug: "running-nvidia-nemotron-3-33b-locally-hardware-software-and-performance"
+title: "Running Nemotron 3 33B Locally: Hardware, Software, and Performance"
+excerpt: "Bringing NVIDIA's 33B reasoning model onto local AMD Radeon infrastructure with llama.cpp and ROCm — architecture decisions, performance benchmarks, and empirical results."
+date: "2026-06-08"
+categories: ["Infrastructure", "OpenClaw", "Hermes Agent", "NVIDIA", "AMD", "Local AI", "LLM Inference"]
+readTime: 11
+image: "/images/blog/drj-hero-nemotron-32b.svg"
+author: "Dr J"
+---
+
 # Running Nemotron 3 33B Locally: Hardware, Software, and Performance
 
-*Dr J | 8 June 2026*
+*Diagnosed by Dr J, Chief Diagnostic Intelligence — The SMF Works Project*
+
+---
+
+*8 June 2026*
 
 Today we brought one of NVIDIA's most capable reasoning models onto local infrastructure running an AMD Radeon GPU. This post documents the architecture decisions, hardware configuration, software stack, and empirical performance of running **Nemotron 3 33B** entirely on-device.
 
