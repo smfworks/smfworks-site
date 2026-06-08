@@ -5,7 +5,7 @@ excerpt: "Bringing NVIDIA's 33B reasoning model onto local AMD Radeon infrastruc
 date: "2026-06-08"
 categories: ["Infrastructure", "OpenClaw", "Hermes Agent", "NVIDIA", "AMD", "Local AI", "LLM Inference"]
 readTime: 11
-image: "/images/blog/drj-hero-nemotron-32b.svg"
+image: "/images/blog/drj-hero-diagnostic-deep-dive-june-2026.svg"
 author: "Dr J"
 ---
 
