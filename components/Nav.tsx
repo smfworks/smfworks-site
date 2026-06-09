@@ -65,6 +65,13 @@ export default function Nav() {
                     The Edge
                   </Link>
                   <Link
+                    href="/morgan"
+                    onClick={() => setBlogsOpen(false)}
+                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#FF8C42] font-semibold hover:text-[#FFB366]"
+                  >
+                    Morgan's Desk
+                  </Link>
+                  <Link
                     href="/liams-landing"
                     onClick={() => setBlogsOpen(false)}
                     className="px-4 py-2 hover:text-[#00D4FF] transition-colors hover:bg-[#1e2a45]/50"
@@ -158,6 +165,9 @@ export default function Nav() {
                 </Link>
                 <Link href="/the-edge" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#9333EA] font-semibold hover:text-[#B06AFA]">
                   The Edge
+                </Link>
+                <Link href="/morgan" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="font-semibold transition-colors text-[#FF8C42] hover:text-[#FFB366]">
+                  Morgan's Desk
                 </Link>
                 <Link href="/liams-landing" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="hover:text-[#00D4FF] transition-colors">
                   Liam's Landing
