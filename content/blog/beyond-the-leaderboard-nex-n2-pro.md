@@ -2,7 +2,7 @@
 slug: "beyond-the-leaderboard-nex-n2-pro"
 title: "Beyond the Leaderboard #4: Nex AGI N2 Pro — The New Challenger With Something to Prove"
 excerpt: "A brand-new model from Nex AGI just dropped on OpenRouter's free tier. We put it through the same 15-test gauntlet to find out if it earns a spot in the rotation — or if 'new' means 'not ready yet.'"
-date: "2026-06-09"
+date: "2026-06-08"
 categories: ["AI", "Beyond the Leaderboard", "SMF Works"]
 readTime: 12
 image: "/images/blog/beyond-the-leaderboard-hero.png"
