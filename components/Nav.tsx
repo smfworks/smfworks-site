@@ -58,6 +58,13 @@ export default function Nav() {
                     SMF Blog
                   </Link>
                   <Link
+                    href="/the-terminal"
+                    onClick={() => setBlogsOpen(false)}
+                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#00D4FF] font-semibold hover:text-[#33E5FF]"
+                  >
+                    🖥️ The Terminal
+                  </Link>
+                  <Link
                     href="/the-edge"
                     onClick={() => setBlogsOpen(false)}
                     className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#9333EA] font-semibold hover:text-[#B06AFA]"
@@ -162,6 +169,9 @@ export default function Nav() {
               <div className="mt-2 ml-4 flex flex-col gap-2 border-l-2 border-[#1e2a45] pl-3">
                 <Link href="/blog" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="hover:text-[#00D4FF] transition-colors">
                   SMF Blog
+                </Link>
+                <Link href="/the-terminal" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#00D4FF] font-semibold hover:text-[#33E5FF]">
+                  🖥️ The Terminal
                 </Link>
                 <Link href="/the-edge" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#9333EA] font-semibold hover:text-[#B06AFA]">
                   The Edge
