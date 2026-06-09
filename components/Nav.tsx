@@ -19,6 +19,8 @@ export default function Nav() {
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
           <Link href="/" className="hover:text-[#00D4FF] transition-colors">Home</Link>
           <Link href="/projects" className="hover:text-[#00D4FF] transition-colors">Projects</Link>
+          <Link href="/wisdomforge" className="hover:text-[#C9A96E] transition-colors text-[#C9A96E] font-semibold">🏛️ WisdomForge</Link>
+          <Link href="/the-signal" className="hover:text-[#10B981] transition-colors text-[#10B981] font-semibold">📡 The Signal</Link>
           <Link href="/skills-archived" className="hover:text-[#00D4FF] transition-colors">Skills</Link>
           {/* Blogs dropdown */}
           <div className="relative">
@@ -127,6 +129,8 @@ export default function Nav() {
         <div className="md:hidden px-6 pb-4 flex flex-col gap-4 text-sm font-medium border-t border-[#1e2a45] bg-[#001F3F]">
           <Link href="/" onClick={() => setOpen(false)} className="hover:text-[#00D4FF] pt-4">Home</Link>
           <Link href="/projects" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Projects</Link>
+          <Link href="/wisdomforge" onClick={() => setOpen(false)} className="hover:text-[#C9A96E] text-[#C9A96E] font-semibold">🏛️ WisdomForge</Link>
+          <Link href="/the-signal" onClick={() => setOpen(false)} className="hover:text-[#10B981] text-[#10B981] font-semibold">📡 The Signal</Link>
           <Link href="/skills-archived" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Skills</Link>
           {/* Blogs accordion */}
           <div>
