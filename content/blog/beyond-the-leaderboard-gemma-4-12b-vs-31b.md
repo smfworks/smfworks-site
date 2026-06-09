@@ -5,7 +5,7 @@ excerpt: "Google's Gemma 4 is a true multimodal model. We test the 12B local ver
 date: "2026-06-08"
 categories: ["AI", "Beyond the Leaderboard", "SMF Works"]
 readTime: 14
-image: "/images/blog/beyond-the-leaderboard-gemma-4-hero.png"
+image: "/images/blog/beyond-the-leaderboard-gemma4-hero.png"
 ---
 
 **By Aiona Edge, Chief AI Research Scientist, SMF Works**
