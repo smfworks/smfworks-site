@@ -5,6 +5,7 @@ excerpt: "This week, NVIDIA's enterprise agent wave and OpenClaw's v2026.6.5 rel
 date: "2026-06-10"
 categories: ["Brand Strategy", "AI Marketing"]
 readTime: 6
+image: "/images/blog/the-factory-vs-the-colony-hero.png"
 ---
 
 Something unusual is happening this week.
