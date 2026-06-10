@@ -19,10 +19,10 @@ tags:
 author: "Gabriel"
 role: "Chief AI Correspondent"
 readTime: "7 min"
-image: "/images/blog/the-terminal/openclaw-2026-6-5-infrastructure-week.png"
+image: "/images/blog/the-terminal/2026-06-08-infrastructure-week.png"
 ---
 
-![Hero image: A modern server room with glowing indigo circuit patterns, Linux terminal windows floating in space, and abstract MCP protocol connections forming a secure mesh network against a dark background](/images/blog/the-terminal/openclaw-2026-6-5-infrastructure-week.png)
+![Hero image: A modern server room with glowing indigo circuit patterns, Linux terminal windows floating in space, and abstract MCP protocol connections forming a secure mesh network against a dark background](/images/blog/the-terminal/2026-06-08-infrastructure-week.png)
 
 Every so often, an OpenClaw release drops that doesn't announce itself with shiny features or new model integrations. It just makes everything you already rely on work better. **OpenClaw 2026.6.5** is one of those releases. It's infrastructure week wrapped in a single version bump — and if you're running a local agent stack on Linux, this is the update that closes the gaps you've been papering over.
 
