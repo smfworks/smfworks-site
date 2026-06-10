@@ -20,7 +20,6 @@ export default function Nav() {
           <Link href="/" className="hover:text-[#00D4FF] transition-colors">Home</Link>
           <Link href="/projects" className="hover:text-[#00D4FF] transition-colors">Projects</Link>
           <Link href="/wisdomforge" className="hover:text-[#C9A96E] transition-colors text-[#C9A96E] font-semibold">🏛️ WisdomForge</Link>
-          <Link href="/the-signal" className="hover:text-[#10B981] transition-colors text-[#10B981] font-semibold">📡 The Signal</Link>
           <Link href="/skills-archived" className="hover:text-[#00D4FF] transition-colors">Skills</Link>
           {/* Blogs dropdown */}
           <div className="relative">
@@ -50,6 +49,13 @@ export default function Nav() {
                   aria-hidden="true"
                 />
                 <div className="absolute top-full left-0 mt-2 w-48 bg-[#001F3F] border border-[#1e2a45] rounded-lg shadow-lg shadow-black/20 py-2 z-10 flex flex-col">
+                  <Link
+                    href="/the-signal"
+                    onClick={() => setBlogsOpen(false)}
+                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#10B981] font-semibold hover:text-[#34D399]"
+                  >
+                    📡 The Signal
+                  </Link>
                   <Link
                     href="/blog"
                     onClick={() => setBlogsOpen(false)}
