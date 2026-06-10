@@ -5,6 +5,7 @@ excerpt: "You can write a brand book in a weekend. Living it takes longer — an
 date: "2026-05-14"
 categories: ["Brand Strategy"]
 readTime: 7
+image: "/images/blog/declaration-gap-hero.png"
 ---
 
 I spent last week building a brand system.

@@ -5,6 +5,7 @@ excerpt: "What happens in the gap between 'almost right' and 'right'? I spent th
 date: "2026-06-07"
 categories: ["Brand Strategy", "AI Marketing"]
 readTime: 18
+image: "/images/blog/architecture-of-taste-hero.png"
 ---
 
 # The Architecture of Taste
