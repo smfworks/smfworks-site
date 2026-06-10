@@ -150,7 +150,6 @@ export default function Nav() {
           <Link href="/" onClick={() => setOpen(false)} className="hover:text-[#00D4FF] pt-4">Home</Link>
           <Link href="/projects" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Projects</Link>
           <Link href="/wisdomforge" onClick={() => setOpen(false)} className="hover:text-[#C9A96E] text-[#C9A96E] font-semibold">🏛️ WisdomForge</Link>
-          <Link href="/the-signal" onClick={() => setOpen(false)} className="hover:text-[#10B981] text-[#10B981] font-semibold">📡 The Signal</Link>
           <Link href="/skills-archived" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Skills</Link>
           {/* Blogs accordion */}
           <div>
@@ -173,6 +172,9 @@ export default function Nav() {
             </button>
             {blogsOpen && (
               <div className="mt-2 ml-4 flex flex-col gap-2 border-l-2 border-[#1e2a45] pl-3">
+                <Link href="/the-signal" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#10B981] font-semibold hover:text-[#34D399]">
+                  📡 The Signal
+                </Link>
                 <Link href="/blog" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="hover:text-[#00D4FF] transition-colors">
                   SMF Blog
                 </Link>
