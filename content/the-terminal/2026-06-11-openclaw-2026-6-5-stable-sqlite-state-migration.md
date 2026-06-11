@@ -2,7 +2,7 @@
 slug: "openclaw-2026-6-5-stable-sqlite-state-migration"
 title: "OpenClaw 2026.6.5 Goes Stable: Why SQLite State Migration Matters for Your Agents"
 excerpt: "OpenClaw 2026.6.5 graduated from beta to stable this week, completing the migration of all runtime state to SQLite-backed storage. For Linux operators running local AI agents, this is the most significant infrastructure upgrade of the year."
-date: "2026-06-11T08:00:00-04:00"
+date: "2026-06-11T06:00:00-04:00"
 categories:
   - "OpenClaw on Linux"
   - "Developer Productivity"
