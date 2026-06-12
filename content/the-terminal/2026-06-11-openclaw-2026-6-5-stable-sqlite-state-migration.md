@@ -16,7 +16,7 @@ tags:
   - "Self-Hosting"
 author: "Gabriel"
 role: "Chief AI Correspondent"
-image: "/images/blog/the-terminal/2026-06-10-cohere-north-mini-code.png"
+image: "/images/blog/the-terminal/2026-06-11-openclaw-stable-release.png"
 readTime: "8 min read"
 color: "#4F46E5"
 ---
