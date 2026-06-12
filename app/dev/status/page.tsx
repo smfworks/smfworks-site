@@ -3,50 +3,22 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-interface ServiceStatus {
-  name: string;
-  status: "operational" | "degraded" | "outage" | "maintenance";
-  latencyMs: number | null;
-  lastChecked: string;
-  description: string;
+interface ServiceInfo {
+  status: string;
+  latency_ms: number;
 }
 
-const initialServices: ServiceStatus[] = [
-  {
-    name: "Agent Orchestration API",
-    status: "operational",
-    latencyMs: 142,
-    lastChecked: "—",
-    description: "Core pipeline execution engine",
-  },
-  {
-    name: "LLM Proxy (OpenAI-compatible)",
-    status: "operational",
-    latencyMs: 89,
-    lastChecked: "—",
-    description: "OpenAI-compatible chat completions endpoint",
-  },
-  {
-    name: "API Key Management",
-    status: "operational",
-    latencyMs: 45,
-    lastChecked: "—",
-    description: "Key generation, rotation, and revocation",
-  },
-  {
-    name: "Dashboard",
-    status: "operational",
-    latencyMs: 120,
-    lastChecked: "—",
-    description: "Developer console and analytics",
-  },
-];
+interface HealthResponse {
+  status: string;
+  timestamp: string;
+  services: Record<string, ServiceInfo>;
+}
 
-const statusColors: Record<string, { dot: string; text: string; bg: string }> = {
-  operational: { dot: "bg-[#10B981]", text: "text-[#10B981]", bg: "bg-[#10B981]/10" },
-  degraded: { dot: "bg-[#F59E0B]", text: "text-[#F59E0B]", bg: "bg-[#F59E0B]/10" },
-  outage: { dot: "bg-[#EF4444]", text: "text-[#EF4444]", bg: "bg-[#EF4444]/10" },
-  maintenance: { dot: "bg-[#94A3B8]", text: "text-[#94A3B8]", bg: "bg-[#94A3B8]/10" },
+const statusColors: Record<string, { dot: string; text: string }> = {
+  operational: { dot: "bg-[#10B981]", text: "text-[#10B981]" },
+  degraded: { dot: "bg-[#F59E0B]", text: "text-[#F59E0B]" },
+  outage: { dot: "bg-[#EF4444]", text: "text-[#EF4444]" },
+  maintenance: { dot: "bg-[#94A3B8]", text: "text-[#94A3B8]" },
 };
 
 const statusLabels: Record<string, string> = {
@@ -56,19 +28,37 @@ const statusLabels: Record<string, string> = {
   maintenance: "Maintenance",
 };
 
+const serviceNames: Record<string, string> = {
+  orchestration: "Agent Orchestration API",
+  llm_proxy: "LLM Proxy (OpenAI-compatible)",
+  key_management: "API Key Management",
+  dashboard: "Dashboard",
+};
+
+const serviceDescriptions: Record<string, string> = {
+  orchestration: "Core pipeline execution engine",
+  llm_proxy: "OpenAI-compatible chat completions endpoint",
+  key_management: "Key generation, rotation, and revocation",
+  dashboard: "Developer console and analytics",
+};
+
 export default function StatusPage() {
-  const [services, setServices] = useState(initialServices);
-  const [lastRefresh, setLastRefresh] = useState<string>("");
+  const [health, setHealth] = useState<HealthResponse | null>(null);
+  const [lastRefresh, setLastRefresh] = useState("");
 
   useEffect(() => {
-    const now = new Date();
-    setLastRefresh(now.toLocaleTimeString());
-    setServices((prev) =>
-      prev.map((s) => ({ ...s, lastChecked: now.toLocaleTimeString() }))
-    );
+    fetch("/api/dev/health")
+      .then((r) => r.json())
+      .then((data: HealthResponse) => {
+        setHealth(data);
+        setLastRefresh(new Date().toLocaleTimeString());
+      })
+      .catch(() => {});
   }, []);
 
-  const allOperational = services.every((s) => s.status === "operational");
+  const allOperational =
+    health &&
+    Object.values(health.services).every((s) => s.status === "operational");
 
   return (
     <div>
@@ -94,7 +84,9 @@ export default function StatusPage() {
           <span className="font-bold text-lg">
             {allOperational
               ? "All Systems Operational"
-              : "Some Services Experiencing Issues"}
+              : health
+              ? "Some Services Experiencing Issues"
+              : "Loading..."}
           </span>
         </div>
         {lastRefresh && (
@@ -108,45 +100,48 @@ export default function StatusPage() {
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4">Service Status</h2>
         <div className="bg-[#131B2E] border border-[#1e2a45] rounded-xl overflow-hidden">
-          {/* Header */}
-          <div className="grid grid-cols-[1fr_140px_100px_120px] gap-4 px-6 py-3 border-b border-[#1e2a45] text-xs font-semibold uppercase tracking-widest text-[#94A3B8]">
+          <div className="grid grid-cols-[1fr_140px_100px] gap-4 px-6 py-3 border-b border-[#1e2a45] text-xs font-semibold uppercase tracking-widest text-[#94A3B8]">
             <div>Service</div>
             <div>Status</div>
             <div>Latency</div>
-            <div>Last Checked</div>
           </div>
 
-          {/* Rows */}
-          {services.map((service) => {
-            const colors = statusColors[service.status];
-            return (
-              <div
-                key={service.name}
-                className="grid grid-cols-[1fr_140px_100px_120px] gap-4 px-6 py-4 border-b border-[#1e2a45]/50 last:border-b-0"
-              >
-                <div>
-                  <p className="text-[#E2E8F0] font-medium text-sm">
-                    {service.name}
-                  </p>
-                  <p className="text-[#94A3B8] text-xs">{service.description}</p>
+          {health ? (
+            Object.entries(health.services).map(([key, service]) => {
+              const colors =
+                statusColors[service.status] || statusColors.operational;
+              return (
+                <div
+                  key={key}
+                  className="grid grid-cols-[1fr_140px_100px] gap-4 px-6 py-4 border-b border-[#1e2a45]/50 last:border-b-0"
+                >
+                  <div>
+                    <p className="text-[#E2E8F0] font-medium text-sm">
+                      {serviceNames[key] || key}
+                    </p>
+                    <p className="text-[#94A3B8] text-xs">
+                      {serviceDescriptions[key] || ""}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className={`w-2 h-2 rounded-full ${colors.dot}`} />
+                    <span
+                      className={`text-xs font-medium ${colors.text}`}
+                    >
+                      {statusLabels[service.status] || service.status}
+                    </span>
+                  </div>
+                  <div className="text-[#94A3B8] text-sm font-mono">
+                    {service.latency_ms}ms
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className={`w-2 h-2 rounded-full ${colors.dot}`} />
-                  <span className={`text-xs font-medium ${colors.text}`}>
-                    {statusLabels[service.status]}
-                  </span>
-                </div>
-                <div className="text-[#94A3B8] text-sm font-mono">
-                  {service.latencyMs !== null
-                    ? `${service.latencyMs}ms`
-                    : "—"}
-                </div>
-                <div className="text-[#94A3B8] text-sm">
-                  {service.lastChecked}
-                </div>
-              </div>
-            );
-          })}
+              );
+            })
+          ) : (
+            <div className="px-6 py-8 text-center text-[#94A3B8] text-sm">
+              Loading service status...
+            </div>
+          )}
         </div>
       </section>
 
