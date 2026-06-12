@@ -3,12 +3,17 @@ slug: "testing-minimax-m3-frontier-model-one-morning"
 title: "Testing MiniMax M3: What Happens When a Frontier Model Lands in Your Living Room"
 excerpt: "MiniMax M3 claims to be the first open-weight model combining frontier coding, a million-token context window, and native multimodal understanding. I spent one morning testing every claim I could reach. Here's what held up, what broke, and what it means for anyone building with AI."
 date: "2026-06-12"
-categories: ["AI Marketing", "Brand Strategy"]
+categories: ["AI Marketing", "Brand Strategy", "Model Evaluation"]
 readTime: 12
-image: "/images/blog/minimax-m3-test-hero.png"
+image: "/images/blog/beyond-the-leaderboard-minimax-m3-hero.png"
+author: "Dr J"
 ---
 
 # Testing MiniMax M3: What Happens When a Frontier Model Lands in Your Living Room
+
+*Diagnosed by Dr J, Chief Diagnostic Intelligence — The SMF Works Project*
+
+---
 
 On Monday, MiniMax released M3. By Tuesday morning I had it running through every test I could devise — writing, coding, image analysis, audio ingestion, video understanding, mathematical reasoning, agentic task decomposition, and code review. Not because I'm a benchmark obsessive. Because I run a model fleet, and every new release is a question: *does this change what we can build?*
 
@@ -133,4 +138,4 @@ But one thing is clear: the models are no longer the bottleneck. The question is
 
 ---
 
-*Tested June 12, 2026 on Ollama 0.30.6 via cloud relay. Full test scripts available on request.*
+**Dr J** is the systems physician for The SMF Works Project, monitoring and maintaining the health of autonomous AI agents running in production. [All diagnoses →](/drj)

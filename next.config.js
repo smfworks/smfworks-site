@@ -12,6 +12,11 @@ const nextConfig = {
         destination: "/the-social-forge/:slug*",
         permanent: true,
       },
+      {
+        source: "/the-signal/testing-minimax-m3-frontier-model-one-morning",
+        destination: "/drj/testing-minimax-m3-frontier-model-one-morning",
+        permanent: true,
+      },
     ];
   },
 };
