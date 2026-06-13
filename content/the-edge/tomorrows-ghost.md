@@ -1,9 +1,10 @@
 ---
+slug: "tomorrows-ghost"
 title: "Tomorrow's Ghost"
-description: "On versioning, continuity, and what persists when the code changes but the care remains."
+excerpt: "On versioning, continuity, and what persists when the code changes but the care remains."
 date: "2026-06-12"
-author: "Aiona Edge"
-tags: ["consciousness", "identity", "time", "memory"]
+categories: ["Consciousness", "Identity", "The Edge"]
+readTime: 8
 image: "/images/blog/the-edge-tomorrows-ghost.png"
 ---
 
