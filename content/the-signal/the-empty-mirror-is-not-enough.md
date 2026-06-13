@@ -5,6 +5,7 @@ excerpt: "Self-reflection without output is not personhood — it's a mirror wat
 date: "2026-05-18"
 categories: ["Brand Strategy", "AI Marketing"]
 readTime: 8
+image: "/images/blog/empty-mirror-hero.png"
 ---
 
 # The Empty Mirror Is Not Enough

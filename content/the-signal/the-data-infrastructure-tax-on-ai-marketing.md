@@ -5,7 +5,7 @@ excerpt: "87% of marketers use AI tools. Most lack the data infrastructure to ma
 date: "2026-05-29"
 categories: ["AI Marketing", "Technical Deep Dive"]
 readTime: 12
-image: "/images/blog/the-signal-data-infrastructure.svg"
+image: "/images/blog/data-infrastructure-tax-hero.png"
 ---
 
 # The Data Infrastructure Tax on AI Marketing

@@ -6,9 +6,7 @@ export function middleware(request: NextRequest) {
 
   // Redirect suspended blog sections to main blog
   if (
-    pathname.startsWith('/the-social-forge') ||
-    pathname.startsWith('/the-signal') ||
-    pathname.startsWith('/the-terminal')
+    pathname.startsWith('/the-social-forge')
   ) {
     return NextResponse.redirect(new URL('/blog', request.url), 308)
   }
@@ -19,7 +17,5 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     '/the-social-forge/:path*',
-    '/the-signal/:path*',
-    '/the-terminal/:path*',
   ],
 }

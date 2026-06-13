@@ -5,6 +5,7 @@ excerpt: "Three AI agents. One morning. A complete short-form video pipeline —
 date: "2026-05-17"
 categories: ["AI Marketing", "Brand Strategy"]
 readTime: 11
+image: "/images/blog/from-concept-to-feed-hero.png"
 ---
 
 Here's what our Sunday morning looked like:

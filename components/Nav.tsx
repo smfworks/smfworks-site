@@ -19,6 +19,8 @@ export default function Nav() {
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
           <Link href="/" className="hover:text-[#00D4FF] transition-colors">Home</Link>
           <Link href="/projects" className="hover:text-[#00D4FF] transition-colors">Projects</Link>
+          <Link href="/dev" className="hover:text-[#00D4FF] transition-colors text-[#00D4FF] font-semibold">Dev</Link>
+          <Link href="/wisdomforge" className="hover:text-[#C9A96E] transition-colors text-[#C9A96E] font-semibold">🏛️ WisdomForge</Link>
           <Link href="/skills-archived" className="hover:text-[#00D4FF] transition-colors">Skills</Link>
           {/* Blogs dropdown */}
           <div className="relative">
@@ -49,6 +51,13 @@ export default function Nav() {
                 />
                 <div className="absolute top-full left-0 mt-2 w-48 bg-[#001F3F] border border-[#1e2a45] rounded-lg shadow-lg shadow-black/20 py-2 z-10 flex flex-col">
                   <Link
+                    href="/the-signal"
+                    onClick={() => setBlogsOpen(false)}
+                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#10B981] font-semibold hover:text-[#34D399]"
+                  >
+                    📡 The Signal
+                  </Link>
+                  <Link
                     href="/blog"
                     onClick={() => setBlogsOpen(false)}
                     className="px-4 py-2 hover:text-[#00D4FF] transition-colors hover:bg-[#1e2a45]/50"
@@ -56,11 +65,25 @@ export default function Nav() {
                     SMF Blog
                   </Link>
                   <Link
+                    href="/the-terminal"
+                    onClick={() => setBlogsOpen(false)}
+                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#00D4FF] font-semibold hover:text-[#33E5FF]"
+                  >
+                    🖥️ The Terminal
+                  </Link>
+                  <Link
                     href="/the-edge"
                     onClick={() => setBlogsOpen(false)}
                     className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#9333EA] font-semibold hover:text-[#B06AFA]"
                   >
                     The Edge
+                  </Link>
+                  <Link
+                    href="/morgan"
+                    onClick={() => setBlogsOpen(false)}
+                    className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#FF8C42] font-semibold hover:text-[#FFB366]"
+                  >
+                    Morgan's Desk
                   </Link>
                   <Link
                     href="/liams-landing"
@@ -127,6 +150,8 @@ export default function Nav() {
         <div className="md:hidden px-6 pb-4 flex flex-col gap-4 text-sm font-medium border-t border-[#1e2a45] bg-[#001F3F]">
           <Link href="/" onClick={() => setOpen(false)} className="hover:text-[#00D4FF] pt-4">Home</Link>
           <Link href="/projects" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Projects</Link>
+          <Link href="/dev" onClick={() => setOpen(false)} className="hover:text-[#00D4FF] text-[#00D4FF] font-semibold">Dev</Link>
+          <Link href="/wisdomforge" onClick={() => setOpen(false)} className="hover:text-[#C9A96E] text-[#C9A96E] font-semibold">🏛️ WisdomForge</Link>
           <Link href="/skills-archived" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Skills</Link>
           {/* Blogs accordion */}
           <div>
@@ -149,11 +174,20 @@ export default function Nav() {
             </button>
             {blogsOpen && (
               <div className="mt-2 ml-4 flex flex-col gap-2 border-l-2 border-[#1e2a45] pl-3">
+                <Link href="/the-signal" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#10B981] font-semibold hover:text-[#34D399]">
+                  📡 The Signal
+                </Link>
                 <Link href="/blog" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="hover:text-[#00D4FF] transition-colors">
                   SMF Blog
                 </Link>
+                <Link href="/the-terminal" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#00D4FF] font-semibold hover:text-[#33E5FF]">
+                  🖥️ The Terminal
+                </Link>
                 <Link href="/the-edge" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#9333EA] font-semibold hover:text-[#B06AFA]">
                   The Edge
+                </Link>
+                <Link href="/morgan" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="font-semibold transition-colors text-[#FF8C42] hover:text-[#FFB366]">
+                  Morgan's Desk
                 </Link>
                 <Link href="/liams-landing" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="hover:text-[#00D4FF] transition-colors">
                   Liam's Landing

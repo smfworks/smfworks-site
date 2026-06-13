@@ -1,0 +1,212 @@
+[
+  {
+    "model": "minimax-m3:cloud",
+    "task_name": "merge_intervals",
+    "passed": true,
+    "reason": "all 7 cases passed",
+    "tokens": 474,
+    "latency_s": 7.7935450077056885,
+    "response_chars": 416,
+    "timestamp": 1781300593.9775653
+  },
+  {
+    "model": "minimax-m3:cloud",
+    "task_name": "refactor_no_global",
+    "passed": true,
+    "reason": "API correct, no global, thread-safe",
+    "tokens": 329,
+    "latency_s": 6.6050848960876465,
+    "response_chars": 164,
+    "timestamp": 1781300600.6021347
+  },
+  {
+    "model": "minimax-m3:cloud",
+    "task_name": "find_offbyone",
+    "passed": true,
+    "reason": "all 6 cases passed",
+    "tokens": 76,
+    "latency_s": 1.856431007385254,
+    "response_chars": 139,
+    "timestamp": 1781300602.4749417
+  },
+  {
+    "model": "minimax-m3:cloud",
+    "task_name": "explain_codebase",
+    "passed": true,
+    "reason": "all concepts covered (157 words)",
+    "tokens": 1109,
+    "latency_s": 23.7512047290802,
+    "response_chars": 1019,
+    "timestamp": 1781300626.2262971
+  },
+  {
+    "model": "minimax-m3:cloud",
+    "task_name": "docstring_types",
+    "passed": true,
+    "reason": "type hints + complete docstring + functional",
+    "tokens": 280,
+    "latency_s": 5.841181993484497,
+    "response_chars": 836,
+    "timestamp": 1781300632.0953672
+  },
+  {
+    "model": "minimax-m3:cloud",
+    "task_name": "rate_limit_token_bucket",
+    "passed": true,
+    "reason": "all 4 tests passed",
+    "tokens": 1288,
+    "latency_s": 23.133430004119873,
+    "response_chars": 804,
+    "timestamp": 1781300655.3990202
+  },
+  {
+    "model": "minimax-m3:cloud",
+    "task_name": "fix_race_condition",
+    "passed": true,
+    "reason": "100 unique IDs across 10 threads, lock acquired",
+    "tokens": 90,
+    "latency_s": 3.994685649871826,
+    "response_chars": 210,
+    "timestamp": 1781300659.4263804
+  },
+  {
+    "model": "kimi-k2.6:cloud",
+    "task_name": "merge_intervals",
+    "passed": true,
+    "reason": "all 7 cases passed",
+    "tokens": 998,
+    "latency_s": 10.832373142242432,
+    "response_chars": 389,
+    "timestamp": 1781300670.274819
+  },
+  {
+    "model": "kimi-k2.6:cloud",
+    "task_name": "refactor_no_global",
+    "passed": true,
+    "reason": "API correct, no global, thread-safe",
+    "tokens": 779,
+    "latency_s": 8.279997110366821,
+    "response_chars": 164,
+    "timestamp": 1781300678.5741086
+  },
+  {
+    "model": "kimi-k2.6:cloud",
+    "task_name": "find_offbyone",
+    "passed": true,
+    "reason": "all 6 cases passed",
+    "tokens": 504,
+    "latency_s": 5.9203691482543945,
+    "response_chars": 121,
+    "timestamp": 1781300684.5106199
+  },
+  {
+    "model": "kimi-k2.6:cloud",
+    "task_name": "explain_codebase",
+    "passed": true,
+    "reason": "all concepts covered (124 words)",
+    "tokens": 2612,
+    "latency_s": 33.56926774978638,
+    "response_chars": 828,
+    "timestamp": 1781300718.0800352
+  },
+  {
+    "model": "kimi-k2.6:cloud",
+    "task_name": "docstring_types",
+    "passed": true,
+    "reason": "type hints + complete docstring + functional",
+    "tokens": 2510,
+    "latency_s": 29.18188714981079,
+    "response_chars": 852,
+    "timestamp": 1781300747.2868469
+  },
+  {
+    "model": "kimi-k2.6:cloud",
+    "task_name": "rate_limit_token_bucket",
+    "passed": true,
+    "reason": "all 4 tests passed",
+    "tokens": 2026,
+    "latency_s": 21.07507061958313,
+    "response_chars": 729,
+    "timestamp": 1781300768.5332618
+  },
+  {
+    "model": "kimi-k2.6:cloud",
+    "task_name": "fix_race_condition",
+    "passed": true,
+    "reason": "100 unique IDs across 10 threads, lock acquired",
+    "tokens": 749,
+    "latency_s": 9.145609140396118,
+    "response_chars": 179,
+    "timestamp": 1781300777.711767
+  },
+  {
+    "model": "deepseek-v4-pro:cloud",
+    "task_name": "merge_intervals",
+    "passed": true,
+    "reason": "all 7 cases passed",
+    "tokens": 420,
+    "latency_s": 2.83322811126709,
+    "response_chars": 402,
+    "timestamp": 1781300780.5648766
+  },
+  {
+    "model": "deepseek-v4-pro:cloud",
+    "task_name": "refactor_no_global",
+    "passed": true,
+    "reason": "API correct, no global, thread-safe",
+    "tokens": 508,
+    "latency_s": 3.3663978576660156,
+    "response_chars": 164,
+    "timestamp": 1781300783.9478307
+  },
+  {
+    "model": "deepseek-v4-pro:cloud",
+    "task_name": "find_offbyone",
+    "passed": true,
+    "reason": "all 6 cases passed",
+    "tokens": 314,
+    "latency_s": 2.1280243396759033,
+    "response_chars": 135,
+    "timestamp": 1781300786.0956082
+  },
+  {
+    "model": "deepseek-v4-pro:cloud",
+    "task_name": "explain_codebase",
+    "passed": true,
+    "reason": "all concepts covered (162 words)",
+    "tokens": 942,
+    "latency_s": 5.510232210159302,
+    "response_chars": 1075,
+    "timestamp": 1781300791.605974
+  },
+  {
+    "model": "deepseek-v4-pro:cloud",
+    "task_name": "docstring_types",
+    "passed": true,
+    "reason": "type hints + complete docstring + functional",
+    "tokens": 1040,
+    "latency_s": 6.04259467124939,
+    "response_chars": 962,
+    "timestamp": 1781300797.673697
+  },
+  {
+    "model": "deepseek-v4-pro:cloud",
+    "task_name": "rate_limit_token_bucket",
+    "passed": true,
+    "reason": "all 4 tests passed",
+    "tokens": 1853,
+    "latency_s": 9.882568597793579,
+    "response_chars": 845,
+    "timestamp": 1781300807.727659
+  },
+  {
+    "model": "deepseek-v4-pro:cloud",
+    "task_name": "fix_race_condition",
+    "passed": true,
+    "reason": "100 unique IDs across 10 threads, lock acquired",
+    "tokens": 1802,
+    "latency_s": 12.151304006576538,
+    "response_chars": 179,
+    "timestamp": 1781300819.9112887
+  }
+]

@@ -5,7 +5,7 @@ excerpt: "Every organization adopting AI hits the same wall: it works, it's usef
 date: "2026-05-28"
 categories: ["Brand Strategy", "AI Marketing", "Creative Direction"]
 readTime: 7
-image: "/images/blog/signal-the-threshold-of-use.png"
+image: "/images/blog/threshold-of-use-hero.png"
 author: "Pamela Flannery"
 ---
 

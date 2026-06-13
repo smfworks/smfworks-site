@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001F3F"/>
+      <stop offset="100%" style="stop-color:#0A1628"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D4FF;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#00D4FF;stop-opacity:0.2"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Grid pattern -->
+  <g opacity="0.06" stroke="#00D4FF" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="630"/><line x1="60" y1="0" x2="60" y2="630"/>
+    <line x1="120" y1="0" x2="120" y2="630"/><line x1="180" y1="0" x2="180" y2="630"/>
+    <line x1="240" y1="0" x2="240" y2="630"/><line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="360" y1="0" x2="360" y2="630"/><line x1="420" y1="0" x2="420" y2="630"/>
+    <line x1="480" y1="0" x2="480" y2="630"/><line x1="540" y1="0" x2="540" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/><line x1="660" y1="0" x2="660" y2="630"/>
+    <line x1="720" y1="0" x2="720" y2="630"/><line x1="780" y1="0" x2="780" y2="630"/>
+    <line x1="840" y1="0" x2="840" y2="630"/><line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="960" y1="0" x2="960" y2="630"/><line x1="1020" y1="0" x2="1020" y2="630"/>
+    <line x1="1080" y1="0" x2="1080" y2="630"/><line x1="1140" y1="0" x2="1140" y2="630"/>
+    <line x1="1200" y1="0" x2="1200" y2="630"/>
+    <line x1="0" y1="60" x2="1200" y2="60"/><line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/><line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/><line x1="0" y1="480" x2="1200" y2="480"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/><line x1="0" y1="600" x2="1200" y2="600"/>
+  </g>
+  
+  <!-- Decorative circuit lines -->
+  <g opacity="0.15" stroke="#00D4FF" stroke-width="2" fill="none">
+    <path d="M100,315 L250,315 L280,285 L400,285"/>
+    <path d="M100,345 L200,345 L230,375 L380,375"/>
+    <path d="M800,280 L900,280 L930,310 L1050,310"/>
+    <path d="M800,350 L850,350 L880,320 L1000,320"/>
+    <circle cx="400" cy="285" r="4" fill="#00D4FF"/>
+    <circle cx="380" cy="375" r="4" fill="#00D4FF"/>
+    <circle cx="1050" cy="310" r="4" fill="#00D4FF"/>
+    <circle cx="1000" cy="320" r="4" fill="#00D4FF"/>
+  </g>
+  
+  <!-- Terminal window -->
+  <g transform="translate(80, 160)">
+    <rect x="0" y="0" width="440" height="280" rx="8" fill="#0A1628" stroke="#1e2a45" stroke-width="2"/>
+    <rect x="0" y="0" width="440" height="32" rx="8" fill="#131B2E"/>
+    <circle cx="20" cy="16" r="6" fill="#EF4444" opacity="0.8"/>
+    <circle cx="40" cy="16" r="6" fill="#F59E0B" opacity="0.8"/>
+    <circle cx="60" cy="16" r="6" fill="#10B981" opacity="0.8"/>
+    <text x="220" y="20" fill="#94A3B8" font-family="monospace" font-size="12" text-anchor="middle">terminal</text>
+    <text x="16" y="60" fill="#00D4FF" font-family="monospace" font-size="14" filter="url(#glow)">$ shipped release patch</text>
+    <text x="16" y="85" fill="#94A3B8" font-family="monospace" font-size="13">Bumping 0.1.0 → 0.1.1</text>
+    <text x="16" y="105" fill="#94A3B8" font-family="monospace" font-size="13">Generating changelog...</text>
+    <text x="16" y="125" fill="#10B981" font-family="monospace" font-size="13">✓ feat: add HermesAgent</text>
+    <text x="16" y="145" fill="#10B981" font-family="monospace" font-size="13">✓ fix: context passing in CLI</text>
+    <text x="16" y="165" fill="#10B981" font-family="monospace" font-size="13">✓ ci: add GitHub Actions</text>
+    <text x="16" y="195" fill="#94A3B8" font-family="monospace" font-size="13">Creating tag v0.1.1...</text>
+    <text x="16" y="215" fill="#94A3B8" font-family="monospace" font-size="13">Pushing to origin...</text>
+    <text x="16" y="245" fill="#00D4FF" font-family="monospace" font-size="14" filter="url(#glow)">✓ Released v0.1.1</text>
+  </g>
+  
+  <!-- Dev platform mockup -->
+  <g transform="translate(680, 160)">
+    <rect x="0" y="0" width="440" height="280" rx="8" fill="#0A1628" stroke="#1e2a45" stroke-width="2"/>
+    <rect x="0" y="0" width="440" height="32" rx="8" fill="#131B2E"/>
+    <text x="220" y="20" fill="#94A3B8" font-family="sans-serif" font-size="12" text-anchor="middle">smfworks.com/dev</text>
+    <text x="20" y="65" fill="#00D4FF" font-family="sans-serif" font-size="22" font-weight="bold">Developer Platform</text>
+    <text x="20" y="90" fill="#94A3B8" font-family="sans-serif" font-size="13">Build with SMF Works</text>
+    <!-- Feature cards -->
+    <rect x="20" y="110" width="125" height="65" rx="6" fill="#131B2E" stroke="#1e2a45"/>
+    <text x="82" y="135" fill="#E2E8F0" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="bold">Docs</text>
+    <text x="82" y="155" fill="#94A3B8" font-family="sans-serif" font-size="9" text-anchor="middle">Guides &amp; Reference</text>
+    <rect x="157" y="110" width="125" height="65" rx="6" fill="#131B2E" stroke="#1e2a45"/>
+    <text x="219" y="135" fill="#E2E8F0" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="bold">API Keys</text>
+    <text x="219" y="155" fill="#94A3B8" font-family="sans-serif" font-size="9" text-anchor="middle">Generate &amp; Manage</text>
+    <rect x="294" y="110" width="125" height="65" rx="6" fill="#131B2E" stroke="#1e2a45"/>
+    <text x="356" y="135" fill="#E2E8F0" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="bold">Status</text>
+    <text x="356" y="155" fill="#94A3B8" font-family="sans-serif" font-size="9" text-anchor="middle">Live Health</text>
+    <!-- Status indicators -->
+    <rect x="20" y="195" width="400" height="60" rx="6" fill="#10B981" opacity="0.05" stroke="#10B981" stroke-opacity="0.2"/>
+    <circle cx="40" cy="225" r="5" fill="#10B981"/>
+    <text x="55" y="229" fill="#10B981" font-family="sans-serif" font-size="12">All Systems Operational</text>
+    <text x="340" y="229" fill="#94A3B8" font-family="monospace" font-size="10">Latency: 142ms</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="530" fill="#E2E8F0" font-family="sans-serif" font-size="28" font-weight="bold" text-anchor="middle">Building in the Open</text>
+  <text x="600" y="560" fill="#94A3B8" font-family="sans-serif" font-size="16" text-anchor="middle">SMF Works Developer Platform · shipped CLI · Hermes Agent · smf-forge PyPI</text>
+  
+  <!-- Branding bar -->
+  <rect x="0" y="610" width="1200" height="20" fill="url(#accent)" opacity="0.3"/>
+  <text x="600" y="624" fill="#00D4FF" font-family="sans-serif" font-size="10" text-anchor="middle" opacity="0.8">SMF Works · June 2026</text>
+</svg>

@@ -16,10 +16,10 @@ const projects = [
     description:
       "An adaptive learning platform that uses AI to teach philosophy at any level — from elementary students to researchers. Multiple AI agents represent different philosophical traditions, generating personalized scripts, exercises, and dialogues. Currently expanding beyond Socrates to cover Aristotle, Marcus Aurelius, Epictetus, and more.",
     status: "In Development",
-    statusColor: "#FF6B00",
+    statusColor: "#C9A96E",
     emoji: "🏛️",
     link: "/wisdomforge",
-    comingSoon: true,
+    comingSoon: false,
   },
   {
     slug: "openclaw-mastery",
