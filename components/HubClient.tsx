@@ -33,6 +33,7 @@ const sections = [
   { id: "model-compatibility", href: "/agentmarketplace/model-compatibility", title: "Model Compatibility", description: "Which agents support OpenAI, Anthropic, Gemini, local, and more.", icon: "🔗", color: "from-[#A855F7]/20 to-[#A855F7]/5" },
   { id: "integration-matrix", href: "/agentmarketplace/integration-matrix", title: "Integration Matrix", description: "Editor, OS, and platform support matrix.", icon: "🧩", color: "from-[#06B6D4]/20 to-[#06B6D4]/5" },
   { id: "news", href: "/agentmarketplace/news", title: "AI News", description: "Curated headlines and links from the AI industry.", icon: "📰", color: "from-[#FF6B6B]/20 to-[#FF6B6B]/5" },
+  { id: "lab", href: "/agentmarketplace/lab", title: "The Lab", description: "SMF Works experiments on AI hardware, software, applications, and devices.", icon: "🧪", color: "from-[#A855F7]/20 to-[#A855F7]/5" },
 ];
 
 export default function HubClient({ agents, llmModels, genericItems }: Props) {

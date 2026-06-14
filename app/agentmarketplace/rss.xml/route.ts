@@ -16,6 +16,10 @@ export async function GET() {
     { name: "Alternatives", slug: "alternatives" },
     { name: "Deployment Recipes", slug: "deployment-recipes" },
     { name: "Deals", slug: "deals" },
+    { name: "Changelog", slug: "changelog" },
+    { name: "Safety", slug: "safety" },
+    { name: "Getting Started", slug: "getting-started" },
+    { name: "The Lab", slug: "lab" },
   ];
 
   const items = [

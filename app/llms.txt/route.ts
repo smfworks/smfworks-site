@@ -25,11 +25,12 @@ export async function GET() {
   const changelog = getAllItems("changelog");
   const safety = getAllItems("safety");
   const gettingStarted = getAllItems("getting-started");
+  const lab = getAllItems("lab");
 
   const body = `# SMF Works Agent Marketplace — Machine-Readable Manifest
 > Source: https://smfworks.com/llms.txt
 > Operator: SMF Works
-> Purpose: Curated directory of autonomous AI agents, LLMs, vendor services, skills, guides, tips, tests, self-hosting, use cases, alternatives, deployment recipes, deals, changelog, safety, and getting started resources.
+> Purpose: Curated directory of autonomous AI agents, LLMs, vendor services, skills, guides, tips, tests, self-hosting, use cases, alternatives, deployment recipes, deals, changelog, safety, getting started, and SMF Works Lab resources.
 > Last updated: ${new Date().toISOString().split("T")[0]}
 
 ## 1. Canonical Resources
@@ -59,6 +60,7 @@ export async function GET() {
 | Model Compatibility | https://smfworks.com/agentmarketplace/model-compatibility | HTML |
 | Integration Matrix | https://smfworks.com/agentmarketplace/integration-matrix | HTML |
 | RSS Feed | https://smfworks.com/agentmarketplace/rss.xml | RSS |
+| The Lab | https://smfworks.com/agentmarketplace/lab | HTML |
 | Agent catalog JSON | https://smfworks.com/agentmarketplace/agents.json | JSON |
 | This manifest | https://smfworks.com/llms.txt | text/markdown |
 
@@ -130,11 +132,15 @@ ${itemList(safety, "safety")}
 
 ${itemList(gettingStarted, "getting-started")}
 
-## 18. Search
+## 18. The Lab (${lab.length})
 
-The marketplace hub at https://smfworks.com/agentmarketplace supports cross-section search across agents, LLMs, services, skills, guides, tips, tests, self-hosting, use cases, alternatives, deployment recipes, deals, changelog, safety, and getting started via an in-page search input.
+${itemList(lab, "lab")}
 
-## 19. Comparison Tool
+## 19. Search
+
+The marketplace hub at https://smfworks.com/agentmarketplace supports cross-section search across agents, LLMs, services, skills, guides, tips, tests, self-hosting, use cases, alternatives, deployment recipes, deals, changelog, safety, getting started, and the lab via an in-page search input.
+
+## 20. Comparison Tool
 
 The agent directory supports side-by-side comparison of up to 3 agents. Seed a comparison from any agent detail page using the "+ Compare" link, or construct URLs like:
 https://smfworks.com/agentmarketplace/agents?compare=claude-code,cursor,github-copilot

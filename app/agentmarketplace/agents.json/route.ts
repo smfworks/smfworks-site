@@ -19,6 +19,7 @@ export async function GET() {
     "changelog",
     "safety",
     "getting-started",
+    "lab",
   ];
 
   return NextResponse.json({

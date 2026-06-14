@@ -16,6 +16,7 @@ const sectionNames: Record<string, string> = {
   changelog: "Agent Changelog",
   safety: "AI Safety",
   "getting-started": "Getting Started",
+  lab: "The Lab",
 };
 
 export function generateStaticParamsForSection(section: string) {

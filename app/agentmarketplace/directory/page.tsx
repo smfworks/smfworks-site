@@ -38,6 +38,7 @@ export default function DirectoryPage() {
     { name: "Model Compatibility", href: "/agentmarketplace/model-compatibility", count: 0 },
     { name: "Integration Matrix", href: "/agentmarketplace/integration-matrix", count: 0 },
     { name: "AI News", href: "/agentmarketplace/news", count: 0 },
+    { name: "The Lab", href: "/agentmarketplace/lab", count: count("lab"), items: mapItems(getAllItems("lab"), "lab") },
   ];
 
   return (
