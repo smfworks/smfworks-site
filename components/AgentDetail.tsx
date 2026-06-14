@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import type { AgentProfile } from "@/lib/agents";
+import type { AgentProfile } from "@/lib/marketplace/loader";
 
 interface AgentDetailProps {
   agent: AgentProfile;
