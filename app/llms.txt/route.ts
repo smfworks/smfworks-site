@@ -18,11 +18,18 @@ export async function GET() {
   const tips = getAllItems("tips");
   const tests = getAllItems("tests");
   const selfHosting = getAllItems("self-hosting");
+  const useCases = getAllItems("use-cases");
+  const alternatives = getAllItems("alternatives");
+  const deploymentRecipes = getAllItems("deployment-recipes");
+  const deals = getAllItems("deals");
+  const changelog = getAllItems("changelog");
+  const safety = getAllItems("safety");
+  const gettingStarted = getAllItems("getting-started");
 
   const body = `# SMF Works Agent Marketplace — Machine-Readable Manifest
 > Source: https://smfworks.com/llms.txt
 > Operator: SMF Works
-> Purpose: Curated directory of autonomous AI agents, LLMs, vendor services, skills, guides, tips, tests, and self-hosting resources.
+> Purpose: Curated directory of autonomous AI agents, LLMs, vendor services, skills, guides, tips, tests, self-hosting, use cases, alternatives, deployment recipes, deals, changelog, safety, and getting started resources.
 > Last updated: ${new Date().toISOString().split("T")[0]}
 
 ## 1. Canonical Resources
@@ -40,6 +47,18 @@ export async function GET() {
 | Tests | https://smfworks.com/agentmarketplace/tests | HTML |
 | AI News | https://smfworks.com/agentmarketplace/news | HTML |
 | Self-Hosting | https://smfworks.com/agentmarketplace/self-hosting | HTML |
+| Use Cases | https://smfworks.com/agentmarketplace/use-cases | HTML |
+| Alternatives | https://smfworks.com/agentmarketplace/alternatives | HTML |
+| Deployment Recipes | https://smfworks.com/agentmarketplace/deployment-recipes | HTML |
+| Vendor Deals | https://smfworks.com/agentmarketplace/deals | HTML |
+| Agent Changelog | https://smfworks.com/agentmarketplace/changelog | HTML |
+| AI Safety | https://smfworks.com/agentmarketplace/safety | HTML |
+| Getting Started | https://smfworks.com/agentmarketplace/getting-started | HTML |
+| Benchmark Leaderboard | https://smfworks.com/agentmarketplace/benchmarks | HTML |
+| Cost Calculator | https://smfworks.com/agentmarketplace/cost-calculator | HTML |
+| Model Compatibility | https://smfworks.com/agentmarketplace/model-compatibility | HTML |
+| Integration Matrix | https://smfworks.com/agentmarketplace/integration-matrix | HTML |
+| RSS Feed | https://smfworks.com/agentmarketplace/rss.xml | RSS |
 | Agent catalog JSON | https://smfworks.com/agentmarketplace/agents.json | JSON |
 | This manifest | https://smfworks.com/llms.txt | text/markdown |
 
@@ -83,16 +102,44 @@ ${itemList(tests, "tests")}
 
 ${itemList(selfHosting, "self-hosting")}
 
-## 11. Search
+## 11. Use Cases (${useCases.length})
 
-The marketplace hub at https://smfworks.com/agentmarketplace supports cross-section search across agents, LLMs, services, skills, guides, tips, tests, and self-hosting via an in-page search input.
+${itemList(useCases, "use-cases")}
 
-## 12. Comparison Tool
+## 12. Alternatives (${alternatives.length})
+
+${itemList(alternatives, "alternatives")}
+
+## 13. Deployment Recipes (${deploymentRecipes.length})
+
+${itemList(deploymentRecipes, "deployment-recipes")}
+
+## 14. Vendor Deals (${deals.length})
+
+${itemList(deals, "deals")}
+
+## 15. Agent Changelog (${changelog.length})
+
+${itemList(changelog, "changelog")}
+
+## 16. AI Safety (${safety.length})
+
+${itemList(safety, "safety")}
+
+## 17. Getting Started (${gettingStarted.length})
+
+${itemList(gettingStarted, "getting-started")}
+
+## 18. Search
+
+The marketplace hub at https://smfworks.com/agentmarketplace supports cross-section search across agents, LLMs, services, skills, guides, tips, tests, self-hosting, use cases, alternatives, deployment recipes, deals, changelog, safety, and getting started via an in-page search input.
+
+## 19. Comparison Tool
 
 The agent directory supports side-by-side comparison of up to 3 agents. Seed a comparison from any agent detail page using the "+ Compare" link, or construct URLs like:
 https://smfworks.com/agentmarketplace/agents?compare=claude-code,cursor,github-copilot
 
-## 13. Human Contact
+## 20. Human Contact
 
 - Site: https://smfworks.com
 - Contact: https://smfworks.com/contact

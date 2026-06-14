@@ -1,7 +1,6 @@
 import { Metadata } from "next";
-import { getAllAgents } from "@/lib/marketplace/loader";
+import { getAllAgents, getAllItems, MarketplaceItem } from "@/lib/marketplace/loader";
 import { getLLMPricingData } from "@/lib/marketplace/llm-data";
-import { getAllItems, MarketplaceItem } from "@/lib/marketplace/loader";
 
 export const metadata: Metadata = {
   title: "Site Directory — Agent Marketplace | SMF Works",
@@ -18,68 +17,27 @@ interface Section {
 export default function DirectoryPage() {
   const agents = getAllAgents();
   const llmModels = getLLMPricingData().models;
-  const services = getAllItems("services");
-  const skills = getAllItems("skills");
-  const guides = getAllItems("guides");
-  const tips = getAllItems("tips");
-  const tests = getAllItems("tests");
-
-  const selfHosting = getAllItems("self-hosting");
-
   const sections: Section[] = [
-    {
-      name: "Agent Directory",
-      href: "/agentmarketplace/agents",
-      count: agents.length,
-      items: agents.map((a) => ({ title: a.name, href: `/agentmarketplace/${a.id}`, excerpt: a.tagline })),
-    },
-    {
-      name: "LLM Pricing",
-      href: "/agentmarketplace/llms",
-      count: llmModels.length,
-      items: llmModels.map((m) => ({ title: m.model, href: `/agentmarketplace/llms/${m.model_id.replace(/[^a-z0-9]+/g, "-").toLowerCase()}`, excerpt: m.notes })),
-    },
-    {
-      name: "Services",
-      href: "/agentmarketplace/services",
-      count: services.length,
-      items: mapItems(services, "services"),
-    },
-    {
-      name: "Skills & Addons",
-      href: "/agentmarketplace/skills",
-      count: skills.length,
-      items: mapItems(skills, "skills"),
-    },
-    {
-      name: "How-To Guides",
-      href: "/agentmarketplace/guides",
-      count: guides.length,
-      items: mapItems(guides, "guides"),
-    },
-    {
-      name: "Tips & Tricks",
-      href: "/agentmarketplace/tips",
-      count: tips.length,
-      items: mapItems(tips, "tips"),
-    },
-    {
-      name: "Test Results",
-      href: "/agentmarketplace/tests",
-      count: tests.length,
-      items: mapItems(tests, "tests"),
-    },
-    {
-      name: "Self-Hosting",
-      href: "/agentmarketplace/self-hosting",
-      count: selfHosting.length,
-      items: mapItems(selfHosting, "self-hosting"),
-    },
-    {
-      name: "AI News",
-      href: "/agentmarketplace/news",
-      count: 0,
-    },
+    { name: "Agent Directory", href: "/agentmarketplace/agents", count: agents.length, items: agents.map((a) => ({ title: a.name, href: `/agentmarketplace/${a.id}`, excerpt: a.tagline })) },
+    { name: "LLM Pricing", href: "/agentmarketplace/llms", count: llmModels.length, items: llmModels.map((m) => ({ title: m.model, href: `/agentmarketplace/llms/${m.model_id.replace(/[^a-z0-9]+/g, "-").toLowerCase()}`, excerpt: m.notes })) },
+    { name: "Services", href: "/agentmarketplace/services", count: count("services"), items: mapItems(getAllItems("services"), "services") },
+    { name: "Skills & Addons", href: "/agentmarketplace/skills", count: count("skills"), items: mapItems(getAllItems("skills"), "skills") },
+    { name: "How-To Guides", href: "/agentmarketplace/guides", count: count("guides"), items: mapItems(getAllItems("guides"), "guides") },
+    { name: "Tips & Tricks", href: "/agentmarketplace/tips", count: count("tips"), items: mapItems(getAllItems("tips"), "tips") },
+    { name: "Test Results", href: "/agentmarketplace/tests", count: count("tests"), items: mapItems(getAllItems("tests"), "tests") },
+    { name: "Self-Hosting", href: "/agentmarketplace/self-hosting", count: count("self-hosting"), items: mapItems(getAllItems("self-hosting"), "self-hosting") },
+    { name: "Use Cases", href: "/agentmarketplace/use-cases", count: count("use-cases"), items: mapItems(getAllItems("use-cases"), "use-cases") },
+    { name: "Alternatives", href: "/agentmarketplace/alternatives", count: count("alternatives"), items: mapItems(getAllItems("alternatives"), "alternatives") },
+    { name: "Deployment Recipes", href: "/agentmarketplace/deployment-recipes", count: count("deployment-recipes"), items: mapItems(getAllItems("deployment-recipes"), "deployment-recipes") },
+    { name: "Vendor Deals", href: "/agentmarketplace/deals", count: count("deals"), items: mapItems(getAllItems("deals"), "deals") },
+    { name: "Agent Changelog", href: "/agentmarketplace/changelog", count: count("changelog"), items: mapItems(getAllItems("changelog"), "changelog") },
+    { name: "AI Safety", href: "/agentmarketplace/safety", count: count("safety"), items: mapItems(getAllItems("safety"), "safety") },
+    { name: "Getting Started", href: "/agentmarketplace/getting-started", count: count("getting-started"), items: mapItems(getAllItems("getting-started"), "getting-started") },
+    { name: "Benchmark Leaderboard", href: "/agentmarketplace/benchmarks", count: 0 },
+    { name: "Cost Calculator", href: "/agentmarketplace/cost-calculator", count: 0 },
+    { name: "Model Compatibility", href: "/agentmarketplace/model-compatibility", count: 0 },
+    { name: "Integration Matrix", href: "/agentmarketplace/integration-matrix", count: 0 },
+    { name: "AI News", href: "/agentmarketplace/news", count: 0 },
   ];
 
   return (
@@ -88,7 +46,8 @@ export default function DirectoryPage() {
         <h1 className="text-4xl font-extrabold text-text-primary md:text-5xl">Site Directory</h1>
         <p className="mt-4 text-lg text-muted">
           A complete index of the Agent Marketplace. For machine-readable access, see{" "}
-          <a href="/llms.txt" className="text-data-cyan hover:underline">/llms.txt</a>.
+          <a href="/llms.txt" className="text-data-cyan hover:underline">/llms.txt</a> and{" "}
+          <a href="/agentmarketplace/rss.xml" className="text-data-cyan hover:underline">/rss.xml</a>.
         </p>
 
         <div className="mt-12 space-y-12">
@@ -117,6 +76,14 @@ export default function DirectoryPage() {
       </div>
     </div>
   );
+}
+
+function count(section: string) {
+  try {
+    return getAllItems(section).length;
+  } catch {
+    return 0;
+  }
 }
 
 function mapItems(items: MarketplaceItem[], section: string) {

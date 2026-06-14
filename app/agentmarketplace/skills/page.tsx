@@ -8,12 +8,5 @@ export const metadata = {
 
 export default function SkillsPage() {
   const items = getAllItems("skills");
-  return (
-    <MarketplaceSectionClient
-      items={items}
-      sectionTitle="Skills & Addons"
-      sectionHref="/agentmarketplace/skills"
-      heroImage="/images/agentmarketplace/skills-hero.svg"
-    />
-  );
+  return <MarketplaceSectionClient items={items} section="skills" title="Skills & Addons" description="Reusable skills, MCP servers, plugins, and extensions for agent platforms." />;
 }

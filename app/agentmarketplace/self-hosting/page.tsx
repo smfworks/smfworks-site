@@ -10,12 +10,5 @@ export const metadata: Metadata = {
 
 export default function SelfHostingPage() {
   const items = getAllItems("self-hosting");
-  return (
-    <MarketplaceSectionClient
-      items={items}
-      sectionTitle="Self-Hosting"
-      sectionHref="/agentmarketplace/self-hosting"
-      heroImage="/images/agentmarketplace/self-hosting-hero.svg"
-    />
-  );
+  return <MarketplaceSectionClient items={items} section="self-hosting" title="Self-Hosting" description="Hardware and operating system guides for running agents and LLMs locally." />;
 }

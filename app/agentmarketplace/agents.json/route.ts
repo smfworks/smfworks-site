@@ -5,42 +5,49 @@ import { getLLMPricingData } from "@/lib/marketplace/llm-data";
 export async function GET() {
   const agents = getAllAgents();
   const llmData = getLLMPricingData();
-  const services = getAllItems("services");
-  const skills = getAllItems("skills");
-  const guides = getAllItems("guides");
-  const tips = getAllItems("tips");
-  const tests = getAllItems("tests");
-  const selfHosting = getAllItems("self-hosting");
+  const sections = [
+    "services",
+    "skills",
+    "guides",
+    "tips",
+    "tests",
+    "self-hosting",
+    "use-cases",
+    "alternatives",
+    "deployment-recipes",
+    "deals",
+    "changelog",
+    "safety",
+    "getting-started",
+  ];
 
   return NextResponse.json({
     site: "SMF Works Agent Marketplace",
     url: "https://smfworks.com/agentmarketplace",
     updated_at: new Date().toISOString().split("T")[0],
-    sections: {
-      agents: agents.map((a) => ({
-        id: a.id,
-        name: a.name,
-        url: `https://smfworks.com/agentmarketplace/${a.id}`,
-        company: a.company,
-        pricing: a.pricing,
-        runtime: a.runtime,
-        open_source: a.openSource,
-        multi_platform: a.multiPlatform,
-        provider_agnostic: a.providerAgnostic,
-        categories: a.categories,
-        platforms: a.platforms,
-        model: a.model,
-        tagline: a.tagline,
-        website: a.website,
-      })),
-      llms: llmData.models,
-      services,
-      skills,
-      guides,
-      tips,
-      tests,
-      self_hosting: selfHosting,
+    feeds: {
+      llms_txt: "https://smfworks.com/llms.txt",
+      rss_xml: "https://smfworks.com/agentmarketplace/rss.xml",
+      directory: "https://smfworks.com/agentmarketplace/directory",
     },
+    agents: agents.map((a) => ({
+      id: a.id,
+      name: a.name,
+      url: `https://smfworks.com/agentmarketplace/${a.id}`,
+      company: a.company,
+      pricing: a.pricing,
+      runtime: a.runtime,
+      open_source: a.openSource,
+      multi_platform: a.multiPlatform,
+      provider_agnostic: a.providerAgnostic,
+      categories: a.categories,
+      platforms: a.platforms,
+      model: a.model,
+      tagline: a.tagline,
+      website: a.website,
+    })),
+    llms: llmData.models,
+    sections: Object.fromEntries(sections.map((s) => [s, getAllItems(s)])),
   }, {
     headers: {
       "Cache-Control": "public, max-age=3600, stale-while-revalidate=86400",

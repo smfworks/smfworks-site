@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { getAllItems, getItemBySlug, MarketplaceItem } from "@/lib/marketplace/loader";
+import { getAllItems, getItemBySlug } from "@/lib/marketplace/loader";
 import MarketplaceDetailPage from "@/components/MarketplaceDetail";
 
 const sectionNames: Record<string, string> = {
@@ -9,28 +9,25 @@ const sectionNames: Record<string, string> = {
   tips: "Tips & Tricks",
   tests: "Test Results",
   "self-hosting": "Self-Hosting",
+  "use-cases": "Use Cases",
+  alternatives: "Alternatives",
+  "deployment-recipes": "Deployment Recipes",
+  deals: "Vendor Deals",
+  changelog: "Agent Changelog",
+  safety: "AI Safety",
+  "getting-started": "Getting Started",
 };
-
-const sectionPaths: Record<string, string> = {
-  services: "/agentmarketplace/services",
-  skills: "/agentmarketplace/skills",
-  guides: "/agentmarketplace/guides",
-  tips: "/agentmarketplace/tips",
-  tests: "/agentmarketplace/tests",
-  "self-hosting": "/agentmarketplace/self-hosting",
-};
-
-interface PageProps {
-  params: { slug: string };
-  section: string;
-}
 
 export function generateStaticParamsForSection(section: string) {
   return getAllItems(section).map((item) => ({ slug: item.slug }));
 }
 
-export function generateMetadataForSection(section: string, params: { slug: string }): Metadata {
-  const item = getItemBySlug(section, params.slug);
+export async function generateMetadataForSection(
+  section: string,
+  params: Promise<{ slug: string }>
+): Promise<Metadata> {
+  const { slug } = await params;
+  const item = getItemBySlug(section, slug);
   if (!item) return {};
   const sectionName = sectionNames[section] || section;
   return {
@@ -40,20 +37,28 @@ export function generateMetadataForSection(section: string, params: { slug: stri
     openGraph: {
       title: `${item.title} — ${sectionName}`,
       description: item.excerpt,
-      url: `https://smfworks.com${sectionPaths[section]}/${item.slug}`,
+      url: `https://smfworks.com/agentmarketplace/${section}/${item.slug}`,
       siteName: "SMF Works",
       type: "article",
     },
   };
 }
 
-export default function GenericMarketplaceDetailPage({ params, section }: PageProps) {
+export default async function GenericMarketplaceDetailPage({
+  params,
+  section,
+}: {
+  params: Promise<{ slug: string }>;
+  section: string;
+}) {
+  const { slug } = await params;
+  const item = getItemBySlug(section, slug);
   return (
     <MarketplaceDetailPage
-      params={params}
+      item={item}
       section={section}
       sectionTitle={sectionNames[section] || section}
-      backHref={sectionPaths[section] || `/agentmarketplace/${section}`}
+      backHref={`/agentmarketplace/${section}`}
     />
   );
 }

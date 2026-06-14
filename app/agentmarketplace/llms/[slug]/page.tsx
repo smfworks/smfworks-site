@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { formatNumber, formatPrice, modelSlug } from "@/lib/marketplace/format";
 import { getLLMPricingData } from "@/lib/marketplace/llm-data";
+import { Metadata } from "next";
 
 export function generateStaticParams() {
   const data = getLLMPricingData();
@@ -10,9 +11,9 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
   const data = getLLMPricingData();
-  const slug = params.slug;
   const model = data.models.find((m) => modelSlug(m.model_id) === slug);
   if (!model) return {};
   return {
@@ -21,16 +22,16 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function LLMDetailPage({ params }: { params: { slug: string } }) {
+export default async function LLMDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const data = getLLMPricingData();
-  const slug = params.slug;
   const model = data.models.find((m) => modelSlug(m.model_id) === slug);
   if (!model) notFound();
 
   return (
     <div className="min-h-screen bg-forge-navy px-6 py-12">
       <div className="mx-auto max-w-4xl">
-        <Link href="/agentmarketplace/llms" className="mb-6 inline-flex items-center text-sm text-muted hover:text-data-cyan transition-colors">
+        <Link href="/agentmarketplace/llms" className="mb-6 inline-flex items-center text-sm text-muted transition-colors hover:text-data-cyan">
           ← Back to LLM pricing
         </Link>
 
@@ -41,7 +42,7 @@ export default function LLMDetailPage({ params }: { params: { slug: string } }) 
               <h1 className="mt-1 text-3xl font-bold text-text-primary md:text-4xl">{model.model}</h1>
               <p className="mt-2 text-sm text-muted">Model ID: {model.model_id}</p>
             </div>
-            <a href={model.source_url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-data-cyan px-5 py-2.5 font-semibold text-forge-navy hover:bg-[#33E5FF] transition-colors">
+            <a href={model.source_url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-data-cyan px-5 py-2.5 font-semibold text-forge-navy transition-colors hover:bg-[#33E5FF]">
               View provider pricing
               <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />

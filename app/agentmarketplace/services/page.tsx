@@ -11,9 +11,9 @@ export default function ServicesPage() {
   return (
     <MarketplaceSectionClient
       items={items}
-      sectionTitle="AI Services"
-      sectionHref="/agentmarketplace/services"
-      heroImage="/images/agentmarketplace/services-hero.svg"
+      section="services"
+      title="AI Services"
+      description="Consulting, hosting, security audits, and hybrid services for autonomous AI."
     />
   );
 }

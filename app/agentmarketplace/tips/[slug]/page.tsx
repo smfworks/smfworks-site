@@ -1,17 +1,14 @@
-import { getAllItems, getItemBySlug } from "@/lib/marketplace/loader";
 import GenericMarketplaceDetailPage, {
   generateMetadataForSection,
   generateStaticParamsForSection,
 } from "@/components/MarketplaceDetailWrapper";
 
-export function generateStaticParams() {
-  return generateStaticParamsForSection("tips");
-}
+const section = "tips";
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  return generateMetadataForSection("tips", params);
+export const generateStaticParams = () => generateStaticParamsForSection(section);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  return generateMetadataForSection(section, params);
 }
-
-export default function TipPage({ params }: { params: { slug: string } }) {
-  return <GenericMarketplaceDetailPage params={params} section="tips" />;
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  return <GenericMarketplaceDetailPage params={params} section={section} />;
 }

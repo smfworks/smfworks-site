@@ -19,7 +19,7 @@ interface Props {
 const GITHUB_ISSUE_URL = "https://github.com/smfworks/smfworks-site/issues/new";
 const MAX_COMPARE = 3;
 
-export default function AgentsDirectoryClient({ agents, categories, runtimes, pricings, platforms }: Props) {
+export default function AgentsDirectoryClient({ agents, categories, runtimes, pricings }: Props) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -38,6 +38,7 @@ export default function AgentsDirectoryClient({ agents, categories, runtimes, pr
   const [category, setCategory] = useState("All");
   const [runtime, setRuntime] = useState("All");
   const [pricing, setPricing] = useState("All");
+  const [openSourceOnly, setOpenSourceOnly] = useState(false);
   const [selected, setSelected] = useState<Set<string>>(initialSelected);
   const [compareOpen, setCompareOpen] = useState(initialSelected.size > 0);
 
@@ -59,7 +60,8 @@ export default function AgentsDirectoryClient({ agents, categories, runtimes, pr
     const matchesCategory = category === "All" || agent.categories.includes(category);
     const matchesRuntime = runtime === "All" || agent.runtime === runtime;
     const matchesPricing = pricing === "All" || agent.pricing === pricing;
-    return matchesSearch && matchesCategory && matchesRuntime && matchesPricing;
+    const matchesOpenSource = !openSourceOnly || agent.openSource;
+    return matchesSearch && matchesCategory && matchesRuntime && matchesPricing && matchesOpenSource;
   });
 
   const stats = {
@@ -90,11 +92,17 @@ export default function AgentsDirectoryClient({ agents, categories, runtimes, pr
       </section>
       <section className="mx-auto max-w-6xl px-6 py-12">
         <div className="mb-8 rounded-xl border border-forge-border bg-forge-card p-5">
-          <div className="grid gap-4 md:grid-cols-4">
+          <div className="grid gap-4 md:grid-cols-5">
             <div className="space-y-2"><label className="text-sm font-semibold text-muted">Search</label><input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Name, company, category..." className="w-full rounded-lg border border-forge-border bg-forge-navy-deep px-4 py-2.5 text-text-primary outline-none focus:border-data-cyan" /></div>
             <div className="space-y-2"><label className="text-sm font-semibold text-muted">Category</label><select value={category} onChange={(e) => setCategory(e.target.value)} className="w-full rounded-lg border border-forge-border bg-forge-navy-deep px-4 py-2.5 text-text-primary outline-none focus:border-data-cyan"><option value="All">All categories</option>{categories.map((c) => <option key={c} value={c}>{c}</option>)}</select></div>
             <div className="space-y-2"><label className="text-sm font-semibold text-muted">Runtime</label><select value={runtime} onChange={(e) => setRuntime(e.target.value)} className="w-full rounded-lg border border-forge-border bg-forge-navy-deep px-4 py-2.5 text-text-primary outline-none focus:border-data-cyan"><option value="All">Any runtime</option>{runtimes.map((r) => <option key={r} value={r}>{r}</option>)}</select></div>
             <div className="space-y-2"><label className="text-sm font-semibold text-muted">Pricing</label><select value={pricing} onChange={(e) => setPricing(e.target.value)} className="w-full rounded-lg border border-forge-border bg-forge-navy-deep px-4 py-2.5 text-text-primary outline-none focus:border-data-cyan"><option value="All">Any pricing</option>{pricings.map((p) => <option key={p} value={p}>{p}</option>)}</select></div>
+            <div className="flex items-end">
+              <label className="flex cursor-pointer items-center gap-2 rounded-lg border border-forge-border bg-forge-navy-deep px-4 py-2.5 text-sm text-text-primary hover:border-data-cyan">
+                <input type="checkbox" checked={openSourceOnly} onChange={(e) => setOpenSourceOnly(e.target.checked)} className="accent-data-cyan" />
+                Open source only
+              </label>
+            </div>
           </div>
         </div>
         <div className="mb-8 flex items-center justify-between">
@@ -141,7 +149,7 @@ export default function AgentsDirectoryClient({ agents, categories, runtimes, pr
             </div>
           ))}</div>
         ) : (
-          <div className="rounded-xl border border-forge-border bg-forge-card p-12 text-center"><p className="text-lg text-muted">No agents match your filters.</p><button onClick={() => { setSearch(""); setCategory("All"); setRuntime("All"); setPricing("All"); }} className="mt-4 text-data-cyan hover:underline">Clear filters</button></div>
+          <div className="rounded-xl border border-forge-border bg-forge-card p-12 text-center"><p className="text-lg text-muted">No agents match your filters.</p><button onClick={() => { setSearch(""); setCategory("All"); setRuntime("All"); setPricing("All"); setOpenSourceOnly(false); }} className="mt-4 text-data-cyan hover:underline">Clear filters</button></div>
         )}
         <div className="mt-16">
           <h2 className="text-2xl font-bold text-text-primary">Suggest an Agent</h2>

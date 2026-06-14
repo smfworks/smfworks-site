@@ -1,0 +1,316 @@
+export interface AgentMeta {
+  id: string;
+  useCases: string[];
+  supportedEditors: string[];
+  supportedProviders: string[];
+  operatingSystems: string[];
+  deploymentType: "local" | "cloud" | "hybrid";
+  setupComplexity: "low" | "medium" | "high";
+  humanInTheLoop: boolean;
+  sandboxed: boolean;
+  auditLogging: boolean;
+  mcpSupport: boolean;
+  alternativesTo?: string[];
+  deals?: { text: string; url: string; expires?: string }[];
+  changelogUrl?: string;
+  deploymentRecipes?: string[];
+}
+
+export const agentExtendedMeta: Record<string, AgentMeta> = {
+  "claude-code": {
+    id: "claude-code",
+    useCases: ["Code review", "Refactoring", "Debugging", "Architecture", "Testing"],
+    supportedEditors: ["Terminal", "VS Code via MCP", "Neovim via MCP"],
+    supportedProviders: ["Anthropic"],
+    operatingSystems: ["macOS", "Linux"],
+    deploymentType: "local",
+    setupComplexity: "low",
+    humanInTheLoop: true,
+    sandboxed: false,
+    auditLogging: true,
+    mcpSupport: true,
+    alternativesTo: ["GitHub Copilot", "Cursor"],
+    deals: [{ text: "Anthropic API credits for startups", url: "https://www.anthropic.com/startups" }],
+    changelogUrl: "https://www.anthropic.com/engineering/claude-code",
+  },
+  "github-copilot": {
+    id: "github-copilot",
+    useCases: ["Inline completion", "Chat", "PR review", "Tests", "Documentation"],
+    supportedEditors: ["VS Code", "JetBrains", "Visual Studio", "Neovim"],
+    supportedProviders: ["OpenAI", "Anthropic"],
+    operatingSystems: ["Windows", "macOS", "Linux"],
+    deploymentType: "hybrid",
+    setupComplexity: "low",
+    humanInTheLoop: true,
+    sandboxed: false,
+    auditLogging: false,
+    mcpSupport: false,
+    alternativesTo: ["Cursor", "Codeium", "Tabnine"],
+    changelogUrl: "https://github.blog/changelog/label/copilot/",
+  },
+  "cursor": {
+    id: "cursor",
+    useCases: ["Full-stack dev", "UI building", "Refactoring", "Agent mode", "Debugging"],
+    supportedEditors: ["Cursor IDE"],
+    supportedProviders: ["OpenAI", "Anthropic", "Google", "Azure OpenAI", "Custom"],
+    operatingSystems: ["Windows", "macOS", "Linux"],
+    deploymentType: "hybrid",
+    setupComplexity: "low",
+    humanInTheLoop: true,
+    sandboxed: false,
+    auditLogging: false,
+    mcpSupport: true,
+    alternativesTo: ["GitHub Copilot", "Claude Code", "Zed"],
+    deals: [{ text: "Cursor for Students — free Pro", url: "https://cursor.com/students" }],
+    changelogUrl: "https://cursor.com/changelog",
+  },
+  "windsurf": {
+    id: "windsurf",
+    useCases: ["Cascade agent", "UI building", "Refactoring", "Multi-file edits"],
+    supportedEditors: ["Windsurf IDE"],
+    supportedProviders: ["OpenAI", "Anthropic", "Google"],
+    operatingSystems: ["Windows", "macOS", "Linux"],
+    deploymentType: "hybrid",
+    setupComplexity: "low",
+    humanInTheLoop: true,
+    sandboxed: false,
+    auditLogging: false,
+    mcpSupport: false,
+    alternativesTo: ["Cursor", "GitHub Copilot"],
+    changelogUrl: "https://codeium.com/windsurf/changelog",
+  },
+  "zed": {
+    id: "zed",
+    useCases: ["Fast coding", "Collaboration", "Agentic editing"],
+    supportedEditors: ["Zed"],
+    supportedProviders: ["OpenAI", "Anthropic", "Google", "Local"],
+    operatingSystems: ["macOS", "Linux"],
+    deploymentType: "local",
+    setupComplexity: "low",
+    humanInTheLoop: true,
+    sandboxed: false,
+    auditLogging: false,
+    mcpSupport: true,
+    alternativesTo: ["Cursor", "VS Code + Copilot"],
+    changelogUrl: "https://zed.dev/releases",
+  },
+  "continue": {
+    id: "continue",
+    useCases: ["Local-first coding", "Privacy", "Open-source workflows"],
+    supportedEditors: ["VS Code", "JetBrains"],
+    supportedProviders: ["OpenAI", "Anthropic", "Google", "Local", "Azure", "DeepSeek"],
+    operatingSystems: ["Windows", "macOS", "Linux"],
+    deploymentType: "local",
+    setupComplexity: "medium",
+    humanInTheLoop: true,
+    sandboxed: false,
+    auditLogging: false,
+    mcpSupport: true,
+    alternativesTo: ["GitHub Copilot", "Cursor"],
+    changelogUrl: "https://github.com/continuedev/continue/releases",
+  },
+  "aider": {
+    id: "aider",
+    useCases: ["Git-aware coding", "Multi-file edits", "Test-driven development", "Architecture"],
+    supportedEditors: ["Terminal", "VS Code", "Neovim", "Emacs"],
+    supportedProviders: ["OpenAI", "Anthropic", "Google", "Azure", "DeepSeek", "Local"],
+    operatingSystems: ["Windows", "macOS", "Linux"],
+    deploymentType: "local",
+    setupComplexity: "low",
+    humanInTheLoop: true,
+    sandboxed: false,
+    auditLogging: false,
+    mcpSupport: false,
+    alternativesTo: ["Claude Code", "Cursor"],
+    changelogUrl: "https://github.com/paul-gauthier/aider/releases",
+  },
+  "bolt-new": {
+    id: "bolt-new",
+    useCases: ["Prompt-to-app", "Prototyping", "UI generation", "StackBlitz demos"],
+    supportedEditors: ["Browser"],
+    supportedProviders: ["OpenAI", "Anthropic"],
+    operatingSystems: ["Web"],
+    deploymentType: "cloud",
+    setupComplexity: "low",
+    humanInTheLoop: true,
+    sandboxed: true,
+    auditLogging: false,
+    mcpSupport: false,
+    alternativesTo: ["Lovable", "Replit Agent", "v0"],
+    changelogUrl: "https://bolt.new/",
+  },
+  "lovable": {
+    id: "lovable",
+    useCases: ["Prompt-to-app", "Product design", "Supabase integration", "UI generation"],
+    supportedEditors: ["Browser"],
+    supportedProviders: ["OpenAI", "Anthropic"],
+    operatingSystems: ["Web"],
+    deploymentType: "cloud",
+    setupComplexity: "low",
+    humanInTheLoop: true,
+    sandboxed: true,
+    auditLogging: false,
+    mcpSupport: false,
+    alternativesTo: ["Bolt.new", "Replit Agent", "v0"],
+    changelogUrl: "https://lovable.dev/",
+  },
+  "replit-agent": {
+    id: "replit-agent",
+    useCases: ["Full-stack in browser", "Education", "Rapid deployment", "Templates"],
+    supportedEditors: ["Replit IDE"],
+    supportedProviders: ["OpenAI", "Anthropic", "Google"],
+    operatingSystems: ["Web"],
+    deploymentType: "cloud",
+    setupComplexity: "low",
+    humanInTheLoop: true,
+    sandboxed: true,
+    auditLogging: false,
+    mcpSupport: false,
+    alternativesTo: ["Bolt.new", "Lovable"],
+    changelogUrl: "https://replit.com/",
+  },
+  "v0": {
+    id: "v0",
+    useCases: ["UI component generation", "React prototyping", "Design-to-code"],
+    supportedEditors: ["Browser"],
+    supportedProviders: ["OpenAI", "Anthropic"],
+    operatingSystems: ["Web"],
+    deploymentType: "cloud",
+    setupComplexity: "low",
+    humanInTheLoop: true,
+    sandboxed: true,
+    auditLogging: false,
+    mcpSupport: false,
+    alternativesTo: ["Bolt.new", "Lovable"],
+    changelogUrl: "https://v0.dev/",
+  },
+  "cline": {
+    id: "cline",
+    useCases: ["VS Code automation", "Multi-step tasks", "Local models", "Budget coding"],
+    supportedEditors: ["VS Code"],
+    supportedProviders: ["OpenAI", "Anthropic", "Google", "DeepSeek", "Local"],
+    operatingSystems: ["Windows", "macOS", "Linux"],
+    deploymentType: "local",
+    setupComplexity: "medium",
+    humanInTheLoop: true,
+    sandboxed: false,
+    auditLogging: false,
+    mcpSupport: true,
+    alternativesTo: ["Cursor", "GitHub Copilot"],
+    changelogUrl: "https://github.com/cline/cline/releases",
+  },
+  "openhands": {
+    id: "openhands",
+    useCases: ["Open-source task solving", "Dockerized agents", "SWE-bench"],
+    supportedEditors: ["Browser", "VS Code via remote"],
+    supportedProviders: ["OpenAI", "Anthropic", "Google", "Local"],
+    operatingSystems: ["Docker", "Linux"],
+    deploymentType: "local",
+    setupComplexity: "high",
+    humanInTheLoop: true,
+    sandboxed: true,
+    auditLogging: true,
+    mcpSupport: true,
+    alternativesTo: ["Devin", "SWE-agent"],
+    changelogUrl: "https://github.com/All-Hands-AI/OpenHands/releases",
+  },
+  "swe-agent": {
+    id: "swe-agent",
+    useCases: ["Research", "Academic benchmarks", "Open-source bug fixing"],
+    supportedEditors: ["Terminal"],
+    supportedProviders: ["OpenAI", "Anthropic"],
+    operatingSystems: ["Linux"],
+    deploymentType: "local",
+    setupComplexity: "high",
+    humanInTheLoop: false,
+    sandboxed: true,
+    auditLogging: true,
+    mcpSupport: false,
+    alternativesTo: ["OpenHands", "Devin"],
+    changelogUrl: "https://github.com/princeton-nlp/SWE-agent",
+  },
+  "devin": {
+    id: "devin",
+    useCases: ["Autonomous engineering", "End-to-end tickets", "Production tasks"],
+    supportedEditors: ["Browser"],
+    supportedProviders: ["Cognition"],
+    operatingSystems: ["Cloud"],
+    deploymentType: "cloud",
+    setupComplexity: "low",
+    humanInTheLoop: true,
+    sandboxed: true,
+    auditLogging: true,
+    mcpSupport: false,
+    alternativesTo: ["OpenHands", "SWE-agent"],
+    changelogUrl: "https://www.cognition.ai/",
+  },
+  "perplexity": {
+    id: "perplexity",
+    useCases: ["Research", "Web-grounded answers", "Citation-backed search"],
+    supportedEditors: ["Browser", "Mobile"],
+    supportedProviders: ["Perplexity"],
+    operatingSystems: ["Web"],
+    deploymentType: "cloud",
+    setupComplexity: "low",
+    humanInTheLoop: true,
+    sandboxed: true,
+    auditLogging: false,
+    mcpSupport: false,
+    alternativesTo: ["ChatGPT", "Claude"],
+    changelogUrl: "https://www.perplexity.ai/hub",
+  },
+  "microsoft-scout": {
+    id: "microsoft-scout",
+    useCases: ["Windows automation", "Desktop agent", "Office integration"],
+    supportedEditors: ["Windows"],
+    supportedProviders: ["Microsoft"],
+    operatingSystems: ["Windows"],
+    deploymentType: "hybrid",
+    setupComplexity: "medium",
+    humanInTheLoop: true,
+    sandboxed: false,
+    auditLogging: false,
+    mcpSupport: false,
+    alternativesTo: ["OpenClaw", "AutoGPT"],
+    changelogUrl: "https://www.microsoft.com/en-us/scout",
+  },
+  "auto-gpt": {
+    id: "auto-gpt",
+    useCases: ["Autonomous goal pursuit", "Research", "Experiments"],
+    supportedEditors: ["Terminal", "Browser"],
+    supportedProviders: ["OpenAI", "Anthropic", "Local"],
+    operatingSystems: ["Windows", "macOS", "Linux"],
+    deploymentType: "local",
+    setupComplexity: "high",
+    humanInTheLoop: false,
+    sandboxed: false,
+    auditLogging: false,
+    mcpSupport: false,
+    alternativesTo: ["OpenHands", "Devin"],
+    changelogUrl: "https://github.com/Significant-Gravitas/AutoGPT/releases",
+  },
+};
+
+export function getAgentMeta(id: string): AgentMeta | undefined {
+  return agentExtendedMeta[id];
+}
+
+export function getAgentsByUseCase(useCase: string): AgentMeta[] {
+  return Object.values(agentExtendedMeta).filter((a) => a.useCases.some((u) => u.toLowerCase() === useCase.toLowerCase()));
+}
+
+export function getAgentsByAlternative(target: string): AgentMeta[] {
+  return Object.values(agentExtendedMeta).filter((a) => a.alternativesTo?.some((alt) => alt.toLowerCase() === target.toLowerCase()));
+}
+
+export const useCases = Array.from(new Set(Object.values(agentExtendedMeta).flatMap((a) => a.useCases))).sort();
+
+export const allEditors = Array.from(new Set(Object.values(agentExtendedMeta).flatMap((a) => a.supportedEditors))).sort();
+
+export const allProviders = Array.from(new Set(Object.values(agentExtendedMeta).flatMap((a) => a.supportedProviders))).sort();
+
+export const allOperatingSystems = Array.from(new Set(Object.values(agentExtendedMeta).flatMap((a) => a.operatingSystems))).sort();
+
+export const alternativeTargets = Array.from(
+  new Set(Object.values(agentExtendedMeta).flatMap((a) => a.alternativesTo || []))
+).sort();

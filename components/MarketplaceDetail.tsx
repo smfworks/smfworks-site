@@ -4,39 +4,13 @@ import Image from "next/image";
 import { getAllItems, getItemBySlug, MarketplaceItem } from "@/lib/marketplace/loader";
 
 interface MarketplaceDetailPageProps {
-  params: { slug: string };
+  item: MarketplaceItem | null | undefined;
   section: string;
   sectionTitle: string;
   backHref: string;
 }
 
-export function generateStaticParamsForSection(section: string) {
-  const items = getAllItems(section);
-  return items.map((item) => ({ slug: item.slug }));
-}
-
-export function generateMetadataForSection(section: string, params: { slug: string }) {
-  const item = getItemBySlug(section, params.slug);
-  if (!item) return {};
-  return {
-    title: `${item.title} — ${sectionTitle(section)}`,
-    description: item.excerpt,
-  };
-}
-
-function sectionTitle(section: string): string {
-  const map: Record<string, string> = {
-    services: "Services",
-    skills: "Skills & Addons",
-    guides: "How-To Guides",
-    tips: "Tips & Tricks",
-    tests: "Test Results",
-  };
-  return map[section] || section;
-}
-
-export default function MarketplaceDetailPage({ params, section, sectionTitle: title, backHref }: MarketplaceDetailPageProps) {
-  const item = getItemBySlug(section, params.slug);
+export default function MarketplaceDetailPage({ item, section, sectionTitle: title, backHref }: MarketplaceDetailPageProps) {
   if (!item) notFound();
 
   return (

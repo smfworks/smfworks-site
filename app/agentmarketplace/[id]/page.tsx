@@ -7,8 +7,9 @@ export function generateStaticParams() {
   return getAllAgents().map((agent) => ({ id: agent.id }));
 }
 
-export function generateMetadata({ params }: { params: { id: string } }): Metadata {
-  const agent = getAgentBySlug(params.id);
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const agent = getAgentBySlug(id);
   if (!agent) return {};
   return {
     title: `${agent.name} — Agent Marketplace | SMF Works`,
@@ -24,8 +25,9 @@ export function generateMetadata({ params }: { params: { id: string } }): Metada
   };
 }
 
-export default function AgentPage({ params }: { params: { id: string } }) {
-  const agent = getAgentBySlug(params.id);
+export default async function AgentPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const agent = getAgentBySlug(id);
   if (!agent) notFound();
 
   return (
