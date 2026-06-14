@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import AgentCard from "@/components/AgentCard";
+import AgentComparison from "@/components/AgentComparison";
 import SubmitAgentForm from "@/components/SubmitAgentForm";
 import { AgentProfile } from "@/lib/marketplace/loader";
 
@@ -15,12 +16,15 @@ interface Props {
 }
 
 const GITHUB_ISSUE_URL = "https://github.com/smfworks/smfworks-site/issues/new";
+const MAX_COMPARE = 3;
 
 export default function AgentsDirectoryClient({ agents, categories, runtimes, pricings, platforms }: Props) {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
   const [runtime, setRuntime] = useState("All");
   const [pricing, setPricing] = useState("All");
+  const [selected, setSelected] = useState<Set<string>>(new Set());
+  const [compareOpen, setCompareOpen] = useState(false);
 
   const filtered = agents.filter((agent) => {
     const q = search.toLowerCase();
@@ -66,9 +70,49 @@ export default function AgentsDirectoryClient({ agents, categories, runtimes, pr
             <div className="space-y-2"><label className="text-sm font-semibold text-muted">Pricing</label><select value={pricing} onChange={(e) => setPricing(e.target.value)} className="w-full rounded-lg border border-forge-border bg-forge-navy-deep px-4 py-2.5 text-text-primary outline-none focus:border-data-cyan"><option value="All">Any pricing</option>{pricings.map((p) => <option key={p} value={p}>{p}</option>)}</select></div>
           </div>
         </div>
-        <div className="mb-8 flex items-center justify-between"><p className="text-sm text-muted">Showing {filtered.length} of {agents.length} agents</p><div className="flex gap-2 text-sm"><span className="rounded-md bg-forge-surface-mid px-2 py-1 text-muted">Platforms: {platforms.join(", ")}</span></div></div>
+        <div className="mb-8 flex items-center justify-between">
+          <p className="text-sm text-muted">Showing {filtered.length} of {agents.length} agents</p>
+          {selected.size > 0 && (
+            <button
+              onClick={() => setCompareOpen(true)}
+              className="rounded-lg bg-data-cyan px-4 py-2 text-sm font-semibold text-forge-navy hover:bg-data-cyan/90"
+            >
+              Compare ({selected.size})
+            </button>
+          )}
+        </div>
+        {compareOpen && (
+          <AgentComparison
+            agents={agents.filter((a) => selected.has(a.id))}
+            onClose={() => setCompareOpen(false)}
+          />
+        )}
         {filtered.length > 0 ? (
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{filtered.map((agent) => <Link key={agent.id} href={`/agentmarketplace/${agent.id}`}><AgentCard agent={agent} /></Link>)}</div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{filtered.map((agent) => (
+            <div key={agent.id} className="relative">
+              <label className="absolute right-3 top-3 z-10 flex cursor-pointer items-center gap-2 rounded-full border border-forge-border bg-forge-card/90 px-2.5 py-1 text-xs text-muted hover:border-data-cyan hover:text-data-cyan">
+                <input
+                  type="checkbox"
+                  checked={selected.has(agent.id)}
+                  onChange={(e) => {
+                    const next = new Set(selected);
+                    if (e.target.checked) {
+                      if (next.size >= MAX_COMPARE) return;
+                      next.add(agent.id);
+                    } else {
+                      next.delete(agent.id);
+                    }
+                    setSelected(next);
+                  }}
+                  className="accent-data-cyan"
+                />
+                Compare
+              </label>
+              <Link href={`/agentmarketplace/${agent.id}`}>
+                <AgentCard agent={agent} />
+              </Link>
+            </div>
+          ))}</div>
         ) : (
           <div className="rounded-xl border border-forge-border bg-forge-card p-12 text-center"><p className="text-lg text-muted">No agents match your filters.</p><button onClick={() => { setSearch(""); setCategory("All"); setRuntime("All"); setPricing("All"); }} className="mt-4 text-data-cyan hover:underline">Clear filters</button></div>
         )}
