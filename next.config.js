@@ -17,6 +17,17 @@ const nextConfig = {
         destination: "/drj/testing-minimax-m3-frontier-model-one-morning",
         permanent: true,
       },
+      // TODO: migrate /agentmarketplace routes to /clearinghouse and enable these redirects
+      // {
+      //   source: "/agentmarketplace",
+      //   destination: "/clearinghouse",
+      //   permanent: true,
+      // },
+      // {
+      //   source: "/agentmarketplace/:path*",
+      //   destination: "/clearinghouse/:path*",
+      //   permanent: true,
+      // },
     ];
   },
 };

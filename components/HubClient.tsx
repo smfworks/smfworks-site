@@ -79,7 +79,7 @@ export default function HubClient({ agents, llmModels, genericItems }: Props) {
         <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-block rounded-full border border-data-cyan/30 bg-data-cyan/10 px-4 py-1.5 text-sm font-semibold text-data-cyan">The AI Clearinghouse</span>
-            <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-text-primary md:text-6xl">Agent Marketplace</h1>
+            <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-text-primary md:text-6xl">The AI Clearinghouse</h1>
             <p className="mt-5 text-lg text-muted md:text-xl">Your starting point for autonomous AI agents, LLMs, services, skills, and practical know-how.</p>
 
             <div className="mx-auto mt-8 max-w-xl">

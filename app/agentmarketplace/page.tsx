@@ -4,15 +4,15 @@ import { getLLMPricingData } from "@/lib/marketplace/llm-data";
 import HubClient from "@/components/HubClient";
 
 export const metadata: Metadata = {
-  title: "Agent Marketplace — The AI Clearinghouse | SMF Works",
+  title: "The AI Clearinghouse | SMF Works",
   description: "Compare autonomous AI agents, LLM pricing, vendor services, skills, guides, tips, tests, benchmarks, use cases, alternatives, deployment recipes, and self-hosting options.",
   keywords: ["AI agents", "autonomous agents", "LLM pricing", "AI tools", "AI services", "coding agents", "agent comparison", "self-hosting", "agent safety"],
   openGraph: {
-    title: "Agent Marketplace — The AI Clearinghouse",
-    description: "Compare autonomous AI agents, LLM pricing, vendor services, skills, guides, tests, use cases, alternatives, and deployment recipes.",
-    url: "https://smfworks.com/agentmarketplace",
+    title: "The AI Clearinghouse",
+    description: "Compare autonomous AI agents, LLM pricing, vendor services, skills, guides, tips, tests, use cases, alternatives, and deployment recipes.",
+    url: "https://smfworks.com/clearinghouse",
     siteName: "SMF Works",
-    images: ["/images/agentmarketplace/og-marketplace.png"],
+    images: ["/images/agentmarketplace/og-clearinghouse.png"],
     type: "website",
   },
 };
