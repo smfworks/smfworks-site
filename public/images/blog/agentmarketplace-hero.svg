@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A0F1F" />
+      <stop offset="50%" stop-color="#001F3F" />
+      <stop offset="100%" stop-color="#0A0F1F" />
+    </linearGradient>
+
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#007BFF" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="emberGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#f97316" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#ea580c" stop-opacity="0.1" />
+    </linearGradient>
+
+    <radialGradient id="orbGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.9" />
+      <stop offset="40%" stop-color="#007BFF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" />
+    </filter>
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)" />
+
+  <!-- Grid lines -->
+  <g stroke="#1e2a45" stroke-width="0.5" opacity="0.4">
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="0" y1="350" x2="1200" y2="350" />
+    <line x1="0" y1="500" x2="1200" y2="500" />
+    <line x1="200" y1="0" x2="200" y2="675" />
+    <line x1="400" y1="0" x2="400" y2="675" />
+    <line x1="600" y1="0" x2="600" y2="675" />
+    <line x1="800" y1="0" x2="800" y2="675" />
+    <line x1="1000" y1="0" x2="1000" y2="675" />
+  </g>
+
+  <!-- Floating orbs -->
+  <g filter="url(#softBlur)">
+    <circle cx="180" cy="140" r="80" fill="url(#orbGlow)" opacity="0.6" />
+    <circle cx="980" cy="200" r="100" fill="url(#orbGlow)" opacity="0.4" />
+    <circle cx="1050" cy="520" r="70" fill="url(#emberGlow)" opacity="0.5" />
+    <circle cx="120" cy="540" r="60" fill="url(#emberGlow)" opacity="0.4" />
+  </g>
+
+  <!-- Data streams connecting agents -->
+  <g stroke="url(#cyanGlow)" stroke-width="1.5" fill="none" opacity="0.5" filter="url(#blur)">
+    <path d="M 250 500 Q 450 380 600 420 T 950 500" />
+    <path d="M 250 500 Q 500 320 750 380 T 950 500" />
+    <path d="M 250 500 Q 550 260 800 340 T 950 500" />
+  </g>
+
+  <!-- Agent silhouettes -->
+  <g fill="#131B2E" stroke="#00D4FF" stroke-width="2">
+    <!-- Agent 1 -->
+    <g transform="translate(250, 500)">
+      <path d="M -35 -100 L 35 -100 L 25 -10 L -25 -10 Z" />
+      <rect x="-30" y="-120" width="60" height="35" rx="5" />
+      <circle cx="0" cy="-135" r="22" />
+      <rect x="-20" y="-110" width="40" height="12" rx="2" fill="#00D4FF" opacity="0.4" />
+    </g>
+
+    <!-- Agent 2 -->
+    <g transform="translate(600, 420)">
+      <path d="M -40 -120 L 40 -120 L 30 0 L -30 0 Z" />
+      <rect x="-35" y="-145" width="70" height="40" rx="6" />
+      <circle cx="0" cy="-165" r="25" />
+      <rect x="-25" y="-135" width="50" height="14" rx="2" fill="#00D4FF" opacity="0.5" />
+    </g>
+
+    <!-- Agent 3 -->
+    <g transform="translate(950, 500)">
+      <path d="M -30 -100 L 30 -100 L 22 -10 L -22 -10 Z" />
+      <rect x="-28" y="-122" width="56" height="34" rx="5" />
+      <circle cx="0" cy="-138" r="20" />
+      <rect x="-18" y="-115" width="36" height="10" rx="2" fill="#ea580c" opacity="0.5" />
+    </g>
+  </g>
+
+  <!-- Embers / particles -->
+  <g fill="#f97316" opacity="0.7">
+    <circle cx="320" cy="250" r="2" />
+    <circle cx="680" cy="180" r="3" />
+    <circle cx="780" cy="300" r="2" />
+    <circle cx="420" cy="560" r="2" />
+    <circle cx="880" cy="240" r="3" />
+    <circle cx="150" cy="320" r="2" />
+  </g>
+
+  <!-- Marketplace grid floor -->
+  <g stroke="#1e2a45" stroke-width="1" fill="none" opacity="0.5">
+    <line x1="0" y1="580" x2="1200" y2="580" />
+    <path d="M 0 675 L 250 580 L 950 580 L 1200 675" fill="url(#cyanGlow)" opacity="0.08" />
+  </g>
+
+  <!-- Binary rain streaks -->
+  <g fill="#00D4FF" opacity="0.15" font-family="monospace" font-size="12">
+    <text x="150" y="80">10110</text>
+    <text x="300" y="120">01101</text>
+    <text x="500" y="60">11010</text>
+    <text x="720" y="100">01011</text>
+    <text x="900" y="90">10101</text>
+  </g>
+
+  <!-- Vignette -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+    <stop offset="60%" stop-color="#0A0F1F" stop-opacity="0" />
+    <stop offset="100%" stop-color="#0A0F1F" stop-opacity="0.85" />
+  </radialGradient>
+  <rect width="1200" height="675" fill="url(#vignette)" />
+</svg>
