@@ -28,7 +28,7 @@ export interface AgentProfile {
   openSource: boolean;
   multiPlatform: boolean;
   providerAgnostic: boolean;
-  model?: AgentModel;
+  model?: string;
   platforms: string[];
   features: string[];
   releaseYear: number;

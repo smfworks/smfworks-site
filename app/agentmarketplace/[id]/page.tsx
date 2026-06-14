@@ -1,13 +1,13 @@
 import { notFound } from "next/navigation";
 import AgentDetail from "@/components/AgentDetail";
-import { agents } from "@/lib/agents";
+import { getAgentBySlug, getAllAgents } from "@/lib/marketplace/loader";
 
 export function generateStaticParams() {
-  return agents.map((agent) => ({ id: agent.id }));
+  return getAllAgents().map((agent) => ({ id: agent.id }));
 }
 
 export function generateMetadata({ params }: { params: { id: string } }) {
-  const agent = agents.find((a) => a.id === params.id);
+  const agent = getAgentBySlug(params.id);
   if (!agent) return {};
   return {
     title: `${agent.name} — Agent Marketplace`,
@@ -16,7 +16,7 @@ export function generateMetadata({ params }: { params: { id: string } }) {
 }
 
 export default function AgentPage({ params }: { params: { id: string } }) {
-  const agent = agents.find((a) => a.id === params.id);
+  const agent = getAgentBySlug(params.id);
   if (!agent) notFound();
 
   return (

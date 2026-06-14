@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <rect width="1200" height="600" fill="#001F3F"/>
+  <path d="M300 400 L500 200 L700 350 L900 150" stroke="#00E5A0" stroke-width="4" fill="none" opacity="0.5"/>
+  <text x="600" y="280" text-anchor="middle" fill="#E2E8F0" font-size="48" font-family="sans-serif" font-weight="bold">Test Results</text>
+  <text x="600" y="340" text-anchor="middle" fill="#00E5A0" font-size="24" font-family="sans-serif">Real-world agent benchmarks</text>
+</svg>

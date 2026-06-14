@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <rect width="1200" height="600" fill="#001F3F"/>
+  <text x="600" y="260" text-anchor="middle" fill="#00E5A0" font-size="72" font-family="sans-serif" font-weight="bold">💡</text>
+  <text x="600" y="360" text-anchor="middle" fill="#E2E8F0" font-size="48" font-family="sans-serif" font-weight="bold">Tips & Tricks</text>
+</svg>

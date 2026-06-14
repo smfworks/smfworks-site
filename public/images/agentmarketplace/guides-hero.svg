@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <rect width="1200" height="600" fill="#001F3F"/>
+  <rect x="420" y="180" width="360" height="240" rx="10" fill="none" stroke="#00D4FF" stroke-width="2" opacity="0.4"/>
+  <line x1="460" y1="240" x2="740" y2="240" stroke="#00D4FF" stroke-width="2" opacity="0.4"/>
+  <line x1="460" y1="300" x2="740" y2="300" stroke="#00D4FF" stroke-width="2" opacity="0.4"/>
+  <line x1="460" y1="360" x2="680" y2="360" stroke="#00D4FF" stroke-width="2" opacity="0.4"/>
+  <text x="600" y="480" text-anchor="middle" fill="#E2E8F0" font-size="40" font-family="sans-serif" font-weight="bold">How-To Guides</text>
+</svg>
