@@ -1,26 +1,17 @@
 import { getAllItems, getItemBySlug } from "@/lib/marketplace/loader";
-import MarketplaceDetailPage from "@/components/MarketplaceDetail";
+import GenericMarketplaceDetailPage, {
+  generateMetadataForSection,
+  generateStaticParamsForSection,
+} from "@/components/MarketplaceDetailWrapper";
 
 export function generateStaticParams() {
-  return getAllItems("skills").map((item) => ({ slug: item.slug }));
+  return generateStaticParamsForSection("skills");
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
-  const item = getItemBySlug("skills", params.slug);
-  if (!item) return {};
-  return {
-    title: `${item.title} — Skills & Addons`,
-    description: item.excerpt,
-  };
+  return generateMetadataForSection("skills", params);
 }
 
 export default function SkillPage({ params }: { params: { slug: string } }) {
-  return (
-    <MarketplaceDetailPage
-      params={params}
-      section="skills"
-      sectionTitle="Skills & Addons"
-      backHref="/agentmarketplace/skills"
-    />
-  );
+  return <GenericMarketplaceDetailPage params={params} section="skills" />;
 }

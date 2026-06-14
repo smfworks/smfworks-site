@@ -10,12 +10,20 @@ interface AgentDetailProps {
 export default function AgentDetail({ agent }: AgentDetailProps) {
   return (
     <div className="mx-auto max-w-4xl">
-      <Link
-        href="/agentmarketplace"
-        className="mb-6 inline-flex items-center text-sm text-muted hover:text-data-cyan transition-colors"
-      >
-        ← Back to marketplace
-      </Link>
+      <div className="mb-6 flex items-center gap-4">
+        <Link
+          href="/agentmarketplace"
+          className="inline-flex items-center text-sm text-muted hover:text-data-cyan transition-colors"
+        >
+          ← Back to marketplace
+        </Link>
+        <Link
+          href={`/agentmarketplace/agents?compare=${agent.id}`}
+          className="inline-flex items-center text-sm text-data-cyan hover:underline"
+        >
+          + Compare
+        </Link>
+      </div>
 
       <div className="rounded-2xl border border-forge-border bg-forge-card p-8 md:p-12">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">

@@ -1,26 +1,17 @@
-import { getAllItems, getItemBySlug, MarketplaceItem } from "@/lib/marketplace/loader";
-import MarketplaceDetailPage from "@/components/MarketplaceDetail";
+import { getAllItems, getItemBySlug } from "@/lib/marketplace/loader";
+import GenericMarketplaceDetailPage, {
+  generateMetadataForSection,
+  generateStaticParamsForSection,
+} from "@/components/MarketplaceDetailWrapper";
 
 export function generateStaticParams() {
-  return getAllItems("services").map((item) => ({ slug: item.slug }));
+  return generateStaticParamsForSection("services");
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
-  const item = getItemBySlug("services", params.slug);
-  if (!item) return {};
-  return {
-    title: `${item.title} — Services`,
-    description: item.excerpt,
-  };
+  return generateMetadataForSection("services", params);
 }
 
 export default function ServicePage({ params }: { params: { slug: string } }) {
-  return (
-    <MarketplaceDetailPage
-      params={params}
-      section="services"
-      sectionTitle="Services"
-      backHref="/agentmarketplace/services"
-    />
-  );
+  return <GenericMarketplaceDetailPage params={params} section="services" />;
 }

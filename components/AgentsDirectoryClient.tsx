@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import AgentCard from "@/components/AgentCard";
 import AgentComparison from "@/components/AgentComparison";
@@ -19,12 +20,38 @@ const GITHUB_ISSUE_URL = "https://github.com/smfworks/smfworks-site/issues/new";
 const MAX_COMPARE = 3;
 
 export default function AgentsDirectoryClient({ agents, categories, runtimes, pricings, platforms }: Props) {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const initialCompare = searchParams.get("compare");
+  const initialSelected = new Set(
+    initialCompare
+      ? initialCompare
+          .split(",")
+          .map((s) => s.trim())
+          .filter((s) => agents.some((a) => a.id === s))
+      : []
+  );
+
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
   const [runtime, setRuntime] = useState("All");
   const [pricing, setPricing] = useState("All");
-  const [selected, setSelected] = useState<Set<string>>(new Set());
-  const [compareOpen, setCompareOpen] = useState(false);
+  const [selected, setSelected] = useState<Set<string>>(initialSelected);
+  const [compareOpen, setCompareOpen] = useState(initialSelected.size > 0);
+
+  useEffect(() => {
+    const ids = Array.from(selected).join(",");
+    const params = new URLSearchParams(searchParams.toString());
+    if (ids) {
+      params.set("compare", ids);
+    } else {
+      params.delete("compare");
+    }
+    const url = ids ? `${pathname}?${params.toString()}` : pathname;
+    router.replace(url, { scroll: false });
+  }, [selected, pathname, router, searchParams]);
 
   const filtered = agents.filter((agent) => {
     const q = search.toLowerCase();

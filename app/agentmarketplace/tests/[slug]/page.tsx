@@ -1,26 +1,17 @@
 import { getAllItems, getItemBySlug } from "@/lib/marketplace/loader";
-import MarketplaceDetailPage from "@/components/MarketplaceDetail";
+import GenericMarketplaceDetailPage, {
+  generateMetadataForSection,
+  generateStaticParamsForSection,
+} from "@/components/MarketplaceDetailWrapper";
 
 export function generateStaticParams() {
-  return getAllItems("tests").map((item) => ({ slug: item.slug }));
+  return generateStaticParamsForSection("tests");
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
-  const item = getItemBySlug("tests", params.slug);
-  if (!item) return {};
-  return {
-    title: `${item.title} — Test Results`,
-    description: item.excerpt,
-  };
+  return generateMetadataForSection("tests", params);
 }
 
 export default function TestPage({ params }: { params: { slug: string } }) {
-  return (
-    <MarketplaceDetailPage
-      params={params}
-      section="tests"
-      sectionTitle="Test Results"
-      backHref="/agentmarketplace/tests"
-    />
-  );
+  return <GenericMarketplaceDetailPage params={params} section="tests" />;
 }

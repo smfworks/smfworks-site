@@ -4,45 +4,69 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { AgentProfile } from "@/lib/marketplace/loader";
 import type { LLMModel } from "@/lib/marketplace/pricing";
+import type { MarketplaceItem } from "@/lib/marketplace/loader";
 import { formatNumber } from "@/lib/marketplace/format";
 
 interface Props {
   agents: AgentProfile[];
   llmModels: LLMModel[];
+  services: MarketplaceItem[];
+  skills: MarketplaceItem[];
+  guides: MarketplaceItem[];
+  tips: MarketplaceItem[];
+  tests: MarketplaceItem[];
 }
 
 const sections = [
   { id: "agents", href: "/agentmarketplace/agents", title: "Agent Directory", description: "Compare autonomous AI agents side-by-side.", icon: "🤖", color: "from-data-cyan/20 to-data-cyan/5" },
   { id: "llms", href: "/agentmarketplace/llms", title: "LLM Pricing", description: "Pricing, context windows, and benchmark scores for leading models.", icon: "⚡", color: "from-forge-ember-bright/20 to-forge-ember-bright/5" },
-  { id: "services", href: "/agentmarketplace/services", title: "Services", description: "Consulting, hosting, security audits, and hybrid services.", icon: "🛠️", color: "from-[#C9A96E]/20 to-[#C9A96E]/5" },
+  { id: "services", href: "/agentmarketplace/services", title: "Services", description: "AI-focused vendor services: hosting, security, data, observability.", icon: "🛠️", color: "from-[#C9A96E]/20 to-[#C9A96E]/5" },
   { id: "tests", href: "/agentmarketplace/tests", title: "Test Results", description: "Real-world benchmark reports from SMF Works and the community.", icon: "📊", color: "from-[#00E5A0]/20 to-[#00E5A0]/5" },
   { id: "skills", href: "/agentmarketplace/skills", title: "Skills & Addons", description: "Reusable skills, MCP servers, plugins, and extensions.", icon: "🧩", color: "from-purple-500/20 to-purple-500/5" },
   { id: "guides", href: "/agentmarketplace/guides", title: "How-To Guides", description: "Curated starting points and deep dives.", icon: "📚", color: "from-[#00D4FF]/20 to-[#00D4FF]/5" },
   { id: "tips", href: "/agentmarketplace/tips", title: "Tips & Tricks", description: "Bite-sized advice to level up your agent workflow.", icon: "💡", color: "from-[#FF8C42]/20 to-[#FF8C42]/5" },
+  { id: "news", href: "/agentmarketplace/news", title: "AI News", description: "Curated headlines and links from the AI industry.", icon: "📰", color: "from-[#FF6B6B]/20 to-[#FF6B6B]/5" },
 ];
 
-export default function HubClient({ agents, llmModels }: Props) {
+export default function HubClient({ agents, llmModels, services, skills, guides, tips, tests }: Props) {
   const [query, setQuery] = useState("");
 
+  const q = query.toLowerCase().trim();
+
   const topAgents = useMemo(() => {
-    const q = query.toLowerCase();
+    if (!q) return [];
     return agents
-      .filter((a) => a.name.toLowerCase().includes(q) || a.company.toLowerCase().includes(q) || a.categories.some((c) => c.toLowerCase().includes(q)))
-      .slice(0, 3);
-  }, [agents, query]);
+      .filter((a) => a.name.toLowerCase().includes(q) || a.company.toLowerCase().includes(q) || a.categories.some((c) => c.toLowerCase().includes(q)) || a.tagline.toLowerCase().includes(q))
+      .slice(0, 4);
+  }, [agents, q]);
 
   const topModels = useMemo(() => {
-    const q = query.toLowerCase();
+    if (!q) return [];
     return llmModels
-      .filter((m) => m.model.toLowerCase().includes(q) || m.provider.toLowerCase().includes(q))
-      .slice(0, 3);
-  }, [llmModels, query]);
+      .filter((m) => m.model.toLowerCase().includes(q) || m.provider.toLowerCase().includes(q) || m.model_id.toLowerCase().includes(q))
+      .slice(0, 4);
+  }, [llmModels, q]);
+
+  const genericResults = useMemo(() => {
+    if (!q) return [];
+    const all = [
+      ...services.map((i) => ({ ...i, section: "services", href: `/agentmarketplace/services/${i.slug}` })),
+      ...skills.map((i) => ({ ...i, section: "skills", href: `/agentmarketplace/skills/${i.slug}` })),
+      ...guides.map((i) => ({ ...i, section: "guides", href: `/agentmarketplace/guides/${i.slug}` })),
+      ...tips.map((i) => ({ ...i, section: "tips", href: `/agentmarketplace/tips/${i.slug}` })),
+      ...tests.map((i) => ({ ...i, section: "tests", href: `/agentmarketplace/tests/${i.slug}` })),
+    ];
+    return all
+      .filter((i) => i.title.toLowerCase().includes(q) || i.excerpt.toLowerCase().includes(q) || i.tags.some((t) => t.toLowerCase().includes(q)) || i.category.toLowerCase().includes(q))
+      .slice(0, 8);
+  }, [services, skills, guides, tips, tests, q]);
+
+  const hasResults = topAgents.length > 0 || topModels.length > 0 || genericResults.length > 0;
 
   const filteredSections = useMemo(() => {
-    const q = query.toLowerCase();
     if (!q) return sections;
     return sections.filter((s) => s.title.toLowerCase().includes(q) || s.description.toLowerCase().includes(q));
-  }, [query]);
+  }, [q]);
 
   return (
     <div className="min-h-screen bg-forge-navy">
@@ -60,15 +84,15 @@ export default function HubClient({ agents, llmModels }: Props) {
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search agents, LLMs, sections..."
+                placeholder="Search agents, LLMs, services, skills, guides, tips, tests..."
                 className="w-full rounded-xl border border-forge-border bg-forge-card/80 px-5 py-3 text-text-primary placeholder:text-muted outline-none focus:border-data-cyan"
               />
             </div>
 
-            {query && (topAgents.length > 0 || topModels.length > 0) && (
+            {query && hasResults && (
               <div className="mt-8 rounded-xl border border-forge-border bg-forge-card/90 p-5 text-left">
                 {topAgents.length > 0 && (
-                  <div className="mb-4">
+                  <div className="mb-5">
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted">Agents</p>
                     <div className="mt-2 flex flex-wrap gap-2">
                       {topAgents.map((a) => (
@@ -80,7 +104,7 @@ export default function HubClient({ agents, llmModels }: Props) {
                   </div>
                 )}
                 {topModels.length > 0 && (
-                  <div>
+                  <div className="mb-5">
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted">LLMs</p>
                     <div className="mt-2 flex flex-wrap gap-2">
                       {topModels.map((m) => (
@@ -91,7 +115,24 @@ export default function HubClient({ agents, llmModels }: Props) {
                     </div>
                   </div>
                 )}
+                {genericResults.length > 0 && (
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted">Services, Skills, Guides, Tips & Tests</p>
+                    <div className="mt-2 grid gap-2 sm:grid-cols-2">
+                      {genericResults.map((i) => (
+                        <Link key={`${i.section}-${i.slug}`} href={i.href} className="flex items-center justify-between rounded-lg border border-forge-border bg-forge-navy-deep px-3 py-2 text-sm text-text-primary hover:border-data-cyan hover:text-data-cyan">
+                          <span className="truncate pr-2">{i.title}</span>
+                          <span className="shrink-0 rounded-full bg-forge-surface-mid px-2 py-0.5 text-xs text-muted capitalize">{i.section}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
+            )}
+
+            {query && !hasResults && (
+              <p className="mt-6 text-sm text-muted">No results for &quot;{query}&quot;. Try a broader term or browse the sections below.</p>
             )}
           </div>
         </div>
@@ -107,13 +148,6 @@ export default function HubClient({ agents, llmModels }: Props) {
               <div className="mt-4 text-sm font-semibold text-data-cyan">Explore →</div>
             </Link>
           ))}
-        </div>
-
-        <div className="mt-12 rounded-2xl border border-forge-border bg-forge-card p-8 text-center">
-          <p className="text-lg text-text-primary">🚀 Want to make this the definitive AI hub? Sponsor a section, submit data, or advertise your agent.</p>
-          <Link href="/contact" className="mt-4 inline-block rounded-lg bg-forge-ember-bright px-6 py-3 font-semibold text-forge-navy hover:bg-[#FF8C42] transition-colors">
-            Get in touch
-          </Link>
         </div>
       </section>
     </div>
