@@ -26,6 +26,7 @@ export default function AgentMarketplaceHub() {
   const guides = getAllItems("guides");
   const tips = getAllItems("tips");
   const tests = getAllItems("tests");
+  const selfHosting = getAllItems("self-hosting");
 
   return (
     <HubClient
@@ -36,6 +37,7 @@ export default function AgentMarketplaceHub() {
       guides={guides}
       tips={tips}
       tests={tests}
+      selfHosting={selfHosting}
     />
   );
 }

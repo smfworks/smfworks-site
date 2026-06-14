@@ -8,6 +8,7 @@ const sectionNames: Record<string, string> = {
   guides: "How-To Guides",
   tips: "Tips & Tricks",
   tests: "Test Results",
+  "self-hosting": "Self-Hosting",
 };
 
 const sectionPaths: Record<string, string> = {
@@ -16,6 +17,7 @@ const sectionPaths: Record<string, string> = {
   guides: "/agentmarketplace/guides",
   tips: "/agentmarketplace/tips",
   tests: "/agentmarketplace/tests",
+  "self-hosting": "/agentmarketplace/self-hosting",
 };
 
 interface PageProps {

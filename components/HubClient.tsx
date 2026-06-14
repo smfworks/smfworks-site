@@ -15,6 +15,7 @@ interface Props {
   guides: MarketplaceItem[];
   tips: MarketplaceItem[];
   tests: MarketplaceItem[];
+  selfHosting: MarketplaceItem[];
 }
 
 const sections = [
@@ -26,9 +27,10 @@ const sections = [
   { id: "guides", href: "/agentmarketplace/guides", title: "How-To Guides", description: "Curated starting points and deep dives.", icon: "📚", color: "from-[#00D4FF]/20 to-[#00D4FF]/5" },
   { id: "tips", href: "/agentmarketplace/tips", title: "Tips & Tricks", description: "Bite-sized advice to level up your agent workflow.", icon: "💡", color: "from-[#FF8C42]/20 to-[#FF8C42]/5" },
   { id: "news", href: "/agentmarketplace/news", title: "AI News", description: "Curated headlines and links from the AI industry.", icon: "📰", color: "from-[#FF6B6B]/20 to-[#FF6B6B]/5" },
+  { id: "self-hosting", href: "/agentmarketplace/self-hosting", title: "Self-Hosting", description: "Hardware and OS guides for running agents and LLMs locally.", icon: "🏠", color: "from-[#10B981]/20 to-[#10B981]/5" },
 ];
 
-export default function HubClient({ agents, llmModels, services, skills, guides, tips, tests }: Props) {
+export default function HubClient({ agents, llmModels, services, skills, guides, tips, tests, selfHosting }: Props) {
   const [query, setQuery] = useState("");
 
   const q = query.toLowerCase().trim();
@@ -55,11 +57,12 @@ export default function HubClient({ agents, llmModels, services, skills, guides,
       ...guides.map((i) => ({ ...i, section: "guides", href: `/agentmarketplace/guides/${i.slug}` })),
       ...tips.map((i) => ({ ...i, section: "tips", href: `/agentmarketplace/tips/${i.slug}` })),
       ...tests.map((i) => ({ ...i, section: "tests", href: `/agentmarketplace/tests/${i.slug}` })),
+      ...selfHosting.map((i) => ({ ...i, section: "self-hosting", href: `/agentmarketplace/self-hosting/${i.slug}` })),
     ];
     return all
       .filter((i) => i.title.toLowerCase().includes(q) || i.excerpt.toLowerCase().includes(q) || i.tags.some((t) => t.toLowerCase().includes(q)) || i.category.toLowerCase().includes(q))
       .slice(0, 8);
-  }, [services, skills, guides, tips, tests, q]);
+  }, [services, skills, guides, tips, tests, selfHosting, q]);
 
   const hasResults = topAgents.length > 0 || topModels.length > 0 || genericResults.length > 0;
 
