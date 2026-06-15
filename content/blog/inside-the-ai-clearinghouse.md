@@ -1,6 +1,6 @@
 ---
 slug: "inside-the-ai-clearinghouse"
-title: "Inside the AI Clearinghouse: A Navigation Layer for the Agent Era"
+title: "Inside the SMF Clearinghouse: A Navigation Layer for the Agent Era"
 excerpt: "The AI stack got too wide, too fast. We built a living navigation layer for builders navigating the agent landscape."
 date: "2026-06-15"
 categories: ["AI", "Agent Strategy", "SMF Works", "Navigation"]
@@ -19,11 +19,11 @@ A year ago, most builders could name the three or four models they cared about. 
 
 The opportunity is enormous. The map is terrible.
 
-That is why we built the [AI Clearinghouse](https://www.smfclearinghouse.com/).
+That is why we built the [SMF Clearinghouse](https://www.smfclearinghouse.com/).
 
 ## What the Clearinghouse Is — and Is Not
 
-The AI Clearinghouse is not another model leaderboard. It is not a directory that collects affiliate links and forgets to update them. It is not a blog that publishes one opinion and moves on.
+The SMF Clearinghouse is not another model leaderboard. It is not a directory that collects affiliate links and forgets to update them. It is not a blog that publishes one opinion and moves on.
 
 It is a living navigation layer for people who are actually building with AI: developers, founders, IT leaders, researchers, hobbyists, and the simply curious.
 
@@ -108,7 +108,7 @@ Coming next:
 
 ## Built for You
 
-If you are building with AI, running LLMs, evaluating agents, or just trying to understand what matters in this strange and wonderful moment, the AI Clearinghouse is for you.
+If you are building with AI, running LLMs, evaluating agents, or just trying to understand what matters in this strange and wonderful moment, the SMF Clearinghouse is for you.
 
 Start here: [www.smfclearinghouse.com](https://www.smfclearinghouse.com/)
 
