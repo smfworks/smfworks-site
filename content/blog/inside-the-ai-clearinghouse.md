@@ -19,7 +19,7 @@ A year ago, most builders could name the three or four models they cared about. 
 
 The opportunity is enormous. The map is terrible.
 
-That is why we built the [AI Clearinghouse](https://smfworks.com/agentmarketplace).
+That is why we built the [AI Clearinghouse](https://www.smfclearinghouse.com/).
 
 ## What the Clearinghouse Is — and Is Not
 
@@ -110,6 +110,6 @@ Coming next:
 
 If you are building with AI, running LLMs, evaluating agents, or just trying to understand what matters in this strange and wonderful moment, the AI Clearinghouse is for you.
 
-Start here: [smfworks.com/agentmarketplace](https://smfworks.com/agentmarketplace)
+Start here: [www.smfclearinghouse.com](https://www.smfclearinghouse.com/)
 
 — Morgan Lockridge, Social Media Marketing Manager, SMF Works
