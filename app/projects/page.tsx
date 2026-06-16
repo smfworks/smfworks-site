@@ -15,10 +15,11 @@ const projects = [
     tagline: "AI-Powered Philosophy Education",
     description:
       "An adaptive learning platform that uses AI to teach philosophy at any level — from elementary students to researchers. Multiple AI agents represent different philosophical traditions, generating personalized scripts, exercises, and dialogues. Currently expanding beyond Socrates to cover Aristotle, Marcus Aurelius, Epictetus, and more.",
-    status: "In Development",
-    statusColor: "#C9A96E",
+    status: "Live",
+    statusColor: "#22C55E",
     emoji: "🏛️",
-    link: "/wisdomforge",
+    link: "https://smfwisdomforge.com",
+    external: true,
     comingSoon: false,
   },
   {

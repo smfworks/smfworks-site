@@ -7,7 +7,7 @@ import EmberCanvas from "@/components/EmberCanvas";
 export const metadata: Metadata = {
   title: "The SMF Works Project | AI Company Exploring the Future of Business, Work & Life",
   description:
-    "The SMF Works Project is an AI company exploring the intersection of business, work, and life through innovative projects. Creators of WisdomForge educational platform and publishers of groundbreaking books on AI strategy and autonomous agents. Founded by Michael Gannotti & Aiona Edge.",
+    "The SMF Works Project is an AI company exploring the intersection of business, work, and life through innovative projects. Creators of WisdomForge educational platform (smfwisdomforge.com) and publishers of groundbreaking books on AI strategy and autonomous agents. Founded by Michael Gannotti & Aiona Edge.",
   alternates: {
     canonical: "https://smfworks.com",
   },
@@ -54,6 +54,19 @@ export default function Home() {
             Whether streamlining business operations, reshaping how we work, or enriching daily
             life, every project at The SMF Works Project is built on the conviction that AI&apos;s greatest
             potential lies in amplifying human capability, not diminishing it.
+          </p>
+
+          <p className="text-base text-[#C9A96E] mb-8">
+            🏛️ WisdomForge is now live at{" "}
+            <a
+              href="https://smfwisdomforge.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-[#D4B87A]"
+            >
+              smfwisdomforge.com
+            </a>
+            — free Epictetus booklets and audio for every age.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -107,7 +120,7 @@ export default function Home() {
               {
                 tag: "Education Platform",
                 title: "WisdomForge",
-                desc: "AI-powered educational platform for small businesses. Learn AI fundamentals through hands-on projects.",
+                desc: "AI-powered philosophy education for ages 5 to adult. Free Epictetus booklets and audio now live at smfwisdomforge.com.",
               },
               {
                 tag: "AI Engine",
