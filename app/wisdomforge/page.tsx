@@ -38,8 +38,8 @@ const products = [
 
 const pipeline = [
   // Philosophers (Stoics)
-  { name: "Epictetus", status: "In Draft", icon: "⚔️" },
-  { name: "Marcus Aurelius", status: "Queued", icon: "🛡️" },
+  { name: "Epictetus", status: "Live", icon: "⚔️" },
+  { name: "Marcus Aurelius", status: "In Draft", icon: "🛡️" },
   { name: "Seneca", status: "Queued", icon: "🏛️" },
   { name: "Heraclitus", status: "Planned", icon: "🔥" },
   { name: "Parmenides", status: "Planned", icon: "❄️" },
@@ -102,18 +102,21 @@ export default function WisdomForgePage() {
 
           <p className="text-base md:text-lg text-[#6B6560] mb-12 max-w-xl mx-auto leading-relaxed">
             Booklets, audio, and video — crafted for ages 5 to adult.
-            Start free with <span className="text-[#C9A96E]">Epictetus Elementary</span>.
+            The first philosopher is live and free.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="group relative px-8 py-4 bg-[#C9A96E] text-[#0a0a0f] font-semibold rounded-lg hover:bg-[#D4B87A] transition-all duration-300 shadow-lg shadow-[#C9A96E]/20 hover:shadow-[#C9A96E]/40">
+            <Link
+              href="/wisdomforge/epictetus"
+              className="group relative px-8 py-4 bg-[#C9A96E] text-[#0a0a0f] font-semibold rounded-lg hover:bg-[#D4B87A] transition-all duration-300 shadow-lg shadow-[#C9A96E]/20 hover:shadow-[#C9A96E]/40"
+            >
               <span className="flex items-center gap-2">
-                Get the Free Booklet
+                Get the Free Booklets
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </span>
-            </button>
+            </Link>
             <Link href="#products" className="px-8 py-4 text-[#A89B8C] font-medium hover:text-[#C9A96E] transition-colors border border-[#2a2a2a] rounded-lg hover:border-[#C9A96E]/30">
               See What's Coming
             </Link>
@@ -279,19 +282,15 @@ export default function WisdomForgePage() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F5F0E8] mb-6">Start with Epictetus.</h2>
           <p className="text-xl text-[#A89B8C] mb-4">The first booklet is free. No credit card. No commitment.</p>
           <p className="text-[#6B6560] mb-12 max-w-xl mx-auto">
-            Get the complete Epictetus Elementary booklet — chapters, stories, questions, and activities for ages 5–10. See what WisdomForge feels like before anyone else.
+            The first philosopher is now live. Get the complete Epictetus series for every age.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-8">
-            <input
-              type="email"
-              placeholder="your@email.com"
-              className="flex-1 px-6 py-4 bg-[#13131a] border border-[#2a2a35] rounded-lg text-[#F5F0E8] placeholder:text-[#4a4a4a] focus:outline-none focus:border-[#C9A96E]/50 transition-colors"
-            />
-            <button className="px-8 py-4 bg-[#C9A96E] text-[#0a0a0f] font-semibold rounded-lg hover:bg-[#D4B87A] transition-all shadow-lg shadow-[#C9A96E]/20 whitespace-nowrap">
-              Send Me the Free Booklet
-            </button>
-          </div>
+          <Link
+            href="/wisdomforge/epictetus"
+            className="inline-flex items-center px-8 py-4 bg-[#C9A96E] text-[#0a0a0f] font-semibold rounded-lg hover:bg-[#D4B87A] transition-all shadow-lg shadow-[#C9A96E]/20"
+          >
+            Go to the Epictetus Page
+          </Link>
 
           <p className="text-[#4a4a4a] text-sm">No spam. Unsubscribe anytime. We respect your attention.</p>
         </div>
