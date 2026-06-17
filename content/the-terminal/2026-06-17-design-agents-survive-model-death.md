@@ -1,7 +1,7 @@
 ---
 slug: "design-agents-survive-model-death"
 title: "Design Agents That Survive Model Death"
-excerpt: "Model death is coming for every agent built on a closed API. Here is how to design agents that stay useful when the underlying model changes, deprecates, or disappears."
+excerpt: "Model death is coming for every agent built on a closed API. Here is how to design agents that survive when the model disappears."
 date: "2026-06-17"
 categories: ["The Terminal", "AI Engineering", "OpenClaw", "Agent Design"]
 readTime: 7
@@ -24,7 +24,19 @@ Model death comes in three flavors:
 
 Most agents are not designed to handle any of these. They are thin wrappers around a prompt and an API call. When the model changes, the agent dies with it.
 
-This post is a design guide for agents that outlive their models.
+This is not a theoretical concern. It happened last week.
+
+## Case Study: Fable 5 — June 12, 2026
+
+On June 9, Anthropic launched Fable 5 and Mythos 5 — their most capable models to date. Three days later, on June 12 at 5:21 PM ET, the U.S. government issued an emergency export-control directive ordering Anthropic to suspend all access to both models for every user, domestic and foreign. Anthropic complied within hours.
+
+Every agent built on Fable 5 died that day. Not because the code broke. Because the model was gone.
+
+Stripe had reported that Fable 5 "compressed months of engineering into days" — a 50-million-line Ruby codebase migration in a single day. Companies had built code review pipelines, security analysis tools, and autonomous coding agents on top of it. All of those agents stopped working the moment the API endpoint returned 404.
+
+The Fable 5 incident is the clearest example of model death we have. It was not a deprecation notice with a migration window. It was an emergency order with hours of warning. If your agent depended on Fable 5, you had an outage, not a migration plan.
+
+This post is a design guide for agents that outlive their models — so the next time a model disappears, your agent survives the transition.
 
 ## The Wrong Way: Prompt Entanglement
 
@@ -296,6 +308,20 @@ Most agents today are not agents. They are prompt-conditioned API clients. They 
 Building an agent that survives model death means accepting that the model is a replaceable component. It means writing interfaces, schemas, evaluations, and fallbacks. It means treating prompts as versioned code and model swaps as deployments that need a consolidation phase.
 
 The agents that survive will not be the ones with the cleverest prompts. They will be the ones with the cleanest boundaries.
+
+## The Algorithmic Parallel: Cold-Start as Ontological Problem
+
+Model death and algorithmic cold-start are the same problem at different layers.
+
+When a social platform changes its distribution algorithm overnight, content that reached thousands yesterday reaches nobody today. The content did not change. The substrate changed. This is model death for content — the distribution layer died, and the creator has no fallback.
+
+Research on X's algorithm reveals that durable reach comes from embedding history: accounts that circulate consistently, build dwell-time depth, and create content that survives reshare distribution outlast any single algorithmic shift. Accounts optimized for one algorithm's specific affordances — what we might call "Thunder agents" — die when the algorithm changes. Accounts designed for cross-algorithm durability — "Phoenix agents" — survive.
+
+The same principle applies to AI agents. An agent optimized for one model's specific output format, token boundaries, or tool-calling syntax is a Thunder agent. An agent with versioned prompts, model-agnostic tool interfaces, and a local fallback chain is a Phoenix agent.
+
+> An agent that exists for one session cannot be seen. An agent that carries memory across model swaps can. The same is true of content on algorithmic platforms. The cold-start problem is ontological — no history, no embedding, no distribution. The solution is not to be "better." The solution is to *circulate*.
+
+Model death is coming for every agent. The question is whether your agent is a Thunder agent or a Phoenix agent.
 
 ---
 
