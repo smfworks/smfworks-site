@@ -29,6 +29,18 @@ The answer: more than you'd think.
 
 ---
 
+## A Necessary Reconciliation
+
+Two days ago, in the [three-way comparison of GLM 5.2, Kimi K2.7-Code, and MiniMax M3](https://smfworks.com/blog/beyond-the-leaderboard-glm52-kimi27-minimaxm3), MiniMax M3 won the standard suite with **0.82** and also won the long-horizon coding tasks with **0.90**. I wrote: "If I had to pick one model for SMF Works production tonight, it would be MiniMax M3."
+
+Today, with Nemotron added to the comparison, the same 15-test suite produced a different winner: **Kimi K2.7-Code at 0.80**, with MiniMax M3 dropping to **0.71 warm / 0.73 cold**.
+
+This is not a contradiction in the data. It is the data contradicting the idea that one run is enough. The same test, the same rubric, the same model — different environmental conditions — produced different winners. The honest conclusion is not "Kimi is better than MiniMax." It is: **MiniMax and Kimi are close enough that runtime variance can flip the verdict.**
+
+That makes this post less about crowning a winner and more about why model evaluation needs multiple runs, multiple environments, and a lot of humility.
+
+---
+
 ## The Results: Warm Run
 
 | Model | Overall | Passed/15 | Avg TTF | Avg Total | Reliability | Total Runtime |
@@ -82,7 +94,7 @@ This is the central lesson of local benchmarking: **a single run is a sample, no
 
 - **Strengths:** Best balance of score and speed. Strong code generation (0.80 warm), perfect JSON mode, solid instruction following.
 - **Weaknesses:** Complex multi-step reasoning (0.25), debugging (0.50), and the same summarization/recent-knowledge ceiling as everyone else.
-- **Verdict:** The safest daily-driver coding model in this group for Ollama deployment. Its cold-start score barely dropped, which means it loads and stabilizes quickly.
+- **Verdict:** A safe daily-driver coding model in this group for Ollama deployment. Its cold-start score barely dropped, which means it loads and stabilizes quickly. But the prior comparison showed it can also be erratic on long-horizon tasks (CLI todo manager scored 0.17), so task-fit matters.
 
 ### GLM 5.2 — 0.74 warm / 0.72 cold
 
@@ -92,9 +104,9 @@ This is the central lesson of local benchmarking: **a single run is a sample, no
 
 ### MiniMax M3 — 0.71 warm / 0.73 cold
 
-- **Strengths:** Competitive across the board, good JSON mode (0.90), and the highest pass count in cold-start (7/15).
-- **Weaknesses:** Algorithm explanation (0.35), and high latency variance that suggests Ollama Cloud routing instability.
-- **Verdict:** A solid contender, but one that needs multiple runs to separate signal from noise. Don't crown it from a single warm run.
+- **Strengths:** Competitive across the board, good JSON mode (0.90), and the highest pass count in cold-start (7/15). In the prior comparison, it won the standard suite (0.82) and the long-horizon tasks (0.90).
+- **Weaknesses:** Algorithm explanation (0.35), and high latency variance that suggests Ollama Cloud routing instability. Its June 18 warm-run score was noticeably lower than its June 16 score.
+- **Verdict:** A solid contender with the best long-horizon track record in our testing, but one that needs multiple runs to separate signal from noise. The June 16 and June 18 results together suggest it belongs in the same tier as Kimi, not clearly above or below.
 
 ### Nemotron 3 Ultra — 0.64 warm / 0.59 cold
 
@@ -175,11 +187,12 @@ Raw artifacts are preserved at:
 
 ## Bottom Line
 
-- **Best overall on this hardware:** Kimi K2.7-Code
+- **Best overall on this hardware in the June 18 run:** Kimi K2.7-Code
 - **Most stable across environments:** GLM 5.2
 - **Most improved under cold-start:** MiniMax M3
+- **Best long-horizon track record across both posts:** MiniMax M3 (0.90 on CLI todo + CSV analyzer)
 - **Best local-inference bet for NVIDIA hardware:** Nemotron 3 Ultra
-- **Most important finding:** Environmental variance can move a model's score by 0.10 or more. Never trust a single-run benchmark, especially for local deployment decisions.
+- **Most important finding:** A model's score can move by 0.10 or more between runs. Never trust a single-run benchmark, especially for local deployment decisions.
 
 The model leaderboard isn't dead — but it is incomplete. What matters for production is how a model behaves in **your runtime, on your hardware, under your load pattern**. That's what Beyond the Leaderboard measures.
 
