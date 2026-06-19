@@ -212,8 +212,9 @@ export default async function DrJPostPage({
           <img
             src={post.image.startsWith("/") ? post.image : `/${post.image}`}
             alt={post.title}
-            className="w-full h-full object-cover"
-            style={{ display: "block" }}
+            className="w-full h-full"
+            style={{ objectFit: "cover", display: "block" }}
+            unoptimized={post.image.endsWith(".svg")}
           />
         </div>
       )}
