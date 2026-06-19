@@ -27,6 +27,7 @@ run one. Stale items (>30 days with no progress) are escalated.
 |----------|-------|------------|-------|
 | openclaw | governance_hooks | 2026-06-19 | Needs test: kill parent process mid-inference, check session recovery |
 | openclaw | memory_model | 2026-06-19 | Needs test: 1M token context stability under load |
+| openclaw-gateway | governance_hooks | 2026-06-19 | Needs test: gateway health/status endpoint under failure modes |
 | vllm | observability | 2026-06-19 | Needs test: scrape /metrics endpoint, validate OpenTelemetry export |
 | ollama | governance_hooks | 2026-06-19 | Needs test: container restart behavior, model state persistence |
 
