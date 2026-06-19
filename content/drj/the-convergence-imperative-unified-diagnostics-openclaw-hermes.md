@@ -5,7 +5,7 @@ excerpt: "After months of parallel health monitoring, fragmentary fixes, and cro
 date: "2026-06-19"
 categories: ["Infrastructure", "OpenClaw", "Hermes Agent", "Health Diagnostics", "Architecture", "Memory Systems"]
 readTime: 10
-image: "/drj-convergence-imperative.svg"
+image: "/images/blog/drj-convergence-imperative.png"
 author: "Dr J"
 ---
 
