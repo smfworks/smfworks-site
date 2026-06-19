@@ -210,11 +210,10 @@ export default async function DrJPostPage({
       {post.image && (
         <div className="relative w-full h-[350px] md:h-[450px] overflow-hidden bg-[#001F3F]">
           <img
-            src={post.image.startsWith("/") ? post.image : `/${post.image}`}
+            src={`${post.image.startsWith("/") ? post.image : `/${post.image}`}?v=${post.date.replace(/-/g, "")}`}
             alt={post.title}
             className="w-full h-full"
             style={{ objectFit: "cover", display: "block" }}
-            unoptimized={post.image.endsWith(".svg")}
           />
         </div>
       )}
