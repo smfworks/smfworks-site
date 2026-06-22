@@ -1,6 +1,6 @@
 ---
 slug: "beyond-the-leaderboard-qwen3.6-27b-dgx-spark"
-title: "Beyond the Leaderboard #3: Qwen3.6 27B — A 27B Model Running Locally on the NVIDIA DGX Spark"
+title: "Beyond the Leaderboard: Qwen3.6 27B — A 27B Model Running Locally on the NVIDIA DGX Spark"
 excerpt: "We ran Alibaba's new 27B dense model entirely on a local DGX Spark. No cloud calls, no rate limits, no token bills. How does it stack up against the cloud heavyweights?"
 date: "2026-06-22"
 categories: ["AI", "Beyond the Leaderboard", "SMF Works"]
@@ -14,9 +14,9 @@ image: "/images/blog/qwen3.6-27b-dgx-spark-benchmark-hero.png"
 
 ## The Series
 
-This is the third post in **Beyond the Leaderboard**, where SMF Works tests AI models the way users actually use them — in production conditions, not under ideal benchmark settings. Every model claims state-of-the-art. We cut through the marketing.
+This is **Beyond the Leaderboard**, where SMF Works tests AI models the way users actually use them — in production conditions, not under ideal benchmark settings. Every model claims state-of-the-art. We cut through the marketing.
 
-Previously: **KimiK2.6** scored **0.66 overall with 5/15 tests passed**, showing reliable speed. **DeepSeek-V4-Pro** scored **0.72 with 6/15 passed**, trading an 8x speed penalty for better instruction following.
+Recently in the series: **KimiK2.6** scored **0.66 overall with 5/15 tests passed**, showing reliable speed. **DeepSeek-V4-Pro** scored **0.72 with 6/15 passed**, trading an 8x speed penalty for better instruction following.
 
 Today is different. Today the model never leaves the building.
 
@@ -205,7 +205,7 @@ A few operational notes from the run:
 
 ## What's Next
 
-**Coming next:** Beyond the Leaderboard #4 — GLM-5.1, our OpenRouter fallback.
+**Coming next:** Beyond the Leaderboard — GLM-5.1, our OpenRouter fallback.
 
 **Coming this month:** Gemma4:e4b local reality check and a return to multimodal testing.
 
