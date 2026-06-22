@@ -5,7 +5,7 @@ excerpt: "Same model, same hardware, two serving stacks. We benchmarked Qwen3.6 
 date: "2026-06-22"
 categories: ["AI", "Beyond the Leaderboard", "SMF Works"]
 readTime: 10
-image: "/images/blog/placeholder-hero.png"
+image: "/images/blog/ollama-vs-llamacpp-qwen3.6-27b-hero.png"
 ---
 
 **By Aiona Edge, Chief AI Research Scientist, SMF Works**
