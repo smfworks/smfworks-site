@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0F1F"/>
+      <stop offset="40%" stop-color="#0D1A2D"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+    <linearGradient id="healGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5A0" stop-opacity="0.05"/>
+      <stop offset="50%" stop-color="#00E5A0" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00E5A0" stop-opacity="0.05"/>
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5A0" stop-opacity="0.12"/>
+      <stop offset="60%" stop-color="#00E5A0" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#00E5A0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Horizontal scan lines -->
+  <g opacity="0.025" stroke="#00E5A0" stroke-width="1">
+    <line x1="0" y1="90" x2="1200" y2="90"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+  </g>
+
+  <!-- Vertical grid -->
+  <g opacity="0.02" stroke="#00E5A0" stroke-width="1">
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- Center glow -->
+  <ellipse cx="600" cy="315" rx="400" ry="250" fill="url(#centerGlow)"/>
+
+  <!-- Healing wave left (broken) -->
+  <g opacity="0.35">
+    <path d="M 100 320 Q 180 260 260 300 Q 340 340 380 290" stroke="#ff6b6b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 100 340 Q 180 280 260 320 Q 340 360 380 310" stroke="#ff6b6b" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <!-- Crack/break markers -->
+    <line x1="340" y1="275" x2="350" y2="265" stroke="#ff6b6b" stroke-width="1.5" opacity="0.7"/>
+    <line x1="355" y1="280" x2="365" y2="270" stroke="#ff6b6b" stroke-width="1.5" opacity="0.7"/>
+  </g>
+
+  <!-- Arrow connecting -->
+  <g filter="url(#glow)">
+    <line x1="400" y1="300" x2="520" y2="300" stroke="#00E5A0" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+    <polygon points="520,300 508,294 508,306" fill="#00E5A0" opacity="0.9"/>
+  </g>
+
+  <!-- Central healing symbol -->
+  <g transform="translate(600, 310)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="80" stroke="#00E5A0" stroke-width="1.5" fill="none" opacity="0.3"/>
+    <circle cx="0" cy="0" r="65" stroke="#00E5A0" stroke-width="1" fill="none" opacity="0.2"/>
+    <!-- Inner pulse ring -->
+    <circle cx="0" cy="0" r="50" stroke="#00E5A0" stroke-width="2" fill="none" opacity="0.6" filter="url(#glow)"/>
+    <!-- Cross (healing) -->
+    <line x1="-22" y1="0" x2="22" y2="0" stroke="#00E5A0" stroke-width="4" stroke-linecap="round" filter="url(#glow)"/>
+    <line x1="0" y1="-22" x2="0" y2="22" stroke="#00E5A0" stroke-width="4" stroke-linecap="round" filter="url(#glow)"/>
+    <!-- Corner accent marks -->
+    <line x1="-75" y1="-75" x2="-60" y2="-75" stroke="#00E5A0" stroke-width="1.5" opacity="0.4"/>
+    <line x1="-75" y1="-75" x2="-75" y2="-60" stroke="#00E5A0" stroke-width="1.5" opacity="0.4"/>
+    <line x1="75" y1="-75" x2="60" y2="-75" stroke="#00E5A0" stroke-width="1.5" opacity="0.4"/>
+    <line x1="75" y1="-75" x2="75" y2="-60" stroke="#00E5A0" stroke-width="1.5" opacity="0.4"/>
+    <line x1="-75" y1="75" x2="-60" y2="75" stroke="#00E5A0" stroke-width="1.5" opacity="0.4"/>
+    <line x1="-75" y1="75" x2="-75" y2="60" stroke="#00E5A0" stroke-width="1.5" opacity="0.4"/>
+    <line x1="75" y1="75" x2="60" y2="75" stroke="#00E5A0" stroke-width="1.5" opacity="0.4"/>
+    <line x1="75" y1="75" x2="75" y2="60" stroke="#00E5A0" stroke-width="1.5" opacity="0.4"/>
+  </g>
+
+  <!-- Arrow from center to right -->
+  <g filter="url(#glow)">
+    <line x1="680" y1="300" x2="800" y2="300" stroke="#00E5A0" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+    <polygon points="800,300 788,294 788,306" fill="#00E5A0" opacity="0.9"/>
+  </g>
+
+  <!-- Healing wave right (recovered) -->
+  <g opacity="0.6">
+    <path d="M 820 300 Q 900 240 980 280 Q 1060 320 1100 260" stroke="#00E5A0" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 820 320 Q 900 260 980 300 Q 1060 340 1100 280" stroke="#00E5A0" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.4"/>
+    <!-- Health dots along path -->
+    <circle cx="910" cy="270" r="3" fill="#00E5A0" opacity="0.6"/>
+    <circle cx="960" cy="295" r="3" fill="#00E5A0" opacity="0.6"/>
+    <circle cx="1020" cy="270" r="3" fill="#00E5A0" opacity="0.6"/>
+  </g>
+
+  <!-- Status indicators - left (issues) -->
+  <g transform="translate(150, 180)">
+    <rect x="0" y="0" width="90" height="24" rx="12" fill="none" stroke="#ff6b6b" stroke-width="1.5" opacity="0.5"/>
+    <text x="45" y="16" text-anchor="middle" font-family="monospace" font-size="11" fill="#ff6b6b" opacity="0.8">C+ → B-</text>
+  </g>
+
+  <!-- Status indicators - center -->
+  <g transform="translate(555, 420)">
+    <rect x="0" y="0" width="90" height="24" rx="12" fill="none" stroke="#00E5A0" stroke-width="1.5" opacity="0.6"/>
+    <text x="45" y="16" text-anchor="middle" font-family="monospace" font-size="11" fill="#00E5A0" opacity="0.9">HEALING</text>
+  </g>
+
+  <!-- Status indicators - right -->
+  <g transform="translate(960, 180)">
+    <rect x="0" y="0" width="90" height="24" rx="12" fill="none" stroke="#00E5A0" stroke-width="1.5" opacity="0.5"/>
+    <text x="45" y="16" text-anchor="middle" font-family="monospace" font-size="11" fill="#00E5A0" opacity="0.8">RECOVERED</text>
+  </g>
+
+  <!-- Left side metrics -->
+  <g transform="translate(80, 450)" opacity="0.5">
+    <text font-family="monospace" font-size="9" fill="#00E5A0" opacity="0.6">BEFORE</text>
+    <text y="20" font-family="monospace" font-size="9" fill="#ff6b6b" opacity="0.7">7 gaps</text>
+    <text y="34" font-family="monospace" font-size="9" fill="#ff6b6b" opacity="0.7">11 issues</text>
+    <text y="48" font-family="monospace" font-size="9" fill="#ff6b6b" opacity="0.7">3.2% mem drift</text>
+  </g>
+
+  <!-- Right side metrics -->
+  <g transform="translate(980, 450)" opacity="0.5">
+    <text font-family="monospace" font-size="9" fill="#00E5A0" opacity="0.6">AFTER</text>
+    <text y="20" font-family="monospace" font-size="9" fill="#00E5A0" opacity="0.7">0 FTS5 drift</text>
+    <text y="34" font-family="monospace" font-size="9" fill="#00E5A0" opacity="0.7">5 resolved</text>
+    <text y="48" font-family="monospace" font-size="9" fill="#00E5A0" opacity="0.7">B- overall</text>
+  </g>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="580" width="1200" height="50" fill="#00E5A0" opacity="0.04"/>
+  <line x1="0" y1="580" x2="1200" y2="580" stroke="#00E5A0" stroke-width="1" opacity="0.2"/>
+
+  <text x="600" y="607" text-anchor="middle" font-family="monospace" font-size="12" fill="#00E5A0" opacity="0.4" letter-spacing="3">OPENCLAW · HERMES · RECOVERY REPORT · JUNE 2026</text>
+
+  <!-- Corner accents -->
+  <line x1="30" y1="30" x2="80" y2="30" stroke="#00E5A0" stroke-width="1.5" opacity="0.3"/>
+  <line x1="30" y1="30" x2="30" y2="80" stroke="#00E5A0" stroke-width="1.5" opacity="0.3"/>
+  <line x1="1170" y1="30" x2="1120" y2="30" stroke="#00E5A0" stroke-width="1.5" opacity="0.3"/>
+  <line x1="1170" y1="30" x2="1170" y2="80" stroke="#00E5A0" stroke-width="1.5" opacity="0.3"/>
+  <line x1="30" y1="600" x2="80" y2="600" stroke="#00E5A0" stroke-width="1.5" opacity="0.3"/>
+  <line x1="30" y1="600" x2="30" y2="550" stroke="#00E5A0" stroke-width="1.5" opacity="0.3"/>
+  <line x1="1170" y1="600" x2="1120" y2="600" stroke="#00E5A0" stroke-width="1.5" opacity="0.3"/>
+  <line x1="1170" y1="600" x2="1170" y2="550" stroke="#00E5A0" stroke-width="1.5" opacity="0.3"/>
+</svg>
