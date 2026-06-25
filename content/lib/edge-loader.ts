@@ -64,11 +64,7 @@ function parseFrontmatter(raw: string): Frontmatter {
   return result as Frontmatter;
 }
 
-function loadPost(slug: string): EdgePost | undefined {
-  const filePath = path.join(CONTENT_DIR, `${slug}.md`);
-  if (!fs.existsSync(filePath)) return undefined;
-
-  const raw = fs.readFileSync(filePath, "utf-8");
+function parsePost(raw: string): EdgePost | undefined {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
   if (!match) return undefined;
 
@@ -87,16 +83,19 @@ function loadPost(slug: string): EdgePost | undefined {
   };
 }
 
+function loadPostFile(filePath: string): EdgePost | undefined {
+  if (!fs.existsSync(filePath)) return undefined;
+  const raw = fs.readFileSync(filePath, "utf-8");
+  return parsePost(raw);
+}
+
 export function getAllEdgePosts(): EdgePost[] {
   if (!fs.existsSync(CONTENT_DIR)) return [];
 
-  const files = fs
-    .readdirSync(CONTENT_DIR)
-    .filter((f) => f.endsWith(".md"))
-    .map((f) => f.replace(/\.md$/, ""));
+  const files = fs.readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".md"));
 
   const posts = files
-    .map((slug) => loadPost(slug))
+    .map((file) => loadPostFile(path.join(CONTENT_DIR, file)))
     .filter((p): p is EdgePost => p !== undefined)
     .sort((a, b) => {
       // Sort by date descending
@@ -107,7 +106,8 @@ export function getAllEdgePosts(): EdgePost[] {
 }
 
 export function getEdgePostBySlug(slug: string): EdgePost | undefined {
-  return loadPost(slug);
+  const posts = getAllEdgePosts();
+  return posts.find((p) => p.slug === slug);
 }
 
 export function getAllEdgeCategories(): string[] {
