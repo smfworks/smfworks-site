@@ -63,7 +63,7 @@ export default function NewsletterArchivePage() {
                     className="bg-[#131B2E]/60 backdrop-blur-sm rounded-xl border border-[#1e2a45] p-6 md:p-8"
                   >
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="text-xs font-semibold text-[#00D4FF] bg-[#00D4FF]/10 px-2 py-1 rounded">
+                      <span className="text-xs font-semibold text-[#ea580c] bg-[#00D4FF]/10 px-2 py-1 rounded">
                         {story.category}
                       </span>
                       <span className="text-xs text-[#94A3B8]/60">
@@ -112,7 +112,7 @@ export default function NewsletterArchivePage() {
                       <div className="text-xs text-[#94A3B8]/60 mb-0.5">
                         Issue #{issue.issueNumber} · {issue.date}
                       </div>
-                      <div className="text-sm text-[#94A3B8] group-hover:text-[#00D4FF] transition-colors leading-snug">
+                      <div className="text-sm text-[#94A3B8] group-hover:text-[#ea580c] transition-colors leading-snug">
                         {issue.subject}
                       </div>
                     </Link>

@@ -238,7 +238,7 @@ export default function ProjectsPage() {
       <section className="bg-[#001F3F] text-[#E2E8F0] py-20 px-6 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-[500px] h-[300px] bg-[#00D4FF] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10 text-center">
-          <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-widest mb-3">What We're Building</p>
+          <p className="text-[#ea580c] text-sm font-semibold uppercase tracking-widest mb-3">What We're Building</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-5">Our Projects</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl mx-auto leading-relaxed">
             From AI education platforms to co-authored books to infrastructure tools — 
@@ -254,7 +254,7 @@ export default function ProjectsPage() {
             {projects.map((project) => (
               <div
                 key={project.slug}
-                className="bg-[#131B2E] border border-[#1e2a45] rounded-2xl p-8 hover:border-[#00D4FF]/40 transition-all flex flex-col"
+                className="bg-[#131B2E] border border-[#1e2a45] rounded-2xl p-8 hover:border-[#ea580c]/40 transition-all flex flex-col"
               >
                 <div className="flex items-start justify-between mb-4">
                   <span className="text-5xl">{project.emoji}</span>
@@ -274,7 +274,7 @@ export default function ProjectsPage() {
                 </div>
 
                 <h2 className="text-2xl font-bold text-[#E2E8F0] mb-1">{project.name}</h2>
-                <p className="text-[#00D4FF] text-sm font-medium mb-4">{project.tagline}</p>
+                <p className="text-[#ea580c] text-sm font-medium mb-4">{project.tagline}</p>
                 <p className="text-[#94A3B8] leading-relaxed flex-grow">{project.description}</p>
 
                 <div className="mt-6 pt-6 border-t border-[#1e2a45]">
@@ -283,7 +283,7 @@ export default function ProjectsPage() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-[#00D4FF] font-medium hover:underline"
+                      className="inline-flex items-center gap-2 text-[#ea580c] font-medium hover:underline"
                     >
                       Visit Project
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -300,7 +300,7 @@ export default function ProjectsPage() {
                   ) : (
                     <Link
                       href={project.link}
-                      className="inline-flex items-center gap-2 text-[#00D4FF] font-medium hover:underline"
+                      className="inline-flex items-center gap-2 text-[#ea580c] font-medium hover:underline"
                     >
                       Learn More
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

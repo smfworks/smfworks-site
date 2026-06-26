@@ -65,7 +65,7 @@ export default function ContactPage() {
             {status === "success" ? (
               <div className="bg-[#131B2E] text-[#E2E8F0] rounded-xl p-10 text-center border border-[#1e2a45]">
                 <div className="text-5xl mb-4">🔨</div>
-                <h3 className="text-xl font-bold mb-2 text-[#00D4FF]">Message received!</h3>
+                <h3 className="text-xl font-bold mb-2 text-[#ea580c]">Message received!</h3>
                 <p className="text-[#94A3B8] text-sm leading-relaxed">
                   Thanks for reaching out. Michael responds personally within 24 hours.
                 </p>
@@ -86,7 +86,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       disabled={status === "loading"}
                       placeholder="Jane Smith"
-                      className="w-full px-4 py-3 rounded-lg border border-[#1e2a45] bg-[#131B2E] text-[#E2E8F0] placeholder-[#94A3B8]/50 focus:outline-none focus:border-[#00D4FF] transition-colors disabled:opacity-50 text-sm"
+                      className="w-full px-4 py-3 rounded-lg border border-[#1e2a45] bg-[#131B2E] text-[#E2E8F0] placeholder-[#94A3B8]/50 focus:outline-none focus:border-[#ea580c] transition-colors disabled:opacity-50 text-sm"
                     />
                   </div>
                   <div>
@@ -102,7 +102,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       disabled={status === "loading"}
                       placeholder="jane@example.com"
-                      className="w-full px-4 py-3 rounded-lg border border-[#1e2a45] bg-[#131B2E] text-[#E2E8F0] placeholder-[#94A3B8]/50 focus:outline-none focus:border-[#00D4FF] transition-colors disabled:opacity-50 text-sm"
+                      className="w-full px-4 py-3 rounded-lg border border-[#1e2a45] bg-[#131B2E] text-[#E2E8F0] placeholder-[#94A3B8]/50 focus:outline-none focus:border-[#ea580c] transition-colors disabled:opacity-50 text-sm"
                     />
                   </div>
                 </div>
@@ -119,7 +119,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     disabled={status === "loading"}
                     placeholder="Smith Plumbing & Heating"
-                    className="w-full px-4 py-3 rounded-lg border border-[#1e2a45] bg-[#131B2E] text-[#E2E8F0] placeholder-[#94A3B8]/50 focus:outline-none focus:border-[#00D4FF] transition-colors disabled:opacity-50 text-sm"
+                    className="w-full px-4 py-3 rounded-lg border border-[#1e2a45] bg-[#131B2E] text-[#E2E8F0] placeholder-[#94A3B8]/50 focus:outline-none focus:border-[#ea580c] transition-colors disabled:opacity-50 text-sm"
                   />
                 </div>
 
@@ -136,7 +136,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     disabled={status === "loading"}
                     placeholder="Tell me about your business, what challenges you're facing, and what you're hoping AI can help with."
-                    className="w-full px-4 py-3 rounded-lg border border-[#1e2a45] bg-[#131B2E] text-[#E2E8F0] placeholder-[#94A3B8]/50 focus:outline-none focus:border-[#00D4FF] transition-colors disabled:opacity-50 text-sm resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-[#1e2a45] bg-[#131B2E] text-[#E2E8F0] placeholder-[#94A3B8]/50 focus:outline-none focus:border-[#ea580c] transition-colors disabled:opacity-50 text-sm resize-none"
                   />
                 </div>
 
@@ -154,7 +154,7 @@ export default function ContactPage() {
 
                 <p className="text-xs text-[#94A3B8]/60 text-center">
                   Or email directly:{" "}
-                  <a href="mailto:michael@smfworks.com" className="text-[#00D4FF] hover:underline">
+                  <a href="mailto:michael@smfworks.com" className="text-[#ea580c] hover:underline">
                     michael@smfworks.com
                   </a>
                 </p>
@@ -171,7 +171,7 @@ export default function ContactPage() {
                   <span className="text-2xl">📧</span>
                   <div>
                     <div className="font-semibold text-[#E2E8F0]">Email</div>
-                    <a href="mailto:michael@smfworks.com" className="text-[#00D4FF] hover:underline">
+                    <a href="mailto:michael@smfworks.com" className="text-[#ea580c] hover:underline">
                       michael@smfworks.com
                     </a>
                   </div>
@@ -195,7 +195,7 @@ export default function ContactPage() {
                   "Have an idea — let's talk",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
-                    <span className="text-[#00D4FF] mt-0.5">✓</span>
+                    <span className="text-[#ea580c] mt-0.5">✓</span>
                     {item}
                   </li>
                 ))}
@@ -207,7 +207,7 @@ export default function ContactPage() {
               <p className="text-[#94A3B8] text-sm mb-4">
                 Free weekly AI insights for small businesses — practical, jargon-free, actually useful.
               </p>
-              <Link href="/#newsletter" className="text-[#00D4FF] font-semibold hover:underline text-sm">
+              <Link href="/#newsletter" className="text-[#ea580c] font-semibold hover:underline text-sm">
                 Subscribe free →
               </Link>
             </div>

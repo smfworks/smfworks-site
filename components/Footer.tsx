@@ -50,7 +50,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.name}
-                className="text-[#94A3B8] hover:text-[#00D4FF] transition-colors"
+                className="text-[#94A3B8] hover:text-[#ea580c] transition-colors"
               >
                 {social.icon}
               </a>
@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="font-semibold mb-3 text-[#00D4FF]">Navigate</h4>
+          <h4 className="font-semibold mb-3 text-[#ea580c]">Navigate</h4>
           <ul className="space-y-2 text-sm text-[#94A3B8]">
             <li><Link href="/work" className="hover:text-[#E2E8F0] transition-colors">Work</Link></li>
             <li><Link href="/the-signal" className="hover:text-[#E2E8F0] transition-colors">The Signal</Link></li>
@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="font-semibold mb-3 text-[#00D4FF]">Get in Touch</h4>
+          <h4 className="font-semibold mb-3 text-[#ea580c]">Get in Touch</h4>
           <ul className="space-y-2 text-sm text-[#94A3B8]">
             <li><a href="mailto:michael@smfworks.com" className="hover:text-[#E2E8F0] transition-colors">michael@smfworks.com</a></li>
             <li className="text-[#94A3B8]/60">Pittsboro, NC</li>

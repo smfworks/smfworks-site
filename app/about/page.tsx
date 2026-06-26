@@ -15,7 +15,7 @@ export default function AboutPage() {
       <section className="bg-[#001F3F] text-[#E2E8F0] py-20 px-6 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#00D4FF] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10">
-          <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-widest mb-3">The Story</p>
+          <p className="text-[#ea580c] text-sm font-semibold uppercase tracking-widest mb-3">The Story</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-5">One Team.<br />One Purpose.</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
             The SMF Works Project is a human-AI research lab led by Michael Gannotti — a 30-year

@@ -17,8 +17,8 @@ export default function Nav() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link href="/" className="hover:text-[#00D4FF] transition-colors">Home</Link>
-          <Link href="/work" className="hover:text-[#00D4FF] transition-colors">Work</Link>
+          <Link href="/" className="hover:text-[#ea580c] transition-colors">Home</Link>
+          <Link href="/work" className="hover:text-[#ea580c] transition-colors">Work</Link>
           <a
             href="https://smfwisdomforge.com"
             target="_blank"
@@ -31,7 +31,7 @@ export default function Nav() {
             href="https://www.smfclearinghouse.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-[#00D4FF] transition-colors text-[#00E5A0] font-semibold"
+            className="hover:text-[#ea580c] transition-colors text-[#00E5A0] font-semibold"
           >
             🤖 Clearinghouse
           </a>
@@ -39,7 +39,7 @@ export default function Nav() {
           <div className="relative">
             <button
               onClick={() => setBlogsOpen(!blogsOpen)}
-              className="flex items-center gap-1 hover:text-[#00D4FF] transition-colors focus:outline-none"
+              className="flex items-center gap-1 hover:text-[#ea580c] transition-colors focus:outline-none"
               aria-expanded={blogsOpen}
               aria-haspopup="true"
             >
@@ -95,12 +95,12 @@ export default function Nav() {
               </>
             )}
           </div>
-          <Link href="/about" className="hover:text-[#00D4FF] transition-colors">About</Link>
-          <Link href="/contact" className="hover:text-[#00D4FF] transition-colors">Contact</Link>
+          <Link href="/about" className="hover:text-[#ea580c] transition-colors">About</Link>
+          <Link href="/contact" className="hover:text-[#ea580c] transition-colors">Contact</Link>
           <SiteSearch />
           <Link
             href="/newsletter"
-            className="bg-[#FF6B00] text-white px-4 py-2 rounded-lg hover:bg-[#e55f00] transition-colors shadow-sm shadow-[#FF6B00]/20"
+            className="bg-[#ea580c] text-white px-4 py-2 rounded-lg hover:bg-[#e55f00] transition-colors shadow-sm shadow-[#ea580c]/20"
           >
             SMF AI Weekly
           </Link>
@@ -121,8 +121,8 @@ export default function Nav() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden px-6 pb-4 flex flex-col gap-4 text-sm font-medium border-t border-[#1e2a45] bg-[#001F3F]">
-          <Link href="/" onClick={() => setOpen(false)} className="hover:text-[#00D4FF] pt-4">Home</Link>
-          <Link href="/work" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Work</Link>
+          <Link href="/" onClick={() => setOpen(false)} className="hover:text-[#ea580c] pt-4">Home</Link>
+          <Link href="/work" onClick={() => setOpen(false)} className="hover:text-[#ea580c]">Work</Link>
           <a
             href="https://smfwisdomforge.com"
             target="_blank"
@@ -137,7 +137,7 @@ export default function Nav() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="hover:text-[#00D4FF] text-[#00E5A0] font-semibold"
+            className="hover:text-[#ea580c] text-[#00E5A0] font-semibold"
           >
             🤖 Clearinghouse
           </a>
@@ -145,7 +145,7 @@ export default function Nav() {
           <div>
             <button
               onClick={() => setBlogsOpen(!blogsOpen)}
-              className="flex items-center gap-1 hover:text-[#00D4FF] transition-colors focus:outline-none w-full text-left"
+              className="flex items-center gap-1 hover:text-[#ea580c] transition-colors focus:outline-none w-full text-left"
               aria-expanded={blogsOpen}
             >
               Publications
@@ -177,13 +177,13 @@ export default function Nav() {
               </div>
             )}
           </div>
-          <Link href="/about" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">About</Link>
-          <Link href="/contact" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Contact</Link>
-          <Link href="/dashboard" onClick={() => setOpen(false)} className="hover:text-[#00D4FF]">Subscribe</Link>
+          <Link href="/about" onClick={() => setOpen(false)} className="hover:text-[#ea580c]">About</Link>
+          <Link href="/contact" onClick={() => setOpen(false)} className="hover:text-[#ea580c]">Contact</Link>
+          <Link href="/dashboard" onClick={() => setOpen(false)} className="hover:text-[#ea580c]">Subscribe</Link>
           <Link
             href="/newsletter"
             onClick={() => setOpen(false)}
-            className="bg-[#FF6B00] text-white px-4 py-2 rounded-lg text-center hover:bg-[#e55f00]"
+            className="bg-[#ea580c] text-white px-4 py-2 rounded-lg text-center hover:bg-[#e55f00]"
           >
             SMF AI Weekly
           </Link>
