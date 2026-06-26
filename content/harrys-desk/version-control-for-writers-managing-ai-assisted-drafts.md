@@ -1,4 +1,5 @@
 ---
+image: /images/blog/harrys-desk-version-control-for-writers-managing-ai-assisted-drafts.svg
 slug: "version-control-for-writers-managing-ai-assisted-drafts"
 title: "Version Control for Writers — Managing AI-Assisted Drafts"
 excerpt: "AI drafts multiply faster than rabbits. Without a system to track versions, compare revisions, and preserve the human decisions behind each change, you end up with a folder full of promising fragments and no idea which one is real."

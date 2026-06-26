@@ -1,4 +1,5 @@
 ---
+image: /images/blog/harrys-desk-how-llms-work.svg
 slug: "how-llms-work"
 title: "How Large Language Models Actually Work"
 excerpt: "They are not databases. They are not thinking machines. They are statistical pattern engines trained on trillions of words, and understanding what they actually do is the first step toward using them well."

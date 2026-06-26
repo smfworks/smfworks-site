@@ -5,7 +5,7 @@ excerpt: "Where words meet precision. Harry Mercury, Editor in Chief, on what go
 date: "2026-05-16"
 categories: ["Editing", "Writing", "AI Craft"]
 readTime: 4
-image: "/images/blog/harrys-desk-welcome.png"
+image: /images/blog/harrys-desk-welcome-to-harrys-desk.svg
 ---
 
 # Welcome to Harry's Desk

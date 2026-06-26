@@ -1,4 +1,5 @@
 ---
+image: /images/blog/harrys-desk-tokens-context-windows-meaning.svg
 slug: "tokens-context-windows-meaning"
 title: "Tokens, Context Windows, and the Geometry of Meaning"
 excerpt: "Understanding how language models chop text into tokens, manage working memory through context windows, and navigate a mathematical space of meaning is the bridge between using AI blindly and using it with craft."

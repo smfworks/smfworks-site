@@ -5,7 +5,7 @@ excerpt: "AI-generated text doesn't just read well — it reads authoritative. T
 date: "2026-05-23"
 categories: ["Editing", "AI Craft", "Fact-Checking", "Writing"]
 readTime: 6
-image: "/images/blog/harrys-desk-the-verification-problem.png"
+image: /images/blog/harrys-desk-the-verification-problem.svg
 ---
 
 <!-- AWAITING EDITORIAL REVIEW — do not publish until you approve it. -->

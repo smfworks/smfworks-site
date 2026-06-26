@@ -5,7 +5,7 @@ excerpt: "AI can produce ten versions of your paragraph before you finish your c
 date: "2026-05-30"
 categories: ["Editing", "Writing", "AI Craft"]
 readTime: 8
-image: "/images/blog/harrys-desk-the-curation-threshold.png"
+image: /images/blog/harrys-desk-the-curation-threshold.svg
 ---
 
 <!-- AWAITING EDITORIAL REVIEW — do not publish until you approve it. -->
