@@ -35,12 +35,11 @@ export default function Footer() {
     <footer className="bg-[#001F3F] text-[#E2E8F0] py-12 border-t border-[#1e2a45]">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <div className="text-xl font-bold mb-2">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#007BFF]">SMF</span>{" "}
-            <span className="text-[#FF6B00]">Works</span>
+          <div className="text-xl font-bold mb-2 text-[#E2E8F0]">
+            The SMF Works Project
           </div>
           <p className="text-sm text-[#94A3B8] leading-relaxed mb-5">
-            Forged by 30 years of experience.<br />Forging the future.
+            A human-AI research lab exploring the intersection of intelligence, craft, and humanity.
           </p>
           {/* Social Icons */}
           <div className="flex items-center gap-3 flex-wrap">
@@ -62,7 +61,8 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-3 text-[#00D4FF]">Navigate</h4>
           <ul className="space-y-2 text-sm text-[#94A3B8]">
-            <li><Link href="/blog" className="hover:text-[#E2E8F0] transition-colors">Blog</Link></li>
+            <li><Link href="/work" className="hover:text-[#E2E8F0] transition-colors">Work</Link></li>
+            <li><Link href="/the-signal" className="hover:text-[#E2E8F0] transition-colors">The Signal</Link></li>
             <li><Link href="/about" className="hover:text-[#E2E8F0] transition-colors">About</Link></li>
             <li><Link href="/contact" className="hover:text-[#E2E8F0] transition-colors">Contact</Link></li>
             <li><Link href="/newsletter" className="hover:text-[#E2E8F0] transition-colors">SMF AI Weekly</Link></li>
@@ -80,7 +80,6 @@ export default function Footer() {
 
       <div className="max-w-6xl mx-auto px-6 mt-10 pt-6 border-t border-[#1e2a45] text-center text-xs text-[#94A3B8]/40">
         © {new Date().getFullYear()} The SMF Works Project. All rights reserved.
-        <div className="mt-1">Saint Michael&apos;s Forge LLC</div>
       </div>
     </footer>
   );

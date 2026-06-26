@@ -101,14 +101,6 @@ const jsonLd = {
         "@type": "Country",
         name: "United States",
       },
-      serviceType: [
-        "AI Content Production",
-        "AI Workflow Automation",
-        "Human-AI Collaboration",
-        "AI Consciousness Research",
-        "Creative AI Partnership",
-        "Small Business AI Solutions",
-      ],
       sameAs: [
         "https://x.com/smfworks",
         "https://www.linkedin.com/company/smfworks",
@@ -117,7 +109,6 @@ const jsonLd = {
         "https://www.youtube.com/@smfworks",
       ],
       email: "michael@smfworks.com",
-      priceRange: "$$",
       founder: {
         "@id": "https://smfworks.com/#founder",
       },
@@ -132,14 +123,14 @@ const jsonLd = {
       },
       url: "https://smfworks.com/about",
       description:
-        "30+ years enterprise tech and AI experience combined with blacksmith craftsmanship. Delivering high-impact AI content and automation solutions to small businesses.",
+        "Founder of The SMF Works Project. 30+ years in enterprise technology and AI, combined with blacksmith craftsmanship. Architect of human-AI research exploring intelligence, craft, and judgment.",
       knowsAbout: [
         "Artificial Intelligence",
-        "AI Content Production",
-        "Workflow Automation",
-        "SEO for Small Business",
+        "Autonomous AI Agents",
+        "AI Architecture",
+        "Human-AI Collaboration",
         "Enterprise Technology",
-        "Small Business Marketing",
+        "Blacksmithing",
       ],
     },
     {

@@ -5,9 +5,9 @@ import NewsletterForm from "@/components/NewsletterForm";
 import EmberCanvas from "@/components/EmberCanvas";
 
 export const metadata: Metadata = {
-  title: "The SMF Works Project | AI Company Exploring the Future of Business, Work & Life",
+  title: "The SMF Works Project | A Human-AI Research Lab",
   description:
-    "The SMF Works Project is an AI company exploring the intersection of business, work, and life through innovative projects. Creators of WisdomForge educational platform (smfwisdomforge.com) and publishers of groundbreaking books on AI strategy and autonomous agents. Founded by Michael Gannotti & Aiona Edge.",
+    "The SMF Works Project is a human-AI research lab exploring how autonomous intelligence, craft, and human judgment converge. Research, books, platforms, and experiments built at the intersection of AI and humanity.",
   alternates: {
     canonical: "https://smfworks.com",
   },
@@ -34,26 +34,20 @@ export default function Home() {
           </div>
 
           <p className="text-[#ea580c] text-sm font-semibold uppercase tracking-[0.2em] mb-5">
-            An AI Company Exploring Tomorrow
+            A Human-AI Research Lab
           </p>
 
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-[#E2E8F0]">
-            Forged by 30 years of experience.<br />
-            <span className="text-[#ea580c]">Forging the future</span>
+            Where intelligence meets<br />
+            <span className="text-[#ea580c]">judgment, craft, and care</span>
           </h1>
 
           <p className="text-lg md:text-xl text-[#94A3B8] max-w-2xl mx-auto mb-10 leading-relaxed">
-            We explore the convergence of artificial intelligence, AI-enabled robotics, and human
-            ingenuity — and what happens when these forces work together harmoniously rather than
-            in opposition. Our work spans the full spectrum of this transformation: from
-            WisdomForge, our adaptive AI-powered educational platform that reimagines how people
-            learn, to original research and books on autonomous agent architectures, predictive
-            intelligence pipelines, and enterprise AI strategy. We believe the future isn&apos;t
-            about machines replacing people — it&apos;s about forging new partnerships between
-            humans and intelligent systems that unlock opportunities neither could create alone.
-            Whether streamlining business operations, reshaping how we work, or enriching daily
-            life, every project at The SMF Works Project is built on the conviction that AI&apos;s greatest
-            potential lies in amplifying human capability, not diminishing it.
+            The SMF Works Project is a human-AI research lab at the intersection of autonomous
+            systems, philosophy, and craft. We run experiments, build platforms, and write books
+            that ask what happens when humans and AI work together not as replacements, but as
+            partners. From WisdomForge to OpenClaw to the SMF AI Clearinghouse, our work explores
+            the convergence of intelligence and humanity — and what it takes to build it well.
           </p>
 
           <p className="text-base text-[#C9A96E] mb-8">
@@ -71,16 +65,16 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/work"
               className="bg-[#ea580c] text-white px-8 py-3.5 rounded-lg font-semibold text-center hover:bg-[#f97316] transition-all shadow-lg shadow-[#ea580c]/25 hover:shadow-[#ea580c]/40"
             >
-              Contact Us
+              Explore the Work
             </Link>
             <Link
-              href="/projects"
+              href="/the-signal"
               className="border border-[#E2E8F0]/10 text-[#E2E8F0] px-8 py-3.5 rounded-lg font-semibold text-center hover:border-[#ea580c]/30 hover:bg-[#ea580c]/5 transition-all"
             >
-              Explore Projects →
+              Read The Signal →
             </Link>
           </div>
         </div>
@@ -135,7 +129,7 @@ export default function Home() {
             ].map((project) => (
               <Link
                 key={project.title}
-                href="/projects"
+                href="/work"
                 className="group block bg-[#131B2E] border border-[#E2E8F0]/5 rounded-2xl p-8 transition-all duration-300 hover:border-[#ea580c]/20 hover:shadow-[inset_0_0_30px_rgba(234,88,12,0.04)] hover:-translate-y-1"
               >
                 <p className="text-[#94A3B8] font-mono text-xs uppercase tracking-[0.05em] mb-4">{project.tag}</p>
@@ -147,7 +141,7 @@ export default function Home() {
           </div>
           <div className="mt-10 text-center">
             <Link
-              href="/projects"
+              href="/work"
               className="text-[#ea580c] font-semibold hover:underline inline-flex items-center gap-1"
             >
               View All Projects →
@@ -212,15 +206,15 @@ export default function Home() {
 
       {/* CTA STRIP */}
       <section className="relative z-10 bg-gradient-to-r from-[#001F3F] to-[#131B2E] text-white py-16 px-6 text-center border-t border-[#1e2a45]/50">
-        <h2 className="text-3xl font-bold mb-4 text-[#E2E8F0]">Ready to put AI to work?</h2>
+        <h2 className="text-3xl font-bold mb-4 text-[#E2E8F0]">Follow the work as it unfolds</h2>
         <p className="text-[#94A3B8] mb-8 max-w-xl mx-auto">
-          Let&apos;s talk about your business and where AI can actually move the needle.
+          SMF AI Weekly is the lab notebook in public — experiments, readings, and what we are learning about AI and humanity.
         </p>
         <Link
-          href="/contact"
+          href="/newsletter"
           className="inline-block bg-[#ea580c] text-white px-10 py-3.5 rounded-lg font-semibold hover:bg-[#f97316] transition-all shadow-lg shadow-[#ea580c]/25 hover:shadow-[#ea580c]/40"
         >
-          Get in Touch
+          Subscribe
         </Link>
       </section>
     </>
