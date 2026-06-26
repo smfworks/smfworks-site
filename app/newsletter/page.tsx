@@ -4,8 +4,9 @@ import { getAllIssues, getCurrentIssue } from "@/content/lib/newsletter-loader";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
-  title: "SMF AI Weekly",
-  description: "Subscribe to SMF AI Weekly — a free newsletter delivering practical AI news and small business strategies every Monday, straight from an enterprise AI engineer.",
+  title: "SMF AI Weekly | The SMF Works Project",
+  description:
+    "Subscribe to SMF AI Weekly — a public lab notebook from The SMF Works Project. Practical AI insights, experiments, and readings at the intersection of intelligence and humanity.",
   alternates: { canonical: "https://smfworks.com/newsletter" },
 };
 
@@ -20,13 +21,14 @@ export default function NewsletterArchivePage() {
       <section className="bg-[#001F3F] text-[#E2E8F0] py-16 px-6 relative overflow-hidden">
         <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#00D4FF] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
         <div className="max-w-6xl mx-auto relative z-10">
-          <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-[0.2em] mb-3">
-            Weekly AI Insights
+          <p className="text-[#ea580c] text-sm font-semibold uppercase tracking-[0.2em] mb-3">
+            The Lab Notebook
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">SMF AI Weekly</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
-            Every week, practical AI insights for small business owners — no hype,
-            no jargon, just what you can actually use.
+            A weekly dispatch from The SMF Works Project. Experiments we are running, ideas we are
+            wrestling with, and readings worth your time — all at the intersection of AI and humanity.
+            No hype. No trend-chasing. Just the work as it unfolds.
           </p>
         </div>
       </section>

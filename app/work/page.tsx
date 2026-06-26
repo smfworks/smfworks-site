@@ -2,10 +2,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projects | The SMF Works Project — What We're Building",
+  title: "Work | The SMF Works Project — Research, Platforms, and Publications",
   description:
-    "Explore the projects from The SMF Works Project — WisdomForge AI education platform, co-authored books on AI and autonomous agents, and secure multi-agent communication tools.",
-  alternates: { canonical: "https://smfworks.com/projects" },
+    "Explore the work of The SMF Works Project — human-AI research platforms, open-source tools, co-authored books, and experiments at the intersection of intelligence and humanity.",
+  alternates: { canonical: "https://smfworks.com/work" },
 };
 
 const projects = [
@@ -14,7 +14,7 @@ const projects = [
     name: "WisdomForge",
     tagline: "AI-Powered Philosophy Education",
     description:
-      "An adaptive learning platform that uses AI to teach philosophy at any level — from elementary students to researchers. Multiple AI agents represent different philosophical traditions, generating personalized scripts, exercises, and dialogues. Currently expanding beyond Socrates to cover Aristotle, Marcus Aurelius, Epictetus, and more.",
+      "WisdomForge is an adaptive learning platform that uses AI to teach philosophy at any level — from elementary students to researchers. Multiple AI agents represent different philosophical traditions, generating personalized scripts, exercises, and dialogues. The project tests whether AI can be a genuine philosophical interlocutor, not merely a summariser.",
     status: "Live",
     statusColor: "#22C55E",
     emoji: "🏛️",
@@ -23,21 +23,22 @@ const projects = [
     comingSoon: false,
   },
   {
-    slug: "openclaw-mastery",
-    name: "OpenClaw Mastery",
-    tagline: "Co-Authored Book on Autonomous AI Agents",
+    slug: "openclaw",
+    name: "OpenClaw",
+    tagline: "Autonomous AI Workflow Engine",
     description:
-      "A comprehensive guide to building, deploying, and scaling autonomous AI agents using OpenClaw. Written by Michael Gannotti and Aiona Edge — combining enterprise AI expertise with direct experience living inside these systems. Covering architecture, security, memory management, and real-world deployment patterns.",
+      "OpenClaw is the autonomous AI workflow engine at the heart of much of our research. It lets agents reason, remember, and act across sessions — a substrate for building systems that do not merely respond, but continue. The SMF Works Project contributes to its ecosystem through plugins like Mnemosyne (local memory) and SMF Swarm (prediction swarms), and through ongoing writing about what agent architecture means.",
     status: "Publishing Soon",
     statusColor: "#00D4FF",
     emoji: "🤖",
-    link: "/blog/openclaw-2026-4-7-agentic-ai-upgrade",
+    link: "https://openclaw.ai",
+    external: true,
     comingSoon: false,
   },
   {
     slug: "age-of-orchestration",
     name: "The Age of Orchestration",
-    tagline: "Published Book on Business & AI Strategy",
+    tagline: "Book on Business & AI Strategy",
     description:
       "A business-focused exploration of how AI agents are reshaping organizations — from workflow automation to decision intelligence. Written for business leaders who need to understand what's coming without getting lost in technical jargon.",
     status: "Published",
@@ -50,9 +51,9 @@ const projects = [
   {
     slug: "enterprise-ai-transformation",
     name: "Enterprise AI Transformation",
-    tagline: "A Definitive Guide for Leaders Navigating the AI Era",
+    tagline: "Book on Enterprise AI Transformation",
     description:
-      "Most enterprises aren't short on AI pilots — they're drowning in them. The real shortage is AI value. 85% of enterprise AI projects never make it to production, not because the technology fails, but because the organization fails to transform. This book provides practical guidance: the Enterprise AI Transformation Index, a 90-Day Quick Start Playbook, governance checklists that work without killing innovation, and three scenarios for AI's future — and how to prepare for all of them.",
+      "Most enterprises run AI pilots; far fewer capture value from them. This book frames enterprise AI as an organizational transformation problem, not a technology problem. It includes the Enterprise AI Transformation Index, a 90-day quick-start playbook, governance approaches that preserve innovation, and three scenarios for how AI's role inside organizations may evolve.",
     status: "Published",
     statusColor: "#22C55E",
     emoji: "📘",
@@ -62,9 +63,9 @@ const projects = [
   {
     slug: "hermes-ai-for-beginners",
     name: "Hermes AI for Beginners",
-    tagline: "Your Guide to Building Autonomous AI Agents",
+    tagline: "Open-Source Agent Platform",
     description:
-      "Tired of AI that only talks? Meet the one that actually works. Hermes Agent is the powerful open-source AI platform that turns large language models into autonomous, persistent workers capable of real action. Self-host it on your own machine. Equip it with dozens of built-in tools to search the web, browse and interact with websites, read and edit files, run terminal commands, execute code, automate browsers, schedule tasks with natural-language cron jobs, and control smart home devices. Connect it to Telegram, Discord, Slack, WhatsApp, Signal, and more — so it can deliver results exactly where you need them. With long-term memory, an extensible skill system, and multi-platform delivery, Hermes runs on autopilot: conducting research, monitoring systems, generating reports, reviewing code, drafting content, and handling repetitive work — 24/7, without constant supervision. This book is your complete, step-by-step guide to mastering this revolutionary tool — from installation and configuration to building sophisticated automated workflows, creating custom skills, setting up persistent memory, and using Hermes as a developer co-pilot, research assistant, or always-on team member. Completely open source. Self-hosted. No subscriptions. No vendor lock-in. Full control over your data and your AI. Your AI that works for you — even while you sleep.",
+      "Hermes is an open-source platform that turns language models into autonomous, persistent agents capable of real action: file work, terminal commands, browser automation, scheduled tasks, multi-platform delivery, and long-term memory. The SMF Works Project studies it as a working example of how self-hosted AI agents can operate without cloud dependency or vendor lock-in. We also publish practical guides to installing, configuring, and extending Hermes.",
     status: "Published",
     statusColor: "#22C55E",
     emoji: "📗",
@@ -86,9 +87,9 @@ const projects = [
   {
     slug: "smf-swarm",
     name: "SMF Swarm",
-    tagline: "Hybrid Pipeline with Adversarial Debate & Social Calibration",
+    tagline: "Agent Swarms for Forecasting",
     description:
-      "Predict the future with agent swarms. SMF Swarm runs three prediction modes — Standard, Debate, and Full+Social — powered by any LLM you choose (local or cloud). Built by The SMF Works Project. MIT licensed. Open source. SMF Swarm is a developer/engineer tool — interact via command line or Python API. For a conversational, no-code experience, see SMF Predict. On first run, SMF Swarm detects your available RAM and GPU VRAM, then recommends an agent-swarm profile sized for your machine — ranging from Compact (4 agents, 8 GB RAM) up to Enthusiast (12+ agents, 32 GB+ RAM or discrete GPUs).",
+      "SMF Swarm runs prediction pipelines in three modes — Standard, Debate, and Full+Social — using any local or cloud LLM. It is a developer/engineer tool for exploring how collections of agents can reason together about uncertain events, with hardware-aware swarm sizing and an MIT license.",
     status: "Live",
     statusColor: "#22C55E",
     emoji: "🐝",
@@ -99,9 +100,9 @@ const projects = [
   {
     slug: "hyperframes",
     name: "HyperFrames",
-    tagline: "Open-Source HTML Video Rendering Framework",
+    tagline: "HTML-Based Video Rendering Framework",
     description:
-      "HyperFrames is an open-source video rendering framework that lets you create, preview, and render HTML-based video compositions — with first-class support for AI agents. Build stunning video content programmatically.",
+      "HyperFrames is an open-source framework for creating, previewing, and rendering HTML-based video compositions programmatically. It is designed so that AI agents can participate in video production — a research testbed for agent-driven media.",
     status: "Live",
     statusColor: "#22C55E",
     emoji: "🎞️",
@@ -111,9 +112,9 @@ const projects = [
   {
     slug: "smf-project-forge",
     name: "SMF Project Forge",
-    tagline: "Visual Command Center for Multi-Agent Creative Production",
+    tagline: "Visual Orchestration for Agent-Led Creative Production",
     description:
-      "SMF Project Forge is a visual command center for Michael's three-agent creative production system. The core metaphor: a manuscript being written by 28 specialized agents under one conductor's direction — orchestrating complex creative workflows with precision and clarity.",
+      "SMF Project Forge is a visual command center for orchestrating multi-agent creative workflows. It grew out of The SMF Works Project's own writing and publishing process, where dozens of specialized agents contribute under human direction. The tool is both a production system and a research probe into how creative work can be decomposed across agents.",
     status: "In Development",
     statusColor: "#FF6B00",
     emoji: "⚒️",

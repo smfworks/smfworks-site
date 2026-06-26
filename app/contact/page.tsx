@@ -44,12 +44,12 @@ export default function ContactPage() {
       <section className="bg-[#001F3F] text-[#E2E8F0] py-20 px-6 relative overflow-hidden">
         <div className="absolute bottom-0 right-0 w-[400px] h-[300px] bg-[#FF6B00] opacity-[0.04] blur-[100px] rounded-full pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10">
-          <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-widest mb-3">
-            Let&apos;s Talk
+          <p className="text-[#ea580c] text-sm font-semibold uppercase tracking-widest mb-3">
+            Start a conversation
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-5">Get in Touch</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
-            Contact The SMF Works Project with your questions around AI organizational transformation
+            Have a question, an idea, or something you want to explore with us? Send a note. We read everything, and we are always curious about people thinking seriously about AI and humanity.
           </p>
         </div>
       </section>

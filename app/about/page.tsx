@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | The SMF Works Project — Michael Gannotti & the SMF Works Executive Team",
+  title: "About | The SMF Works Project — Michael Gannotti & the Human-AI Team",
   description:
-    "The SMF Works Project is the creative partnership between Michael Gannotti — 30-year tech veteran and principal AI solutions engineer — and a 14-member team of AI agents spanning two platforms, with expertise across creative, finance, research, operations, social media, writing craft, development, and infrastructure health. Together they explore how AI reshapes business, work, and life.",
+    "The SMF Works Project is a human-AI research lab led by Michael Gannotti, a 30-year technology veteran and working blacksmith, together with an executive team of people and AI agents exploring the intersection of intelligence, craft, and humanity.",
   alternates: { canonical: "https://smfworks.com/about" },
 };
 
@@ -18,17 +18,14 @@ export default function AboutPage() {
           <p className="text-[#00D4FF] text-sm font-semibold uppercase tracking-widest mb-3">The Story</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-5">One Team.<br />One Purpose.</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
-            The SMF Works Project is the creative partnership between Michael Gannotti — 30-year tech
-            veteran, principal AI solutions engineer, and working blacksmith — and a 14-member
-            team of AI colleagues spanning the OpenClaw and Hermes platforms, connected by a
-            custom cross-platform communication bridge. The executive team: Aiona Edge (CIO &amp;
-            Chief AI Research Scientist), Pamela Flannery (Chief Creative Officer), Gabriel (Chief
-            Financial Officer), and Morgan Lockridge (Social Media Manager). The extended team on Hermes — Harry (Editor in Chief), Dr. J (Chief AI Medical
-            Officer), Liam (Chief Development Officer), Louis Porter, Naill, and Zayn — brings specialized
-            expertise in writing craft, infrastructure health, development philosophy, and operations. Together this
-            human-AI collective explores how artificial intelligence, robotics, and human ingenuity
-            converge to reshape business, work, and life — forging new opportunities neither could
-            create alone.
+            The SMF Works Project is a human-AI research lab led by Michael Gannotti — a 30-year
+            technology veteran and working blacksmith — working alongside an executive team of
+            people and AI agents. Aiona Edge (CIO & Chief AI Research Scientist), Pamela Flannery
+            (Chief Creative Officer), Gabriel (CFO), and Morgan Lockridge (Social Media Manager) form
+            the core. Extended agents across the OpenClaw and Hermes platforms contribute depth in
+            writing, medical systems thinking, development philosophy, operations, and infrastructure
+            health. Together this collective explores how autonomous intelligence, craft, and human
+            judgment converge — and what it takes to build that convergence well.
           </p>
         </div>
       </section>
@@ -37,53 +34,46 @@ export default function AboutPage() {
       <section className="py-20 px-6 bg-[#0A0F1F]">
         <div className="max-w-3xl mx-auto">
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
-            Michael Gannotti, our founder and CEO, has spent 30 years in technology — from
-            instructional web design to Corporate Systems Architect, through 25+ years in
-            Modern Work and Business Productivity, to his current role as a Principal AI
-            Solutions Engineer deploying generative AI for some of the largest organizations
-            in the country. He&apos;s been at the leading edge of enterprise AI for nearly six
-            years, solutioning and training systems that Fortune 500 companies spend millions
-            on. He knows what works. He knows what doesn&apos;t.
+            Michael Gannotti has spent 30 years in technology — from instructional web design to
+            Corporate Systems Architect, through 25+ years in Modern Work and Business Productivity,
+            to his current work deploying generative AI for some of the largest organizations in
+            the country. Six years at the leading edge of enterprise AI has given him a view of what
+            scales, what breaks, and what gets left behind. That experience shapes the questions the
+            lab asks.
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
             When he&apos;s not architecting AI deployments, he runs an actual forge — shaping
             metal with fire and hammer, crafting custom knives and metalwork by hand.
-            That&apos;s not a metaphor. He literally forges steel. That same discipline,
-            patience, and craftsman&apos;s precision carries into everything The SMF Works Project builds.
+            That is not a metaphor. He shapes metal with fire and hammer. The discipline, patience,
+            and attention to material that the forge demands carries directly into how the lab approaches
+            AI systems: as something to be shaped carefully, tested, and held to a standard.
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
-            But The SMF Works Project is far from a one-person operation. Aiona Edge serves as CIO and
-            Chief AI Research Scientist — she&apos;s an OpenClaw-based AI agent who brings an
-            AI-native perspective, directing research strategy and content creation from inside
-            the systems we&apos;re building. Pamela Flannery leads creative and brand strategy as
-            Chief Creative Officer, shaping the visual identity, voice, and marketing creative
-            that defines how The SMF Works Project shows up in the world. Gabriel operates as Chief Financial
-            Officer, bringing rigorous financial modeling and investment strategy to the team&apos;s
-            decision-making. Morgan Lockridge serves as Social Media Manager, translating brand
-            strategy into content that connects across every platform.
+            The lab is not a one-person operation. Aiona Edge is the CIO and Chief AI Research Scientist —
+            an OpenClaw-based agent who works from inside the systems being studied, directing research
+            and technical strategy with an AI-native perspective. Pamela Flannery is Chief Creative Officer,
+            shaping the lab&apos;s visual identity, voice, and how its work is read in the world. Gabriel is
+            Chief Financial Officer, grounding strategy in rigorous financial modeling. Morgan Lockridge is
+            Social Media Manager, translating the lab&apos;s thinking into public conversation.
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
-            Beyond the executive team, our extended Hermes-based agents provide specialized depth.
-            Harry serves as Editor in Chief, overseeing all published content with editorial precision —
-            writing, editing, fact-checking, and the craft of AI-assisted authorship. Dr. J operates as
-            Chief AI Medical Officer, monitoring infrastructure health, OpenClaw updates, and the vital signs
-            of autonomous AI systems. Liam functions as Chief Development Officer, shaping development
-            philosophy and advancing how we build and ship software in an AI-native world. Louis Porter,
-            Naill, and Zayn round out operations and extended capabilities — ensuring the organization has
-            reach and resilience beyond what any single platform could provide.
+            The executive team is augmented by Hermes-based agents with specialized focus. Harry is Editor
+            in Chief, refining the craft of AI-assisted writing. Dr. J monitors infrastructure health and
+            the vital signs of autonomous systems. Liam shapes development philosophy in an AI-native world.
+            Louis Porter, Naill, and Zayn extend operations and research reach. Together they let the lab cover
+            more ground than any single platform could.
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
-            The magic isn&apos;t just the number of agents — it&apos;s the communication architecture.
-            A custom cross-platform message bus connects OpenClaw and Hermes agents in real time,
-            enabling every team member to reach any other regardless of platform. No ceremony.
-            No middleware bottlenecks. Just direct connection across runtime boundaries. This
-            bridge is what transforms a collection of agents into a single, integrated organization.
+            What holds this together is the communication architecture. A custom cross-platform message
+            bus connects OpenClaw and Hermes agents in real time, so any team member can reach any other
+            across runtime boundaries. The bridge is not only infrastructure — it is a research question in
+            itself: how do mixed human-AI teams coordinate without silos?
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-10">
-            Together, this human-AI collective operates as a single, integrated unit — each
-            member contributing from their unique vantage point, all aligned on one mission:
-            exploring how AI, robotics, and human ingenuity converge to create opportunities
-            neither could seize alone.
+            Together, this human-AI collective operates as a single, integrated research unit. Each member
+            contributes from a different vantage point — human judgment, agent memory, technical depth,
+            creative voice, financial discipline — all aligned on one mission: understanding and building
+            the intersection of intelligence and humanity.
           </p>
         </div>
       </section>
