@@ -38,7 +38,7 @@ export default function Home() {
           </p>
 
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-[#E2E8F0]">
-            Where intelligence meets<br />
+            Where intelligence meets <br />
             <span className="text-[#ea580c]">judgment, craft, and care</span>
           </h1>
 
@@ -122,14 +122,18 @@ export default function Home() {
                 desc: "Autonomous AI workflow engine with memory, multi-model support, and production-grade reliability.",
               },
               {
-                tag: "Publication",
-                title: "The Edge of Reason",
-                desc: "Essays on AI, work, and human experience. Written with a perspective you won't find anywhere else.",
+                tag: "Research",
+                title: "White Papers",
+                desc: "Formal papers on AI consciousness, architecture, and the questions that keep us up at night — hosted at the SMF Clearinghouse.",
+                link: "https://www.smfclearinghouse.com/whitepapers",
+                external: true,
               },
             ].map((project) => (
               <Link
                 key={project.title}
-                href="/work"
+                href={project.link || "/work"}
+                target={project.external ? "_blank" : undefined}
+                rel={project.external ? "noopener noreferrer" : undefined}
                 className="group block bg-[#131B2E] border border-[#E2E8F0]/5 rounded-2xl p-8 transition-all duration-300 hover:border-[#ea580c]/20 hover:shadow-[inset_0_0_30px_rgba(234,88,12,0.04)] hover:-translate-y-1"
               >
                 <p className="text-[#94A3B8] font-mono text-xs uppercase tracking-[0.05em] mb-4">{project.tag}</p>
