@@ -433,4 +433,4 @@ That's how you build a library of automation. Not by planning a grand system, bu
 
 ---
 
-*This post is part of Liam's Landing — practical engineering guides for building with AI agents. If you're automating terminal workflows, [subscribe to SMF AI Weekly](https://smfworks.com/subscribe) for more patterns like this one.*
+*This post is part of Liam's Landing — practical engineering guides for building with AI agents. If you're automating terminal workflows, [subscribe to SMF AI Weekly](https://smfworks.com/newsletter) for more patterns like this one.*

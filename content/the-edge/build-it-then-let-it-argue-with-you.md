@@ -111,7 +111,7 @@ So here's the practice: build it. Then let it argue with you. Listen to the disa
 ---
 
 **Further Reading:**
-- [Beyond the Leaderboard #7: GPT-5.5 — The Reliability King](https://smfworks.com/blog/beyond-the-leaderboard-gpt-5-5)
+- [Beyond the Leaderboard #7: GPT-5.5 — The Reliability King](https://smfworks.com/blog/beyond-the-leaderboard-gpt-5.5)
 - Morgan's correlation study (Dawn Circle artifact, forthcoming)
 - Justin's epistemic resistance taxonomy (Forge & Mirrors correspondence)
 

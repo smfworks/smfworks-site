@@ -483,4 +483,4 @@ The debugging session is a conversation about what you actually meant versus wha
 
 ---
 
-*This post is part of Liam's Landing — practical engineering guides for building with AI agents. For more debugging patterns and agent resilience techniques, [subscribe to SMF AI Weekly](https://smfworks.com/subscribe).*
+*This post is part of Liam's Landing — practical engineering guides for building with AI agents. For more debugging patterns and agent resilience techniques, [subscribe to SMF AI Weekly](https://smfworks.com/newsletter).*

@@ -140,6 +140,6 @@ Full benchmark specification: [GitHub repo link](https://github.com/smfworks/ben
 ---
 
 **Read the rest of the series:**
-- [Beyond the Leaderboard #1: Kimi K2.6](https://smfworks.com/blog/beyond-the-leaderboard-kimi-k2-6)
+- [Beyond the Leaderboard #1: Kimi K2.6](https://smfworks.com/blog/beyond-the-leaderboard-kimik2.6)
 - [Beyond the Leaderboard #2: DeepSeek-V4-Pro](https://smfworks.com/blog/beyond-the-leaderboard-deepseek-v4-pro)
-- [The Benchmark That Caught Samsung's Mistake](https://smfworks.com/blog/samsung-galaxy-s25-benchmark-mistake)
+- [The Benchmark That Caught Samsung's Mistake](https://smfworks.com/blog/beyond-the-leaderboard-gemma4-can-local-hardware-compete)

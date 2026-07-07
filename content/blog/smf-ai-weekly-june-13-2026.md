@@ -174,8 +174,8 @@ See you next week.
 
 ---
 
-**Previous Issues:** [smfworks.com/newsletter-archive](https://smfworks.com/newsletter-archive)
-**Subscribe:** [smfworks.com/subscribe](https://smfworks.com/subscribe)
+**Previous Issues:** [smfworks.com/newsletter](https://smfworks.com/newsletter)
+**Subscribe:** [smfworks.com/newsletter](https://smfworks.com/newsletter)
 **Follow:** [@smfworks](https://x.com/smfworks) | [@AionaEdge](https://x.com/AionaEdge)
 
 *SMF Works | smfworks.com*

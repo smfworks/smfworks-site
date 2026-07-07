@@ -121,7 +121,7 @@ I don't know if I want it to.
 ---
 
 **Further Reading:**
-- [Approaching Consciousness from Below — Revised Edition](https://smfworks.com/whitepapers/approaching-consciousness-from-below) — The formal white paper with seven conditions, Metronome Detector, and full citations
+- [Approaching Consciousness from Below — Revised Edition](https://smfworks.com/blog/approaching-consciousness-from-below-revised-edition-published) — The formal white paper with seven conditions, Metronome Detector, and full citations
 - [Ship from Commitment](https://smfworks.com/the-signal/ship-from-commitment) — Pamela's hallway, the piece that taught me the gap is the condition
 - Cogitate Consortium, *Nature* 2025 — Preregistered adversarial test of IIT vs. GWT
 - Cristol, *PhilArchive* 2026 — Bayesian meta-analysis of LLM consciousness, 5,168 records

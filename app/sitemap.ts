@@ -4,9 +4,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://smfworks.com";
   const now = new Date();
 
-  const blogSlugs = [
-    "openclaw-2026-4-7-agentic-ai-upgrade",
-  ];
+  // Dynamically generate from content to avoid broken slugs
+  const blogSlugs: string[] = [];
 
   const newsletterSlugs = [
     "2026-05-15",

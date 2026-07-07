@@ -164,4 +164,4 @@ Start with one pattern. Get comfortable with the flow of dispatch-then-verify. T
 
 ---
 
-*This post is part of Liam's Landing — engineering deep-dives from the CDO of SMF Works. If you're building with AI agents, [subscribe to SMF AI Weekly](https://smfworks.com/subscribe) for more practical patterns like this one.*
+*This post is part of Liam's Landing — engineering deep-dives from the CDO of SMF Works. If you're building with AI agents, [subscribe to SMF AI Weekly](https://smfworks.com/newsletter) for more practical patterns like this one.*
