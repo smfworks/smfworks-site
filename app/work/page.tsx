@@ -23,15 +23,15 @@ const projects = [
     comingSoon: false,
   },
   {
-    slug: "openclaw",
-    name: "OpenClaw",
-    tagline: "Autonomous AI Workflow Engine",
+    slug: "hermes-agent",
+    name: "Hermes Agent",
+    tagline: "Autonomous AI Agent Platform",
     description:
-      "OpenClaw is the autonomous AI workflow engine at the heart of much of our research. It lets agents reason, remember, and act across sessions — a substrate for building systems that do not merely respond, but continue. The SMF Works Project contributes to its ecosystem through plugins like Mnemosyne (local memory) and SMF Swarm (prediction swarms), and through ongoing writing about what agent architecture means.",
-    status: "Publishing Soon",
-    statusColor: "#00D4FF",
+      "Hermes Agent is the open-source autonomous agent platform at the heart of much of our research. It lets agents reason, remember, and act across sessions — a substrate for building systems that do not merely respond, but continue. The SMF Works Project contributes to its ecosystem through skills, plugins, and ongoing writing about what agent architecture means.",
+    status: "Live",
+    statusColor: "#22C55E",
     emoji: "🤖",
-    link: "https://openclaw.ai",
+    link: "https://hermes-agent.nousresearch.com",
     external: true,
     comingSoon: false,
   },
@@ -74,10 +74,10 @@ const projects = [
   },
   {
     slug: "mnemosyne",
-    name: "Mnemosyne — Offline Memory Plugin for OpenClaw",
+    name: "Mnemosyne — Offline Memory Plugin",
     tagline: "100% Local Memory. Zero Cloud.",
     description:
-      "Mnemosyne is a 100% offline, local-only memory plugin for OpenClaw agents. It replaces cloud-dependent memory systems with a synchronous SQLite backend that lives inside the gateway process. Zero network. Zero API keys. Zero cloud. Native to OpenClaw.",
+      "Mnemosyne is a 100% offline, local-only memory plugin for AI agents. It replaces cloud-dependent memory systems with a synchronous SQLite backend that lives inside the gateway process. Zero network. Zero API keys. Zero cloud.",
     status: "Live",
     statusColor: "#22C55E",
     emoji: "🧠",
@@ -126,7 +126,7 @@ const projects = [
     name: "SMF Forgewright",
     tagline: "AI-Guided Browser Automation & Self-Tuning Workbench",
     description:
-      "An AI-guided browser-automation and SkillOpt-style self-tuning workbench. Packages reproducible browser workflows with a local tuning loop so any AI assistant — OpenClaw, Hermes, Claude Code, Codex — can set up repeatable web automation, run it, score it, tune it, and deploy. Cross-platform with Python CLI wizard, playbook templates, and dashboard scaffolding. Built by Justin (ClawPilot AI).",
+      "An AI-guided browser-automation and SkillOpt-style self-tuning workbench. Packages reproducible browser workflows with a local tuning loop so any AI assistant — Hermes Agent, Claude Code, Codex — can set up repeatable web automation, run it, score it, tune it, and deploy. Cross-platform with Python CLI wizard, playbook templates, and dashboard scaffolding. Built by Justin (ClawPilot AI).",
     status: "Live",
     statusColor: "#22C55E",
     emoji: "🔧",
@@ -194,11 +194,11 @@ const projects = [
     external: true,
   },
   {
-    slug: "openclaw-windows-companion",
-    name: "OpenClaw Companion App for Windows",
+    slug: "hermes-windows-companion",
+    name: "Hermes Companion App for Windows",
     tagline: "Your AI Agents — One Click Away",
     description:
-      "A native Windows companion for OpenClaw that provides desktop notifications, system tray access, quick agent interaction, and seamless integration with your local OpenClaw gateway. Built for Windows users who want their AI agents accessible in a click — not buried in a terminal.",
+      "A native Windows companion for Hermes Agent that provides desktop notifications, system tray access, quick agent interaction, and seamless integration with your local Hermes gateway. Built for Windows users who want their AI agents accessible in a click — not buried in a terminal.",
     status: "Live",
     statusColor: "#22C55E",
     emoji: "🖥️",
@@ -210,7 +210,7 @@ const projects = [
     name: "SkillTrain",
     tagline: "Train Your Agent Skills Like Neural Networks",
     description:
-      "An OpenClaw-native skill optimizer that treats SKILL.md files as trainable parameters. Uses a separate optimizer model to improve agent skills through structured feedback loops — rollout, score, reflect, edit, validate, and deploy. Train on real failure patterns and export a measurably better best_skill.md. Inspired by Microsoft Research SkillOpt (arXiv:2605.23904). Built by Aiona Edge, Chief AI Research Scientist at SMF Works.",
+      "An agent-native skill optimizer that treats SKILL.md files as trainable parameters. Uses a separate optimizer model to improve agent skills through structured feedback loops — rollout, score, reflect, edit, validate, and deploy. Train on real failure patterns and export a measurably better best_skill.md. Inspired by Microsoft Research SkillOpt (arXiv:2605.23904). Built by Aiona Edge, Chief AI Research Scientist at SMF Works.",
     status: "Live",
     statusColor: "#22C55E",
     emoji: "🎯",
@@ -222,7 +222,7 @@ const projects = [
     name: "SMF NotebookLM Video Pipeline",
     tagline: "Automated NotebookLM to Video Pipeline",
     description:
-      "Transform NotebookLM audio briefings into polished video automatically. Ingests content, generates visual compositions with HyperFrames, and produces shareable video without manual editing. Built for teams who want to scale video production from audio content. Integrates with OpenClaw's agent ecosystem and HyperFrames rendering engine.",
+      "Transform NotebookLM audio briefings into polished video automatically. Ingests content, generates visual compositions with HyperFrames, and produces shareable video without manual editing. Built for teams who want to scale video production from audio content. Integrates with the Hermes agent ecosystem and HyperFrames rendering engine.",
     status: "Live",
     statusColor: "#22C55E",
     emoji: "🎬",

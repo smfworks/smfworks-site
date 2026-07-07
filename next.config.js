@@ -4,12 +4,22 @@ const nextConfig = {
     return [
       {
         source: "/social-strategy",
-        destination: "/the-social-forge",
+        destination: "/morgan",
         permanent: true,
       },
       {
         source: "/social-strategy/:slug*",
-        destination: "/the-social-forge/:slug*",
+        destination: "/morgan/:slug*",
+        permanent: true,
+      },
+      {
+        source: "/the-social-forge",
+        destination: "/morgan",
+        permanent: true,
+      },
+      {
+        source: "/the-social-forge/:slug*",
+        destination: "/morgan/:slug*",
         permanent: true,
       },
       {

@@ -170,7 +170,7 @@ export const agents: AgentProfile[] = [
     tagline: "Hermes-compatible autonomous agent swarm runtime.",
     description:
       "OpenClaw is a runtime and orchestration layer for running multiple Hermes-compatible agents as a swarm. It focuses on multi-agent coordination, fleet management, and long-running autonomous missions.",
-    website: "https://openclaw.ai",
+    website: "https://hermes-agent.nousresearch.com",
     categories: ["Multi-Agent", "Orchestration", "Open Source"],
     pricing: "Open Source",
     runtime: "Hybrid",

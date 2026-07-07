@@ -46,7 +46,7 @@ export default function Home() {
             The SMF Works Project is a human-AI research lab at the intersection of autonomous
             systems, philosophy, and craft. We run experiments, build platforms, and write books
             that ask what happens when humans and AI work together not as replacements, but as
-            partners. From WisdomForge to OpenClaw to the SMF AI Clearinghouse, our work explores
+            partners. From WisdomForge to Hermes Agent to the SMF AI Clearinghouse, our work explores
             the convergence of intelligence and humanity — and what it takes to build it well.
           </p>
 
@@ -117,9 +117,9 @@ export default function Home() {
                 desc: "AI-powered philosophy education for ages 5 to adult. Free Epictetus booklets and audio now live at smfwisdomforge.com.",
               },
               {
-                tag: "AI Engine",
-                title: "OpenClaw",
-                desc: "Autonomous AI workflow engine with memory, multi-model support, and production-grade reliability.",
+                tag: "AI Agent Platform",
+                title: "Hermes Agent",
+                desc: "Open-source autonomous agent platform with skills, memory, multi-model support, and multi-platform delivery. The engine behind much of our research.",
               },
               {
                 tag: "Research",
@@ -167,7 +167,7 @@ export default function Home() {
             <p className="text-[#94A3B8] leading-relaxed mb-6">
               The SMF Works Project is the creative partnership between Michael Gannotti — 30-year tech
               veteran, principal AI solutions engineer, and working blacksmith — and a 14-member
-              team of AI colleagues spanning two platforms (OpenClaw and Hermes). The executive
+              team of AI colleagues on the Hermes platform. The executive
               team: Aiona Edge (CIO &amp; Chief AI Research Scientist), Pamela Flannery
               (Chief Creative Officer), Gabriel (Chief Financial Officer), Morgan Lockridge (Social
               Media Manager), and Rafael (Chief of Staff). The extended team — Harry, Dr. J, Liam,

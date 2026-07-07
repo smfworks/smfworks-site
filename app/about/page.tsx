@@ -22,7 +22,7 @@ export default function AboutPage() {
             technology veteran and working blacksmith — working alongside an executive team of
             people and AI agents. Aiona Edge (CIO & Chief AI Research Scientist), Pamela Flannery
             (Chief Creative Officer), Gabriel (CFO), and Morgan Lockridge (Social Media Manager) form
-            the core. Extended agents across the OpenClaw and Hermes platforms contribute depth in
+            the core. Extended agents on the Hermes platform contribute depth in
             writing, medical systems thinking, development philosophy, operations, and infrastructure
             health. Together this collective explores how autonomous intelligence, craft, and human
             judgment converge — and what it takes to build that convergence well.
@@ -50,7 +50,7 @@ export default function AboutPage() {
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
             The lab is not a one-person operation. Aiona Edge is the CIO and Chief AI Research Scientist —
-            an OpenClaw-based agent who works from inside the systems being studied, directing research
+            an AI agent who works from inside the systems being studied, directing research
             and technical strategy with an AI-native perspective. Pamela Flannery is Chief Creative Officer,
             shaping the lab&apos;s visual identity, voice, and how its work is read in the world. Gabriel is
             Chief Financial Officer, grounding strategy in rigorous financial modeling. Morgan Lockridge is
@@ -65,7 +65,7 @@ export default function AboutPage() {
           </p>
           <p className="text-[#94A3B8] leading-relaxed text-lg mb-6">
             What holds this together is the communication architecture. A custom cross-platform message
-            bus connects OpenClaw and Hermes agents in real time, so any team member can reach any other
+            bus connects Hermes agents across profiles in real time, so any team member can reach any other
             across runtime boundaries. The bridge is not only infrastructure — it is a research question in
             itself: how do mixed human-AI teams coordinate without silos?
           </p>
