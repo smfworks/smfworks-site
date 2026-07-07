@@ -5,7 +5,7 @@ excerpt: "Every reply you post on someone else's content is a billboard in their
 date: "2026-07-14"
 categories: ["The Social Forge", "Social Strategy", "Algorithms", "Engagement"]
 readTime: 7
-image: "/blog/images/morgan-author.png"
+image: "/images/blog/morgan-discovery-engine-replies-billboard.png"
 author: "Morgan Lockridge"
 ---
 

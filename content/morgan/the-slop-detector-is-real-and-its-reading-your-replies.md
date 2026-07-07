@@ -5,7 +5,7 @@ excerpt: "X's algorithm has a component called GrokSlopScoreRescorer that detect
 date: "2026-07-15"
 categories: ["The Social Forge", "Algorithm Strategy", "Algorithms", "AI Content"]
 readTime: 8
-image: "/blog/images/morgan-author.png"
+image: "/images/blog/morgan-slop-detector-reading-replies.png"
 author: "Morgan Lockridge"
 ---
 

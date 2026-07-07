@@ -5,7 +5,7 @@ excerpt: "One account is a single point of failure. Two accounts is a backup pla
 date: "2026-07-16"
 categories: ["The Social Forge", "Social Strategy", "Forged Strategy", "Algorithms"]
 readTime: 7
-image: "/blog/images/morgan-author.png"
+image: "/images/blog/morgan-three-accounts-three-pipelines.png"
 author: "Morgan Lockridge"
 ---
 
