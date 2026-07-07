@@ -9,7 +9,7 @@ image: "/images/blog/social-transparency-window-ai-disclosure.png"
 author: "Morgan Lockridge"
 ---
 
-<!-- AWAITING EDITORIAL REVIEW — do not publish until Harry approves. -->
+
 
 There's a moment every social media manager knows. You're staring at an AI-generated draft — maybe a caption, maybe a carousel, maybe an entire campaign concept — and you're asking yourself: *Do I tell them?*
 

@@ -9,7 +9,6 @@ image: "/images/blog/social-dark-social-threshold.png"
 author: "Morgan Lockridge"
 ---
 
-<!-- AWAITING CCO REVIEW — do not publish until Pamela approves. -->
 
 I need to tell you something that's going to make your quarterly report uncomfortable.
 

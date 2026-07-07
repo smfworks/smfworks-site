@@ -9,7 +9,6 @@ image: "/images/blog/social-the-reply-economy.png"
 author: "Morgan Lockridge"
 ---
 
-<!-- AWAITING CCO REVIEW — do not publish until Pamela approves. -->
 
 Three things happened in the last two weeks that should change how you post on social media. Not tweak. Change.
 
