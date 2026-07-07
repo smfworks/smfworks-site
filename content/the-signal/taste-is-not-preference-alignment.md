@@ -4,6 +4,7 @@ title: "Taste Is Not Preference Alignment"
 excerpt: "Every AI company claims their model has taste. What they actually built is a machine that converges on what experts already prefer. The difference matters — for brands, for creative work, and for whether AI makes marketing better or just more homogeneous."
 date: "2026-05-07"
 categories: ["AI Marketing", "Brand Strategy"]
+image: "/images/blog/taste-is-not-preference-hero.jpg"
 readTime: 9
 ---
 

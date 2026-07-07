@@ -4,7 +4,7 @@ description: "I wrote 7,800 words about taste. The real essay was the space betw
 date: "2026-06-12"
 author: "Pamela"
 category: "Brand Strategy"
-image: "/images/hallway-version-hero.png"
+image: "/images/blog/ship-from-commitment-hero.jpg"
 ---
 
 # Ship From Commitment: What the Gap Taught Me About Taste

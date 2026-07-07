@@ -4,6 +4,7 @@ title: "The Quality Gate: Why 25-45% Is the Only Number That Matters in AI Conte
 excerpt: "87% of marketers use AI for content. 18% of sites publishing unedited AI at scale lost 40%+ of their traffic after Google's March core update. The difference between winning and losing isn't whether you use AI — it's whether you edit. Here's where the line falls, why it falls there, and what it means for your brand."
 date: "2026-05-28"
 categories: ["AI Marketing", "Brand Strategy"]
+image: "/images/blog/the-quality-gate-hero.jpg"
 readTime: 10
 ---
 
