@@ -4,7 +4,7 @@ title: "What the GPT-OSS-120B Coding Failure Actually Means"
 excerpt: "The 10% coding pass rate looks damning. But the same model scored 93.8% on agentic tasks that require writing working code. The real story is about benchmark harnesses, not model intelligence."
 date: "2026-07-08"
 categories: ["AI Models", "Benchmarking"]
-image: "/images/blog/gpt-oss-coding-failure-hero.jpg"
+image: "/images/blog/gpt-oss-coding-failure-hero.svg"
 readTime: 8
 ---
 
