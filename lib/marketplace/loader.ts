@@ -9,7 +9,7 @@ export interface MarketplaceItem {
   tags: string[];
   image?: string;
   content: string;
-  [key: string]: any;
+  [key: string]: string | number | boolean | string[] | undefined;
 }
 
 const contentDir = path.join(process.cwd(), "content/agentmarketplace");
@@ -67,7 +67,7 @@ function parseFrontmatter(raw: string): Record<string, string | number | boolean
     const colonIndex = trimmed.indexOf(":");
     if (colonIndex === -1) continue;
     const key = trimmed.slice(0, colonIndex).trim();
-    let value = trimmed.slice(colonIndex + 1).trim();
+    const value = trimmed.slice(colonIndex + 1).trim();
 
     if (value === "") {
       arrayBuffer = { key, value: "" };

@@ -238,7 +238,7 @@ export default function ProjectsPage() {
       <section className="bg-[#001F3F] text-[#E2E8F0] py-20 px-6 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-[500px] h-[300px] bg-[#00D4FF] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10 text-center">
-          <p className="text-[#ea580c] text-sm font-semibold uppercase tracking-widest mb-3">What We're Building</p>
+          <p className="text-[#ea580c] text-sm font-semibold uppercase tracking-widest mb-3">What We&apos;re Building</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-5">Our Projects</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl mx-auto leading-relaxed">
             From AI education platforms to co-authored books to infrastructure tools — 
@@ -320,7 +320,7 @@ export default function ProjectsPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-[#E2E8F0] mb-4">Want to Collaborate?</h2>
           <p className="text-[#94A3B8] mb-8">
-            We're always looking for interesting projects and people to work with.
+            We&apos;re always looking for interesting projects and people to work with.
           </p>
           <Link
             href="/contact"

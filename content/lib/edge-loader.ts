@@ -26,7 +26,7 @@ interface Frontmatter {
 
 function parseFrontmatter(raw: string): Frontmatter {
   const lines = raw.split("\n");
-  const result: Record<string, any> = {};
+  const result: Record<string, string | number | boolean | string[]> = {};
 
   for (const line of lines) {
     const trimmed = line.trimEnd();
@@ -61,7 +61,7 @@ function parseFrontmatter(raw: string): Frontmatter {
     }
   }
 
-  return result as Frontmatter;
+  return result as unknown as Frontmatter;
 }
 
 function parsePost(raw: string): EdgePost | undefined {

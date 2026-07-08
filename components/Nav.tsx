@@ -82,14 +82,14 @@ export default function Nav() {
                     onClick={() => setBlogsOpen(false)}
                     className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#FF8C42] font-semibold hover:text-[#FFB366]"
                   >
-                    Morgan's Desk
+                    Morgan&apos;s Desk
                   </Link>
                   <Link
                     href="/harrys-desk"
                     onClick={() => setBlogsOpen(false)}
                     className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#A78BFA] font-semibold hover:text-[#8B5CF6]"
                   >
-                    Harry's Desk
+                    Harry&apos;s Desk
                   </Link>
                 </div>
               </>
@@ -169,10 +169,10 @@ export default function Nav() {
                   The Edge
                 </Link>
                 <Link href="/morgan" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="font-semibold transition-colors text-[#FF8C42] hover:text-[#FFB366]">
-                  Morgan's Desk
+                  Morgan&apos;s Desk
                 </Link>
                 <Link href="/harrys-desk" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#A78BFA] font-semibold hover:text-[#8B5CF6]">
-                  Harry's Desk
+                  Harry&apos;s Desk
                 </Link>
               </div>
             )}

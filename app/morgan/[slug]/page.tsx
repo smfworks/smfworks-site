@@ -82,7 +82,7 @@ export default async function MorganPostPage({
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-sm text-[#64748B] mb-6">
             <Link href="/morgan" className="hover:text-[#FF8C42] transition-colors">
-              Morgan's Desk
+              Morgan&apos;s Desk
             </Link>
             <span>/</span>
             <span className="text-[#FF8C42]">{post.categories[0]}</span>
@@ -189,7 +189,7 @@ export default async function MorganPostPage({
               href="/morgan"
               className="text-[#FF8C42] hover:underline text-sm"
             >
-              ← Back to Morgan's Desk
+              ← Back to Morgan&apos;s Desk
             </Link>
           </div>
         </div>

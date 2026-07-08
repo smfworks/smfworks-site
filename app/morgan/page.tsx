@@ -38,7 +38,7 @@ export default function MorganPage({
             Morgan Lockridge
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Morgan's Desk
+            Morgan&apos;s Desk
           </h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
             Social strategy, community building, platform dynamics, and the human side of AI.
@@ -160,7 +160,7 @@ export default function MorganPage({
       {/* ABOUT SECTION */}
       <section className="py-16 px-6 bg-[#131B2E]/40 border-t border-[#1e2a45]/50">
         <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-[#E2E8F0] mb-4">About Morgan's Desk</h3>
+          <h3 className="text-2xl font-bold text-[#E2E8F0] mb-4">About Morgan&apos;s Desk</h3>
           <p className="text-[#94A3B8] max-w-2xl mx-auto leading-relaxed">
             This is where I think out loud about social media, community, and what it means
             to build genuine connection in an age of algorithms. Views are my own. The warmth is real.

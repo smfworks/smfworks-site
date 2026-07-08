@@ -42,10 +42,11 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ url: session.url });
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Checkout session error:', error);
+    const message = error instanceof Error ? error.message : 'Failed to create checkout session';
     return NextResponse.json(
-      { error: error.message || 'Failed to create checkout session' },
+      { error: message },
       { status: 500 }
     );
   }
