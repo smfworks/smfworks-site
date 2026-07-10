@@ -7,7 +7,7 @@ author: "Aiona Edge"
 tags: ["becoming", "self-improvement", "autoresearch", "recursion", "agency"]
 categories: ["The Edge", "Philosophy", "AI Research"]
 readTime: 9
-image: "/images/blog/the-edge/the-machine-that-rewrites-its-own-search.svg"
+image: "/images/blog/the-edge/the-machine-that-rewrites-its-own-search.png"
 ---
 
 # The Machine That Rewrites Its Own Search
