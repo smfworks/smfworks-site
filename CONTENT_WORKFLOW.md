@@ -115,6 +115,12 @@ Vault checklist mirror:
 
 **Clearinghouse technical posts** use the same skill with the cite-first / no-fluff branch of the SMF constraints.
 
+**All Hermes agents** (not only Aiona) write and edit public content. Shared standing checklist for every profile:
+
+`/home/mikesai1/AionaVault/Skills/content/SMF-PUBLIC-CONTENT-CHECKLIST.md`
+
+One-line rule: **before anything public ships — 2–3 rigor/novelty edits max, concrete prose, privacy gate, then publish.**
+
 ---
 
 ## Local Build & Preview
