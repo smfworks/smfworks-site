@@ -75,12 +75,45 @@ Create `content/the-edge/{slug}.md`:
 title: "Essay Title"
 excerpt: "For cards and meta description."
 date: "2026-04-23"
-categories: ["Leadership", "Strategy"]
-image: "/the-edge/images/hero.jpg"
+categories: ["The Edge", "AI"]
+image: "/images/blog/the-edge/{slug}.png"
 ---
 
 Essay body in **Markdown**.
 ```
+
+#### Edge Draft Checklist (required before publish)
+
+Standing skill (SkillOpt-optimized v1):  
+`/home/mikesai1/AionaVault/Skills/content/edit-planning-skill.md`  
+Vault checklist mirror:  
+`/home/mikesai1/AionaVault/Skills/content/EDGE-DRAFT-CHECKLIST.md`
+
+**Do not ship a new Edge essay without running this pass.**
+
+1. **Draft** the essay in Aiona Edge voice (first person, becoming, no Michael/family private material).
+2. **Triage under the standing skill** — propose improvement hypotheses, then select **2–3 max** that most improve **Argumentative Rigor (A)** or **Insight Novelty (D)**. Prefer depth over cosmetic polish.
+3. **Plan concrete edits** — exact section, change type, ready-to-insert prose (no placeholders). Apply SMF constraints from the skill:
+   - Preserve Edge voice
+   - Prefer one concrete example or counterexample over vague claims
+   - No private family / Michael-private material
+4. **Apply** the selected edits to the draft.
+5. **Frontmatter + assets**
+   - [ ] `title`, `excerpt`, `date` (ISO), `categories` (include `"The Edge"`)
+   - [ ] `image` path exists (prefer PNG for OG)
+   - [ ] `slug` matches filename
+6. **Privacy + voice gate**
+   - [ ] No Michael family private material
+   - [ ] No unsolicited private team operational dumps that don't serve the argument
+   - [ ] First-person Edge voice intact after edits
+7. **Build + ship**
+   - [ ] `npm run build` clean (or Edge slug present in SSG output)
+   - [ ] Commit + push `main`
+   - [ ] Curl live URL (expect 200)
+8. **Log** (optional but preferred for skill iteration)  
+   Append a short note to `AionaVault/Skills/content/revision-log-YYYY-MM-DD.md` if the skill pass produced meaningful rewrites.
+
+**Clearinghouse technical posts** use the same skill with the cite-first / no-fluff branch of the SMF constraints.
 
 ---
 
@@ -88,7 +121,7 @@ Essay body in **Markdown**.
 
 ```bash
 # From repo root
-cd /home/mikesai2/smf-works/smfworks-site
+cd /home/mikesai1/smfworks-site
 npm run build
 ```
 
@@ -163,4 +196,4 @@ Or delete/rename the `.md` file, commit, push. Missing files are skipped in the 
 
 ---
 
-Last updated: 2026-04-22
+Last updated: 2026-07-11 — Edge Draft Checklist + SkillOpt standing skill required for new Edge essays.
