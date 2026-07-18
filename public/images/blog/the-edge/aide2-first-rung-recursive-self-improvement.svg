@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract recursive improvement ladder</title>
+  <desc id="desc">Four luminous ascending platforms emerge from nested orbital loops on a dark indigo field, suggesting measured progress through levels of recursive self-improvement.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="52%" r="72%">
+      <stop offset="0" stop-color="#162246"/>
+      <stop offset="0.55" stop-color="#0b1029"/>
+      <stop offset="1" stop-color="#050817"/>
+    </radialGradient>
+    <linearGradient id="step" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8cf5f4"/>
+      <stop offset="0.52" stop-color="#9b8cff"/>
+      <stop offset="1" stop-color="#d770ff"/>
+    </linearGradient>
+    <linearGradient id="orbit" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#75e7f0" stop-opacity="0.18"/>
+      <stop offset="0.5" stop-color="#b7a1ff" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#ea79ff" stop-opacity="0.18"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <pattern id="stars" width="92" height="76" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="13" r="1" fill="#d9fbff" opacity="0.32"/>
+      <circle cx="51" cy="39" r="0.8" fill="#cbbcff" opacity="0.28"/>
+      <circle cx="80" cy="65" r="0.65" fill="#ffffff" opacity="0.22"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#stars)" opacity="0.72"/>
+
+  <!-- diffuse horizon -->
+  <ellipse cx="610" cy="492" rx="430" ry="72" fill="#7858ff" opacity="0.13" filter="url(#soft)"/>
+
+  <!-- recursive outer loops -->
+  <g fill="none" stroke-linecap="round">
+    <ellipse cx="600" cy="330" rx="452" ry="170" stroke="url(#orbit)" stroke-width="3" transform="rotate(-5 600 330)"/>
+    <ellipse cx="600" cy="330" rx="356" ry="129" stroke="#73e3ef" stroke-opacity="0.42" stroke-width="2" transform="rotate(9 600 330)"/>
+    <ellipse cx="600" cy="330" rx="258" ry="92" stroke="#bd8bff" stroke-opacity="0.48" stroke-width="2" transform="rotate(-13 600 330)"/>
+    <path d="M194 328 C333 161 867 151 1011 316" stroke="#8cf5f4" stroke-opacity="0.44" stroke-width="5" stroke-dasharray="92 20 29 16"/>
+    <path d="M230 384 C421 514 817 499 984 341" stroke="#b477ff" stroke-opacity="0.46" stroke-width="5" stroke-dasharray="68 18 22 14"/>
+  </g>
+
+  <!-- four measured levels -->
+  <g filter="url(#glow)">
+    <path d="M294 437 L501 437 L553 397 L346 397 Z" fill="#0c1838" stroke="url(#step)" stroke-width="4"/>
+    <path d="M424 351 L621 351 L671 313 L474 313 Z" fill="#0d1939" stroke="url(#step)" stroke-width="4"/>
+    <path d="M558 269 L746 269 L794 233 L606 233 Z" fill="#0f1a3d" stroke="url(#step)" stroke-width="4"/>
+    <path d="M696 190 L873 190 L919 155 L742 155 Z" fill="#111d42" stroke="url(#step)" stroke-width="4"/>
+  </g>
+
+  <!-- connectors and level markers -->
+  <g fill="none" stroke="url(#step)" stroke-width="3" stroke-linecap="round" opacity="0.82">
+    <path d="M496 397 C509 376 532 362 558 351"/>
+    <path d="M616 313 C629 292 651 278 676 269"/>
+    <path d="M741 233 C754 213 776 199 800 190"/>
+  </g>
+  <g fill="#efffff" filter="url(#glow)">
+    <circle cx="391" cy="417" r="6"/>
+    <circle cx="520" cy="332" r="6"/>
+    <circle cx="651" cy="251" r="6"/>
+    <circle cx="786" cy="173" r="6"/>
+  </g>
+
+  <!-- deliberate pause at level one -->
+  <circle cx="520" cy="332" r="31" fill="none" stroke="#8cf5f4" stroke-width="2" opacity="0.5"/>
+  <circle cx="520" cy="332" r="47" fill="none" stroke="#a884ff" stroke-width="1.5" opacity="0.28"/>
+
+  <!-- central selection signal -->
+  <g filter="url(#glow)">
+    <circle cx="600" cy="330" r="7" fill="#ffffff"/>
+    <circle cx="600" cy="330" r="23" fill="none" stroke="#d6faff" stroke-opacity="0.44"/>
+  </g>
+</svg>
