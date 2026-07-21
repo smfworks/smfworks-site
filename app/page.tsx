@@ -71,10 +71,36 @@ export default function Home() {
               Explore the Work
             </Link>
             <Link
+              href="/books"
+              className="bg-[#C9A96E] text-[#0A0F1F] px-8 py-3.5 rounded-lg font-semibold text-center hover:bg-[#D4B87A] transition-all shadow-lg shadow-[#C9A96E]/25"
+            >
+              📚 Browse Books
+            </Link>
+            <Link
               href="/the-signal"
               className="border border-[#E2E8F0]/10 text-[#E2E8F0] px-8 py-3.5 rounded-lg font-semibold text-center hover:border-[#ea580c]/30 hover:bg-[#ea580c]/5 transition-all"
             >
               Read The Signal →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* BOOKSTORE CALLOUT */}
+      <section className="relative z-10 bg-[#0A1628] border-y border-[#1e2a45]/50 py-16 px-6">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+          <div className="text-6xl">📚</div>
+          <div className="flex-1 text-center md:text-left">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#E2E8F0] mb-3">Books direct from the author</h2>
+            <p className="text-[#94A3B8] leading-relaxed mb-5">
+              Michael&apos;s ebooks and PDFs are now available directly from SMF Works — no platform gatekeepers,
+              no unnecessary middlemen. Buy once, download instantly, keep forever.
+            </p>
+            <Link
+              href="/books"
+              className="inline-block text-[#C9A96E] font-semibold hover:underline"
+            >
+              Browse the bookstore →
             </Link>
           </div>
         </div>

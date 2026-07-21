@@ -19,6 +19,7 @@ export default function Nav() {
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
           <Link href="/" className="hover:text-[#ea580c] transition-colors">Home</Link>
           <Link href="/work" className="hover:text-[#ea580c] transition-colors">Work</Link>
+          <Link href="/books" className="hover:text-[#ea580c] transition-colors text-[#C9A96E] font-semibold">Books</Link>
           <a
             href="https://smfwisdomforge.com"
             target="_blank"
@@ -123,6 +124,7 @@ export default function Nav() {
         <div className="md:hidden px-6 pb-4 flex flex-col gap-4 text-sm font-medium border-t border-[#1e2a45] bg-[#001F3F]">
           <Link href="/" onClick={() => setOpen(false)} className="hover:text-[#ea580c] pt-4">Home</Link>
           <Link href="/work" onClick={() => setOpen(false)} className="hover:text-[#ea580c]">Work</Link>
+          <Link href="/books" onClick={() => setOpen(false)} className="hover:text-[#ea580c] text-[#C9A96E] font-semibold">Books</Link>
           <a
             href="https://smfwisdomforge.com"
             target="_blank"

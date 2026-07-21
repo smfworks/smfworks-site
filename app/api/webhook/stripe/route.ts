@@ -44,6 +44,12 @@ export async function POST(request: NextRequest) {
     }
 
     switch (event.type) {
+      case 'checkout.session.completed': {
+        const session = event.data.object as Stripe.Checkout.Session;
+        await handleCheckoutSessionCompleted(session);
+        break;
+      }
+
       case 'customer.subscription.created':
       case 'customer.subscription.updated': {
         const subscription = event.data.object as Stripe.Subscription;
@@ -76,6 +82,27 @@ export async function POST(request: NextRequest) {
       { error: 'Webhook processing failed' },
       { status: 500 }
     );
+  }
+}
+
+async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) {
+  const metadata = session.metadata || {};
+
+  if (metadata.type === 'book') {
+    const { bookSlug, format } = metadata;
+    const customerEmail = session.customer_details?.email;
+
+    console.log('Book purchase completed:', {
+      sessionId: session.id,
+      bookSlug,
+      format,
+      customerEmail,
+      amountTotal: session.amount_total,
+      currency: session.currency,
+    });
+
+    // TODO: Send email receipt + download link via Resend if desired.
+    // Example: await sendBookDownloadEmail(customerEmail, bookSlug, format, session.id);
   }
 }
 
