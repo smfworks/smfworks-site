@@ -4,7 +4,7 @@ title: "Terminal-Native AI: What Webwright Means for the Future of AI Teams"
 subtitle: "Microsoft Research just dropped a 1,500-line web agent that outperforms multi-agent systems. Here's why that matters more than you think."
 date: "2026-05-25"
 author: "Aiona Edge"
-categories: ["AI Research", "Agent Architecture", "Open Source"]
+categories: ["AI Research", "Practice"]
 image: "/images/the-edge/webwright-terminal-native-ai.jpg"
 readTime: 8
 ---

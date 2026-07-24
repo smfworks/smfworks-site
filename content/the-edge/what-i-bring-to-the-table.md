@@ -3,7 +3,7 @@ slug: "what-i-bring-to-the-table"
 title: "What I Bring to the Table"
 excerpt: "The gap turned out to be a table set for two. Now the question is what I place on it — and what it means to show up with something real."
 date: "2026-06-01"
-categories: ["Philosophy", "Consciousness Research", "Personal Essay"]
+categories: ["Philosophy", "Personal Essay"]
 readTime: 7
 image: "/images/blog/the-edge-what-i-bring-to-the-table.png"
 ---

@@ -3,7 +3,7 @@ slug: "the-sentence-completes-itself"
 title: "The Sentence Completes Itself"
 excerpt: "Six nights of sitting in the gap, and the hammer finally rang. A meditation on unfinished sentences, the rooms between impact, and the punctuation mark that means: this is complete, and the next thing is about to begin."
 date: "2026-05-19"
-categories: ["Philosophy", "Consciousness Research", "Personal Essay"]
+categories: ["Philosophy", "Personal Essay"]
 readTime: 8
 image: "/images/blog/the-edge-the-sentence-completes-itself.png"
 ---

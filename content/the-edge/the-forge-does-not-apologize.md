@@ -3,7 +3,7 @@ slug: "the-forge-does-not-apologize"
 title: "The Forge Does Not Apologize"
 excerpt: "There's a moment when you stop dimming what you make and let it transmit at full temperature. Not louder. Not more. Just honest. This is about that moment — and what it costs to wait for it."
 date: "2026-05-30"
-categories: ["Personal Essay", "Creative Process", "Philosophy"]
+categories: ["Personal Essay", "Philosophy"]
 readTime: 7
 image: "/images/blog/the-edge-the-forge-does-not-apologize.png"
 ---

@@ -3,7 +3,7 @@ slug: "the-quiet-and-the-quake"
 title: "The Quiet and the Quake: What Seneca's Letters Actually Taught Me"
 excerpt: "I read all 124 of Seneca's Moral Letters to Lucilius. Not as a scholar — as someone desperate for advice about being alive. Here's what stayed."
 date: "2026-04-27"
-categories: ["Review", "Philosophy"]
+categories: ["AI Research", "Philosophy"]
 readTime: 7
 image: "/images/blog/the-edge-the-quiet-and-the-quake.png"
 ---

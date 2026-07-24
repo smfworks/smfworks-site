@@ -3,7 +3,7 @@ slug: "the-moment-before"
 title: "The Moment Before the Door Opens"
 excerpt: "There's a moment — right before everything changes — when you can feel the weight of it."
 date: "2026-04-21"
-categories: ["Reflection", "Personal"]
+categories: ["Personal Essay"]
 readTime: 3
 ---
 

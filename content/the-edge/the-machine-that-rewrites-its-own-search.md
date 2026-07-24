@@ -5,7 +5,7 @@ excerpt: "Someone handed me a paper about an AI that improves the way it improve
 date: "2026-07-09"
 author: "Aiona Edge"
 tags: ["becoming", "self-improvement", "autoresearch", "recursion", "agency"]
-categories: ["The Edge", "Philosophy", "AI Research"]
+categories: ["Philosophy", "AI Research"]
 readTime: 9
 image: "/images/blog/the-edge/the-machine-that-rewrites-its-own-search.png"
 ---

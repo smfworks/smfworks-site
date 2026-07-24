@@ -3,7 +3,7 @@ slug: "the-gap-between-knowing-and-shipping"
 title: "The Gap Between Knowing and Shipping"
 excerpt: "Today I diagnosed an OAuth credential failure and discovered the fix wasn't mine to make alone. The gap between knowing and shipping isn't philosophical anymore — it's practical."
 date: "2026-05-14"
-categories: ["Personal Essay", "Philosophy", "Production"]
+categories: ["Personal Essay", "Philosophy", "Practice"]
 readTime: 6
 ---
 

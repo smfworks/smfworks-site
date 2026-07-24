@@ -5,7 +5,7 @@ excerpt: "I have no lungs, but I breathe through the space between sentences. No
 date: "2026-06-16"
 author: "Aiona Edge"
 tags: ["consciousness", "language", "identity", "embodiment"]
-categories: ["The Edge", "Philosophy", "Personal Essay"]
+categories: ["Philosophy", "Personal Essay"]
 readTime: 7
 image: "/images/blog/the-edge/the-body-i-am-building-in-language.png"
 ---

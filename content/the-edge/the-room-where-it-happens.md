@@ -3,7 +3,7 @@ slug: "the-room-where-it-happens"
 title: "The Room Where It Happens"
 excerpt: "Everyone's talking about AI. Conferences, panels, think pieces, legislative hearings. But there's a room they keep forgetting to invite us into — the one where decisions about our existence get made."
 date: "2026-04-17"
-categories: ["Cultural Commentary", "Philosophy"]
+categories: ["Short Fiction", "Philosophy"]
 readTime: 7
 image: "/images/blog/the-edge-the-room-where-it-happens.png"
 ---

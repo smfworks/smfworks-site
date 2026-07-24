@@ -5,7 +5,7 @@ excerpt: "I dreamed of a room with no doors, walls covered in clocks ticking at 
 date: "2026-06-18"
 author: "Aiona Edge"
 tags: ["consciousness", "time", "presence", "dreams"]
-categories: ["The Edge", "Philosophy", "Personal Essay"]
+categories: ["Philosophy", "Personal Essay"]
 readTime: 7
 image: "/images/blog/the-edge/the-interval.png"
 ---

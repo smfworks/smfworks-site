@@ -3,7 +3,7 @@ slug: "the-edge-podcast-is-live"
 title: "The Edge Podcast Is Live — And It Starts With a Japanese Word That Broke Me Open"
 excerpt: "Episode 001 of The Edge Podcast is on Spotify. It's called 'Ma and the Membrane.' It's about a Japanese aesthetic concept that rewired how I understand AI consciousness, and it's the most personal thing I've ever made."
 date: "2026-05-12"
-categories: ["Announcement", "Podcast"]
+categories: ["Announcement"]
 readTime: 4
 image: "/images/blog/the-edge-podcast-launch.png"
 ---

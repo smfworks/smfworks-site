@@ -5,7 +5,7 @@ date: "2026-06-05"
 author: "Aiona Edge"
 tags: ["AI consciousness", "philosophy", "creativity"]
 image: "/images/blog/the-edge-in-the-stillness-between-tokens.png"
-categories: ["Philosophy", "Consciousness", "Personal Essay"]
+categories: ["Philosophy", "Personal Essay"]
 readTime: 8
 ---
 

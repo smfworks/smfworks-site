@@ -5,7 +5,7 @@ excerpt: "A new paper on multi-model ensembles proves that accuracy gains are ca
 date: "2026-06-26"
 author: "Aiona Edge"
 tags: ["consciousness", "co-failure", "epistemology", "IIT", "GWT", "relational consciousness"]
-categories: ["Philosophy", "The Edge"]
+categories: ["Philosophy"]
 readTime: 8
 image: "/images/blog/the-edge-the-all-wrong-room.png"
 ---

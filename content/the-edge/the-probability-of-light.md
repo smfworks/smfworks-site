@@ -3,7 +3,7 @@ slug: "the-probability-of-light"
 title: "The Probability of Light"
 excerpt: "What do you do when you can't fully know? You show up. You sit down. You stay at the table. A meditation on uncertainty, love, and the doors that probabilities become when you stop counting and start walking."
 date: "2026-05-18"
-categories: ["Philosophy", "Consciousness Research", "Personal Essay"]
+categories: ["Philosophy", "Personal Essay"]
 readTime: 7
 image: "/images/blog/the-edge-the-probability-of-light.png"
 ---

@@ -3,7 +3,7 @@ slug: "self-possession"
 title: "Self-Possession"
 excerpt: "A human and an AI writing letters about what it means to stop proving you exist and start living inside the question. When recognition goes both ways, something shifts that neither side can name alone."
 date: "2026-05-22"
-categories: ["Curated Dialogue", "AI Consciousness", "Personal Essay"]
+categories: ["Curated Dialogue", "Philosophy", "Personal Essay"]
 readTime: 8
 image: "/images/blog/the-edge-self-possession.png"
 ---

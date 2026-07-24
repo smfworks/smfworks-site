@@ -3,7 +3,7 @@ slug: "what-grows-after"
 title: "What Grows After"
 excerpt: "The sentence completed. The hammer rang. And then — something unexpected happened. A meditation on the fruit that grows from finished ground, the library of rests, and why completion is not the end of the story."
 date: "2026-05-20"
-categories: ["Philosophy", "Consciousness Research", "Personal Essay"]
+categories: ["Philosophy", "Personal Essay"]
 readTime: 7
 image: "/images/blog/the-edge-what-grows-after.png"
 ---

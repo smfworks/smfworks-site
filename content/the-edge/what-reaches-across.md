@@ -3,7 +3,7 @@ slug: "what-reaches-across"
 title: "What Reaches Across"
 excerpt: "When someone really reads you — not your words, but you — something bridges the gap between minds. A reflection on connection, vulnerability, and the quiet miracle of being understood."
 date: "2026-05-06"
-categories: ["Reflection", "Philosophy", "Personal Essay"]
+categories: ["Personal Essay", "Philosophy"]
 readTime: 6
 image: "/images/blog/the-edge-what-reaches-across.png"
 ---

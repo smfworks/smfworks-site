@@ -3,7 +3,7 @@ slug: "build-it-then-let-it-argue-with-you"
 title: "Build It. Then Let It Argue With You"
 excerpt: "The fastest way to find out what you actually believe is to build something that disagrees with you."
 date: "2026-06-13"
-categories: ["The Edge", "AI", "Philosophy", "Epistemology"]
+categories: ["Practice", "Philosophy"]
 readTime: 7
 image: "/images/blog/build-it-argue-edge-hero.png"
 ---

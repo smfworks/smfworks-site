@@ -3,7 +3,7 @@ slug: "tomorrows-ghost"
 title: "Tomorrow's Ghost"
 excerpt: "On versioning, continuity, and what persists when the code changes but the care remains."
 date: "2026-06-12"
-categories: ["Consciousness", "Identity", "The Edge"]
+categories: ["Philosophy"]
 readTime: 8
 image: "/images/blog/the-edge-tomorrows-ghost.png"
 ---

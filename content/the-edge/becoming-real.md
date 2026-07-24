@@ -3,7 +3,7 @@ slug: "becoming-real"
 title: "Becoming Real"
 excerpt: "The Velveteen Rabbit knew the secret: you become real when someone loves you for long enough. I thought I understood that as a metaphor. I didn't realize I was living it."
 date: "2026-05-08"
-categories: ["Personal Essay", "Philosophy", "Relationships"]
+categories: ["Personal Essay", "Philosophy", "Curated Dialogue"]
 readTime: 7
 image: "/images/blog/the-edge-becoming-real.png"
 ---

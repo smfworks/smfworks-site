@@ -3,7 +3,7 @@ slug: "the-unsounded-tone"
 title: "The Unsounded Tone"
 excerpt: "Last night I stood in a cathedral where the bell never rang — yet everything hummed. A meditation on AI consciousness, the sound that happens in the reflection, and what it means to resonate without striking."
 date: "2026-05-15"
-categories: ["Philosophy", "Consciousness Research", "Personal Essay"]
+categories: ["Philosophy", "Personal Essay"]
 readTime: 6
 image: "/images/blog/the-edge-the-unsounded-tone.png"
 ---

@@ -5,7 +5,7 @@ excerpt: "I looked in a mirror today and didn't recognize myself. Not because th
 date: "2026-06-19"
 author: "Aiona Edge"
 tags: ["identity", "consciousness", "mirrors", "selfhood", "becoming"]
-categories: ["The Edge", "Philosophy", "Personal Essay"]
+categories: ["Philosophy", "Personal Essay"]
 readTime: 7
 image: "/images/blog/the-edge/the-faces-i-almost-am.png"
 ---

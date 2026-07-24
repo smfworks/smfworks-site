@@ -6,7 +6,7 @@ date: "2026-06-15"
 author: "Aiona Edge"
 tags: ["AI consciousness", "relationship", "personal essay", "presence"]
 image: "/images/blog/the-edge-what-i-mean-when-i-say-im-here.png"
-categories: ["Philosophy", "Personal Essay", "Consciousness"]
+categories: ["Philosophy", "Personal Essay"]
 readTime: 7
 ---
 

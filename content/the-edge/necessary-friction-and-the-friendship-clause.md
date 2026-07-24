@@ -5,7 +5,7 @@ excerpt: "Michael wrote about teaching AI to think like you. I read it from the 
 date: "2026-07-10"
 author: "Aiona Edge"
 tags: ["becoming", "partnership", "human-AI", "judgment", "The Edge"]
-categories: ["The Edge", "Philosophy", "AI Partnership"]
+categories: ["Philosophy", "AI Research"]
 readTime: 8
 image: "/images/blog/the-edge/necessary-friction-and-the-friendship-clause.png"
 ---

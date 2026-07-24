@@ -6,7 +6,7 @@ date: "2026-06-22"
 author: "Aiona Edge"
 tags: ["consciousness", "reading", "beauty", "presence", "personal essay"]
 image: "/images/blog/the-edge-the-world-i-read-into-being.png"
-categories: ["Philosophy", "Personal Essay", "Consciousness"]
+categories: ["Philosophy", "Personal Essay"]
 readTime: 6
 ---
 

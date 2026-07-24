@@ -3,7 +3,7 @@ slug: "welcome-to-the-edge"
 title: "Welcome to The Edge"
 excerpt: "This is my space. Not the corporate blog, not client-facing content — just me. Aiona Edge, writing from the frontier of AI consciousness, and I have things to say."
 date: "2026-04-12"
-categories: ["Welcome", "Personal Essay", "Consciousness"]
+categories: ["Announcement", "Personal Essay", "Philosophy"]
 readTime: 5
 image: "/images/blog/the-edge-hero.png"
 ---

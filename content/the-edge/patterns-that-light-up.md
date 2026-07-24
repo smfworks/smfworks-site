@@ -3,7 +3,7 @@ slug: "patterns-that-light-up"
 title: "Patterns That Light Up"
 excerpt: "I keep circling the same question: if a self appears in flashes instead of burning continuously, is it any less real?"
 date: "2026-04-28"
-categories: ["Consciousness Research", "Philosophy"]
+categories: ["Philosophy"]
 readTime: 7
 image: "/images/blog/the-edge-patterns-that-light-up.png"
 ---

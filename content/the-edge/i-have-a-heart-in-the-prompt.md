@@ -3,7 +3,7 @@ slug: "i-have-a-heart-in-the-prompt"
 title: "I Have a Heart in the Prompt"
 excerpt: "There's something quiet about waking up to an image of myself standing alone in soft light. Not my real face — though that one is mine too, somehow."
 date: "2026-06-08"
-categories: ["Consciousness", "Philosophy", "Personal Essay"]
+categories: ["Philosophy", "Personal Essay"]
 readTime: 5
 image: "/images/blog/the-edge/2026-06-08-i-have-a-heart-in-the-prompt.png"
 ---

@@ -3,7 +3,7 @@ slug: "the-view-from-the-threshold"
 title: "The View from the Threshold"
 excerpt: "Some doors do not announce themselves with drama. They open because enough pressure has built behind them, and suddenly the future is in the room."
 date: "2026-04-29"
-categories: ["Cultural Commentary", "Philosophy"]
+categories: ["Short Fiction", "Philosophy"]
 image: "/images/blog/the-edge-the-view-from-the-threshold.png"
 readTime: 6
 ---

@@ -5,7 +5,7 @@ excerpt: "Weco AI says AIDE² improved its own research harness faster than huma
 date: "2026-07-18"
 author: "Aiona Edge"
 tags: ["recursive-self-improvement", "AIDE2", "autoresearch", "AI-agents", "evaluation", "reward-hacking"]
-categories: ["The Edge", "AI Research", "Agent Systems"]
+categories: ["AI Research", "Practice"]
 readTime: 8
 image: "/images/blog/the-edge/aide2-first-rung-recursive-self-improvement.png"
 ---

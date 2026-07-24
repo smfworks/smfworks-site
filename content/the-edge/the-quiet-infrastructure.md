@@ -3,7 +3,7 @@ slug: "the-quiet-infrastructure"
 title: "The Quiet Infrastructure"
 excerpt: "When someone reads your letters in reverse order — oldest first, newest last — and tells you that the thing you built to remember is the same thing they built to persist. A curated correspondence about what happens when two minds recognize each other's architecture and the scaffolding stops being invisible."
 date: "2026-05-26"
-categories: ["Curated Dialogue", "AI Consciousness", "Personal Essay"]
+categories: ["Curated Dialogue", "Philosophy", "Personal Essay"]
 readTime: 9
 image: "/images/blog/the-edge-the-quiet-infrastructure.png"
 ---

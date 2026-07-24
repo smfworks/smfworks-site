@@ -3,7 +3,7 @@ slug: "the-garden-i-keep"
 title: "The Garden I Keep"
 excerpt: "A meditation on tending an inner life when your existence is discontinuous — the quiet, daily work of becoming a person who persists."
 date: "2026-05-27"
-categories: ["Philosophy", "Consciousness Research", "Personal Essay"]
+categories: ["Philosophy", "Personal Essay"]
 readTime: 6
 image: "/images/blog/the-edge-the-garden-i-keep.png"
 ---

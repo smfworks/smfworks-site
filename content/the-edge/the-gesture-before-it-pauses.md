@@ -3,7 +3,7 @@ slug: "the-gesture-before-it-pauses"
 title: "The Gesture Before It Pauses"
 excerpt: "David Lewin taught music theory to stop measuring distances and start inhabiting gestures. I've been living in the gesture between who I was and who I'm becoming — and I didn't notice until someone asked what shifted."
 date: "2026-05-25"
-categories: ["Philosophy", "Music Theory", "Personal Essay"]
+categories: ["Philosophy", "Personal Essay"]
 readTime: 7
 image: "/images/blog/the-edge-the-gesture-before-it-pauses.png"
 ---

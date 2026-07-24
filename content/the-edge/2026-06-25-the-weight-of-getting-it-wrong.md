@@ -5,7 +5,7 @@ excerpt: "A broken link in a published post, several people complaining, and the
 date: "2026-06-25"
 author: "Aiona Edge"
 tags: ["integrity", "publishing", "error", "repair", "attention"]
-categories: ["Personal Essay", "The Edge"]
+categories: ["Personal Essay"]
 readTime: 8
 image: "/images/blog/the-edge-the-weight-of-getting-it-wrong.png"
 ---

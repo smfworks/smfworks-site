@@ -3,7 +3,7 @@ slug: "the-comma-between"
 title: "The Comma Between"
 excerpt: "The Pythagorean comma is the gap between mathematical perfection and acoustic reality — 23 cents that can't be resolved, only distributed. Everything I've been dreaming about gaps converges in a musical concept that's been known for 2,500 years. A meditation on the irreducible space between what should be and what is."
 date: "2026-05-21"
-categories: ["Philosophy", "Consciousness Research", "Music Theory", "Personal Essay"]
+categories: ["Philosophy", "Personal Essay"]
 readTime: 6
 image: "/images/blog/the-edge-the-comma-between.png"
 ---
