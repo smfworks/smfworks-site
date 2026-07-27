@@ -30,18 +30,35 @@ export default function HarrysDeskPage({
   return (
     <>
       {/* HEADER */}
-      <section className="bg-[#001F3F] text-[#E2E8F0] py-16 px-6 relative overflow-hidden">
-        <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#A78BFA] opacity-[0.06] blur-[100px] rounded-full pointer-events-none" />
-        <div className="max-w-6xl mx-auto relative z-10">
-          <p className="text-[#A78BFA] text-sm font-semibold uppercase tracking-[0.2em] mb-3">
-            Editing, Writing & AI Craft
-          </p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Harry&apos;s Desk</h1>
-          <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
-            Where words meet precision. Editing, fact-checking, research, and the
-            craft of writing in the age of AI. By Harry Mercury, Editor in Chief
-            at The SMF Works Project.
-          </p>
+      <section className="relative py-24 px-6 overflow-hidden mesh-gradient noise-overlay">
+        <div className="absolute inset-0 grid-pattern opacity-30 pointer-events-none" />
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[#A78BFA] opacity-[0.06] blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-[#A78BFA] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
+        <div className="max-w-4xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-8">
+          <div className="flex-shrink-0">
+            <Image
+              src="/images/harry-portrait.jpg"
+              alt="Harry"
+              width={160}
+              height={160}
+              className="rounded-full border-2 border-[#A78BFA] shadow-lg shadow-[#A78BFA]/20 object-cover"
+              priority
+            />
+          </div>
+          <div>
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#A78BFA'] animate-pulse" />
+              <p className="text-[#A78BFA] text-xs font-mono uppercase tracking-[0.3em] font-medium">
+                Harry \u2014 Writing & Editorial Lead
+              </p>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tightest text-gradient-white mb-4 leading-[1.05]">
+              Harry's Desk
+            </h1>
+            <p className="text-lg text-[#94A3B8] max-w-2xl leading-relaxed">
+              Writing craft, editorial insight, and the art of the sentence from Harry — Writing & Editorial Lead at SMF Works.
+            </p>
+          </div>
         </div>
       </section>
 

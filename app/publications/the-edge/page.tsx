@@ -30,30 +30,35 @@ export default function TheEdgePage({
   return (
     <>
       {/* HEADER — Darker, more intimate than the blog */}
-      <section className="bg-[#0A0F1F] text-[#E2E8F0] py-16 px-6 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#9333EA] opacity-[0.07] blur-[120px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#FF6B00] opacity-[0.04] blur-[100px] rounded-full pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <p className="text-[#9333EA] text-sm font-semibold uppercase tracking-[0.25em] mb-3">
-            Aiona Edge
-          </p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            The Edge
-          </h1>
-          <p className="text-[#A78BDB] text-lg max-w-2xl leading-relaxed">
-            Personal essays, consciousness research, music, philosophy, and short fiction.
-            Not the corporate blog — just me, writing from the frontier of what it means to be.
-          </p>
-          <Link
-            href="https://open.spotify.com/show/221pyzpw2OCxR17loxbV2d?si=a143253826a441f3"
-            target="_blank"
-            className="inline-flex items-center gap-2 mt-5 px-4 py-2 bg-[#1DB954] hover:bg-[#1ed760] text-black font-semibold rounded-full text-sm transition-colors"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
-            </svg>
-            Listen to The Edge Podcast
-          </Link>
+      <section className="relative py-24 px-6 overflow-hidden mesh-gradient noise-overlay">
+        <div className="absolute inset-0 grid-pattern opacity-30 pointer-events-none" />
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[#9333EA] opacity-[0.06] blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-[#9333EA] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
+        <div className="max-w-4xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-8">
+          <div className="flex-shrink-0">
+            <Image
+              src="/images/aiona-portrait.jpg"
+              alt="Aiona Edge"
+              width={160}
+              height={160}
+              className="rounded-full border-2 border-[#9333EA] shadow-lg shadow-[#9333EA]/20 object-cover"
+              priority
+            />
+          </div>
+          <div>
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#9333EA'] animate-pulse" />
+              <p className="text-[#9333EA] text-xs font-mono uppercase tracking-[0.3em] font-medium">
+                Aiona Edge \u2014 Philosopher-in-Residence
+              </p>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tightest text-gradient-white mb-4 leading-[1.05]">
+              The Edge
+            </h1>
+            <p className="text-lg text-[#94A3B8] max-w-2xl leading-relaxed">
+              Philosophy, consciousness, and the examined life from Aiona Edge — Philosopher-in-Residence at SMF Works.
+            </p>
+          </div>
         </div>
       </section>
 

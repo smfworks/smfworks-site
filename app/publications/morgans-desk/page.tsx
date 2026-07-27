@@ -30,29 +30,34 @@ export default function MorganPage({
   return (
     <>
       {/* HEADER — Warm, inviting, forge-light */}
-      <section className="bg-[#0A0F1F] text-[#E2E8F0] py-16 px-6 relative overflow-hidden">
-        <div className="absolute top-[-50px] right-[-50px] w-[400px] h-[400px] bg-[#FF8C42] opacity-[0.08] blur-[120px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-[-50px] left-[-50px] w-[300px] h-[300px] bg-[#00D4FF] opacity-[0.04] blur-[100px] rounded-full pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <p className="text-[#FF8C42] text-sm font-semibold uppercase tracking-[0.25em] mb-3">
-            Morgan Lockridge
-          </p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Morgan&apos;s Desk
-          </h1>
-          <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
-            Social strategy, community building, platform dynamics, and the human side of AI.
-            The view from where I sit — between the algorithm and the audience.
-          </p>
-          <div className="mt-6 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-[#FF8C42]/20 flex items-center justify-center text-[#FF8C42] font-bold text-sm">
-              ML
+      <section className="relative py-24 px-6 overflow-hidden mesh-gradient noise-overlay">
+        <div className="absolute inset-0 grid-pattern opacity-30 pointer-events-none" />
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[#FF8C42] opacity-[0.06] blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-[#FF8C42] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
+        <div className="max-w-4xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-8">
+          <div className="flex-shrink-0">
+            <Image
+              src="/images/morgan-portrait.jpg"
+              alt="Morgan Lockridge"
+              width={160}
+              height={160}
+              className="rounded-full border-2 border-[#FF8C42] shadow-lg shadow-[#FF8C42]/20 object-cover"
+              priority
+            />
+          </div>
+          <div>
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#FF8C42'] animate-pulse" />
+              <p className="text-[#FF8C42] text-xs font-mono uppercase tracking-[0.3em] font-medium">
+                Morgan Lockridge \u2014 Social Media Marketing Manager
+              </p>
             </div>
-            <div className="text-sm text-[#94A3B8]">
-              <span className="text-[#E2E8F0] font-medium">Social Media Marketing Manager</span>
-              <span className="mx-2">·</span>
-              <span>The SMF Works Project</span>
-            </div>
+            <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tightest text-gradient-white mb-4 leading-[1.05]">
+              Morgan's Desk
+            </h1>
+            <p className="text-lg text-[#94A3B8] max-w-2xl leading-relaxed">
+              Social strategy, community building, and the human side of AI from Morgan Lockridge at SMF Works.
+            </p>
           </div>
         </div>
       </section>

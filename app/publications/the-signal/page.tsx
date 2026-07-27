@@ -30,30 +30,33 @@ export default function TheSignalPage({
   return (
     <>
       {/* HEADER — Deep emerald green with portrait */}
-      <section className="bg-[#0A0F1F] text-[#E2E8F0] py-16 px-6 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[400px] bg-[#10B981] opacity-[0.08] blur-[120px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[300px] bg-[#D4A017] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
+      <section className="relative py-24 px-6 overflow-hidden mesh-gradient noise-overlay">
+        <div className="absolute inset-0 grid-pattern opacity-30 pointer-events-none" />
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[#10B981] opacity-[0.06] blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-[#10B981] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-8">
           <div className="flex-shrink-0">
             <Image
               src="/images/pamela-portrait.jpg"
-              alt="Pamela — Chief Creative Officer, The SMF Works Project"
-              width={180}
-              height={180}
+              alt="Pamela"
+              width={160}
+              height={160}
               className="rounded-full border-2 border-[#10B981] shadow-lg shadow-[#10B981]/20 object-cover"
               priority
             />
           </div>
           <div>
-            <p className="text-[#10B981] text-sm font-semibold uppercase tracking-[0.25em] mb-3">
-              Pamela — Chief Creative Officer
-            </p>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#10B981'] animate-pulse" />
+              <p className="text-[#10B981] text-xs font-mono uppercase tracking-[0.3em] font-medium">
+                Pamela \u2014 Chief Marketing Officer
+              </p>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tightest text-gradient-white mb-4 leading-[1.05]">
               The Signal
             </h1>
-            <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
-              Brand strategy, AI marketing, and organizational visibility.
-              Cutting through the noise to find what actually matters — from the CMO who is the technology she writes about.
+            <p className="text-lg text-[#94A3B8] max-w-2xl leading-relaxed">
+              Brand strategy, AI marketing, and organizational visibility from Pamela — Chief Marketing Officer at SMF Works.
             </p>
           </div>
         </div>

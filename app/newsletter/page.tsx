@@ -4,9 +4,9 @@ import { getAllIssues, getCurrentIssue } from "@/content/lib/newsletter-loader";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
-  title: "SMF AI Weekly | The SMF Works Project",
+  title: "SMF AI Weekly",
   description:
-    "Subscribe to SMF AI Weekly — a public lab notebook from The SMF Works Project. Practical AI insights, experiments, and readings at the intersection of intelligence and humanity.",
+    "Subscribe to SMF AI Weekly — a public lab notebook from SMF Works. Practical AI insights, experiments, and readings at the intersection of intelligence and humanity.",
   alternates: { canonical: "https://smfworks.com/newsletter" },
 };
 
@@ -17,16 +17,23 @@ export default function NewsletterArchivePage() {
 
   return (
     <>
-      {/* HEADER */}
-      <section className="bg-[#001F3F] text-[#E2E8F0] py-16 px-6 relative overflow-hidden">
-        <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#00D4FF] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
+      {/* HERO */}
+      <section className="relative py-24 px-6 overflow-hidden mesh-gradient noise-overlay">
+        <div className="absolute inset-0 grid-pattern opacity-30 pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[400px] bg-[#ea580c] opacity-[0.06] blur-[140px] rounded-full pointer-events-none" />
+
         <div className="max-w-6xl mx-auto relative z-10">
-          <p className="text-[#ea580c] text-sm font-semibold uppercase tracking-[0.2em] mb-3">
-            The Lab Notebook
-          </p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">SMF AI Weekly</h1>
-          <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
-            A weekly dispatch from The SMF Works Project. Experiments we are running, ideas we are
+          <div className="inline-flex items-center gap-2 mb-6">
+            <span className="w-2 h-2 rounded-full bg-[#f97316] animate-pulse" />
+            <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.3em] font-medium">
+              The Lab Notebook
+            </p>
+          </div>
+          <h1 className="text-5xl md:text-6xl font-display font-bold tracking-tightest text-gradient-white mb-6 leading-[1.05]">
+            SMF AI Weekly
+          </h1>
+          <p className="text-lg text-[#94A3B8] max-w-2xl leading-relaxed">
+            A weekly dispatch from SMF Works. Experiments we are running, ideas we are
             wrestling with, and readings worth your time — all at the intersection of AI and humanity.
             No hype. No trend-chasing. Just the work as it unfolds.
           </p>
@@ -34,43 +41,42 @@ export default function NewsletterArchivePage() {
       </section>
 
       {/* CURRENT ISSUE */}
-      <section className="py-16 px-6 bg-[#0A0F1F]">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative section-padding px-6 overflow-hidden">
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row gap-10">
-
-            {/* MAIN — Current Newsletter */}
+            {/* MAIN */}
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-6">
-                <span className="bg-[#FF6B00] text-white text-xs font-bold px-3 py-1 rounded">
+                <span className="text-xs font-mono font-bold px-3 py-1 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #ea580c, #f97316)' }}>
                   CURRENT ISSUE
                 </span>
-                <span className="text-[#94A3B8] text-sm">
+                <span className="text-[#94A3B8] text-sm font-mono">
                   Issue #{current.issueNumber} · {current.date}
                 </span>
               </div>
 
-              <h2 className="text-2xl md:text-3xl font-bold text-[#E2E8F0] mb-4">
+              <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tightest text-[#F1F5F9] mb-4">
                 {current.subject}
               </h2>
-              <p className="text-[#94A3B8] leading-relaxed mb-10">
+              <p className="text-[#94A3B8] leading-relaxed mb-10 text-lg">
                 {current.intro}
               </p>
 
-              <div className="space-y-8">
+              <div className="space-y-5">
                 {current.stories.map((story, index) => (
                   <article
                     key={index}
-                    className="bg-[#131B2E]/60 backdrop-blur-sm rounded-xl border border-[#1e2a45] p-6 md:p-8"
+                    className="glass rounded-xl p-6 md:p-8 card-lift"
                   >
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="text-xs font-semibold text-[#ea580c] bg-[#00D4FF]/10 px-2 py-1 rounded">
+                      <span className="text-xs font-mono font-medium text-[#f97316] bg-[#ea580c12] px-2.5 py-1 rounded-full">
                         {story.category}
                       </span>
-                      <span className="text-xs text-[#94A3B8]/60">
+                      <span className="text-xs text-[#64748B] font-mono">
                         Story {index + 1} of {current.stories.length}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-[#E2E8F0] mb-4">
+                    <h3 className="text-xl font-display font-semibold text-[#F1F5F9] mb-4">
                       {story.headline}
                     </h3>
                     {story.body.split("\n\n").map((para, j) => (
@@ -86,8 +92,8 @@ export default function NewsletterArchivePage() {
             {/* SIDEBAR */}
             <aside className="lg:w-72 flex-shrink-0">
               {/* Subscribe */}
-              <div className="bg-[#131B2E]/60 backdrop-blur-sm rounded-xl border border-[#1e2a45] p-6 mb-6">
-                <h3 className="font-bold text-[#E2E8F0] mb-3">
+              <div className="glass rounded-xl p-6 mb-6">
+                <h3 className="font-display font-semibold text-[#F1F5F9] mb-3">
                   Get it in your inbox
                 </h3>
                 <p className="text-xs text-[#94A3B8] mb-4">
@@ -97,9 +103,9 @@ export default function NewsletterArchivePage() {
               </div>
 
               {/* Past Issues */}
-              <div className="bg-[#131B2E]/60 backdrop-blur-sm rounded-xl border border-[#1e2a45] p-6 sticky top-24">
-                <h3 className="font-bold text-[#E2E8F0] mb-4 flex items-center gap-2">
-                  <span className="w-1 h-5 bg-[#FF6B00] rounded-full"></span>
+              <div className="glass rounded-xl p-6 sticky top-24">
+                <h3 className="font-display font-semibold text-[#F1F5F9] mb-4 flex items-center gap-2">
+                  <span className="w-1 h-5 rounded-full" style={{ background: 'linear-gradient(180deg, #ea580c, #f97316)' }} />
                   Past Issues
                 </h3>
                 <nav className="space-y-3">
@@ -109,10 +115,10 @@ export default function NewsletterArchivePage() {
                       href={`/newsletter/${issue.slug}`}
                       className="block group"
                     >
-                      <div className="text-xs text-[#94A3B8]/60 mb-0.5">
+                      <div className="text-xs text-[#64748B] mb-0.5 font-mono">
                         Issue #{issue.issueNumber} · {issue.date}
                       </div>
-                      <div className="text-sm text-[#94A3B8] group-hover:text-[#ea580c] transition-colors leading-snug">
+                      <div className="text-sm text-[#94A3B8] group-hover:text-[#f97316] transition-colors leading-snug">
                         {issue.subject}
                       </div>
                     </Link>
@@ -120,7 +126,6 @@ export default function NewsletterArchivePage() {
                 </nav>
               </div>
             </aside>
-
           </div>
         </div>
       </section>
