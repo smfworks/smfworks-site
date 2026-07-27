@@ -77,7 +77,7 @@ export default function BooksPage() {
               Looking for free essays, research, and experiments?
             </p>
             <Link
-              href="/the-signal"
+              href="/publications/the-signal"
               className="inline-block border border-[#E2E8F0]/10 text-[#E2E8F0] px-6 py-3 rounded-lg font-medium hover:border-[#ea580c]/30 hover:bg-[#ea580c]/5 transition-all"
             >
               Read The Signal →

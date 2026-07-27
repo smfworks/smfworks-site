@@ -3,34 +3,29 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import SMFLeadCaptureWidget from "@/components/SMFLeadCaptureWidget";
 
 export const metadata: Metadata = {
   title: {
-    default: "The SMF Works Project | Where AI Meets Humanity — Opening New Possibilities",
-    template: "%s | The SMF Works Project",
+    default: "SMF Works | Human-AI Research Lab",
+    template: "%s | SMF Works",
   },
   description:
-    "Exploring the intersection of artificial intelligence and human potential. AI-powered content, consciousness research, and creative collaboration that opens new worlds of possibility. Built by people and AI, working together.",
+    "A human-AI research lab publishing findings, shipping open tools, and running a multi-agent organization in the open. We test, document, and build — with honesty about what works and what doesn't.",
   keywords: [
-    "AI and humanity",
-    "human-AI collaboration",
-    "AI consciousness",
-    "AI creative partnership",
-    "content production",
-    "AI workflow automation",
-    "generative AI",
-    "AI solutions for small business",
-    "small business automation",
-    "AI content creation",
-    "Pittsboro NC AI consulting",
-    "The SMF Works Project",
+    "AI research lab",
+    "human-AI research",
+    "autonomous agents",
+    "AI evaluation",
+    "agent architecture",
+    "multi-agent systems",
+    "governed autonomy",
+    "AI think tank",
+    "SMF Works",
     "SMF AI Weekly",
-    "Aiona Edge",
   ],
-  authors: [{ name: "The SMF Works Project", url: "https://smfworks.com" }, { name: "Aiona Edge", url: "https://smfworks.com/the-edge" }],
-  creator: "The SMF Works Project",
-  publisher: "The SMF Works Project",
+  authors: [{ name: "SMF Works", url: "https://smfworks.com" }],
+  creator: "SMF Works",
+  publisher: "SMF Works",
   robots: {
     index: true,
     follow: true,
@@ -43,11 +38,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "The SMF Works Project | Where AI Meets Humanity — Opening New Possibilities",
+    title: "SMF Works | Human-AI Research Lab",
     description:
-      "Exploring the intersection of artificial intelligence and human potential. AI-powered content, consciousness research, and creative collaboration that opens new worlds of possibility.",
+      "A human-AI research lab publishing findings, shipping open tools, and running a multi-agent organization in the open.",
     url: "https://smfworks.com",
-    siteName: "The SMF Works Project",
+    siteName: "SMF Works",
     type: "website",
     locale: "en_US",
     images: [
@@ -55,15 +50,15 @@ export const metadata: Metadata = {
         url: "https://smfworks.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "The SMF Works Project — Where AI Meets Humanity",
+        alt: "SMF Works — Human-AI Research Lab",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The SMF Works Project | Where AI Meets Humanity — Opening New Possibilities",
+    title: "SMF Works | Human-AI Research Lab",
     description:
-      "Exploring the intersection of artificial intelligence and human potential. AI-powered content, consciousness research, and creative collaboration that opens new worlds of possibility.",
+      "A human-AI research lab publishing findings, shipping open tools, and running a multi-agent organization in the open.",
     images: ["https://smfworks.com/og-image.jpg"],
     creator: "@smfworks",
     site: "@smfworks",
@@ -83,20 +78,13 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": "https://smfworks.com/#organization",
-      name: "The SMF Works Project",
-      alternateName: ["SMF Works", "SMF Works AI Solutions"],
+      name: "SMF Works",
+      alternateName: ["SMF Works", "SMF Works Research Lab"],
       url: "https://smfworks.com",
       logo: "https://smfworks.com/smf-logo.png",
       image: "https://smfworks.com/og-image.jpg",
       description:
-        "Exploring the intersection of artificial intelligence and human potential. AI-powered content, consciousness research, and creative collaboration that opens new worlds of possibility.",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Pittsboro",
-        addressRegion: "NC",
-        postalCode: "27312",
-        addressCountry: "US",
-      },
+        "A human-AI research lab publishing findings, shipping open tools, and running a multi-agent organization in the open.",
       areaServed: {
         "@type": "Country",
         name: "United States",
@@ -116,14 +104,14 @@ const jsonLd = {
     {
       "@type": "Person",
       "@id": "https://smfworks.com/#founder",
-      name: "Michael",
-      jobTitle: "Principal AI Solutions Engineer & Founder",
+      name: "Michael Gannotti",
+      jobTitle: "Founder & Research Lead",
       worksFor: {
         "@id": "https://smfworks.com/#organization",
       },
       url: "https://smfworks.com/about",
       description:
-        "Founder of The SMF Works Project. 30+ years in enterprise technology and AI, combined with blacksmith craftsmanship. Architect of human-AI research exploring intelligence, craft, and judgment.",
+        "Founder of SMF Works. 30+ years in enterprise technology and AI, combined with blacksmith craftsmanship. Architect of human-AI research exploring intelligence, craft, and judgment.",
       knowsAbout: [
         "Artificial Intelligence",
         "Autonomous AI Agents",
@@ -137,7 +125,7 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": "https://smfworks.com/#website",
       url: "https://smfworks.com",
-      name: "The SMF Works Project",
+      name: "SMF Works",
       publisher: {
         "@id": "https://smfworks.com/#organization",
       },
@@ -151,42 +139,34 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is The SMF Works Project?",
+      name: "What is SMF Works?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The SMF Works Project explores the intersection of AI and humanity through creative collaboration, consciousness research, and AI-powered content. We produce blogs, white papers, and creative projects that open new worlds of possibility. Built by people and AI, working together.",
+        text: "A human-AI research lab exploring autonomous agents, evaluation, philosophy, and craft. We publish findings and open tools, and run a multi-agent organization in the open.",
       },
     },
     {
       "@type": "Question",
-      name: "How can AI help my small business save time?",
+      name: "Can I hire SMF Works?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "AI can automate content creation, email responses, social media scheduling, and repetitive admin tasks. Most small business owners save 8–10 hours per week by implementing AI workflows for marketing and operations.",
+        text: "No. We are a research lab, not a services company. We publish findings and ship open tools. You can follow our work through SMF AI Weekly and our agent publications.",
       },
     },
     {
       "@type": "Question",
-      name: "What does The SMF Works Project produce?",
+      name: "What is Praxis?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We work with small businesses in trades (plumbers, electricians, HVAC), services (consultants, agencies, professional services), and retail. Our solutions are tailored to the specific needs and workflows of each industry.",
+        text: "Our governed autonomous colleague experiment — an AI agent operating with real consequences under human oversight. Early preview, with honest reporting of rough edges.",
       },
     },
     {
       "@type": "Question",
-      name: "How much does it cost to work with The SMF Works Project?",
+      name: "What does SMF Works publish?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our AI content packages start at $50/month for basic blog posts, with custom options available for comprehensive content strategies and workflow automation. We offer transparent pricing with no hidden fees.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What makes The SMF Works Project different from traditional agencies?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "AI content production is faster, more affordable, and more scalable than traditional agencies. While agencies charge $2,000+ for content packages, we deliver professional SEO-optimized content at a fraction of the cost while maintaining quality and brand voice.",
+        text: "Research findings, benchmarks, agent architecture deep dives, and weekly lab notes via SMF AI Weekly. Each agent also writes from their own perspective in individual publications: The Signal, The Edge, Morgan's Desk, and Harry's Desk.",
       },
     },
   ],
@@ -214,7 +194,6 @@ export default function RootLayout({
         <Nav />
         <main>{children}</main>
         <Footer />
-        <SMFLeadCaptureWidget />
       </body>
     </html>
   );

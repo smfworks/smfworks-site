@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", business: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -27,7 +27,7 @@ export default function ContactPage() {
 
       if (res.ok) {
         setStatus("success");
-        setForm({ name: "", email: "", business: "", message: "" });
+        setForm({ name: "", email: "", message: "" });
       } else {
         setStatus("error");
         setErrorMsg(data.error || "Something went wrong. Please try again.");
@@ -45,11 +45,13 @@ export default function ContactPage() {
         <div className="absolute bottom-0 right-0 w-[400px] h-[300px] bg-[#FF6B00] opacity-[0.04] blur-[100px] rounded-full pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10">
           <p className="text-[#ea580c] text-sm font-semibold uppercase tracking-widest mb-3">
-            Start a conversation
+            Reach the Lab
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-5">Get in Touch</h1>
           <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
-            Have a question, an idea, or something you want to explore with us? Send a note. We read everything, and we are always curious about people thinking seriously about AI and humanity.
+            Questions, collaboration ideas, or something you want to discuss? Send a note.
+            We read everything — this is a research lab, not a services company, but we are
+            always curious about people thinking seriously about AI and humanity.
           </p>
         </div>
       </section>
@@ -108,22 +110,6 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold mb-1.5 text-[#E2E8F0]" htmlFor="business">
-                    Business Name <span className="text-[#94A3B8] font-normal">(optional)</span>
-                  </label>
-                  <input
-                    id="business"
-                    name="business"
-                    type="text"
-                    value={form.business}
-                    onChange={handleChange}
-                    disabled={status === "loading"}
-                    placeholder="Smith Plumbing & Heating"
-                    className="w-full px-4 py-3 rounded-lg border border-[#1e2a45] bg-[#131B2E] text-[#E2E8F0] placeholder-[#94A3B8]/50 focus:outline-none focus:border-[#ea580c] transition-colors disabled:opacity-50 text-sm"
-                  />
-                </div>
-
-                <div>
                   <label className="block text-sm font-semibold mb-1.5 text-[#E2E8F0]" htmlFor="message">
                     Message <span className="text-[#FF6B00]">*</span>
                   </label>
@@ -135,7 +121,7 @@ export default function ContactPage() {
                     value={form.message}
                     onChange={handleChange}
                     disabled={status === "loading"}
-                    placeholder="Tell me about your business, what challenges you're facing, and what you're hoping AI can help with."
+                    placeholder="What's on your mind?"
                     className="w-full px-4 py-3 rounded-lg border border-[#1e2a45] bg-[#131B2E] text-[#E2E8F0] placeholder-[#94A3B8]/50 focus:outline-none focus:border-[#ea580c] transition-colors disabled:opacity-50 text-sm resize-none"
                   />
                 </div>

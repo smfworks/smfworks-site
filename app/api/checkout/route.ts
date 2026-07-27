@@ -26,8 +26,8 @@ export async function POST(request: NextRequest) {
           quantity: 1,
         },
       ],
-      success_url: `${baseUrl}/dashboard?success=true&session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${baseUrl}/dashboard?canceled=true`,
+      success_url: `${baseUrl}/newsletter?success=true&session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${baseUrl}/books?canceled=true`,
       metadata: {
         tier: 'pro',
         skills: '*',
