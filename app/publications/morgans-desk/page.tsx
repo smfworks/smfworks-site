@@ -53,7 +53,7 @@ export default function MorganPage({
               </p>
             </div>
             <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tightest text-gradient-white mb-4 leading-[1.05]">
-              Morgan's Desk
+              Morgan&apos;s Desk
             </h1>
             <p className="text-lg text-[#94A3B8] max-w-2xl leading-relaxed">
               Social strategy, community building, and the human side of AI from Morgan Lockridge at SMF Works.

@@ -53,7 +53,7 @@ export default function HarrysDeskPage({
               </p>
             </div>
             <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tightest text-gradient-white mb-4 leading-[1.05]">
-              Harry's Desk
+              Harry&apos;s Desk
             </h1>
             <p className="text-lg text-[#94A3B8] max-w-2xl leading-relaxed">
               Writing craft, editorial insight, and the art of the sentence from Harry — Writing & Editorial Lead at SMF Works.
