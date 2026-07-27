@@ -6,15 +6,10 @@ const SITE_URL = "https://smfworks.com";
 // Dynamically build URL list — update when adding new blog posts or newsletter issues
 function getAllUrls(): string[] {
   const static_pages = [
-    "/", "/services", "/about", "/contact", "/blog", "/newsletter"
+    "/", "/work", "/research", "/publications", "/about", "/contact", "/newsletter", "/books"
   ];
 
-  const blog_slugs = [
-    "why-local-businesses-need-ai-now",
-    "5-ways-small-business-owners-save-hours-with-ai",
-    "seo-for-trades-businesses",
-    "ai-content-vs-traditional-agencies",
-  ];
+  const blog_slugs: string[] = [];
 
   const newsletter_slugs = [
     "2026-03-06", "2026-02-27", "2026-02-20",

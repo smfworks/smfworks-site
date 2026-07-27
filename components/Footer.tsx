@@ -30,16 +30,22 @@ const SOCIAL_LINKS = [
   },
 ];
 
+const ECOSYSTEM_LINKS = [
+  { label: "AI Clearinghouse", href: "https://www.smfclearinghouse.com/", external: true },
+  { label: "WisdomForge", href: "https://smfwisdomforge.com", external: true },
+  { label: "GitHub", href: "https://github.com/smfworks", external: true },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-[#001F3F] text-[#E2E8F0] py-12 border-t border-[#1e2a45]">
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="md:col-span-1">
           <div className="text-xl font-bold mb-2 text-[#E2E8F0]">
-            The SMF Works Project
+            SMF Works
           </div>
           <p className="text-sm text-[#94A3B8] leading-relaxed mb-5">
-            A human-AI research lab exploring the intersection of intelligence, craft, and humanity.
+            A human-AI research lab publishing findings, shipping open tools, and running a multi-agent organization in the open.
           </p>
           {/* Social Icons */}
           <div className="flex items-center gap-3 flex-wrap">
@@ -61,26 +67,45 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-3 text-[#ea580c]">Navigate</h4>
           <ul className="space-y-2 text-sm text-[#94A3B8]">
-            <li><Link href="/books" className="hover:text-[#E2E8F0] transition-colors">Books</Link></li>
             <li><Link href="/work" className="hover:text-[#E2E8F0] transition-colors">Work</Link></li>
-            <li><Link href="/the-signal" className="hover:text-[#E2E8F0] transition-colors">The Signal</Link></li>
+            <li><Link href="/research" className="hover:text-[#E2E8F0] transition-colors">Research</Link></li>
+            <li><Link href="/publications" className="hover:text-[#E2E8F0] transition-colors">Publications</Link></li>
+            <li><Link href="/books" className="hover:text-[#E2E8F0] transition-colors">Books</Link></li>
             <li><Link href="/about" className="hover:text-[#E2E8F0] transition-colors">About</Link></li>
-            <li><Link href="/contact" className="hover:text-[#E2E8F0] transition-colors">Contact</Link></li>
             <li><Link href="/newsletter" className="hover:text-[#E2E8F0] transition-colors">SMF AI Weekly</Link></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="font-semibold mb-3 text-[#ea580c]">Get in Touch</h4>
+          <h4 className="font-semibold mb-3 text-[#ea580c]">Ecosystem</h4>
           <ul className="space-y-2 text-sm text-[#94A3B8]">
+            {ECOSYSTEM_LINKS.map((link) => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#E2E8F0] transition-colors"
+                >
+                  {link.label} ↗
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="font-semibold mb-3 text-[#ea580c]">Reach the Lab</h4>
+          <ul className="space-y-2 text-sm text-[#94A3B8]">
+            <li><Link href="/contact" className="hover:text-[#E2E8F0] transition-colors">Contact form</Link></li>
             <li><a href="mailto:michael@smfworks.com" className="hover:text-[#E2E8F0] transition-colors">michael@smfworks.com</a></li>
-            <li className="text-[#94A3B8]/60">Pittsboro, NC</li>
+            <li><Link href="/privacy" className="hover:text-[#E2E8F0] transition-colors">Privacy</Link></li>
           </ul>
         </div>
       </div>
 
       <div className="max-w-6xl mx-auto px-6 mt-10 pt-6 border-t border-[#1e2a45] text-center text-xs text-[#94A3B8]/40">
-        © {new Date().getFullYear()} The SMF Works Project. All rights reserved.
+        © {new Date().getFullYear()} SMF Works. All rights reserved.
       </div>
     </footer>
   );

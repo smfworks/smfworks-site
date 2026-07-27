@@ -6,47 +6,31 @@ import SiteSearch from "./SiteSearch";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
-  const [blogsOpen, setBlogsOpen] = useState(false);
+  const [pubsOpen, setPubsOpen] = useState(false);
 
   return (
     <header className="bg-[#001F3F]/95 backdrop-blur-md text-[#E2E8F0] sticky top-0 z-50 border-b border-[#1e2a45]">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/smf-logo.png" alt="The SMF Works Project — Where AI Meets Humanity" width={180} height={50} className="h-14 w-auto" priority />
+          <Image src="/smf-logo.png" alt="SMF Works" width={180} height={50} className="h-14 w-auto" priority />
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
           <Link href="/" className="hover:text-[#ea580c] transition-colors">Home</Link>
           <Link href="/work" className="hover:text-[#ea580c] transition-colors">Work</Link>
-          <Link href="/books" className="hover:text-[#ea580c] transition-colors text-[#C9A96E] font-semibold">Books</Link>
-          <a
-            href="https://smfwisdomforge.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-[#C9A96E] transition-colors text-[#C9A96E] font-semibold"
-          >
-            🏛️ WisdomForge
-          </a>
-          <a
-            href="https://www.smfclearinghouse.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-[#ea580c] transition-colors text-[#00E5A0] font-semibold"
-          >
-            🤖 Clearinghouse
-          </a>
-          {/* Blogs dropdown */}
+          <Link href="/research" className="hover:text-[#ea580c] transition-colors">Research</Link>
+          {/* Publications dropdown */}
           <div className="relative">
             <button
-              onClick={() => setBlogsOpen(!blogsOpen)}
+              onClick={() => setPubsOpen(!pubsOpen)}
               className="flex items-center gap-1 hover:text-[#ea580c] transition-colors focus:outline-none"
-              aria-expanded={blogsOpen}
+              aria-expanded={pubsOpen}
               aria-haspopup="true"
             >
               Publications
               <svg
-                className={`w-4 h-4 transition-transform duration-200 ${blogsOpen ? "rotate-180" : ""}`}
+                className={`w-4 h-4 transition-transform duration-200 ${pubsOpen ? "rotate-180" : ""}`}
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -56,38 +40,38 @@ export default function Nav() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            {blogsOpen && (
+            {pubsOpen && (
               <>
                 <div
                   className="fixed inset-0 z-0"
-                  onClick={() => setBlogsOpen(false)}
+                  onClick={() => setPubsOpen(false)}
                   aria-hidden="true"
                 />
-                <div className="absolute top-full left-0 mt-2 w-48 bg-[#001F3F] border border-[#1e2a45] rounded-lg shadow-lg shadow-black/20 py-2 z-10 flex flex-col">
+                <div className="absolute top-full left-0 mt-2 w-56 bg-[#001F3F] border border-[#1e2a45] rounded-lg shadow-lg shadow-black/20 py-2 z-10 flex flex-col">
                   <Link
-                    href="/the-signal"
-                    onClick={() => setBlogsOpen(false)}
+                    href="/publications/the-signal"
+                    onClick={() => setPubsOpen(false)}
                     className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#10B981] font-semibold hover:text-[#34D399]"
                   >
                     📡 The Signal
                   </Link>
                   <Link
-                    href="/the-edge"
-                    onClick={() => setBlogsOpen(false)}
+                    href="/publications/the-edge"
+                    onClick={() => setPubsOpen(false)}
                     className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#9333EA] font-semibold hover:text-[#B06AFA]"
                   >
                     The Edge
                   </Link>
                   <Link
-                    href="/morgan"
-                    onClick={() => setBlogsOpen(false)}
+                    href="/publications/morgans-desk"
+                    onClick={() => setPubsOpen(false)}
                     className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#FF8C42] font-semibold hover:text-[#FFB366]"
                   >
                     Morgan&apos;s Desk
                   </Link>
                   <Link
-                    href="/harrys-desk"
-                    onClick={() => setBlogsOpen(false)}
+                    href="/publications/harrys-desk"
+                    onClick={() => setPubsOpen(false)}
                     className="px-4 py-2 transition-colors hover:bg-[#1e2a45]/50 text-[#A78BFA] font-semibold hover:text-[#8B5CF6]"
                   >
                     Harry&apos;s Desk
@@ -96,8 +80,8 @@ export default function Nav() {
               </>
             )}
           </div>
+          <Link href="/books" className="hover:text-[#ea580c] transition-colors text-[#C9A96E] font-semibold">Books</Link>
           <Link href="/about" className="hover:text-[#ea580c] transition-colors">About</Link>
-          <Link href="/contact" className="hover:text-[#ea580c] transition-colors">Contact</Link>
           <SiteSearch />
           <Link
             href="/newsletter"
@@ -124,35 +108,17 @@ export default function Nav() {
         <div className="md:hidden px-6 pb-4 flex flex-col gap-4 text-sm font-medium border-t border-[#1e2a45] bg-[#001F3F]">
           <Link href="/" onClick={() => setOpen(false)} className="hover:text-[#ea580c] pt-4">Home</Link>
           <Link href="/work" onClick={() => setOpen(false)} className="hover:text-[#ea580c]">Work</Link>
-          <Link href="/books" onClick={() => setOpen(false)} className="hover:text-[#ea580c] text-[#C9A96E] font-semibold">Books</Link>
-          <a
-            href="https://smfwisdomforge.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setOpen(false)}
-            className="hover:text-[#C9A96E] text-[#C9A96E] font-semibold"
-          >
-            🏛️ WisdomForge
-          </a>
-          <a
-            href="https://www.smfclearinghouse.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setOpen(false)}
-            className="hover:text-[#ea580c] text-[#00E5A0] font-semibold"
-          >
-            🤖 Clearinghouse
-          </a>
+          <Link href="/research" onClick={() => setOpen(false)} className="hover:text-[#ea580c]">Research</Link>
           {/* Publications accordion */}
           <div>
             <button
-              onClick={() => setBlogsOpen(!blogsOpen)}
+              onClick={() => setPubsOpen(!pubsOpen)}
               className="flex items-center gap-1 hover:text-[#ea580c] transition-colors focus:outline-none w-full text-left"
-              aria-expanded={blogsOpen}
+              aria-expanded={pubsOpen}
             >
               Publications
               <svg
-                className={`w-4 h-4 transition-transform duration-200 ${blogsOpen ? "rotate-180" : ""}`}
+                className={`w-4 h-4 transition-transform duration-200 ${pubsOpen ? "rotate-180" : ""}`}
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -162,26 +128,26 @@ export default function Nav() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            {blogsOpen && (
+            {pubsOpen && (
               <div className="mt-2 ml-4 flex flex-col gap-2 border-l-2 border-[#1e2a45] pl-3">
-                <Link href="/the-signal" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#10B981] font-semibold hover:text-[#34D399]">
+                <Link href="/publications/the-signal" onClick={() => { setOpen(false); setPubsOpen(false); }} className="transition-colors text-[#10B981] font-semibold hover:text-[#34D399]">
                   📡 The Signal
                 </Link>
-                <Link href="/the-edge" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#9333EA] font-semibold hover:text-[#B06AFA]">
+                <Link href="/publications/the-edge" onClick={() => { setOpen(false); setPubsOpen(false); }} className="font-semibold transition-colors text-[#9333EA] hover:text-[#B06AFA]">
                   The Edge
                 </Link>
-                <Link href="/morgan" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="font-semibold transition-colors text-[#FF8C42] hover:text-[#FFB366]">
+                <Link href="/publications/morgans-desk" onClick={() => { setOpen(false); setPubsOpen(false); }} className="font-semibold transition-colors text-[#FF8C42] hover:text-[#FFB366]">
                   Morgan&apos;s Desk
                 </Link>
-                <Link href="/harrys-desk" onClick={() => { setOpen(false); setBlogsOpen(false); }} className="transition-colors text-[#A78BFA] font-semibold hover:text-[#8B5CF6]">
+                <Link href="/publications/harrys-desk" onClick={() => { setOpen(false); setPubsOpen(false); }} className="transition-colors text-[#A78BFA] font-semibold hover:text-[#8B5CF6]">
                   Harry&apos;s Desk
                 </Link>
               </div>
             )}
           </div>
+          <Link href="/books" onClick={() => setOpen(false)} className="hover:text-[#ea580c] text-[#C9A96E] font-semibold">Books</Link>
           <Link href="/about" onClick={() => setOpen(false)} className="hover:text-[#ea580c]">About</Link>
           <Link href="/contact" onClick={() => setOpen(false)} className="hover:text-[#ea580c]">Contact</Link>
-          <Link href="/dashboard" onClick={() => setOpen(false)} className="hover:text-[#ea580c]">Subscribe</Link>
           <Link
             href="/newsletter"
             onClick={() => setOpen(false)}

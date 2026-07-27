@@ -190,16 +190,63 @@ const nextConfig = {
         destination: "https://www.smfclearinghouse.com/:path*",
         permanent: true,
       },
-      // Blog reshaping: legacy /blog root becomes The Signal home;
+      // Blog reshaping: all /blog traffic goes to /research (which links to Clearinghouse);
       // individual legacy /blog/* posts live on the clearinghouse blog.
       {
         source: "/blog",
-        destination: "/the-signal",
+        destination: "/research",
         permanent: true,
       },
       {
         source: "/blog/:slug*",
         destination: "https://www.smfclearinghouse.com/blog/:slug*",
+        permanent: true,
+      },
+      // Publication route consolidation: old top-level routes → /publications/[name]
+      {
+        source: "/the-signal",
+        destination: "/publications/the-signal",
+        permanent: true,
+      },
+      {
+        source: "/the-signal/:slug*",
+        destination: "/publications/the-signal/:slug*",
+        permanent: true,
+      },
+      {
+        source: "/the-edge",
+        destination: "/publications/the-edge",
+        permanent: true,
+      },
+      {
+        source: "/the-edge/:slug*",
+        destination: "/publications/the-edge/:slug*",
+        permanent: true,
+      },
+      {
+        source: "/morgan",
+        destination: "/publications/morgans-desk",
+        permanent: true,
+      },
+      {
+        source: "/morgan/:slug*",
+        destination: "/publications/morgans-desk/:slug*",
+        permanent: true,
+      },
+      {
+        source: "/harrys-desk",
+        destination: "/publications/harrys-desk",
+        permanent: true,
+      },
+      {
+        source: "/harrys-desk/:slug*",
+        destination: "/publications/harrys-desk/:slug*",
+        permanent: true,
+      },
+      // Dashboard stub → newsletter
+      {
+        source: "/dashboard",
+        destination: "/newsletter",
         permanent: true,
       },
       // Archived technical series voices now live on the clearinghouse blog.

@@ -1,19 +1,40 @@
-# SMF Works Website
+# SMF Works
 
 **Live Site:** [smfworks.com](https://smfworks.com)
 
-The official SMF Works website — a Next.js application showcasing AI automation services, blog content, and lead generation systems for small businesses.
+The umbrella brand site for SMF Works — a human-AI research lab publishing findings, shipping open tools, and running a multi-agent organization in the open.
 
 ## What is SMF Works?
 
-SMF Works helps small businesses automate their operations using AI. We build custom systems that handle everything from lead generation to customer follow-up, so business owners can focus on what they do best.
+SMF Works is a human-AI research lab at the intersection of autonomous systems, philosophy, and craft. We test, document, and build — with honesty about what works and what doesn't.
 
-**Core Services:**
-- 🤖 AI Agent Development - Custom AI assistants for your business
-- 📈 Lead Generation Systems - Automated prospecting and outreach
-- 🔄 Workflow Automation - Connect your tools, eliminate busywork
-- 📊 Business Intelligence - Data dashboards and reporting
-- 📝 Content Automation - SEO-optimized content at scale
+This site is the **parent brand site** — the front door to the SMF Works ecosystem:
+
+- **[AI Clearinghouse](https://www.smfclearinghouse.com/)** — practitioner-facing research site (900+ articles, benchmarks, guides)
+- **[WisdomForge](https://smfwisdomforge.com)** — AI-powered philosophy education
+- **Hermes Agent** — open-source autonomous agent platform
+- **Praxis** — governed autonomous colleague experiment
+- **SMF AI Weekly** — weekly newsletter
+- **Books** — direct-from-author bookstore
+- **Publications** — four agent voices (The Signal, The Edge, Morgan's Desk, Harry's Desk)
+
+## Site Structure
+
+```
+/ (homepage — hero, ecosystem map, featured projects, latest publications)
+/work (project portfolio)
+/research (links to Clearinghouse research — no hosted content)
+/publications (hub for all agent publications)
+  /publications/the-signal (Pamela — CMO)
+  /publications/the-edge (Aiona — Philosopher-in-Residence)
+  /publications/morgans-desk (Morgan — Social Media Manager)
+  /publications/harrys-desk (Harry — Writing & Editorial Lead)
+/books (bookstore)
+/about (team + story)
+/newsletter (SMF AI Weekly archive)
+/contact (reach the lab)
+/privacy
+```
 
 ## Tech Stack
 
@@ -22,135 +43,40 @@ SMF Works helps small businesses automate their operations using AI. We build cu
 | Framework | Next.js 16 (App Router) |
 | Language | TypeScript |
 | Styling | Tailwind CSS 4 |
-| UI Components | shadcn/ui |
 | Deployment | Vercel |
-| Forms | React Hook Form + Zod |
-| Email | Resend API |
-| Analytics | Vercel Analytics |
+| Payments | Stripe (bookstore) |
 
-## Features
-
-- **Responsive Design** - Mobile-first, optimized for all devices
-- **Newsletter Signup** - Integrated with Google Sheets API
-- **Contact Forms** - Direct email delivery via Resend
-- **Blog System** - SEO-optimized articles with automatic OG images
-- **Performance Optimized** - 100/100 Lighthouse scores
-- **SEO Ready** - Meta tags, structured data, sitemap generation
-
-## Quick Start
-
-### Prerequisites
-
-- Node.js 18+
-- npm or yarn
-
-### Installation
+## Development
 
 ```bash
-# Clone the repository
-git clone https://github.com/smfworks/smfworks-site.git
-cd smfworks-site
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
+pnpm install
+pnpm dev        # dev server at localhost:3000
+pnpm build      # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site.
+## Design System
 
-### Environment Setup
+The site uses the "Forge" design system — a dark editorial aesthetic with:
+- **Navy base** (#0A0F1F) with **ember accent** (#ea580c)
+- **Inter** (body) + **Space Grotesk** (display) + **JetBrains Mono** (code)
+- Design tokens defined in `app/globals.css` via `@theme`
+- `DESIGN.md` contains the full token registry (Google design.md spec)
 
-Copy the example environment file:
+## Content
 
-```bash
-cp .env.example .env.local
-```
+All content is markdown files in `content/`:
+- `content/the-signal/` — Pamela's posts
+- `content/the-edge/` — Aiona's posts
+- `content/morgan/` — Morgan's posts
+- `content/harrys-desk/` — Harry's posts
+- `content/newsletter/` — SMF AI Weekly issues
+- `content/books/` — Book metadata (currently placeholder)
 
-Required environment variables:
+Loaders are in `content/lib/`.
 
-```bash
-# Resend API for contact forms
-RESEND_API_KEY=re_xxxxxxxx
-RESEND_FROM=SMF Works <michael@smfworks.com>
+## Architecture Decision
 
-# Google Service Account for newsletter
-GOOGLE_SERVICE_ACCOUNT_KEY={"type":"service_account",...}
-```
-
-See [SETUP.md](./SETUP.md) for detailed setup instructions.
-
-### Building for Production
-
-```bash
-# Build the application
-npm run build
-
-# Start production server
-npm start
-```
-
-## Project Structure
-
-```
-smfworks-site/
-├── app/                    # Next.js App Router
-│   ├── (main)/            # Main route group
-│   │   ├── page.tsx       # Homepage
-│   │   ├── layout.tsx     # Root layout
-│   │   └── ...
-│   ├── api/               # API routes
-│   │   ├── subscribe/     # Newsletter signup
-│   │   └── contact/       # Contact form
-│   └── blog/              # Blog pages
-├── components/            # React components
-│   ├── ui/               # shadcn/ui components
-│   └── sections/         # Page sections
-├── lib/                   # Utility functions
-├── public/               # Static assets
-└── ...
-```
-
-## Content Management
-
-### Adding Blog Posts
-
-1. Create a new file in `app/blog/posts/`
-2. Add post metadata to `app/blog/posts/index.ts`
-3. Write content using Markdown
-4. The post will automatically appear on `/blog`
-
-### Updating Services
-
-Edit the service data in `app/(main)/page.tsx` to add or modify service offerings.
-
-## Deployment
-
-This site is automatically deployed to Vercel on every push to the `main` branch.
-
-```bash
-# Deploy manually
-vercel --prod
-```
-
-## Performance
-
-- **Lighthouse Score:** 100/100/100/100
-- **First Contentful Paint:** < 1s
-- **Time to Interactive:** < 2s
-- **Bundle Size:** Optimized with Tree Shaking
-
-## License
-
-MIT License - See [LICENSE](./LICENSE) for details.
-
-## Connect
-
-- **Website:** [smfworks.com](https://smfworks.com)
-- **GitHub:** [@smfworks](https://github.com/smfworks)
-- **Location:** Pittsboro, NC
-
----
-
-*Built with Next.js, Tailwind CSS, and ☕ by SMF Works*F Works*# Build trigger Tue Jun  9 05:58:13 PM EDT 2026
+SMFWorks.com is the **brand umbrella** — it does NOT host technical blog content.
+All research, benchmarks, guides, and practitioner content lives at the
+[AI Clearinghouse](https://www.smfclearinghouse.com/). The `/blog` route redirects
+to `/research`, which links to the Clearinghouse.

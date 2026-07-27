@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @import "tailwindcss";
 
@@ -15,7 +15,10 @@
   --color-forge-card: #131B2E;
   --color-forge-surface-alt: #0A1628;
   --color-forge-surface-mid: #1e2a45;
+  --color-forge-surface-elevated: #1a2438;
   --color-forge-border: #1e2a45;
+  --color-forge-border-subtle: #131B2E;
+  --color-forge-border-accent: #ea580c40;
 
   /* Forge fire */
   --color-forge-ember: #ea580c;
@@ -29,8 +32,17 @@
   --color-data-blue: #007BFF;
   --color-data-blue-deep: #0066CC;
 
-  /* Edge — Aiona Edge brand exception */
+  /* Publication accents (unified — applied to headers, links, badges only) */
+  --color-signal-emerald: #10B981;
+  --color-signal-emerald-bright: #34D399;
   --color-edge-purple: #9333EA;
+  --color-edge-purple-bright: #B06AFA;
+  --color-morgan-orange: #FF8C42;
+  --color-morgan-orange-bright: #FFB366;
+  --color-harry-violet: #A78BFA;
+  --color-harry-violet-bright: #8B5CF6;
+
+  /* Edge — Aiona Edge brand exception (kept for backward compat) */
   --color-edge-purple-muted: #A78BDB;
   --color-edge-surface: #0D0B1A;
   --color-edge-border: #2D1B4E;
@@ -40,6 +52,11 @@
   --color-text-primary: #E2E8F0;
   --color-text-muted: #94A3B8;
   --color-text-inverse: #0A0F1F;
+
+  /* Typography */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 
   /* Aliases — backward compat with legacy class names */
   --color-navy: #0A0F1F;
