@@ -190,7 +190,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
-      <body className="bg-navy text-text antialiased">
+      <body className="bg-[#060912] text-[#F1F5F9] antialiased">
         <Nav />
         <main>{children}</main>
         <Footer />
