@@ -17,12 +17,20 @@ export async function POST(request: NextRequest) {
     });
     const baseUrl = request.headers.get('origin') || 'https://smfworks.com';
 
+    const priceId = (process.env.STRIPE_PRICE_ID || '').trim();
+    if (!priceId || priceId === 'price_example') {
+      return NextResponse.json(
+        { error: 'STRIPE_PRICE_ID is required' },
+        { status: 503 }
+      );
+    }
+
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
       payment_method_types: ['card'],
       line_items: [
         {
-          price: process.env.STRIPE_PRICE_ID || 'price_example',
+          price: priceId,
           quantity: 1,
         },
       ],
