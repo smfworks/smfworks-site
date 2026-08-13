@@ -1,9 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
+const ALLOWED_ORIGINS = new Set([
+  'https://smfworks.com',
+  'https://www.smfworks.com',
+]);
+
+function checkoutBaseUrl(request: NextRequest): string {
+  const origin = request.headers.get('origin');
+  if (origin && ALLOWED_ORIGINS.has(origin)) return origin;
+  return 'https://smfworks.com';
+}
+
 export async function POST(request: NextRequest) {
   const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
-  
+
   if (!stripeSecretKey) {
     return NextResponse.json(
       { error: 'Stripe not configured' },
@@ -15,7 +26,7 @@ export async function POST(request: NextRequest) {
     const stripe = new Stripe(stripeSecretKey, {
       apiVersion: '2026-02-25.clover',
     });
-    const baseUrl = request.headers.get('origin') || 'https://smfworks.com';
+    const baseUrl = checkoutBaseUrl(request);
 
     const priceId = (process.env.STRIPE_PRICE_ID || '').trim();
     if (!priceId || priceId === 'price_example') {
@@ -52,9 +63,8 @@ export async function POST(request: NextRequest) {
 
   } catch (error: unknown) {
     console.error('Checkout session error:', error);
-    const message = error instanceof Error ? error.message : 'Failed to create checkout session';
     return NextResponse.json(
-      { error: message },
+      { error: 'Failed to create checkout session' },
       { status: 500 }
     );
   }
