@@ -49,10 +49,13 @@ This site is the **parent brand site** — the front door to the SMF Works ecosy
 ## Development
 
 ```bash
-pnpm install
-pnpm dev        # dev server at localhost:3000
-pnpm build      # production build
+npm install
+npm run dev     # dev server at localhost:3000
+npm run build   # production build
+npm test        # hero-script + secret-scan contracts
 ```
+
+Copy `.env.example` to `.env.local` for local secrets. Hero generation requires `TOGETHER_API_KEY` and fails closed without it. See [SECURITY.md](./SECURITY.md).
 
 ## Design System
 
