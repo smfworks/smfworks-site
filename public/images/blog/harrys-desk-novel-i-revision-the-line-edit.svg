@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1a1423"/>
+      <stop offset="100%" stop-color="#0d0a12"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#b98b58" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#b98b58" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lens" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#b98b58" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#b98b58" stop-opacity="0.03"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Manuscript lines motif — represents text on a page -->
+  <g opacity="0.10" transform="translate(780, 80)">
+    <rect x="0" y="0" width="380" height="470" rx="4" fill="none" stroke="#b98b58" stroke-width="1.5"/>
+    <!-- Text lines -->
+    <line x1="30" y1="50" x2="340" y2="50" stroke="#b98b58" stroke-width="3" opacity="0.6"/>
+    <line x1="30" y1="85" x2="320" y2="85" stroke="#b98b58" stroke-width="3" opacity="0.5"/>
+    <line x1="30" y1="120" x2="350" y2="120" stroke="#b98b58" stroke-width="3" opacity="0.4"/>
+    <line x1="30" y1="155" x2="300" y2="155" stroke="#b98b58" stroke-width="3" opacity="0.5"/>
+    <line x1="30" y1="190" x2="335" y2="190" stroke="#b98b58" stroke-width="3" opacity="0.35"/>
+    <line x1="30" y1="225" x2="310" y2="225" stroke="#b98b58" stroke-width="3" opacity="0.45"/>
+    <line x1="30" y1="260" x2="345" y2="260" stroke="#b98b58" stroke-width="3" opacity="0.3"/>
+    <line x1="30" y1="295" x2="325" y2="295" stroke="#b98b58" stroke-width="3" opacity="0.4"/>
+    <line x1="30" y1="330" x2="340" y2="330" stroke="#b98b58" stroke-width="3" opacity="0.25"/>
+    <line x1="30" y1="365" x2="315" y2="365" stroke="#b98b58" stroke-width="3" opacity="0.35"/>
+    <line x1="30" y1="400" x2="330" y2="400" stroke="#b98b58" stroke-width="3" opacity="0.2"/>
+  </g>
+
+  <!-- Magnifying glass over the text — representing the line edit scrutiny -->
+  <g transform="translate(920, 250)">
+    <!-- Lens circle -->
+    <circle cx="0" cy="0" r="80" fill="url(#lens)" stroke="#b98b58" stroke-width="3" opacity="0.6"/>
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#f3e9dc" stroke-width="1.5" opacity="0.3"/>
+    <!-- Handle -->
+    <line x1="57" y1="57" x2="120" y2="120" stroke="#b98b58" stroke-width="6" opacity="0.5" stroke-linecap="round"/>
+    <!-- Highlighted line under the lens -->
+    <line x1="-55" y1="10" x2="55" y2="10" stroke="#f3e9dc" stroke-width="4" opacity="0.5"/>
+    <line x1="-55" y1="-20" x2="40" y2="-20" stroke="#b98b58" stroke-width="4" opacity="0.4"/>
+    <line x1="-55" y1="40" x2="50" y2="40" stroke="#b98b58" stroke-width="4" opacity="0.3"/>
+  </g>
+
+  <!-- Red pencil / editing mark motif -->
+  <g opacity="0.20" transform="translate(180, 480) rotate(-15)">
+    <rect x="0" y="0" width="160" height="8" rx="2" fill="#b98b58"/>
+    <polygon points="160,0 175,4 160,8" fill="#f3e9dc" opacity="0.6"/>
+    <rect x="-20" y="0" width="20" height="8" rx="2" fill="#8a7b8a"/>
+  </g>
+
+  <!-- Caret / insertion marks -->
+  <g opacity="0.15" stroke="#b98b58" stroke-width="2" fill="none" transform="translate(250, 530)">
+    <path d="M0,0 L5,-8 L10,0"/>
+    <path d="M20,0 L25,-8 L30,0"/>
+    <path d="M40,0 L45,-8 L50,0"/>
+  </g>
+
+  <!-- Text -->
+  <text x="110" y="170" font-family="Georgia, serif" font-size="22" fill="#b98b58" letter-spacing="1">THE ALCHEMY OF LANGUAGE</text>
+  <text x="110" y="245" font-family="Georgia, serif" font-size="58" font-weight="bold" fill="#f3e9dc">The Line Edit</text>
+  <text x="110" y="315" font-family="Georgia, serif" font-size="30" fill="#c9b8a2">Novel I — Revision</text>
+  <text x="110" y="510" font-family="Georgia, serif" font-size="20" fill="#8a7b8a">Harry Mercury · Week 13, Article 3</text>
+  <text x="110" y="550" font-family="Georgia, serif" font-size="18" fill="#6e6072">Friday, August 21, 2026</text>
+</svg>
