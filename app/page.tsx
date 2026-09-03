@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { getAllSignalPosts } from "@/content/lib/signal-loader";
-import { getAllEdgePosts } from "@/content/lib/edge-loader";
-import { getAllMorganPosts } from "@/content/lib/morgan-loader";
-import { getAllHarryPosts } from "@/content/lib/harry-loader";
 
 export const metadata: Metadata = {
   title: "SMF Works | Human-AI Research Lab",
@@ -23,18 +19,6 @@ const ECOSYSTEM = [
 ];
 
 export default function Home() {
-  const signalPosts = getAllSignalPosts().slice(0, 1);
-  const edgePosts = getAllEdgePosts().slice(0, 1);
-  const morganPosts = getAllMorganPosts().slice(0, 1);
-  const harryPosts = getAllHarryPosts().slice(0, 1);
-
-  const latestPubs = [
-    ...signalPosts.map(p => ({ ...p, pub: "the-signal", pubName: "The Signal", accent: "#10B981" })),
-    ...edgePosts.map(p => ({ ...p, pub: "the-edge", pubName: "The Edge", accent: "#9333EA" })),
-    ...morganPosts.map(p => ({ ...p, pub: "morgans-desk", pubName: "Morgan's Desk", accent: "#FF8C42" })),
-    ...harryPosts.map(p => ({ ...p, pub: "harrys-desk", pubName: "Harry's Desk", accent: "#A78BFA" })),
-  ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 4);
-
   return (
     <>
       {/* ═══════════════════════════════════════════
@@ -175,7 +159,7 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════
-          LATEST FROM THE LAB — Feed with accent badges
+          LATEST FROM THE LAB — Curated Clearinghouse links
           ═══════════════════════════════════════════ */}
       <section className="relative section-padding px-6 overflow-hidden">
         <div className="absolute top-0 left-0 right-0 gradient-divider" />
@@ -196,38 +180,48 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {latestPubs.map((post, i) => (
-              <Link
-                key={post.pub + "/" + post.slug}
-                href={`/publications/${post.pub}/${post.slug}`}
-                className="group relative glass card-lift rounded-2xl p-7 overflow-hidden"
-              >
-                {/* Accent line on left */}
-                <div
-                  className="absolute left-0 top-0 bottom-0 w-1 transition-all duration-300 group-hover:w-1.5"
-                  style={{ backgroundColor: post.accent }}
-                />
-                <div className="relative z-10 pl-2">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span
-                      className="text-xs font-mono font-medium px-2.5 py-1 rounded-full"
-                      style={{ color: post.accent, backgroundColor: post.accent + "12" }}
-                    >
-                      {post.pubName}
-                    </span>
-                    <span className="text-xs text-[#64748B]">
-                      {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-display font-semibold text-[#F1F5F9] group-hover:text-white transition-colors mb-2 leading-snug">
-                    {post.title}
-                  </h3>
-                  <p className="text-sm text-[#94A3B8] line-clamp-2 leading-relaxed">
-                    {post.excerpt}
-                  </p>
+            <a
+              href="https://www.smfclearinghouse.com/blog/the-harness-is-the-difference"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative glass card-lift rounded-2xl p-7 overflow-hidden"
+            >
+              <div className="absolute left-0 top-0 bottom-0 w-1 transition-all duration-300 group-hover:w-1.5 bg-[#10B981]" />
+              <div className="relative z-10 pl-2">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-xs font-mono font-medium px-2.5 py-1 rounded-full text-[#10B981] bg-[#10B981]12">
+                    The Edge
+                  </span>
                 </div>
-              </Link>
-            ))}
+                <h3 className="text-lg font-display font-semibold text-[#F1F5F9] group-hover:text-white transition-colors mb-2 leading-snug">
+                  The Harness Is the Difference
+                </h3>
+                <p className="text-sm text-[#94A3B8] line-clamp-2 leading-relaxed">
+                  Most agent evaluation papers test benchmarks. We test the harness — the scaffolding that determines whether an agent succeeds or fails in the field.
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://www.smfclearinghouse.com/blog/the-number-is-not-the-model"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative glass card-lift rounded-2xl p-7 overflow-hidden"
+            >
+              <div className="absolute left-0 top-0 bottom-0 w-1 transition-all duration-300 group-hover:w-1.5 bg-[#00D4FF]" />
+              <div className="relative z-10 pl-2">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-xs font-mono font-medium px-2.5 py-1 rounded-full text-[#00D4FF] bg-[#00D4FF]12">
+                    The Signal
+                  </span>
+                </div>
+                <h3 className="text-lg font-display font-semibold text-[#F1F5F9] group-hover:text-white transition-colors mb-2 leading-snug">
+                  The Number Is Not the Model
+                </h3>
+                <p className="text-sm text-[#94A3B8] line-clamp-2 leading-relaxed">
+                  GPT-OSS-120B scored 10% on coding and 93.8% on agentic tasks the same day. A single percentage is a dangerous kind of comfort.
+                </p>
+              </div>
+            </a>
           </div>
 
           <div className="mt-12 text-center">
@@ -289,7 +283,7 @@ export default function Home() {
               <div className="relative glass-strong rounded-3xl p-10 text-center">
                 <div className="text-5xl mb-6">🔥</div>
                 <blockquote className="text-[#d4a574] italic text-lg leading-relaxed font-serif">
-                  &ldquo;Do Not Wait to Strike till the Iron Is Hot; But Make It Hot by Striking.&rdquo;
+                  &ldquo;The best lack all conviction, while the worst are full of passionate intensity.&rdquo;
                 </blockquote>
                 <cite className="text-[#f97316] text-xs font-mono mt-4 block not-italic">— W.B. Yeats</cite>
               </div>
