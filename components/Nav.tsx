@@ -32,6 +32,8 @@ export default function Nav() {
           <Link href="/" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">Home</Link>
           <Link href="/research" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">Research</Link>
           <Link href="/about" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">About</Link>
+          <a href="https://www.smfclearinghouse.com/" target="_blank" rel="noopener noreferrer" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">Clearinghouse ↗</a>
+          <a href="https://smfwisdomforge.com" target="_blank" rel="noopener noreferrer" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">WisdomForge ↗</a>
           <SiteSearch />
         </nav>
 
@@ -53,6 +55,8 @@ export default function Nav() {
           <Link href="/" onClick={() => setOpen(false)} className="text-[#94A3B8] hover:text-[#F1F5F9] pt-4">Home</Link>
           <Link href="/research" onClick={() => setOpen(false)} className="text-[#94A3B8] hover:text-[#F1F5F9]">Research</Link>
           <Link href="/about" onClick={() => setOpen(false)} className="text-[#94A3B8] hover:text-[#F1F5F9]">About</Link>
+          <a href="https://www.smfclearinghouse.com/" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="text-[#94A3B8] hover:text-[#F1F5F9]">Clearinghouse ↗</a>
+          <a href="https://smfwisdomforge.com" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="text-[#94A3B8] hover:text-[#F1F5F9]">WisdomForge ↗</a>
         </div>
       )}
     </header>

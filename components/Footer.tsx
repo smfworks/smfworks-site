@@ -9,7 +9,7 @@ const SOCIAL_LINKS = [
 const ECOSYSTEM_LINKS = [
   { label: "AI Clearinghouse", href: "https://www.smfclearinghouse.com/" },
   { label: "WisdomForge", href: "https://smfwisdomforge.com" },
-  { label: "GitHub", href: "https://github.com/smfworks" },
+  { label: "Hermes Agent", href: "https://github.com/smfworks" },
 ];
 
 export default function Footer() {
@@ -42,12 +42,9 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-mono uppercase tracking-[0.15em] text-[#64748B] mb-4">Navigate</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/work" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">Work</Link></li>
+              <li><Link href="/" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">Home</Link></li>
               <li><Link href="/research" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">Research</Link></li>
-              <li><Link href="/publications" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">Publications</Link></li>
-              <li><Link href="/books" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">Books</Link></li>
               <li><Link href="/about" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">About</Link></li>
-              <li><Link href="/newsletter" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">SMF AI Weekly</Link></li>
             </ul>
           </div>
 
@@ -69,9 +66,8 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-mono uppercase tracking-[0.15em] text-[#64748B] mb-4">Reach the Lab</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/contact" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">Contact form</Link></li>
               <li><a href="mailto:michael@smfworks.com" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">michael@smfworks.com</a></li>
-              <li><Link href="/privacy" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">Privacy</Link></li>
+              <li><a href="https://x.com/MichaelGannotti" target="_blank" rel="noopener noreferrer" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">X / @MichaelGannotti ↗</a></li>
             </ul>
           </div>
         </div>
