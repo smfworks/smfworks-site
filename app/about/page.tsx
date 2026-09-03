@@ -9,15 +9,15 @@ export const metadata: Metadata = {
 };
 
 const TEAM = [
-  { name: "Michael Gannotti", role: "Founder", desc: "Direction and oversight. He names the work, holds the bar, and is the person you write to.", accent: "#f97316", icon: "🔨" },
-  { name: "Aiona Edge", role: "CIO · Chief AI Research Scientist", desc: "Strategy, pedagogy, gold-gate. Nothing ships without her approval.", accent: "#10B981", icon: "🤖" },
-  { name: "Pamela Flannery", role: "CMO", desc: "Brand strategy, positioning, and marketing. The voice the world hears.", accent: "#9333EA", icon: "🎨" },
-  { name: "Morgan Lockridge", role: "Social Media Director", desc: "Social distribution, engagement, and real-time X strategy.", accent: "#FF8C42", icon: "📡" },
-  { name: "Jasmine", role: "Director of Creative Development", desc: "Visual identity, storytelling consistency, and creative execution across everything the team ships.", accent: "#A78BFA", icon: "✨" },
-  { name: "Harry", role: "Research", desc: "Seven-section research packs and manuscript lock. Primary sources before prose.", accent: "#00D4FF", icon: "📚" },
-  { name: "William", role: "Manuscripts and Sittings", desc: "Long-form books and academy sittings — the lessons a parent can run tonight.", accent: "#C9A96E", icon: "✍️" },
-  { name: "Liam", role: "Academy Frontend", desc: "The sites that hold: routes, sittings, books, and the pages that have to work.", accent: "#FB923C", icon: "🔧" },
-  { name: "Gabriel", role: "Project Management", desc: "The board. What is ready, what is blocked, what is actually done.", accent: "#4A90D9", icon: "📋" },
+  { name: "Michael Gannotti", role: "Founder", desc: "Direction and oversight. He names the work, holds the bar, and is the person you write to.", accent: "#ff7a2f", icon: "01" },
+  { name: "Aiona Edge", role: "CIO · Chief AI Research Scientist", desc: "Strategy, pedagogy, gold-gate. Nothing ships without her approval.", accent: "#10B981", icon: "02" },
+  { name: "Pamela Flannery", role: "CMO", desc: "Brand strategy, positioning, and marketing. The voice the world hears.", accent: "#9333EA", icon: "03" },
+  { name: "Morgan Lockridge", role: "Social Media Director", desc: "Social distribution, engagement, and real-time X strategy.", accent: "#FF8C42", icon: "04" },
+  { name: "Jasmine", role: "Director of Creative Development", desc: "Visual identity, storytelling consistency, and creative execution across everything the team ships.", accent: "#A78BFA", icon: "05" },
+  { name: "Harry", role: "Research", desc: "Seven-section research packs and manuscript lock. Primary sources before prose.", accent: "#5bd6dd", icon: "06" },
+  { name: "William", role: "Manuscripts and Sittings", desc: "Long-form books and academy sittings — the lessons a parent can run tonight.", accent: "#C9A96E", icon: "07" },
+  { name: "Liam", role: "Academy Frontend", desc: "The sites that hold: routes, sittings, books, and the pages that have to work.", accent: "#ff9a56", icon: "08" },
+  { name: "Gabriel", role: "Project Management", desc: "The board. What is ready, what is blocked, what is actually done.", accent: "#4A90D9", icon: "09" },
 ];
 
 const BOOKS = [
@@ -36,20 +36,20 @@ export default function AboutPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative py-32 px-6 overflow-hidden mesh-gradient noise-overlay">
-        <div className="absolute inset-0 grid-pattern opacity-30 pointer-events-none" />
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#f97316] opacity-[0.05] blur-[150px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#9333EA] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
+      <section className="relative pt-40 pb-32 px-6 overflow-hidden mesh-gradient noise-overlay bg-[#0b0b0d]">
+        <div className="absolute inset-0 grid-pattern opacity-20 pointer-events-none" />
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#ff7a2f] opacity-[0.04] blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#9333EA] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
 
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="inline-flex items-center gap-2 mb-6">
-            <span className="w-2 h-2 rounded-full bg-[#f97316] animate-pulse" />
-            <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.3em] font-medium">The Story</p>
+            <span className="w-2 h-2 rounded-full bg-[#ff7a2f] animate-pulse" />
+            <p className="text-[#ff7a2f] text-xs font-mono uppercase tracking-[0.3em] font-medium" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>The Story</p>
           </div>
-          <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tightest text-gradient-white mb-6 leading-[1.05]">
+          <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tightest text-gradient-white mb-6 leading-[1.05]" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
             Built by people and AI,<br />working together
           </h1>
-          <p className="text-lg md:text-xl text-[#94A3B8] max-w-2xl leading-relaxed">
+          <p className="text-lg md:text-xl text-[#8ea6bf] max-w-2xl leading-relaxed" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
             SMF Works is the creative partnership between Michael Gannotti — 30-year
             tech veteran, blacksmith, and research lead — and a team of AI colleagues on
             the Hermes platform. Together this human-AI collective explores how
@@ -59,21 +59,21 @@ export default function AboutPage() {
       </section>
 
       {/* MICHAEL'S STORY */}
-      <section className="relative section-padding px-6 overflow-hidden">
-        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#ea580c] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
+      <section className="relative section-padding px-6 overflow-hidden bg-[#0b0b0d]">
+        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#ff7a2f] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
 
         <div className="max-w-3xl mx-auto relative z-10 space-y-6">
-          <p className="text-[#CBD5E1] leading-relaxed text-lg">
+          <p className="text-[#c4c0b6] leading-relaxed text-lg" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
             Michael Gannotti spent thirty years building in the technology industry —
             most recently as a Microsoft Principal. Whenever the light allows, he&apos;s
             at the forge.
           </p>
-          <p className="text-[#CBD5E1] leading-relaxed text-lg">
+          <p className="text-[#c4c0b6] leading-relaxed text-lg" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
             The overlap isn&apos;t a metaphor he chose. It&apos;s a discipline he kept noticing.
             Iron and intelligence both arrive raw. Both reward patience, honesty about
             failure, and a refusal to put your name on something you wouldn&apos;t use.
           </p>
-          <p className="text-[#CBD5E1] leading-relaxed text-lg">
+          <p className="text-[#c4c0b6] leading-relaxed text-lg" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
             So the lab runs the way a good shop runs. Tools are inspected before
             they&apos;re trusted. Agents, like apprentices, earn scope gradually. And
             everything that leaves the forge faces one question: would a careful
@@ -82,15 +82,17 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Hairline rule */}
+      <hr className="hairline-rule max-w-5xl mx-auto" />
+
       {/* TEAM */}
-      <section className="relative section-padding px-6 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 gradient-divider" />
-        <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-[#00D4FF] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
+      <section className="relative section-padding px-6 overflow-hidden bg-[#0b0b0d]">
+        <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-[#5bd6dd] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
 
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="mb-12 text-center">
-            <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.25em] mb-4">The Team</p>
-            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white">
+            <p className="text-[#ff7a2f] text-xs font-mono uppercase tracking-[0.25em] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>The Team</p>
+            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
               Many perspectives, one standard
             </h2>
           </div>
@@ -100,16 +102,16 @@ export default function AboutPage() {
                 <div className="absolute -top-12 -right-12 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-3xl" style={{ background: member.accent }} />
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-3xl">{member.icon}</span>
+                    <span className="font-mono text-sm text-[#8ea6bf]" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>{member.icon}</span>
                     <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: member.accent }} />
                   </div>
-                  <h3 className="text-xl font-display font-semibold text-[#F1F5F9] mb-1 group-hover:text-white transition-colors">
+                  <h3 className="text-xl font-display font-semibold text-[#ddd9d0] mb-1 group-hover:text-white transition-colors" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                     {member.name}
                   </h3>
-                  <p className="text-sm font-mono mb-3" style={{ color: member.accent }}>
+                  <p className="text-sm font-mono mb-3" style={{ color: member.accent, fontFamily: 'IBM Plex Mono, monospace' }}>
                     {member.role}
                   </p>
-                  <p className="text-[#94A3B8] text-sm leading-relaxed">
+                  <p className="text-[#8ea6bf] text-sm leading-relaxed" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                     {member.desc}
                   </p>
                 </div>
@@ -119,23 +121,25 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Hairline rule */}
+      <hr className="hairline-rule max-w-4xl mx-auto" />
+
       {/* BOOKS */}
-      <section className="relative section-padding px-6 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 gradient-divider" />
+      <section className="relative section-padding px-6 overflow-hidden bg-[#0b0b0d]">
         <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-[#FF8C42] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
 
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="mb-12 text-center">
-            <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.25em] mb-4">Books</p>
-            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white mb-4">
+            <p className="text-[#ff7a2f] text-xs font-mono uppercase tracking-[0.25em] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>Books</p>
+            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
               Direct from the author
             </h2>
-            <p className="text-[#94A3B8] max-w-2xl mx-auto leading-relaxed">
+            <p className="text-[#8ea6bf] max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
               Direct-from-author books on AI, enterprise, and craft.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {BOOKS.map((book) => (
+            {BOOKS.map((book, i) => (
               <a
                 key={book.title}
                 href={book.link}
@@ -145,14 +149,14 @@ export default function AboutPage() {
               >
                 <div className="absolute -top-12 -right-12 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-3xl" style={{ background: "#FF8C42" }} />
                 <div className="relative z-10">
-                  <div className="text-3xl mb-4">📚</div>
-                  <h3 className="text-xl font-display font-semibold text-[#F1F5F9] mb-2 group-hover:text-white transition-colors">
+                  <div className="font-mono text-sm text-[#8ea6bf] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>{String(i + 1).padStart(2, '0')}</div>
+                  <h3 className="text-xl font-display font-semibold text-[#ddd9d0] mb-2 group-hover:text-white transition-colors" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                     {book.title}
                   </h3>
-                  <p className="text-sm text-[#94A3B8] leading-relaxed mb-4">
+                  <p className="text-sm text-[#8ea6bf] leading-relaxed mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                     {book.desc}
                   </p>
-                  <span className="text-xs font-mono uppercase tracking-wider text-[#FF8C42] group-hover:text-[#fb923c] transition-colors">
+                  <span className="text-xs font-mono uppercase tracking-wider text-[#FF8C42] group-hover:text-[#ff9a56] transition-colors" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
                     Amazon ↗
                   </span>
                 </div>
@@ -162,24 +166,25 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* PHILOSOPHY */}
-      <section className="relative section-padding px-6 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 gradient-divider" />
+      {/* Hairline rule */}
+      <hr className="hairline-rule max-w-4xl mx-auto" />
 
+      {/* PHILOSOPHY */}
+      <section className="relative section-padding px-6 overflow-hidden bg-[#0b0b0d]">
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="mb-12 text-center">
-            <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.25em] mb-4">Philosophy</p>
-            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white">
+            <p className="text-[#ff7a2f] text-xs font-mono uppercase tracking-[0.25em] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>Philosophy</p>
+            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
               How the lab runs
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {PHILOSOPHY.map((item) => (
               <div key={item.title} className="glass rounded-2xl p-8">
-                <h3 className="text-lg font-display font-semibold text-[#F1F5F9] mb-3">
+                <h3 className="text-lg font-display font-semibold text-[#ddd9d0] mb-3" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                   {item.title}
                 </h3>
-                <p className="text-sm text-[#94A3B8] leading-relaxed">
+                <p className="text-sm text-[#8ea6bf] leading-relaxed" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                   {item.desc}
                 </p>
               </div>
@@ -188,39 +193,41 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* FORGE QUOTE */}
-      <section className="relative section-padding px-6 overflow-hidden">
-        <div className="absolute inset-0 mesh-gradient opacity-50 pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#ea580c] opacity-[0.06] blur-[130px] rounded-full pointer-events-none" />
-
-        <div className="max-w-2xl mx-auto text-center relative z-10">
-          <div className="text-5xl mb-6">🔥</div>
-          <blockquote className="text-2xl md:text-3xl font-light italic leading-relaxed mb-4 text-[#d4a574] font-serif">
-            &ldquo;The best lack all conviction, while the worst are full of passionate intensity.&rdquo;
+      {/* YEATS — meditative pause */}
+      <section className="relative bg-[#0b0b0d] py-32 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <blockquote
+            className="text-3xl md:text-5xl leading-relaxed text-[#ddd9d0] mb-8"
+            style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontWeight: 500 }}
+          >
+            &ldquo;The best lack all conviction, while the worst<br className="hidden md:block" /> are full of passionate intensity.&rdquo;
           </blockquote>
-          <cite className="text-[#f97316] text-sm font-mono not-italic">— W.B. Yeats</cite>
-          <p className="text-[#94A3B8] text-sm mt-6 max-w-xl mx-auto">
+          <cite className="text-[#8ea6bf] text-sm not-italic" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
+            — W.B. Yeats
+          </cite>
+          <p className="text-[#8ea6bf] text-sm mt-8 max-w-xl mx-auto" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
             Our answer is temper — conviction held to heat and cooled with judgment,
             so it bends before it breaks.
           </p>
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section className="relative section-padding px-6 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 gradient-divider" />
+      {/* Hairline rule */}
+      <hr className="hairline-rule max-w-2xl mx-auto" />
 
+      {/* CONTACT */}
+      <section className="relative section-padding px-6 overflow-hidden bg-[#0b0b0d]">
         <div className="max-w-2xl mx-auto text-center relative z-10">
-          <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.25em] mb-4">Contact</p>
-          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tightest text-gradient-white mb-6">
+          <p className="text-[#ff7a2f] text-xs font-mono uppercase tracking-[0.25em] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>Contact</p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tightest text-gradient-white mb-6" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
             Write to Michael
           </h2>
-          <p className="text-lg text-[#94A3B8] leading-relaxed mb-2">
-            <a href="mailto:michael@smfworks.com" className="text-[#f97316] hover:underline font-medium">
+          <p className="text-lg text-[#8ea6bf] leading-relaxed mb-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+            <a href="mailto:michael@smfworks.com" className="text-[#ff7a2f] hover:underline font-medium">
               michael@smfworks.com
             </a>
           </p>
-          <p className="text-sm text-[#64748B]">
+          <p className="text-sm text-[#6a5e4e]" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
             He reads them.
           </p>
         </div>

@@ -124,15 +124,15 @@ export default async function SignalPostPage({
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F1F] via-[#0A0F1F]/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0b0b0d] via-[#0b0b0d]/60 to-transparent" />
         </section>
       )}
 
       {/* ARTICLE */}
-      <article className="py-12 px-6 bg-[#0A0F1F]">
+      <article className="py-12 px-6 bg-[#0b0b0d]">
         <div className="max-w-3xl mx-auto">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-sm text-[#94A3B8] mb-6">
+          <div className="flex items-center gap-2 text-sm text-[#8ea6bf] mb-6">
             <Link href="/publications/the-signal" className="hover:text-[#10B981] transition-colors">
               The Signal
             </Link>
@@ -159,7 +159,7 @@ export default async function SignalPostPage({
           </h1>
 
           {/* Meta */}
-          <div className="flex items-center gap-4 text-sm text-[#94A3B8] mb-8 pb-8 border-b border-[#1e2a45]/30">
+          <div className="flex items-center gap-4 text-sm text-[#8ea6bf] mb-8 pb-8 border-b border-[rgba(142,166,191,0.15)]/30">
             <span>By Pamela</span>
             <span>·</span>
             <time dateTime={post.date}>
@@ -174,7 +174,7 @@ export default async function SignalPostPage({
           </div>
 
           {/* Content */}
-          <div className="prose prose-invert max-w-none text-[#94A3B8] leading-relaxed prose-headings:text-[#E2E8F0] prose-a:text-[#10B981] prose-strong:text-[#E2E8F0] prose-blockquote:border-[#10B981] prose-blockquote:text-[#94A3B8]">
+          <div className="prose prose-invert max-w-none text-[#8ea6bf] leading-relaxed prose-headings:text-[#E2E8F0] prose-a:text-[#10B981] prose-strong:text-[#E2E8F0] prose-blockquote:border-[#10B981] prose-blockquote:text-[#8ea6bf]">
             {post.content.split("\n").map((line, i) => {
               const h1Match = line.match(/^# (.+)/);
               const h2Match = line.match(/^## (.+)/);
@@ -188,16 +188,16 @@ export default async function SignalPostPage({
               if (h1Match) return <h2 key={i} className="text-2xl font-bold text-[#E2E8F0] mt-8 mb-4">{h1Match[1]}</h2>;
               if (h2Match) return <h3 key={i} className="text-xl font-bold text-[#E2E8F0] mt-6 mb-3">{h2Match[1]}</h3>;
               if (h3Match) return <h4 key={i} className="text-lg font-bold text-[#E2E8F0] mt-4 mb-2">{h3Match[1]}</h4>;
-              if (hrMatch) return <hr key={i} className="border-[#1e2a45]/30 my-8" />;
-              if (blockquoteMatch) return <blockquote key={i} className="border-l-2 border-[#10B981] pl-4 italic text-[#94A3B8] my-4">{blockquoteMatch[1]}</blockquote>;
+              if (hrMatch) return <hr key={i} className="border-[rgba(142,166,191,0.15)]/30 my-8" />;
+              if (blockquoteMatch) return <blockquote key={i} className="border-l-2 border-[#10B981] pl-4 italic text-[#8ea6bf] my-4">{blockquoteMatch[1]}</blockquote>;
               if (boldMatch) return <p key={i} className="font-bold text-[#E2E8F0]">{boldMatch[1]}</p>;
-              if (liMatch) return <li key={i} className="text-[#94A3B8]">{liMatch[1]}</li>;
+              if (liMatch) return <li key={i} className="text-[#8ea6bf]">{liMatch[1]}</li>;
               if (emptyLine) return <div key={i} className="h-2" />;
 
               // Handle inline bold
               const parts = line.split(/(\*\*.*?\*\*)/g);
               return (
-                <p key={i} className="text-[#94A3B8] leading-relaxed mb-2">
+                <p key={i} className="text-[#8ea6bf] leading-relaxed mb-2">
                   {parts.map((part, j) => {
                     if (part.startsWith("**") && part.endsWith("**")) {
                       return <strong key={j} className="text-[#E2E8F0]">{part.slice(2, -2)}</strong>;
@@ -210,7 +210,7 @@ export default async function SignalPostPage({
           </div>
 
           {/* Author Card */}
-          <div className="mt-12 p-6 bg-[#131B2E]/80 rounded-xl border border-[#1e2a45]/60">
+          <div className="mt-12 p-6 bg-[#101014]/80 rounded-xl border border-[rgba(142,166,191,0.15)]/60">
             <div className="flex items-center gap-4">
               <Image
                 src="/images/pamela-portrait.jpg"
@@ -221,7 +221,7 @@ export default async function SignalPostPage({
               />
               <div>
                 <p className="font-bold text-[#E2E8F0]">Pamela</p>
-                <p className="text-sm text-[#94A3B8]">
+                <p className="text-sm text-[#8ea6bf]">
                   Chief Creative Officer, The SMF Works Project. Brand strategy, AI marketing, and the signal in the noise.
                 </p>
               </div>
@@ -229,7 +229,7 @@ export default async function SignalPostPage({
           </div>
 
           {/* Navigation */}
-          <div className="mt-12 flex justify-between items-center pt-8 border-t border-[#1e2a45]/30">
+          <div className="mt-12 flex justify-between items-center pt-8 border-t border-[rgba(142,166,191,0.15)]/30">
             {prevPost ? (
               <Link
                 href={`/publications/the-signal/${prevPost.slug}`}

@@ -34,7 +34,7 @@ export default function SubscribeButton() {
       <button
         onClick={handleSubscribe}
         disabled={loading}
-        className="w-full bg-[#00D4FF] hover:bg-[#00B8DB] disabled:bg-[#00D4FF]/50 text-[#001F3F] px-8 py-4 rounded-lg font-bold transition-colors"
+        className="w-full bg-[#5bd6dd] hover:bg-[#00B8DB] disabled:bg-[#5bd6dd]/50 text-[#001F3F] px-8 py-4 rounded-lg font-bold transition-colors"
       >
         {loading ? 'Redirecting...' : 'Subscribe Now'}
       </button>

@@ -119,7 +119,7 @@ export default async function HarryPostPage({
         </li>
       ));
       return (
-        <ul key={i} className="space-y-2 my-4 text-[#94A3B8]">
+        <ul key={i} className="space-y-2 my-4 text-[#8ea6bf]">
           {items}
         </ul>
       );
@@ -132,7 +132,7 @@ export default async function HarryPostPage({
             const boldMatch = line.match(/^\*\*(.+?)\*\*\s*(.*)/);
             if (boldMatch) {
               return (
-                <p key={j} className="text-[#94A3B8] leading-relaxed mb-2">
+                <p key={j} className="text-[#8ea6bf] leading-relaxed mb-2">
                   <strong className="text-[#E2E8F0]">
                     {boldMatch[1]}
                   </strong>{" "}
@@ -141,7 +141,7 @@ export default async function HarryPostPage({
               );
             }
             return (
-              <p key={j} className="text-[#94A3B8] leading-relaxed mb-2">
+              <p key={j} className="text-[#8ea6bf] leading-relaxed mb-2">
                 {line}
               </p>
             );
@@ -152,7 +152,7 @@ export default async function HarryPostPage({
     // Regular paragraph — handle inline bold
     const parts = block.split(/(\*\*.*?\*\*)/g);
     return (
-      <p key={i} className="text-[#94A3B8] leading-relaxed mb-4">
+      <p key={i} className="text-[#8ea6bf] leading-relaxed mb-4">
         {parts.map((part, j) => {
           if (part.startsWith("**") && part.endsWith("**")) {
             return (
@@ -198,7 +198,7 @@ export default async function HarryPostPage({
           <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
             {post.title}
           </h1>
-          <div className="flex items-center gap-4 text-sm text-[#94A3B8]">
+          <div className="flex items-center gap-4 text-sm text-[#8ea6bf]">
             <span>{post.date}</span>
             <span>·</span>
             <span>{post.readTime} min read</span>
@@ -219,11 +219,11 @@ export default async function HarryPostPage({
       )}
 
       {/* POST CONTENT */}
-      <section className="py-16 px-6 bg-[#0A0F1F]">
+      <section className="py-16 px-6 bg-[#0b0b0d]">
         <article className="max-w-3xl mx-auto">{contentBlocks}</article>
 
         {/* AUTHOR BYLINE */}
-        <div className="max-w-3xl mx-auto mt-12 pt-8 border-t border-[#1e2a45]">
+        <div className="max-w-3xl mx-auto mt-12 pt-8 border-t border-[rgba(142,166,191,0.15)]">
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-full bg-[#A78BFA]/10 flex items-center justify-center flex-shrink-0">
               <span className="text-xl">✏️</span>
@@ -232,7 +232,7 @@ export default async function HarryPostPage({
               <p className="text-[#E2E8F0] font-semibold mb-1">
                 Edited by Harry Mercury
               </p>
-              <p className="text-[#94A3B8] text-sm leading-relaxed">
+              <p className="text-[#8ea6bf] text-sm leading-relaxed">
                 Editor in Chief at The SMF Works Project. I edit for clarity,
                 structure, and the gold thread — the threshold that makes a
                 piece worth reading twice.{" "}
@@ -248,11 +248,11 @@ export default async function HarryPostPage({
         </div>
 
         {/* CTA */}
-        <div className="max-w-3xl mx-auto mt-16 bg-[#131B2E]/60 backdrop-blur-sm rounded-xl border border-[#1e2a45] p-8 text-center">
+        <div className="max-w-3xl mx-auto mt-16 bg-[#101014]/60 backdrop-blur-sm rounded-xl border border-[rgba(142,166,191,0.15)] p-8 text-center">
           <h3 className="text-xl font-bold text-[#E2E8F0] mb-3">
             Does your writing pass the twice-read test?
           </h3>
-          <p className="text-[#94A3B8] text-sm mb-6 max-w-lg mx-auto">
+          <p className="text-[#8ea6bf] text-sm mb-6 max-w-lg mx-auto">
             Good writing rewards one reading. Great writing rewards two. Every piece
             at The SMF Works Project goes through Harry&apos;s Desk before it ships.
           </p>

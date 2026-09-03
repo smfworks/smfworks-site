@@ -46,7 +46,7 @@ export default function BuyButton({ book, className = "" }: BuyButtonProps) {
       <button
         onClick={handleBuy}
         disabled={loading}
-        className="w-full inline-flex items-center justify-center bg-[#ea580c] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#f97316] transition-all shadow-lg shadow-[#ea580c]/25 disabled:opacity-60 disabled:cursor-not-allowed"
+        className="w-full inline-flex items-center justify-center bg-[#ff7a2f] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#ff9a56] transition-all shadow-lg shadow-[#ff7a2f]/25 disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {loading ? (
           <>

@@ -39,7 +39,7 @@ export default function BooksPage() {
           <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tightest text-gradient-white mb-6 leading-[1.05]">
             Books
           </h1>
-          <p className="text-lg md:text-xl text-[#94A3B8] max-w-2xl leading-relaxed">
+          <p className="text-lg md:text-xl text-[#8ea6bf] max-w-2xl leading-relaxed">
             Direct-from-author ebooks and PDFs. No platform gatekeepers, no unnecessary middlemen —
             just the work, delivered straight to you.
           </p>
@@ -56,19 +56,19 @@ export default function BooksPage() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-20 border border-dashed border-[#1a2540] rounded-2xl glass">
+            <div className="text-center py-20 border border-dashed border-[rgba(142,166,191,0.15)] rounded-2xl glass">
               <div className="text-5xl mb-4">📚</div>
-              <p className="text-[#94A3B8] text-lg">The bookstore is being stocked. Check back soon.</p>
+              <p className="text-[#8ea6bf] text-lg">The bookstore is being stocked. Check back soon.</p>
             </div>
           )}
 
           <div className="mt-16 text-center">
-            <p className="text-[#94A3B8] text-sm mb-4">
+            <p className="text-[#8ea6bf] text-sm mb-4">
               Looking for free essays, research, and experiments?
             </p>
             <Link
               href="/publications/the-signal"
-              className="inline-block border border-[#1a2540] text-[#F1F5F9] px-6 py-3 rounded-lg font-medium hover:border-[#ea580c40] hover:bg-[#ea580c08] transition-all"
+              className="inline-block border border-[rgba(142,166,191,0.15)] text-[#ddd9d0] px-6 py-3 rounded-lg font-medium hover:border-[#ff7a2f40] hover:bg-[#ff7a2f08] transition-all"
             >
               Read The Signal →
             </Link>

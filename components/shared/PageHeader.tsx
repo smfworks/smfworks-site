@@ -30,7 +30,7 @@ export default function PageHeader({
         <h1 className="text-4xl md:text-5xl font-bold text-[#E2E8F0] mb-4">
           {title}
         </h1>
-        <p className="text-lg text-[#94A3B8] max-w-2xl">{subtitle}</p>
+        <p className="text-lg text-[#8ea6bf] max-w-2xl">{subtitle}</p>
       </div>
     </section>
   );

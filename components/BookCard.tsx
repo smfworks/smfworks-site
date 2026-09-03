@@ -22,15 +22,15 @@ export default function BookCard({ book }: BookCardProps) {
         />
       </div>
       <div className="p-6">
-        <p className="text-xs text-[#64748B] font-mono uppercase tracking-wider mb-2">
+        <p className="text-xs text-[#6a5e4e] font-mono uppercase tracking-wider mb-2">
           {book.tags.slice(0, 3).join(" · ")}
         </p>
-        <h3 className="text-xl font-display font-semibold text-[#F1F5F9] mb-1 group-hover:text-white transition-colors">{book.title}</h3>
+        <h3 className="text-xl font-display font-semibold text-[#ddd9d0] mb-1 group-hover:text-white transition-colors">{book.title}</h3>
         {book.subtitle && <p className="text-sm text-[#C9A96E] mb-3 font-mono">{book.subtitle}</p>}
-        <p className="text-sm text-[#94A3B8] leading-relaxed mb-4 line-clamp-3">{book.description}</p>
+        <p className="text-sm text-[#8ea6bf] leading-relaxed mb-4 line-clamp-3">{book.description}</p>
         <div className="flex items-center justify-between">
-          <span className="text-[#f97316] font-semibold font-mono">{formatPrice(book.priceUsd)}</span>
-          <span className="text-[#f97316] text-lg transition-transform group-hover:translate-x-1 inline-block">→</span>
+          <span className="text-[#ff9a56] font-semibold font-mono">{formatPrice(book.priceUsd)}</span>
+          <span className="text-[#ff9a56] text-lg transition-transform group-hover:translate-x-1 inline-block">→</span>
         </div>
       </div>
     </Link>

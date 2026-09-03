@@ -55,7 +55,7 @@ export default function HarrysDeskPage({
             <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tightest text-gradient-white mb-4 leading-[1.05]">
               Harry&apos;s Desk
             </h1>
-            <p className="text-lg text-[#94A3B8] max-w-2xl leading-relaxed">
+            <p className="text-lg text-[#8ea6bf] max-w-2xl leading-relaxed">
               Writing craft, editorial insight, and the art of the sentence from Harry — Writing & Editorial Lead at SMF Works.
             </p>
           </div>
@@ -63,7 +63,7 @@ export default function HarrysDeskPage({
       </section>
 
       {/* BLOG CONTENT */}
-      <section className="py-16 px-6 bg-[#0A0F1F]">
+      <section className="py-16 px-6 bg-[#0b0b0d]">
         <div className="max-w-6xl mx-auto">
           {/* Categories */}
           {categories.length > 0 && (
@@ -73,7 +73,7 @@ export default function HarrysDeskPage({
                 className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                   !selectedCategory
                     ? "bg-[#A78BFA] text-white"
-                    : "bg-[#131B2E] text-[#94A3B8] hover:text-[#A78BFA] border border-[#1e2a45]"
+                    : "bg-[#101014] text-[#8ea6bf] hover:text-[#A78BFA] border border-[rgba(142,166,191,0.15)]"
                 }`}
               >
                 All
@@ -85,7 +85,7 @@ export default function HarrysDeskPage({
                   className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                     selectedCategory === cat
                       ? "bg-[#A78BFA] text-white"
-                      : "bg-[#131B2E] text-[#94A3B8] hover:text-[#A78BFA] border border-[#1e2a45]"
+                      : "bg-[#101014] text-[#8ea6bf] hover:text-[#A78BFA] border border-[rgba(142,166,191,0.15)]"
                   }`}
                 >
                   {cat}
@@ -96,8 +96,8 @@ export default function HarrysDeskPage({
 
           {displayPosts.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-[#94A3B8]">No posts yet.</p>
-              <Link href="/publications" className="text-[#00D4FF] hover:underline mt-4 inline-block">
+              <p className="text-[#8ea6bf]">No posts yet.</p>
+              <Link href="/publications" className="text-[#5bd6dd] hover:underline mt-4 inline-block">
                 Browse the main blog &rarr;
               </Link>
             </div>
@@ -106,7 +106,7 @@ export default function HarrysDeskPage({
               {displayPosts.map((post) => (
                 <article
                   key={post.slug}
-                  className="bg-[#131B2E]/60 backdrop-blur-sm rounded-xl border border-[#1e2a45] overflow-hidden hover:border-[#A78BFA]/40 transition-all group"
+                  className="bg-[#101014]/60 backdrop-blur-sm rounded-xl border border-[rgba(142,166,191,0.15)] overflow-hidden hover:border-[#A78BFA]/40 transition-all group"
                 >
                   {post.image && (
                     <div className="relative h-48 overflow-hidden">
@@ -120,7 +120,7 @@ export default function HarrysDeskPage({
                   )}
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3">
-                      <time className="text-sm text-[#64748B]">{post.date}</time>
+                      <time className="text-sm text-[#6a5e4e]">{post.date}</time>
                       <span className="text-[#A78BFA] text-sm font-medium">
                         {post.readTime} min read
                       </span>
@@ -128,7 +128,7 @@ export default function HarrysDeskPage({
                     <h2 className="text-xl font-bold text-[#E2E8F0] mb-2 group-hover:text-[#A78BFA] transition-colors">
                       <Link href={`/publications/harrys-desk/${post.slug}`}>{post.title}</Link>
                     </h2>
-                    <p className="text-[#94A3B8] text-sm leading-relaxed mb-4">
+                    <p className="text-[#8ea6bf] text-sm leading-relaxed mb-4">
                       {post.excerpt}
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -150,12 +150,12 @@ export default function HarrysDeskPage({
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-6 bg-[#0A0F1F] border-t border-[#1e2a45]">
+      <section className="py-16 px-6 bg-[#0b0b0d] border-t border-[rgba(142,166,191,0.15)]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-[#E2E8F0] mb-4">
             The twice-read test.
           </h2>
-          <p className="text-[#94A3B8] leading-relaxed">
+          <p className="text-[#8ea6bf] leading-relaxed">
             Good writing rewards one reading. Great writing rewards two. Harry edits
             for the second reading — the one where you see what you missed the first
             time.

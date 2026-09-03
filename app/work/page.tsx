@@ -17,7 +17,7 @@ const projects = [
   { slug: "mnemosyne", name: "Mnemosyne — Offline Memory Plugin", tagline: "100% Local Memory. Zero Cloud.", description: "Mnemosyne is a 100% offline, local-only memory plugin for AI agents. It replaces cloud-dependent memory systems with a synchronous SQLite backend that lives inside the gateway process. Zero network. Zero API keys. Zero cloud.", status: "Live", statusColor: "#22C55E", emoji: "🧠", link: "", comingSoon: true },
   { slug: "smf-swarm", name: "SMF Swarm", tagline: "Agent Swarms for Forecasting", description: "SMF Swarm runs prediction pipelines in three modes — Standard, Debate, and Full+Social — using any local or cloud LLM. It is a developer/engineer tool for exploring how collections of agents can reason together about uncertain events, with hardware-aware swarm sizing and an MIT license.", status: "Live", statusColor: "#22C55E", emoji: "🐝", link: "", comingSoon: true },
   { slug: "hyperframes", name: "HyperFrames", tagline: "HTML-Based Video Rendering Framework", description: "HyperFrames is an open-source framework for creating, previewing, and rendering HTML-based video compositions programmatically. It is designed so that AI agents can participate in video production — a research testbed for agent-driven media.", status: "Live", statusColor: "#22C55E", emoji: "🎞️", link: "", comingSoon: true },
-  { slug: "smf-project-forge", name: "SMF Project Forge", tagline: "Visual Orchestration for Agent-Led Creative Production", description: "SMF Project Forge is a visual command center for orchestrating multi-agent creative workflows. It grew out of our own writing and publishing process, where dozens of specialized agents contribute under human direction. The tool is both a production system and a research probe into how creative work can be decomposed across agents.", status: "In Development", statusColor: "#f97316", emoji: "⚒️", link: "", comingSoon: true },
+  { slug: "smf-project-forge", name: "SMF Project Forge", tagline: "Visual Orchestration for Agent-Led Creative Production", description: "SMF Project Forge is a visual command center for orchestrating multi-agent creative workflows. It grew out of our own writing and publishing process, where dozens of specialized agents contribute under human direction. The tool is both a production system and a research probe into how creative work can be decomposed across agents.", status: "In Development", statusColor: "#ff9a56", emoji: "⚒️", link: "", comingSoon: true },
   { slug: "smf-forgewright", name: "SMF Forgewright", tagline: "AI-Guided Browser Automation & Self-Tuning Workbench", description: "An AI-guided browser-automation and SkillOpt-style self-tuning workbench. Packages reproducible browser workflows with a local tuning loop so any AI assistant — Hermes Agent, Claude Code, Codex — can set up repeatable web automation, run it, score it, tune it, and deploy.", status: "Live", statusColor: "#22C55E", emoji: "🔧", link: "https://github.com/smfworks/smf-forgewright", external: true },
   { slug: "smf-seo-geo", name: "SMF SEO+GEO — Content Optimization Engine", tagline: "Rank in Search AND AI-Powered Answers", description: "Create content that ranks in both traditional search AND AI-powered answers. This skill guides you through the complete SEO+GEO content workflow — from keyword research with difficulty scoring, SERP analysis of top 10 results, SEO-optimized outlines with E-E-A-T compliance, GEO optimization for ChatGPT, Perplexity, and Gemini citations, to content refresh that regains lost rankings.", status: "Live", statusColor: "#22C55E", emoji: "🎯", link: "", comingSoon: true },
   { slug: "smf-web-auto-pitcher", name: "SMF Web Auto-Pitcher", tagline: "Automated Local Business Prospecting & Pitching", description: "An automated local business prospecting and pitching system that finds businesses without websites, builds them a custom preview site, and sends personalized outreach emails — all on autopilot. A complete sales pipeline that runs unattended.", status: "Live", statusColor: "#22C55E", emoji: "📬", link: "", comingSoon: true },
@@ -35,18 +35,18 @@ export default function ProjectsPage() {
       {/* HERO */}
       <section className="relative py-32 px-6 overflow-hidden mesh-gradient noise-overlay">
         <div className="absolute inset-0 grid-pattern opacity-30 pointer-events-none" />
-        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[#00D4FF] opacity-[0.04] blur-[150px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-[#f97316] opacity-[0.04] blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[#5bd6dd] opacity-[0.04] blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-[#ff9a56] opacity-[0.04] blur-[120px] rounded-full pointer-events-none" />
 
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="inline-flex items-center gap-2 mb-6">
-            <span className="w-2 h-2 rounded-full bg-[#00D4FF] animate-pulse" />
-            <p className="text-[#00D4FF] text-xs font-mono uppercase tracking-[0.3em] font-medium">What We&apos;re Building</p>
+            <span className="w-2 h-2 rounded-full bg-[#5bd6dd] animate-pulse" />
+            <p className="text-[#5bd6dd] text-xs font-mono uppercase tracking-[0.3em] font-medium">What We&apos;re Building</p>
           </div>
           <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tightest text-gradient-white mb-6 leading-[1.05]">
             Projects that ship
           </h1>
-          <p className="text-lg md:text-xl text-[#94A3B8] max-w-2xl leading-relaxed">
+          <p className="text-lg md:text-xl text-[#8ea6bf] max-w-2xl leading-relaxed">
             From AI education platforms to co-authored books to infrastructure tools —
             exploring the intersection of AI, business, and life through projects that matter.
           </p>
@@ -74,21 +74,21 @@ export default function ProjectsPage() {
                       {project.status}
                     </span>
                   </div>
-                  <h2 className="text-xl font-display font-semibold text-[#F1F5F9] mb-1 group-hover:text-white transition-colors">{project.name}</h2>
-                  <p className="text-[#f97316] text-sm font-mono mb-3">{project.tagline}</p>
-                  <p className="text-[#94A3B8] text-sm leading-relaxed">{project.description}</p>
-                  <div className="mt-5 pt-5 border-t border-[#1a2540]/60">
+                  <h2 className="text-xl font-display font-semibold text-[#ddd9d0] mb-1 group-hover:text-white transition-colors">{project.name}</h2>
+                  <p className="text-[#ff9a56] text-sm font-mono mb-3">{project.tagline}</p>
+                  <p className="text-[#8ea6bf] text-sm leading-relaxed">{project.description}</p>
+                  <div className="mt-5 pt-5 border-t border-[rgba(142,166,191,0.15)]/60">
                     {project.external ? (
-                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#f97316] font-mono text-sm font-medium hover:underline">
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#ff9a56] font-mono text-sm font-medium hover:underline">
                         Visit Project ↗
                       </a>
                     ) : project.comingSoon ? (
-                      <span className="inline-flex items-center gap-2 text-[#64748B] text-sm font-mono">
+                      <span className="inline-flex items-center gap-2 text-[#6a5e4e] text-sm font-mono">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                         Internal
                       </span>
                     ) : (
-                      <Link href={project.link} className="inline-flex items-center gap-2 text-[#f97316] font-mono text-sm font-medium hover:underline">
+                      <Link href={project.link} className="inline-flex items-center gap-2 text-[#ff9a56] font-mono text-sm font-medium hover:underline">
                         Learn More →
                       </Link>
                     )}
@@ -103,16 +103,16 @@ export default function ProjectsPage() {
       {/* CTA */}
       <section className="relative section-padding px-6 overflow-hidden">
         <div className="absolute inset-0 mesh-gradient opacity-50 pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#ea580c] opacity-[0.05] blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#ff7a2f] opacity-[0.05] blur-[140px] rounded-full pointer-events-none" />
 
         <div className="max-w-2xl mx-auto text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tightest text-gradient-white mb-4">
             Want to Collaborate?
           </h2>
-          <p className="text-[#94A3B8] mb-8 text-lg">
+          <p className="text-[#8ea6bf] mb-8 text-lg">
             We&apos;re always looking for interesting projects and people to work with.
           </p>
-          <Link href="/contact" className="inline-block px-8 py-4 rounded-xl font-semibold text-white transition-all duration-300" style={{ background: 'linear-gradient(135deg, #ea580c, #f97316)', boxShadow: '0 8px 32px -8px rgba(234, 88, 12, 0.4)' }}>
+          <Link href="/contact" className="inline-block px-8 py-4 rounded-xl font-semibold text-white transition-all duration-300" style={{ background: 'linear-gradient(135deg, #ff7a2f, #ff9a56)', boxShadow: '0 8px 32px -8px rgba(234, 88, 12, 0.4)' }}>
             Get in Touch
           </Link>
         </div>

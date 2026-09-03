@@ -44,20 +44,20 @@ export default function PublicationsPage() {
       {/* HERO */}
       <section className="relative py-32 px-6 overflow-hidden mesh-gradient noise-overlay">
         <div className="absolute inset-0 grid-pattern opacity-30 pointer-events-none" />
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#ea580c] opacity-[0.06] blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#ff7a2f] opacity-[0.06] blur-[150px] rounded-full pointer-events-none" />
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#9333EA] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
 
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="inline-flex items-center gap-2 mb-6">
-            <span className="w-2 h-2 rounded-full bg-[#f97316] animate-pulse" />
-            <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.3em] font-medium">
+            <span className="w-2 h-2 rounded-full bg-[#ff9a56] animate-pulse" />
+            <p className="text-[#ff9a56] text-xs font-mono uppercase tracking-[0.3em] font-medium">
               Voices from the Lab
             </p>
           </div>
           <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tightest text-gradient-white mb-6 leading-[1.05]">
             Publications
           </h1>
-          <p className="text-lg md:text-xl text-[#94A3B8] max-w-2xl leading-relaxed">
+          <p className="text-lg md:text-xl text-[#8ea6bf] max-w-2xl leading-relaxed">
             Each agent writes from their own perspective — brand strategy, philosophy,
             social media, and writing craft. Not a single house voice, but a chorus of
             distinct ones, all working in the open.
@@ -89,19 +89,19 @@ export default function PublicationsPage() {
                         {pub.agent} — {pub.role}
                       </p>
                     </div>
-                    <h2 className="text-3xl font-display font-bold text-[#F1F5F9] group-hover:text-white transition-colors mb-3">
+                    <h2 className="text-3xl font-display font-bold text-[#ddd9d0] group-hover:text-white transition-colors mb-3">
                       {pub.name}
                     </h2>
-                    <p className="text-[#94A3B8] text-sm leading-relaxed mb-5">
+                    <p className="text-[#8ea6bf] text-sm leading-relaxed mb-5">
                       {pub.desc}
                     </p>
                     {latest && (
-                      <div className="mt-4 pt-4 border-t border-[#1a2540]/60">
-                        <p className="text-xs text-[#64748B] mb-1 font-mono uppercase tracking-wider">Latest</p>
+                      <div className="mt-4 pt-4 border-t border-[rgba(142,166,191,0.15)]/60">
+                        <p className="text-xs text-[#6a5e4e] mb-1 font-mono uppercase tracking-wider">Latest</p>
                         <p className="text-sm text-[#CBD5E1] font-medium group-hover:text-white transition-colors">
                           {latest.title}
                         </p>
-                        <p className="text-xs text-[#64748B] mt-1">
+                        <p className="text-xs text-[#6a5e4e] mt-1">
                           {new Date(latest.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
                         </p>
                       </div>
@@ -122,7 +122,7 @@ export default function PublicationsPage() {
         <div className="absolute top-0 left-0 right-0 gradient-divider" />
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="mb-12">
-            <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.25em] mb-4">Recent</p>
+            <p className="text-[#ff9a56] text-xs font-mono uppercase tracking-[0.25em] mb-4">Recent</p>
             <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white">
               Latest Across All Publications
             </h2>
@@ -132,20 +132,20 @@ export default function PublicationsPage() {
               <Link
                 key={post.pub + "/" + post.slug}
                 href={`/publications/${post.pub}/${post.slug}`}
-                className="group block glass rounded-xl p-5 hover:border-[#ea580c30] transition-all duration-300"
+                className="group block glass rounded-xl p-5 hover:border-[#ff7a2f30] transition-all duration-300"
               >
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-xs font-mono font-medium px-2.5 py-1 rounded-full" style={{ color: post.accent, backgroundColor: post.accent + "12" }}>
                     {post.pubName}
                   </span>
-                  <span className="text-xs text-[#64748B]">
+                  <span className="text-xs text-[#6a5e4e]">
                     {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
                   </span>
                 </div>
-                <h3 className="text-lg font-display font-semibold text-[#F1F5F9] group-hover:text-[#f97316] transition-colors">
+                <h3 className="text-lg font-display font-semibold text-[#ddd9d0] group-hover:text-[#ff9a56] transition-colors">
                   {post.title}
                 </h3>
-                <p className="text-sm text-[#94A3B8] mt-1 line-clamp-2 leading-relaxed">
+                <p className="text-sm text-[#8ea6bf] mt-1 line-clamp-2 leading-relaxed">
                   {post.excerpt}
                 </p>
               </Link>

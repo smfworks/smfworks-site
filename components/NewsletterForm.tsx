@@ -38,8 +38,8 @@ export default function NewsletterForm() {
     return (
       <div className="text-center">
         <div className="text-4xl mb-3">🎉</div>
-        <p className="text-[#00D4FF] font-semibold text-lg mb-1">You&apos;re subscribed!</p>
-        <p className="text-[#94A3B8] text-sm">{message}</p>
+        <p className="text-[#5bd6dd] font-semibold text-lg mb-1">You&apos;re subscribed!</p>
+        <p className="text-[#8ea6bf] text-sm">{message}</p>
       </div>
     );
   }
@@ -53,7 +53,7 @@ export default function NewsletterForm() {
         placeholder="your@email.com"
         required
         disabled={status === "loading"}
-        className="flex-1 px-4 py-3 rounded-lg bg-[#131B2E] border border-[#1e2a45] text-[#E2E8F0] placeholder-[#94A3B8]/50 focus:outline-none focus:border-[#00D4FF] transition-colors disabled:opacity-50"
+        className="flex-1 px-4 py-3 rounded-lg bg-[#101014] border border-[rgba(142,166,191,0.15)] text-[#E2E8F0] placeholder-[#8ea6bf]/50 focus:outline-none focus:border-[#5bd6dd] transition-colors disabled:opacity-50"
       />
       <button
         type="submit"

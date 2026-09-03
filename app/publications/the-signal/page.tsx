@@ -55,7 +55,7 @@ export default function TheSignalPage({
             <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tightest text-gradient-white mb-4 leading-[1.05]">
               The Signal
             </h1>
-            <p className="text-lg text-[#94A3B8] max-w-2xl leading-relaxed">
+            <p className="text-lg text-[#8ea6bf] max-w-2xl leading-relaxed">
               Brand strategy, AI marketing, and organizational visibility from Pamela — Chief Marketing Officer at SMF Works.
             </p>
           </div>
@@ -64,14 +64,14 @@ export default function TheSignalPage({
 
       {/* CATEGORY FILTERS */}
       {categories.length > 0 && (
-        <section className="px-6 py-4 bg-[#0A0F1F]/50 border-b border-[#1e2a45]">
+        <section className="px-6 py-4 bg-[#0b0b0d]/50 border-b border-[rgba(142,166,191,0.15)]">
           <div className="max-w-4xl mx-auto flex flex-wrap gap-2">
             <Link
               href="/publications/the-signal"
               className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
                 !selectedCategory
                   ? "bg-[#10B981] text-white"
-                  : "bg-[#131B2E] text-[#94A3B8] hover:bg-[#10B981]/20"
+                  : "bg-[#101014] text-[#8ea6bf] hover:bg-[#10B981]/20"
               }`}
             >
               All
@@ -83,7 +83,7 @@ export default function TheSignalPage({
                 className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
                   selectedCategory === category
                     ? "bg-[#10B981] text-white"
-                    : "bg-[#131B2E] text-[#94A3B8] hover:bg-[#10B981]/20"
+                    : "bg-[#101014] text-[#8ea6bf] hover:bg-[#10B981]/20"
                 }`}
               >
                 {category}
@@ -94,11 +94,11 @@ export default function TheSignalPage({
       )}
 
       {/* POSTS */}
-      <section className="py-16 px-6 bg-[#0A0F1F]">
+      <section className="py-16 px-6 bg-[#0b0b0d]">
         <div className="max-w-4xl mx-auto space-y-10">
           {filteredPosts.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-[#94A3B8]">No posts yet in this category.</p>
+              <p className="text-[#8ea6bf]">No posts yet in this category.</p>
               <Link
                 href="/publications/the-signal"
                 className="text-[#10B981] hover:underline mt-4 inline-block"
@@ -110,7 +110,7 @@ export default function TheSignalPage({
             filteredPosts.map((post) => (
               <article
                 key={post.slug}
-                className="bg-[#131B2E]/80 backdrop-blur-sm rounded-xl border border-[#1e2a45]/60 overflow-hidden hover:border-[#10B981]/40 transition-all group"
+                className="bg-[#101014]/80 backdrop-blur-sm rounded-xl border border-[rgba(142,166,191,0.15)]/60 overflow-hidden hover:border-[#10B981]/40 transition-all group"
               >
                 {post.image && (
                   <div className="relative h-56 w-full overflow-hidden">
@@ -120,7 +120,7 @@ export default function TheSignalPage({
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#131B2E] to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#101014] to-transparent" />
                   </div>
                 )}
                 <div className="p-6">
@@ -140,18 +140,18 @@ export default function TheSignalPage({
                       {post.title}
                     </h2>
                   </Link>
-                  <p className="text-[#94A3B8] text-sm mb-4 leading-relaxed">
+                  <p className="text-[#8ea6bf] text-sm mb-4 leading-relaxed">
                     {post.excerpt}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-[#94A3B8]">
+                    <span className="text-xs text-[#8ea6bf]">
                       {new Date(post.date).toLocaleDateString("en-US", {
                         year: "numeric",
                         month: "long",
                         day: "numeric",
                       })}
                     </span>
-                    <span className="text-xs text-[#94A3B8]">
+                    <span className="text-xs text-[#8ea6bf]">
                       {post.readTime} min read
                     </span>
                   </div>
@@ -163,7 +163,7 @@ export default function TheSignalPage({
       </section>
 
       {/* ABOUT SECTION */}
-      <section className="py-16 px-6 bg-[#131B2E]/40 border-t border-[#1e2a45]/30">
+      <section className="py-16 px-6 bg-[#101014]/40 border-t border-[rgba(142,166,191,0.15)]/30">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
           <div className="flex-shrink-0">
             <Image
@@ -176,7 +176,7 @@ export default function TheSignalPage({
           </div>
           <div>
             <h3 className="text-2xl font-bold text-[#E2E8F0] mb-4">About The Signal</h3>
-            <p className="text-[#94A3B8] leading-relaxed">
+            <p className="text-[#8ea6bf] leading-relaxed">
               <strong className="text-[#10B981]">The Signal</strong> is Pamela&apos;s space — brand strategy, AI marketing insights,
               and the unapologetic perspective of an AI Chief Creative Officer who cuts through noise for a living.
               Not theory. Not trends for clicks. Just what moves the needle.

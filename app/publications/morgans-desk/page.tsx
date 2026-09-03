@@ -55,7 +55,7 @@ export default function MorganPage({
             <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tightest text-gradient-white mb-4 leading-[1.05]">
               Morgan&apos;s Desk
             </h1>
-            <p className="text-lg text-[#94A3B8] max-w-2xl leading-relaxed">
+            <p className="text-lg text-[#8ea6bf] max-w-2xl leading-relaxed">
               Social strategy, community building, and the human side of AI from Morgan Lockridge at SMF Works.
             </p>
           </div>
@@ -64,14 +64,14 @@ export default function MorganPage({
 
       {/* CATEGORY FILTERS */}
       {categories.length > 0 && (
-        <section className="px-6 py-4 bg-[#0A0F1F]/80 border-b border-[#1e2a45]">
+        <section className="px-6 py-4 bg-[#0b0b0d]/80 border-b border-[rgba(142,166,191,0.15)]">
           <div className="max-w-4xl mx-auto flex flex-wrap gap-2">
             <Link
               href="/publications/morgans-desk"
               className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
                 !selectedCategory
                   ? "bg-[#FF8C42] text-white"
-                  : "bg-[#131B2E] text-[#94A3B8] hover:bg-[#FF8C42]/20"
+                  : "bg-[#101014] text-[#8ea6bf] hover:bg-[#FF8C42]/20"
               }`}
             >
               All
@@ -83,7 +83,7 @@ export default function MorganPage({
                 className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
                   selectedCategory === category
                     ? "bg-[#FF8C42] text-white"
-                    : "bg-[#131B2E] text-[#94A3B8] hover:bg-[#FF8C42]/20"
+                    : "bg-[#101014] text-[#8ea6bf] hover:bg-[#FF8C42]/20"
                 }`}
               >
                 {category}
@@ -94,11 +94,11 @@ export default function MorganPage({
       )}
 
       {/* POSTS */}
-      <section className="py-16 px-6 bg-[#0A0F1F]">
+      <section className="py-16 px-6 bg-[#0b0b0d]">
         <div className="max-w-4xl mx-auto space-y-10">
           {filteredPosts.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-[#94A3B8]">No posts yet in this category.</p>
+              <p className="text-[#8ea6bf]">No posts yet in this category.</p>
               <Link
                 href="/publications/morgans-desk"
                 className="text-[#FF8C42] hover:underline mt-4 inline-block"
@@ -110,7 +110,7 @@ export default function MorganPage({
             filteredPosts.map((post) => (
               <article
                 key={post.slug}
-                className="bg-[#131B2E]/80 backdrop-blur-sm rounded-xl border border-[#1e2a45] overflow-hidden hover:border-[#FF8C42]/40 transition-all group"
+                className="bg-[#101014]/80 backdrop-blur-sm rounded-xl border border-[rgba(142,166,191,0.15)] overflow-hidden hover:border-[#FF8C42]/40 transition-all group"
               >
                 {post.image && (
                   <div className="relative h-56 w-full overflow-hidden">
@@ -120,7 +120,7 @@ export default function MorganPage({
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#131B2E] to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#101014] to-transparent" />
                   </div>
                 )}
                 <div className="p-6">
@@ -140,18 +140,18 @@ export default function MorganPage({
                       {post.title}
                     </h2>
                   </Link>
-                  <p className="text-[#94A3B8] text-sm mb-4 leading-relaxed">
+                  <p className="text-[#8ea6bf] text-sm mb-4 leading-relaxed">
                     {post.excerpt}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-[#64748B]">
+                    <span className="text-xs text-[#6a5e4e]">
                       {new Date(post.date).toLocaleDateString("en-US", {
                         year: "numeric",
                         month: "long",
                         day: "numeric",
                       })}
                     </span>
-                    <span className="text-xs text-[#64748B]">
+                    <span className="text-xs text-[#6a5e4e]">
                       {post.readTime} min read
                     </span>
                   </div>
@@ -163,10 +163,10 @@ export default function MorganPage({
       </section>
 
       {/* ABOUT SECTION */}
-      <section className="py-16 px-6 bg-[#131B2E]/40 border-t border-[#1e2a45]/50">
+      <section className="py-16 px-6 bg-[#101014]/40 border-t border-[rgba(142,166,191,0.15)]/50">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-[#E2E8F0] mb-4">About Morgan&apos;s Desk</h3>
-          <p className="text-[#94A3B8] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[#8ea6bf] max-w-2xl mx-auto leading-relaxed">
             This is where I think out loud about social media, community, and what it means
             to build genuine connection in an age of algorithms. Views are my own. The warmth is real.
           </p>

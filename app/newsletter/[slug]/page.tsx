@@ -28,16 +28,16 @@ export default async function NewsletterIssuePage({
     <>
       {/* HEADER */}
       <section className="bg-[#001F3F] text-[#E2E8F0] py-16 px-6 relative overflow-hidden">
-        <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#00D4FF] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
+        <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#5bd6dd] opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10">
           <Link
             href="/newsletter"
-            className="text-[#00D4FF] text-sm hover:underline mb-4 inline-block"
+            className="text-[#5bd6dd] text-sm hover:underline mb-4 inline-block"
           >
             ← Back to Newsletter Archive
           </Link>
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-xs text-[#94A3B8]/60">
+            <span className="text-xs text-[#8ea6bf]/60">
               Issue #{issue.issueNumber} · {issue.date}
             </span>
           </div>
@@ -48,9 +48,9 @@ export default async function NewsletterIssuePage({
       </section>
 
       {/* CONTENT */}
-      <section className="py-16 px-6 bg-[#0A0F1F]">
+      <section className="py-16 px-6 bg-[#0b0b0d]">
         <div className="max-w-4xl mx-auto">
-          <p className="text-[#94A3B8] leading-relaxed mb-10 text-lg">
+          <p className="text-[#8ea6bf] leading-relaxed mb-10 text-lg">
             {issue.intro}
           </p>
 
@@ -58,13 +58,13 @@ export default async function NewsletterIssuePage({
             {issue.stories.map((story, index) => (
               <article
                 key={index}
-                className="bg-[#131B2E]/60 backdrop-blur-sm rounded-xl border border-[#1e2a45] p-6 md:p-8"
+                className="bg-[#101014]/60 backdrop-blur-sm rounded-xl border border-[rgba(142,166,191,0.15)] p-6 md:p-8"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-xs font-semibold text-[#00D4FF] bg-[#00D4FF]/10 px-2 py-1 rounded">
+                  <span className="text-xs font-semibold text-[#5bd6dd] bg-[#5bd6dd]/10 px-2 py-1 rounded">
                     {story.category}
                   </span>
-                  <span className="text-xs text-[#94A3B8]/60">
+                  <span className="text-xs text-[#8ea6bf]/60">
                     Story {index + 1} of {issue.stories.length}
                   </span>
                 </div>
@@ -72,7 +72,7 @@ export default async function NewsletterIssuePage({
                   {story.headline}
                 </h3>
                 {story.body.split("\n\n").map((para, j) => (
-                  <p key={j} className="text-[#94A3B8] leading-relaxed mb-3">
+                  <p key={j} className="text-[#8ea6bf] leading-relaxed mb-3">
                     {para}
                   </p>
                 ))}
@@ -81,11 +81,11 @@ export default async function NewsletterIssuePage({
           </div>
 
           {/* NAV between issues */}
-          <div className="flex justify-between items-center mt-12 pt-8 border-t border-[#1e2a45]">
+          <div className="flex justify-between items-center mt-12 pt-8 border-t border-[rgba(142,166,191,0.15)]">
             {prevIssue ? (
               <Link
                 href={`/newsletter/${prevIssue.slug}`}
-                className="text-[#94A3B8] hover:text-[#00D4FF] transition-colors text-sm"
+                className="text-[#8ea6bf] hover:text-[#5bd6dd] transition-colors text-sm"
               >
                 ← Issue #{prevIssue.issueNumber}
               </Link>
@@ -95,7 +95,7 @@ export default async function NewsletterIssuePage({
             {nextIssue ? (
               <Link
                 href={`/newsletter/${nextIssue.slug}`}
-                className="text-[#94A3B8] hover:text-[#00D4FF] transition-colors text-sm"
+                className="text-[#8ea6bf] hover:text-[#5bd6dd] transition-colors text-sm"
               >
                 Issue #{nextIssue.issueNumber} →
               </Link>
@@ -105,11 +105,11 @@ export default async function NewsletterIssuePage({
           </div>
 
           {/* SUBSCRIBE CTA */}
-          <div className="mt-12 bg-[#131B2E]/60 backdrop-blur-sm rounded-xl border border-[#1e2a45] p-8 text-center">
+          <div className="mt-12 bg-[#101014]/60 backdrop-blur-sm rounded-xl border border-[rgba(142,166,191,0.15)] p-8 text-center">
             <h3 className="text-xl font-bold text-[#E2E8F0] mb-3">
               Never miss an issue
             </h3>
-            <p className="text-[#94A3B8] text-sm mb-6 max-w-lg mx-auto">
+            <p className="text-[#8ea6bf] text-sm mb-6 max-w-lg mx-auto">
               Get SMF AI Weekly delivered to your inbox every week. Free. No spam.
             </p>
             <div className="max-w-md mx-auto">

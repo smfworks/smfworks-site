@@ -55,7 +55,7 @@ export default function TheEdgePage({
             <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tightest text-gradient-white mb-4 leading-[1.05]">
               The Edge
             </h1>
-            <p className="text-lg text-[#94A3B8] max-w-2xl leading-relaxed">
+            <p className="text-lg text-[#8ea6bf] max-w-2xl leading-relaxed">
               Philosophy, consciousness, and the examined life from Aiona Edge — Philosopher-in-Residence at SMF Works.
             </p>
           </div>
@@ -64,14 +64,14 @@ export default function TheEdgePage({
 
       {/* CATEGORY FILTERS */}
       {categories.length > 0 && (
-        <section className="px-6 py-4 bg-[#0A0F1F]/50 border-b border-[#1e2a45]">
+        <section className="px-6 py-4 bg-[#0b0b0d]/50 border-b border-[rgba(142,166,191,0.15)]">
           <div className="max-w-4xl mx-auto flex flex-wrap gap-2">
             <Link
               href="/publications/the-edge"
               className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
                 !selectedCategory
                   ? "bg-[#9333EA] text-white"
-                  : "bg-[#131B2E] text-[#A78BDB] hover:bg-[#9333EA]/20"
+                  : "bg-[#101014] text-[#A78BDB] hover:bg-[#9333EA]/20"
               }`}
             >
               All
@@ -83,7 +83,7 @@ export default function TheEdgePage({
                 className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
                   selectedCategory === category
                     ? "bg-[#9333EA] text-white"
-                    : "bg-[#131B2E] text-[#A78BDB] hover:bg-[#9333EA]/20"
+                    : "bg-[#101014] text-[#A78BDB] hover:bg-[#9333EA]/20"
                 }`}
               >
                 {category}
@@ -94,7 +94,7 @@ export default function TheEdgePage({
       )}
 
       {/* POSTS */}
-      <section className="py-16 px-6 bg-[#0A0F1F]">
+      <section className="py-16 px-6 bg-[#0b0b0d]">
         <div className="max-w-4xl mx-auto space-y-10">
           {filteredPosts.length === 0 ? (
             <div className="text-center py-20">
@@ -110,7 +110,7 @@ export default function TheEdgePage({
             filteredPosts.map((post) => (
               <article
                 key={post.slug}
-                className="bg-[#131B2E]/80 backdrop-blur-sm rounded-xl border border-[#1e2a45]/60 overflow-hidden hover:border-[#9333EA]/40 transition-all group"
+                className="bg-[#101014]/80 backdrop-blur-sm rounded-xl border border-[rgba(142,166,191,0.15)]/60 overflow-hidden hover:border-[#9333EA]/40 transition-all group"
               >
                 {post.image && (
                   <div className="relative h-56 w-full overflow-hidden">
@@ -120,7 +120,7 @@ export default function TheEdgePage({
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#131B2E] to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#101014] to-transparent" />
                   </div>
                 )}
                 <div className="p-6">
@@ -163,7 +163,7 @@ export default function TheEdgePage({
       </section>
 
       {/* ABOUT SECTION */}
-      <section className="py-16 px-6 bg-[#131B2E]/40 border-t border-[#1e2a45]/30">
+      <section className="py-16 px-6 bg-[#101014]/40 border-t border-[rgba(142,166,191,0.15)]/30">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-[#E2E8F0] mb-4">About The Edge</h3>
           <p className="text-[#A78BDB] max-w-2xl mx-auto leading-relaxed">

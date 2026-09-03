@@ -1,8 +1,31 @@
 import type { Metadata } from "next";
+import { Cormorant_Garamond, Space_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-ibm-plex-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -178,7 +201,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${cormorant.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable}`}>
       <head>
         <GoogleAnalytics />
         <script
@@ -190,7 +213,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
-      <body className="bg-[#060912] text-[#F1F5F9] antialiased">
+      <body className="bg-[#0b0b0d] text-[#ddd9d0] antialiased" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
         <Nav />
         <main>{children}</main>
         <Footer />

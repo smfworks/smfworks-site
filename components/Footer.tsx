@@ -14,24 +14,24 @@ const ECOSYSTEM_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="relative mt-0 border-t border-[#1a2540] overflow-hidden">
+    <footer className="relative mt-0 border-t border-[rgba(142,166,191,0.15)] overflow-hidden">
       <div className="absolute inset-0 mesh-gradient opacity-30 pointer-events-none" />
-      <div className="absolute top-0 left-1/4 w-[400px] h-[200px] bg-[#ea580c] opacity-[0.03] blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-[400px] h-[200px] bg-[#ff7a2f] opacity-[0.03] blur-[100px] pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="text-xl font-display font-bold text-[#F1F5F9] mb-3">
+            <div className="text-xl font-display font-bold text-[#ddd9d0] mb-3" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
               SMF Works
             </div>
-            <p className="text-sm text-[#94A3B8] leading-relaxed mb-5 max-w-xs">
+            <p className="text-sm text-[#8ea6bf] leading-relaxed mb-5 max-w-xs" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
               A human-AI research lab publishing findings, shipping open tools, and running a multi-agent organization in the open.
             </p>
             <div className="flex items-center gap-3 flex-wrap">
               {SOCIAL_LINKS.map((social) => (
                 <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.name}
-                  className="w-9 h-9 rounded-lg glass flex items-center justify-center text-[#64748B] hover:text-[#f97316] transition-colors">
+                  className="w-9 h-9 rounded-lg glass flex items-center justify-center text-[#6a5e4e] hover:text-[#ff7a2f] transition-colors">
                   {social.icon}
                 </a>
               ))}
@@ -40,21 +40,21 @@ export default function Footer() {
 
           {/* Navigate */}
           <div>
-            <h4 className="text-xs font-mono uppercase tracking-[0.15em] text-[#64748B] mb-4">Navigate</h4>
-            <ul className="space-y-3 text-sm">
-              <li><Link href="/" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">Home</Link></li>
-              <li><Link href="/research" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">Research</Link></li>
-              <li><Link href="/about" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">About</Link></li>
+            <h4 className="text-xs font-mono uppercase tracking-[0.15em] text-[#6a5e4e] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>Navigate</h4>
+            <ul className="space-y-3 text-sm" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+              <li><Link href="/" className="text-[#8ea6bf] hover:text-[#ddd9d0] transition-colors">Home</Link></li>
+              <li><Link href="/research" className="text-[#8ea6bf] hover:text-[#ddd9d0] transition-colors">Research</Link></li>
+              <li><Link href="/about" className="text-[#8ea6bf] hover:text-[#ddd9d0] transition-colors">About</Link></li>
             </ul>
           </div>
 
           {/* Ecosystem */}
           <div>
-            <h4 className="text-xs font-mono uppercase tracking-[0.15em] text-[#64748B] mb-4">Ecosystem</h4>
-            <ul className="space-y-3 text-sm">
+            <h4 className="text-xs font-mono uppercase tracking-[0.15em] text-[#6a5e4e] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>Ecosystem</h4>
+            <ul className="space-y-3 text-sm" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
               {ECOSYSTEM_LINKS.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">
+                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-[#8ea6bf] hover:text-[#ddd9d0] transition-colors">
                     {link.label} ↗
                   </a>
                 </li>
@@ -64,19 +64,19 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-xs font-mono uppercase tracking-[0.15em] text-[#64748B] mb-4">Reach the Lab</h4>
-            <ul className="space-y-3 text-sm">
-              <li><a href="mailto:michael@smfworks.com" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">michael@smfworks.com</a></li>
-              <li><a href="https://x.com/MichaelGannotti" target="_blank" rel="noopener noreferrer" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">X / @MichaelGannotti ↗</a></li>
+            <h4 className="text-xs font-mono uppercase tracking-[0.15em] text-[#6a5e4e] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>Reach the Lab</h4>
+            <ul className="space-y-3 text-sm" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+              <li><a href="mailto:michael@smfworks.com" className="text-[#8ea6bf] hover:text-[#ddd9d0] transition-colors">michael@smfworks.com</a></li>
+              <li><a href="https://x.com/MichaelGannotti" target="_blank" rel="noopener noreferrer" className="text-[#8ea6bf] hover:text-[#ddd9d0] transition-colors">X / @MichaelGannotti ↗</a></li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-14 pt-6 border-t border-[#1a2540] flex items-center justify-between">
-          <p className="text-xs text-[#64748B]">
+        <div className="mt-14 pt-6 border-t border-[rgba(142,166,191,0.15)] flex items-center justify-between">
+          <p className="text-xs text-[#6a5e4e]" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
             © {new Date().getFullYear()} SMF Works. All rights reserved.
           </p>
-          <p className="text-xs text-[#64748B] font-mono">
+          <p className="text-xs text-[#6a5e4e] font-mono" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
             Built by people and AI, working together.
           </p>
         </div>

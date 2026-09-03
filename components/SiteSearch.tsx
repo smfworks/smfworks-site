@@ -106,9 +106,9 @@ const TYPE_LABELS: Record<string, string> = {
 };
 
 const TYPE_COLORS: Record<string, string> = {
-  blog: "text-[#00D4FF] bg-[#00D4FF]/10",
+  blog: "text-[#5bd6dd] bg-[#5bd6dd]/10",
   newsletter: "text-[#FF6B00] bg-[#FF6B00]/10",
-  page: "text-[#94A3B8] bg-[#94A3B8]/10",
+  page: "text-[#8ea6bf] bg-[#8ea6bf]/10",
 };
 
 export default function SiteSearch() {
@@ -147,14 +147,14 @@ export default function SiteSearch() {
       {/* Search trigger button */}
       <button
         onClick={() => setOpen(true)}
-        className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-[#1e2a45] bg-[#0A0F1F]/80 text-[#94A3B8] text-sm hover:border-[#00D4FF]/40 hover:text-[#E2E8F0] transition-all"
+        className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-[rgba(142,166,191,0.15)] bg-[#0b0b0d]/80 text-[#8ea6bf] text-sm hover:border-[#5bd6dd]/40 hover:text-[#E2E8F0] transition-all"
         aria-label="Search site"
       >
         <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
           <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clipRule="evenodd" />
         </svg>
         <span className="hidden sm:inline">Search</span>
-        <kbd className="hidden sm:inline text-xs border border-[#1e2a45] rounded px-1">⌘K</kbd>
+        <kbd className="hidden sm:inline text-xs border border-[rgba(142,166,191,0.15)] rounded px-1">⌘K</kbd>
       </button>
 
       {/* Modal overlay */}
@@ -167,10 +167,10 @@ export default function SiteSearch() {
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setOpen(false)} />
 
           {/* Search panel */}
-          <div className="relative w-full max-w-xl bg-[#131B2E] rounded-xl border border-[#1e2a45] shadow-2xl shadow-black/50 overflow-hidden">
+          <div className="relative w-full max-w-xl bg-[#101014] rounded-xl border border-[rgba(142,166,191,0.15)] shadow-2xl shadow-black/50 overflow-hidden">
             {/* Input */}
-            <div className="flex items-center gap-3 px-4 py-3 border-b border-[#1e2a45]">
-              <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#94A3B8] flex-shrink-0">
+            <div className="flex items-center gap-3 px-4 py-3 border-b border-[rgba(142,166,191,0.15)]">
+              <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#8ea6bf] flex-shrink-0">
                 <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clipRule="evenodd" />
               </svg>
               <input
@@ -179,21 +179,21 @@ export default function SiteSearch() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search blog posts, services, newsletter..."
-                className="flex-1 bg-transparent text-[#E2E8F0] placeholder-[#94A3B8]/50 text-sm outline-none"
+                className="flex-1 bg-transparent text-[#E2E8F0] placeholder-[#8ea6bf]/50 text-sm outline-none"
               />
               {query && (
-                <button onClick={() => setQuery("")} className="text-[#94A3B8] hover:text-[#E2E8F0]">
+                <button onClick={() => setQuery("")} className="text-[#8ea6bf] hover:text-[#E2E8F0]">
                   ✕
                 </button>
               )}
-              <kbd className="text-xs text-[#94A3B8]/60 border border-[#1e2a45] rounded px-1.5 py-0.5">Esc</kbd>
+              <kbd className="text-xs text-[#8ea6bf]/60 border border-[rgba(142,166,191,0.15)] rounded px-1.5 py-0.5">Esc</kbd>
             </div>
 
             {/* Results */}
             {query.length >= 2 && (
               <div className="max-h-80 overflow-y-auto py-2">
                 {results.length === 0 ? (
-                  <p className="text-center text-[#94A3B8] text-sm py-8">
+                  <p className="text-center text-[#8ea6bf] text-sm py-8">
                     No results for &ldquo;{query}&rdquo;
                   </p>
                 ) : (
@@ -202,22 +202,22 @@ export default function SiteSearch() {
                       key={i}
                       href={result.url}
                       onClick={() => setOpen(false)}
-                      className="flex items-start gap-3 px-4 py-3 hover:bg-[#1e2a45]/60 transition-colors group"
+                      className="flex items-start gap-3 px-4 py-3 hover:bg-[rgba(142,166,191,0.15)]/60 transition-colors group"
                     >
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 mb-1">
                           <span className={`text-xs font-semibold px-1.5 py-0.5 rounded ${TYPE_COLORS[result.type]}`}>
                             {TYPE_LABELS[result.type]}
                           </span>
-                          <span className="text-sm font-medium text-[#E2E8F0] group-hover:text-[#00D4FF] transition-colors truncate">
+                          <span className="text-sm font-medium text-[#E2E8F0] group-hover:text-[#5bd6dd] transition-colors truncate">
                             {result.title}
                           </span>
                         </div>
-                        <p className="text-xs text-[#94A3B8] line-clamp-2 leading-relaxed">
+                        <p className="text-xs text-[#8ea6bf] line-clamp-2 leading-relaxed">
                           {result.excerpt}
                         </p>
                       </div>
-                      <span className="text-[#94A3B8] group-hover:text-[#00D4FF] mt-1">→</span>
+                      <span className="text-[#8ea6bf] group-hover:text-[#5bd6dd] mt-1">→</span>
                     </Link>
                   ))
                 )}
@@ -227,13 +227,13 @@ export default function SiteSearch() {
             {/* Empty state / hints */}
             {query.length < 2 && (
               <div className="px-4 py-6 text-center">
-                <p className="text-xs text-[#94A3B8]/60 mb-3">Try searching for</p>
+                <p className="text-xs text-[#8ea6bf]/60 mb-3">Try searching for</p>
                 <div className="flex flex-wrap justify-center gap-2">
                   {["AI automation", "SEO", "content marketing", "small business", "pricing"].map((hint) => (
                     <button
                       key={hint}
                       onClick={() => setQuery(hint)}
-                      className="text-xs px-2.5 py-1 rounded-full border border-[#1e2a45] text-[#94A3B8] hover:border-[#00D4FF]/40 hover:text-[#00D4FF] transition-colors"
+                      className="text-xs px-2.5 py-1 rounded-full border border-[rgba(142,166,191,0.15)] text-[#8ea6bf] hover:border-[#5bd6dd]/40 hover:text-[#5bd6dd] transition-colors"
                     >
                       {hint}
                     </button>

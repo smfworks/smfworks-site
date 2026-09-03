@@ -1,36 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
-
 @import "tailwindcss";
 
 /* ────────────────────────────────────────────
-   SMF Works — Forge Design System v2
-   "Anthropic meets Linear meets a research journal"
+   SMF Works — Forge Design System v3
+   "The forge at night — dark, warm, cinematic"
+   Frozen design tokens
    ──────────────────────────────────────────── */
 
-@theme {
-  /* Forge foundation — deep dark with warmth */
-  --color-primary: #060912;
-  --color-forge-navy: #060912;
-  --color-forge-navy-deep: #04060d;
-  --color-forge-card: #0c1220;
-  --color-forge-surface-alt: #0a0f1a;
-  --color-forge-surface-mid: #131b2e;
-  --color-forge-surface-elevated: #121a2e;
-  --color-forge-border: #1a2540;
-  --color-forge-border-subtle: #111726;
-  --color-forge-border-accent: #ea580c30;
+:root {
+  --ink: #0b0b0d;
+  --ink-2: #101014;
+  --ember: #ff7a2f;
+  --ember-hi: #ff9a56;
+  --cyan: #5bd6dd;
+  --steel: #8ea6bf;
+  --text: #ddd9d0;
+  --warm-muted: #6a5e4e;
+}
 
-  /* Forge fire — warmer, richer embers */
-  --color-forge-ember: #f97316;
-  --color-forge-ember-bright: #fb923c;
-  --color-forge-ember-deep: #ea580c;
-  --color-forge-ember-glow: #ea580c20;
+@theme {
+  /* Forge foundation — warm dark ink */
+  --color-primary: #0b0b0d;
+  --color-forge-navy: #0b0b0d;
+  --color-forge-navy-deep: #08080a;
+  --color-forge-card: #101014;
+  --color-forge-surface-alt: #0e0e12;
+  --color-forge-surface-mid: #101014;
+  --color-forge-surface-elevated: #141418;
+  --color-forge-border: rgba(142, 166, 191, 0.15);
+  --color-forge-border-subtle: rgba(142, 166, 191, 0.08);
+  --color-forge-border-accent: rgba(255, 122, 47, 0.2);
+
+  /* Forge fire — ember tones */
+  --color-forge-ember: #ff7a2f;
+  --color-forge-ember-bright: #ff9a56;
+  --color-forge-ember-deep: #ff7a2f;
+  --color-forge-ember-glow: rgba(255, 122, 47, 0.12);
   --color-forge-ember-soft: #d4a574;
   --color-forge-gold: #C9A96E;
 
   /* Data / intelligence */
-  --color-data-cyan: #00D4FF;
-  --color-data-cyan-soft: #00B8DB;
+  --color-data-cyan: #5bd6dd;
+  --color-data-cyan-soft: #4ac4cb;
   --color-data-blue: #007BFF;
   --color-data-blue-deep: #0066CC;
 
@@ -44,28 +54,28 @@
   --color-harry-violet: #A78BFA;
   --color-harry-violet-bright: #8B5CF6;
 
-  /* Neutral — text */
-  --color-text-primary: #F1F5F9;
-  --color-text-secondary: #CBD5E1;
-  --color-text-muted: #94A3B8;
-  --color-text-dim: #64748B;
-  --color-text-inverse: #060912;
+  /* Neutral — warm text */
+  --color-text-primary: #ddd9d0;
+  --color-text-secondary: #c4c0b6;
+  --color-text-muted: #8ea6bf;
+  --color-text-dim: #6a5e4e;
+  --color-text-inverse: #0b0b0d;
 
   /* Typography */
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
 
   /* Aliases — backward compat */
-  --color-navy: #060912;
-  --color-navy-deep: #04060d;
-  --color-card: #0c1220;
-  --color-cyan: #00D4FF;
+  --color-navy: #0b0b0d;
+  --color-navy-deep: #08080a;
+  --color-card: #101014;
+  --color-cyan: #5bd6dd;
   --color-blue: #007BFF;
-  --color-orange: #f97316;
+  --color-orange: #ff7a2f;
   --color-purple: #9333EA;
-  --color-text: #F1F5F9;
-  --color-muted: #94A3B8;
+  --color-text: #ddd9d0;
+  --color-muted: #8ea6bf;
 }
 
 /* ── Base ── */
@@ -78,10 +88,9 @@ html {
 }
 
 body {
-  background-color: var(--color-forge-navy);
-  color: var(--color-text-primary);
-  font-family: 'Inter', 'Space Grotesk', sans-serif;
-  font-feature-settings: 'ss01', 'cv11';
+  background-color: var(--ink);
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
   letter-spacing: -0.01em;
 }
 
@@ -92,63 +101,63 @@ body {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #060912;
+  background: #0b0b0d;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1a2540;
+  background: rgba(142, 166, 191, 0.15);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #ea580c;
+  background: #ff7a2f;
 }
 
 /* ── Selection ── */
 
 ::selection {
-  background: #ea580c40;
-  color: #F1F5F9;
+  background: rgba(255, 122, 47, 0.25);
+  color: #ddd9d0;
 }
 
 /* ── Utility Classes ── */
 
 /* Glassmorphic surface */
 .glass {
-  background: rgba(12, 18, 32, 0.6);
+  background: rgba(16, 16, 20, 0.6);
   backdrop-filter: blur(20px) saturate(140%);
   -webkit-backdrop-filter: blur(20px) saturate(140%);
-  border: 1px solid rgba(26, 37, 64, 0.6);
+  border: 1px solid rgba(142, 166, 191, 0.15);
 }
 
 .glass-strong {
-  background: rgba(6, 9, 18, 0.85);
+  background: rgba(11, 11, 13, 0.85);
   backdrop-filter: blur(24px) saturate(160%);
   -webkit-backdrop-filter: blur(24px) saturate(160%);
-  border: 1px solid rgba(26, 37, 64, 0.8);
+  border: 1px solid rgba(142, 166, 191, 0.15);
 }
 
 /* Glow effects */
 .glow-ember {
-  box-shadow: 0 0 40px -10px rgba(234, 88, 12, 0.3), 0 0 80px -20px rgba(234, 88, 12, 0.15);
+  box-shadow: 0 0 40px -10px rgba(255, 122, 47, 0.3), 0 0 80px -20px rgba(255, 122, 47, 0.15);
 }
 
 .glow-ember-sm {
-  box-shadow: 0 0 20px -5px rgba(234, 88, 12, 0.2);
+  box-shadow: 0 0 20px -5px rgba(255, 122, 47, 0.2);
 }
 
 .glow-text {
-  text-shadow: 0 0 30px rgba(234, 88, 12, 0.4);
+  text-shadow: 0 0 30px rgba(255, 122, 47, 0.4);
 }
 
 /* Gradient text */
 .text-gradient-ember {
-  background: linear-gradient(135deg, #fb923c 0%, #ea580c 50%, #d4a574 100%);
+  background: linear-gradient(135deg, #ff9a56 0%, #ff7a2f 50%, #d4a574 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-white {
-  background: linear-gradient(180deg, #F1F5F9 0%, #94A3B8 100%);
+  background: linear-gradient(180deg, #ddd9d0 0%, #8ea6bf 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -156,24 +165,32 @@ body {
 
 /* Mesh gradient background */
 .mesh-gradient {
-  background-color: #060912;
+  background-color: #0b0b0d;
   background-image:
-    radial-gradient(at 20% 0%, rgba(234, 88, 12, 0.08) 0px, transparent 50%),
-    radial-gradient(at 80% 0%, rgba(0, 212, 255, 0.04) 0px, transparent 50%),
-    radial-gradient(at 40% 50%, rgba(147, 51, 234, 0.03) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(234, 88, 12, 0.04) 0px, transparent 50%);
+    radial-gradient(at 20% 0%, rgba(255, 122, 47, 0.06) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(91, 214, 221, 0.03) 0px, transparent 50%),
+    radial-gradient(at 40% 50%, rgba(147, 51, 234, 0.02) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(255, 122, 47, 0.04) 0px, transparent 50%);
 }
 
-/* Section gradient divider */
+/* Hairline rule — tool mark, not decorative divider */
+.hairline-rule {
+  height: 1px;
+  background: rgba(142, 166, 191, 0.15);
+  border: none;
+  margin: 0;
+}
+
+/* Section gradient divider — kept for backward compat but now a hairline */
 .gradient-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, #1a2540 20%, #1a2540 80%, transparent 100%);
+  background: rgba(142, 166, 191, 0.15);
 }
 
 /* Animated gradient border */
 .border-gradient {
   position: relative;
-  background: #0c1220;
+  background: #101014;
   border-radius: 1rem;
 }
 .border-gradient::before {
@@ -182,7 +199,7 @@ body {
   inset: 0;
   border-radius: 1rem;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(234, 88, 12, 0.4), rgba(26, 37, 64, 0.2), rgba(0, 212, 255, 0.15));
+  background: linear-gradient(135deg, rgba(255, 122, 47, 0.4), rgba(142, 166, 191, 0.2), rgba(91, 214, 221, 0.15));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -195,7 +212,7 @@ body {
 }
 .card-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(234, 88, 12, 0.1);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(255, 122, 47, 0.1);
 }
 
 /* Fade-in animation */
@@ -239,15 +256,15 @@ body {
 /* Grid background pattern */
 .grid-pattern {
   background-image:
-    linear-gradient(rgba(26, 37, 64, 0.3) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26, 37, 64, 0.3) 1px, transparent 1px);
+    linear-gradient(rgba(142, 166, 191, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(142, 166, 191, 0.06) 1px, transparent 1px);
   background-size: 60px 60px;
   background-position: -1px -1px;
 }
 
 /* Dot pattern */
 .dot-pattern {
-  background-image: radial-gradient(circle, rgba(26, 37, 64, 0.4) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(142, 166, 191, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -266,8 +283,9 @@ body {
 }
 
 /* Typography */
-.font-display { font-family: 'Space Grotesk', sans-serif; }
-.font-mono { font-family: 'JetBrains Mono', monospace; }
+.font-display { font-family: 'Cormorant Garamond', serif; }
+.font-body { font-family: 'Space Grotesk', sans-serif; }
+.font-mono { font-family: 'IBM Plex Mono', monospace; }
 
 .tracking-tightest { letter-spacing: -0.04em; }
 

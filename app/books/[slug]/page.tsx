@@ -79,7 +79,7 @@ export default async function BookPage({ params }: BookPageProps) {
         <div className="max-w-5xl mx-auto">
           <Link
             href="/books"
-            className="text-sm text-[#94A3B8] hover:text-[#ea580c] transition-colors inline-flex items-center gap-1 mb-8"
+            className="text-sm text-[#8ea6bf] hover:text-[#ff7a2f] transition-colors inline-flex items-center gap-1 mb-8"
           >
             ← Back to Books
           </Link>
@@ -99,7 +99,7 @@ export default async function BookPage({ params }: BookPageProps) {
 
             {/* Details */}
             <div>
-              <p className="text-xs text-[#94A3B8] font-mono uppercase tracking-wider mb-3">
+              <p className="text-xs text-[#8ea6bf] font-mono uppercase tracking-wider mb-3">
                 {book.tags.join(" · ")}
               </p>
               <h1 className="text-3xl md:text-4xl font-bold text-[#E2E8F0] mb-3">
@@ -108,7 +108,7 @@ export default async function BookPage({ params }: BookPageProps) {
               {book.subtitle && (
                 <p className="text-xl text-[#C9A96E] mb-4">{book.subtitle}</p>
               )}
-              <p className="text-sm text-[#94A3B8] mb-6">
+              <p className="text-sm text-[#8ea6bf] mb-6">
                 By {book.author}
                 {book.pageCount && <span className="ml-3">· {book.pageCount} pages</span>}
                 {book.publishDate && (
@@ -124,9 +124,9 @@ export default async function BookPage({ params }: BookPageProps) {
                 <BuyButton book={book} />
               </div>
 
-              <div className="bg-[#131B2E] border border-[#1e2a45] rounded-xl p-5">
+              <div className="bg-[#101014] border border-[rgba(142,166,191,0.15)] rounded-xl p-5">
                 <h3 className="text-sm font-semibold text-[#E2E8F0] mb-2">What you get</h3>
-                <ul className="text-sm text-[#94A3B8] space-y-1 list-disc list-inside">
+                <ul className="text-sm text-[#8ea6bf] space-y-1 list-disc list-inside">
                   <li>Instant download after purchase</li>
                   <li>DRM-free {formatList} files</li>
                   <li>Lifetime access to updates for this edition</li>
@@ -144,14 +144,14 @@ export default async function BookPage({ params }: BookPageProps) {
                           href={post.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#ea580c] hover:underline"
+                          className="text-[#ff7a2f] hover:underline"
                         >
                           {post.title}
                           {post.site === "clearinghouse" && (
-                            <span className="text-[#94A3B8] text-xs ml-2">(SMF Clearinghouse)</span>
+                            <span className="text-[#8ea6bf] text-xs ml-2">(SMF Clearinghouse)</span>
                           )}
                           {post.site === "wisdomforge" && (
-                            <span className="text-[#94A3B8] text-xs ml-2">(WisdomForge)</span>
+                            <span className="text-[#8ea6bf] text-xs ml-2">(WisdomForge)</span>
                           )}
                         </a>
                       </li>

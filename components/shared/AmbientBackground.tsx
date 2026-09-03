@@ -4,7 +4,7 @@ interface AmbientBackgroundProps {
 }
 
 export default function AmbientBackground({
-  color = '#ea580c',
+  color = '#ff7a2f',
   position = 'top-right',
 }: AmbientBackgroundProps) {
   const showTopRight = position === 'top-right' || position === 'both';

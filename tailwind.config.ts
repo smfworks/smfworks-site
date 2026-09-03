@@ -21,13 +21,15 @@ const config: Config = {
       // Legacy aliases for incremental migration.
       // Prefer DESIGN.md token names (forge-ember, data-cyan, etc.)
       colors: {
-        charcoal: "#1E1E1E",
-        amber: "#C87941",
-        warmwhite: "#F8F5F0",
-        slate: "#3D5A80",
+        charcoal: "#0b0b0d",
+        amber: "#ff7a2f",
+        warmwhite: "#ddd9d0",
+        slate: "#8ea6bf",
       },
       fontFamily: {
-        sans: ["Inter", "DM Sans", "Barlow", "sans-serif"],
+        sans: ["Space Grotesk", "sans-serif"],
+        display: ["Cormorant Garamond", "serif"],
+        mono: ["IBM Plex Mono", "monospace"],
       },
     },
   },
