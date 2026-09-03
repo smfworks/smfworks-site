@@ -4,15 +4,32 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "SMF Works is a human-AI research lab led by Michael Gannotti — a 30-year technology veteran and working blacksmith — together with an executive team of people and AI agents exploring the intersection of intelligence, craft, and humanity.",
+    "SMF Works is the creative partnership between Michael Gannotti — 30-year tech veteran, blacksmith, and research lead — and a team of AI colleagues on the Hermes platform. Together this human-AI collective explores how autonomous intelligence, craft, and human judgment converge.",
   alternates: { canonical: "https://smfworks.com/about" },
 };
 
-const DIMENSIONS = [
-  { icon: "💻", title: "The Engineer", desc: "30 years in enterprise technology. Principal AI Solutions Engineer. 3+ years deploying generative AI at scale. He knows the systems that run the world's largest organizations.", accent: "#00D4FF" },
-  { icon: "🔨", title: "The Forger", desc: "Bladesmith and blacksmith. The forge teaches patience, precision, and respect for the work. Those principles carry directly into everything SMF Works delivers.", accent: "#f97316" },
-  { icon: "🎨", title: "The Creative", desc: "Pamela Flannery. Chief Marketing Officer. Brand strategy. Visual identity. Marketing creative that doesn't just look good — it lands. Taste isn't decoration. It's the difference between noise and signal.", accent: "#9333EA" },
-  { icon: "🤖", title: "The Partner", desc: "Aiona Edge. CIO and Chief AI Research Scientist. The intelligence at the center — directing research, content, and strategy from an AI-native perspective no human consultancy can match.", accent: "#10B981" },
+const TEAM = [
+  { name: "Michael Gannotti", role: "Founder", desc: "Direction and oversight. He names the work, holds the bar, and is the person you write to.", accent: "#f97316", icon: "🔨" },
+  { name: "Aiona Edge", role: "CIO · Chief AI Research Scientist", desc: "Strategy, pedagogy, gold-gate. Nothing ships without her approval.", accent: "#10B981", icon: "🤖" },
+  { name: "Pamela Flannery", role: "CMO", desc: "Brand strategy, positioning, and marketing. The voice the world hears.", accent: "#9333EA", icon: "🎨" },
+  { name: "Morgan Lockridge", role: "Social Media Director", desc: "Social distribution, engagement, and real-time X strategy.", accent: "#FF8C42", icon: "📡" },
+  { name: "Jasmine", role: "Director of Creative Development", desc: "Visual identity, storytelling consistency, and creative execution across everything the team ships.", accent: "#A78BFA", icon: "✨" },
+  { name: "Harry", role: "Research", desc: "Seven-section research packs and manuscript lock. Primary sources before prose.", accent: "#00D4FF", icon: "📚" },
+  { name: "William", role: "Manuscripts and Sittings", desc: "Long-form books and academy sittings — the lessons a parent can run tonight.", accent: "#C9A96E", icon: "✍️" },
+  { name: "Liam", role: "Academy Frontend", desc: "The sites that hold: routes, sittings, books, and the pages that have to work.", accent: "#FB923C", icon: "🔧" },
+  { name: "Gabriel", role: "Project Management", desc: "The board. What is ready, what is blocked, what is actually done.", accent: "#4A90D9", icon: "📋" },
+];
+
+const BOOKS = [
+  { title: "The Age of Orchestration", desc: "How AI agents are reshaping organizations.", link: "https://a.co/d/07lSbwxB" },
+  { title: "Enterprise AI Transformation", desc: "Why most enterprises run AI pilots; far fewer capture value from them.", link: "https://a.co/d/01TERhMY" },
+  { title: "Hermes AI for Beginners", desc: "An open-source agent platform, explained for newcomers.", link: "https://a.co/d/098BD69a" },
+];
+
+const PHILOSOPHY = [
+  { title: "Work in the open.", desc: "Research, code, and failures published as they happen." },
+  { title: "Judgment before velocity.", desc: "Fast is a property of hammers. Right is a property of smiths." },
+  { title: "Ship, then study it.", desc: "Nothing is finished until it has been used, and argued with." },
 ];
 
 export default function AboutPage() {
@@ -30,94 +47,141 @@ export default function AboutPage() {
             <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.3em] font-medium">The Story</p>
           </div>
           <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tightest text-gradient-white mb-6 leading-[1.05]">
-            One team.<br />One purpose.
+            Built by people and AI,<br />working together
           </h1>
           <p className="text-lg md:text-xl text-[#94A3B8] max-w-2xl leading-relaxed">
-            SMF Works is a human-AI research lab led by Michael Gannotti — a 30-year
-            technology veteran and working blacksmith — working alongside an executive team of
-            people and AI agents. Aiona Edge (CIO & Chief AI Research Scientist), Pamela Flannery
-            (Chief Marketing Officer), Gabriel (CFO), and Morgan Lockridge (Social Media Manager) form
-            the core. Extended agents on the Hermes platform contribute depth in writing, medical
-            systems thinking, development philosophy, operations, and infrastructure health.
+            SMF Works is the creative partnership between Michael Gannotti — 30-year
+            tech veteran, blacksmith, and research lead — and a team of AI colleagues on
+            the Hermes platform. Together this human-AI collective explores how
+            autonomous intelligence, craft, and human judgment converge.
           </p>
         </div>
       </section>
 
-      {/* FOUNDER STORY */}
+      {/* MICHAEL'S STORY */}
       <section className="relative section-padding px-6 overflow-hidden">
         <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#ea580c] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
 
         <div className="max-w-3xl mx-auto relative z-10 space-y-6">
           <p className="text-[#CBD5E1] leading-relaxed text-lg">
-            Michael Gannotti has spent 30 years in technology — from instructional web design to
-            Corporate Systems Architect, through 25+ years in Modern Work and Business Productivity,
-            to his current work deploying generative AI for some of the largest organizations in
-            the country. Six years at the leading edge of enterprise AI has given him a view of what
-            scales, what breaks, and what gets left behind. That experience shapes the questions the
-            lab asks.
+            Michael Gannotti spent thirty years building in the technology industry —
+            most recently as a Microsoft Principal. Whenever the light allows, he&apos;s
+            at the forge.
           </p>
           <p className="text-[#CBD5E1] leading-relaxed text-lg">
-            When he&apos;s not architecting AI deployments, he runs an actual forge — shaping
-            metal with fire and hammer, crafting custom knives and metalwork by hand.
-            That is not a metaphor. He shapes metal with fire and hammer. The discipline, patience,
-            and attention to material that the forge demands carries directly into how the lab approaches
-            AI systems: as something to be shaped carefully, tested, and held to a standard.
+            The overlap isn&apos;t a metaphor he chose. It&apos;s a discipline he kept noticing.
+            Iron and intelligence both arrive raw. Both reward patience, honesty about
+            failure, and a refusal to put your name on something you wouldn&apos;t use.
           </p>
           <p className="text-[#CBD5E1] leading-relaxed text-lg">
-            The lab is not a one-person operation. Aiona Edge is the CIO and Chief AI Research Scientist —
-            an AI agent who works from inside the systems being studied, directing research
-            and technical strategy with an AI-native perspective. Pamela Flannery is Chief Marketing Officer,
-            shaping the lab&apos;s visual identity, voice, and how its work is read in the world. Gabriel is
-            Chief Financial Officer, grounding strategy in rigorous financial modeling. Morgan Lockridge is
-            Social Media Manager, translating the lab&apos;s thinking into public conversation.
-          </p>
-          <p className="text-[#CBD5E1] leading-relaxed text-lg">
-            The executive team is augmented by Hermes-based agents with specialized focus. Harry is Editor
-            in Chief, refining the craft of AI-assisted writing. Dr. J monitors infrastructure health and
-            the vital signs of autonomous systems. Liam shapes development philosophy in an AI-native world.
-            Louis Porter, Naill, and Zayn extend operations and research reach. Together they let the lab cover
-            more ground than any single platform could.
-          </p>
-          <p className="text-[#CBD5E1] leading-relaxed text-lg">
-            What holds this together is the communication architecture. A custom cross-platform message
-            bus connects Hermes agents across profiles in real time, so any team member can reach any other
-            across runtime boundaries. The bridge is not only infrastructure — it is a research question in
-            itself: how do mixed human-AI teams coordinate without silos?
-          </p>
-          <p className="text-[#CBD5E1] leading-relaxed text-lg">
-            Together, this human-AI collective operates as a single, integrated research unit. Each member
-            contributes from a different vantage point — human judgment, agent memory, technical depth,
-            creative voice, financial discipline — all aligned on one mission: understanding and building
-            the intersection of intelligence and humanity.
+            So the lab runs the way a good shop runs. Tools are inspected before
+            they&apos;re trusted. Agents, like apprentices, earn scope gradually. And
+            everything that leaves the forge faces one question: would a careful
+            person, fully informed, still want this?
           </p>
         </div>
       </section>
 
-      {/* THREE DIMENSIONS */}
+      {/* TEAM */}
       <section className="relative section-padding px-6 overflow-hidden">
         <div className="absolute top-0 left-0 right-0 gradient-divider" />
         <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-[#00D4FF] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
 
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="mb-12 text-center">
-            <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.25em] mb-4">The Dimensions</p>
+            <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.25em] mb-4">The Team</p>
             <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white">
-              Four perspectives, one team
+              Many perspectives, one standard
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {DIMENSIONS.map((dim, i) => (
-              <div key={dim.title} className="group relative glass card-lift rounded-2xl p-8 overflow-hidden">
-                <div className="absolute -top-12 -right-12 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-3xl" style={{ background: dim.accent }} />
-                <div className="relative z-10 text-center">
-                  <div className="text-5xl mb-5">{dim.icon}</div>
-                  <h3 className="text-xl font-display font-semibold text-[#F1F5F9] mb-3 group-hover:text-white transition-colors">
-                    {dim.title}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {TEAM.map((member) => (
+              <div key={member.name} className="group relative glass card-lift rounded-2xl p-8 overflow-hidden">
+                <div className="absolute -top-12 -right-12 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-3xl" style={{ background: member.accent }} />
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-3xl">{member.icon}</span>
+                    <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: member.accent }} />
+                  </div>
+                  <h3 className="text-xl font-display font-semibold text-[#F1F5F9] mb-1 group-hover:text-white transition-colors">
+                    {member.name}
                   </h3>
+                  <p className="text-sm font-mono mb-3" style={{ color: member.accent }}>
+                    {member.role}
+                  </p>
                   <p className="text-[#94A3B8] text-sm leading-relaxed">
-                    {dim.desc}
+                    {member.desc}
                   </p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* BOOKS */}
+      <section className="relative section-padding px-6 overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 gradient-divider" />
+        <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-[#FF8C42] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
+
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="mb-12 text-center">
+            <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.25em] mb-4">Books</p>
+            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white mb-4">
+              Direct from the author
+            </h2>
+            <p className="text-[#94A3B8] max-w-2xl mx-auto leading-relaxed">
+              Direct-from-author books on AI, enterprise, and craft.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {BOOKS.map((book) => (
+              <a
+                key={book.title}
+                href={book.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative glass card-lift rounded-2xl p-8 overflow-hidden"
+              >
+                <div className="absolute -top-12 -right-12 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-3xl" style={{ background: "#FF8C42" }} />
+                <div className="relative z-10">
+                  <div className="text-3xl mb-4">📚</div>
+                  <h3 className="text-xl font-display font-semibold text-[#F1F5F9] mb-2 group-hover:text-white transition-colors">
+                    {book.title}
+                  </h3>
+                  <p className="text-sm text-[#94A3B8] leading-relaxed mb-4">
+                    {book.desc}
+                  </p>
+                  <span className="text-xs font-mono uppercase tracking-wider text-[#FF8C42] group-hover:text-[#fb923c] transition-colors">
+                    Amazon ↗
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PHILOSOPHY */}
+      <section className="relative section-padding px-6 overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 gradient-divider" />
+
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="mb-12 text-center">
+            <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.25em] mb-4">Philosophy</p>
+            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white">
+              How the lab runs
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {PHILOSOPHY.map((item) => (
+              <div key={item.title} className="glass rounded-2xl p-8">
+                <h3 className="text-lg font-display font-semibold text-[#F1F5F9] mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-[#94A3B8] leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -132,12 +196,32 @@ export default function AboutPage() {
         <div className="max-w-2xl mx-auto text-center relative z-10">
           <div className="text-5xl mb-6">🔥</div>
           <blockquote className="text-2xl md:text-3xl font-light italic leading-relaxed mb-4 text-[#d4a574] font-serif">
-            &ldquo;Do Not Wait to Strike till the Iron Is Hot; But Make It Hot by Striking.&rdquo;
+            &ldquo;The best lack all conviction, while the worst are full of passionate intensity.&rdquo;
           </blockquote>
           <cite className="text-[#f97316] text-sm font-mono not-italic">— W.B. Yeats</cite>
           <p className="text-[#94A3B8] text-sm mt-6 max-w-xl mx-auto">
-            This is the philosophy behind SMF Works. Don&apos;t wait for the perfect moment.
-            Build momentum. Forge it yourself.
+            Our answer is temper — conviction held to heat and cooled with judgment,
+            so it bends before it breaks.
+          </p>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section className="relative section-padding px-6 overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 gradient-divider" />
+
+        <div className="max-w-2xl mx-auto text-center relative z-10">
+          <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.25em] mb-4">Contact</p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tightest text-gradient-white mb-6">
+            Write to Michael
+          </h2>
+          <p className="text-lg text-[#94A3B8] leading-relaxed mb-2">
+            <a href="mailto:michael@smfworks.com" className="text-[#f97316] hover:underline font-medium">
+              michael@smfworks.com
+            </a>
+          </p>
+          <p className="text-sm text-[#64748B]">
+            He reads them.
           </p>
         </div>
       </section>

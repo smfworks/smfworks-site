@@ -6,28 +6,21 @@ import { getAllSignalPosts } from "@/content/lib/signal-loader";
 import { getAllEdgePosts } from "@/content/lib/edge-loader";
 import { getAllMorganPosts } from "@/content/lib/morgan-loader";
 import { getAllHarryPosts } from "@/content/lib/harry-loader";
-import { getAllIssues } from "@/content/lib/newsletter-loader";
 
 export const metadata: Metadata = {
   title: "SMF Works | Human-AI Research Lab",
   description:
-    "A human-AI research lab publishing findings, shipping open tools, and running a multi-agent organization in the open. We test, document, and build — with honesty about what works and what doesn't.",
+    "A human-AI research lab. We publish findings, ship open tools, and run a multi-agent organization in the open — with honesty about what works and what doesn't.",
   alternates: { canonical: "https://smfworks.com" },
 };
 
 const ECOSYSTEM = [
-  { name: "AI Clearinghouse", desc: "900+ research articles, benchmarks, guides, and agent directories.", href: "https://www.smfclearinghouse.com/", accent: "#10B981", icon: "📋" },
-  { name: "WisdomForge", desc: "AI-powered philosophy education. Free Epictetus booklets and audio.", href: "https://smfwisdomforge.com", accent: "#C9A96E", icon: "🏛️" },
-  { name: "Hermes Agent", desc: "Open-source autonomous agent platform. Skills, memory, multi-model.", href: "https://github.com/smfworks", accent: "#00D4FF", icon: "⚡" },
-  { name: "Praxis", desc: "Governed autonomous colleague — real consequences, human oversight.", href: "/work", accent: "#A78BFA", icon: "🛡️" },
-  { name: "SMF AI Weekly", desc: "The lab notebook in public. Weekly experiments and findings.", href: "/newsletter", accent: "#f97316", icon: "📡" },
-  { name: "Books", desc: "Direct-from-author books on AI, enterprise, and craft.", href: "/books", accent: "#FF8C42", icon: "📚" },
-];
-
-const PROJECTS = [
-  { tag: "Philosophy Platform", title: "WisdomForge", desc: "AI-powered philosophy education for ages 5 to adult. Free Epictetus booklets and audio now live.", link: "https://smfwisdomforge.com", external: true },
-  { tag: "Agent Platform", title: "Hermes Agent", desc: "Open-source autonomous agent platform with skills, memory, multi-model support, and multi-platform delivery.", link: "/work", external: false },
-  { tag: "Governed Autonomy", title: "Praxis", desc: "Our governed autonomous colleague — an AI agent with real consequences under human oversight. Early preview.", link: "/work", external: false },
+  { name: "AI Clearinghouse", desc: "900+ research articles, benchmarks, guides, and agent directories. Written for practitioners, not procurement. No affiliate links, no hype.", href: "https://www.smfclearinghouse.com/", accent: "#10B981", icon: "📋" },
+  { name: "WisdomForge", desc: "A parent-operated academy for the age of AI. The booklet is the text. The parent is the teacher. Not a hosted kids chatbot.", href: "https://smfwisdomforge.com", accent: "#C9A96E", icon: "🏛️" },
+  { name: "Hermes Agent", desc: "Open-source autonomous agent platform. Skills, memory, multi-model. Built for the morning after, not the demo.", href: "https://github.com/nousresearch/hermes-agent", accent: "#00D4FF", icon: "⚡" },
+  { name: "Praxis", desc: "A governed autonomous colleague — an agent with a charter, a scope of practice, and human review for every consequential act.", href: "https://www.smfclearinghouse.com/", accent: "#A78BFA", icon: "🛡️" },
+  { name: "SMF AI Weekly", desc: "One letter. Every week. What we built, what broke, and what changed our minds. Written to be read in five minutes, worth an hour of thinking.", href: "#newsletter", accent: "#f97316", icon: "📡" },
+  { name: "Books", desc: "Direct-from-author books on AI, enterprise, and craft.", href: "/about", accent: "#FF8C42", icon: "📚" },
 ];
 
 export default function Home() {
@@ -35,7 +28,6 @@ export default function Home() {
   const edgePosts = getAllEdgePosts().slice(0, 1);
   const morganPosts = getAllMorganPosts().slice(0, 1);
   const harryPosts = getAllHarryPosts().slice(0, 1);
-  const latestNewsletter = getAllIssues().slice(0, 1);
 
   const latestPubs = [
     ...signalPosts.map(p => ({ ...p, pub: "the-signal", pubName: "The Signal", accent: "#10B981" })),
@@ -81,21 +73,22 @@ export default function Home() {
 
           {/* Headline */}
           <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.05] mb-8 tracking-tightest animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <span className="text-gradient-white">Where intelligence meets</span>
+            <span className="text-gradient-white">Intelligence is raw.</span>
             <br />
-            <span className="text-gradient-ember glow-text">judgment, craft, and care</span>
+            <span className="text-gradient-ember glow-text">Judgment gives it an edge.</span>
           </h1>
 
           {/* Subhead */}
           <p className="text-lg md:text-xl text-[#94A3B8] max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            We publish findings, ship open tools, and run a multi-agent organization
-            in the open — with honesty about what works and what doesn&apos;t.
+            A human-AI research lab. We publish findings, ship open tools, and run a
+            multi-agent organization in the open — with honesty about what works and
+            what doesn&apos;t.
           </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <Link
-              href="/work"
+              href="/research"
               className="group relative px-8 py-4 rounded-xl font-semibold text-white text-center transition-all duration-300 overflow-hidden"
               style={{ background: 'linear-gradient(135deg, #ea580c 0%, #f97316 100%)', boxShadow: '0 8px 32px -8px rgba(234, 88, 12, 0.5)' }}
             >
@@ -103,16 +96,10 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-[#fb923c] to-[#ea580c] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </Link>
             <Link
-              href="/research"
-              className="px-8 py-4 rounded-xl font-semibold text-[#F1F5F9] text-center border border-[#1a2540] hover:border-[#ea580c40] hover:bg-[#ea580c08] transition-all duration-300"
-            >
-              Read the Research →
-            </Link>
-            <Link
-              href="/newsletter"
+              href="#newsletter"
               className="px-8 py-4 rounded-xl font-semibold text-[#C9A96E] text-center hover:text-[#D4B87A] transition-colors duration-300"
             >
-              SMF AI Weekly
+              Read SMF AI Weekly
             </Link>
           </div>
 
@@ -139,9 +126,8 @@ export default function Home() {
               One lab. Many surfaces.
             </h2>
             <p className="text-[#94A3B8] max-w-2xl mx-auto leading-relaxed">
-              SMF Works is the umbrella. Under it: a practitioner research site, a philosophy
-              education platform, open-source agent tooling, a governed autonomy experiment,
-              a weekly newsletter, and direct-from-author books.
+              Everything we make shares one fire. Six surfaces, one standard: if it
+              wouldn&apos;t survive a careful person&apos;s week, it doesn&apos;t leave the forge.
             </p>
           </div>
 
@@ -151,8 +137,7 @@ export default function Home() {
               <Link
                 key={item.name}
                 href={item.href}
-                target={item.href.startsWith("http") ? "_blank" : undefined}
-                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                {...(item.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="group relative glass card-lift rounded-2xl p-7 overflow-hidden"
                 style={{ animationDelay: `${i * 0.08}s` }}
               >
@@ -189,65 +174,7 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════
-          FEATURED PROJECTS — With visual cards
-          ═══════════════════════════════════════════ */}
-      <section className="relative section-padding px-6 overflow-hidden">
-        <div className="absolute inset-0 dot-pattern opacity-20 pointer-events-none" />
-        <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-[#ea580c] opacity-[0.03] blur-[140px] rounded-full pointer-events-none" />
-
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="mb-16 text-center">
-            <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.25em] mb-4">
-              Featured Work
-            </p>
-            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white mb-4">
-              Projects that ship
-            </h2>
-            <p className="text-[#94A3B8] max-w-2xl mx-auto leading-relaxed">
-              Platforms, tools, and experiments built in the open — not aspirational roadmaps.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {PROJECTS.map((project, i) => (
-              <Link
-                key={project.title}
-                href={project.link}
-                target={project.external ? "_blank" : undefined}
-                rel={project.external ? "noopener noreferrer" : undefined}
-                className="group relative border-gradient p-8 card-lift overflow-hidden"
-              >
-                <div className="relative z-10">
-                  <p className="text-[#64748B] font-mono text-xs uppercase tracking-[0.1em] mb-5">
-                    {project.tag}
-                  </p>
-                  <h3 className="text-2xl font-display font-semibold text-[#F1F5F9] mb-3 group-hover:text-white transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-[#94A3B8] text-sm leading-relaxed mb-6">
-                    {project.desc}
-                  </p>
-                  <span className="text-[#f97316] text-lg transition-transform group-hover:translate-x-1 inline-block">
-                    →
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <Link
-              href="/work"
-              className="text-[#f97316] font-semibold hover:underline inline-flex items-center gap-1"
-            >
-              View All Projects →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════
-          LATEST PUBLICATIONS — Feed with accent badges
+          LATEST FROM THE LAB — Feed with accent badges
           ═══════════════════════════════════════════ */}
       <section className="relative section-padding px-6 overflow-hidden">
         <div className="absolute top-0 left-0 right-0 gradient-divider" />
@@ -259,11 +186,11 @@ export default function Home() {
               Latest from the Lab
             </p>
             <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white mb-4">
-              Fresh from our publications
+              Field notes, kept in public
             </h2>
             <p className="text-[#94A3B8] max-w-2xl mx-auto leading-relaxed">
-              Each agent writes from their own perspective — brand strategy, philosophy,
-              social media, and writing craft.
+              Research moves fast and memory is short, so we write it down — every
+              experiment, reversal, and conviction, dated and signed.
             </p>
           </div>
 
@@ -303,18 +230,20 @@ export default function Home() {
           </div>
 
           <div className="mt-12 text-center">
-            <Link
-              href="/publications"
+            <a
+              href="https://www.smfclearinghouse.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[#f97316] font-semibold hover:underline inline-flex items-center gap-1"
             >
-              All Publications →
-            </Link>
+              Read more at the AI Clearinghouse →
+            </a>
           </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════
-          FOUNDER — Forge metaphor with dramatic styling
+          THE FORGE — Michael's story
           ═══════════════════════════════════════════ */}
       <section className="relative section-padding px-6 overflow-hidden">
         <div className="absolute inset-0 mesh-gradient opacity-50 pointer-events-none" />
@@ -328,13 +257,22 @@ export default function Home() {
                 The Forge
               </p>
               <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white mb-6 leading-tight">
-                Built by people and AI,<br />working together
+                Why a forge?
               </h2>
+              <p className="text-[#94A3B8] leading-relaxed mb-6 text-lg max-w-xl">
+                SMF Works is led by Michael Gannotti — thirty years building in the
+                technology industry, and a working blacksmith&apos;s shop whenever the
+                light allows. The overlap isn&apos;t a metaphor he chose; it&apos;s a discipline
+                he kept noticing. Iron and intelligence both arrive raw. Both reward
+                patience, honesty about failure, and a refusal to put your name on
+                something you wouldn&apos;t use.
+              </p>
               <p className="text-[#94A3B8] leading-relaxed mb-8 text-lg max-w-xl">
-                SMF Works is the creative partnership between Michael Gannotti — 30-year tech
-                veteran, blacksmith, and research lead — and a team of AI colleagues on the
-                Hermes platform. Together this human-AI collective explores how autonomous
-                intelligence, craft, and human judgment converge.
+                So the lab runs the way a good shop runs. Tools are inspected before
+                they&apos;re trusted. Agents, like apprentices, earn scope gradually — and
+                lose it carelessly. And everything that leaves the forge faces one
+                question before it ships: would a careful person, fully informed,
+                still want this?
               </p>
               <Link
                 href="/about"
@@ -362,31 +300,24 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           NEWSLETTER CTA — Dramatic closing section
           ═══════════════════════════════════════════ */}
-      <section className="relative section-padding px-6 overflow-hidden">
+      <section id="newsletter" className="relative section-padding px-6 overflow-hidden scroll-mt-20">
         <div className="absolute inset-0 mesh-gradient opacity-80 pointer-events-none" />
         <div className="absolute top-0 left-0 right-0 gradient-divider" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#ea580c] opacity-[0.06] blur-[150px] rounded-full pointer-events-none" />
 
         <div className="max-w-2xl mx-auto text-center relative z-10">
           <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.25em] mb-4">
-            The Lab Notebook in Public
+            One letter. Every week. Struck while hot.
           </p>
           <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tightest text-gradient-white mb-6">
             SMF AI Weekly
           </h2>
           <p className="text-[#94A3B8] leading-relaxed mb-10 text-lg">
-            Every week: experiments, readings, and what we&apos;re learning about AI agents,
-            evaluation, and governed autonomy. No hype, no jargon — just what matters.
+            The lab notebook, kept in public. No spam. No resale of addresses.
+            Unsubscribe anytime.
           </p>
           <NewsletterForm />
           <p className="text-xs text-[#64748B] mt-4">No spam. Unsubscribe anytime.</p>
-          {latestNewsletter[0] && (
-            <p className="mt-8">
-              <Link href="/newsletter" className="text-[#f97316] hover:underline font-medium">
-                Read the latest issue →
-              </Link>
-            </p>
-          )}
         </div>
       </section>
     </>

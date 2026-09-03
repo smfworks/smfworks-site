@@ -4,15 +4,15 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Research",
   description:
-    "Research, findings, and open tools from the SMF Works lab. Benchmarks, agent architecture deep dives, white papers, and open-source experiments — published at the Clearinghouse.",
+    "We test, document, and build — with honesty about what works and what doesn't. Our research lives at the AI Clearinghouse: 900+ articles, benchmarks, guides, and open tools written for practitioners, not procurement.",
   alternates: { canonical: "https://smfworks.com/research" },
 };
 
 const RESEARCH_AREAS = [
-  { title: "Agent Architecture", desc: "Hermes skills, memory systems, observability, delegation patterns, and multi-agent orchestration. We build and document in the open.", href: "https://www.smfclearinghouse.com/blog", linkLabel: "Read architecture deep dives →", accent: "#f97316", icon: "⚡" },
-  { title: "Evaluation & Benchmarks", desc: "Model testing, eval harnesses, and benchmark results. We run the tests and publish the numbers — including when they surprise us.", href: "https://www.smfclearinghouse.com/tests", linkLabel: "See benchmark results →", accent: "#00D4FF", icon: "📊" },
-  { title: "Governed Autonomy", desc: "Praxis — our governed autonomous colleague experiment. An AI agent operating with real consequences under human oversight. Early preview, honest about rough edges.", href: "/work", linkLabel: "Learn about Praxis →", accent: "#10B981", icon: "🛡️" },
-  { title: "Open Tools", desc: "Hermes skills, plugins, the media replay manifest, Mnemosyne, SMF Swarm, HyperFrames. Tools we build for ourselves, shipped for others to use.", href: "https://github.com/smfworks", linkLabel: "Browse on GitHub →", accent: "#A78BFA", icon: "🔧" },
+  { title: "Agent Architecture", desc: "Hermes skills, memory systems, observability, delegation patterns, and multi-agent orchestration. We build and document in the open.", href: "https://www.smfclearinghouse.com/blog", linkLabel: "Explore at the Clearinghouse →", accent: "#f97316", icon: "⚡" },
+  { title: "Evaluation & Benchmarks", desc: "Model testing, eval harnesses, and benchmark results. We run the tests and publish the numbers — including when they surprise us.", href: "https://www.smfclearinghouse.com/tests", linkLabel: "Explore at the Clearinghouse →", accent: "#00D4FF", icon: "📊" },
+  { title: "Governed Autonomy", desc: "Praxis — our governed autonomous colleague experiment. An AI agent operating with real consequences under human oversight. Honest about rough edges.", href: "https://www.smfclearinghouse.com/blog", linkLabel: "Explore at the Clearinghouse →", accent: "#10B981", icon: "🛡️" },
+  { title: "Open Tools", desc: "Hermes skills, plugins, the media replay manifest, Mnemosyne, SMF Swarm, HyperFrames. Tools we build for ourselves, shipped for others to use.", href: "https://github.com/smfworks", linkLabel: "Explore at the Clearinghouse →", accent: "#A78BFA", icon: "🔧" },
 ];
 
 const ECOSYSTEM_LINKS = [
@@ -38,7 +38,7 @@ export default function ResearchPage() {
             </p>
           </div>
           <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tightest text-gradient-white mb-6 leading-[1.05]">
-            Research
+            Research that ships.
           </h1>
           <p className="text-lg md:text-xl text-[#94A3B8] max-w-2xl leading-relaxed">
             We test, document, and build — with honesty about what works and what
@@ -46,8 +46,8 @@ export default function ResearchPage() {
             <a href="https://www.smfclearinghouse.com/" className="text-[#00D4FF] hover:underline" target="_blank" rel="noopener noreferrer">
               AI Clearinghouse
             </a>
-            , our practitioner-facing research site with 900+ articles, benchmarks,
-            guides, and open tools.
+            : 900+ articles, benchmarks, guides, and open tools written for
+            practitioners, not procurement.
           </p>
         </div>
       </section>
@@ -125,6 +125,32 @@ export default function ResearchPage() {
               </a>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="relative section-padding px-6 overflow-hidden">
+        <div className="absolute inset-0 mesh-gradient opacity-50 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#ea580c] opacity-[0.05] blur-[130px] rounded-full pointer-events-none" />
+
+        <div className="max-w-2xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tightest text-gradient-white mb-4">
+            Explore the AI Clearinghouse →
+          </h2>
+          <p className="text-[#94A3B8] leading-relaxed mb-8 text-lg">
+            900+ articles. No affiliate links. No hype. Just what held up, what
+            didn&apos;t, and how we know.
+          </p>
+          <a
+            href="https://www.smfclearinghouse.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative px-8 py-4 rounded-xl font-semibold text-white text-center transition-all duration-300 overflow-hidden inline-flex"
+            style={{ background: 'linear-gradient(135deg, #ea580c 0%, #f97316 100%)', boxShadow: '0 8px 32px -8px rgba(234, 88, 12, 0.5)' }}
+          >
+            <span className="relative z-10">smfclearinghouse.com</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#fb923c] to-[#ea580c] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </a>
         </div>
       </section>
     </>

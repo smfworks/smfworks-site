@@ -270,6 +270,52 @@ const nextConfig = {
         destination: "https://www.smfclearinghouse.com/blog/:slug*",
         permanent: true,
       },
+      // Three-page restructuring: trim to Home, Research, About
+      {
+        source: "/work",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/books",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/books/:slug*",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/contact",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/newsletter",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/newsletter/:slug*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/publications",
+        destination: "/research",
+        permanent: true,
+      },
+      {
+        source: "/publications/:path*",
+        destination: "https://www.smfclearinghouse.com/blog",
+        permanent: true,
+      },
+      {
+        source: "/privacy",
+        destination: "/about",
+        permanent: true,
+      },
     ];
   },
 };
