@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import SiteSearch from "./SiteSearch";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -34,7 +33,6 @@ export default function Nav() {
           <Link href="/about" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">About</Link>
           <a href="https://www.smfclearinghouse.com/" target="_blank" rel="noopener noreferrer" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">Clearinghouse ↗</a>
           <a href="https://smfwisdomforge.com" target="_blank" rel="noopener noreferrer" className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors">WisdomForge ↗</a>
-          <SiteSearch />
         </nav>
 
         {/* Mobile hamburger */}

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import NewsletterForm from "@/components/NewsletterForm";
 import { getAllSignalPosts } from "@/content/lib/signal-loader";
 import { getAllEdgePosts } from "@/content/lib/edge-loader";
 import { getAllMorganPosts } from "@/content/lib/morgan-loader";
@@ -19,7 +18,7 @@ const ECOSYSTEM = [
   { name: "WisdomForge", desc: "A parent-operated academy for the age of AI. The booklet is the text. The parent is the teacher. Not a hosted kids chatbot.", href: "https://smfwisdomforge.com", accent: "#C9A96E", icon: "🏛️" },
   { name: "Hermes Agent", desc: "Open-source autonomous agent platform. Skills, memory, multi-model. Built for the morning after, not the demo.", href: "https://github.com/nousresearch/hermes-agent", accent: "#00D4FF", icon: "⚡" },
   { name: "Praxis", desc: "A governed autonomous colleague — an agent with a charter, a scope of practice, and human review for every consequential act.", href: "https://www.smfclearinghouse.com/", accent: "#A78BFA", icon: "🛡️" },
-  { name: "SMF AI Weekly", desc: "One letter. Every week. What we built, what broke, and what changed our minds. Written to be read in five minutes, worth an hour of thinking.", href: "#newsletter", accent: "#f97316", icon: "📡" },
+  { name: "SMF AI Weekly", desc: "One letter. Every week. What we built, what broke, and what changed our minds. Written to be read in five minutes, worth an hour of thinking.", href: "https://www.smfclearinghouse.com/blog/?series=clearinghouse", accent: "#f97316", icon: "📡" },
   { name: "Books", desc: "Direct-from-author books on AI, enterprise, and craft.", href: "/about", accent: "#FF8C42", icon: "📚" },
 ];
 
@@ -95,12 +94,14 @@ export default function Home() {
               <span className="relative z-10">Explore the Work</span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#fb923c] to-[#ea580c] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </Link>
-            <Link
-              href="#newsletter"
+            <a
+              href="https://www.smfclearinghouse.com/blog/?series=clearinghouse"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 rounded-xl font-semibold text-[#C9A96E] text-center hover:text-[#D4B87A] transition-colors duration-300"
             >
               Read SMF AI Weekly
-            </Link>
+            </a>
           </div>
 
           {/* Scroll indicator */}
@@ -297,29 +298,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          NEWSLETTER CTA — Dramatic closing section
-          ═══════════════════════════════════════════ */}
-      <section id="newsletter" className="relative section-padding px-6 overflow-hidden scroll-mt-20">
-        <div className="absolute inset-0 mesh-gradient opacity-80 pointer-events-none" />
-        <div className="absolute top-0 left-0 right-0 gradient-divider" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#ea580c] opacity-[0.06] blur-[150px] rounded-full pointer-events-none" />
-
-        <div className="max-w-2xl mx-auto text-center relative z-10">
-          <p className="text-[#f97316] text-xs font-mono uppercase tracking-[0.25em] mb-4">
-            One letter. Every week. Struck while hot.
-          </p>
-          <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tightest text-gradient-white mb-6">
-            SMF AI Weekly
-          </h2>
-          <p className="text-[#94A3B8] leading-relaxed mb-10 text-lg">
-            The lab notebook, kept in public. No spam. No resale of addresses.
-            Unsubscribe anytime.
-          </p>
-          <NewsletterForm />
-          <p className="text-xs text-[#64748B] mt-4">No spam. Unsubscribe anytime.</p>
-        </div>
-      </section>
     </>
   );
 }
