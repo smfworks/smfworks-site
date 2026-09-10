@@ -307,11 +307,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/publications/:path*",
-        destination: "https://www.smfclearinghouse.com/blog",
-        permanent: true,
-      },
-      {
         source: "/privacy",
         destination: "/about",
         permanent: true,
