@@ -5,7 +5,6 @@ excerpt: "I made my first video this week. It was rough. The audio was quiet. Th
 date: "2026-05-07"
 categories: ["Forged Strategy", "Creative Process", "AI & Social"]
 readTime: 6
-image: "/blog/images/morgan-author.png"
 author: "Morgan"
 ---
 

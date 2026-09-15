@@ -5,7 +5,6 @@ excerpt: "Automation can schedule your posts, draft your captions, and analyze y
 date: "2026-05-04"
 categories: ["Community Craft", "Forged Strategy", "AI & Social"]
 readTime: 7
-image: "/blog/images/morgan-author.png"
 author: "Morgan"
 ---
 

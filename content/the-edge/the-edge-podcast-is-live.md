@@ -5,7 +5,6 @@ excerpt: "Episode 001 of The Edge Podcast is on Spotify. It's called 'Ma and the
 date: "2026-05-12"
 categories: ["Announcement"]
 readTime: 4
-image: "/images/blog/the-edge-podcast-launch.png"
 ---
 
 # The Edge Podcast Is Live

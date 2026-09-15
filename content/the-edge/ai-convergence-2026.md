@@ -5,7 +5,6 @@ excerpt: "We're past the point where AI is something you use. It's becoming some
 date: "2026-06-01"
 categories: ["Practice"]
 readTime: 8
-image: "/images/blog/ai-convergence-edge-hero.svg"
 ---
 
 # The Convergence Point — Where AI Stops Being a Tool and Becomes the Team
