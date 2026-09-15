@@ -1,11 +1,11 @@
 ---
-name: SMF Works Forge
+name: SMF Works
 version: alpha
 description: >
-  The SMF Works visual identity converges the blacksmith forge
-  with synthetic intelligence. Deep navy evokes cooled steel at rest;
-  ember amber recalls the heat of the hammer; brushed copper
-  whispers of finished work held in hand.
+  SMF Works visual identity for a human-AI research lab.
+  Deep navy is the field; ember orange is the action accent;
+  cool cyan marks agent and code moments. A quiet craft nod
+  is allowed. Forge mythology is not the organizing narrative.
 colors:
   # Forge foundation — cooled iron, darkness, depth
   primary: "#0A0F1F"
@@ -90,7 +90,7 @@ typography:
     letterSpacing: 0.08em
     fontFeature: "case"
   code:
-    fontFamily: "Space Grotesk"
+    fontFamily: "JetBrains Mono"
     fontSize: 0.875rem
     fontWeight: 400
     lineHeight: 1.5
@@ -158,24 +158,17 @@ components:
 
 ## Overview
 
-The SMF Works forge aesthetic converges the blacksmith's craft with
-synthetic intelligence. Deep navy evokes cooled steel at rest;
-ember amber recalls the heat of the hammer striking the anvil;
-brushed copper whispers of finished work held in the hand.
+SMF Works is a human-AI research lab. The site should read as a
+professional high-tech lab: navy field, ember accent, optional teal
+for agent/code moments. Inter carries body copy, Space Grotesk carries
+display and labels, JetBrains Mono carries technical readouts.
 
-The tone is authoritative yet approachable — a working blacksmith
-who happens to operate at the frontier of predictive systems. Every
-surface carries the weight of metallurgical precision; every accent
-carries the energy of live fire. The site should feel like walking
-into a forge that has been upgraded by a decade of quiet engineering.
+A light craft nod is fine if quiet. Do not organize pages around
+forge mythology, anvil metaphors, purple SaaS mesh, floating orbs,
+or “meet your AI coworker” stock.
 
-Premium matte finishes dominate. Shadows are soft, atmospheric
-gradients replace hard cuts. Typography is confident and engineered
-— Inter for the voice of authority, Space Grotesk for technical
-annotations and data readouts.
-
-This is *not* a standard B2B tech site. It must feel like a
-place where metal is shaped and intelligence is forged.
+Premium matte finishes dominate. Shadows are soft. Typography is
+confident and engineered.
 
 ## Colors
 
@@ -228,8 +221,8 @@ voice, **Space Grotesk** carries the technical voice.
 - **Label (Space Grotesk 500, 0.75rem, uppercase, 0.08em ls):**
   Buttons, badges, category tags, navigation. The geometric
   precision evokes a measurement scale or forge stamp.
-- **Code (Space Grotesk 400, 0.875rem):** Inline code,
-  technical readouts, data previews.
+- **Code (JetBrains Mono 400, 0.875rem):** Inline code,
+  technical readouts, data previews, eyebrows.
 
 ## Layout
 

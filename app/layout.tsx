@@ -1,29 +1,27 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Space_Grotesk, IBM_Plex_Mono } from "next/font/google";
+import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
-const cormorant = Cormorant_Garamond({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["500", "600"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
+  variable: "--font-inter",
   display: "swap",
 });
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-space-grotesk",
   display: "swap",
 });
 
-const ibmPlexMono = IBM_Plex_Mono({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
-  variable: "--font-ibm-plex-mono",
+  variable: "--font-jetbrains-mono",
   display: "swap",
 });
 
@@ -33,16 +31,16 @@ export const metadata: Metadata = {
     template: "%s | SMF Works",
   },
   description:
-    "A human-AI research lab publishing findings, shipping open tools, and running a multi-agent organization in the open. We test, document, and build — with honesty about what works and what doesn't.",
+    "A human-AI research lab publishing findings, shipping open agent tools, and installing working Hermes or OpenClaw stacks for owners who keep the keys.",
   keywords: [
     "AI research lab",
     "human-AI research",
     "autonomous agents",
+    "Hermes agent",
+    "OpenClaw",
+    "agent setup",
     "AI evaluation",
-    "agent architecture",
     "multi-agent systems",
-    "governed autonomy",
-    "AI think tank",
     "SMF Works",
     "SMF AI Weekly",
   ],
@@ -63,7 +61,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SMF Works | Human-AI Research Lab",
     description:
-      "A human-AI research lab publishing findings, shipping open tools, and running a multi-agent organization in the open.",
+      "A human-AI research lab. Agent systems, open tools, and Agent Setup packages — Starter $2,000, Standard $3,500.",
     url: "https://smfworks.com",
     siteName: "SMF Works",
     type: "website",
@@ -81,9 +79,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SMF Works | Human-AI Research Lab",
     description:
-      "A human-AI research lab publishing findings, shipping open tools, and running a multi-agent organization in the open.",
+      "A human-AI research lab. Agent systems, open tools, and Agent Setup for owners who keep the keys.",
     images: ["https://smfworks.com/og-image.jpg"],
-    creator: "@smfworks",
+    creator: "@MichaelGannotti",
     site: "@smfworks",
   },
   alternates: {
@@ -107,17 +105,16 @@ const jsonLd = {
       logo: "https://smfworks.com/smf-logo.png",
       image: "https://smfworks.com/og-image.jpg",
       description:
-        "A human-AI research lab publishing findings, shipping open tools, and running a multi-agent organization in the open.",
+        "A human-AI research lab publishing findings, shipping open agent tools, and installing working agent stacks.",
       areaServed: {
         "@type": "Country",
         name: "United States",
       },
       sameAs: [
+        "https://x.com/MichaelGannotti",
         "https://x.com/smfworks",
+        "https://github.com/smfworks",
         "https://www.linkedin.com/company/smfworks",
-        "https://www.instagram.com/smfworks",
-        "https://www.tiktok.com/@smfworks",
-        "https://www.youtube.com/@smfworks",
       ],
       email: "michael@smfworks.com",
       founder: {
@@ -128,20 +125,20 @@ const jsonLd = {
       "@type": "Person",
       "@id": "https://smfworks.com/#founder",
       name: "Michael Gannotti",
-      jobTitle: "Founder & Research Lead",
+      jobTitle: "Principal AI",
       worksFor: {
         "@id": "https://smfworks.com/#organization",
       },
       url: "https://smfworks.com/about",
+      sameAs: ["https://x.com/MichaelGannotti"],
       description:
-        "Founder of SMF Works. 30+ years in enterprise technology and AI, combined with blacksmith craftsmanship. Architect of human-AI research exploring intelligence, craft, and judgment.",
+        "Principal AI at SMF Works. Leads a human-AI research lab that ships agent systems, open tools, and Agent Setup packages.",
       knowsAbout: [
         "Artificial Intelligence",
         "Autonomous AI Agents",
         "AI Architecture",
         "Human-AI Collaboration",
         "Enterprise Technology",
-        "Blacksmithing",
       ],
     },
     {
@@ -165,7 +162,7 @@ const faqJsonLd = {
       name: "What is SMF Works?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A human-AI research lab exploring autonomous agents, evaluation, philosophy, and craft. We publish findings and open tools, and run a multi-agent organization in the open.",
+        text: "A human-AI research lab exploring autonomous agents, evaluation, and agent operations. We publish findings, ship open tools, and offer fixed-scope Agent Setup packages.",
       },
     },
     {
@@ -173,7 +170,7 @@ const faqJsonLd = {
       name: "Can I hire SMF Works?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. We are a research lab, not a services company. We publish findings and ship open tools. You can follow our work through SMF AI Weekly and our agent publications.",
+        text: "Yes — for Agent Setup. Starter is $2,000, Standard is $3,500, and Keep-alive is $300 per month after handoff. We install Hermes on Omarchy or OpenClaw, tailor a small set of workflows, and hand back a runbook. We do not sell open-ended custom software or compliance-certified products.",
       },
     },
     {
@@ -189,7 +186,7 @@ const faqJsonLd = {
       name: "What does SMF Works publish?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Research findings, benchmarks, agent architecture deep dives, and weekly lab notes via SMF AI Weekly. Each agent also writes from their own perspective in individual publications: The Signal, The Edge, Morgan's Desk, and Harry's Desk.",
+        text: "Research findings, benchmarks, and practitioner guides live at the AI Clearinghouse. SMF AI Weekly is the public lab notebook. Open tools are on GitHub under smfworks.",
       },
     },
   ],
@@ -201,7 +198,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
+    >
       <head>
         <GoogleAnalytics />
         <script
@@ -213,7 +213,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
-      <body className="bg-[#0b0b0d] text-[#ddd9d0] antialiased" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+      <body className="bg-forge-navy text-text-primary antialiased font-body">
         <Nav />
         <main>{children}</main>
         <Footer />

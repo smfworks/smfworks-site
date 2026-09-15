@@ -1,14 +1,39 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import Button from "@/components/shared/Button";
+import { Eyebrow } from "@/components/shared/LabUI";
 
-export default function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+const PACKAGES = [
+  { value: "", label: "General note" },
+  { value: "starter", label: "Starter — $2,000" },
+  { value: "standard", label: "Standard — $3,500" },
+  { value: "keepalive", label: "Keep-alive — $300/mo" },
+];
+
+function ContactForm() {
+  const searchParams = useSearchParams();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    package: "",
+    message: "",
+  });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+  useEffect(() => {
+    const pkg = searchParams.get("package") || "";
+    if (PACKAGES.some((p) => p.value === pkg)) {
+      setForm((prev) => ({ ...prev, package: pkg }));
+    }
+  }, [searchParams]);
+
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
@@ -21,13 +46,21 @@ export default function ContactPage() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          business: form.package
+            ? PACKAGES.find((p) => p.value === form.package)?.label
+            : "",
+          package: form.package,
+          message: form.message,
+        }),
       });
       const data = await res.json();
 
       if (res.ok) {
         setStatus("success");
-        setForm({ name: "", email: "", message: "" });
+        setForm({ name: "", email: "", package: "", message: "" });
       } else {
         setStatus("error");
         setErrorMsg(data.error || "Something went wrong. Please try again.");
@@ -40,50 +73,37 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* HERO */}
-      <section className="relative py-32 px-6 overflow-hidden mesh-gradient noise-overlay">
-        <div className="absolute inset-0 grid-pattern opacity-30 pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#ff7a2f] opacity-[0.05] blur-[120px] rounded-full pointer-events-none" />
-
-        <div className="max-w-4xl mx-auto relative z-10">
-          <div className="inline-flex items-center gap-2 mb-6">
-            <span className="w-2 h-2 rounded-full bg-[#ff9a56] animate-pulse" />
-            <p className="text-[#ff9a56] text-xs font-mono uppercase tracking-[0.3em] font-medium">
-              Reach the Lab
-            </p>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tightest text-gradient-white mb-6 leading-[1.05]">
-            Get in Touch
+      <section className="relative pt-36 pb-12 px-6 overflow-hidden mesh-gradient">
+        <div className="max-w-4xl mx-auto">
+          <Eyebrow>Contact</Eyebrow>
+          <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tight text-text-primary mb-5">
+            Intake &amp; notes
           </h1>
-          <p className="text-lg md:text-xl text-[#8ea6bf] max-w-2xl leading-relaxed">
-            Questions, collaboration ideas, or something you want to discuss? Send a note.
-            We read everything — this is a research lab, not a services company, but we are
-            always curious about people thinking seriously about AI and humanity.
+          <p className="text-lg text-text-muted max-w-2xl leading-relaxed">
+            Agent Setup starts with a short intake. General questions about the
+            lab are welcome too. Michael reads them.
           </p>
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section className="relative section-padding px-6 overflow-hidden">
-        <div className="max-w-5xl mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* FORM */}
+      <section className="relative px-6 pb-24 bg-forge-navy">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-2xl font-display font-bold mb-6 text-[#ddd9d0]">Send a Message</h2>
-
             {status === "success" ? (
-              <div className="glass rounded-2xl p-10 text-center">
-                <div className="text-5xl mb-4">🔨</div>
-                <h3 className="text-xl font-display font-bold mb-2 text-[#ff9a56]">Message received!</h3>
-                <p className="text-[#8ea6bf] text-sm leading-relaxed">
-                  Thanks for reaching out. Michael responds personally within 48 hours.
+              <div className="surface-card p-10 text-center">
+                <h3 className="text-xl font-display font-bold mb-2 text-forge-ember">
+                  Message received
+                </h3>
+                <p className="text-text-muted text-sm leading-relaxed">
+                  Thanks. Michael responds personally within 48 hours.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-semibold mb-1.5 text-[#CBD5E1]" htmlFor="name">
-                      Name <span className="text-[#ff9a56]">*</span>
+                    <label className="block text-sm font-medium mb-1.5 text-text-secondary" htmlFor="name">
+                      Name <span className="text-forge-ember">*</span>
                     </label>
                     <input
                       id="name"
@@ -93,13 +113,12 @@ export default function ContactPage() {
                       value={form.name}
                       onChange={handleChange}
                       disabled={status === "loading"}
-                      placeholder="Jane Smith"
-                      className="w-full px-4 py-3 rounded-lg border border-[rgba(142,166,191,0.15)] bg-[#0c1220] text-[#ddd9d0] placeholder-[#6a5e4e]/50 focus:outline-none focus:border-[#ff7a2f] transition-colors disabled:opacity-50 text-sm"
+                      className="w-full px-4 py-3 rounded-lg border border-forge-border bg-forge-navy text-text-primary placeholder-text-dim/50 focus:outline-none focus:border-forge-ember transition-colors disabled:opacity-50 text-sm"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold mb-1.5 text-[#CBD5E1]" htmlFor="email">
-                      Email <span className="text-[#ff9a56]">*</span>
+                    <label className="block text-sm font-medium mb-1.5 text-text-secondary" htmlFor="email">
+                      Email <span className="text-forge-ember">*</span>
                     </label>
                     <input
                       id="email"
@@ -109,104 +128,112 @@ export default function ContactPage() {
                       value={form.email}
                       onChange={handleChange}
                       disabled={status === "loading"}
-                      placeholder="jane@example.com"
-                      className="w-full px-4 py-3 rounded-lg border border-[rgba(142,166,191,0.15)] bg-[#0c1220] text-[#ddd9d0] placeholder-[#6a5e4e]/50 focus:outline-none focus:border-[#ff7a2f] transition-colors disabled:opacity-50 text-sm"
+                      className="w-full px-4 py-3 rounded-lg border border-forge-border bg-forge-navy text-text-primary placeholder-text-dim/50 focus:outline-none focus:border-forge-ember transition-colors disabled:opacity-50 text-sm"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold mb-1.5 text-[#CBD5E1]" htmlFor="message">
-                    Message <span className="text-[#ff9a56]">*</span>
+                  <label className="block text-sm font-medium mb-1.5 text-text-secondary" htmlFor="package">
+                    Interest
+                  </label>
+                  <select
+                    id="package"
+                    name="package"
+                    value={form.package}
+                    onChange={handleChange}
+                    disabled={status === "loading"}
+                    className="w-full px-4 py-3 rounded-lg border border-forge-border bg-forge-navy text-text-primary focus:outline-none focus:border-forge-ember transition-colors disabled:opacity-50 text-sm"
+                  >
+                    {PACKAGES.map((p) => (
+                      <option key={p.value || "none"} value={p.value}>
+                        {p.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-1.5 text-text-secondary" htmlFor="message">
+                    Message <span className="text-forge-ember">*</span>
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     required
-                    rows={5}
+                    rows={6}
                     value={form.message}
                     onChange={handleChange}
                     disabled={status === "loading"}
-                    placeholder="What's on your mind?"
-                    className="w-full px-4 py-3 rounded-lg border border-[rgba(142,166,191,0.15)] bg-[#0c1220] text-[#ddd9d0] placeholder-[#6a5e4e]/50 focus:outline-none focus:border-[#ff7a2f] transition-colors disabled:opacity-50 text-sm resize-none"
+                    placeholder="Workflows you want, OS you run, and anything that must not be in scope."
+                    className="w-full px-4 py-3 rounded-lg border border-forge-border bg-forge-navy text-text-primary placeholder-text-dim/50 focus:outline-none focus:border-forge-ember transition-colors disabled:opacity-50 text-sm resize-none"
                   />
                 </div>
 
-                {status === "error" && (
-                  <p className="text-red-400 text-sm">{errorMsg}</p>
-                )}
+                {status === "error" && <p className="text-red-400 text-sm">{errorMsg}</p>}
 
-                <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className="w-full text-white py-4 rounded-xl font-semibold text-base transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                  style={{ background: 'linear-gradient(135deg, #ff7a2f, #ff9a56)', boxShadow: '0 8px 32px -8px rgba(234, 88, 12, 0.4)' }}
-                >
-                  {status === "loading" ? "Sending…" : "Send Message →"}
+                <button type="submit" disabled={status === "loading"} className="btn-primary w-full disabled:opacity-50">
+                  {status === "loading" ? "Sending…" : "Send"}
                 </button>
-
-                <p className="text-xs text-[#6a5e4e] text-center">
-                  Or email directly:{" "}
-                  <a href="mailto:michael@smfworks.com" className="text-[#ff9a56] hover:underline">
-                    michael@smfworks.com
-                  </a>
-                </p>
               </form>
             )}
           </div>
 
-          {/* INFO */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-2xl font-display font-bold mb-6 text-[#ddd9d0]">Other Ways to Reach Us</h2>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <span className="text-2xl">📧</span>
-                  <div>
-                    <div className="font-semibold text-[#ddd9d0]">Email</div>
-                    <a href="mailto:michael@smfworks.com" className="text-[#ff9a56] hover:underline">
-                      michael@smfworks.com
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-2xl">📍</span>
-                  <div>
-                    <div className="font-semibold text-[#ddd9d0]">Location</div>
-                    <div className="text-[#8ea6bf]">Pittsboro, NC</div>
-                  </div>
-                </div>
-              </div>
+              <h2 className="text-xl font-display font-bold mb-4 text-text-primary">Direct</h2>
+              <p className="text-sm text-text-muted mb-2">
+                <a href="mailto:michael@smfworks.com" className="text-forge-ember hover:underline">
+                  michael@smfworks.com
+                </a>
+              </p>
+              <p className="text-sm text-text-muted">
+                <a
+                  href="https://x.com/MichaelGannotti"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-forge-ember"
+                >
+                  X @MichaelGannotti ↗
+                </a>
+              </p>
+              <p className="text-sm text-text-dim mt-3">Pittsboro, NC</p>
             </div>
 
-            <div className="glass rounded-2xl p-8">
-              <h3 className="font-display font-bold text-lg mb-3 text-[#ddd9d0]">What to expect</h3>
-              <ul className="space-y-3 text-sm text-[#8ea6bf]">
-                {[
-                  "Personal response within 48 hours",
-                  "Let's explore together — partner and build together",
-                  "Have an idea — let's talk",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <span className="text-[#ff9a56] mt-0.5">✓</span>
-                    {item}
-                  </li>
-                ))}
+            <div className="surface-card p-7">
+              <h3 className="font-display font-bold text-lg mb-3 text-text-primary">What to expect</h3>
+              <ul className="space-y-3 text-sm text-text-muted">
+                <li>Personal response within 48 hours</li>
+                <li>Agent Setup: short intake, then invoice, then install day</li>
+                <li>
+                  Packages and boundaries are listed on{" "}
+                  <Link href="/services" className="text-forge-ember hover:underline">
+                    /services
+                  </Link>
+                </li>
               </ul>
             </div>
 
             <div>
-              <h3 className="font-display font-bold text-lg mb-3 text-[#ddd9d0]">Also, subscribe to SMF AI Weekly</h3>
-              <p className="text-[#8ea6bf] text-sm mb-4">
-                Free weekly AI insights — practical, jargon-free, actually useful.
+              <h3 className="font-display font-bold text-lg mb-2 text-text-primary">SMF AI Weekly</h3>
+              <p className="text-text-muted text-sm mb-3">
+                The public lab notebook. No sales sequence.
               </p>
-              <Link href="/#newsletter" className="text-[#ff9a56] font-semibold hover:underline text-sm">
-                Subscribe free →
-              </Link>
+              <Button href="/newsletter" variant="secondary">
+                Subscribe
+              </Button>
             </div>
           </div>
         </div>
       </section>
     </>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <Suspense fallback={<div className="pt-36 px-6 text-text-muted">Loading…</div>}>
+      <ContactForm />
+    </Suspense>
   );
 }

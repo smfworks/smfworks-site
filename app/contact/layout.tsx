@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact | Book a Free AI Consultation — The SMF Works Project",
+  title: "Contact",
   description:
-    "Book a free 20-minute consultation with The SMF Works Project. Honest guidance on AI content production or workflow automation designed specifically for your small business in trades, services, or retail.",
+    "Agent Setup intake and notes for SMF Works. Starter $2,000, Standard $3,500. Write to Michael Gannotti.",
   alternates: { canonical: "https://smfworks.com/contact" },
 };
 

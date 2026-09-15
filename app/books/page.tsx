@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getAllBooks } from "@/lib/books";
+import { getListedBooks } from "@/lib/books";
 import BookCard from "@/components/BookCard";
+import { Eyebrow } from "@/components/shared/LabUI";
+import { AMAZON_BOOKS } from "@/content/lib/lab";
 
 export const metadata: Metadata = {
   title: "Books",
   description:
-    "Books by Michael Gannotti and SMF Works — ebooks and PDFs on AI, enterprise, and craft. Direct from the author, no middleman.",
+    "Books by Michael Gannotti and SMF Works — AI agents, enterprise transformation, and Hermes. Direct from the author.",
   alternates: { canonical: "https://smfworks.com/books" },
   openGraph: {
     title: "Books | SMF Works",
-    description: "Ebooks and PDFs on AI, enterprise, and craft. Buy directly from the author.",
+    description: "Direct-from-author books on AI agents and enterprise transformation.",
     url: "https://smfworks.com/books",
     siteName: "SMF Works",
     type: "website",
@@ -20,57 +22,66 @@ export const metadata: Metadata = {
 };
 
 export default function BooksPage() {
-  const books = getAllBooks();
+  const books = getListedBooks();
 
   return (
     <>
-      {/* HERO */}
-      <section className="relative py-32 px-6 overflow-hidden mesh-gradient noise-overlay">
-        <div className="absolute inset-0 grid-pattern opacity-30 pointer-events-none" />
-        <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-[#C9A96E] opacity-[0.05] blur-[150px] rounded-full pointer-events-none" />
-
-        <div className="max-w-4xl mx-auto relative z-10">
-          <div className="inline-flex items-center gap-2 mb-6">
-            <span className="w-2 h-2 rounded-full bg-[#C9A96E] animate-pulse" />
-            <p className="text-[#C9A96E] text-xs font-mono uppercase tracking-[0.3em] font-medium">
-              The SMF Works Library
-            </p>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tightest text-gradient-white mb-6 leading-[1.05]">
+      <section className="relative pt-36 pb-16 px-6 overflow-hidden mesh-gradient">
+        <div className="max-w-4xl mx-auto">
+          <Eyebrow>Library</Eyebrow>
+          <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tight text-text-primary mb-5">
             Books
           </h1>
-          <p className="text-lg md:text-xl text-[#8ea6bf] max-w-2xl leading-relaxed">
-            Direct-from-author ebooks and PDFs. No platform gatekeepers, no unnecessary middlemen —
-            just the work, delivered straight to you.
+          <p className="text-lg text-text-muted max-w-2xl leading-relaxed">
+            Direct-from-author titles on agents, enterprise AI, and Hermes.
           </p>
         </div>
       </section>
 
-      {/* BOOKS GRID */}
-      <section className="relative section-padding px-6 overflow-hidden">
-        <div className="max-w-5xl mx-auto relative z-10">
+      <section className="relative px-6 pb-20 bg-forge-navy">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-sm font-mono uppercase tracking-[0.16em] text-text-dim mb-6">
+            Published
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-16">
+            {AMAZON_BOOKS.map((book) => (
+              <a
+                key={book.title}
+                href={book.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="surface-card card-lift p-6 block group"
+              >
+                <h3 className="text-lg font-display font-semibold text-text-primary mb-2 group-hover:text-white">
+                  {book.title}
+                </h3>
+                <p className="text-sm text-text-muted mb-4">{book.oneLiner}</p>
+                <span className="text-xs font-mono uppercase tracking-wider text-forge-ember">
+                  Amazon ↗
+                </span>
+              </a>
+            ))}
+          </div>
+
           {books.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {books.map((book) => (
-                <BookCard key={book.slug} book={book} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-20 border border-dashed border-[rgba(142,166,191,0.15)] rounded-2xl glass">
-              <div className="text-5xl mb-4">📚</div>
-              <p className="text-[#8ea6bf] text-lg">The bookstore is being stocked. Check back soon.</p>
-            </div>
-          )}
+            <>
+              <h2 className="text-sm font-mono uppercase tracking-[0.16em] text-text-dim mb-6">
+                Direct store
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {books.map((book) => (
+                  <BookCard key={book.slug} book={book} />
+                ))}
+              </div>
+            </>
+          ) : null}
 
           <div className="mt-16 text-center">
-            <p className="text-[#8ea6bf] text-sm mb-4">
-              Looking for free essays, research, and experiments?
+            <p className="text-text-muted text-sm mb-4">
+              Research essays live on the Clearinghouse, not in this bookstore.
             </p>
-            <Link
-              href="/publications/the-signal"
-              className="inline-block border border-[rgba(142,166,191,0.15)] text-[#ddd9d0] px-6 py-3 rounded-lg font-medium hover:border-[#ff7a2f40] hover:bg-[#ff7a2f08] transition-all"
-            >
-              Read The Signal →
+            <Link href="/research" className="text-data-cyan hover:underline text-sm">
+              Research →
             </Link>
           </div>
         </div>

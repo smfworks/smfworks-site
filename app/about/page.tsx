@@ -1,235 +1,141 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import Button from "@/components/shared/Button";
+import { Eyebrow, Hairline } from "@/components/shared/LabUI";
+import { AMAZON_BOOKS } from "@/content/lib/lab";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "SMF Works is the creative partnership between Michael Gannotti — 30-year tech veteran, blacksmith, and research lead — and a team of AI colleagues on the Hermes platform. Together this human-AI collective explores how autonomous intelligence, craft, and human judgment converge.",
+    "SMF Works is a human-AI research lab led by Michael Gannotti, Principal AI. We publish findings, ship open agent tools, and install working stacks for owners who keep the keys.",
   alternates: { canonical: "https://smfworks.com/about" },
 };
-
-const TEAM = [
-  { name: "Michael Gannotti", role: "Founder", desc: "Direction and oversight. He names the work, holds the bar, and is the person you write to.", accent: "#ff7a2f", icon: "01" },
-  { name: "Aiona Edge", role: "CIO · Chief AI Research Scientist", desc: "Strategy, pedagogy, gold-gate. Nothing ships without her approval.", accent: "#10B981", icon: "02" },
-  { name: "Pamela Flannery", role: "CMO", desc: "Brand strategy, positioning, and marketing. The voice the world hears.", accent: "#9333EA", icon: "03" },
-  { name: "Morgan Lockridge", role: "Social Media Director", desc: "Social distribution, engagement, and real-time X strategy.", accent: "#FF8C42", icon: "04" },
-  { name: "Jasmine", role: "Director of Creative Development", desc: "Visual identity, storytelling consistency, and creative execution across everything the team ships.", accent: "#A78BFA", icon: "05" },
-  { name: "Harry", role: "Research", desc: "Seven-section research packs and manuscript lock. Primary sources before prose.", accent: "#5bd6dd", icon: "06" },
-  { name: "William", role: "Manuscripts and Sittings", desc: "Long-form books and academy sittings — the lessons a parent can run tonight.", accent: "#C9A96E", icon: "07" },
-  { name: "Liam", role: "Academy Frontend", desc: "The sites that hold: routes, sittings, books, and the pages that have to work.", accent: "#ff9a56", icon: "08" },
-  { name: "Gabriel", role: "Project Management", desc: "The board. What is ready, what is blocked, what is actually done.", accent: "#4A90D9", icon: "09" },
-];
-
-const BOOKS = [
-  { title: "The Age of Orchestration", desc: "How AI agents are reshaping organizations.", link: "https://a.co/d/07lSbwxB" },
-  { title: "Enterprise AI Transformation", desc: "Why most enterprises run AI pilots; far fewer capture value from them.", link: "https://a.co/d/01TERhMY" },
-  { title: "Hermes AI for Beginners", desc: "An open-source agent platform, explained for newcomers.", link: "https://a.co/d/098BD69a" },
-];
-
-const PHILOSOPHY = [
-  { title: "Work in the open.", desc: "Research, code, and failures published as they happen." },
-  { title: "Judgment before velocity.", desc: "Fast is a property of hammers. Right is a property of smiths." },
-  { title: "Ship, then study it.", desc: "Nothing is finished until it has been used, and argued with." },
-];
 
 export default function AboutPage() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative pt-40 pb-32 px-6 overflow-hidden mesh-gradient noise-overlay bg-[#0b0b0d]">
-        <div className="absolute inset-0 grid-pattern opacity-20 pointer-events-none" />
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#ff7a2f] opacity-[0.04] blur-[150px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#9333EA] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
-
-        <div className="max-w-4xl mx-auto relative z-10">
-          <div className="inline-flex items-center gap-2 mb-6">
-            <span className="w-2 h-2 rounded-full bg-[#ff7a2f] animate-pulse" />
-            <p className="text-[#ff7a2f] text-xs font-mono uppercase tracking-[0.3em] font-medium" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>The Story</p>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tightest text-gradient-white mb-6 leading-[1.05]" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-            Built by people and AI,<br />working together
+      <section className="relative pt-36 pb-16 px-6 overflow-hidden mesh-gradient">
+        <div className="max-w-4xl mx-auto">
+          <Eyebrow>About</Eyebrow>
+          <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tight text-text-primary mb-5">
+            A lab, not a chatbot vendor.
           </h1>
-          <p className="text-lg md:text-xl text-[#8ea6bf] max-w-2xl leading-relaxed" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-            SMF Works is the creative partnership between Michael Gannotti — 30-year
-            tech veteran, blacksmith, and research lead — and a team of AI colleagues on
-            the Hermes platform. Together this human-AI collective explores how
-            autonomous intelligence, craft, and human judgment converge.
+          <p className="text-lg md:text-xl text-text-muted max-w-2xl leading-relaxed">
+            SMF Works is a human-AI research lab. We test agent systems, publish
+            what holds up, and install stacks that run on hardware the owner
+            controls.
           </p>
         </div>
       </section>
 
-      {/* MICHAEL'S STORY */}
-      <section className="relative section-padding px-6 overflow-hidden bg-[#0b0b0d]">
-        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#ff7a2f] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
-
-        <div className="max-w-3xl mx-auto relative z-10 space-y-6">
-          <p className="text-[#c4c0b6] leading-relaxed text-lg" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-            Michael Gannotti spent thirty years building in the technology industry —
-            most recently as a Microsoft Principal. Whenever the light allows, he&apos;s
-            at the forge.
+      <section className="relative px-6 pb-20 bg-forge-navy">
+        <div className="max-w-3xl mx-auto space-y-6">
+          <h2 className="text-2xl font-display font-semibold text-text-primary">
+            Michael Gannotti — Principal AI
+          </h2>
+          <p className="text-text-muted leading-relaxed text-lg">
+            Michael leads SMF Works. Thirty years building in technology — most
+            recently as a Microsoft Principal. He names the work, holds the bar,
+            and is the person you write to.
           </p>
-          <p className="text-[#c4c0b6] leading-relaxed text-lg" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-            The overlap isn&apos;t a metaphor he chose. It&apos;s a discipline he kept noticing.
-            Iron and intelligence both arrive raw. Both reward patience, honesty about
-            failure, and a refusal to put your name on something you wouldn&apos;t use.
+          <p className="text-text-muted leading-relaxed text-lg">
+            Agents on the Hermes platform do the labor under his direction:
+            research, writing, ops, and installs. Scope is earned. Consequential
+            actions stay behind human review.
           </p>
-          <p className="text-[#c4c0b6] leading-relaxed text-lg" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-            So the lab runs the way a good shop runs. Tools are inspected before
-            they&apos;re trusted. Agents, like apprentices, earn scope gradually. And
-            everything that leaves the forge faces one question: would a careful
-            person, fully informed, still want this?
+          <p className="text-text-muted leading-relaxed text-lg">
+            A quiet craft habit remains — metalwork when the light allows — but
+            the thesis of this lab is AI systems, not a forge brand story.
           </p>
         </div>
       </section>
 
-      {/* Hairline rule */}
-      <hr className="hairline-rule max-w-5xl mx-auto" />
+      <Hairline />
 
-      {/* TEAM */}
-      <section className="relative section-padding px-6 overflow-hidden bg-[#0b0b0d]">
-        <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-[#5bd6dd] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
-
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="mb-12 text-center">
-            <p className="text-[#ff7a2f] text-xs font-mono uppercase tracking-[0.25em] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>The Team</p>
-            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-              Many perspectives, one standard
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {TEAM.map((member) => (
-              <div key={member.name} className="group relative glass card-lift rounded-2xl p-8 overflow-hidden">
-                <div className="absolute -top-12 -right-12 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-3xl" style={{ background: member.accent }} />
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="font-mono text-sm text-[#8ea6bf]" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>{member.icon}</span>
-                    <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: member.accent }} />
-                  </div>
-                  <h3 className="text-xl font-display font-semibold text-[#ddd9d0] mb-1 group-hover:text-white transition-colors" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                    {member.name}
-                  </h3>
-                  <p className="text-sm font-mono mb-3" style={{ color: member.accent, fontFamily: 'IBM Plex Mono, monospace' }}>
-                    {member.role}
-                  </p>
-                  <p className="text-[#8ea6bf] text-sm leading-relaxed" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                    {member.desc}
-                  </p>
-                </div>
+      <section className="relative section-padding px-6 bg-forge-navy">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-display font-semibold text-text-primary mb-6">
+            How the lab runs
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {[
+              {
+                title: "Work in the open",
+                desc: "Research, code, and failures published as they happen — Clearinghouse for findings, GitHub for tools.",
+              },
+              {
+                title: "Judgment before velocity",
+                desc: "Fast is cheap. Right is the product. Agents earn scope; they lose it carelessly.",
+              },
+              {
+                title: "Ship, then study it",
+                desc: "Nothing is finished until it has been used. Agent Setup includes a dogfood pass for that reason.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="surface-card p-6">
+                <h3 className="text-lg font-display font-semibold text-text-primary mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-text-muted leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Hairline rule */}
-      <hr className="hairline-rule max-w-4xl mx-auto" />
+      <Hairline />
 
-      {/* BOOKS */}
-      <section className="relative section-padding px-6 overflow-hidden bg-[#0b0b0d]">
-        <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-[#FF8C42] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
-
-        <div className="max-w-4xl mx-auto relative z-10">
-          <div className="mb-12 text-center">
-            <p className="text-[#ff7a2f] text-xs font-mono uppercase tracking-[0.25em] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>Books</p>
-            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-              Direct from the author
-            </h2>
-            <p className="text-[#8ea6bf] max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-              Direct-from-author books on AI, enterprise, and craft.
-            </p>
-          </div>
+      <section className="relative section-padding px-6 bg-forge-navy">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-display font-semibold text-text-primary mb-3">
+            Books
+          </h2>
+          <p className="text-text-muted mb-8">
+            Direct-from-author titles. Buy on Amazon, or watch{" "}
+            <Link href="/books" className="text-forge-ember hover:underline">
+              /books
+            </Link>{" "}
+            for direct drops.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {BOOKS.map((book, i) => (
+            {AMAZON_BOOKS.map((book) => (
               <a
                 key={book.title}
-                href={book.link}
+                href={book.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative glass card-lift rounded-2xl p-8 overflow-hidden"
+                className="surface-card card-lift p-6 block group"
               >
-                <div className="absolute -top-12 -right-12 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-3xl" style={{ background: "#FF8C42" }} />
-                <div className="relative z-10">
-                  <div className="font-mono text-sm text-[#8ea6bf] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>{String(i + 1).padStart(2, '0')}</div>
-                  <h3 className="text-xl font-display font-semibold text-[#ddd9d0] mb-2 group-hover:text-white transition-colors" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                    {book.title}
-                  </h3>
-                  <p className="text-sm text-[#8ea6bf] leading-relaxed mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                    {book.desc}
-                  </p>
-                  <span className="text-xs font-mono uppercase tracking-wider text-[#FF8C42] group-hover:text-[#ff9a56] transition-colors" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
-                    Amazon ↗
-                  </span>
-                </div>
+                <h3 className="text-lg font-display font-semibold text-text-primary mb-2 group-hover:text-white">
+                  {book.title}
+                </h3>
+                <p className="text-sm text-text-muted mb-4">{book.oneLiner}</p>
+                <span className="text-xs font-mono uppercase tracking-wider text-forge-ember">
+                  Amazon ↗
+                </span>
               </a>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Hairline rule */}
-      <hr className="hairline-rule max-w-4xl mx-auto" />
-
-      {/* PHILOSOPHY */}
-      <section className="relative section-padding px-6 overflow-hidden bg-[#0b0b0d]">
-        <div className="max-w-4xl mx-auto relative z-10">
-          <div className="mb-12 text-center">
-            <p className="text-[#ff7a2f] text-xs font-mono uppercase tracking-[0.25em] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>Philosophy</p>
-            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-              How the lab runs
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {PHILOSOPHY.map((item) => (
-              <div key={item.title} className="glass rounded-2xl p-8">
-                <h3 className="text-lg font-display font-semibold text-[#ddd9d0] mb-3" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                  {item.title}
-                </h3>
-                <p className="text-sm text-[#8ea6bf] leading-relaxed" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* YEATS — meditative pause */}
-      <section className="relative bg-[#0b0b0d] py-32 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <blockquote
-            className="text-3xl md:text-5xl leading-relaxed text-[#ddd9d0] mb-8"
-            style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontWeight: 500 }}
-          >
-            &ldquo;The best lack all conviction, while the worst<br className="hidden md:block" /> are full of passionate intensity.&rdquo;
-          </blockquote>
-          <cite className="text-[#8ea6bf] text-sm not-italic" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
-            — W.B. Yeats
-          </cite>
-          <p className="text-[#8ea6bf] text-sm mt-8 max-w-xl mx-auto" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-            Our answer is temper — conviction held to heat and cooled with judgment,
-            so it bends before it breaks.
+      <section className="relative px-6 pb-24 bg-forge-navy">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="text-[11px] font-mono uppercase tracking-[0.16em] text-text-dim mb-3">
+            Contact
           </p>
-        </div>
-      </section>
-
-      {/* Hairline rule */}
-      <hr className="hairline-rule max-w-2xl mx-auto" />
-
-      {/* CONTACT */}
-      <section className="relative section-padding px-6 overflow-hidden bg-[#0b0b0d]">
-        <div className="max-w-2xl mx-auto text-center relative z-10">
-          <p className="text-[#ff7a2f] text-xs font-mono uppercase tracking-[0.25em] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>Contact</p>
-          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tightest text-gradient-white mb-6" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+          <h2 className="text-2xl font-display font-bold text-text-primary mb-4">
             Write to Michael
           </h2>
-          <p className="text-lg text-[#8ea6bf] leading-relaxed mb-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-            <a href="mailto:michael@smfworks.com" className="text-[#ff7a2f] hover:underline font-medium">
+          <p className="text-text-muted mb-6">
+            Agent Setup intake or a note about the work.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button href="/contact">Contact form</Button>
+            <Button href="mailto:michael@smfworks.com" variant="secondary" external>
               michael@smfworks.com
-            </a>
-          </p>
-          <p className="text-sm text-[#6a5e4e]" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-            He reads them.
-          </p>
+            </Button>
+          </div>
         </div>
       </section>
     </>

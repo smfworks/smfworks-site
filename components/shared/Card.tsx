@@ -14,9 +14,9 @@ export default function Card({
   className = '',
 }: CardProps) {
   const classes = [
-    'bg-[#101014] rounded-xl border border-[rgba(142,166,191,0.15)] p-6',
+    'bg-forge-card rounded-xl border border-forge-border p-6',
     accent ? 'border-t-2' : '',
-    hover ? 'hover:shadow-lg hover:border-[#ff7a2f] transition-all' : '',
+    hover ? 'hover:shadow-lg hover:border-forge-ember transition-all' : '',
     className,
   ]
     .filter(Boolean)

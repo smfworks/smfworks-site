@@ -61,7 +61,7 @@ export default function ForgeCanvas() {
     const agentNodes: AgentNode[] = [];
     const sparks: Spark[] = [];
 
-    const MAX_EMBERS = 45;
+    const MAX_EMBERS = 22;
     const NUM_AGENTS = 10;
     const PROXIMITY = 120;
 
@@ -110,9 +110,9 @@ export default function ForgeCanvas() {
         h,
         Math.max(w * 0.7, 400)
       );
-      grad.addColorStop(0, "rgba(255, 100, 30, 0.25)");
-      grad.addColorStop(0.3, "rgba(255, 80, 20, 0.12)");
-      grad.addColorStop(0.6, "rgba(180, 50, 10, 0.05)");
+      grad.addColorStop(0, "rgba(234, 88, 12, 0.12)");
+      grad.addColorStop(0.3, "rgba(234, 88, 12, 0.05)");
+      grad.addColorStop(0.6, "rgba(0, 212, 255, 0.03)");
       grad.addColorStop(1, "rgba(0, 0, 0, 0)");
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, w, h);
@@ -282,7 +282,7 @@ export default function ForgeCanvas() {
         const h = H();
 
         // Clear with slight fade for trail effect
-        ctx.fillStyle = "rgba(11, 11, 13, 0.12)";
+        ctx.fillStyle = "rgba(10, 15, 31, 0.18)";
         ctx.fillRect(0, 0, w, h);
 
         // Draw coal bed glow at bottom
@@ -317,7 +317,7 @@ export default function ForgeCanvas() {
       animate();
     } else {
       // Static coal bed only — draw the gradient once
-      ctx.fillStyle = "#0b0b0d";
+      ctx.fillStyle = "#0A0F1F";
       ctx.fillRect(0, 0, W(), H());
       drawCoalBed();
     }
@@ -342,8 +342,7 @@ export default function ForgeCanvas() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full"
-      style={{ cursor: "pointer" }}
+      className="absolute inset-0 w-full h-full pointer-events-none"
       aria-hidden="true"
     />
   );
