@@ -39,7 +39,7 @@ export const SURFACES: Surface[] = [
     external: true,
   },
   {
-    name: "Hermes / agent tools",
+    name: "Hermes",
     oneLiner:
       "Open agent runtime work: Hermes-on-Omarchy, skills, plugins, and install guides we actually run.",
     href: "https://github.com/smfworks/hermes-omarchy",

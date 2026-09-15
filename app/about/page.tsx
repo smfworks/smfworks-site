@@ -34,18 +34,14 @@ export default function AboutPage() {
             Michael Gannotti — Principal AI
           </h2>
           <p className="text-text-muted leading-relaxed text-lg">
-            Michael leads SMF Works. Thirty years building in technology — most
-            recently as a Microsoft Principal. He names the work, holds the bar,
-            and is the person you write to.
+            Michael leads SMF Works. Thirty years in enterprise technology —
+            most recently as a Microsoft Principal. He names the work, holds
+            the bar, and is the person you write to.
           </p>
           <p className="text-text-muted leading-relaxed text-lg">
-            Agents on the Hermes platform do the labor under his direction:
-            research, writing, ops, and installs. Scope is earned. Consequential
-            actions stay behind human review.
-          </p>
-          <p className="text-text-muted leading-relaxed text-lg">
-            A quiet craft habit remains — metalwork when the light allows — but
-            the thesis of this lab is AI systems, not a forge brand story.
+            The lab publishes findings, ships open agent tools, and installs
+            working stacks for owners who keep the keys. Agents do the labor
+            under his direction. Consequential actions stay behind human review.
           </p>
         </div>
       </section>
@@ -106,7 +102,7 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
                 className="surface-card card-lift p-6 block group"
               >
-                <h3 className="text-lg font-display font-semibold text-text-primary mb-2 group-hover:text-white">
+                <h3 className="text-lg font-display font-semibold text-text-primary mb-2">
                   {book.title}
                 </h3>
                 <p className="text-sm text-text-muted mb-4">{book.oneLiner}</p>

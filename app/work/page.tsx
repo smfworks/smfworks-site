@@ -75,7 +75,7 @@ export default function WorkPage() {
                       </span>
                       <span className="text-xs font-mono text-text-dim">{item.tagline}</span>
                     </div>
-                    <h2 className="text-xl font-display font-semibold text-text-primary mb-2 group-hover:text-white transition-colors">
+                    <h2 className="text-xl font-display font-semibold text-text-primary mb-2 group-hover:text-forge-ember transition-colors">
                       {item.name}
                     </h2>
                     <p className="text-sm text-text-muted leading-relaxed">{item.description}</p>

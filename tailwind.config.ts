@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 /**
- * Tailwind configuration — The SMF Works Project Forge aesthetic.
+ * Tailwind configuration — SMF Works lab tokens.
  * Source of truth for design tokens: /DESIGN.md (Google design.md spec)
  * Token registry lives in app/globals.css via @theme.
  *
@@ -21,10 +21,10 @@ const config: Config = {
       // Legacy aliases for incremental migration.
       // Prefer DESIGN.md token names (forge-ember, data-cyan, etc.)
       colors: {
-        charcoal: "#0A0F1F",
-        amber: "#ea580c",
-        warmwhite: "#E2E8F0",
-        slate: "#94A3B8",
+        charcoal: "#0B0D10",
+        amber: "#E86A2B",
+        warmwhite: "#F4F1EA",
+        slate: "#8A9099",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "Inter", "sans-serif"],

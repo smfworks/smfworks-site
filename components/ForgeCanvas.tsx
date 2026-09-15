@@ -98,8 +98,8 @@ export default function ForgeCanvas() {
       embers.push(e);
     }
 
-    // Draw coal bed gradient (used both animated and static)
-    const drawCoalBed = () => {
+    // Field glow — ember at the base, teal bloom for agent nodes
+    const drawFieldGlow = () => {
       const w = W();
       const h = H();
       const grad = ctx.createRadialGradient(
@@ -110,9 +110,9 @@ export default function ForgeCanvas() {
         h,
         Math.max(w * 0.7, 400)
       );
-      grad.addColorStop(0, "rgba(234, 88, 12, 0.12)");
-      grad.addColorStop(0.3, "rgba(234, 88, 12, 0.05)");
-      grad.addColorStop(0.6, "rgba(0, 212, 255, 0.03)");
+      grad.addColorStop(0, "rgba(232, 106, 43, 0.12)");
+      grad.addColorStop(0.3, "rgba(232, 106, 43, 0.05)");
+      grad.addColorStop(0.6, "rgba(61, 184, 168, 0.04)");
       grad.addColorStop(1, "rgba(0, 0, 0, 0)");
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, w, h);
@@ -158,7 +158,6 @@ export default function ForgeCanvas() {
       // Flicker
       e.vx += (Math.random() - 0.5) * 0.05;
       e.vy *= 0.998;
-      // Slight upward acceleration to simulate heat
       e.vy -= 0.002;
       return e.life < e.maxLife && e.y > 0;
     };
@@ -168,15 +167,15 @@ export default function ForgeCanvas() {
       ctx.save();
       ctx.globalCompositeOperation = "lighter";
       const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, 8);
-      grad.addColorStop(0, "rgba(91, 214, 221, 0.6)");
-      grad.addColorStop(0.5, "rgba(91, 214, 221, 0.2)");
-      grad.addColorStop(1, "rgba(91, 214, 221, 0)");
+      grad.addColorStop(0, "rgba(61, 184, 168, 0.55)");
+      grad.addColorStop(0.5, "rgba(61, 184, 168, 0.18)");
+      grad.addColorStop(1, "rgba(61, 184, 168, 0)");
       ctx.fillStyle = grad;
       ctx.beginPath();
       ctx.arc(n.x, n.y, 8, 0, Math.PI * 2);
       ctx.fill();
 
-      ctx.fillStyle = "rgba(91, 214, 221, 0.8)";
+      ctx.fillStyle = "rgba(61, 184, 168, 0.85)";
       ctx.beginPath();
       ctx.arc(n.x, n.y, 1.5, 0, Math.PI * 2);
       ctx.fill();
@@ -209,7 +208,7 @@ export default function ForgeCanvas() {
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < PROXIMITY) {
             const alpha = (1 - dist / PROXIMITY) * 0.15;
-            ctx.strokeStyle = `rgba(91, 214, 221, ${alpha})`;
+            ctx.strokeStyle = `rgba(61, 184, 168, ${alpha})`;
             ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(agentNodes[i].x, agentNodes[i].y);
@@ -281,11 +280,10 @@ export default function ForgeCanvas() {
         const h = H();
 
         // Clear with slight fade for trail effect
-        ctx.fillStyle = "rgba(10, 15, 31, 0.18)";
+        ctx.fillStyle = "rgba(11, 13, 16, 0.18)";
         ctx.fillRect(0, 0, w, h);
 
-        // Draw coal bed glow at bottom
-        drawCoalBed();
+        drawFieldGlow();
 
         // Update and draw embers
         for (let i = embers.length - 1; i >= 0; i--) {
@@ -315,10 +313,9 @@ export default function ForgeCanvas() {
       };
       animate();
     } else {
-      // Static coal bed only — draw the gradient once
-      ctx.fillStyle = "#0A0F1F";
+      ctx.fillStyle = "#0B0D10";
       ctx.fillRect(0, 0, W(), H());
-      drawCoalBed();
+      drawFieldGlow();
     }
 
     // Click handler for sparks

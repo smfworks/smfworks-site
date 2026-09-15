@@ -4,12 +4,12 @@ import Image from "next/image";
 import ForgeCanvas from "@/components/ForgeCanvas";
 import Button from "@/components/shared/Button";
 import { Eyebrow, Hairline, SectionIntro, SurfaceCard } from "@/components/shared/LabUI";
-import NewsletterForm from "@/components/NewsletterForm";
 import {
   ACCOMPLISHMENTS,
   PROOF_ITEMS,
   SURFACES,
 } from "@/content/lib/lab";
+import { getCurrentIssue } from "@/content/lib/newsletter-loader";
 import { SERVICE_PACKAGES } from "@/content/lib/services";
 
 export const metadata: Metadata = {
@@ -20,6 +20,21 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const weekly = getCurrentIssue();
+  const proofItems = PROOF_ITEMS.map((item) =>
+    item.label === "SMF AI Weekly"
+      ? { ...item, detail: `Issue #${weekly.issueNumber}` }
+      : item
+  );
+  const accomplishments = ACCOMPLISHMENTS.map((item) =>
+    item.title === "Clearinghouse + weekly + X"
+      ? {
+          ...item,
+          oneLiner: `Research published at the Clearinghouse; SMF AI Weekly through Issue #${weekly.issueNumber}; field notes on X @MichaelGannotti.`,
+        }
+      : item
+  );
+
   return (
     <>
       <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-forge-navy">
@@ -42,28 +57,23 @@ export default function Home() {
             <Eyebrow>Human-AI Research Lab</Eyebrow>
 
             <h1 className="text-4xl md:text-6xl font-display font-bold leading-[1.08] mb-6 tracking-tight text-text-primary">
-              Agent systems, open tools, and setups you can actually run.
+              A lab for agent systems. Judgment stays human.
             </h1>
 
             <p className="text-lg md:text-xl text-text-muted max-w-2xl mb-10 leading-relaxed">
-              SMF Works is a human-AI research lab. We publish findings, ship
-              agent tooling in the open, and install a working Hermes or OpenClaw
-              stack on hardware you own — with a runbook, not a demo reel.
+              SMF Works publishes what we learn, ships open agent tools, and
+              installs stacks on hardware you own. Intelligence is abundant.
+              Judgment is the product.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button href="/services">Agent Setup</Button>
-              <Button href="/work" variant="secondary">
-                See the work
-              </Button>
-            </div>
+            <Button href="/services">Agent Setup</Button>
           </div>
         </div>
       </section>
 
       <section className="border-y border-forge-border bg-forge-card/60">
         <div className="max-w-6xl mx-auto px-6 py-5 grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
-          {PROOF_ITEMS.map((item) => {
+          {proofItems.map((item) => {
             const inner = (
               <>
                 <div className="text-[11px] font-mono uppercase tracking-[0.16em] text-text-dim mb-1">
@@ -110,7 +120,7 @@ export default function Home() {
                     {item.href.startsWith("http") ? "↗" : "→"}
                   </span>
                 </div>
-                <h3 className="text-xl font-display font-semibold text-text-primary mb-2 group-hover:text-white transition-colors">
+                <h3 className="text-xl font-display font-semibold text-text-primary mb-2">
                   {item.name}
                 </h3>
                 <p className="text-sm text-text-muted leading-relaxed">{item.oneLiner}</p>
@@ -130,7 +140,7 @@ export default function Home() {
             body="Named products and dated notes — no invented counters, no case-study ROI. The full catalog lives on /work."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {ACCOMPLISHMENTS.map((item) => (
+            {accomplishments.map((item) => (
               <SurfaceCard key={item.title} href={item.href}>
                 <div className="flex items-center gap-3 mb-3">
                   {item.date ? (
@@ -142,7 +152,7 @@ export default function Home() {
                     {item.source}
                   </span>
                 </div>
-                <h3 className="text-lg font-display font-semibold text-text-primary mb-2 group-hover:text-white transition-colors">
+                <h3 className="text-lg font-display font-semibold text-text-primary mb-2">
                   {item.title}
                 </h3>
                 <p className="text-sm text-text-muted leading-relaxed">{item.oneLiner}</p>
@@ -224,15 +234,15 @@ export default function Home() {
               Michael Gannotti, Principal AI
             </h2>
             <p className="text-text-muted leading-relaxed text-lg mb-4">
-              Michael leads SMF Works — thirty years in enterprise technology,
-              most recently as a Microsoft Principal, now running a human-AI lab
-              that publishes in the open and installs agent stacks for owners who
-              want to keep the keys.
+              Michael leads SMF Works: thirty years in enterprise technology,
+              most recently as a Microsoft Principal, now running a human-AI
+              research lab that publishes in the open and installs agent stacks
+              owners control.
             </p>
             <p className="text-text-muted leading-relaxed text-lg mb-8">
-              Agents do the labor under his direction. Judgment stays human:
-              tools are inspected before they are trusted, and nothing ships
-              that a careful person, fully informed, would not still want.
+              Agents do the labor under his direction. Judgment stays human —
+              tools are inspected before they are trusted, and consequential
+              acts stay behind review.
             </p>
             <Button href="/about" variant="secondary">
               More about the lab
@@ -252,30 +262,6 @@ export default function Home() {
             </p>
             <Button href="/contact">Contact</Button>
           </div>
-        </div>
-      </section>
-
-      <section
-        id="newsletter"
-        className="relative px-6 pb-24 bg-forge-navy scroll-mt-24"
-      >
-        <div className="max-w-3xl mx-auto surface-card p-8 md:p-10 text-center">
-          <Eyebrow tone="cyan">Letter</Eyebrow>
-          <h2 className="text-2xl md:text-3xl font-display font-bold text-text-primary mb-3">
-            SMF AI Weekly
-          </h2>
-          <p className="text-text-muted mb-6 max-w-xl mx-auto">
-            What we built, what broke, and what changed our minds. Free. No
-            hype cycle recap dressed as research.
-          </p>
-          <NewsletterForm />
-          <p className="text-xs text-text-dim mt-4">
-            Or browse the{" "}
-            <Link href="/newsletter" className="text-data-cyan hover:underline">
-              archive
-            </Link>
-            .
-          </p>
         </div>
       </section>
     </>

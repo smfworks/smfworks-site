@@ -12,7 +12,7 @@ This site is the **parent brand site**:
 
 - **[AI Clearinghouse](https://www.smfclearinghouse.com/)** — practitioner research (canonical research lives there, not here)
 - **[WisdomForge](https://smfwisdomforge.com)** — parent-operated academy
-- **Hermes / agent tools** — open runtime work (Hermes-on-Omarchy, LAR, skills)
+- **Hermes** — open agent runtime work (Hermes-on-Omarchy, LAR, skills)
 - **Praxis** — governed autonomous colleague experiment
 - **SMF AI Weekly** — weekly letter
 - **Books** — direct-from-author titles
@@ -55,7 +55,7 @@ Copy `.env.example` to `.env.local` for local secrets. Hero generation requires 
 
 ## Design System
 
-Navy field (#0A0F1F), ember accent (#ea580c), optional cyan (#00D4FF) for agent/code moments.
+Charcoal field (#0B0D10), ember CTAs (#E86A2B / #ea580c), teal (#3DB8A8) for agent/code, paper headings (#F4F1EA).
 Inter (body) + Space Grotesk (display) + JetBrains Mono (code).
 Tokens: `app/globals.css` `@theme` and `DESIGN.md`.
 

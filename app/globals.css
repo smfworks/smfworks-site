@@ -2,44 +2,44 @@
 
 /* ────────────────────────────────────────────
    SMF Works — design tokens (DESIGN.md)
-   Navy field, ember accent, cool teal for agent/code.
+   Charcoal field, ember CTAs, teal for agent/code, paper headings.
    ──────────────────────────────────────────── */
 
 :root {
-  --ink: #0A0F1F;
-  --ink-2: #131B2E;
-  --ember: #ea580c;
-  --ember-hi: #f97316;
-  --cyan: #00D4FF;
-  --steel: #94A3B8;
-  --text: #E2E8F0;
-  --warm-muted: #64748B;
+  --ink: #0B0D10;
+  --ink-2: #1A1F26;
+  --ember: #E86A2B;
+  --ember-hi: #F07A3E;
+  --cyan: #3DB8A8;
+  --steel: #8A9099;
+  --text: #F4F1EA;
+  --warm-muted: #6B7178;
 }
 
 @theme {
-  /* Foundation — cooled navy */
-  --color-primary: #0A0F1F;
-  --color-forge-navy: #0A0F1F;
-  --color-forge-navy-deep: #001F3F;
-  --color-forge-card: #131B2E;
-  --color-forge-surface-alt: #0A1628;
-  --color-forge-surface-mid: #1e2a45;
-  --color-forge-surface-elevated: #1a2438;
-  --color-forge-border: #1e2a45;
-  --color-forge-border-subtle: rgba(148, 163, 184, 0.12);
-  --color-forge-border-accent: rgba(234, 88, 12, 0.35);
+  /* Field — charcoal */
+  --color-primary: #0B0D10;
+  --color-forge-navy: #0B0D10;
+  --color-forge-navy-deep: #08090B;
+  --color-forge-card: #1A1F26;
+  --color-forge-surface-alt: #12151A;
+  --color-forge-surface-mid: #242A33;
+  --color-forge-surface-elevated: #1A1F26;
+  --color-forge-border: #2A3139;
+  --color-forge-border-subtle: rgba(138, 144, 153, 0.14);
+  --color-forge-border-accent: rgba(232, 106, 43, 0.4);
 
-  /* Ember — heat, action */
-  --color-forge-ember: #ea580c;
-  --color-forge-ember-bright: #f97316;
-  --color-forge-ember-deep: #c2410c;
-  --color-forge-ember-glow: rgba(234, 88, 12, 0.14);
+  /* Ember — CTAs */
+  --color-forge-ember: #E86A2B;
+  --color-forge-ember-bright: #F07A3E;
+  --color-forge-ember-deep: #ea580c;
+  --color-forge-ember-glow: rgba(232, 106, 43, 0.16);
   --color-forge-ember-soft: #d4a574;
   --color-forge-gold: #C9A96E;
 
-  /* Data / intelligence */
-  --color-data-cyan: #00D4FF;
-  --color-data-cyan-soft: #00B8DB;
+  /* Teal — agent / code */
+  --color-data-cyan: #3DB8A8;
+  --color-data-cyan-soft: #339E90;
   --color-data-blue: #007BFF;
   --color-data-blue-deep: #0066CC;
 
@@ -53,12 +53,12 @@
   --color-harry-violet: #A78BFA;
   --color-harry-violet-bright: #8B5CF6;
 
-  /* Neutral — readability on navy */
-  --color-text-primary: #E2E8F0;
-  --color-text-secondary: #CBD5E1;
-  --color-text-muted: #94A3B8;
-  --color-text-dim: #64748B;
-  --color-text-inverse: #0A0F1F;
+  /* Neutral — paper headings, iron body */
+  --color-text-primary: #F4F1EA;
+  --color-text-secondary: #C5C0B6;
+  --color-text-muted: #8A9099;
+  --color-text-dim: #6B7178;
+  --color-text-inverse: #0B0D10;
 
   /* Typography — Inter narrative, Space Grotesk labels, JetBrains Mono code */
   --font-display: var(--font-space-grotesk), "Space Grotesk", sans-serif;
@@ -67,15 +67,15 @@
   --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
 
   /* Aliases — backward compat */
-  --color-navy: #0A0F1F;
-  --color-navy-deep: #001F3F;
-  --color-card: #131B2E;
-  --color-cyan: #00D4FF;
+  --color-navy: #0B0D10;
+  --color-navy-deep: #08090B;
+  --color-card: #1A1F26;
+  --color-cyan: #3DB8A8;
   --color-blue: #007BFF;
-  --color-orange: #ea580c;
+  --color-orange: #E86A2B;
   --color-purple: #9333EA;
-  --color-text: #E2E8F0;
-  --color-muted: #94A3B8;
+  --color-text: #F4F1EA;
+  --color-muted: #8A9099;
 }
 
 /* ── Base ── */
@@ -101,56 +101,56 @@ body {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A0F1F;
+  background: #0B0D10;
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(142, 166, 191, 0.15);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #ea580c;
+  background: #E86A2B;
 }
 
 /* ── Selection ── */
 
 ::selection {
-  background: rgba(234, 88, 12, 0.28);
-  color: #E2E8F0;
+  background: rgba(232, 106, 43, 0.28);
+  color: #F4F1EA;
 }
 
 /* ── Utility Classes ── */
 
 /* Glassmorphic surface */
 .glass {
-  background: rgba(19, 27, 46, 0.72);
+  background: rgba(26, 31, 38, 0.78);
   backdrop-filter: blur(20px) saturate(140%);
   -webkit-backdrop-filter: blur(20px) saturate(140%);
-  border: 1px solid rgba(30, 42, 69, 0.9);
+  border: 1px solid #2A3139;
 }
 
 .glass-strong {
-  background: rgba(10, 15, 31, 0.88);
+  background: rgba(11, 13, 16, 0.9);
   backdrop-filter: blur(24px) saturate(160%);
   -webkit-backdrop-filter: blur(24px) saturate(160%);
-  border: 1px solid rgba(30, 42, 69, 0.9);
+  border: 1px solid #2A3139;
 }
 
 .surface-card {
-  background: #131B2E;
-  border: 1px solid #1e2a45;
+  background: #1A1F26;
+  border: 1px solid #2A3139;
   border-radius: 1rem;
 }
 
 .surface-card:hover {
-  border-color: rgba(234, 88, 12, 0.4);
+  border-color: rgba(232, 106, 43, 0.45);
 }
 
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #ea580c;
-  color: #0A0F1F;
+  background: #E86A2B;
+  color: #0B0D10;
   font-family: var(--font-display);
   font-size: 0.75rem;
   font-weight: 600;
@@ -162,7 +162,7 @@ body {
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 .btn-primary:hover {
-  background: #f97316;
+  background: #F07A3E;
 }
 
 .btn-secondary {
@@ -170,7 +170,7 @@ body {
   align-items: center;
   justify-content: center;
   background: transparent;
-  color: #00D4FF;
+  color: #3DB8A8;
   font-family: var(--font-display);
   font-size: 0.75rem;
   font-weight: 600;
@@ -178,12 +178,12 @@ body {
   text-transform: uppercase;
   padding: 0.9rem 1.6rem;
   border-radius: 0.5rem;
-  border: 1px solid rgba(0, 212, 255, 0.45);
+  border: 1px solid rgba(61, 184, 168, 0.5);
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 .btn-secondary:hover {
-  background: #00D4FF;
-  color: #0A0F1F;
+  background: #3DB8A8;
+  color: #0B0D10;
 }
 
 .btn-ghost {
@@ -191,7 +191,7 @@ body {
   align-items: center;
   justify-content: center;
   background: transparent;
-  color: #E2E8F0;
+  color: #F4F1EA;
   font-family: var(--font-body);
   font-size: inherit;
   font-weight: inherit;
@@ -204,39 +204,37 @@ body {
 
 /* Glow effects */
 .glow-ember {
-  box-shadow: 0 0 40px -10px rgba(234, 88, 12, 0.3), 0 0 80px -20px rgba(234, 88, 12, 0.15);
+  box-shadow: 0 0 40px -10px rgba(232, 106, 43, 0.3), 0 0 80px -20px rgba(232, 106, 43, 0.15);
 }
 
 .glow-ember-sm {
-  box-shadow: 0 0 20px -5px rgba(234, 88, 12, 0.2);
+  box-shadow: 0 0 20px -5px rgba(232, 106, 43, 0.2);
 }
 
 .glow-text {
-  text-shadow: 0 0 30px rgba(234, 88, 12, 0.35);
+  text-shadow: 0 0 30px rgba(232, 106, 43, 0.32);
 }
 
-/* Gradient text */
 .text-gradient-ember {
-  background: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #d4a574 100%);
+  background: linear-gradient(135deg, #F07A3E 0%, #E86A2B 50%, #d4a574 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-white {
-  background: linear-gradient(180deg, #E2E8F0 0%, #94A3B8 100%);
+  background: linear-gradient(180deg, #F4F1EA 0%, #8A9099 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Mesh — navy + ember + teal only. No purple SaaS orbs. */
 .mesh-gradient {
-  background-color: #0A0F1F;
+  background-color: #0B0D10;
   background-image:
-    radial-gradient(at 18% 0%, rgba(234, 88, 12, 0.08) 0px, transparent 52%),
-    radial-gradient(at 82% 8%, rgba(0, 212, 255, 0.04) 0px, transparent 48%),
-    radial-gradient(at 50% 100%, rgba(234, 88, 12, 0.05) 0px, transparent 50%);
+    radial-gradient(at 18% 0%, rgba(232, 106, 43, 0.08) 0px, transparent 52%),
+    radial-gradient(at 82% 8%, rgba(61, 184, 168, 0.05) 0px, transparent 48%),
+    radial-gradient(at 50% 100%, rgba(232, 106, 43, 0.04) 0px, transparent 50%);
 }
 
 /* Hairline rule — tool mark, not decorative divider */
@@ -256,7 +254,7 @@ body {
 /* Animated gradient border */
 .border-gradient {
   position: relative;
-  background: #131B2E;
+  background: #1A1F26;
   border-radius: 1rem;
 }
 .border-gradient::before {
@@ -278,7 +276,7 @@ body {
 }
 .card-lift:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 40px -16px rgba(10, 15, 31, 0.7), 0 0 24px -8px rgba(234, 88, 12, 0.12);
+  box-shadow: 0 16px 40px -16px rgba(11, 13, 16, 0.75), 0 0 24px -8px rgba(232, 106, 43, 0.12);
 }
 
 /* Fade-in animation */

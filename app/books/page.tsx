@@ -52,7 +52,7 @@ export default function BooksPage() {
                 rel="noopener noreferrer"
                 className="surface-card card-lift p-6 block group"
               >
-                <h3 className="text-lg font-display font-semibold text-text-primary mb-2 group-hover:text-white">
+                <h3 className="text-lg font-display font-semibold text-text-primary mb-2 group-hover:text-forge-ember">
                   {book.title}
                 </h3>
                 <p className="text-sm text-text-muted mb-4">{book.oneLiner}</p>
