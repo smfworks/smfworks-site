@@ -82,7 +82,7 @@ export const metadata: Metadata = {
       "A human-AI research lab. Agent systems, open tools, and Agent Setup for owners who keep the keys.",
     images: ["https://smfworks.com/og-image.jpg"],
     creator: "@MichaelGannotti",
-    site: "@smfworks",
+    site: "@MichaelGannotti",
   },
   alternates: {
     canonical: "https://smfworks.com",
@@ -112,9 +112,8 @@ const jsonLd = {
       },
       sameAs: [
         "https://x.com/MichaelGannotti",
-        "https://x.com/smfworks",
         "https://github.com/smfworks",
-        "https://www.linkedin.com/company/smfworks",
+        "https://www.linkedin.com/in/mikegannotti",
       ],
       email: "michael@smfworks.com",
       founder: {

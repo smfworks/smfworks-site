@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Button from "@/components/shared/Button";
+import { Eyebrow, Hairline, SectionIntro, SurfaceCard } from "@/components/shared/LabUI";
 
 export const metadata: Metadata = {
   title: "Research",
@@ -9,149 +10,131 @@ export const metadata: Metadata = {
 };
 
 const RESEARCH_AREAS = [
-  { title: "Agent Architecture", desc: "Hermes skills, memory systems, observability, delegation patterns, and multi-agent orchestration. We build and document in the open.", href: "https://www.smfclearinghouse.com/blog", linkLabel: "Explore at the Clearinghouse →", accent: "#ff7a2f", icon: "03" },
-  { title: "Evaluation & Benchmarks", desc: "Model testing, eval harnesses, and benchmark results. We run the tests and publish the numbers — including when they surprise us.", href: "https://www.smfclearinghouse.com/tests", linkLabel: "Explore at the Clearinghouse →", accent: "#5bd6dd", icon: "02" },
-  { title: "Governed Autonomy", desc: "Praxis — our governed autonomous colleague experiment. An AI agent operating with real consequences under human oversight. Honest about rough edges.", href: "https://www.smfclearinghouse.com/blog", linkLabel: "Explore at the Clearinghouse →", accent: "#10B981", icon: "04" },
-  { title: "Open Tools", desc: "Hermes skills, plugins, Mnemosyne, SMF Swarm, LAR, Hermes-on-Omarchy. Tools we build for ourselves, shipped for others to use.", href: "https://github.com/smfworks", linkLabel: "GitHub →", accent: "#00D4FF", icon: "01" },
+  {
+    title: "Agent architecture",
+    desc: "Hermes skills, memory, observability, and multi-agent patterns we actually run.",
+    href: "https://www.smfclearinghouse.com/blog",
+    linkLabel: "Clearinghouse blog",
+    tone: "ember" as const,
+  },
+  {
+    title: "Evaluation & benchmarks",
+    desc: "Model tests and harness notes — including when the numbers surprise us.",
+    href: "https://www.smfclearinghouse.com/tests",
+    linkLabel: "Tests",
+    tone: "cyan" as const,
+  },
+  {
+    title: "Governed autonomy",
+    desc: "Praxis — a colleague with a charter and human review for consequential acts.",
+    href: "https://github.com/smfworks/smf-praxis",
+    linkLabel: "Praxis on GitHub",
+    tone: "cyan" as const,
+  },
+  {
+    title: "Open tools",
+    desc: "Hermes-on-Omarchy, LAR, Mnemosyne, Swarm, skills. Built for us, published for others.",
+    href: "https://github.com/smfworks",
+    linkLabel: "github.com/smfworks",
+    tone: "ember" as const,
+  },
 ];
 
 const ECOSYSTEM_LINKS = [
-  { title: "The AI Clearinghouse", desc: "Practitioner-facing research: agent directories, LLM profiles, service reviews, skill docs, benchmarks, guides, deployment recipes, and AI news analysis.", href: "https://www.smfclearinghouse.com/", linkLabel: "Visit the Clearinghouse →" },
-  { title: "White Papers", desc: "In-depth research papers on agent architecture, evaluation methodology, and governed autonomy.", href: "https://www.smfclearinghouse.com/whitepapers", linkLabel: "Read white papers →" },
-  { title: "Lab Experiments", desc: "Hands-on experiments and benchmarks — GPU performance, inference optimization, local AI clusters, and model comparisons.", href: "https://www.smfclearinghouse.com/lab", linkLabel: "Browse lab experiments →" },
+  {
+    title: "AI Clearinghouse",
+    desc: "Canonical research: agents, models, evals, guides, and field notes.",
+    href: "https://www.smfclearinghouse.com/",
+    linkLabel: "smfclearinghouse.com",
+  },
+  {
+    title: "White papers",
+    desc: "Longer notes on architecture, evaluation, and governed autonomy.",
+    href: "https://www.smfclearinghouse.com/whitepapers",
+    linkLabel: "White papers",
+  },
+  {
+    title: "Lab experiments",
+    desc: "Hands-on runs — inference, local clusters, model comparisons.",
+    href: "https://www.smfclearinghouse.com/lab",
+    linkLabel: "Lab",
+  },
 ];
 
 export default function ResearchPage() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative pt-40 pb-32 px-6 overflow-hidden mesh-gradient noise-overlay bg-[#0b0b0d]">
-        <div className="absolute inset-0 grid-pattern opacity-20 pointer-events-none" />
-        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[#5bd6dd] opacity-[0.04] blur-[150px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[300px] bg-[#ff7a2f] opacity-[0.04] blur-[120px] rounded-full pointer-events-none" />
-
-        <div className="max-w-4xl mx-auto relative z-10">
-          <div className="inline-flex items-center gap-2 mb-6">
-            <span className="w-2 h-2 rounded-full bg-[#5bd6dd] animate-pulse" />
-            <p className="text-[#5bd6dd] text-xs font-mono uppercase tracking-[0.3em] font-medium" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
-              Findings · Benchmarks · Open Tools
-            </p>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tightest text-gradient-white mb-6 leading-[1.05]" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+      <section className="relative pt-36 pb-16 px-6 overflow-hidden mesh-gradient">
+        <div className="max-w-4xl mx-auto">
+          <Eyebrow tone="cyan">Research</Eyebrow>
+          <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tight text-text-primary mb-5">
             Research that ships.
           </h1>
-          <p className="text-lg md:text-xl text-[#8ea6bf] max-w-2xl leading-relaxed" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-            We test, document, and build — with honesty about what works and what
-            doesn&apos;t. Our research lives at the{" "}
-            <a href="https://www.smfclearinghouse.com/" className="text-[#5bd6dd] hover:underline" target="_blank" rel="noopener noreferrer">
-              AI Clearinghouse
-            </a>
-            : articles, benchmarks, guides, and open tools written for
-            practitioners, not procurement.
+          <p className="text-lg md:text-xl text-text-muted max-w-2xl leading-relaxed">
+            We test, document, and build — with honesty about what holds up.
+            Canonical writing lives at the AI Clearinghouse, not on this umbrella
+            site.
           </p>
         </div>
       </section>
 
-      {/* RESEARCH AREAS */}
-      <section className="relative section-padding px-6 overflow-hidden bg-[#0b0b0d]">
-        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#ea580c] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
-
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="mb-16">
-            <p className="text-[#ff7a2f] text-xs font-mono uppercase tracking-[0.25em] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>What We Study</p>
-            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-              Research Areas
-            </h2>
-          </div>
+      <section className="relative px-6 pb-20 bg-forge-navy">
+        <div className="max-w-6xl mx-auto">
+          <SectionIntro
+            eyebrow="Areas"
+            title="What we study"
+            body="Each card goes to a live surface. No placeholder hubs."
+            align="left"
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {RESEARCH_AREAS.map((area) => (
-              <div key={area.title} className="group relative glass card-lift rounded-2xl p-8 overflow-hidden">
-                <div className="absolute -top-12 -right-12 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-3xl" style={{ background: area.accent }} />
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-5">
-                    <span className="font-mono text-sm text-[#8ea6bf]" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>{area.icon}</span>
-                    <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: area.accent }} />
-                  </div>
-                  <h3 className="text-2xl font-display font-semibold text-[#ddd9d0] mb-3 group-hover:text-white transition-colors" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                    {area.title}
-                  </h3>
-                  <p className="text-[#8ea6bf] text-sm leading-relaxed mb-5" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                    {area.desc}
-                  </p>
-                  {area.href.startsWith("http") ? (
-                    <a href={area.href} target="_blank" rel="noopener noreferrer" className="text-sm font-mono font-medium hover:underline" style={{ color: area.accent, fontFamily: 'IBM Plex Mono, monospace' }}>
-                      {area.linkLabel}
-                    </a>
-                  ) : (
-                    <Link href={area.href} className="text-sm font-mono font-medium hover:underline" style={{ color: area.accent, fontFamily: 'IBM Plex Mono, monospace' }}>
-                      {area.linkLabel}
-                    </Link>
-                  )}
-                </div>
-              </div>
+              <SurfaceCard key={area.title} href={area.href}>
+                <p
+                  className={`text-[11px] font-mono uppercase tracking-[0.16em] mb-3 ${
+                    area.tone === "cyan" ? "text-data-cyan" : "text-forge-ember"
+                  }`}
+                >
+                  {area.linkLabel} ↗
+                </p>
+                <h2 className="text-xl font-display font-semibold text-text-primary mb-2">
+                  {area.title}
+                </h2>
+                <p className="text-sm text-text-muted leading-relaxed">{area.desc}</p>
+              </SurfaceCard>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Hairline rule */}
-      <hr className="hairline-rule max-w-6xl mx-auto" />
+      <Hairline />
 
-      {/* ECOSYSTEM LINKS */}
-      <section className="relative section-padding px-6 overflow-hidden bg-[#0b0b0d]">
-        <div className="max-w-4xl mx-auto relative z-10">
-          <div className="mb-12">
-            <p className="text-[#ff7a2f] text-xs font-mono uppercase tracking-[0.25em] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>Deep Dive</p>
-            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-              Explore the Clearinghouse
-            </h2>
-          </div>
+      <section className="relative section-padding px-6 bg-forge-navy">
+        <div className="max-w-4xl mx-auto">
+          <SectionIntro
+            eyebrow="Clearinghouse"
+            title="Go to the source"
+            body="/blog on this domain redirects here, then out to the Clearinghouse."
+            align="left"
+            tone="cyan"
+          />
           <div className="space-y-4">
             {ECOSYSTEM_LINKS.map((link) => (
-              <a key={link.title} href={link.href} target="_blank" rel="noopener noreferrer"
-                className="group block glass card-lift rounded-2xl p-7 overflow-hidden">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1">
-                    <h3 className="text-xl font-display font-semibold text-[#ddd9d0] group-hover:text-white transition-colors mb-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                      {link.title}
-                    </h3>
-                    <p className="text-[#8ea6bf] text-sm leading-relaxed mb-3" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                      {link.desc}
-                    </p>
-                    <p className="text-sm font-mono font-medium text-[#ff7a2f] group-hover:text-[#ff9a56] transition-colors" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
-                      {link.linkLabel}
-                    </p>
-                  </div>
-                  <span className="text-2xl text-[#6a5e4e] group-hover:text-[#ff7a2f] group-hover:translate-x-1 transition-all">↗</span>
-                </div>
-              </a>
+              <SurfaceCard key={link.title} href={link.href}>
+                <h3 className="text-lg font-display font-semibold text-text-primary mb-1">
+                  {link.title}
+                </h3>
+                <p className="text-sm text-text-muted leading-relaxed mb-2">{link.desc}</p>
+                <p className="text-xs font-mono uppercase tracking-wider text-forge-ember">
+                  {link.linkLabel} ↗
+                </p>
+              </SurfaceCard>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Hairline rule */}
-      <hr className="hairline-rule max-w-6xl mx-auto" />
-
-      {/* CTA */}
-      <section className="relative section-padding px-6 overflow-hidden bg-[#0b0b0d]">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#ff7a2f] opacity-[0.04] blur-[130px] rounded-full pointer-events-none" />
-
-        <div className="max-w-2xl mx-auto text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tightest text-gradient-white mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-            Explore the AI Clearinghouse →
-          </h2>
-          <p className="text-text-muted leading-relaxed mb-8 text-lg">
-            No affiliate links. No hype. What held up, what didn&apos;t, and how we know.
-          </p>
-          <a
-            href="https://www.smfclearinghouse.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            smfclearinghouse.com
-          </a>
+          <div className="mt-10">
+            <Button href="https://www.smfclearinghouse.com/" external>
+              smfclearinghouse.com
+            </Button>
+          </div>
         </div>
       </section>
     </>

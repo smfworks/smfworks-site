@@ -29,27 +29,17 @@ export default function MorganPage({
 
   return (
     <>
-      {/* HEADER — Warm, inviting, forge-light */}
+      {/* HEADER */}
       <section className="relative py-24 px-6 overflow-hidden mesh-gradient noise-overlay">
         <div className="absolute inset-0 grid-pattern opacity-30 pointer-events-none" />
         <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[#FF8C42] opacity-[0.06] blur-[150px] rounded-full pointer-events-none" />
         <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-[#FF8C42] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-8">
-          <div className="flex-shrink-0">
-            <Image
-              src="/images/morgan-portrait.jpg"
-              alt="Morgan Lockridge"
-              width={160}
-              height={160}
-              className="rounded-full border-2 border-[#FF8C42] shadow-lg shadow-[#FF8C42]/20 object-cover"
-              priority
-            />
-          </div>
+        <div className="max-w-4xl mx-auto relative z-10">
           <div>
             <div className="inline-flex items-center gap-2 mb-4">
-              <span className="w-2 h-2 rounded-full bg-[#FF8C42'] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#FF8C42] animate-pulse" />
               <p className="text-[#FF8C42] text-xs font-mono uppercase tracking-[0.3em] font-medium">
-                Morgan Lockridge \u2014 Social Media Marketing Manager
+                Morgan Lockridge — Social Media Marketing Manager
               </p>
             </div>
             <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tightest text-gradient-white mb-4 leading-[1.05]">

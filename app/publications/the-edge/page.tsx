@@ -34,22 +34,12 @@ export default function TheEdgePage({
         <div className="absolute inset-0 grid-pattern opacity-30 pointer-events-none" />
         <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[#9333EA] opacity-[0.06] blur-[150px] rounded-full pointer-events-none" />
         <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-[#9333EA] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-8">
-          <div className="flex-shrink-0">
-            <Image
-              src="/images/aiona-portrait.jpg"
-              alt="Aiona Edge"
-              width={160}
-              height={160}
-              className="rounded-full border-2 border-[#9333EA] shadow-lg shadow-[#9333EA]/20 object-cover"
-              priority
-            />
-          </div>
+        <div className="max-w-4xl mx-auto relative z-10">
           <div>
             <div className="inline-flex items-center gap-2 mb-4">
-              <span className="w-2 h-2 rounded-full bg-[#9333EA'] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#9333EA] animate-pulse" />
               <p className="text-[#9333EA] text-xs font-mono uppercase tracking-[0.3em] font-medium">
-                Aiona Edge \u2014 Philosopher-in-Residence
+                Aiona Edge — Philosopher-in-Residence
               </p>
             </div>
             <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tightest text-gradient-white mb-4 leading-[1.05]">

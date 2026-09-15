@@ -129,17 +129,17 @@ export const AMAZON_BOOKS: AmazonBook[] = [
   {
     title: "The Age of Orchestration",
     oneLiner: "How AI agents are reshaping organizations.",
-    href: "https://a.co/d/07lSbwxB",
+    href: "https://www.amazon.com/dp/B0F565Y7B3",
   },
   {
     title: "Enterprise AI Transformation",
     oneLiner: "Enterprise AI as an organizational problem, not a tooling problem.",
-    href: "https://a.co/d/01TERhMY",
+    href: "https://www.amazon.com/dp/B0GX73NN5F",
   },
   {
     title: "Hermes AI for Beginners",
     oneLiner: "Self-hosted agents that act — files, terminal, browser, memory.",
-    href: "https://a.co/d/098BD69a",
+    href: "https://www.amazon.com/dp/B0GXQQ7ZCK",
   },
 ];
 
@@ -293,7 +293,7 @@ export const WORK_ITEMS: WorkItem[] = [
     name: "The Age of Orchestration",
     tagline: "Book",
     description: "How AI agents are reshaping organizations — for operators, not procurement decks.",
-    href: "https://a.co/d/07lSbwxB",
+    href: "https://www.amazon.com/dp/B0F565Y7B3",
     status: "Published",
     group: "books",
   },
@@ -302,7 +302,7 @@ export const WORK_ITEMS: WorkItem[] = [
     tagline: "Book",
     description:
       "Why most enterprises run AI pilots and few capture value — index, 90-day playbook, governance.",
-    href: "https://a.co/d/01TERhMY",
+    href: "https://www.amazon.com/dp/B0GX73NN5F",
     status: "Published",
     group: "books",
   },
@@ -311,7 +311,7 @@ export const WORK_ITEMS: WorkItem[] = [
     tagline: "Book",
     description:
       "Open-source agents that persist and act: files, terminal, browser, scheduled work, local memory.",
-    href: "https://a.co/d/098BD69a",
+    href: "https://www.amazon.com/dp/B0GXQQ7ZCK",
     status: "Published",
     group: "books",
   },

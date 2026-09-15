@@ -78,7 +78,7 @@ export default function BooksPage() {
 
           <div className="mt-16 text-center">
             <p className="text-text-muted text-sm mb-4">
-              Research essays live on the Clearinghouse, not in this bookstore.
+              Research essays live on the Clearinghouse, not here.
             </p>
             <Link href="/research" className="text-data-cyan hover:underline text-sm">
               Research →
