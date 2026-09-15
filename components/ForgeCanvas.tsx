@@ -120,7 +120,6 @@ export default function ForgeCanvas() {
 
     // Draw a single ember with glow
     const drawEmber = (e: Ember) => {
-      const w = W();
       const h = H();
       const lifeRatio = e.life / e.maxLife;
       const fade = lifeRatio < 0.15 ? lifeRatio / 0.15 : lifeRatio > 0.85 ? (1 - lifeRatio) / 0.15 : 1;
