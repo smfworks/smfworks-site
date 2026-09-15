@@ -34,14 +34,16 @@ export default function AboutPage() {
             Michael Gannotti — Principal AI
           </h2>
           <p className="text-text-muted leading-relaxed text-lg">
-            Michael leads SMF Works. Thirty years in enterprise technology —
-            most recently as a Microsoft Principal. He names the work, holds
-            the bar, and is the person you write to.
+            Michael leads SMF Works: thirty years in enterprise technology,
+            most recently as a Principal AI Solutions Engineer, now running a
+            human-AI research lab that publishes in the open and installs
+            agent stacks owners control.
           </p>
           <p className="text-text-muted leading-relaxed text-lg">
-            The lab publishes findings, ships open agent tools, and installs
-            working stacks for owners who keep the keys. Agents do the labor
-            under his direction. Consequential actions stay behind human review.
+            Agents do the labor under the direction of Michael and his
+            daughter, and COO,{"  "}Mary. Judgment stays human — tools are
+            inspected before they are trusted, and consequential acts stay
+            behind review.
           </p>
         </div>
       </section>

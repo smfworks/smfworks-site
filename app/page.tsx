@@ -235,14 +235,15 @@ export default function Home() {
             </h2>
             <p className="text-text-muted leading-relaxed text-lg mb-4">
               Michael leads SMF Works: thirty years in enterprise technology,
-              most recently as a Microsoft Principal, now running a human-AI
-              research lab that publishes in the open and installs agent stacks
-              owners control.
+              most recently as a Principal AI Solutions Engineer, now running a
+              human-AI research lab that publishes in the open and installs
+              agent stacks owners control.
             </p>
             <p className="text-text-muted leading-relaxed text-lg mb-8">
-              Agents do the labor under his direction. Judgment stays human —
-              tools are inspected before they are trusted, and consequential
-              acts stay behind review.
+              Agents do the labor under the direction of Michael and his
+              daughter, and COO,{"  "}Mary. Judgment stays human — tools are
+              inspected before they are trusted, and consequential acts stay
+              behind review.
             </p>
             <Button href="/about" variant="secondary">
               More about the lab
