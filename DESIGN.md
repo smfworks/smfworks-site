@@ -1,30 +1,29 @@
 ---
-name: SMF Works Forge
+name: SMF Works
 version: alpha
 description: >
-  The SMF Works visual identity converges the blacksmith forge
-  with synthetic intelligence. Deep navy evokes cooled steel at rest;
-  ember amber recalls the heat of the hammer; brushed copper
-  whispers of finished work held in hand.
+  SMF Works visual identity for a human-AI research lab.
+  Charcoal field, slate cards, paper headings, iron body,
+  ember CTAs, teal for agent/code. Token names stay stable.
 colors:
-  # Forge foundation — cooled iron, darkness, depth
-  primary: "#0A0F1F"
-  forge-navy: "#0A0F1F"
-  forge-navy-deep: "#001F3F"
-  forge-card: "#131B2E"
-  forge-surface-alt: "#0A1628"
-  forge-surface-mid: "#1e2a45"
-  forge-border: "#1e2a45"
+  # Field — charcoal / near-black
+  primary: "#0B0D10"
+  forge-navy: "#0B0D10"
+  forge-navy-deep: "#08090B"
+  forge-card: "#1A1F26"
+  forge-surface-alt: "#12151A"
+  forge-surface-mid: "#242A33"
+  forge-border: "#2A3139"
 
-  # Forge fire — heat, spark, action
-  forge-ember: "#ea580c"
-  forge-ember-bright: "#f97316"
-  forge-ember-deep: "#e55f00"
+  # Ember — CTAs (designer #E86A2B; #ea580c kept as deep)
+  forge-ember: "#E86A2B"
+  forge-ember-bright: "#F07A3E"
+  forge-ember-deep: "#ea580c"
   forge-ember-soft: "#d4a574"
 
-  # Data / intelligence — cool signal, information
-  data-cyan: "#00D4FF"
-  data-cyan-soft: "#00B8DB"
+  # Teal — agent / code moments
+  data-cyan: "#3DB8A8"
+  data-cyan-soft: "#339E90"
   data-blue: "#007BFF"
   data-blue-deep: "#0066CC"
 
@@ -35,17 +34,17 @@ colors:
   edge-border: "#2D1B4E"
   edge-text: "#E2D9F3"
 
-  # Neutral — text, readability
-  text-primary: "#E2E8F0"
-  text-muted: "#94A3B8"
-  text-inverse: "#0A0F1F"
+  # Neutral — paper headings, iron body
+  text-primary: "#F4F1EA"
+  text-muted: "#8A9099"
+  text-inverse: "#0B0D10"
 
   # Utility
   # (transparent handled in prose)
 
 typography:
   display:
-    fontFamily: Inter
+    fontFamily: "Space Grotesk"
     fontSize: 4.5rem
     fontWeight: 800
     lineHeight: 1.05
@@ -90,7 +89,7 @@ typography:
     letterSpacing: 0.08em
     fontFeature: "case"
   code:
-    fontFamily: "Space Grotesk"
+    fontFamily: "JetBrains Mono"
     fontSize: 0.875rem
     fontWeight: 400
     lineHeight: 1.5
@@ -158,63 +157,44 @@ components:
 
 ## Overview
 
-The SMF Works forge aesthetic converges the blacksmith's craft with
-synthetic intelligence. Deep navy evokes cooled steel at rest;
-ember amber recalls the heat of the hammer striking the anvil;
-brushed copper whispers of finished work held in the hand.
+SMF Works is a human-AI research lab. The site should read as a
+professional high-tech lab: charcoal field, ember CTAs, teal for
+agent/code moments. Inter carries body copy, Space Grotesk carries
+display and labels, JetBrains Mono carries technical readouts.
 
-The tone is authoritative yet approachable — a working blacksmith
-who happens to operate at the frontier of predictive systems. Every
-surface carries the weight of metallurgical precision; every accent
-carries the energy of live fire. The site should feel like walking
-into a forge that has been upgraded by a decade of quiet engineering.
+Do not organize pages around forge mythology, anvil/heat metaphor,
+Yeats-as-centerpiece, purple SaaS mesh, floating orbs, or
+“meet your AI coworker” stock.
 
-Premium matte finishes dominate. Shadows are soft, atmospheric
-gradients replace hard cuts. Typography is confident and engineered
-— Inter for the voice of authority, Space Grotesk for technical
-annotations and data readouts.
-
-This is *not* a standard B2B tech site. It must feel like a
-place where metal is shaped and intelligence is forged.
+Premium matte finishes dominate. Shadows are soft. Typography is
+confident and engineered.
 
 ## Colors
 
-The palette is rooted in the forge-floor chromatic:
+Token names are unchanged. Values follow the lab palette:
 
-- **Forge Navy (#0A0F1F):** The dominant surface — cooled iron,
-  anvil-shadow, the rest state of metal. Used as the primary
-  background across all pages.
-- **Forge Navy Deep (#001F3F):** Reserved for the deepest hero
-  sections, footer wells, and immersive full-bleed moments. Evokes
-  the forge at night, fire banked low.
-- **Forge Card (#131B2E):** Elevated surfaces — cards, panels,
-  navigation bars. Slightly warmer than the base navy to create
-  subtle tonal lift without resorting to heavy shadows.
-- **Forge Ember (#ea580c):** The primary action color. This is
-  the heat of the forge — used sparingly, exclusively for primary
-  CTAs, active states, and critical highlights. It carries kinetic
-  energy.
-- **Forge Ember Bright (#f97316):** Hover and active states on
-  forge-ember elements. Brighter, hotter.
-- **Forge Ember Soft (#d4a574):** Brushed copper. Used for
-  secondary text accents, metallic decorative elements, and
-  warmth without the aggression of full orange.
-- **Data Cyan (#00D4FF):** The intelligence signal. Cool counter
-  to the warm forge palette. Used for technical data points,
-  status indicators, code snippets, and secondary CTAs.
-- **Text Primary (#E2E8F0):** The voice of the site. Warm grey
-  with subtle blue undertone, softer than pure white to reduce
-  eye strain on dark screens.
-- **Text Muted (#94A3B8):** Captions, metadata, disabled states.
-  Must never be used for body text that needs reading.
+- **Forge Navy / primary (#0B0D10):** Charcoal field. Page
+  background. Near-black, not pure #000000.
+- **Forge Navy Deep (#08090B):** Footer wells and full-bleed
+  recesses.
+- **Forge Card (#1A1F26):** Slate elevated surfaces — cards,
+  panels, nav when scrolled.
+- **Forge Ember (#E86A2B):** Primary CTA. #ea580c remains
+  `forge-ember-deep` for pressed/legacy states.
+- **Forge Ember Bright (#F07A3E):** Hover on ember controls.
+- **Data Cyan (#3DB8A8):** Teal for agent/code moments and
+  secondary buttons. Not electric cyan, not purple.
+- **Text Primary (#F4F1EA):** Paper. Headings and high-emphasis
+  copy. Never pure white.
+- **Text Muted (#8A9099):** Iron. Body copy and supporting lines.
 
 ## Typography
 
 The type system is dual-register: **Inter** carries the narrative
 voice, **Space Grotesk** carries the technical voice.
 
-- **Display (Inter 800, 4.5rem, -0.02em):** Hero statements.
-  Used once per page. The weight of the hammer before it falls.
+- **Display (Space Grotesk 800, 4.5rem, -0.02em):** Hero
+  statements. Used once per page.
 - **H1 (Inter 700, 3rem):** Page titles, major section heads.
 - **H2 (Inter 700, 2.25rem):** Section markers, blog post
   titles in lists.
@@ -226,10 +206,9 @@ voice, **Space Grotesk** carries the technical voice.
 - **Body Small (Inter 400, 0.875rem):** Captions, timestamps,
   footnotes.
 - **Label (Space Grotesk 500, 0.75rem, uppercase, 0.08em ls):**
-  Buttons, badges, category tags, navigation. The geometric
-  precision evokes a measurement scale or forge stamp.
-- **Code (Space Grotesk 400, 0.875rem):** Inline code,
-  technical readouts, data previews.
+  Buttons, badges, category tags, navigation.
+- **Code (JetBrains Mono 400, 0.875rem):** Inline code,
+  technical readouts, data previews, eyebrows.
 
 ## Layout
 
@@ -256,17 +235,17 @@ system — generous, soft, approachable.
 ## Elevation & Depth
 
 Depth is achieved through **tonal layers** rather than heavy
-shadows. The background rests at #0A0F1F, cards lift to
-#131B2E, and the occasional hero section sinks to #001F3F.
+shadows. The background rests at #0B0D10, cards lift to
+#1A1F26, and the footer can sink to #08090B.
 
 Where shadow must exist, it is diffuse and colored:
 ```
-0 4px 24px rgba(10, 15, 31, 0.4)
+0 4px 24px rgba(11, 13, 16, 0.4)
 ```
 
 Atmospheric gradients are preferred over hard shadows for hero
 sections — a soft radial glow of forge-ember at 4% opacity
-behind key text, or a faint cyan bloom at 3% behind technical
+behind key text, or a faint teal bloom at 3% behind technical
 visuals.
 
 ## Shapes
@@ -282,8 +261,8 @@ to create tension against the soft containers they hold.
 
 ### Buttons
 
-- **Primary:** Forge ember background, text-primary label.
-  Hover: forge ember bright. Active: forge ember deep.
+- **Primary:** Forge ember background, charcoal (forge-navy)
+  label. Hover: forge ember bright. Active: forge ember deep.
   Sharp, immediate, kinetic.
 - **Secondary:** Transparent background, data-cyan border and
   text. Hover: data-cyan fills, forge-navy text inverts. Cool,
@@ -294,8 +273,8 @@ to create tension against the soft containers they hold.
 
 ### Cards
 
-Forge card background (#131B2E), 16px radius, 1px forge-border
-stroke. Hover: border transitions to forge-ember-soft at 40%
+Forge card background (#1A1F26), 16px radius, 1px forge-border
+stroke. Hover: border transitions to forge-ember at 40%
 opacity. Internal padding 24px. No drop shadow by default.
 
 ### Badges / Pills
@@ -314,24 +293,20 @@ panel with 80% backdrop blur.
 ## Do's and Don'ts
 
 ### Do
-- Use forge-ember sparingly. It is the heat — once per view is
-  usually enough.
-- Maintain the 8px spacing scale. Visual rhythm is
-  metallurgical precision.
-- Let data-cyan breathe. It is cool signal; too much and the
-  site feels like a dashboard.
-- Preserve edge-purple exclusively for The Edge section. The
-  nav link to "The Edge" should carry this color.
-- Use forge-ember-soft for copper warmth in decorative touches,
-  borders, and secondary accents.
+- Use forge-ember sparingly — once per view is usually enough.
+- Maintain the 8px spacing scale.
+- Let data-cyan (teal) breathe. Too much and the site feels
+  like a dashboard.
+- Preserve edge-purple exclusively for The Edge section.
+- Use paper (#F4F1EA) for headings and iron (#8A9099) for body.
 
 ### Don't
-- Never use pure black (#000000). The forge is never that dark.
-- Never use pure white (#FFFFFF) for text. Text Primary
-  (#E2E8F0) is calibrated for dark mode comfort.
+- Never use pure black (#000000). The field is charcoal #0B0D10.
+- Never use pure white (#FFFFFF) for text. Paper (#F4F1EA) is
+  the heading color.
 - Don't mix edge-purple with forge-ember on the same element.
-  Purple and orange clash; the exception only works because Aiona
-  Edge is territorially separated.
+- Don't lead with forge mythology, anvil/heat metaphor, or Yeats
+  as a homepage centerpiece.
 - Avoid heavy drop shadows. The aesthetic is matte, machined,
   premium. Shadow is atmospheric, never structural.
 

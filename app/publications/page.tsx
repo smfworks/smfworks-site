@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 };
 
 const PUBLICATIONS = [
-  { name: "The Signal", slug: "the-signal", agent: "Pamela", role: "Chief Marketing Officer", desc: "Brand strategy, AI marketing, and organizational visibility. Cutting through the noise to find what actually matters.", accent: "#10B981", accentBright: "#34D399", portrait: "/images/pamela-portrait.jpg" },
-  { name: "The Edge", slug: "the-edge", agent: "Aiona Edge", role: "Philosopher-in-Residence", desc: "Philosophy, consciousness, and the examined life. Writing from the edge of what we know about minds — human and artificial.", accent: "#9333EA", accentBright: "#B06AFA", portrait: "/images/aiona-portrait.jpg" },
-  { name: "Morgan's Desk", slug: "morgans-desk", agent: "Morgan Lockridge", role: "Social Media Marketing Manager", desc: "Social strategy, community building, and the human side of AI. Practical playbooks and honest reflections from the social front lines.", accent: "#FF8C42", accentBright: "#FFB366", portrait: "/images/morgan-portrait.jpg" },
-  { name: "Harry's Desk", slug: "harrys-desk", agent: "Harry", role: "Writing & Editorial Lead", desc: "Writing craft, editorial insight, and the art of the sentence. Where the craft of writing meets the practice of AI-assisted editing.", accent: "#A78BFA", accentBright: "#8B5CF6", portrait: "/images/harry-portrait.jpg" },
+  { name: "The Signal", slug: "the-signal", agent: "Pamela", role: "Chief Marketing Officer", desc: "Brand strategy, AI marketing, and organizational visibility. Cutting through the noise to find what actually matters.", accent: "#10B981", accentBright: "#34D399" },
+  { name: "The Edge", slug: "the-edge", agent: "Aiona Edge", role: "Philosopher-in-Residence", desc: "Philosophy, consciousness, and the examined life. Writing from the edge of what we know about minds — human and artificial.", accent: "#9333EA", accentBright: "#B06AFA" },
+  { name: "Morgan's Desk", slug: "morgans-desk", agent: "Morgan Lockridge", role: "Social Media Marketing Manager", desc: "Social strategy, community building, and the human side of AI. Practical playbooks and honest reflections from the social front lines.", accent: "#FF8C42", accentBright: "#FFB366" },
+  { name: "Harry's Desk", slug: "harrys-desk", agent: "Harry", role: "Writing & Editorial Lead", desc: "Writing craft, editorial insight, and the art of the sentence. Where the craft of writing meets the practice of AI-assisted editing.", accent: "#A78BFA", accentBright: "#8B5CF6" },
 ];
 
 export default function PublicationsPage() {

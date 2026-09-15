@@ -7,9 +7,9 @@ interface SectionProps {
 }
 
 const variantStyles: Record<NonNullable<SectionProps['variant']>, string> = {
-  base: 'bg-[#0b0b0d]',
-  elevated: 'bg-[#1a2438]',
-  hero: 'bg-[#001F3F]',
+  base: 'bg-forge-navy',
+  elevated: 'bg-forge-surface-elevated',
+  hero: 'bg-forge-navy-deep',
 };
 
 export default function Section({

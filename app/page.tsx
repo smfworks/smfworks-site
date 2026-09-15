@@ -2,317 +2,268 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import ForgeCanvas from "@/components/ForgeCanvas";
+import Button from "@/components/shared/Button";
+import { Eyebrow, Hairline, SectionIntro, SurfaceCard } from "@/components/shared/LabUI";
+import {
+  ACCOMPLISHMENTS,
+  PROOF_ITEMS,
+  SURFACES,
+} from "@/content/lib/lab";
+import { getCurrentIssue } from "@/content/lib/newsletter-loader";
+import { SERVICE_PACKAGES } from "@/content/lib/services";
 
 export const metadata: Metadata = {
   title: "SMF Works | Human-AI Research Lab",
   description:
-    "A human-AI research lab. We publish findings, ship open tools, and run a multi-agent organization in the open — with honesty about what works and what doesn't.",
+    "A human-AI research lab. We ship agent systems and open tools, publish what we learn, and install working Hermes or OpenClaw stacks for owners who want agents on machines they control.",
   alternates: { canonical: "https://smfworks.com" },
 };
 
-const ECOSYSTEM = [
-  { name: "AI Clearinghouse", desc: "900+ research articles, benchmarks, guides, and agent directories. Written for practitioners, not procurement. No affiliate links, no hype.", href: "https://www.smfclearinghouse.com/", accent: "#10B981", num: "01" },
-  { name: "WisdomForge", desc: "A parent-operated academy for the age of AI. The booklet is the text. The parent is the teacher. Not a hosted kids chatbot.", href: "https://smfwisdomforge.com", accent: "#C9A96E", num: "02" },
-  { name: "Hermes Agent", desc: "Open-source autonomous agent platform. Skills, memory, multi-model. Built for the morning after, not the demo.", href: "https://github.com/nousresearch/hermes-agent", accent: "#5bd6dd", num: "03" },
-  { name: "Praxis", desc: "A governed autonomous colleague — an agent with a charter, a scope of practice, and human review for every consequential act.", href: "https://www.smfclearinghouse.com/", accent: "#A78BFA", num: "04" },
-  { name: "SMF AI Weekly", desc: "One letter. Every week. What we built, what broke, and what changed our minds. Written to be read in five minutes, worth an hour of thinking.", href: "https://www.smfclearinghouse.com/blog/?series=clearinghouse", accent: "#ff9a56", num: "05" },
-  { name: "Books", desc: "Direct-from-author books on AI, enterprise, and craft.", href: "/about", accent: "#FF8C42", num: "06" },
-];
-
 export default function Home() {
+  const weekly = getCurrentIssue();
+  const proofItems = PROOF_ITEMS.map((item) =>
+    item.label === "SMF AI Weekly"
+      ? { ...item, detail: `Issue #${weekly.issueNumber}` }
+      : item
+  );
+  const accomplishments = ACCOMPLISHMENTS.map((item) =>
+    item.title === "Clearinghouse + weekly + X"
+      ? {
+          ...item,
+          oneLiner: `Research published at the Clearinghouse; SMF AI Weekly through Issue #${weekly.issueNumber}; field notes on X @MichaelGannotti.`,
+        }
+      : item
+  );
+
   return (
     <>
-      {/* ═══════════════════════════════════════════
-          HERO — Full-screen forge canvas with coal bed
-          ═══════════════════════════════════════════ */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0b0b0d]">
-        {/* Forge canvas — living coal bed */}
+      <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-forge-navy">
         <ForgeCanvas />
-        {/* Fade to dark at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#0b0b0d] pointer-events-none z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-forge-navy/40 via-forge-navy/55 to-forge-navy pointer-events-none z-10" />
 
-        <div className="relative z-20 max-w-4xl mx-auto px-6 text-center py-32">
-          {/* Logo */}
-          <div className="mb-10 flex justify-center animate-fade-in">
-            <Image
-              src="/smf-logo.png"
-              alt="SMF Works"
-              width={280}
-              height={208}
-              className="w-[240px] md:w-[280px] h-auto opacity-90"
-              priority
-            />
-          </div>
+        <div className="relative z-20 w-full max-w-6xl mx-auto px-6 pt-32 pb-20">
+          <div className="max-w-3xl">
+            <div className="mb-8">
+              <Image
+                src="/smf-logo.png"
+                alt="SMF Works"
+                width={160}
+                height={119}
+                className="w-[120px] md:w-[140px] h-auto opacity-90"
+                priority
+              />
+            </div>
 
-          {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            <span className="w-2 h-2 rounded-full bg-[#ff7a2f] animate-pulse" />
-            <p className="text-[#ff7a2f] text-xs font-mono uppercase tracking-[0.3em] font-medium" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
-              Human-AI Research Lab
+            <Eyebrow>Human-AI Research Lab</Eyebrow>
+
+            <h1 className="text-4xl md:text-6xl font-display font-bold leading-[1.08] mb-6 tracking-tight text-text-primary">
+              A lab for agent systems. Judgment stays human.
+            </h1>
+
+            <p className="text-lg md:text-xl text-text-muted max-w-2xl mb-10 leading-relaxed">
+              SMF Works publishes what we learn, ships open agent tools, and
+              installs stacks on hardware you own. Intelligence is abundant.
+              Judgment is the product.
             </p>
-          </div>
 
-          {/* Headline */}
-          <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.05] mb-8 tracking-tightest animate-fade-in-up" style={{ animationDelay: '0.2s', fontFamily: 'Space Grotesk, sans-serif' }}>
-            <span className="text-gradient-white">Intelligence is raw.</span>
-            <br />
-            <span className="text-gradient-ember glow-text" style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontWeight: 600 }}>Judgment</span>
-            <span className="text-gradient-ember glow-text"> gives it an edge.</span>
-          </h1>
-
-          {/* Subhead */}
-          <p className="text-lg md:text-xl text-[#8ea6bf] max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.3s', fontFamily: 'Space Grotesk, sans-serif' }}>
-            A human-AI research lab. We publish findings, ship open tools, and run a
-            multi-agent organization in the open — with honesty about what works and
-            what doesn&apos;t.
-          </p>
-
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <Link
-              href="/research"
-              className="group relative px-8 py-4 rounded-xl font-semibold text-white text-center transition-all duration-300 overflow-hidden"
-              style={{ background: 'linear-gradient(135deg, #ff7a2f 0%, #ff9a56 100%)', boxShadow: '0 8px 32px -8px rgba(255, 122, 47, 0.5)' }}
-            >
-              <span className="relative z-10">Explore the Work</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#ff9a56] to-[#ff7a2f] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </Link>
-            <a
-              href="https://www.smfclearinghouse.com/blog/?series=clearinghouse"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 rounded-xl font-semibold text-[#C9A96E] text-center hover:text-[#D4B87A] transition-colors duration-300"
-            >
-              Read SMF AI Weekly
-            </a>
-          </div>
-
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in" style={{ animationDelay: '1s' }}>
-            <div className="w-px h-12 bg-gradient-to-b from-[rgba(142,166,191,0.15)] to-transparent" />
+            <Button href="/services">Agent Setup</Button>
           </div>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          ECOSYSTEM — Interactive grid with depth
-          ═══════════════════════════════════════════ */}
-      <section className="relative section-padding px-6 overflow-hidden bg-[#0b0b0d]">
-        <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-[#9333EA] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
-
-        <div className="max-w-6xl mx-auto relative z-10">
-          {/* Section header */}
-          <div className="mb-16 text-center">
-            <p className="text-[#ff7a2f] text-xs font-mono uppercase tracking-[0.25em] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
-              The Ecosystem
-            </p>
-            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-              One lab. Many surfaces.
-            </h2>
-            <p className="text-[#8ea6bf] max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-              Everything we make shares one fire. Six surfaces, one standard: if it
-              wouldn&apos;t survive a careful person&apos;s week, it doesn&apos;t leave the forge.
-            </p>
-          </div>
-
-          {/* Cards grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {ECOSYSTEM.map((item, i) => (
-              <Link
-                key={item.name}
+      <section className="border-y border-forge-border bg-forge-card/60">
+        <div className="max-w-6xl mx-auto px-6 py-5 grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+          {proofItems.map((item) => {
+            const inner = (
+              <>
+                <div className="text-[11px] font-mono uppercase tracking-[0.16em] text-text-dim mb-1">
+                  {item.label}
+                </div>
+                <div className="text-sm text-text-primary font-medium">{item.detail}</div>
+              </>
+            );
+            const className = "block hover:text-forge-ember transition-colors";
+            return item.external ? (
+              <a
+                key={item.label}
                 href={item.href}
-                {...(item.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                className="group relative glass card-lift rounded-2xl p-7 overflow-hidden"
-                style={{ animationDelay: `${i * 0.08}s` }}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={className}
               >
-                {/* Accent glow on hover */}
-                <div
-                  className="absolute -top-12 -right-12 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-3xl"
-                  style={{ background: item.accent }}
-                />
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="font-mono text-sm text-[#8ea6bf]" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>{item.num}</span>
-                    <div
-                      className="w-1.5 h-1.5 rounded-full"
-                      style={{ backgroundColor: item.accent }}
-                    />
-                  </div>
-                  <h3 className="text-xl font-display font-semibold text-[#ddd9d0] mb-2 group-hover:text-white transition-colors" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                    {item.name}
-                  </h3>
-                  <p className="text-sm text-[#8ea6bf] leading-relaxed mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                    {item.desc}
-                  </p>
-                  <span
-                    className="text-xs font-mono uppercase tracking-wider transition-colors"
-                    style={{ color: item.accent, fontFamily: 'IBM Plex Mono, monospace' }}
-                  >
-                    {item.href.startsWith("http") ? "Visit ↗" : "Explore →"}
+                {inner}
+              </a>
+            ) : (
+              <Link key={item.label} href={item.href} className={className}>
+                {inner}
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="relative section-padding px-6 bg-forge-navy">
+        <div className="max-w-6xl mx-auto">
+          <SectionIntro
+            eyebrow="Surfaces"
+            title="What the lab runs"
+            body="Six public surfaces. Research stays on the Clearinghouse; this site is the umbrella — who we are, what we shipped, and what you can buy."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {SURFACES.map((item) => (
+              <SurfaceCard key={item.name} href={item.href}>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-[11px] font-mono uppercase tracking-[0.16em] text-data-cyan">
+                    {item.status}
+                  </span>
+                  <span className="text-text-dim text-sm group-hover:text-forge-ember transition-colors">
+                    {item.href.startsWith("http") ? "↗" : "→"}
                   </span>
                 </div>
-              </Link>
+                <h3 className="text-xl font-display font-semibold text-text-primary mb-2">
+                  {item.name}
+                </h3>
+                <p className="text-sm text-text-muted leading-relaxed">{item.oneLiner}</p>
+              </SurfaceCard>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Hairline rule between sections */}
-      <hr className="hairline-rule max-w-6xl mx-auto" />
+      <Hairline />
 
-      {/* ═══════════════════════════════════════════
-          LATEST FROM THE LAB — Curated Clearinghouse links
-          ═══════════════════════════════════════════ */}
-      <section className="relative section-padding px-6 overflow-hidden bg-[#0b0b0d]">
-        <div className="absolute bottom-1/4 left-1/3 w-[400px] h-[400px] bg-[#10B981] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
-
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="mb-16 text-center">
-            <p className="text-[#ff7a2f] text-xs font-mono uppercase tracking-[0.25em] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
-              Latest from the Lab
-            </p>
-            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-              Field notes, kept in public
-            </h2>
-            <p className="text-[#8ea6bf] max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-              Research moves fast and memory is short, so we write it down — every
-              experiment, reversal, and conviction, dated and signed.
-            </p>
-          </div>
-
+      <section className="relative section-padding px-6 bg-forge-navy">
+        <div className="max-w-6xl mx-auto">
+          <SectionIntro
+            eyebrow="Shipped"
+            title="Recent work, in public"
+            body="Named products and dated notes — no invented counters, no case-study ROI. The full catalog lives on /work."
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <a
-              href="https://www.smfclearinghouse.com/blog/the-harness-is-the-difference"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative glass card-lift rounded-2xl p-7 overflow-hidden"
-            >
-              <div className="absolute left-0 top-0 bottom-0 w-1 transition-all duration-300 group-hover:w-1.5 bg-[#10B981]" />
-              <div className="relative z-10 pl-2">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-xs font-mono font-medium px-2.5 py-1 rounded-full text-[#10B981] bg-[#10B981]12" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
-                    The Edge
+            {accomplishments.map((item) => (
+              <SurfaceCard key={item.title} href={item.href}>
+                <div className="flex items-center gap-3 mb-3">
+                  {item.date ? (
+                    <span className="text-[11px] font-mono text-forge-ember uppercase tracking-wider">
+                      {item.date}
+                    </span>
+                  ) : null}
+                  <span className="text-[11px] font-mono text-text-dim uppercase tracking-wider">
+                    {item.source}
                   </span>
                 </div>
-                <h3 className="text-lg font-display font-semibold text-[#ddd9d0] group-hover:text-white transition-colors mb-2 leading-snug" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                  The Harness Is the Difference
+                <h3 className="text-lg font-display font-semibold text-text-primary mb-2">
+                  {item.title}
                 </h3>
-                <p className="text-sm text-[#8ea6bf] line-clamp-2 leading-relaxed" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                  Most agent evaluation papers test benchmarks. We test the harness — the scaffolding that determines whether an agent succeeds or fails in the field.
-                </p>
-              </div>
-            </a>
-            <a
-              href="https://www.smfclearinghouse.com/blog/the-number-is-not-the-model"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative glass card-lift rounded-2xl p-7 overflow-hidden"
-            >
-              <div className="absolute left-0 top-0 bottom-0 w-1 transition-all duration-300 group-hover:w-1.5 bg-[#5bd6dd]" />
-              <div className="relative z-10 pl-2">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-xs font-mono font-medium px-2.5 py-1 rounded-full text-[#5bd6dd] bg-[#5bd6dd]12" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
-                    The Signal
-                  </span>
-                </div>
-                <h3 className="text-lg font-display font-semibold text-[#ddd9d0] group-hover:text-white transition-colors mb-2 leading-snug" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                  The Number Is Not the Model
-                </h3>
-                <p className="text-sm text-[#8ea6bf] line-clamp-2 leading-relaxed" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                  GPT-OSS-120B scored 10% on coding and 93.8% on agentic tasks the same day. A single percentage is a dangerous kind of comfort.
-                </p>
-              </div>
-            </a>
+                <p className="text-sm text-text-muted leading-relaxed">{item.oneLiner}</p>
+              </SurfaceCard>
+            ))}
           </div>
-
-          <div className="mt-12 text-center">
-            <a
-              href="https://www.smfclearinghouse.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#ff7a2f] font-semibold hover:underline inline-flex items-center gap-1"
-            >
-              Read more at the AI Clearinghouse →
-            </a>
+          <div className="mt-10 text-center">
+            <Button href="/work" variant="secondary">
+              Full catalog
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Hairline rule */}
-      <hr className="hairline-rule max-w-6xl mx-auto" />
+      <Hairline />
 
-      {/* ═══════════════════════════════════════════
-          THE FORGE — Michael's story + Yeats quote
-          ═══════════════════════════════════════════ */}
-      <section className="relative section-padding px-6 overflow-hidden bg-[#0b0b0d]">
-        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#ff7a2f] opacity-[0.04] blur-[120px] rounded-full pointer-events-none" />
-
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-            {/* Left: text */}
-            <div className="md:col-span-2">
-              <p className="text-[#ff7a2f] text-xs font-mono uppercase tracking-[0.25em] mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
-                The Forge
-              </p>
-              <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tightest text-gradient-white mb-6 leading-tight" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                Why a forge?
-              </h2>
-              <p className="text-[#8ea6bf] leading-relaxed mb-6 text-lg max-w-xl" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                SMF Works is led by Michael Gannotti — thirty years building in the
-                technology industry, and a working blacksmith&apos;s shop whenever the
-                light allows. The overlap isn&apos;t a metaphor he chose; it&apos;s a discipline
-                he kept noticing. Iron and intelligence both arrive raw. Both reward
-                patience, honesty about failure, and a refusal to put your name on
-                something you wouldn&apos;t use.
-              </p>
-              <p className="text-[#8ea6bf] leading-relaxed mb-8 text-lg max-w-xl" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                So the lab runs the way a good shop runs. Tools are inspected before
-                they&apos;re trusted. Agents, like apprentices, earn scope gradually — and
-                lose it carelessly. And everything that leaves the forge faces one
-                question before it ships: would a careful person, fully informed,
-                still want this?
-              </p>
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-2 text-[#ff7a2f] font-semibold hover:underline"
+      <section id="services" className="relative section-padding px-6 bg-forge-navy scroll-mt-24">
+        <div className="max-w-6xl mx-auto">
+          <SectionIntro
+            eyebrow="Services"
+            title="Agent Setup packages"
+            body="We install and tailor an AI agent stack for your small business, then hand it back with a runbook. You stay the owner. Fixed packages — no open-ended billable hours for v1."
+          />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            {SERVICE_PACKAGES.map((pkg) => (
+              <div
+                key={pkg.sku}
+                className={`surface-card p-7 flex flex-col ${
+                  pkg.featured ? "border-forge-ember/50 ring-1 ring-forge-ember/30" : ""
+                }`}
               >
-                Meet the Team →
-              </Link>
-            </div>
-
-            {/* Right: forge image */}
-            <div className="relative">
-              <div className="absolute inset-0 bg-[#ff7a2f] opacity-[0.06] blur-2xl rounded-3xl" />
-              <div className="relative glass rounded-3xl p-8 text-center">
-                <p className="text-[#ddd9d0] text-sm leading-relaxed mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                  The forge is not a metaphor.
-                </p>
-                <p className="text-[#6a5e4e] text-xs font-mono uppercase tracking-wider" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
-                  It is the discipline.
-                </p>
+                <div className="mb-5">
+                  {pkg.featured ? (
+                    <p className="text-[11px] font-mono uppercase tracking-[0.16em] text-forge-ember mb-2">
+                      Main package
+                    </p>
+                  ) : null}
+                  <h3 className="text-2xl font-display font-semibold text-text-primary">
+                    {pkg.name}
+                  </h3>
+                  <p className="text-3xl font-display font-bold text-forge-ember mt-2">
+                    {pkg.price}
+                  </p>
+                  {pkg.priceNote ? (
+                    <p className="text-xs text-text-dim mt-1">{pkg.priceNote}</p>
+                  ) : null}
+                  <p className="text-sm text-text-muted mt-3 leading-relaxed">{pkg.tagline}</p>
+                </div>
+                <ul className="text-sm text-text-secondary space-y-2 mb-6 flex-1">
+                  {pkg.includes.slice(0, 4).map((line) => (
+                    <li key={line} className="flex gap-2">
+                      <span className="text-data-cyan mt-0.5">▸</span>
+                      <span>{line}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button href={`/contact?package=${pkg.sku}`}>Request intake</Button>
               </div>
-            </div>
+            ))}
+          </div>
+          <p className="text-sm text-text-dim text-center mt-8 max-w-2xl mx-auto">
+            Primary stack: Hermes on Omarchy Linux. Alternate: OpenClaw gateway.
+            Scope, refuse lists, and what is not included are on the{" "}
+            <Link href="/services" className="text-forge-ember hover:underline">
+              services page
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
+      <Hairline />
+
+      <section id="about" className="relative section-padding px-6 bg-forge-navy scroll-mt-24">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+          <div className="md:col-span-7">
+            <Eyebrow>About</Eyebrow>
+            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight text-text-primary mb-5">
+              Michael Gannotti, Principal AI
+            </h2>
+            <p className="text-text-muted leading-relaxed text-lg mb-4">
+              Michael leads SMF Works: thirty years in enterprise technology,
+              most recently as a Microsoft Principal, now running a human-AI
+              research lab that publishes in the open and installs agent stacks
+              owners control.
+            </p>
+            <p className="text-text-muted leading-relaxed text-lg mb-8">
+              Agents do the labor under his direction. Judgment stays human —
+              tools are inspected before they are trusted, and consequential
+              acts stay behind review.
+            </p>
+            <Button href="/about" variant="secondary">
+              More about the lab
+            </Button>
+          </div>
+          <div className="md:col-span-5 surface-card p-7">
+            <p className="text-[11px] font-mono uppercase tracking-[0.16em] text-data-cyan mb-3">
+              How to reach us
+            </p>
+            <p className="text-text-primary font-medium mb-1">
+              <a href="mailto:michael@smfworks.com" className="hover:text-forge-ember">
+                michael@smfworks.com
+              </a>
+            </p>
+            <p className="text-sm text-text-muted mb-6">
+              Intake for Agent Setup, or a note about the work. He reads them.
+            </p>
+            <Button href="/contact">Contact</Button>
           </div>
         </div>
       </section>
-
-      {/* ═══════════════════════════════════════════
-          YEATS — Full-width meditative pause
-          ═══════════════════════════════════════════ */}
-      <section className="relative bg-[#0b0b0d] py-32 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <blockquote
-            className="text-3xl md:text-5xl leading-relaxed text-[#ddd9d0] mb-8"
-            style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontWeight: 500 }}
-          >
-            &ldquo;The best lack all conviction, while the worst<br className="hidden md:block" /> are full of passionate intensity.&rdquo;
-          </blockquote>
-          <cite className="text-[#8ea6bf] text-sm not-italic" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
-            — W.B. Yeats
-          </cite>
-        </div>
-      </section>
-
     </>
   );
 }

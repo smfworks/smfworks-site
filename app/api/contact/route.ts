@@ -4,7 +4,7 @@ const TO_ADDRESS = "michael@smfworks.com";
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, business, message } = await req.json();
+    const { name, email, business, package: pkg, message } = await req.json();
 
     if (!name || !email || !message) {
       return NextResponse.json(
@@ -25,7 +25,8 @@ export async function POST(req: NextRequest) {
 
     // Call Resend REST API directly — no SDK, no module-level init
     const from = process.env.RESEND_FROM || "SMF Works <noreply@smfworks.com>";
-    const subject = `New Inquiry from ${name}${business ? ` — ${business}` : ""}`;
+    const interest = business || pkg || "";
+    const subject = `New Inquiry from ${name}${interest ? ` — ${interest}` : ""}`;
 
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -54,9 +55,9 @@ export async function POST(req: NextRequest) {
                   <td style="padding:8px 0;color:#666;font-size:14px;"><strong>Email</strong></td>
                   <td style="padding:8px 0;font-size:14px;"><a href="mailto:${email}" style="color:#C87941;">${email}</a></td>
                 </tr>
-                ${business ? `<tr>
-                  <td style="padding:8px 0;color:#666;font-size:14px;"><strong>Business</strong></td>
-                  <td style="padding:8px 0;font-size:14px;">${business}</td>
+                ${interest ? `<tr>
+                  <td style="padding:8px 0;color:#666;font-size:14px;"><strong>Interest</strong></td>
+                  <td style="padding:8px 0;font-size:14px;">${interest}</td>
                 </tr>` : ""}
                 <tr><td colspan="2" style="padding:16px 0 8px;color:#666;font-size:14px;"><strong>Message</strong></td></tr>
                 <tr>
@@ -66,7 +67,7 @@ export async function POST(req: NextRequest) {
                 </tr>
               </table>
               <div style="margin-top:24px;padding-top:16px;border-top:1px solid #ddd;">
-                <a href="mailto:${email}?subject=Re: Your The SMF Works Project inquiry"
+                <a href="mailto:${email}?subject=Re: Your SMF Works inquiry"
                    style="background:#C87941;color:white;padding:12px 24px;border-radius:4px;text-decoration:none;font-weight:bold;font-size:14px;">
                   Reply to ${name} →
                 </a>

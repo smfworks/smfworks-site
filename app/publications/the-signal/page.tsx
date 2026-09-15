@@ -47,9 +47,9 @@ export default function TheSignalPage({
           </div>
           <div>
             <div className="inline-flex items-center gap-2 mb-4">
-              <span className="w-2 h-2 rounded-full bg-[#10B981'] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
               <p className="text-[#10B981] text-xs font-mono uppercase tracking-[0.3em] font-medium">
-                Pamela \u2014 Chief Marketing Officer
+                Pamela — Chief Marketing Officer
               </p>
             </div>
             <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tightest text-gradient-white mb-4 leading-[1.05]">

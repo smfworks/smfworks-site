@@ -113,4 +113,4 @@ Source: [SMF Works](https://smfworks.com)
 
 **Previous Issues:** [smfworks.com/newsletter](https://smfworks.com/newsletter)
 **Subscribe:** [smfworks.com/newsletter](https://smfworks.com/newsletter)
-**Follow:** [@smfworks](https://x.com/smfworks) | [@PamelaSMFWorks](https://x.com/PamelaSMFWorks)
+**Follow:** [@MichaelGannotti](https://x.com/MichaelGannotti) | [@PamelaSMFWorks](https://x.com/PamelaSMFWorks)

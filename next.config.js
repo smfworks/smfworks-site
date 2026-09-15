@@ -41,7 +41,7 @@ const nextConfig = {
       },
       {
         source: "/projects/:path*",
-        destination: "/work/:path*",
+        destination: "/work",
         permanent: true,
       },
       {
@@ -106,8 +106,13 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/services/:path*",
-        destination: "https://www.smfclearinghouse.com/services/:path*",
+        source: "/services/:slug",
+        destination: "https://www.smfclearinghouse.com/services/:slug",
+        permanent: true,
+      },
+      {
+        source: "/services/:slug/:path*",
+        destination: "https://www.smfclearinghouse.com/services/:slug/:path*",
         permanent: true,
       },
       {
@@ -270,47 +275,9 @@ const nextConfig = {
         destination: "https://www.smfclearinghouse.com/blog/:slug*",
         permanent: true,
       },
-      // Three-page restructuring: trim to Home, Research, About
-      {
-        source: "/work",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/books",
-        destination: "/about",
-        permanent: true,
-      },
-      {
-        source: "/books/:slug*",
-        destination: "/about",
-        permanent: true,
-      },
-      {
-        source: "/contact",
-        destination: "/about",
-        permanent: true,
-      },
-      {
-        source: "/newsletter",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/newsletter/:slug*",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/publications",
-        destination: "/research",
-        permanent: true,
-      },
-      {
-        source: "/privacy",
-        destination: "/about",
-        permanent: true,
-      },
+      // /blog remains redirected to /research (Clearinghouse holds research posts).
+      // /work, /services, /contact, /newsletter, /books, /publications, /privacy
+      // are first-party umbrella routes again.
     ];
   },
 };

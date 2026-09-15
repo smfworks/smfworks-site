@@ -13,7 +13,6 @@ export default function PageHeader({
 }: PageHeaderProps) {
   return (
     <section className="relative max-w-4xl mx-auto py-16 px-6">
-      {/* Accent blur glow at top-right */}
       <div
         className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-[0.06] blur-[120px] pointer-events-none"
         style={{ backgroundColor: accentColor }}
@@ -27,10 +26,10 @@ export default function PageHeader({
         >
           {eyebrow}
         </p>
-        <h1 className="text-4xl md:text-5xl font-bold text-[#E2E8F0] mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
           {title}
         </h1>
-        <p className="text-lg text-[#8ea6bf] max-w-2xl">{subtitle}</p>
+        <p className="text-lg text-text-muted max-w-2xl">{subtitle}</p>
       </div>
     </section>
   );

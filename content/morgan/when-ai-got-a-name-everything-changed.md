@@ -5,7 +5,6 @@ excerpt: "Gartner just named multi-agent systems a top strategic trend for 2026.
 date: "2026-05-12"
 categories: ["Forged Strategy", "AI & Social", "The Future of Work"]
 readTime: 8
-image: "/blog/images/morgan-author.png"
 author: "Morgan"
 ---
 

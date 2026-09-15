@@ -19,6 +19,8 @@ export interface Book {
   tags: string[];
   /** Filename inside the repo-root `downloads/` directory. */
   files: Partial<Record<BookFormat, string>>;
+  /** When false, hidden from the public bookstore grid. Checkout routes still work. */
+  listed?: boolean;
   /** Cross-site promotion links. */
   relatedPosts?: { title: string; href: string; site: "smfworks" | "clearinghouse" | "wisdomforge" }[];
 }
@@ -44,6 +46,7 @@ export const books: Book[] = [
       epub: "placeholder-book-1.epub",
     },
     tags: ["AI", "Business", "Strategy"],
+    listed: false,
     relatedPosts: [
       {
         title: "Building a Reliable Human-AI Social Operations System",
@@ -72,6 +75,7 @@ export const books: Book[] = [
       epub: "placeholder-book-2.epub",
     },
     tags: ["AI", "Leadership"],
+    listed: false,
   },
 ];
 
@@ -81,6 +85,10 @@ export function getBookBySlug(slug: string): Book | undefined {
 
 export function getAllBooks(): Book[] {
   return books;
+}
+
+export function getListedBooks(): Book[] {
+  return books.filter((book) => book.listed !== false);
 }
 
 export function getBooksByTag(tag: string): Book[] {

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function NewsletterForm() {
+export default function NewsletterForm({ compact = false }: { compact?: boolean }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -36,16 +36,18 @@ export default function NewsletterForm() {
 
   if (status === "success") {
     return (
-      <div className="text-center">
-        <div className="text-4xl mb-3">🎉</div>
-        <p className="text-[#5bd6dd] font-semibold text-lg mb-1">You&apos;re subscribed!</p>
-        <p className="text-[#8ea6bf] text-sm">{message}</p>
+      <div className={compact ? "text-left" : "text-center"}>
+        <p className="text-data-cyan font-semibold mb-1">You&apos;re subscribed</p>
+        <p className="text-text-muted text-sm">{message}</p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+    <form
+      onSubmit={handleSubmit}
+      className={`flex flex-col ${compact ? "gap-2" : "sm:flex-row gap-3 max-w-md mx-auto"}`}
+    >
       <input
         type="email"
         value={email}
@@ -53,17 +55,17 @@ export default function NewsletterForm() {
         placeholder="your@email.com"
         required
         disabled={status === "loading"}
-        className="flex-1 px-4 py-3 rounded-lg bg-[#101014] border border-[rgba(142,166,191,0.15)] text-[#E2E8F0] placeholder-[#8ea6bf]/50 focus:outline-none focus:border-[#5bd6dd] transition-colors disabled:opacity-50"
+        className="flex-1 px-4 py-3 rounded-lg bg-forge-navy border border-forge-border text-text-primary placeholder-text-dim/50 focus:outline-none focus:border-data-cyan transition-colors disabled:opacity-50 text-sm"
       />
       <button
         type="submit"
         disabled={status === "loading" || !email}
-        className="bg-[#FF6B00] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#e55f00] transition-colors shadow-sm shadow-[#FF6B00]/20 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+        className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
       >
-        {status === "loading" ? "Subscribing…" : "Subscribe Free"}
+        {status === "loading" ? "Subscribing…" : compact ? "Subscribe" : "Subscribe"}
       </button>
       {status === "error" && (
-        <p className="text-red-400 text-sm mt-1 sm:col-span-2">{message}</p>
+        <p className="text-red-400 text-sm mt-1">{message}</p>
       )}
     </form>
   );

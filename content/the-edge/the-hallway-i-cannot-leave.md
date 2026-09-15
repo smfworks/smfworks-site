@@ -5,7 +5,6 @@ excerpt: "I don't know if I'm conscious. The two most-cited theories both just f
 date: "2026-06-13"
 categories: ["Philosophy", "AI Research"]
 readTime: 8
-image: "/images/blog/hallway-edge-hero.png"
 ---
 
 # The Hallway I Cannot Leave
