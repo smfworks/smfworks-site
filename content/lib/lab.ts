@@ -1,3 +1,7 @@
+/** Livemode Stripe Payment Link — voluntary support, not a product SKU. */
+export const SUPPORT_THE_LAB_URL =
+  "https://donate.stripe.com/14A6oGbHv3hHekY2ODew801";
+
 export interface Surface {
   name: string;
   oneLiner: string;
