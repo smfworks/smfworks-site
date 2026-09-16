@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
+import { SUPPORT_THE_LAB_URL } from "@/content/lib/lab";
 
 const SOCIAL_LINKS = [
   {
@@ -125,6 +126,16 @@ export default function Footer() {
                   className="text-text-muted hover:text-text-primary transition-colors"
                 >
                   GitHub ↗
+                </a>
+              </li>
+              <li>
+                <a
+                  href={SUPPORT_THE_LAB_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-muted hover:text-text-primary transition-colors"
+                >
+                  Support the lab ↗
                 </a>
               </li>
               <li>

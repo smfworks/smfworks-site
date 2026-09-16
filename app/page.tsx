@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ForgeCanvas from "@/components/ForgeCanvas";
 import Button from "@/components/shared/Button";
+import SupportCta from "@/components/shared/SupportCta";
 import { Eyebrow, Hairline, SectionIntro, SurfaceCard } from "@/components/shared/LabUI";
 import {
   ACCOMPLISHMENTS,
@@ -265,6 +266,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Hairline />
+
+      <SupportCta />
     </>
   );
 }

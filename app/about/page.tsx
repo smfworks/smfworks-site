@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Button from "@/components/shared/Button";
+import SupportCta from "@/components/shared/SupportCta";
 import { Eyebrow, Hairline } from "@/components/shared/LabUI";
 import { AMAZON_BOOKS } from "@/content/lib/lab";
 
@@ -116,6 +117,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <Hairline />
+
+      <SupportCta />
 
       <section className="relative px-6 pb-24 bg-forge-navy">
         <div className="max-w-2xl mx-auto text-center">
