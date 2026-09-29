@@ -46,7 +46,7 @@ Take auto-apply seriously. A turned-on skill can join a task without a slash.[3]
 
 The first four steps need a text file. The last three need Pro or Ultra, a personal account, and a country Google has switched on.
 
-- Open the [Gems manager](https://gemini.google.com/gems/view) and copy every Gem's instructions into a document you control. The preview pane does not save the Gem. The instructions box is the asset. If you changed anything worth keeping, click Save.[5] Do this even if you plan to accept the migration. The help page the migration link opened does not say a knowledge file, a share link, or a free account comes with it.[3] Gems can hold files, set a default tool such as Canvas, and be shared by link.[1] I have not found a Google page that maps those fields onto a skill.
+- Open https://gemini.google.com/gems/view and copy every Gem's instructions into a document you control. The preview pane does not save the Gem. The instructions box is the asset. If you changed anything worth keeping, click Save.[5] Do this even if you plan to accept the migration. The help page the migration link opened does not say a knowledge file, a share link, or a free account comes with it.[3] Gems can hold files, set a default tool such as Canvas, and be shared by link.[1] I have not found a Google page that maps those fields onto a skill.
 
 - Split any Gem that does two jobs. Each skill is one job. You combine skills when the work is larger.[3][4] "Campaign Partner," if it brainstorms, edits, and writes the posts, is three skills. Name them for the job, in the hyphenated form an uploaded `SKILL.md` requires: `campaign-angles`, `line-edit`, `repurpose-blog-to-social`.[3]
 
