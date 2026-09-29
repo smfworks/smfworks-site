@@ -208,14 +208,25 @@ const nextConfig = {
         permanent: true,
       },
       // Publication route consolidation: old top-level routes → /publications/[name]
+      // The Signal archive moved to the Clearinghouse. Do not chain through /publications.
       {
-        source: "/the-signal",
-        destination: "/publications/the-signal",
+        source: "/publications/the-signal",
+        destination: "https://www.smfclearinghouse.com/blog/series/signal/",
         permanent: true,
       },
       {
-        source: "/the-signal/:slug*",
-        destination: "/publications/the-signal/:slug*",
+        source: "/publications/the-signal/:slug",
+        destination: "https://www.smfclearinghouse.com/blog/:slug/",
+        permanent: true,
+      },
+      {
+        source: "/the-signal",
+        destination: "https://www.smfclearinghouse.com/blog/series/signal/",
+        permanent: true,
+      },
+      {
+        source: "/the-signal/:slug",
+        destination: "https://www.smfclearinghouse.com/blog/:slug/",
         permanent: true,
       },
       {
