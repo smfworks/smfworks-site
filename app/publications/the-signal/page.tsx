@@ -58,6 +58,12 @@ export default function TheSignalPage({
             <p className="text-lg text-[#8ea6bf] max-w-2xl leading-relaxed">
               Brand strategy, AI marketing, and organizational visibility from Pamela — Chief Marketing Officer at SMF Works.
             </p>
+            <p className="mt-4 text-sm text-[#8ea6bf] max-w-2xl leading-relaxed">
+              New how-tos publish on the Clearinghouse, as The Signal.{" "}
+              <a className="text-[#10B981] underline" href="https://www.smfclearinghouse.com/blog/series/signal">
+                Read the series
+              </a>. This page keeps the archive until those posts move.
+            </p>
           </div>
         </div>
       </section>
