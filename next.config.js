@@ -231,32 +231,62 @@ const nextConfig = {
       },
       {
         source: "/the-edge",
-        destination: "/publications/the-edge",
+        destination: "https://www.smfclearinghouse.com/blog/series/edge/",
         permanent: true,
       },
       {
-        source: "/the-edge/:slug*",
-        destination: "/publications/the-edge/:slug*",
+        source: "/the-edge/:slug",
+        destination: "https://www.smfclearinghouse.com/blog/:slug/",
+        permanent: true,
+      },
+      {
+        source: "/publications/the-edge",
+        destination: "https://www.smfclearinghouse.com/blog/series/edge/",
+        permanent: true,
+      },
+      {
+        source: "/publications/the-edge/:slug",
+        destination: "https://www.smfclearinghouse.com/blog/:slug/",
         permanent: true,
       },
       {
         source: "/morgan",
-        destination: "/publications/morgans-desk",
+        destination: "https://www.smfclearinghouse.com/blog/series/morgan/",
         permanent: true,
       },
       {
-        source: "/morgan/:slug*",
-        destination: "/publications/morgans-desk/:slug*",
+        source: "/morgan/:slug",
+        destination: "https://www.smfclearinghouse.com/blog/:slug/",
+        permanent: true,
+      },
+      {
+        source: "/publications/morgans-desk",
+        destination: "https://www.smfclearinghouse.com/blog/series/morgan/",
+        permanent: true,
+      },
+      {
+        source: "/publications/morgans-desk/:slug",
+        destination: "https://www.smfclearinghouse.com/blog/:slug/",
         permanent: true,
       },
       {
         source: "/harrys-desk",
-        destination: "/publications/harrys-desk",
+        destination: "https://www.smfclearinghouse.com/blog/series/harry/",
         permanent: true,
       },
       {
-        source: "/harrys-desk/:slug*",
-        destination: "/publications/harrys-desk/:slug*",
+        source: "/harrys-desk/:slug",
+        destination: "https://www.smfclearinghouse.com/blog/:slug/",
+        permanent: true,
+      },
+      {
+        source: "/publications/harrys-desk",
+        destination: "https://www.smfclearinghouse.com/blog/series/harry/",
+        permanent: true,
+      },
+      {
+        source: "/publications/harrys-desk/:slug",
+        destination: "https://www.smfclearinghouse.com/blog/:slug/",
         permanent: true,
       },
       // Dashboard stub → newsletter
