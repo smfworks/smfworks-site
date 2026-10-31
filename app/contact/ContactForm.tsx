@@ -2,26 +2,17 @@
 
 import { useState } from "react";
 
-const PACKAGES = [
-  { value: "", label: "General note" },
-  { value: "starter", label: "Starter — $2,000" },
-  { value: "standard", label: "Standard — $3,500" },
-  { value: "keepalive", label: "Keep-alive — $300/mo" },
-];
-
-export default function ContactForm({ initialPackage = "" }: { initialPackage?: string }) {
-  const starting = PACKAGES.some((p) => p.value === initialPackage) ? initialPackage : "";
+export default function ContactForm() {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    package: starting,
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
   function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
@@ -38,10 +29,6 @@ export default function ContactForm({ initialPackage = "" }: { initialPackage?: 
         body: JSON.stringify({
           name: form.name,
           email: form.email,
-          business: form.package
-            ? PACKAGES.find((p) => p.value === form.package)?.label
-            : "",
-          package: form.package,
           message: form.message,
         }),
       });
@@ -49,7 +36,7 @@ export default function ContactForm({ initialPackage = "" }: { initialPackage?: 
 
       if (res.ok) {
         setStatus("success");
-        setForm({ name: "", email: "", package: "", message: "" });
+        setForm({ name: "", email: "", message: "" });
       } else {
         setStatus("error");
         setErrorMsg(data.error || "Something went wrong. Please try again.");
@@ -109,26 +96,6 @@ export default function ContactForm({ initialPackage = "" }: { initialPackage?: 
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-1.5 text-text-secondary" htmlFor="package">
-          Interest
-        </label>
-        <select
-          id="package"
-          name="package"
-          value={form.package}
-          onChange={handleChange}
-          disabled={status === "loading"}
-          className="w-full px-4 py-3 rounded-lg border border-forge-border bg-forge-navy text-text-primary focus:outline-none focus:border-forge-ember transition-colors disabled:opacity-50 text-sm"
-        >
-          {PACKAGES.map((p) => (
-            <option key={p.value || "none"} value={p.value}>
-              {p.label}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <div>
         <label className="block text-sm font-medium mb-1.5 text-text-secondary" htmlFor="message">
           Message <span className="text-forge-ember">*</span>
         </label>
@@ -140,7 +107,7 @@ export default function ContactForm({ initialPackage = "" }: { initialPackage?: 
           value={form.message}
           onChange={handleChange}
           disabled={status === "loading"}
-          placeholder="Workflows you want, OS you run, and anything that must not be in scope."
+          placeholder="What you want to talk about."
           className="w-full px-4 py-3 rounded-lg border border-forge-border bg-forge-navy text-text-primary placeholder-text-dim/50 focus:outline-none focus:border-forge-ember transition-colors disabled:opacity-50 text-sm resize-none"
         />
       </div>

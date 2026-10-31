@@ -106,6 +106,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/services",
+        destination: "/",
+        permanent: true,
+      },
+      {
         source: "/services/:slug",
         destination: "https://www.smfclearinghouse.com/services/:slug",
         permanent: true,
@@ -317,8 +322,8 @@ const nextConfig = {
         permanent: true,
       },
       // /blog remains redirected to /research (Clearinghouse holds research posts).
-      // /work, /services, /contact, /newsletter, /books, /publications, /privacy
-      // are first-party umbrella routes again.
+      // /work, /contact, /newsletter, /books, /publications, /privacy
+      // are first-party umbrella routes. /services redirects home.
     ];
   },
 };

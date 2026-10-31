@@ -44,24 +44,6 @@ const SEARCH_INDEX: SearchResult[] = [
   },
   // Pages
   {
-    title: "Marketing & SEO Content Production",
-    excerpt: "Blog posts, email sequences, social media, white papers, and ghostwriting — shaped to your voice, your audience, and your goals.",
-    url: "/services#content",
-    type: "page",
-  },
-  {
-    title: "AI Workflow Consulting",
-    excerpt: "Implementing AI automation for trades businesses and white-collar firms. Practical systems that save time and money.",
-    url: "/services#workflow",
-    type: "page",
-  },
-  {
-    title: "Company Websites",
-    excerpt: "Professional websites that convey your company brand with clarity and credibility.",
-    url: "/services#websites",
-    type: "page",
-  },
-  {
     title: "About The SMF Works Project",
     excerpt: "Founded by a Principal AI Solutions Engineer with 30 years of enterprise experience. Three dimensions: The Engineer, The Forger, The Creator.",
     url: "/about",
@@ -178,7 +160,7 @@ export default function SiteSearch() {
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search blog posts, services, newsletter..."
+                placeholder="Search blog posts, newsletter..."
                 className="flex-1 bg-transparent text-[#E2E8F0] placeholder-[#8ea6bf]/50 text-sm outline-none"
               />
               {query && (

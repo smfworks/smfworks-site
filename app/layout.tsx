@@ -31,14 +31,13 @@ export const metadata: Metadata = {
     template: "%s | SMF Works",
   },
   description:
-    "A human-AI research lab publishing findings, shipping open agent tools, and installing working Hermes or OpenClaw stacks for owners who keep the keys.",
+    "A human-AI research lab publishing findings and shipping open agent tools.",
   keywords: [
     "AI research lab",
     "human-AI research",
     "autonomous agents",
     "Hermes agent",
     "OpenClaw",
-    "agent setup",
     "AI evaluation",
     "multi-agent systems",
     "SMF Works",
@@ -61,7 +60,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SMF Works | Human-AI Research Lab",
     description:
-      "A human-AI research lab. Agent systems, open tools, and Agent Setup packages — Starter $2,000, Standard $3,500.",
+      "A human-AI research lab. Agent systems, open tools, and published findings.",
     url: "https://smfworks.com",
     siteName: "SMF Works",
     type: "website",
@@ -79,7 +78,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SMF Works | Human-AI Research Lab",
     description:
-      "A human-AI research lab. Agent systems, open tools, and Agent Setup for owners who keep the keys.",
+      "A human-AI research lab. Agent systems, open tools, and published findings.",
     images: ["https://smfworks.com/og-image.jpg"],
     creator: "@MichaelGannotti",
     site: "@MichaelGannotti",
@@ -105,7 +104,7 @@ const jsonLd = {
       logo: "https://smfworks.com/smf-logo.png",
       image: "https://smfworks.com/og-image.jpg",
       description:
-        "A human-AI research lab publishing findings, shipping open agent tools, and installing working agent stacks.",
+        "A human-AI research lab publishing findings and shipping open agent tools.",
       areaServed: {
         "@type": "Country",
         name: "United States",
@@ -131,7 +130,7 @@ const jsonLd = {
       url: "https://smfworks.com/about",
       sameAs: ["https://x.com/MichaelGannotti"],
       description:
-        "Principal AI at SMF Works. Leads a human-AI research lab that ships agent systems, open tools, and Agent Setup packages.",
+        "Principal AI at SMF Works. Leads a human-AI research lab that ships agent systems and open tools.",
       knowsAbout: [
         "Artificial Intelligence",
         "Autonomous AI Agents",
@@ -161,15 +160,7 @@ const faqJsonLd = {
       name: "What is SMF Works?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A human-AI research lab exploring autonomous agents, evaluation, and agent operations. We publish findings, ship open tools, and offer fixed-scope Agent Setup packages.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I hire SMF Works?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — for Agent Setup. Starter is $2,000, Standard is $3,500, and Keep-alive is $300 per month after handoff. We install Hermes on Omarchy or OpenClaw, tailor a small set of workflows, and hand back a runbook. We do not sell open-ended custom software or compliance-certified products.",
+        text: "A human-AI research lab exploring autonomous agents, evaluation, and agent operations. We publish findings and ship open tools.",
       },
     },
     {
