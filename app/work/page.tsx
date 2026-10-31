@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Button from "@/components/shared/Button";
 import { Eyebrow, Hairline, SectionIntro, SurfaceCard } from "@/components/shared/LabUI";
 import { WORK_ITEMS } from "@/content/lib/lab";
 
@@ -40,13 +39,9 @@ export default function WorkPage() {
           </h1>
           <p className="text-lg text-text-muted max-w-2xl leading-relaxed">
             A catalog of shipped surfaces and tools — not a second homepage.
-            For who we are and what you can buy, start at{" "}
+            For who we are, start at{" "}
             <Link href="/" className="text-forge-ember hover:underline">
               Home
-            </Link>{" "}
-            or{" "}
-            <Link href="/services" className="text-forge-ember hover:underline">
-              Agent Setup
             </Link>
             .
           </p>
@@ -87,17 +82,6 @@ export default function WorkPage() {
         );
       })}
 
-      <section className="relative px-6 pb-24 bg-forge-navy">
-        <div className="max-w-2xl mx-auto text-center surface-card p-10">
-          <h2 className="text-2xl font-display font-bold text-text-primary mb-3">
-            Want a stack installed?
-          </h2>
-          <p className="text-text-muted mb-6">
-            Agent Setup is a fixed-scope install, not a custom software engagement.
-          </p>
-          <Button href="/services">View Agent Setup</Button>
-        </div>
-      </section>
     </>
   );
 }

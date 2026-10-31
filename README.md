@@ -2,7 +2,7 @@
 
 **Live Site:** [smfworks.com](https://smfworks.com)
 
-The umbrella brand site for SMF Works — a human-AI research lab that publishes findings, ships open agent tools, and offers fixed-scope Agent Setup packages.
+The umbrella brand site for SMF Works — a human-AI research lab that publishes findings and ships open agent tools.
 
 ## What is SMF Works?
 
@@ -16,14 +16,12 @@ This site is the **parent brand site**:
 - **Praxis** — governed autonomous colleague experiment
 - **SMF AI Weekly** — weekly letter
 - **Books** — direct-from-author titles
-- **Agent Setup** — Starter $2,000 · Standard $3,500 · Keep-alive $300/mo
 
 ## Site Structure
 
 ```
-/                 homepage — thesis, proof, surfaces, shipped work, services, about
+/                 homepage — thesis, proof, surfaces, shipped work, about
 /work             public catalog (not a second homepage)
-/services         Agent Setup packages and boundaries
 /research         gateway to Clearinghouse research — no hosted research posts
 /about            Michael Gannotti / lab
 /contact          intake
@@ -61,7 +59,7 @@ Tokens: `app/globals.css` `@theme` and `DESIGN.md`.
 
 ## Content
 
-Markdown under `content/` where that pattern exists. Lab surfaces, accomplishments, and Agent Setup SKUs are structured data in `content/lib/`.
+Markdown under `content/` where that pattern exists. Lab surfaces and accomplishments are structured data in `content/lib/`.
 
 ## Architecture Decision
 

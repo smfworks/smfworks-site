@@ -8,7 +8,7 @@ import { AMAZON_BOOKS } from "@/content/lib/lab";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "SMF Works is a human-AI research lab led by Michael Gannotti, Principal AI. We publish findings, ship open agent tools, and install working stacks for owners who keep the keys.",
+    "SMF Works is a human-AI research lab led by Michael Gannotti, Principal AI. We publish findings and ship open agent tools.",
   alternates: { canonical: "https://smfworks.com/about" },
 };
 
@@ -22,9 +22,8 @@ export default function AboutPage() {
             A lab, not a chatbot vendor.
           </h1>
           <p className="text-lg md:text-xl text-text-muted max-w-2xl leading-relaxed">
-            SMF Works is a human-AI research lab. We test agent systems, publish
-            what holds up, and install stacks that run on hardware the owner
-            controls.
+            SMF Works is a human-AI research lab. We test agent systems and
+            publish what holds up.
           </p>
         </div>
       </section>
@@ -37,8 +36,7 @@ export default function AboutPage() {
           <p className="text-text-muted leading-relaxed text-lg">
             Michael leads SMF Works: thirty years in enterprise technology,
             most recently as a Principal AI Solutions Engineer, now running a
-            human-AI research lab that publishes in the open and installs
-            agent stacks owners control.
+            human-AI research lab that publishes in the open.
           </p>
           <p className="text-text-muted leading-relaxed text-lg">
             Agents do the labor under the direction of Michael and his
@@ -68,7 +66,7 @@ export default function AboutPage() {
               },
               {
                 title: "Ship, then study it",
-                desc: "Nothing is finished until it has been used. Agent Setup includes a dogfood pass for that reason.",
+                desc: "Nothing is finished until it has been used. We run what we ship before we call it done.",
               },
             ].map((item) => (
               <div key={item.title} className="surface-card p-6">
@@ -131,7 +129,7 @@ export default function AboutPage() {
             Write to Michael
           </h2>
           <p className="text-text-muted mb-6">
-            Agent Setup intake or a note about the work.
+            A note about the work.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button href="/contact">Contact form</Button>

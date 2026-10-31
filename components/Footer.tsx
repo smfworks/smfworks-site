@@ -31,7 +31,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="text-xl font-display font-bold text-text-primary mb-3">SMF Works</div>
             <p className="text-sm text-text-muted leading-relaxed mb-5 max-w-xs">
-              Human-AI research lab. Agent systems, open tools, and Agent Setup for owners who keep the keys.
+              Human-AI research lab. Agent systems, open tools, and published findings.
             </p>
             <div className="flex items-center gap-3">
               {SOCIAL_LINKS.map((social) => (
@@ -55,11 +55,6 @@ export default function Footer() {
               <li>
                 <Link href="/work" className="text-text-muted hover:text-text-primary transition-colors">
                   Work
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-text-muted hover:text-text-primary transition-colors">
-                  Services
                 </Link>
               </li>
               <li>

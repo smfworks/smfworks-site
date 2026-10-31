@@ -11,12 +11,11 @@ import {
   SURFACES,
 } from "@/content/lib/lab";
 import { getCurrentIssue } from "@/content/lib/newsletter-loader";
-import { SERVICE_PACKAGES } from "@/content/lib/services";
 
 export const metadata: Metadata = {
   title: "SMF Works | Human-AI Research Lab",
   description:
-    "A human-AI research lab. We ship agent systems and open tools, publish what we learn, and install working Hermes or OpenClaw stacks for owners who want agents on machines they control.",
+    "A human-AI research lab. We ship agent systems and open tools, and publish what we learn.",
   alternates: { canonical: "https://smfworks.com" },
 };
 
@@ -62,12 +61,11 @@ export default function Home() {
             </h1>
 
             <p className="text-lg md:text-xl text-text-muted max-w-2xl mb-10 leading-relaxed">
-              SMF Works publishes what we learn, ships open agent tools, and
-              installs stacks on hardware you own. Intelligence is abundant.
-              Judgment is the product.
+              SMF Works publishes what we learn and ships open agent tools.
+              Intelligence is abundant. Judgment is the product.
             </p>
 
-            <Button href="/services">Agent Setup</Button>
+            <Button href="/work">See the work</Button>
           </div>
         </div>
       </section>
@@ -170,63 +168,6 @@ export default function Home() {
 
       <Hairline />
 
-      <section id="services" className="relative section-padding px-6 bg-forge-navy scroll-mt-24">
-        <div className="max-w-6xl mx-auto">
-          <SectionIntro
-            eyebrow="Services"
-            title="Agent Setup packages"
-            body="We install and tailor an AI agent stack for your small business, then hand it back with a runbook. You stay the owner. Fixed packages — no open-ended billable hours for v1."
-          />
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-            {SERVICE_PACKAGES.map((pkg) => (
-              <div
-                key={pkg.sku}
-                className={`surface-card p-7 flex flex-col ${
-                  pkg.featured ? "border-forge-ember/50 ring-1 ring-forge-ember/30" : ""
-                }`}
-              >
-                <div className="mb-5">
-                  {pkg.featured ? (
-                    <p className="text-[11px] font-mono uppercase tracking-[0.16em] text-forge-ember mb-2">
-                      Main package
-                    </p>
-                  ) : null}
-                  <h3 className="text-2xl font-display font-semibold text-text-primary">
-                    {pkg.name}
-                  </h3>
-                  <p className="text-3xl font-display font-bold text-forge-ember mt-2">
-                    {pkg.price}
-                  </p>
-                  {pkg.priceNote ? (
-                    <p className="text-xs text-text-dim mt-1">{pkg.priceNote}</p>
-                  ) : null}
-                  <p className="text-sm text-text-muted mt-3 leading-relaxed">{pkg.tagline}</p>
-                </div>
-                <ul className="text-sm text-text-secondary space-y-2 mb-6 flex-1">
-                  {pkg.includes.slice(0, 4).map((line) => (
-                    <li key={line} className="flex gap-2">
-                      <span className="text-data-cyan mt-0.5">▸</span>
-                      <span>{line}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button href={`/contact?package=${pkg.sku}`}>Request intake</Button>
-              </div>
-            ))}
-          </div>
-          <p className="text-sm text-text-dim text-center mt-8 max-w-2xl mx-auto">
-            Primary stack: Hermes on Omarchy Linux. Alternate: OpenClaw gateway.
-            Scope, refuse lists, and what is not included are on the{" "}
-            <Link href="/services" className="text-forge-ember hover:underline">
-              services page
-            </Link>
-            .
-          </p>
-        </div>
-      </section>
-
-      <Hairline />
-
       <section id="about" className="relative section-padding px-6 bg-forge-navy scroll-mt-24">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
           <div className="md:col-span-7">
@@ -237,8 +178,7 @@ export default function Home() {
             <p className="text-text-muted leading-relaxed text-lg mb-4">
               Michael leads SMF Works: thirty years in enterprise technology,
               most recently as a Principal AI Solutions Engineer, now running a
-              human-AI research lab that publishes in the open and installs
-              agent stacks owners control.
+              human-AI research lab that publishes in the open.
             </p>
             <p className="text-text-muted leading-relaxed text-lg mb-8">
               Agents do the labor under the direction of Michael and his
@@ -260,7 +200,7 @@ export default function Home() {
               </a>
             </p>
             <p className="text-sm text-text-muted mb-6">
-              Intake for Agent Setup, or a note about the work. He reads them.
+              A note about the work. He reads them.
             </p>
             <Button href="/contact">Contact</Button>
           </div>

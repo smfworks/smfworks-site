@@ -1,26 +1,19 @@
-import Link from "next/link";
 import Button from "@/components/shared/Button";
 import { Eyebrow } from "@/components/shared/LabUI";
 import ContactForm from "./ContactForm";
 
-export default async function ContactPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ package?: string }>;
-}) {
-  const params = await searchParams;
-  const initialPackage = params.package || "";
+export default function ContactPage() {
   return (
     <>
       <section className="relative pt-36 pb-12 px-6 overflow-hidden mesh-gradient">
         <div className="max-w-4xl mx-auto">
           <Eyebrow>Contact</Eyebrow>
           <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tight text-text-primary mb-5">
-            Intake &amp; notes
+            Write to Michael
           </h1>
           <p className="text-lg text-text-muted max-w-2xl leading-relaxed">
-            Agent Setup starts with a short intake. General questions about the
-            lab are welcome too. Michael reads them.
+            Questions about the lab, the work, or the weekly letter are welcome.
+            Michael reads them.
           </p>
         </div>
       </section>
@@ -28,7 +21,7 @@ export default async function ContactPage({
       <section className="relative px-6 pb-24 bg-forge-navy">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <ContactForm initialPackage={initialPackage} />
+            <ContactForm />
           </div>
 
           <div className="space-y-8">
@@ -56,13 +49,7 @@ export default async function ContactPage({
               <h3 className="font-display font-bold text-lg mb-3 text-text-primary">What to expect</h3>
               <ul className="space-y-3 text-sm text-text-muted">
                 <li>Personal response within 48 hours</li>
-                <li>Agent Setup: short intake, then invoice, then install day</li>
-                <li>
-                  Packages and boundaries are listed on{" "}
-                  <Link href="/services" className="text-forge-ember hover:underline">
-                    /services
-                  </Link>
-                </li>
+                <li>Notes about the lab, the work, or the weekly letter</li>
               </ul>
             </div>
 

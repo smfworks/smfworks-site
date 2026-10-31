@@ -198,7 +198,7 @@ export const WORK_ITEMS: WorkItem[] = [
     name: "Hermes on Omarchy",
     tagline: "Agent boot integration",
     description:
-      "Ollama user unit plus Hermes desktop autostart — the primary stack we install for Agent Setup.",
+      "Ollama user unit plus Hermes desktop autostart so the agent comes up with the machine.",
     href: "https://github.com/smfworks/hermes-omarchy",
     status: "Open",
     group: "tools",
