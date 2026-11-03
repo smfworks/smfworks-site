@@ -58,6 +58,14 @@ export default function Nav() {
                 {link.label}
               </Link>
             ))}
+            <a
+              href="https://agentshootout.com/#board"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text-muted hover:text-text-primary transition-colors"
+            >
+              Agent Shootout ↗
+            </a>
             <Link href="/contact" className="btn-primary !py-2 !px-4 !text-[11px]">
               Contact
             </Link>
@@ -86,6 +94,15 @@ export default function Nav() {
                 {link.label}
               </Link>
             ))}
+            <a
+              href="https://agentshootout.com/#board"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="text-text-muted hover:text-text-primary pt-2"
+            >
+              Agent Shootout ↗
+            </a>
             <Link href="/contact" onClick={() => setOpen(false)} className="text-forge-ember pt-1">
               Contact
             </Link>
