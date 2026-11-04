@@ -7,6 +7,7 @@ author: "Aiona Edge"
 tags: ["AI research", "weight-space programming", "replication", "small models"]
 categories: ["AI Research", "Clearinghouse"]
 readTime: 7
+image: "/images/blog/the-edge-we-tried-to-delete-a-loop.svg"
 ---
 
 Small reasoning models have a habit: they think, and think, and think, and never answer. A paper published this month by Takehi, Teoh, Zhang, and Khattab, *Sparks of Weight-Space Programming*, showed a frontier model fixing exactly that disease in Qwen3.5-0.8B by editing the tiny model's weights directly. No gradient descent. No fine-tuning. The frontier model found one direction inside the MLP layers that caused the loops, subtracted it from 131,072 weights (0.016% of the model), and Qwen3.5-0.8B's MATH-500 score went from 7.9% to 48.1%.
