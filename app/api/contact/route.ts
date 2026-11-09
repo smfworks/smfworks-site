@@ -2,6 +2,21 @@ import { NextRequest, NextResponse } from "next/server";
 
 const TO_ADDRESS = "michael@smfworks.com";
 
+/** Escape a value for safe interpolation into an HTML email body (CWE-79). */
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+/** Escape a value for safe interpolation into a mailto: URL (CWE-20). */
+function encodeMailto(value: string): string {
+  return encodeURIComponent(value);
+}
+
 export async function POST(req: NextRequest) {
   try {
     const { name, email, business, package: pkg, message } = await req.json();
@@ -26,7 +41,12 @@ export async function POST(req: NextRequest) {
     // Call Resend REST API directly — no SDK, no module-level init
     const from = process.env.RESEND_FROM || "SMF Works <noreply@smfworks.com>";
     const interest = business || pkg || "";
-    const subject = `New Inquiry from ${name}${interest ? ` — ${interest}` : ""}`;
+    const safeName = escapeHtml(String(name));
+    const safeEmail = escapeHtml(String(email));
+    const safeInterest = escapeHtml(String(interest));
+    const safeMessage = escapeHtml(String(message));
+    // Subject is an email header value: strip CR/LF to prevent header injection.
+    const subject = `New Inquiry from ${String(name).replace(/[\r\n]+/g, " ")}${interest ? ` — ${String(interest).replace(/[\r\n]+/g, " ")}` : ""}`;
 
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -49,27 +69,27 @@ export async function POST(req: NextRequest) {
               <table style="width:100%;border-collapse:collapse;">
                 <tr>
                   <td style="padding:8px 0;color:#666;font-size:14px;width:120px;"><strong>Name</strong></td>
-                  <td style="padding:8px 0;font-size:14px;">${name}</td>
+                  <td style="padding:8px 0;font-size:14px;">${safeName}</td>
                 </tr>
                 <tr>
                   <td style="padding:8px 0;color:#666;font-size:14px;"><strong>Email</strong></td>
-                  <td style="padding:8px 0;font-size:14px;"><a href="mailto:${email}" style="color:#C87941;">${email}</a></td>
+                  <td style="padding:8px 0;font-size:14px;"><a href="mailto:${encodeMailto(String(email))}" style="color:#C87941;">${safeEmail}</a></td>
                 </tr>
                 ${interest ? `<tr>
                   <td style="padding:8px 0;color:#666;font-size:14px;"><strong>Interest</strong></td>
-                  <td style="padding:8px 0;font-size:14px;">${interest}</td>
+                  <td style="padding:8px 0;font-size:14px;">${safeInterest}</td>
                 </tr>` : ""}
                 <tr><td colspan="2" style="padding:16px 0 8px;color:#666;font-size:14px;"><strong>Message</strong></td></tr>
                 <tr>
                   <td colspan="2">
-                    <div style="background:white;border:1px solid #ddd;border-radius:4px;padding:16px;font-size:14px;line-height:1.6;white-space:pre-wrap;">${message}</div>
+                    <div style="background:white;border:1px solid #ddd;border-radius:4px;padding:16px;font-size:14px;line-height:1.6;white-space:pre-wrap;">${safeMessage}</div>
                   </td>
                 </tr>
               </table>
               <div style="margin-top:24px;padding-top:16px;border-top:1px solid #ddd;">
-                <a href="mailto:${email}?subject=Re: Your SMF Works inquiry"
+                <a href="mailto:${encodeMailto(String(email))}?subject=${encodeMailto("Re: Your SMF Works inquiry")}"
                    style="background:#C87941;color:white;padding:12px 24px;border-radius:4px;text-decoration:none;font-weight:bold;font-size:14px;">
-                  Reply to ${name} →
+                  Reply to ${safeName} →
                 </a>
               </div>
             </div>
