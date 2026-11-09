@@ -21,7 +21,12 @@ export async function POST(req: NextRequest) {
   try {
     const { email } = await req.json();
 
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return NextResponse.json({ error: "Valid email required" }, { status: 400 });
+    }
+    // Spreadsheet formula injection guard (CWE-1237): the value lands in a
+    // sheet consumed with USER_ENTERED, so reject cells that parse as formulas.
+    if (/^[=+\-@\t\r]/.test(email)) {
       return NextResponse.json({ error: "Valid email required" }, { status: 400 });
     }
 
