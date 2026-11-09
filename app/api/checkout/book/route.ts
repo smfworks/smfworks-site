@@ -2,6 +2,20 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { getBookBySlug } from '@/lib/books';
 
+// Same origin allowlist as /api/checkout — post-payment redirects must not
+// be steered by a caller-supplied Origin header (hernes-security scan,
+// open-redirect finding, cand_23420928c64ad147b65f2665 family).
+const ALLOWED_ORIGINS = new Set([
+  'https://smfworks.com',
+  'https://www.smfworks.com',
+]);
+
+function checkoutBaseUrl(request: NextRequest): string {
+  const origin = request.headers.get('origin');
+  if (origin && ALLOWED_ORIGINS.has(origin)) return origin;
+  return 'https://smfworks.com';
+}
+
 export async function POST(request: NextRequest) {
   const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 
@@ -44,7 +58,7 @@ export async function POST(request: NextRequest) {
     const stripe = new Stripe(stripeSecretKey, {
       apiVersion: '2026-02-25.clover',
     });
-    const baseUrl = request.headers.get('origin') || 'https://smfworks.com';
+    const baseUrl = checkoutBaseUrl(request);
 
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',

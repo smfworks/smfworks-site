@@ -1,6 +1,8 @@
 import fs from "fs";
 import path from "path";
 
+import { safeSlugPath } from "@/lib/safe-slug";
+
 export interface HarryPost {
   slug: string;
   title: string;
@@ -52,8 +54,8 @@ function parseFrontmatter(raw: string): Record<string, string | number | string[
 }
 
 function loadPost(slug: string): HarryPost | undefined {
-  const filePath = path.join(CONTENT_DIR, `${slug}.md`);
-  if (!fs.existsSync(filePath)) return undefined;
+  const filePath = safeSlugPath(CONTENT_DIR, slug);
+  if (!filePath || !fs.existsSync(filePath)) return undefined;
 
   const raw = fs.readFileSync(filePath, "utf-8");
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
