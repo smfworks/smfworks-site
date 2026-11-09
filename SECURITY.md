@@ -19,9 +19,11 @@ Do not open a public issue that includes secret values, tokens, or private keys.
 - Pull requests run a tracked-file secret scan and the hero-script contract tests.
 - If the secret scan fails, do not merge. Rotate the credential and remove it from the working tree.
 
-## Operator rotation checklist (Together.ai)
+## Operator rotation checklist (Together.ai) — CLOSED 2026-11-09
 
-1. Revoke the exposed Together.ai key in the Together console.
-2. Issue a new key and store it only in the operator environment.
-3. Confirm `scripts/generate-hero.mjs` contains no `tgp_v1_` literal.
-4. Confirm CI `secret-scan` is green on the hardening branch.
+1. ~~Revoke the exposed Together.ai key in the Together console.~~ **Done — Michael revoked all Together.ai keys 2026-11-09; SMF Works no longer uses the service.**
+2. ~~Issue a new key and store it only in the operator environment.~~ **N/A — service dropped.** `TOGETHER_API_KEY` references in `scripts/generate-hero.mjs` are now dead configuration; remove them at next touch.
+3. ~~Confirm `scripts/generate-hero.mjs` contains no `tgp_v1_` literal.~~ Confirmed — no `tgp_v1_` literal in the working tree (scan-verified 2026-11-08).
+4. ~~Confirm CI `secret-scan` is green on the hardening branch.~~ Green on every PR in the 2026-11-09 remediation series (#14, #15, #16).
+
+Historical note: the exposed key remains recoverable in git history (commit `afc44cf`, `scripts/generate-hero.mjs:11`). With the credential revoked at the provider and the service abandoned, it is now inert. History stays unrewritten per policy above.
