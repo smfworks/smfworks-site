@@ -5,22 +5,9 @@ const SITE_URL = "https://smfworks.com";
 
 // Dynamically build URL list — update when adding new blog posts or newsletter issues
 function getAllUrls(): string[] {
-  const static_pages = [
-    "/", "/work", "/research", "/publications", "/about", "/contact", "/newsletter", "/books"
-  ];
+  const static_pages = ["/", "/privacy"];
 
-  const blog_slugs: string[] = [];
-
-  const newsletter_slugs = [
-    "2026-03-06", "2026-02-27", "2026-02-20",
-    "2026-02-13", "2026-02-06", "2026-01-30",
-  ];
-
-  return [
-    ...static_pages.map(p => `${SITE_URL}${p}`),
-    ...blog_slugs.map(s => `${SITE_URL}/blog/${s}`),
-    ...newsletter_slugs.map(s => `${SITE_URL}/newsletter/${s}`),
-  ];
+  return static_pages.map((p) => `${SITE_URL}${p}`);
 }
 
 async function submitToIndexNow(urls: string[]) {

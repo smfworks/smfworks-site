@@ -14,7 +14,6 @@
     "design:check": "npm run design:lint && npm run build"
   },
   "dependencies": {
-    "jsonwebtoken": "^9.0.3",
     "next": "16.4.5",
     "react": "19.2.6",
     "react-dom": "19.2.6",
@@ -24,7 +23,6 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

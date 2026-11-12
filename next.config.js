@@ -32,58 +32,8 @@ const nextConfig = {
         destination: "/drj/testing-minimax-m3-frontier-model-one-morning",
         permanent: true,
       },
-      // Canonical site reshaping: company/project content lives on smfworks.com;
-      // clearinghouse catalog and tools live on smfclearinghouse.com.
-      {
-        source: "/projects",
-        destination: "/work",
-        permanent: true,
-      },
-      {
-        source: "/projects/:path*",
-        destination: "/work",
-        permanent: true,
-      },
-      {
-        source: "/dev",
-        destination: "/work",
-        permanent: true,
-      },
-      {
-        source: "/dev/:path*",
-        destination: "/work",
-        permanent: true,
-      },
-      {
-        source: "/skills-archived",
-        destination: "/work",
-        permanent: true,
-      },
-      {
-        source: "/skills-archived/:path*",
-        destination: "/work",
-        permanent: true,
-      },
-      {
-        source: "/services-archived",
-        destination: "/work",
-        permanent: true,
-      },
-      {
-        source: "/services-archived/:path*",
-        destination: "/work",
-        permanent: true,
-      },
-      {
-        source: "/pay-archived",
-        destination: "/work",
-        permanent: true,
-      },
-      {
-        source: "/pay-archived/:path*",
-        destination: "/work",
-        permanent: true,
-      },
+      // Clearinghouse catalog and tools live on smfclearinghouse.com.
+      // First-party pages removed in the single-page reorg are not redirected.
       {
         source: "/whitepapers",
         destination: "https://www.smfclearinghouse.com/whitepapers",
@@ -200,13 +150,7 @@ const nextConfig = {
         destination: "https://www.smfclearinghouse.com/:path*",
         permanent: true,
       },
-      // Blog reshaping: all /blog traffic goes to /research (which links to Clearinghouse);
-      // individual legacy /blog/* posts live on the clearinghouse blog.
-      {
-        source: "/blog",
-        destination: "/research",
-        permanent: true,
-      },
+      // Legacy /blog posts live on the clearinghouse. /blog itself is gone with the reorg.
       {
         source: "/blog/:slug*",
         destination: "https://www.smfclearinghouse.com/blog/:slug*",
@@ -231,26 +175,6 @@ const nextConfig = {
       },
       {
         source: "/the-signal/:slug",
-        destination: "https://www.smfclearinghouse.com/blog/:slug/",
-        permanent: true,
-      },
-      {
-        source: "/the-edge",
-        destination: "https://www.smfclearinghouse.com/blog/series/edge/",
-        permanent: true,
-      },
-      {
-        source: "/the-edge/:slug",
-        destination: "https://www.smfclearinghouse.com/blog/:slug/",
-        permanent: true,
-      },
-      {
-        source: "/publications/the-edge",
-        destination: "https://www.smfclearinghouse.com/blog/series/edge/",
-        permanent: true,
-      },
-      {
-        source: "/publications/the-edge/:slug",
         destination: "https://www.smfclearinghouse.com/blog/:slug/",
         permanent: true,
       },
@@ -294,12 +218,6 @@ const nextConfig = {
         destination: "https://www.smfclearinghouse.com/blog/:slug/",
         permanent: true,
       },
-      // Dashboard stub → newsletter
-      {
-        source: "/dashboard",
-        destination: "/newsletter",
-        permanent: true,
-      },
       // Archived technical series voices now live on the clearinghouse blog.
       {
         source: "/the-terminal/:slug*",
@@ -321,9 +239,8 @@ const nextConfig = {
         destination: "https://www.smfclearinghouse.com/blog/:slug*",
         permanent: true,
       },
-      // /blog remains redirected to /research (Clearinghouse holds research posts).
-      // /work, /contact, /newsletter, /books, /publications, /privacy
-      // are first-party umbrella routes. /services redirects home.
+      // The Edge routes are intentionally absent so old /the-edge links 404.
+      // / and /privacy are the remaining first-party pages. /services redirects home.
     ];
   },
 };
