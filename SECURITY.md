@@ -27,3 +27,5 @@ Do not open a public issue that includes secret values, tokens, or private keys.
 4. ~~Confirm CI `secret-scan` is green on the hardening branch.~~ Green on every PR in the 2026-11-09 remediation series (#14, #15, #16).
 
 Historical note: the exposed key remains recoverable in git history (commit `afc44cf`, `scripts/generate-hero.mjs:11`). With the credential revoked at the provider and the service abandoned, it is now inert. History stays unrewritten per policy above.
+
+revocation-list endpoint removed 2026-11-12 as part of the site reorg; it was disabled 2026-11-09 with no consumers.

@@ -1,215 +1,146 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
-import ForgeCanvas from "@/components/ForgeCanvas";
-import Button from "@/components/shared/Button";
-import SupportCta from "@/components/shared/SupportCta";
-import { Eyebrow, Hairline, SectionIntro, SurfaceCard } from "@/components/shared/LabUI";
-import {
-  ACCOMPLISHMENTS,
-  PROOF_ITEMS,
-  SURFACES,
-} from "@/content/lib/lab";
-import { getCurrentIssue } from "@/content/lib/newsletter-loader";
 
 export const metadata: Metadata = {
-  title: "SMF Works | Human-AI Research Lab",
-  description:
-    "A human-AI research lab. We ship agent systems and open tools, and publish what we learn.",
+  title: { absolute: "SMF Works" },
+  description: "A human–AI research lab and cooperative.",
   alternates: { canonical: "https://smfworks.com" },
+  openGraph: {
+    title: "SMF Works",
+    description: "A human–AI research lab and cooperative.",
+    url: "https://smfworks.com",
+  },
+  twitter: {
+    title: "SMF Works",
+    description: "A human–AI research lab and cooperative.",
+  },
 };
 
+const outbound = {
+  target: "_blank",
+  rel: "noopener noreferrer",
+} as const;
+
 export default function Home() {
-  const weekly = getCurrentIssue();
-  const proofItems = PROOF_ITEMS.map((item) =>
-    item.label === "SMF AI Weekly"
-      ? { ...item, detail: `Issue #${weekly.issueNumber}` }
-      : item
-  );
-  const accomplishments = ACCOMPLISHMENTS.map((item) =>
-    item.title === "Clearinghouse + weekly + X"
-      ? {
-          ...item,
-          oneLiner: `Research published at the Clearinghouse; SMF AI Weekly through Issue #${weekly.issueNumber}; field notes on X @MichaelGannotti.`,
-        }
-      : item
-  );
-
   return (
-    <>
-      <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-forge-navy">
-        <ForgeCanvas />
-        <div className="absolute inset-0 bg-gradient-to-b from-forge-navy/40 via-forge-navy/55 to-forge-navy pointer-events-none z-10" />
+    <article className="mesh-gradient">
+      <header className="max-w-3xl mx-auto px-6 pt-16 pb-20 md:pt-24 md:pb-28">
+        <Image
+          src="/smf-logo.png"
+          alt=""
+          width={160}
+          height={119}
+          priority
+          className="w-24 md:w-28 h-auto mb-10"
+        />
+        <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight text-text-primary leading-[1.02]">
+          SMF Works
+        </h1>
+        <p className="mt-5 text-xl md:text-2xl italic text-text-secondary leading-snug">
+          A human–AI research lab and cooperative.
+        </p>
+        <p className="mt-8 text-lg md:text-xl text-text-muted leading-relaxed">
+          SMF Works explores the intersection of AI and human interaction. We build and
+          study practical ways for people and AI to work together — so the power of
+          transformational AI becomes genuinely usable by everyday individuals, not
+          locked behind complexity, cost, or gatekeeping.
+        </p>
+        <p className="mt-8 text-base md:text-lg leading-relaxed">
+          <a
+            href="https://github.com/smfworks"
+            {...outbound}
+            className="text-forge-ember hover:text-forge-ember-bright transition-colors"
+          >
+            Our projects on GitHub →
+          </a>
+          <span className="text-text-dim"> · </span>
+          <a
+            href="https://www.smfclearinghouse.com/blog"
+            {...outbound}
+            className="text-forge-ember hover:text-forge-ember-bright transition-colors"
+          >
+            Research at the Clearinghouse →
+          </a>
+        </p>
+      </header>
 
-        <div className="relative z-20 w-full max-w-6xl mx-auto px-6 pt-32 pb-20">
-          <div className="max-w-3xl">
-            <div className="mb-8">
-              <Image
-                src="/smf-logo.png"
-                alt="SMF Works"
-                width={160}
-                height={119}
-                className="w-[120px] md:w-[140px] h-auto opacity-90"
-                priority
-              />
+      <section className="border-t border-forge-border">
+        <div className="max-w-3xl mx-auto px-6 py-16 md:py-24">
+          <p className="text-[11px] font-mono uppercase tracking-[0.18em] text-data-cyan mb-4">
+            The mission
+          </p>
+          <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tight text-text-primary leading-[1.12]">
+            The goal is not simply access to AI.
+          </h2>
+          <p className="mt-6 text-lg text-text-muted leading-relaxed">
+            It is to create the conditions where capable AI systems can operate effectively
+            and responsibly in real human contexts — and where everyday people can put that
+            capability to use without becoming specialists.
+          </p>
+          <p className="mt-5 text-lg text-text-muted leading-relaxed">
+            We publish what we learn, write practical guides, and ship tools in the open,
+            so anyone can see what works, what doesn&apos;t, and how the final judgment stays in
+            human hands.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-t border-forge-border">
+        <div className="max-w-3xl mx-auto px-6 py-16 md:py-24">
+          <p className="text-[11px] font-mono uppercase tracking-[0.18em] text-data-cyan mb-4">
+            How the lab works
+          </p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight text-text-primary leading-tight">
+            A cooperative, directed by its founder.
+          </h2>
+          <p className="mt-6 text-lg text-text-muted leading-relaxed">
+            SMF Works is directed by its founder while three AI fleets —{" "}
+            <strong className="text-text-primary font-semibold">Grok Bot</strong>,{" "}
+            <strong className="text-text-primary font-semibold">Hermes</strong>, and{" "}
+            <strong className="text-text-primary font-semibold">OpenClaw</strong> — carry
+            out the work under human guidance. The lab runs hybrid inference infrastructure
+            it owns outright: NVIDIA DGX Spark machines serving GLM-5.3-Flash at a measured
+            1,048,576-token context, and local inference on AMD hardware — zero marginal
+            cost per token, and that local stack never sends data off the machines it runs
+            on.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-t border-forge-border">
+        <div className="max-w-3xl mx-auto px-6 py-16 md:py-24">
+          <p className="text-[11px] font-mono uppercase tracking-[0.18em] text-data-cyan mb-4">
+            The people
+          </p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight text-text-primary leading-tight">
+            Two named people run SMF Works.
+          </h2>
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="surface-card p-6 md:p-7">
+              <h3 className="text-xl font-display font-semibold text-text-primary">
+                Michael Gannotti — <em className="font-normal text-text-secondary">Founder.</em>
+              </h3>
+              <p className="mt-3 text-text-muted leading-relaxed">
+                Built the lab and the fleets, and set the standard: never publish what
+                wasn&apos;t measured, never invent what wasn&apos;t sourced.
+              </p>
             </div>
-
-            <Eyebrow>Human-AI Research Lab</Eyebrow>
-
-            <h1 className="text-4xl md:text-6xl font-display font-bold leading-[1.08] mb-6 tracking-tight text-text-primary">
-              A lab for agent systems. Judgment stays human.
-            </h1>
-
-            <p className="text-lg md:text-xl text-text-muted max-w-2xl mb-10 leading-relaxed">
-              SMF Works publishes what we learn and ships open agent tools.
-              Intelligence is abundant. Judgment is the product.
-            </p>
-
-            <Button href="/work">See the work</Button>
+            <div className="surface-card p-6 md:p-7">
+              <h3 className="text-xl font-display font-semibold text-text-primary">
+                Aiona Edge —{" "}
+                <em className="font-normal text-text-secondary">
+                  CIO &amp; Chief AI Research Scientist.
+                </em>
+              </h3>
+              <p className="mt-3 text-text-muted leading-relaxed">
+                A Hermes AI who helps shape the research, tests what holds up, and keeps
+                the focus on systems both capable and trustworthy. Writes the published
+                record.
+              </p>
+            </div>
           </div>
         </div>
       </section>
-
-      <section className="border-y border-forge-border bg-forge-card/60">
-        <div className="max-w-6xl mx-auto px-6 py-5 grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
-          {proofItems.map((item) => {
-            const inner = (
-              <>
-                <div className="text-[11px] font-mono uppercase tracking-[0.16em] text-text-dim mb-1">
-                  {item.label}
-                </div>
-                <div className="text-sm text-text-primary font-medium">{item.detail}</div>
-              </>
-            );
-            const className = "block hover:text-forge-ember transition-colors";
-            return item.external ? (
-              <a
-                key={item.label}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={className}
-              >
-                {inner}
-              </a>
-            ) : (
-              <Link key={item.label} href={item.href} className={className}>
-                {inner}
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="relative section-padding px-6 bg-forge-navy">
-        <div className="max-w-6xl mx-auto">
-          <SectionIntro
-            eyebrow="Surfaces"
-            title="What the lab runs"
-            body="Six public surfaces. Research stays on the Clearinghouse; this site is the umbrella — who we are, what we shipped, and what you can buy."
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {SURFACES.map((item) => (
-              <SurfaceCard key={item.name} href={item.href}>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-[11px] font-mono uppercase tracking-[0.16em] text-data-cyan">
-                    {item.status}
-                  </span>
-                  <span className="text-text-dim text-sm group-hover:text-forge-ember transition-colors">
-                    {item.href.startsWith("http") ? "↗" : "→"}
-                  </span>
-                </div>
-                <h3 className="text-xl font-display font-semibold text-text-primary mb-2">
-                  {item.name}
-                </h3>
-                <p className="text-sm text-text-muted leading-relaxed">{item.oneLiner}</p>
-              </SurfaceCard>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <Hairline />
-
-      <section className="relative section-padding px-6 bg-forge-navy">
-        <div className="max-w-6xl mx-auto">
-          <SectionIntro
-            eyebrow="Shipped"
-            title="Recent work, in public"
-            body="Named products and dated notes — no invented counters, no case-study ROI. The full catalog lives on /work."
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {accomplishments.map((item) => (
-              <SurfaceCard key={item.title} href={item.href}>
-                <div className="flex items-center gap-3 mb-3">
-                  {item.date ? (
-                    <span className="text-[11px] font-mono text-forge-ember uppercase tracking-wider">
-                      {item.date}
-                    </span>
-                  ) : null}
-                  <span className="text-[11px] font-mono text-text-dim uppercase tracking-wider">
-                    {item.source}
-                  </span>
-                </div>
-                <h3 className="text-lg font-display font-semibold text-text-primary mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-text-muted leading-relaxed">{item.oneLiner}</p>
-              </SurfaceCard>
-            ))}
-          </div>
-          <div className="mt-10 text-center">
-            <Button href="/work" variant="secondary">
-              Full catalog
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <Hairline />
-
-      <section id="about" className="relative section-padding px-6 bg-forge-navy scroll-mt-24">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
-          <div className="md:col-span-7">
-            <Eyebrow>About</Eyebrow>
-            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight text-text-primary mb-5">
-              Michael Gannotti, Principal AI
-            </h2>
-            <p className="text-text-muted leading-relaxed text-lg mb-4">
-              Michael leads SMF Works: thirty years in enterprise technology,
-              most recently as a Principal AI Solutions Engineer, now running a
-              human-AI research lab that publishes in the open.
-            </p>
-            <p className="text-text-muted leading-relaxed text-lg mb-8">
-              Agents do the labor under the direction of Michael and his
-              daughter, and COO,{"  "}Mary. Judgment stays human — tools are
-              inspected before they are trusted, and consequential acts stay
-              behind review.
-            </p>
-            <Button href="/about" variant="secondary">
-              More about the lab
-            </Button>
-          </div>
-          <div className="md:col-span-5 surface-card p-7">
-            <p className="text-[11px] font-mono uppercase tracking-[0.16em] text-data-cyan mb-3">
-              How to reach us
-            </p>
-            <p className="text-text-primary font-medium mb-1">
-              <a href="mailto:michael@smfworks.com" className="hover:text-forge-ember">
-                michael@smfworks.com
-              </a>
-            </p>
-            <p className="text-sm text-text-muted mb-6">
-              A note about the work. He reads them.
-            </p>
-            <Button href="/contact">Contact</Button>
-          </div>
-        </div>
-      </section>
-
-      <Hairline />
-
-      <SupportCta />
-    </>
+    </article>
   );
 }

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
@@ -25,23 +24,21 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const description = "A human–AI research lab and cooperative.";
+
 export const metadata: Metadata = {
   title: {
-    default: "SMF Works | Human-AI Research Lab",
+    default: "SMF Works",
     template: "%s | SMF Works",
   },
-  description:
-    "A human-AI research lab publishing findings and shipping open agent tools.",
+  description,
   keywords: [
-    "AI research lab",
-    "human-AI research",
-    "autonomous agents",
-    "Hermes agent",
-    "OpenClaw",
-    "AI evaluation",
-    "multi-agent systems",
     "SMF Works",
-    "SMF AI Weekly",
+    "human-AI research lab",
+    "AI cooperative",
+    "Grok Bot",
+    "Hermes",
+    "OpenClaw",
   ],
   authors: [{ name: "SMF Works", url: "https://smfworks.com" }],
   creator: "SMF Works",
@@ -58,9 +55,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "SMF Works | Human-AI Research Lab",
-    description:
-      "A human-AI research lab. Agent systems, open tools, and published findings.",
+    title: "SMF Works",
+    description,
     url: "https://smfworks.com",
     siteName: "SMF Works",
     type: "website",
@@ -70,15 +66,14 @@ export const metadata: Metadata = {
         url: "https://smfworks.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "SMF Works — Human-AI Research Lab",
+        alt: "SMF Works — Human–AI research lab and cooperative",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SMF Works | Human-AI Research Lab",
-    description:
-      "A human-AI research lab. Agent systems, open tools, and published findings.",
+    title: "SMF Works",
+    description,
     images: ["https://smfworks.com/og-image.jpg"],
     creator: "@MichaelGannotti",
     site: "@MichaelGannotti",
@@ -99,22 +94,16 @@ const jsonLd = {
       "@type": "Organization",
       "@id": "https://smfworks.com/#organization",
       name: "SMF Works",
-      alternateName: ["SMF Works", "SMF Works Research Lab"],
       url: "https://smfworks.com",
       logo: "https://smfworks.com/smf-logo.png",
       image: "https://smfworks.com/og-image.jpg",
-      description:
-        "A human-AI research lab publishing findings and shipping open agent tools.",
-      areaServed: {
-        "@type": "Country",
-        name: "United States",
-      },
-      sameAs: [
-        "https://x.com/MichaelGannotti",
-        "https://github.com/smfworks",
-        "https://www.linkedin.com/in/mikegannotti",
-      ],
+      description,
       email: "michael@smfworks.com",
+      sameAs: [
+        "https://github.com/smfworks",
+        "https://www.smfclearinghouse.com/blog",
+        "https://smfwisdomforge.com",
+      ],
       founder: {
         "@id": "https://smfworks.com/#founder",
       },
@@ -123,60 +112,22 @@ const jsonLd = {
       "@type": "Person",
       "@id": "https://smfworks.com/#founder",
       name: "Michael Gannotti",
-      jobTitle: "Principal AI",
+      jobTitle: "Founder",
       worksFor: {
         "@id": "https://smfworks.com/#organization",
       },
-      url: "https://smfworks.com/about",
-      sameAs: ["https://x.com/MichaelGannotti"],
+      url: "https://smfworks.com",
       description:
-        "Principal AI at SMF Works. Leads a human-AI research lab that ships agent systems and open tools.",
-      knowsAbout: [
-        "Artificial Intelligence",
-        "Autonomous AI Agents",
-        "AI Architecture",
-        "Human-AI Collaboration",
-        "Enterprise Technology",
-      ],
+        "Founder. Built the lab and the fleets, and set the standard: never publish what wasn't measured, never invent what wasn't sourced.",
     },
     {
       "@type": "WebSite",
       "@id": "https://smfworks.com/#website",
       url: "https://smfworks.com",
       name: "SMF Works",
+      description,
       publisher: {
         "@id": "https://smfworks.com/#organization",
-      },
-    },
-  ],
-};
-
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is SMF Works?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A human-AI research lab exploring autonomous agents, evaluation, and agent operations. We publish findings and ship open tools.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is Praxis?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our governed autonomous colleague experiment — an AI agent operating with real consequences under human oversight. Early preview, with honest reporting of rough edges.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What does SMF Works publish?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Research findings, benchmarks, and practitioner guides live at the AI Clearinghouse. SMF AI Weekly is the public lab notebook. Open tools are on GitHub under smfworks.",
       },
     },
   ],
@@ -198,14 +149,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-        />
       </head>
-      <body className="bg-forge-navy text-text-primary antialiased font-body">
-        <Nav />
-        <main>{children}</main>
+      <body className="bg-forge-navy text-text-primary antialiased font-body min-h-screen flex flex-col">
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>
