@@ -28,4 +28,4 @@ Do not open a public issue that includes secret values, tokens, or private keys.
 
 Historical note: the exposed key remains recoverable in git history (commit `afc44cf`, `scripts/generate-hero.mjs:11`). With the credential revoked at the provider and the service abandoned, it is now inert. History stays unrewritten per policy above.
 
-revocation-list endpoint removed 2026-11-12 as part of the site reorg; it was disabled 2026-11-09 with no consumers.
+The token issue/validate and revocation-list endpoints were removed 2026-11-12 in the single-page rebuild. Rotation of SMF_JWT_PRIVATE_KEY is still owed.
